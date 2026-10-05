@@ -1,0 +1,124 @@
+{
+  "observedAt": "2026-10-05T02:33:29.473Z",
+  "scope": "Actual temporary queue and advisory stub receipts only; no real company objective or human research",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/persisted-research-authority-mBcB1v",
+  "admitted": 5,
+  "before": {
+    "status": "READY_FOR_RE_SCORE",
+    "missingRoles": [],
+    "weakRoles": []
+  },
+  "after": {
+    "status": "READY_FOR_RE_SCORE",
+    "missingRoles": [],
+    "weakRoles": []
+  },
+  "resynthesis": 0,
+  "currentWorkSuccess": [
+    {
+      "role": "user-persona",
+      "success": false,
+      "historicalState": "DONE"
+    },
+    {
+      "role": "ux-research",
+      "success": false,
+      "historicalState": "DONE"
+    },
+    {
+      "role": "stakeholder-panel",
+      "success": false,
+      "historicalState": "DONE"
+    },
+    {
+      "role": "domain-expert",
+      "success": false,
+      "historicalState": "DONE"
+    }
+  ],
+  "persistedSignalTypes": [
+    {
+      "role": "user-persona",
+      "source_type": "USER_INTERVIEW"
+    },
+    {
+      "role": "ux-research",
+      "source_type": "USABILITY_TEST"
+    },
+    {
+      "role": "stakeholder-panel",
+      "source_type": "STAKEHOLDER_REVIEW"
+    },
+    {
+      "role": "domain-expert",
+      "source_type": "STAKEHOLDER_REVIEW"
+    }
+  ],
+  "signalWorkAttemptVersionBinding": [
+    {
+      "role": "user-persona",
+      "keys": [
+        "signal_id",
+        "project_id",
+        "source_type",
+        "persona",
+        "research_question",
+        "source_reference",
+        "finding",
+        "confidence",
+        "created_at"
+      ]
+    },
+    {
+      "role": "ux-research",
+      "keys": [
+        "signal_id",
+        "project_id",
+        "source_type",
+        "persona",
+        "research_question",
+        "source_reference",
+        "finding",
+        "confidence",
+        "created_at"
+      ]
+    },
+    {
+      "role": "stakeholder-panel",
+      "keys": [
+        "signal_id",
+        "project_id",
+        "source_type",
+        "persona",
+        "research_question",
+        "source_reference",
+        "finding",
+        "confidence",
+        "created_at"
+      ]
+    },
+    {
+      "role": "domain-expert",
+      "keys": [
+        "signal_id",
+        "project_id",
+        "source_type",
+        "persona",
+        "research_question",
+        "source_reference",
+        "finding",
+        "confidence",
+        "created_at"
+      ]
+    }
+  ],
+  "hashes": {
+    "researchSynthesis.ts": "be7844698ec29908b7ee37216adcaeef632b563337c8a121bca273a4de109fc5",
+    "researchSignalLedger.ts": "51ceabd9251a99445d3eecde385220cad7080fa458707511cdaaf73e615905c1",
+    "ceoReviewLedger.ts": "133f9aba0622ebec2ab7f6a556baea23e32ac8fde9541c4ca319f1b9a8aeb9f1",
+    "roleWorkQueue.ts": "ee7339adb5033995705f95802fbf3a989767242c902c06a3592a4726418d936d"
+  },
+  "realProviderCalls": 0,
+  "realHumans": 0,
+  "networkCalls": 0
+}

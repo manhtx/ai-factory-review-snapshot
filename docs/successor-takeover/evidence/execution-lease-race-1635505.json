@@ -1,0 +1,30 @@
+{
+  "observedAt": "2026-10-05T09:50:29.960Z",
+  "sourceRevision": "1635505dfa3416a831048f308a3257fbc1370db6",
+  "sourceTreeClean": true,
+  "sourceHash": "b14aa289bdac1905a399f9e7f297b3e01c26a40813b33ba2803c1248ef5c218a",
+  "scope": "Actual issued initial execution selection plus two real OS issuers; pause only after genuine loaded revision; original CAS input and writer; temporary control store, no providers",
+  "initialLeaseId": "LEASE:MARATHON-ANTIGRAVITY-PERPETUAL-01:rev-1",
+  "readRevisions": [
+    1,
+    1
+  ],
+  "accepted": [
+    true,
+    true
+  ],
+  "issuedLeaseIds": [
+    "LEASE:MARATHON-ANTIGRAVITY-PERPETUAL-01:rev-2",
+    "LEASE:MARATHON-ANTIGRAVITY-PERPETUAL-01:rev-2"
+  ],
+  "issuedControllers": [
+    "fixture-a",
+    "fixture-b"
+  ],
+  "sameIssuedIdentity": true,
+  "finalController": "fixture-b",
+  "finalRevision": 2,
+  "conclusion": "Two actual expected-revision-one issuers both accept and return the same revision-two identity; B overwrites A after A completed because CAS is outside serialized publication",
+  "providerCompanyCalls": 0,
+  "independent": false
+}

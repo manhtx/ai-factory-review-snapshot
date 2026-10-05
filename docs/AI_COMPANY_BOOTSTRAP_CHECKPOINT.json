@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "mission_id": "FINAL-BOOTSTRAP-20260930",
+  "directive_source": "/Users/manhtx/.codex/attachments/58712c83-cb57-4ef8-9815-fb158e94ec66/pasted-text-1.txt",
+  "directive_authenticity": "explicit user submission in current thread; file alone is not a directive channel",
+  "bootstrap_status": "ACTIVE",
+  "successor_status": "NOT_PROVEN",
+  "closure_status": "OPEN",
+  "phase": "PRESERVE_RECONCILE",
+  "current_source_head": "d23b29342c9865a2a4f0cbdbe6ccb838522f00a5",
+  "application_snapshot": {
+    "directory": "/Users/manhtx/.codex/ai-company-f0-20260930-s8aGMe",
+    "file_count": 1137,
+    "bytes": 7753782,
+    "verification": "per-file SHA256 reread after copy",
+    "fidelity": "APPLICATION_ONLY",
+    "state_database_consistent_backup": false
+  },
+  "candidate": {
+    "directory": "/Users/manhtx/.codex/worktrees/f0-candidate-full/Macro Research Platform",
+    "revision": "076a5cd",
+    "authority": "NON_AUTHORITATIVE",
+    "reuse": "existing lease CAS and runtime evidence/review changes; package mapping still requires verification",
+    "baseline_difference": "canonical adds a7db5f0 and d23b293 changing server/ingestion.ts; do not replace product changes",
+    "fresh_test_command": "./node_modules/.bin/vitest run server/aiCompany/executionLease.test.ts server/aiCompany/roleWorkQueue.atomic.test.ts server/aiCompany/evidenceResolver.test.ts server/aiCompany/reviewEvidenceContract.test.ts server/aiCompany/runtime.test.ts --reporter=dot",
+    "fresh_test_result": {"exit_code": 0, "files_passed": 5, "tests_passed": 47, "duration_seconds": 1.45},
+    "test_scope": "targeted candidate unit/regression tests only; no operational or promotion proof"
+  },
+  "objectives": [
+    {"id":"PHASE-1","state":"ACTIVE","next_action":"Reconcile remaining state/topology and candidate fidelity; preserve consistent state before any authoritative mutation"},
+    {"id":"PHASE-2","state":"PENDING","dependency":"PHASE-1","scope":"minimal Constitution, TCB, durable mission/objective, capability, evidence/oracle/proof and truth commit"},
+    {"id":"PHASE-3","state":"PENDING","dependency":"PHASE-2","scope":"finish existing repair packages and execution reliability"},
+    {"id":"PHASE-4","state":"PENDING","dependency":"PHASE-3","scope":"product and data truth"},
+    {"id":"PHASE-5","state":"PENDING","dependency":"PHASE-4","scope":"security, successor readiness, handoff and bootstrap retirement"},
+    {"id":"PHASE-6","state":"PENDING","dependency":"PHASE-5","scope":"governed self-improvement"},
+    {"id":"PHASE-7","state":"PENDING","dependency":"PHASE-6","scope":"real local operation, fault/soak, independent breaker and closure certificate"}
+  ],
+  "limits": {
+    "active_foundational_mutation_max": 1,
+    "executor_activation": "NOT_AUTHORIZED_UNTIL_READINESS_PROOF",
+    "production_release": "HUMAN_GATED",
+    "no_broad_research_restart": true,
+    "this_checkpoint_is_runtime_authority": false
+  }
+}

@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/ai-factory-public-snapshot-EHh5Aj
+
+ ✓ server/aiCompany/cliResourceAdmission.test.ts (4 tests) 3623ms
+   ✓ actual agy dispatcher admits a current stub result only after its bound group exits  1583ms
+   ✓ actual SIGKILL leaves the provider alive and preserves admission until its entire group disappears  522ms
+   ✓ leader completion with a surviving actual descendant withholds release and terminal receipts  332ms
+   ✓ an actual spawn error preserves marked UNKNOWN ownership and never grants terminal success  1185ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  17:10:13
+   Duration  4.00s (transform 144ms, setup 0ms, collect 173ms, tests 3.62s, environment 0ms, prepare 86ms)
+

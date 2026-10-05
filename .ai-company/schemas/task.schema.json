@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://macro-os.local/schemas/task.schema.json",
+  "title": "AI Company Task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "project_id", "title", "status", "accountable", "responsible", "risk_level", "acceptance_criteria", "budget", "created_at"],
+  "properties": {
+    "task_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]{2,63}$"},
+    "project_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1, "maxLength": 240},
+    "status": {"enum": ["INTAKE", "DISCOVERY", "COUNCIL_REVIEW", "PM_BACKLOGGED", "CEO_PRIORITIZED", "READY", "EXECUTING", "INDEPENDENT_VERIFICATION", "USER_AND_DOMAIN_REVIEW", "RELEASE_GATE", "RELEASED", "OUTCOME_EVALUATION", "LEARNED", "BLOCKED", "HOLD", "REVISE", "ROLLBACK", "KILLED", "ESCALATED", "CIRCUIT_OPEN"]},
+    "accountable": {"type": "string", "minLength": 1},
+    "responsible": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "consulted": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "informed": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "goal_alignment": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "acceptance_criteria": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+    "risk_level": {"enum": ["P0", "P1", "P2", "P3"]},
+    "budget": {"type": "object", "additionalProperties": false, "required": ["max_attempts", "max_cost_usd", "timeout_seconds"], "properties": {"max_attempts": {"type": "integer", "minimum": 1, "maximum": 20}, "max_cost_usd": {"type": "number", "minimum": 0}, "timeout_seconds": {"type": "integer", "minimum": 1}}},
+    "dependencies": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "checkpoint": {"type": ["string", "null"]},
+    "evidence_required": {"type": "array", "items": {"type": "string"}},
+    "rollback_plan": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  }
+}

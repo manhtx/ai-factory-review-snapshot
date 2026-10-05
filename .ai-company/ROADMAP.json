@@ -1,0 +1,47 @@
+{
+  "roadmap_milestones": [
+    {
+      "milestone": "M0: Zero-Hallucination & Quality Gate Repair",
+      "target_epoch": 0,
+      "status": "completed",
+      "outcomes": [
+        "100% dynamic World screener",
+        "Canonical country routing",
+        "Deterministic mathematical percentile",
+        "Zero TS errors & lint warnings"
+      ]
+    },
+    {
+      "milestone": "M1: Universal Research Workflow & Compare Engine",
+      "target_epoch": 2,
+      "status": "completed",
+      "outcomes": [
+        "Dual-axis aligned overlay",
+        "Z-score transformation",
+        "Dynamic lead/lag cross-correlation",
+        "Two-way URL state encoding"
+      ]
+    },
+    {
+      "milestone": "M2: Data Contract Rigor & Publication Schedules",
+      "target_epoch": 5,
+      "status": "completed",
+      "outcomes": [
+        "Major 4-economy M2 basket",
+        "Layered semantic bounds validation",
+        "Per-series publication lag schedules",
+        "Independent source mapping"
+      ]
+    },
+    {
+      "milestone": "M3: Modular Backend & Distributed Quotas",
+      "target_epoch": 10,
+      "status": "planned",
+      "outcomes": [
+        "Split server/index.ts into bounded route modules",
+        "Redis rate limiting",
+        "Snapshot bootstrap optimization"
+      ]
+    }
+  ]
+}

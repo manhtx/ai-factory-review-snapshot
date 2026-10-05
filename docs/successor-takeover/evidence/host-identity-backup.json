@@ -1,0 +1,16 @@
+{
+  "schema": "host-identity.backup.v1",
+  "backupRoot": "/Users/manhtx/Documents/macro-host-identity-9wde4bub",
+  "files": {
+    ".ai-company/.controller.lock": "c1ebaeb8658acd6c50608422327bd4c987e02f2afc4076c3d6a37e84bbd00286",
+    ".ai-company/last-exit-code": "e3b9c2844b5a5c2677b3a2279db2ec8487491dd9a23d6b22fac153391b3bb63c",
+    ".ai-company/maintenance/lease.json": "c832e4f9ce180b8c8614b4d0e543d93e94450ebcf8846f94c92bda6fa42562bb",
+    ".ai-company/runtime/EXECUTION_LEASE.json": "643c86433351f3acec47f8484c7355a652d7c66b3e6ff7b23ca6832341a898fb",
+    ".ai-company/runtime/HEARTBEAT.json": "bf907eb99113dea19be3dd98a4d1b43ae9312c4d2f66eacc1c9ccebec3f786b4",
+    ".ai-company/runtime/supervisor-lease.json": "f836b4dfffe15ae4ca5b5d3e5825b6348b5b24304d904569e7fce2780e1c1abd"
+  },
+  "byteCopiesVerified": true,
+  "atomicStateFreeze": false,
+  "sourceRevision": "a514103b88430a3e10020286b4680b2e385f7e39",
+  "workingFilesRetained": true
+}

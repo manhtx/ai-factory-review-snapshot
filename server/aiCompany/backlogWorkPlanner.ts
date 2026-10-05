@@ -1,0 +1,182 @@
+import { RoleWorkQueue, type RoleWorkItem } from './roleWorkQueue';
+import type { CompanyRoleId } from './roleContracts';
+import type { ProductIdea } from './ideaLedger';
+import { cadencePolicyFor, type OperatingReviewCadence } from './operatingCadence';
+import { userJourneyForRole } from './userJourneyMatrix';
+
+export type PlannerBacklogItem = {
+  backlog_id?: string;
+  id?: string;
+  project_id?: string;
+  title?: string;
+  problem?: string;
+  owner_role?: string;
+  status?: string;
+  pm_review_status?: string;
+  sprint_id?: string;
+  work_class?: string;
+  runtime_failure_evidence_id?: string;
+  founder_override?: string;
+};
+
+export function isControlPlaneContinuityWork(item: PlannerBacklogItem): boolean {
+  if (item.work_class === 'CONTROL_PLANE_CONTINUITY') return true;
+  const text = `${item.title ?? ''} ${item.problem ?? ''}`.toLowerCase();
+  return (
+    text.includes('control plane') ||
+    text.includes('continuity kernel') ||
+    text.includes('supervisor lease') ||
+    text.includes('durability root') ||
+    text.includes('autonomous operation contract')
+  );
+}
+
+const ownerMap: Record<string, CompanyRoleId> = {
+  'Chief Data Officer': 'data-engineer', 'Chief Product Officer': 'pm', 'Chief Operating Officer': 'ceo', 'Security Lead': 'security',
+};
+
+export function roleForBacklog(item: PlannerBacklogItem): CompanyRoleId {
+  if (item.owner_role && ownerMap[item.owner_role]) return ownerMap[item.owner_role];
+  const text = `${item.title ?? ''} ${item.problem ?? ''}`.toLowerCase();
+  if (/data|provider|source|observation|freshness|ingest|fred|mock|cadence|polling/.test(text)) return 'data-engineer';
+  if (/canonical|period|duplicate|trend|turning.point|series payload/.test(text)) return 'backend-engineer';
+  if (/security|vulnerab|permission|secret|auth/.test(text)) return 'security';
+  if (/ui|ux|user|responsive|accessib|workflow|dashboard/.test(text)) return 'frontend-engineer';
+  if (/api|backend|runtime|database|persistence|migration/.test(text)) return 'backend-engineer';
+  return 'pm';
+}
+
+export async function planBacklogWork(input: { projectId: string; items: PlannerBacklogItem[]; queue: RoleWorkQueue }): Promise<{ created: RoleWorkItem[]; existing: number }> {
+  const current = await input.queue.records(input.projectId);
+  const existingKeys = new Set(current.map((item) => `${item.backlog_id}:${item.role}`));
+  const created: RoleWorkItem[] = [];
+  for (const item of input.items) {
+    // CONTINUITY FREEZE GUARD:
+    // Control plane continuity infrastructure is FROZEN.
+    // Any candidate work classified as CONTROL_PLANE_CONTINUITY without
+    // runtime_failure_evidence_id or founder_override is rejected/not admitted.
+    if (isControlPlaneContinuityWork(item)) {
+      const hasAuthorization = Boolean(item.runtime_failure_evidence_id || item.founder_override);
+      if (!hasAuthorization) {
+        continue;
+      }
+    }
+
+    const sprintSelected = item.status === 'SPRINT_SELECTED' && item.pm_review_status === 'APPROVED' && Boolean(item.sprint_id);
+    if (item.status !== 'PROPOSED' && item.status !== 'planned' && !sprintSelected) continue;
+    const backlogId = item.backlog_id ?? item.id;
+    if (!backlogId) continue;
+    const pmReviews: RoleWorkItem[] = [];
+    for (const candidate of current.filter(candidate => candidate.role === 'pm' && (candidate.backlog_id === `PM_REVIEW:${backlogId}` || candidate.backlog_id?.startsWith(`PM_REVIEW:${backlogId}:recheck`)))) {
+      if (await input.queue.currentSuccess(candidate)) pmReviews.push(candidate);
+    }
+    const pmReview = pmReviews.at(-1);
+    const pmOutput = pmReview?.structured_output as { recommendation?: unknown; evidence_ids?: unknown } | undefined;
+    const pmRecommendationIsValid = ['PROCEED', 'REVISE', 'HOLD', 'REJECT'].includes(String(pmOutput?.recommendation ?? ''));
+    const pmApproved = item.status === 'PROPOSED' && pmRecommendationIsValid && pmOutput?.recommendation === 'PROCEED' && Array.isArray(pmOutput.evidence_ids) && pmOutput.evidence_ids.length > 0;
+    // PROPOSED is an intake state, never an execution authorization. Create a
+    // bounded PM review task first; only a later PM-approved/READY projection
+    // may become implementation work. This prevents discovery telemetry or
+    // incident signals from bypassing product triage and burning agent tokens.
+    if (item.status === 'PROPOSED' && pmReviews.length > 0 && !pmRecommendationIsValid) {
+      const recheckBacklogId = `PM_REVIEW:${backlogId}:recheck`;
+      if (!existingKeys.has(`${recheckBacklogId}:pm`)) {
+        created.push(await input.queue.create({ project_id: input.projectId, backlog_id: recheckBacklogId, title: `PM recheck: ${item.title ?? 'Untitled backlog work'} (contract correction)`, role: 'pm' }));
+        existingKeys.add(`${recheckBacklogId}:pm`);
+      }
+      continue;
+    }
+    if (item.status === 'PROPOSED' && !pmApproved) {
+      const reviewBacklogId = `PM_REVIEW:${backlogId}`;
+      if (existingKeys.has(`${reviewBacklogId}:pm`)) continue;
+      created.push(await input.queue.create({ project_id: input.projectId, backlog_id: reviewBacklogId, title: `PM review: ${item.title ?? 'Untitled backlog work'}`, role: 'pm' }));
+      existingKeys.add(`${reviewBacklogId}:pm`);
+      continue;
+    }
+    const role = roleForBacklog(item);
+    // A newly approved proposal must not be suppressed by an old DONE or
+    // QUARANTINED compatibility row. Only a non-terminal/current execution,
+    // or work created after the approving PM review, is idempotent here.
+    const implementationExists = current.some((candidate) => {
+      if (candidate.backlog_id !== backlogId || candidate.role !== role) return false;
+      if (candidate.state === 'QUARANTINED') return false;
+      if (!pmApproved || !pmReview) return true;
+      return candidate.created_at >= pmReview.updated_at;
+    });
+    if (implementationExists) continue;
+    if (pmApproved && pmReview && !(await input.queue.currentSuccess(pmReview))) continue;
+    created.push(await input.queue.create({ project_id: input.projectId, backlog_id: backlogId, title: item.title ?? 'Untitled backlog work', role, ...(pmApproved && pmReview ? { ...reviewScope([pmReview]), depends_on: [pmReview.work_id] } : {}) }));
+    existingKeys.add(`${backlogId}:${role}`);
+  }
+  return { created, existing: input.items.filter((item) => { const id = item.backlog_id ?? item.id; if (!id) return false; const key = item.status === 'PROPOSED' ? `PM_REVIEW:${id}:pm` : `${id}:${roleForBacklog(item)}`; return existingKeys.has(key); }).length - created.length };
+}
+
+function reviewScope(dependencies: RoleWorkItem[]): { run_id: string; namespace: string } {
+  const first = dependencies[0]?.assignment;
+  if (!first?.run_id?.trim() || !first.namespace?.trim()
+    || dependencies.some(item => item.assignment?.run_id !== first.run_id || item.assignment?.namespace !== first.namespace)) {
+    throw new Error('cannot plan review: dependency scope is missing or inconsistent');
+  }
+  return { run_id: first.run_id, namespace: first.namespace };
+}
+
+export async function planIndependentReviews(input: { projectId: string; queue: RoleWorkQueue }): Promise<RoleWorkItem[]> {
+  const current = await input.queue.records(input.projectId);
+  const implementationRoles: CompanyRoleId[] = ['coder', 'data-engineer', 'backend-engineer', 'frontend-engineer', 'ai-engineer', 'sre'];
+  const created: RoleWorkItem[] = [];
+  for (const item of current.filter((candidate) => implementationRoles.includes(candidate.role))) {
+    for (const role of ['functional-qa', 'quality-control'] as const) {
+      const reviewBacklogId = `${item.backlog_id}:review:${role}`;
+      if (current.some((candidate) => candidate.backlog_id === reviewBacklogId && candidate.role === role)) continue;
+      if (!(await input.queue.currentSuccess(item))) continue;
+      created.push(await input.queue.create({ project_id: input.projectId, backlog_id: reviewBacklogId, title: `${role} review: ${item.title}`, role, ...reviewScope([item]), depends_on: [item.work_id] }));
+    }
+  }
+  return created;
+}
+
+export async function planPreReleaseReviews(input: { projectId: string; queue: RoleWorkQueue }): Promise<RoleWorkItem[]> {
+  const current = await input.queue.records(input.projectId);
+  const reviewRoles = ['stakeholder-panel', 'user-persona', 'ux-research', 'domain-expert'] as const;
+  const created: RoleWorkItem[] = [];
+  for (const quality of current.filter((item) => item.role === 'functional-qa')) {
+    const baseBacklogId = quality.backlog_id.split(':review:')[0];
+    const siblingQuality = current.find((item) => item.backlog_id === `${baseBacklogId}:review:quality-control`);
+    if (!siblingQuality) continue;
+    for (const role of reviewRoles) {
+      const reviewBacklogId = `${baseBacklogId}:pre-release:${role}`;
+      if (current.some((item) => item.backlog_id === reviewBacklogId && item.role === role)) continue;
+      if (!(await input.queue.currentSuccess(quality)) || !(await input.queue.currentSuccess(siblingQuality))) continue;
+      created.push(await input.queue.create({ project_id: input.projectId, backlog_id: reviewBacklogId, title: `${role} pre-release review: ${quality.backlog_id}`, role, ...reviewScope([quality, siblingQuality]), depends_on: [quality.work_id, siblingQuality.work_id] }));
+    }
+  }
+  return created;
+}
+
+export async function planResearchWork(input: { projectId: string; ideas: ProductIdea[]; queue: RoleWorkQueue }): Promise<RoleWorkItem[]> {
+  const current = await input.queue.records(input.projectId);
+  const roles = ['user-persona', 'ux-research', 'stakeholder-panel', 'domain-expert'] as const;
+  const created: RoleWorkItem[] = [];
+  for (const idea of input.ideas.filter((item) => item.opportunity_score === undefined || item.opportunity_decision === 'DISCOVER')) {
+    for (const role of roles) {
+      const backlogId = `${idea.idea_id}:research:${role}`;
+      if (current.some((item) => item.backlog_id === backlogId && item.role === role)) continue;
+      const journeyId = userJourneyForRole(role);
+      created.push(await input.queue.create({ project_id: input.projectId, backlog_id: backlogId, title: `${role} research [${journeyId}]: ${idea.title}`, role }));
+    }
+  }
+  return created;
+}
+
+/** Creates the durable governance tasks that make each executive cadence observable. */
+export async function planCadenceGovernanceWork(input: { projectId: string; cadence: OperatingReviewCadence; queue: RoleWorkQueue }): Promise<RoleWorkItem[]> {
+  const policy = cadencePolicyFor(input.cadence);
+  const current = await input.queue.records(input.projectId);
+  const created: RoleWorkItem[] = [];
+  for (const role of policy.accountable_roles as CompanyRoleId[]) {
+    const backlogId = `CADENCE:${input.cadence}:${role}`;
+    if (current.some((item) => item.backlog_id === backlogId && item.role === role)) continue;
+    created.push(await input.queue.create({ project_id: input.projectId, backlog_id: backlogId, title: `${input.cadence} governance review: ${role} [evidence: ${policy.required_evidence.join(', ')}]`, role }));
+  }
+  return created;
+}

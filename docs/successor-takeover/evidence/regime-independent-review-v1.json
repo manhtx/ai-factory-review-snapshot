@@ -1,0 +1,23 @@
+{
+  "authoritative": false,
+  "reviewer": "01a0fbc6-50b3-7273-8611-12bf4bf4a18c",
+  "scope": "candidate Vietnam observation adapter and regime page",
+  "initialDecision": "ACCEPTANCE_WITHHELD",
+  "findings": [
+    {"case": "credit provenance transformation mom with percent YoY unit", "failure": "admitted annual growth and verified observed classification", "disposition": "reproduced and rejected after repair"},
+    {"case": "property transformation yoy with percent MoM unit", "failure": "admitted annual growth and verified observed classification", "disposition": "reproduced and rejected after repair"}
+  ],
+  "recheckDecision": "BOUNDED_ADAPTER_PAGE_ACCEPTANCE",
+  "recheckTests": {"candidate": 31, "independent": 29, "note": "overlap with related 55-test suite; do not add counts as independent coverage"},
+  "externalHarness": "/private/tmp/regime-product-verifier.5lIgh4/adversarial.test.tsx",
+  "reviewedSources": {
+    "src/app/data/vietnamRegimeObservations.ts": "3f67e218778d7bf72eb545ee36e8355dcfd81233a6f0f79fece3ea3fa10c13c3",
+    "src/app/pages/RegimeDetectionPage.tsx": "3c8183e78808f2b9ff665e6c56fc4efb96105ff5441529cf48247f61c872691f"
+  },
+  "freshnessResolver": {"sha256": "851d549ab469111a3ed7069283e9e56b7f0c2b867cad5cef6d75651882d9f73a", "independentAcceptance": "OUTSIDE_REVIEW_SCOPE"},
+  "remainingDemonstratedTrustBoundaries": ["old observations carrying fresh still pass", "unrelated nonempty source-series ID still passes"],
+  "reviewExclusions": ["source authenticity", "actual series resolver", "API", "database", "running company", "governance", "promotion"],
+  "promotion": "NOT_GRANTED",
+  "historicalRevision": true,
+  "currentRecheck": "../VIETNAM_API_PRODUCT_PROGRESS.json"
+}

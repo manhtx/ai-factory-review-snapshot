@@ -1,0 +1,232 @@
+{
+  "schema": "ai-factory.combined-evidence-capture-proof.v1",
+  "authoritative": false,
+  "observedAt": "2026-10-05T07:39:24.995615+00:00",
+  "sourceRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "sourceTreeClean": false,
+  "sourceHashes": {
+    "scripts/ai-company-role-dispatch.mjs": "cee0908a96dde27fcca47e2cd2ae15753ef7520b30b2b6c8fdd309dba3dea6a6",
+    "scripts/ai-company-run-ready.mjs": "80dc6fa54bfe14c03667b25fa389603e8ba11ebb8dabf91afd7eb11283e8fcc6",
+    "scripts/record-disclaimer-banner-cycle.mjs": "5aaba3eb4edebffce5b0d27ada805e9904e4fdb8b9b05b362054ebb18c19f0d9",
+    "scripts/record-workspace-synthesis-cycle.mjs": "437d3730a358c65a117339fcf1068ead64c60415c9b1b6fc68680d95356c0838",
+    "server/aiCompany/adminWorkQueueTransport.test.ts": "697bb4eaee7214557df45ab7d913a13298077f66dce6a5819ba3ef277eb68b0c",
+    "server/aiCompany/adminWorkQueueTransport.ts": "c7c43e35122075e08294da8cf183567684e79744e31d062ef4b71eaec7888829",
+    "server/aiCompany/assignmentEnvelope.test.ts": "4fbe95a2eed6aec2d18698199cb682607c7e5858e4989a95d1f9ab7a3a789337",
+    "server/aiCompany/assignmentEnvelope.ts": "f9cfb2e942696807550699162222774d588a9291c18beeaff0c343d97c90e261",
+    "server/aiCompany/attemptAuthority.test.ts": "0c2ac1cb24b9b0198efbed02469ee886c05ebb45ebbca318898936a478f4bd0b",
+    "server/aiCompany/autonomousCoordinator.test.ts": "c230530135a7f6e69ee5057ea82219f7dd05e8eb2bee0e4e811c26cfcb8024b4",
+    "server/aiCompany/autonomousCoordinator.ts": "54868cdf485c7aa77955400b742b2f0ce03c26e2049114624be0bf907818127c",
+    "server/aiCompany/backlogWorkPlanner.test.ts": "77f7efe0642333e1a765267ebff26274b117eeaeb32b91f94dbfe8c3f92baddc",
+    "server/aiCompany/backlogWorkPlanner.ts": "28534ad2938535d7dcd0fa62ae77c3ad2c11070100a0c45870ed1b4b6dacbed8",
+    "server/aiCompany/cadenceQuorum.test.ts": "8e32c571bec1bb5b42391742300700d593ab895bc95d69b2f754e8689e3fa9df",
+    "server/aiCompany/cadenceQuorum.ts": "d71d1e234176e7f5c7da09fad97e489162a8182c3f7538ecc6edaec0d50aed1d",
+    "server/aiCompany/ceoReviewLedger.test.ts": "4c65ee1e224dd17e01f8928e3df1a99c2644372169cf5a189c906aa2d224b6d0",
+    "server/aiCompany/ceoReviewLedger.ts": "0e3192deac86dac1bc304927d42f894f69a1d32710db261c2f103750ed8d4b84",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "4e5a7b227e3b1d7708bae16214faeed9f330d9ed0cbf722fc10d5a2c509995dd",
+    "server/aiCompany/cliPmDecision.test.ts": "3ceb69d8886973aed9f5f5d247b685d3cdde68cf58cdae66f039a92b9ded0ab6",
+    "server/aiCompany/cliReceiptPublication.test.ts": "2df2ab3b227057810f32a3da71467ee65df217eecbcca6e77c5641522b7e6d58",
+    "server/aiCompany/combinedEvidenceCapture.test.ts": "e9d062e98d044ffbd5171cbf6fc21e7e52256cd1b53737ff87a1d79a39caea32",
+    "server/aiCompany/currentRoleAuthority.test.ts": "4ac25b51f5518a595ff0d80c35a8022d6609bc573a34b38e8c0329c128fbd719",
+    "server/aiCompany/dependencyAdmission.test.ts": "0ba9d5d2b9546701de997a9ec5b5f44ff7a1fbcce80cd4eb593b72117dcfd3af",
+    "server/aiCompany/evidenceAdmissionIntegrity.test.ts": "75ca70e211314967eda4ba905dac20b0067d898cf8f4b6e03fb818fa59d4399a",
+    "server/aiCompany/evidenceResolver.test.ts": "41f47307bf73fe11f05366ef5faf5c4446eb9ecf049921ce76a21b2dad9c4d3d",
+    "server/aiCompany/evidenceResolver.ts": "bf963b7caf71b81f4e84cf63849a4ad6dc5de6eb9b8d7d5e41b6bf2045885f1e",
+    "server/aiCompany/evidenceSnapshot.test.ts": "972baa63c951d9e73ad8c5d4a83e684dac7cb20b00db203ef021da8483ba18b6",
+    "server/aiCompany/ideaLedger.test.ts": "7152826bba1f7252f84b00a3fc1f116d52bfcb6d8eff4571c192721d97074e0f",
+    "server/aiCompany/ideaLedger.ts": "2fb5e4f96622e25f4558ff8a829d4d509a8d1fc9f9b9295d401796b1213bddaf",
+    "server/aiCompany/modelAdapter.test.ts": "8fd5d7302ff005a09f294c6c6cdb23906c28cd63e880d668a5e45cd0bd13a3d0",
+    "server/aiCompany/nativeAttemptLineage.test.ts": "5ae050bd7c5bd50921e0325f49699c393e91904a786f701ef624f84bf8e7bf43",
+    "server/aiCompany/nativeDispatchIssuance.test.ts": "e0c79187e8730d284d321a3002674b20034f427248de46a8a9b2a44d3ca84d29",
+    "server/aiCompany/nativeEvidenceAdmission.test.ts": "7f34486a61960346951f7e940de40a86821760cd9696bc632a251aa640f1a935",
+    "server/aiCompany/nativeProviderContract.test.ts": "48ccdbfc7717ea6289913f3a3fadde93b1e3471d3288f82d92131938b3beeae1",
+    "server/aiCompany/nativeReceiptAuthority.test.ts": "53522631e5ad9c63419926a78208d55c0a3704c988128eb58f766eed29121f79",
+    "server/aiCompany/nativeReceiptTestFixture.ts": "4e273dfb0aa96141b41232e428bc9619e86948fc62b01005639e0b9172867786",
+    "server/aiCompany/openaiCompatibleRoleAdapter.test.ts": "16e0c84b8a9338d0c75e4d2f5121fbe6871815942f086f28c1a7407dd75ee7d3",
+    "server/aiCompany/openaiCompatibleRoleAdapter.ts": "caa009117c8702498f39e43b398c500274938752345f889a64c031564580153b",
+    "server/aiCompany/opportunityScoring.test.ts": "facebc30ebd13ac92aca929ea1a2ff814e3a830557b0bb223e7310da02615638",
+    "server/aiCompany/opportunityScoring.ts": "7d72df80bdd1aa6e7adc1a8fa64a260cd778ba0c7ef9ed8389e75348b744a461",
+    "server/aiCompany/orchestrator.test.ts": "1fe4ce9e89d9fa5c1262e022a0d6ab00181ceb9d40d01ad41b8e2daced0986a3",
+    "server/aiCompany/orchestrator.ts": "3febbe998529c58c471644eaffea8912d0de5193119050f4f863823e87313fd8",
+    "server/aiCompany/preReleaseReviewGate.test.ts": "bc618e2979ca79d787100910dde5d62aaff16a04627c74151c03c835c6d3fc0c",
+    "server/aiCompany/preReleaseReviewGate.ts": "ed9d8428c7591b7400bd00f3d5f6d3c81d323cb2b7c02a3dff6ac82e89b2d896",
+    "server/aiCompany/queueMutationFence.test.ts": "994a37150ec21505b6154f08e9b7a5e47e669ee6169e7bc3b54a382a6068265c",
+    "server/aiCompany/queueMutationGate.ts": "b957ba6a65c53d139ee8f2e106b6db8c502c594771cf217a27fc1c7270ebd5d4",
+    "server/aiCompany/readinessAuthorityTestFixture.ts": "bf2029ac6d66d19f52a1ad2167afd1c7fa54056087b2af7ec33c3ccea101d841",
+    "server/aiCompany/recoveryCoordinator.test.ts": "a9bb2382b9962f4910ab54843ff58e4c2adad5004e60164cb568da2e61b13efd",
+    "server/aiCompany/recoveryCoordinator.ts": "2a90ee024c280d7c71f5c0689ab5563c9630866e1dad7d84635ee51d6984ec7c",
+    "server/aiCompany/recursiveDependencyAuthority.test.ts": "4aa47bf8597fe4510987f5f0f2ecefafb3d7e40dc957fe16da5819ef42631ef1",
+    "server/aiCompany/releasePromotion.test.ts": "000c98f1de7d59ade8440dd218e356c9fb631b1e0f07f84e5b6738ed58baca47",
+    "server/aiCompany/releasePromotion.ts": "ac7da75611745a9694a5bfa175bbc175278312c6ce51918091bd93565689f055",
+    "server/aiCompany/researchAuthorityTestFixture.ts": "31ef976fea641a954ffba28b1f3f51ce07928233d974dfda62af0b693a500137",
+    "server/aiCompany/researchResult.ts": "4c16c1af4708fe96ab7b3c9c479f08bee5c94e6a68995adee16a514607818d1c",
+    "server/aiCompany/researchSignalLedger.ts": "f3e528e3fe81c267009a306c08b58fef1fab1a4665f1bee0126a8e7ba69b89b9",
+    "server/aiCompany/researchSynthesis.test.ts": "980e4a925db1fe5f364360145d30dde246bf4f6f656c2f5ebbc04a12691444e3",
+    "server/aiCompany/researchSynthesis.ts": "25a41026664f73d9c710d2ea03d188a8fb15865f243c3667e9f17f3e37afefd2",
+    "server/aiCompany/reviewTerminalAdmission.test.ts": "a731a87f862f66c3d680b309b91eeb01b6a058fca8dd2724c33efe773709bf8c",
+    "server/aiCompany/roleAttemptArtifact.ts": "8e9dcf3491d14cebd91bbb2ad9088bbd6bfd46974b77fe22bf10c26c46638759",
+    "server/aiCompany/roleEvidenceLedger.test.ts": "18ef4c59a0d453f295f2534dff0591de3c92b797638f09a063b092e67f4c2324",
+    "server/aiCompany/roleEvidenceLedger.ts": "eab1f56e4ef60001636e4e708f42b4a81a3055ee717cf7820ae957550b510c7a",
+    "server/aiCompany/roleEvidenceResolver.test.ts": "2788e5eb000171bf30962acdfe6a49ed7c04ed5362d27db5e272ba89ee98d433",
+    "server/aiCompany/roleEvidenceResolver.ts": "78754bc7443e6a1f7a8d7db11eb69847d10c773637bad3a320044268f1df8e63",
+    "server/aiCompany/roleWorkExecutor.test.ts": "8727ff2ce937d433264257527f4f0b1c196136e778e7b2c3f05dcf5eac72a238",
+    "server/aiCompany/roleWorkExecutor.ts": "2d16eec10624942e0633f4bceaad7ee1b56336ed2664568646c72f2a314b9fc5",
+    "server/aiCompany/roleWorkQueue.atomic.test.ts": "12151f6f9a01c611b673a27db866b0a16eb935b797962bf53ae0d89bc8ee8adb",
+    "server/aiCompany/roleWorkQueue.test.ts": "da7bbe67ad6171921395b1db8dceb5877d6aefa4cb9b5fc19b7b573c6b49f487",
+    "server/aiCompany/roleWorkQueue.ts": "f084872551a3bbe11c52609f78be1a3b2dbef12645392f4570b932c811da8c6d",
+    "server/aiCompany/roleWorkQueueBypassGuards.test.ts": "bd9cf8f6a6e79163924786f71d76f567d7d71ea94715fc77154c0557073f17ee",
+    "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts": "b2662ee4919e46c5fcaef0ef613af415f5a70e00a52e5b7d9474f6e23922b6a8",
+    "server/aiCompany/runtime.test.ts": "c447e77bb8d12e5903db5d8c080640cbdc6fb01491c6539604b46bb5291da088",
+    "server/aiCompany/runtime.ts": "13d7f92821ae4f7146fe4a3d147bb5d483946003e4bcd5c97014a3af0d1d6075",
+    "server/aiCompany/worktreeManager.test.ts": "7ad8d890e9d87ba7fee1a6ac9354d3921e43c193be9959e8a5f152fa7ca69ea7",
+    "server/aiCompany/worktreeManager.ts": "9b10a147975ed8df7ea4998fa23593fd9d511d3e5587724ccafb30b87a43c4d5",
+    "server/index.ts": "7376fb0d32a27a111f67d223f128c44c862c367a17c9996216530850c11f19ea"
+  },
+  "designSha256": "bfdb1517923a86b885129f2de8e9919e293d701037baee3560502fa5dee3a0b8",
+  "status": "BUILDER_VERIFIED; REVIEW_PENDING",
+  "repair": "Combined snapshot factory validates complete original-store integrity with empty selected set, preserving bounded current identity decisions; direct resolve explicitly rechecks selected identity; full-view byte invalidation retained",
+  "tests": {
+    "before": "6PASS1FAIL7",
+    "focused": "43PASS4FILES_BEFORE3_ADDITIONAL_CONTROLS",
+    "controls": "10PASS",
+    "initialExpanded": "423PASS1TIMEOUT424_PRESERVED",
+    "timeoutRecheck": "25PASS2FILES_UNCHANGED_SOURCE_ORACLE_DEADLINE",
+    "finalExpanded": "424PASS42FILES",
+    "lint": "PASS",
+    "diff": "PASS",
+    "typecheck": "FAIL11_BASELINE"
+  },
+  "before": {
+    "observedAt": "2026-10-05T07:26:17.692Z",
+    "scope": "Actual temporary queue/capability and provider receipt publisher; no model/company/product/human effects",
+    "before": true,
+    "after": false,
+    "error": "",
+    "selectedReceiptStillPresent": true,
+    "nativeRows": 2,
+    "realProviderCalls": 0
+  },
+  "after": {
+    "observedAt": "2026-10-05T07:32:20.149Z",
+    "scope": "Actual temporary queue/capability and provider receipt publisher; no model/company/product/human effects",
+    "before": true,
+    "after": true,
+    "error": "",
+    "selectedReceiptStillPresent": true,
+    "nativeRows": 2,
+    "realProviderCalls": 0
+  },
+  "decisions": [
+    {
+      "pass": 1,
+      "topic": "CURRENT_REALITY",
+      "evidenceAndDecision": "Current source and actual temporary queue/publisher combined-capture probe before false after true while selected receipt intact."
+    },
+    {
+      "pass": 2,
+      "topic": "FIRST_PRINCIPLES",
+      "evidenceAndDecision": "Selected decision guards must validate current selected identities and global original-store integrity; unrelated valid append does not invalidate selected success."
+    },
+    {
+      "pass": 3,
+      "topic": "HISTORICAL_CONTRADICTION",
+      "evidenceAndDecision": "Full-file factory guard made currentSuccess false despite healthy selected original receipt."
+    },
+    {
+      "pass": 4,
+      "topic": "FALSIFICATION",
+      "evidenceAndDecision": "Fail-before6PASS1FAIL7; current10controls include positive unrelated append and negative selected changes/global corruption."
+    },
+    {
+      "pass": 5,
+      "topic": "COMPETING_HYPOTHESIS",
+      "evidenceAndDecision": "Actual selected receipt still present, current queue unchanged, source hash/content valid; failure occurs during combined factory full-file guard."
+    },
+    {
+      "pass": 6,
+      "topic": "AUTHORITY",
+      "evidenceAndDecision": "No write authority granted; existing queue-issued selected query and existing evidence guards reused."
+    },
+    {
+      "pass": 7,
+      "topic": "CONCURRENCY",
+      "evidenceAndDecision": "Paused actual native+CLI capture plus legitimate unrelated authorized native receipt publication; selected query remains true."
+    },
+    {
+      "pass": 8,
+      "topic": "FAILURE_SEMANTICS",
+      "evidenceAndDecision": "Direct resolution and selected query reject withdrawal/mutation/new second-store selected identity; malformed/duplicate original stores deny."
+    },
+    {
+      "pass": 9,
+      "topic": "SECURITY",
+      "evidenceAndDecision": "No native/CLI publication guards relaxed; missing/stale capability/root/issuer negatives retained in424tests."
+    },
+    {
+      "pass": 10,
+      "topic": "EVIDENCE",
+      "evidenceAndDecision": "Full native/CLI original parsers run; selected identity guards recheck both original stores before direct return/locked decision."
+    },
+    {
+      "pass": 11,
+      "topic": "REVISION_IDENTITY",
+      "evidenceAndDecision": "HEAD plus current affected source/test hashes; prior native414 proof retained with updated resolver hash historical."
+    },
+    {
+      "pass": 12,
+      "topic": "PRODUCT_DATA_TRUTH",
+      "evidenceAndDecision": "Temporary advisory receipts only; no actual product/research/data/human effect."
+    },
+    {
+      "pass": 13,
+      "topic": "PRODUCT_VALUE",
+      "evidenceAndDecision": "Removes an observed false terminal hold precondition; no measured consumer/product outcome claimed."
+    },
+    {
+      "pass": 14,
+      "topic": "RESOURCE_ECONOMICS",
+      "evidenceAndDecision": "Deterministic source repair, bounded tests/probes; zero actual provider/model calls or new agents. One original test timing timeout retained with unknown cause."
+    },
+    {
+      "pass": 15,
+      "topic": "MIGRATION_COMPATIBILITY",
+      "evidenceAndDecision": "Default full-view exact-byte invalidation remains; bounded selected semantics permit unrelated append. Legacy records not rewritten."
+    },
+    {
+      "pass": 16,
+      "topic": "ROLLBACK",
+      "evidenceAndDecision": "Restore prior resolver hash to reverse source repair; no live/candidate/store migration."
+    },
+    {
+      "pass": 17,
+      "topic": "SECOND_ORDER_EFFECTS",
+      "evidenceAndDecision": "Direct resolve explicitly rechecks selected IDs to avoid returning stale captured evidence after factory scope relaxation."
+    },
+    {
+      "pass": 18,
+      "topic": "SIMPLIFICATION",
+      "evidenceAndDecision": "Two existing calls changed, existing guard reused; no new store, authority cache, scheduler or API primitive."
+    },
+    {
+      "pass": 19,
+      "topic": "INDEPENDENT_VERIFICATION",
+      "evidenceAndDecision": "Builder-only; safety-denied independent review not retried/rephrased/substituted."
+    },
+    {
+      "pass": 20,
+      "topic": "CONVERGENCE",
+      "evidenceAndDecision": "Scoped combined-capture behavior verified424PASS42FILES; parent/controller/lease/OS actor, revision/input/effect/crash/downstream and final assurance OPEN."
+    }
+  ],
+  "residualTimingObservation": {
+    "classification": "UNKNOWN_CAUSE; NOT_REPRODUCED_IN_FOCUSED_OR_FULL_RECHECK",
+    "failure": "original stale native capability test exceeded unchanged5s Vitest deadline; no source or assertion/deadline changes",
+    "observedDisk": "15GiB available,93percent used at observed root volume; no causal disk attribution"
+  },
+  "limitations": [
+    "Builder-only; independent review denied and not retried/substituted",
+    "No atomic cross-store or queue-to-projection commit, crash/rollback/genesis proof",
+    "No OS process/controller/lease actor fencing or exact revision/input/effect/consumer outcome proof",
+    "No live/model/provider/company/product/human/candidate/public effect; A/B/C/D UNPROVEN"
+  ],
+  "nextAction": "Inventory actual parent/controller/lease issuance boundaries and native/CLI queue consumers before actor fencing; distinguish administrative authority from company-run authority; reproduce actual stale-controller path without assigning an unrelated lease file synthetic authority. Preserve all current capability/receipt/selected guards and negative evidence; no denied-review retry or public/live enabling."
+}

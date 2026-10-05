@@ -1,0 +1,2 @@
+import path from 'node:path';
+export function classifyChangedFiles(root: string, changedFiles: string[], allowedWrites: string[]): { authorized: string[]; unauthorized: string[] } { const allowed=allowedWrites.map((p)=>path.resolve(root,p)); const authorized:string[]=[], unauthorized:string[]=[]; for(const file of changedFiles){const resolved=path.resolve(root,file); (allowed.some((prefix)=>resolved===prefix||resolved.startsWith(`${prefix}${path.sep}`))?authorized:unauthorized).push(file);} return {authorized,unauthorized}; }

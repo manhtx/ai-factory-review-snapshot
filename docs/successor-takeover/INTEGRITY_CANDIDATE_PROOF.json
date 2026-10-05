@@ -1,0 +1,96 @@
+{
+  "schema": "successor-takeover.candidate-proof.v1",
+  "status": "SCOPED_COUNTEREXAMPLES_INDEPENDENTLY_REPLAYED_NO_PROMOTION",
+  "missionId": "AI_COMPANY_FINAL_SUCCESSOR_TAKEOVER",
+  "candidate": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+  "authority": "NONE",
+  "trustEpoch": "LEGACY_EPOCH",
+  "sealedExecutionRevision": false,
+  "sourceAndTestHashes": {
+    "server/aiCompany/durableOperation.ts": "bf0fc227302bf2d3595cc991c1bc6f34f88b6c9ef533767ca3c8ef2610669d33",
+    "server/aiCompany/durableOperationIntegrity.test.ts": "4be4fdbe1898fd68461a2ea3a4cdf1fc879d37c784d5f97c7b0802f91363146f",
+    "scripts/ai-company-continuity-kernel.mjs": "6a6f33d9bd0a6686a4786bde48d9305c423b190b3a931acf729560dc5af630b7",
+    "scripts/ai-company-continuity-kernel.integrity.test.mjs": "bfff1d7e236c59a115da8cbd310d74534f9c6796b8e5f834b41980384adc61b1",
+    "package-lock.json": "1590ed7ecf3287c2c5dbf1fc808e5a5ae25c12a9281c4db48b7ad54541376813",
+    "vitest.config.ts": "c972b286bd32b514712b25d215d26b2ed04f9275dcbd25b86e86cd402beea29e"
+  },
+  "observations": [
+    {
+      "check": "historical integrity oracle before implementation",
+      "result": "15 of 15 failed against restored F0 source"
+    },
+    {
+      "check": "marathon ownership counterexamples",
+      "result": "4 of 12 failed before ownership fix"
+    },
+    {
+      "check": "independent breaker",
+      "result": "three material failures: operation owner EPERM/aliases, invalid calendar dates, serializer substitution",
+      "evidence": "evidence/independent-integrity-counterexamples.json"
+    },
+    {
+      "check": "independent counterexamples added before repair",
+      "result": "8 new cases failed"
+    },
+    {
+      "check": "post-repair focused run",
+      "result": "65 passed across 4 files",
+      "command": "AI_COMPANY_VITEST_CACHE_DIR=/tmp/successor-integrity-vitest node_modules/.bin/vitest run scripts/ai-company-continuity-kernel.integrity.test.mjs server/aiCompany/durableOperationIntegrity.test.ts server/aiCompany/durableOperation.test.ts server/aiCompany/durableSupervisor.test.ts --maxWorkers=1 --minWorkers=1"
+    },
+    {
+      "check": "changed-file lint",
+      "result": "passed"
+    },
+    {
+      "check": "full TypeScript",
+      "result": "failed with same 11 diagnostics in candidate and untouched original checkout"
+    },
+    {
+      "check": "legacy compatibility",
+      "result": "321 restored operations parsed without state mutation; trust NOT established"
+    },
+    {
+      "check": "CLI direct invocation in temporary root with stop sentinel",
+      "result": "startup and stop events observed, no dispatch, exit 0"
+    },
+    {
+      "check": "module import",
+      "result": "completed without starting service"
+    },
+    {
+      "check": "empty-owner defect before repair",
+      "result": "3 added tests failed; actual recovery and dispatch bypass reproduced"
+    },
+    {
+      "check": "final focused run",
+      "result": "68 tests passed across 4 files; changed-file lint and diff check passed"
+    },
+    {
+      "check": "independent final package replay",
+      "result": "empty owner rejects with bytes unchanged and no dispatch; prior date, PID and serializer counterexamples remain contained",
+      "evidence": "evidence/independent-integrity-recheck.json",
+      "reviewer": "01a0f0c0-263c-7b32-8b95-201fcdddd300"
+    }
+  ],
+  "limitations": [
+    "No local authority or migration granted",
+    "No closure class proven",
+    "No cross-process transaction or terminal evidence closure",
+    "Missing/truncated initialized ledger remains undetected",
+    "Legacy retry authority and unknown queue states remain open",
+    "Earlier prerequisite mutations and bounded retry convergence remain open",
+    "Independent replay is limited to enumerated counterexamples, not mission closure or complete absence of bypasses"
+  ],
+  "previousRevision": {
+    "sourceAndTestHashes": {
+      "server/aiCompany/durableOperation.ts": "d09ecd7bb99bdaaf512bf7a4dcc0294ccb2ecda78606512ee65f622c76c7c60f",
+      "server/aiCompany/durableOperationIntegrity.test.ts": "d437b48ee8e34f7078711ccd0738f9cfbd2bda7179accc42ad0a22459fada130",
+      "scripts/ai-company-continuity-kernel.mjs": "6a6f33d9bd0a6686a4786bde48d9305c423b190b3a931acf729560dc5af630b7",
+      "scripts/ai-company-continuity-kernel.integrity.test.mjs": "90ec2adb68228c7c569f1c515cc8ac32109a871cd6bdccd37accb97736745a6d",
+      "package-lock.json": "1590ed7ecf3287c2c5dbf1fc808e5a5ae25c12a9281c4db48b7ad54541376813",
+      "vitest.config.ts": "c972b286bd32b514712b25d215d26b2ed04f9275dcbd25b86e86cd402beea29e"
+    },
+    "status": "SUPERSEDED_BY_EMPTY_OWNER_REPAIR",
+    "failureEvidence": "evidence/independent-empty-owner-counterexample.json"
+  }
+}

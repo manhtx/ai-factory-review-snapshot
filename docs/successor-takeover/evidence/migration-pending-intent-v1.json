@@ -1,0 +1,12 @@
+{
+  "schema": "successor-takeover.pending-intent.v1",
+  "source": "verified frozen suspended control snapshot, not live queue",
+  "pendingWork": {"workId": "CYCLE-1790736599951-pm", "objectiveId": "BACKLOG-BUSINESS-CYCLE-TURNING-POINTS", "backlogId": "CYCLE:1790736599951", "runId": "codex-product-cycle-1790736599951", "namespace": "codex-product-cycle-1790736599951", "role": "pm", "workflow": "codex-product-cycle-product-p2", "state": "READY", "dependsOn": []},
+  "backlogMatch": {"file": "product-intelligence/CANONICAL_PRODUCT_BACKLOG.json", "state": "READY", "priority": "P1", "intent": "Detect business-cycle peaks/troughs/turning points with confirmation-lag and revision-confidence transparency", "acceptance": ["explicit turning-point dates", "preliminary versus confirmed distinction", "targeted tests"], "allowedPaths": [".ai-company/product-intelligence/RESEARCH_PORTFOLIO.json"]},
+  "admission": "PRESERVE_UNVERIFIED_INTENT_NOT_EXECUTION_AUTHORIZATION",
+  "requiredReconciliation": ["resolve P1 backlog versus P2 workflow policy", "determine whether narrow allowed path is an investigation-only step or incompatible implementation contract", "resolve supporting observation and product-goal references before accepting claimed PM approval", "preserve objective independently of legacy work disposition"],
+  "unresolvedReferenceGroups": {"UNLABELED": {"workRows": 53, "references": 74}, "benchmark-b0": {"workRows": 12, "references": 12}, "product-cycle-001": {"workRows": 6, "references": 6}},
+  "referenceShapeFinding": "Some unresolved evidence_ids contain repository paths or command text such as npm test rather than evidence-ledger identities. A path or command string is not proof of execution or outcome.",
+  "trustGranted": false,
+  "claimLimit": "Metadata classification only. Workflow labels do not establish test isolation, real product value, current legitimacy, or successful execution."
+}

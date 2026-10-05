@@ -1,0 +1,15 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/attempt-recovery-failure-fTVRHx",
+  "status": "BLOCKED_EXTERNAL",
+  "newAttemptOwner": "newer-owner",
+  "newAttemptId": "9a030a1d-1e08-4954-aaf6-98d78e01a884",
+  "finalState": "IN_REVIEW",
+  "finalOwner": "newer-owner",
+  "blockedReason": "admitted non-PASS review; correction or re-evaluation required; bounded retry after provider contract (1/1)",
+  "hashes": {
+    "roleWorkQueue.ts": "ece699a3570f0dc396a6ee43e28088c1ecbb01b15fa17f9cbb0c51e87c387770",
+    "roleWorkExecutor.ts": "0793bdab846a7e380bfbf89c6bfc58017a389a97c3e1044cf8d3c7382145e9a9",
+    "autonomousCoordinator.ts": "2648f4c10ae3462e2f2825935e766ad69b6a570e9bde01ff9dcff03241c2a8f9",
+    "attemptAuthority.test.ts": "0c2ac1cb24b9b0198efbed02469ee886c05ebb45ebbca318898936a478f4bd0b"
+  }
+}

@@ -1,0 +1,2 @@
+import { expect, it } from 'vitest'; import { validateProviderTelemetry, type ProviderTelemetry } from './providerTelemetry';
+it('requires provider-neutral comparison identity',()=>{const t={provider:'codex',runner:'codex',model:'m',agent_role:'pm',assignment_id:'a',workflow_id:'w',run_id:'r',prompt_fingerprint:'p',context_size:1,latency_ms:2,retries:0,exit_code:0,tool_calls:0,files_read:1,files_written:0,task_status:'COMPLETED'} as ProviderTelemetry;expect(validateProviderTelemetry(t)).toEqual([]);});

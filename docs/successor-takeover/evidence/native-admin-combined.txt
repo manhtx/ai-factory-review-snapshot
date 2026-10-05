@@ -1,0 +1,30 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (7 tests) 6163ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1391ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1101ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1378ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1442ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  441ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4217ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1711ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1740ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2465ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  412ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  400ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  371ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  320ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 460ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 420ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 360ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 237ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 220ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 184ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 20ms
+
+ Test Files  10 passed (10)
+      Tests  74 passed (74)
+   Start at  21:56:03
+   Duration  16.68s (transform 273ms, setup 0ms, collect 489ms, tests 14.75s, environment 1ms, prepare 295ms)
+

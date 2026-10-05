@@ -1,0 +1,8 @@
+{
+  "schema": "successor-takeover.evidence-admission-probe.v1",
+  "sourceSha256": "9d2d5c4b9942825b92d11ae314e90005b80a778b814fca61487b5b2822a720c5",
+  "invalidTimestampErrors": [],
+  "mismatchedIdentityErrors": [],
+  "futureTimestampErrors": [],
+  "claimLimit": "Direct function fixtures only; no live evidence or terminal transition"
+}

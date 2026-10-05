@@ -1,0 +1,67 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (12 tests) 16599ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1375ms
+   ✓ refuses provider dispatch when stopped while paused after claim ACK  321ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1501ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  427ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1444ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1723ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  1173ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  3077ms
+   ✓ CLI review preserves actual original reference for same-scope  1573ms
+   ✓ CLI review preserves actual original reference for cross-scope  1589ms
+   ✓ CLI review preserves actual original reference for unresolved  2082ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 5443ms
+   ✓ CEO brief runtime > runs an injected role executor after planning work  543ms
+   ✓ CEO brief runtime > does not mark a cycle done when role execution is blocked  530ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1878ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1839ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (15 tests) 1888ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 3699ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  568ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  483ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  1128ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  467ms
+   ✓ WorktreeManager > merges verified product changes into main git history and marks worktree MERGED  331ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 1081ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 700ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 607ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 960ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (13 tests) 608ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 515ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 670ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 469ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 413ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 378ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 210ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 590ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 267ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 274ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 195ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 227ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 234ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 209ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (13 tests) 140ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 59ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 27ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 18ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 17ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 10ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 8ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 9ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 5ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 13ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (7 tests) 6ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (5 tests) 3ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 2ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 5ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 3ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+
+ Test Files  38 passed (38)
+      Tests  333 passed (333)
+   Start at  10:14:33
+   Duration  44.27s (transform 639ms, setup 0ms, collect 1.57s, tests 36.56s, environment 3ms, prepare 1.35s)
+

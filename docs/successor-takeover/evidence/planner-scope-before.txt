@@ -1,0 +1,50 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts (12 tests | 1 failed) 25ms
+   ✓ backlog work planner > routes series canonicalization to backend and ingestion cadence to data engineering 1ms
+   ✓ backlog work planner > creates idempotent governance work for the active cadence 3ms
+   ✓ backlog work planner > maps work to validated roles and is idempotent 1ms
+   ✓ backlog work planner > routes proposed product work through PM review instead of direct execution 1ms
+   ✓ backlog work planner > promotes proposed work only after an explicit PM PROCEED decision 2ms
+   ✓ backlog work planner > does not let a quarantined historical execution suppress a new PM approval 2ms
+   ✓ backlog work planner > rechecks legacy prose PM decisions instead of treating them as approval 2ms
+   × backlog work planner > creates independent QA and QC reviews after implementation completion 5ms
+     → expected { …(29) } to match object { …(2) }
+(29 matching properties omitted from actual)
+   ✓ backlog work planner > requires a reason for blocking and reports overdue work for escalation 1ms
+   ✓ backlog work planner > opens stakeholder, user, UX and domain reviews only after QA and QC pass 3ms
+   ✓ backlog work planner > creates research work for unscored or low-evidence ideas idempotently 1ms
+   ✓ backlog work planner > rejects control plane continuity work without runtime failure evidence under CONTINUITY FREEZE 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/backlogWorkPlanner.test.ts > backlog work planner > creates independent QA and QC reviews after implementation completion
+AssertionError: expected { …(29) } to match object { …(2) }
+(29 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "namespace": "project:macro-os",
+-   "run_id": "run-WORK-1790951542604-ffa8hn",
++   "run_id": "run-WORK-1790951542605-2cqiyc",
+  }
+
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts:119:33
+    117|     expect(reviews).toHaveLength(2);
+    118|     for (const review of reviews) {
+    119|       expect(review.assignment).toMatchObject({ run_id: item.assignmen…
+       |                                 ^
+    120|       await queue.claim(review.work_id, review.role);
+    121|       await queue.submitForReview(review.work_id);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 passed (12)
+   Start at  21:32:22
+   Duration  471ms (transform 59ms, setup 0ms, collect 72ms, tests 25ms, environment 0ms, prepare 33ms)
+

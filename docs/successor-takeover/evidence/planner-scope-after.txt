@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (12 tests) 23ms
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  21:33:05
+   Duration  253ms (transform 54ms, setup 0ms, collect 67ms, tests 23ms, environment 0ms, prepare 31ms)
+

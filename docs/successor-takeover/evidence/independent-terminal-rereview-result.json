@@ -1,0 +1,95 @@
+[
+  {
+    "kind": "wrongRun",
+    "denied": true
+  },
+  {
+    "kind": "wrongNamespace",
+    "denied": true
+  },
+  {
+    "kind": "wrongProject",
+    "denied": true
+  },
+  {
+    "kind": "wrongSource",
+    "denied": true
+  },
+  {
+    "kind": "ordinary",
+    "denied": true
+  },
+  {
+    "kind": "undeclaredSource",
+    "denied": true
+  },
+  {
+    "kind": "validCorrection",
+    "claimed": true,
+    "sourceSuccess": false
+  },
+  {
+    "kind": "legacyDONEHOLD",
+    "ordinaryDenied": true
+  },
+  {
+    "kind": "reconcileCounterexampleRepaired",
+    "predicateBefore": true,
+    "stateAfter": "READY",
+    "quarantined": [],
+    "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-terminal-review-X15EHg"
+  },
+  {
+    "kind": "wave",
+    "calls": 1,
+    "completed": 1,
+    "ordinaryState": "BLOCKED"
+  },
+  {
+    "kind": "coordinator",
+    "calls": 1,
+    "completed": 1,
+    "status": "TERMINAL_HOLD",
+    "ordinaryState": "READY"
+  },
+  {
+    "kind": "emptyWorkflow",
+    "status": "TERMINAL_HOLD"
+  },
+  {
+    "file": "roleWorkQueue.ts",
+    "sha256": "63c55fef47992d969f670011f90116ee757cf8d8207edd6bd9b3ca0017267181"
+  },
+  {
+    "file": "roleWorkExecutor.ts",
+    "sha256": "587e6223d26cd7c73b868719d0146610cbd0481429cdaf0415f712808439bc48"
+  },
+  {
+    "file": "autonomousCoordinator.ts",
+    "sha256": "3eda9fb1f148744e9d53a918a756bd72a9d4ad0a2fcd0313f857f3ae3f9cbca8"
+  },
+  {
+    "file": "backlogWorkPlanner.ts",
+    "sha256": "c5dce834c91e2a62137eb510095b2ccfa7d7031cc9c76fc25185a327be157772"
+  },
+  {
+    "file": "recoveryCoordinator.ts",
+    "sha256": "2a90ee024c280d7c71f5c0689ab5563c9630866e1dad7d84635ee51d6984ec7c"
+  },
+  {
+    "file": "reviewTerminalAdmission.test.ts",
+    "sha256": "9b5bf450c4afcb0d1ca09706a200e04ec81dd71a395927b67a0a3ccdd1e7bdfc"
+  },
+  {
+    "file": "autonomousCoordinator.test.ts",
+    "sha256": "66f3ed08112cde26d7d867e912446dd7afe2ae691cb58450220159293bd1e85c"
+  },
+  {
+    "file": "assignmentEnvelope.ts",
+    "sha256": "f9cfb2e942696807550699162222774d588a9291c18beeaff0c343d97c90e261"
+  },
+  {
+    "file": "assignmentEnvelope.test.ts",
+    "sha256": "4fbe95a2eed6aec2d18698199cb682607c7e5858e4989a95d1f9ab7a3a789337"
+  }
+]

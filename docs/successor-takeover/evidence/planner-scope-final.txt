@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (13 tests) 23ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (9 tests) 21ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 16ms
+
+ Test Files  3 passed (3)
+      Tests  33 passed (33)
+   Start at  21:33:30
+   Duration  616ms (transform 64ms, setup 0ms, collect 97ms, tests 61ms, environment 0ms, prepare 71ms)
+

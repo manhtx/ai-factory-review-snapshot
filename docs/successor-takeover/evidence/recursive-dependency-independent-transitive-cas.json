@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-04T17:37:04.812Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-independent-ISDnnz",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "57cb3ef4e73b72a5a5daab9a97f8760ee873a92603061e273af067d86b1ad5ff",
+    "server/aiCompany/recursiveDependencyAuthority.test.ts": "4aa47bf8597fe4510987f5f0f2ecefafb3d7e40dc957fe16da5819ef42631ef1"
+  },
+  "state": "DONE",
+  "error": "",
+  "sourceState": "QUARANTINED",
+  "middleState": "DONE",
+  "currentLeafSuccess": false,
+  "realProviderCalls": 0,
+  "networkCalls": 0
+}

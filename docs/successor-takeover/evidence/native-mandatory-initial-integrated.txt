@@ -1,0 +1,118 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 12476ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1516ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1093ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1412ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1453ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1092ms
+   ✓ CLI review preserves actual original reference for same-scope  1188ms
+   ✓ CLI review preserves actual original reference for cross-scope  1173ms
+   ✓ CLI review preserves actual original reference for unresolved  1191ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1201ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4045ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1745ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1632ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 4257ms
+   ✓ pre-release review gate > fails closed until every independent review has evidence  305ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  440ms
+   ✓ denies withdrawn current review authority  444ms
+   ✓ denies missing current review authority  433ms
+   ✓ denies nonpass current review authority  427ms
+   ✓ denies missing-verdict current review authority  457ms
+   ✓ uses full dependency snapshot before selecting review backlog  457ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  437ms
+   ✓ plain rows and copied views cannot certify prerelease  412ms
+   ✓ cannot approve an empty target project using healthy foreign work  444ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3599ms
+ ❯ server/aiCompany/researchSynthesis.test.ts (17 tests | 1 failed) 3745ms
+   ✓ research synthesis > turns completed research work into idempotent evidence signals 95ms
+   ✓ research synthesis > requires current bound advisory perspectives before re-score 269ms
+   ✓ does not synthesize historical DONE research after ancestor withdrawal 174ms
+   ✓ denies legacy persisted signal authority 287ms
+   ✓ denies wrong-project persisted signal authority 293ms
+   ✓ denies substring persisted signal authority 242ms
+   ✓ denies withdrawn persisted signal authority 223ms
+   × denies changed-attempt persisted signal authority 240ms
+     → corrupt provider dispatch at queue row 21
+   ✓ denies changed-result persisted signal authority 234ms
+   ✓ denies changed-hash persisted signal authority 239ms
+   ✓ denies ambiguous persisted signal authority 247ms
+   ✓ denies invalid-confidence persisted signal authority 239ms
+   ✓ binds all transitive input row versions and ignores unrelated work 1ms
+   ✓ missing receipts revoke actual quorum and new synthesis while preserving signal history 258ms
+   ✓ plain rows or forged authority cannot grant research readiness 248ms
+   ✓ mutable display rows cannot fabricate canonical research origin 218ms
+   ✓ issued authority callbacks cannot be replaced by caller-created approval 236ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 2919ms
+   ✓ cadence quorum > passes only when every daily accountable role is done with evidence  360ms
+   ✓ denies withdrawn governance inputs despite historical DONE  427ms
+   ✓ denies missing governance inputs despite historical DONE  458ms
+   ✓ reads healthy dependencies outside cadence selection  425ms
+   ✓ revokes receiptless cadence and rejects stale views  453ms
+   ✓ plain rows and copied views cannot certify cadence  373ms
+   ✓ cannot approve target cadence using another project governance  312ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2092ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  370ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  350ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 273ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 1201ms
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (31 tests) 1199ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 835ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 534ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 955ms
+   ✓ release promotion > promotes only after full independent quorum  393ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  434ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 768ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 827ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 812ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 405ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 567ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 371ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 589ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 337ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 513ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 555ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 542ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 333ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 364ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 227ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 216ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 311ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 338ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 198ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 66ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 56ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 14ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 12ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 7ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 65ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 7ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 4ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 3ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/researchSynthesis.test.ts > denies changed-attempt persisted signal authority
+Error: corrupt provider dispatch at queue row 21
+ ❯ server/aiCompany/roleWorkQueue.ts:488:86
+    486|         || typeof dispatch.provider_id !== 'string' || !dispatch.provi…
+    487|         || typeof dispatch.issued_at !== 'string' || !Number.isFinite(…
+    488|         || new Date(dispatch.issued_at).toISOString() !== dispatch.iss…
+       |                                                                                      ^
+    489|       return row;
+    490|     });
+ ❯ RoleWorkQueue.parseRecords server/aiCompany/roleWorkQueue.ts:475:54
+ ❯ RoleWorkQueue.currentAuthority server/aiCompany/roleWorkQueue.ts:586:23
+ ❯ server/aiCompany/researchSynthesis.test.ts:54:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 40 passed (41)
+      Tests  1 failed | 413 passed (414)
+   Start at  11:36:29
+   Duration  52.68s (transform 424ms, setup 0ms, collect 1.08s, tests 46.64s, environment 3ms, prepare 1.17s)
+

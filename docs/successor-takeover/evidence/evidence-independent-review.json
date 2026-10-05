@@ -1,0 +1,24 @@
+{
+  "schema": "ai-factory.independent-review.v1",
+  "observedAt": "2026-10-02T11:07:50.038531+00:00",
+  "reviewer": "fresh evidence_independent_review agent",
+  "scope": "Existing evidence validator shape/ID/hash/UTC time/clock-age policy and corrupt JSONL reader",
+  "result": "51/51 named isolated tests PASS after first and reviewer-counterexample repairs",
+  "sourceHashes": {
+    "server/aiCompany/evidenceResolver.ts": "3ba5654e0ea9e155121e18a02b7c336c4e2bdfa359480bad0d65d0701ea9269c",
+    "server/aiCompany/evidenceAdmissionIntegrity.test.ts": "75ca70e211314967eda4ba905dac20b0067d898cf8f4b6e03fb818fa59d4399a"
+  },
+  "counterexamplesRepaired": [
+    "14 negative-control failures before first repair",
+    "null age and false/null clock defaults",
+    "null context raw exception"
+  ],
+  "limits": [
+    "Blank caller scopes still OPEN",
+    "Optional queue/review resolver still OPEN",
+    "Objective/attempt/execution revision binding still OPEN",
+    "No live ledger or transition tested",
+    "No successor promotion or G1 verification"
+  ],
+  "providerCalls": 0
+}

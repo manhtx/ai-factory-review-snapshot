@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Scorecard",
+  "type": "object",
+  "required": ["schema_version", "last_updated", "total_score_100", "tier", "metrics"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date-time" },
+    "total_score_100": { "type": "number", "minimum": 0, "maximum": 100 },
+    "tier": { "type": "string" },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "score_0_to_5", "confidence_0_to_1", "baseline_score", "target_h1", "evidence", "owner"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "score_0_to_5": { "type": "number", "minimum": 0, "maximum": 5 },
+          "confidence_0_to_1": { "type": "number", "minimum": 0, "maximum": 1 },
+          "baseline_score": { "type": "number" },
+          "target_h1": { "type": "number" },
+          "target_h2": { "type": "number" },
+          "evidence": { "type": "string" },
+          "owner": { "type": "string" },
+          "next_measurement_date": { "type": "string" }
+        }
+      }
+    }
+  }
+}

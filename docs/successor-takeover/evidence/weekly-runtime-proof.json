@@ -1,0 +1,30 @@
+{
+  "schema": "ai-factory.scoped-proof.v1",
+  "observedAt": "2026-10-02T15:20:33.878903+00:00",
+  "executionIdentity": "UNCOMMITTED_WORKTREE_HASHES; NOT_LIVE_ATTESTED",
+  "sourceHashes": {
+    "server/aiCompany/runtime.test.ts": "c447e77bb8d12e5903db5d8c080640cbdc6fb01491c6539604b46bb5291da088"
+  },
+  "claim": "Weekly isolated contract admission retains all18roles; own reviewer receipt blocks five review roles and fails cycle",
+  "builder": "135_PASS_14_FILES; runtime13PASS",
+  "independent": {
+    "agent": "/root/planner_scope_review",
+    "runtimeTests": "13PASS",
+    "reviewedSourceHash": "c447e77bb8d12e5903db5d8c080640cbdc6fb01491c6539604b46bb5291da088",
+    "observedLedgers": {
+      "positive": "18weeklyDONE; weeklyattemptDONE",
+      "negative": "5weeklyreviewersBLOCKED self-certification;13othersDONE;weeklyattemptFAILED"
+    }
+  },
+  "typecheck": "FAIL11; no full gate pass",
+  "limitations": [
+    "One injected executor creates fixtures and producer labels; no independent actor authentication",
+    "Fixture input observations empty and real_product_outcome UNKNOWN",
+    "No product outcome, live provider, CLI, restart, migration, candidate promotion or A/B/C/D closure"
+  ],
+  "evidence": [
+    "weekly-runtime-controls.txt",
+    "pipeline-final.txt",
+    "pipeline-typecheck.txt"
+  ]
+}

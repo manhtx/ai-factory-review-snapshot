@@ -1,0 +1,21 @@
+{
+  "workflow_id": "product_improvement",
+  "version": "0.1.0",
+  "product_id": "macro-os",
+  "north_star": "verified_product_improvement_or_valuable_learning",
+  "max_parallel_steps": 3,
+  "steps": [
+    { "id": "observe", "role": "data-engineer", "state": "DISCOVERY", "output": "evidence_bundle", "requires": ["real product/data evidence"] },
+    { "id": "understand", "role": "pm", "state": "DISCOVERY", "output": "problem_statement", "requires": ["evidence_bundle", "user_job"] },
+    { "id": "challenge", "role": "critic", "state": "INDEPENDENT_VERIFICATION", "output": "critique", "depends_on": ["understand"] },
+    { "id": "estimate", "role": "tech-lead", "state": "PM_BACKLOGGED", "output": "technical_plan", "depends_on": ["understand", "challenge"] },
+    { "id": "decide", "role": "ceo-guild", "state": "CEO_PRIORITIZED", "output": "guild_decision", "depends_on": ["challenge", "estimate"], "gate": "evidence_and_dissent_required" },
+    { "id": "build", "role": "coder", "state": "EXECUTING", "output": "implementation_evidence", "depends_on": ["decide"] },
+    { "id": "verify", "role": "functional-qa", "state": "INDEPENDENT_VERIFICATION", "output": "qa_report", "depends_on": ["build"] },
+    { "id": "audit", "role": "quality-control", "state": "INDEPENDENT_VERIFICATION", "output": "qc_report", "depends_on": ["build"] },
+    { "id": "measure", "role": "user-persona", "state": "OUTCOME_EVALUATION", "output": "product_outcome", "depends_on": ["verify", "audit"] },
+    { "id": "learn", "role": "pm", "state": "LEARNED", "output": "validated_learning", "depends_on": ["measure"], "gate": "improvement_or_learning_evidence_required" }
+  ],
+  "terminal_states": ["DONE", "BLOCKED", "HOLD", "REJECTED", "KILLED"],
+  "safety": { "release_requires": ["qa_report", "qc_report", "security_review", "release_gate_decision"], "founder_approval_required_for": ["production_change", "destructive_action", "irreversible_decision"] }
+}

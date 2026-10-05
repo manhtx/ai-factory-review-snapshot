@@ -1,0 +1,15 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3806ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1577ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1596ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 2830ms
+   ✓ backlog work planner > opens stakeholder, user, UX and domain reviews only after QA and QC pass  307ms
+   ✓ does not generate prerelease reviews from receiptless QA/QC history  627ms
+
+ Test Files  2 passed (2)
+      Tests  30 passed (30)
+   Start at  10:51:51
+   Duration  7.38s (transform 190ms, setup 0ms, collect 262ms, tests 6.64s, environment 0ms, prepare 62ms)
+

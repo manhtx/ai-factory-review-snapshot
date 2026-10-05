@@ -1,0 +1,45 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (11 tests) 10191ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1130ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1081ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1364ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1424ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  315ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1088ms
+   ✓ CLI review preserves actual original reference for same-scope  1138ms
+   ✓ CLI review preserves actual original reference for cross-scope  1103ms
+   ✓ CLI review preserves actual original reference for unresolved  1133ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4214ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1748ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1759ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 1690ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (9 tests) 811ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (13 tests) 645ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 583ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 531ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 510ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 379ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 418ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 336ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 331ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 307ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 340ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 356ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 301ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 293ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 297ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 298ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 211ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 40ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 26ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 36ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 8ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 7ms
+
+ Test Files  25 passed (25)
+      Tests  240 passed (240)
+   Start at  22:48:34
+   Duration  29.37s (transform 370ms, setup 0ms, collect 1.12s, tests 23.16s, environment 3ms, prepare 1.24s)
+

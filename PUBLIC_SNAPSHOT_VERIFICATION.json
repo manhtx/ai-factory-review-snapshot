@@ -1,0 +1,38 @@
+{
+  "schema": "ai-factory.public-snapshot-verification.v1",
+  "observedAt": "2026-10-05T10:13:03.753Z",
+  "sourceCarrierRevision": "1113cd7b53da5c985489c4163f3512da3e7f0cb7",
+  "pinnedSourceCandidate": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "exportedSourceFiles": 1299,
+  "allSourceBytesMatch": true,
+  "staticRelativeImportsUnresolved": 0,
+  "nodeVersion": "v24.18.0",
+  "dependencies": "Temporarily linked installed local node_modules during smoke; link removed before Git publication",
+  "initialSmoke": {
+    "passed": 37,
+    "failed": 1,
+    "error": "EPERM instead of ESRCH in actual OS group-absence assertion",
+    "cause": "UNKNOWN"
+  },
+  "unchangedCliRecheck": {
+    "passed": 4,
+    "failed": 0
+  },
+  "unchangedFullSmokeRecheck": {
+    "passed": 38,
+    "failed": 0,
+    "files": 4
+  },
+  "sourceFullRegression": "Historical exact candidate239fe22 533PASS51FILES; not rerun as full snapshot suite",
+  "gitHistory": "Fresh single-root snapshot history; no parent repository commits copied",
+  "currentAuthority": "NONE",
+  "independentReview": "REVIEW_PENDING; previous safety rejection preserved; no retry/substitute",
+  "blocks": {
+    "A": "UNPROVEN",
+    "B": "UNPROVEN",
+    "C": "UNPROVEN",
+    "D": "UNPROVEN"
+  },
+  "productionAutonomy": "DISABLED",
+  "publication": "No deployment or live service enabling; public source review only"
+}

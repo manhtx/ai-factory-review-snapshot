@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CompanyState",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "company_name",
+    "current_epoch",
+    "phase",
+    "last_completed_epoch",
+    "current_constraint",
+    "next_actions",
+    "health",
+    "stop_requested",
+    "last_updated"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "company_name": { "type": "string" },
+    "current_epoch": { "type": "integer", "minimum": 0 },
+    "phase": { "type": "string" },
+    "last_completed_epoch": { "type": "integer", "minimum": 0 },
+    "current_constraint": { "type": "string" },
+    "next_actions": { "type": "array", "items": { "type": "string" } },
+    "health": { "type": "string", "enum": ["healthy", "degraded", "blocked"] },
+    "stop_requested": { "type": "boolean" },
+    "last_commit_seen": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date-time" },
+    "scorecard_summary": { "type": "object" },
+    "pause_reason": { "type": "string" }
+  }
+}

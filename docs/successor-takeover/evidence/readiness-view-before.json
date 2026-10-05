@@ -1,0 +1,70 @@
+{
+  "scope": "Temporary typed fixture only; no real release/governance",
+  "before": {
+    "release": {
+      "ready": true,
+      "blockers": [],
+      "approvedRoles": [
+        "functional-qa",
+        "quality-control",
+        "stakeholder-panel",
+        "user-persona",
+        "ux-research",
+        "domain-expert"
+      ]
+    },
+    "cadence": {
+      "ok": true,
+      "cadence": "daily",
+      "required_roles": [
+        "ceo",
+        "ceo-guild",
+        "pm",
+        "data-engineer",
+        "sre"
+      ],
+      "completed_roles": [
+        "ceo",
+        "ceo-guild",
+        "pm",
+        "data-engineer",
+        "sre"
+      ],
+      "blockers": []
+    }
+  },
+  "after": {
+    "release": {
+      "ready": true,
+      "blockers": [],
+      "approvedRoles": [
+        "functional-qa",
+        "quality-control",
+        "stakeholder-panel",
+        "user-persona",
+        "ux-research",
+        "domain-expert"
+      ]
+    },
+    "cadence": {
+      "ok": true,
+      "cadence": "daily",
+      "required_roles": [
+        "ceo",
+        "ceo-guild",
+        "pm",
+        "data-engineer",
+        "sre"
+      ],
+      "completed_roles": [
+        "ceo",
+        "ceo-guild",
+        "pm",
+        "data-engineer",
+        "sre"
+      ],
+      "blockers": []
+    }
+  },
+  "realProviderCalls": 0
+}

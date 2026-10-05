@@ -1,0 +1,1911 @@
+{
+  "schema": "ai-factory.writer-census-candidate.v1",
+  "observedAt": "2026-10-05T08:38:03.367Z",
+  "sourceRevision": "fc476ecf935cd68d570e3995bf7a11008b15f996",
+  "complete": false,
+  "mode": "DETERMINISTIC_SOURCE_CENSUS",
+  "records": [
+    {
+      "path": "scripts/ai-company-experiment-runner.sh",
+      "sha256": "3b46471774a1149060004c9b300ae76aeac95bbf8e702299e9d898666d87e191",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [
+        "$EVIDENCE_DIR/LIVENESS_EXPERIMENT_EVIDENCE.json",
+        "$SD/quota-pause.json",
+        "./.ai-company/product-intelligence/RESOLVED_OPPORTUNITIES.json",
+        "$REPO_ROOT/.ai-company/reports/AUTONOMOUS_CONTINUATION_LATEST.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/ai-company-marathon.mjs",
+      "sha256": "739f5009ee3ad519bb4ce4b1ca48fd6162fb009af6bdbdba7e5a73aa4fa84670",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "rename",
+        "mergeToMain"
+      ],
+      "targetLiterals": [
+        "macro-platform.sqlite",
+        "owner.json",
+        "provider-telemetry.jsonl",
+        "QUALIFIED_WORK_INVENTORY.json",
+        "QUALIFIED_WORK_RUNWAY.json",
+        "CANONICAL_PRODUCT_BACKLOG.json",
+        "RESEARCH_PORTFOLIO.json",
+        ".ai-company/product-intelligence/RESEARCH_PORTFOLIO.json",
+        "backlog-candidates.jsonl",
+        "scheduler-decisions.jsonl",
+        ".ai-company/product-intelligence/QUALIFIED_WORK_INVENTORY.json"
+      ],
+      "authorityReferences": [
+        "ExecutionLeaseManager"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/ai-company-product-continuation.mjs",
+      "sha256": "778da70b44691cf9a93b4f645ef3ab400b9ce4aed14d4ad87dcb06e14d1a77b8",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "block"
+      ],
+      "targetLiterals": [
+        "CANONICAL_PRODUCT_BACKLOG.json",
+        "RESOLVED_OPPORTUNITIES.json",
+        "AUTONOMOUS_CONTINUATION_LATEST.json"
+      ],
+      "authorityReferences": [
+        "ExecutionLeaseManager"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/ai-company-role-dispatch.mjs",
+      "sha256": "cee0908a96dde27fcca47e2cd2ae15753ef7520b30b2b6c8fdd309dba3dea6a6",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "writeFile",
+        "block",
+        "publishCliReceipt"
+      ],
+      "targetLiterals": [
+        "role-work-queue.jsonl",
+        "role-handoffs.jsonl",
+        ".ai-company/optimization/CONTINUOUS_OPTIMIZATION_STATE.json",
+        "provider-telemetry.jsonl"
+      ],
+      "authorityReferences": [
+        "ExecutionLeaseManager",
+        "attemptAuthority"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/ai-company-run-ready.mjs",
+      "sha256": "80dc6fa54bfe14c03667b25fa389603e8ba11ebb8dabf91afd7eb11283e8fcc6",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "block",
+        "requeueBlocked"
+      ],
+      "targetLiterals": [
+        "owner.json",
+        "role-handoffs.jsonl"
+      ],
+      "authorityReferences": [
+        "ExecutionLeaseManager"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/ai-company-shadow-planner.mjs",
+      "sha256": "4013ad7060edffa6cbeee25478034ca8d6a30a87c2b621a04139cd1a4987bafc",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/product-intelligence/RESEARCH_PORTFOLIO.json",
+        "SHADOW_COUNTERFACTUALS.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/apply-migrations.ts",
+      "sha256": "e6987dd19837a0ba7b339f7560a8ad5007b2079def19a0f2e2a59b4bdab9709e",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-activity-to-value-routing.mjs",
+      "sha256": "b0f42e8a1a4bbaec3327a8c525b6bca28f3a5e1786589530217103af9d1a2a8d",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-ai-company-current-state.mjs",
+      "sha256": "42af1c5523eb0d9f25b9a5c3c4e15af385598a51a9b3bb371983714c48b763e0",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "AI_COMPANY_CURRENT_STATE_AUTHORITATIVE.json",
+        "role-work-queue.jsonl",
+        "role-work-executions.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-ai-company-lifecycle.mjs",
+      "sha256": "75e214a86638774aa9a510bc6b9082782bac5f507f09e4517b7d8036edc0533b",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/reports/ai-company-lifecycle-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-ai-company-operating-model.mjs",
+      "sha256": "606275e847946eb3af0bcbe44bae686044ef026c944bff78736985348ab1a60a",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-api-period-integrity.mjs",
+      "sha256": "a35b1e9208ad24150289250320a38611ddc25e5d69db23111102e0c50a20f56c",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/reports/api-period-integrity-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-autonomous-next-action.mjs",
+      "sha256": "c25ef5db87efb66f4376246c93c7d663b594a7928ad81768f3ae3fc130b6d0e5",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "role-work-queue.jsonl",
+        "autonomous-next-action-authoritative-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-codex-product-cycle-evaluation.mjs",
+      "sha256": "4e66f52afd36f8553b94cd5b31c4c023f83773c92eb07fd503e822b9f48aceaf",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "role-work-queue.jsonl",
+        "role-dispatch-evidence.jsonl",
+        "ai-usage-events.jsonl",
+        "provider-telemetry.jsonl",
+        "security-violation-events.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-codex-product-epoch.mjs",
+      "sha256": "ebf8cce500b5b5050ad585fe2a86e9d06685ac0467616150180c059dd8cba0d5",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/optimization/CONTINUOUS_OPTIMIZATION_STATE.json",
+        ".ai-company/runtime/projects/macro-os/role-work-queue.jsonl",
+        ".ai-company/runtime/projects/macro-os/provider-telemetry.jsonl",
+        "codex-product-epoch-authoritative-latest.json",
+        ".ai-company/reports/codex-product-epoch-authoritative-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-codex-transport.mjs",
+      "sha256": "fe3ebc0b9dd8fe2d363e84f7f94b58639a7b8a014cc1b8641c861a81fd8b484d",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "codex-transport-authoritative-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-compare-funnel-contract.mjs",
+      "sha256": "599bc57974e9a80f949ef436d065f5622ae21b5f0e2a0d19cd499964a2729fab",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "user-telemetry.jsonl",
+        "compare-funnel-contract-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-fred-contracts.mjs",
+      "sha256": "7dc05dc1e1a012f1b8bc3571804cb681bc9c0f4836ad2015b9312dc542a6e5a6",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-fred-revision-parity.mjs",
+      "sha256": "12de9b544322e7b1501c35fa56b67848a6d4a53d2258338bb0deacdc879416e3",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/reports/fred-revision-parity-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-ism-ingestion.mjs",
+      "sha256": "f9107364530e73e16be1488eaceda83a0290565a019aea019385afbe3d2d3af7",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/reports/ism-ingestion-authoritative-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-local-supervisor.mjs",
+      "sha256": "fef21a75439ccea355d497d8dfc91282a9a77d90fdd384d47bbe78f328d51ab8",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "local-supervisor-authoritative-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-macro-funnel-latency.mjs",
+      "sha256": "ba015ee2a7dfb185923f560ca6aa6dfc246ecfae2cafb2bc4993c5b19b66fac9",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "user-telemetry.jsonl",
+        "macro-funnel-latency-authoritative-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-real-data.mjs",
+      "sha256": "03817783e482aac732341d7ab1d5ec982e0b789a2b25dd52db3ca3d4e7d72707",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [
+        ".ai-company/backlog.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-recovery-epoch.mjs",
+      "sha256": "0a51f43c900b868f78b2b607a54240d9e530a6f0d6d81fbe6827030b3d2cc778",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "EPOCH_AUDIT.json",
+        "three-cycle-epoch-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-source-urls.mjs",
+      "sha256": "15a88a5ddf7eb84ce2afc70c52d5f52468b08099fef15b95aaccffe5f93d29a1",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/reports/source-contract-quarantine-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/audit-synthetic-series.mjs",
+      "sha256": "6a5c328d1771b0e3af169327971c122fabaf4ac2fba090fb8cb8279a1bb8cf07",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/benchmark-macro-hydration-concurrency.mjs",
+      "sha256": "03c484fa430b69d9028a5899a616bd826e9eeab9d54d2b70f0ad666b2a704259",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "macro-hydration-concurrency-benchmark-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/canary-founder-zero-continuity.mjs",
+      "sha256": "2cfe84cc74d88d7657c92e6d57390e55178c4ec4b50de5a357283bfee5853390",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "06_PROCESS_TRACE.jsonl"
+      ],
+      "authorityReferences": [
+        "ExecutionLeaseManager"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/cdp-capture.mjs",
+      "sha256": "757698b3c1b087c0b5e4b882cfbdee17ecbbaa5a5fa16fdbbf2cb0c5bbbf6a1e",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/close-measured-product-cycle.mjs",
+      "sha256": "4e011956458b2e7341b3af9588c16accfe0960a6808b68c060573dcc67abeaa6",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "rename",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "CANONICAL_PRODUCT_BACKLOG.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/create-ai-company-health-h0.mjs",
+      "sha256": "74c214fcf15f78974eb2136303cdc40b56c8b5a3202abf56abc34da72b2f3a52",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "projects/macro-os/role-work-queue.jsonl",
+        "projects/macro-os/role-work-executions.jsonl",
+        "projects/macro-os/provider-attempts.jsonl",
+        "projects/macro-os/provider-telemetry.jsonl",
+        "projects/macro-os/role-dispatch-evidence.jsonl",
+        "projects/macro-os/ai-usage-events.jsonl",
+        "projects/macro-os/role-handoffs.jsonl",
+        "projects/macro-os/security-violation-events.jsonl",
+        "AI_COMPANY_HEALTH_H0.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/create-codex-product-cycle.mjs",
+      "sha256": "1a3eb5964b24b4b50e2d3b76a3dacaaf16cc24817409343d3e4d482c96398312",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/company-state.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/create-data-bottleneck-report.mjs",
+      "sha256": "d5cf6c41527af31834fd80cc7f851eab2011315c71537074912156fc6c191ab8",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "fred-contract-authoritative-latest.json",
+        "data-bottleneck-remediation-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/create-dogfood-baseline.mjs",
+      "sha256": "302510eeba91b1f4b0c35621af0c81dc65772fe86f70211f610e6ab08efe0142",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "role-work-queue.jsonl",
+        "DOGFOOD_B0.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/create-forecast-template.mjs",
+      "sha256": "b7a9ca45e8f0a6181f568382a80f57a05c7092b664ab1d7c243c0553f5204fb9",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [
+        "Output file must end in .csv or .json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/evaluate-architecture-trial-decision.mjs",
+      "sha256": "009d19c7fa92590566437d0cfe2d6d79ef9beb080ee444ff1bd5c9306aa69532",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/generate-ai-company-manifest.mjs",
+      "sha256": "7c6aba1e611296784cef955605b4c672cfeafdfaf5d4c83e78bfb0bec228069e",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "PLATFORM_MANIFEST.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/generate-ai-resource-report.mjs",
+      "sha256": "1e3c129b151459291a873e1904abcab199d80881f9407c1bca7a545b1907cf3e",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/runtime/projects/macro-os/ai-usage-events.jsonl",
+        ".ai-company/reports/ai-resource-history.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/generate-indicator-catalog-metadata.mjs",
+      "sha256": "7131f7e5319547d71ba3904d730a6c939da6a54a8cd9165ed00c871bebd5e432",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/generate-macro-product-observability.mjs",
+      "sha256": "9004fe9d6712f5b4033b1ae9751f4b73f7c382dbf3c756b0abbc1d5a105fa512",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/runtime/user-telemetry.jsonl",
+        ".ai-company/product-intelligence/observability-snapshot.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/groom-disclaimer-banner-cycle.mjs",
+      "sha256": "d9acff20daab691389b854517b61630c60b668914af20d7964a44d731df562c9",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "CANONICAL_PRODUCT_BACKLOG.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/groom-founder-candidate-sprint.mjs",
+      "sha256": "3ddd87aafefe059e63a74c7b96d8390241e3b81937a4d889215909623034c0ed",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "CANONICAL_PRODUCT_BACKLOG.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/intake-founder-ux-debt.mjs",
+      "sha256": "6b6c1c21506a0690953a168196a8ad119c233ab5a4edcf4f5a17549bec36faf5",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "backlog-candidates.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/record-authoritative-verification.mjs",
+      "sha256": "423f37b6430cc7b21f0628ccf9c0d23260a593692c3d398d8c7df8f54aa240f6",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "authoritative-verification-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/record-disclaimer-banner-cycle.mjs",
+      "sha256": "5aaba3eb4edebffce5b0d27ada805e9904e4fdb8b9b05b362054ebb18c19f0d9",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "role-work-queue.jsonl",
+        "role-dispatch-evidence.jsonl",
+        "CANONICAL_PRODUCT_BACKLOG.json",
+        "AI_COMPANY_EVOLUTION_MARATHON_STATE.json",
+        "LONGITUDINAL_LEDGER.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/record-workspace-synthesis-cycle.mjs",
+      "sha256": "437d3730a358c65a117339fcf1068ead64c60415c9b1b6fc68680d95356c0838",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "role-work-queue.jsonl",
+        "role-dispatch-evidence.jsonl",
+        "CANONICAL_PRODUCT_BACKLOG.json",
+        "AI_COMPANY_EVOLUTION_MARATHON_STATE.json",
+        "LONGITUDINAL_LEDGER.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/repair-frontier-research-identity.mjs",
+      "sha256": "30c17ac28b448984846855cf2ae8a7bdac9aece3bc0c5c794a9f8f8f968f93c3",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "rename",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/product-intelligence/QUALIFIED_WORK_INVENTORY.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/report-ai-company-token-benchmark.mjs",
+      "sha256": "5b5edfeb66a1a658d3f0d4c4fa28cee7fb0aaca1902815eda95f60b41d3527ce",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/runtime/projects/macro-os/provider-telemetry.jsonl",
+        ".ai-company/reports/AI_COMPANY_TOKEN_BENCHMARK.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/restore-public-from-supabase-cluster.mjs",
+      "sha256": "8ea9edae1dc49e75e31e9dcc51f9a6808438bb59c7a6b61be7ad345e8288daf8",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-architecture-trial.mjs",
+      "sha256": "acb877c0ffb2fa84cf73df7564029417fba532fc383706b317c508e0020a4b62",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "role-dispatch-evidence.jsonl",
+        "D_PRODUCT_BOTTLENECK.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-autonomous-evolution.mjs",
+      "sha256": "22d7eedd9d754ff1b73f9bbb429a8a8a6fefd2036cef9bddcd46727c059d136b",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "LONG_RUN_EVOLUTION_STATE.json",
+        "OPPORTUNITY_BACKLOG.json",
+        "LONG_RUN_AI_COMPANY_EVOLUTION_FINAL.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-backlog-grooming-and-sprint.mjs",
+      "sha256": "43212ac05e78809d0c5eeabf7d3cc4abaf2049caf388d5400790f913b61b592b",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "CANONICAL_PRODUCT_BACKLOG.json",
+        ".ai-company/product-intelligence/RESEARCH_PORTFOLIO.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-final-canary-c0-c22.mjs",
+      "sha256": "94f3fab8d2d35d735a5d067c241e29c75d3e98d177c5b40570578fadf93270f9",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "06_FINAL_CANARY_TRACE.jsonl"
+      ],
+      "authorityReferences": [
+        "ExecutionLeaseManager"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-founderless-continuity-simulation.mjs",
+      "sha256": "b8cb0ff0c038826df77558fa97ad4606f4f11dd52ef9874b2f3a40a3d10fe10c",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/reports/founderless-continuity-simulation-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-macro-os-corpus.mjs",
+      "sha256": "5c75f0b04d8b5b72069db1281768dd136125037f3fe5b62b2f42b892836e66b1",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-product-cycle-001.mjs",
+      "sha256": "11b78c50a9ec73d98267c8e0bb66eb693d94fb8df73af1e19d3ce6c2b689f09a",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "user-telemetry.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-product-discovery.mjs",
+      "sha256": "3a5b985de0bd6d25d10b29770634a79b2c6735e569c11e701eff1dbda7c297fd",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-real-provider-recovery-proof.mjs",
+      "sha256": "a8f0f1c9592d0d17aaaa50d4a297edfce2453ed3024fb95c1323ba75bcbd011e",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        ".ai-company/company-state.json",
+        "step2_reviewer_verdict.json",
+        "step3_ceo_recovery_plan.json",
+        "macro_observation_artifact.json",
+        "step5_qc_verdict.json",
+        "real-provider-recovery-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/run-semantic-review-benchmark.mjs",
+      "sha256": "58f4ddbf6c8aab31ef3a0f666a1b87b4990a2d9363c5f72712fc576cf76e5133",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "semantic-review-benchmark-latest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/test-adversarial-attacks.mjs",
+      "sha256": "bbd1d133248abd97cf53865ad7b905c416d8ddacbbe392b1d2a892bc1509f401",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/test-crash-window-safety.mjs",
+      "sha256": "2265edbe5efbef282b34fd54c1b9ce1ec0c29b13701bacd4b70c520450234470",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "05_CRASH_WINDOW_TRACE.jsonl",
+        "output-manifest.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "scripts/update-marathon-m2-records.mjs",
+      "sha256": "f8f37d5ef38bc37cec65cf179dcaf8436cd024720665d502fb8ef2b17b366d4f",
+      "entrypoint": "CLI/SCRIPT_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "AI_COMPANY_EVOLUTION_MARATHON_STATE.json",
+        "LONGITUDINAL_LEDGER.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/adminWorkQueueTransport.ts",
+      "sha256": "c7c43e35122075e08294da8cf183567684e79744e31d062ef4b71eaec7888829",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "block"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/agentPrinciples.ts",
+      "sha256": "677407bdd22fe3265b84ccfacfeb12c2eb815354ecdef394b958e3caded87ca8",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "agent-principles.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/aiUsageLedger.ts",
+      "sha256": "e87d6794bc014dbb225b92095b8e76b8f20bfc485fa74878f8f6073d691b6fce",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "ai-usage-events.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/architectureTrial.ts",
+      "sha256": "d14af461792084062b38e5fb14cb9b7789a4a0f35e3c70530a45b093cdc6b0aa",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "architecture-trials.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/autonomousCoordinator.ts",
+      "sha256": "54868cdf485c7aa77955400b742b2f0ce03c26e2049114624be0bf907818127c",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "block"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/backlogIntake.ts",
+      "sha256": "1e3828ef6d958b623a8fa0cc41dd40d6a372dd1581030893141e8d8718b9e8d9",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "rename",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "backlog-candidates.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/backlogLedger.ts",
+      "sha256": "7f6498a25e62841da31ae2ac5cb3760f6dc6519d2c777e76949d7af667b9cf28",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "backlog.jsonl",
+        "backlog-decisions.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/behavioralAdaptation.ts",
+      "sha256": "8ae9370f8254dc80bebc75144753d05ffe7a5000c24b5a6d3f43fbc7e6625b97",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "BEHAVIORAL_ADAPTATIONS.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/boundedHeartbeat.ts",
+      "sha256": "6308a166e507199d973a4b106ed053bf83a9c786419a78b4011df821af1af500",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "heartbeat-runs.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/ceoGuildDecision.ts",
+      "sha256": "823399a9b367e621ca2ccf39dfc010f7a0f73eca6acb968d748567a583badffe",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "ceo-guild-decisions.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/ceoReviewLedger.ts",
+      "sha256": "0e3192deac86dac1bc304927d42f894f69a1d32710db261c2f103750ed8d4b84",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "ceo-reviews.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/competitiveEvidenceLedger.ts",
+      "sha256": "152911296250255a2148e719b2ebd1b0632a350107ff7eba953246925b847de2",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "competitive-evidence.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/compoundingIntelligence.ts",
+      "sha256": "ad5a5bd0cf28a8f9b96c4091036027c5e5b9523370282bee908a41268e9c0f84",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "COMPOUNDING_INTELLIGENCE_METRICS.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/council.ts",
+      "sha256": "17ea2ede69528fbf98019d2a3b9353afc6c95d941b6e487929fddb5c33eb5f04",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "feedback.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/decisionLedger.ts",
+      "sha256": "ccbdc613e708d1d7dd5aea461e7ae8dbd8bfff7142e23060d1b6d2e0f7c01aa4",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "decisions.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/deliveryLedger.ts",
+      "sha256": "861093d75c3d965b499731a8ea7ca03882513dbfe1979a0580f22b452793917c",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "delivery.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/discoveryAttemptLedger.ts",
+      "sha256": "a2acc26255c246adad729a31cadf785f6cd2954f9c4605c1e410e7b215390bb7",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "discovery-attempts.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/durableOperation.ts",
+      "sha256": "f1bb88fb6b8cee91e7f19e7c34c83a52ae4b4898d809209b00fafda1c690b9cc",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "rename",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "durable-operations.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/durableSupervisor.ts",
+      "sha256": "83fbe3d63640a1248066c7af2014f57629997e57b13136696d00a52d6e016b1d",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "rename",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "supervisor-lease.json",
+        "supervisor-checkpoint.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/escalationLedger.ts",
+      "sha256": "dfd524587ea44f251133e455432fe4008eeb45d4660ae82097242a508a687b5d",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "escalations.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/evaluationLedger.ts",
+      "sha256": "89b52810a342b3ece536780da151d96d35fc2b45bbb2e6b108e135a9c1bd01da",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "evaluations.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/executionLease.ts",
+      "sha256": "b14aa289bdac1905a399f9e7f297b3e01c26a40813b33ba2803c1248ef5c218a",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "rename"
+      ],
+      "targetLiterals": [
+        "EXECUTION_LEASE.json"
+      ],
+      "authorityReferences": [
+        "expectedRevision",
+        "ExecutionLeaseManager"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/ideaLedger.ts",
+      "sha256": "2fb5e4f96622e25f4558ff8a829d4d509a8d1fc9f9b9295d401796b1213bddaf",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "ideas.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/marathonState.ts",
+      "sha256": "b0697227096542b51795b043894d584f87505fadd23acdda908ab461015d34eb",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "appendFile",
+        "block"
+      ],
+      "targetLiterals": [
+        "AI_COMPANY_MARATHON_STATE.json",
+        "AI_COMPANY_MARATHON_CYCLES.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/optimizationLedger.ts",
+      "sha256": "783b73d9debf9297e080f538d07039614064757debbfd340cbd41181f093409e",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "optimization.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/outcomeLedger.ts",
+      "sha256": "019210b0ac2d7ea1c2a7167aed51122799819b7dedd90cef5e0659a20648c8ee",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "outcomes.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/productCycleAttemptLedger.ts",
+      "sha256": "137e1720d6ca9c09b58f83a1c23dca5d622b3b1c734177355051519cb64da5aa",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "product-cycle-attempts.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/productCycleScheduler.ts",
+      "sha256": "344fc1c925444c3a5b81f4520958f6ad7ff4721da394420e42f98eff09642f3d",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "product-cycle-state.json",
+        "product-cycle-reports.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/productDiscoveryDecisionLedger.ts",
+      "sha256": "cac9feed391bb1e2f5360d2f79bcb09a6629101f04bda8948014c134ba506c04",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "DISCOVERY_DECISIONS.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/productExperiment.ts",
+      "sha256": "e38215ee1c365b6b911ab63a828ec0ba852872d3df62a0fedb03142f0f71d962",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "product-experiments.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/productMemory.ts",
+      "sha256": "5acdddfece5a588a31d209a3c21b64b71c5c3381df68dfd0288cd8fa28883a50",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "appendFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/productMutationJournal.ts",
+      "sha256": "a7f59d46342b460a8f160022a10b80e95068ef4fd89efc44ef45c53a6877c3b5",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "rename",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "product-mutations.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/productOpportunityProbe.ts",
+      "sha256": "3ccc1164b08c7ac2afcc37ea75cc158d61843c2f8a8a4880ff98fb4881db9fb7",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "user-telemetry.jsonl",
+        "product-opportunities.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/projectFeatureFlags.ts",
+      "sha256": "47644846bacbb635e475f6d4e37e7ab4795d51efe4e9ee45b428b3f51e1bc7ff",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "feature-flags.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/projectRegistry.ts",
+      "sha256": "8117908097ee8bec0f7b73dadf279a53ec3ed8b624c909679d87cc39712bb259",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "projects.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/providerAttemptLedger.ts",
+      "sha256": "822126b5efae54c2224333b043b89346181794b7714cafe92dc668a1a37fbba6",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "provider-attempts.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/providerResilience.ts",
+      "sha256": "87f5b2849ffa1d3bacd72744e80a4398f3adff9d91b2dd4299ed2aa93bbc0163",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "provider-dead-letters.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/qualifiedWorkSupply.ts",
+      "sha256": "639be6301e4385496d9f9d91ce9214ecfa4a506fd21e74f7707123e2897f6188",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/queueMutationGate.ts",
+      "sha256": "b957ba6a65c53d139ee8f2e106b6db8c502c594771cf217a27fc1c7270ebd5d4",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [],
+      "targetLiterals": [
+        "role-work-queue.jsonl",
+        "role-evidence.jsonl",
+        "role-dispatch-evidence.jsonl",
+        "role-work-queue.write-gate.sqlite"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/quotaPause.ts",
+      "sha256": "29990c3d37067dcb009830ee6fbe000e2417e3fe645b2c73eb9dc6030940246a",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "rename",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "quota-pause.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/recoveryCoordinator.ts",
+      "sha256": "2a90ee024c280d7c71f5c0689ab5563c9630866e1dad7d84635ee51d6984ec7c",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "rename",
+        "writeFile"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/researchSignalLedger.ts",
+      "sha256": "f3e528e3fe81c267009a306c08b58fef1fab1a4665f1bee0126a8e7ba69b89b9",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "research-signals.jsonl"
+      ],
+      "authorityReferences": [
+        "queue_revision"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/resourceGovernor.ts",
+      "sha256": "5c9f3bdf3d36522e47bc05002aaea2aa9a1c1aa15bed6f1a65dc90c0e26314f8",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "quota-pause.json",
+        "/decision.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/reviseContinuation.ts",
+      "sha256": "95a14f28497441ee792fefbece259741c6aec08343bb7945297d28c0d7580ebe",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "revise-continuations.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/roleEvidenceLedger.ts",
+      "sha256": "eab1f56e4ef60001636e4e708f42b4a81a3055ee717cf7820ae957550b510c7a",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "publishNativeReceipt"
+      ],
+      "targetLiterals": [
+        "role-evidence.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/roleHandoffLedger.ts",
+      "sha256": "10a4397cc44ab8a46df7e9960c9082025379a181cb980a5a6ed38e9eb890d5b1",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "role-handoffs.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/roleWorkExecutionLedger.ts",
+      "sha256": "acd2a695073d459e6881045feec1b06c3ffa65b750bd0e5df76d7682d0b23533",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "role-work-executions.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/roleWorkExecutor.ts",
+      "sha256": "2d16eec10624942e0633f4bceaad7ee1b56336ed2664568646c72f2a314b9fc5",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "block"
+      ],
+      "targetLiterals": [],
+      "authorityReferences": [
+        "queue_revision"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/roleWorkQueue.ts",
+      "sha256": "f084872551a3bbe11c52609f78be1a3b2dbef12645392f4570b932c811da8c6d",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "block",
+        "publishNativeReceipt",
+        "publishCliReceipt",
+        "requeueBlocked"
+      ],
+      "targetLiterals": [
+        ".ai-company/company-state.json",
+        "role-work-queue.jsonl",
+        "role-evidence.jsonl",
+        "role-dispatch-evidence.jsonl",
+        "forensic-write-provenance.jsonl"
+      ],
+      "authorityReferences": [
+        "queue_revision",
+        "assertAttempt",
+        "currentAuthority"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/runtime.ts",
+      "sha256": "13d7f92821ae4f7146fe4a3d147bb5d483946003e4bcd5c97014a3af0d1d6075",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "requeueBlocked"
+      ],
+      "targetLiterals": [
+        ".ai-company/product-intelligence/CANONICAL_PRODUCT_BACKLOG.json"
+      ],
+      "authorityReferences": [
+        "currentAuthority"
+      ],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/securityViolationLedger.ts",
+      "sha256": "0cc4d6048d246576d4c1fdd3d06276ec880625c1250dd181da70500971288f01",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "security-violation-events.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/sprintLedger.ts",
+      "sha256": "88972b1ed071a88575e7e74d41d9b653b98fffa7cfc1ef82630519230ab18045",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "writeFile",
+        "rename"
+      ],
+      "targetLiterals": [
+        "sprints.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/stateStore.ts",
+      "sha256": "179c8f887f290dbf30fb13ada19f3b39ab11586fe2f9d5fe8186143611254a51",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile",
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "events.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/toolGateway.ts",
+      "sha256": "37ae18ce20dec66fa6e97c52e9f50ce679613634a1a2db40a0fe6cb35038f177",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "tool-calls.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/truthProjection.ts",
+      "sha256": "f7e40ae37e8af7885d2ecadae2a24219d4e54a5eeec09b00fb25c69322ec9b33",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile"
+      ],
+      "targetLiterals": [
+        "Repeated coordinator invocations with empty dispatch set appended duplicate AWAITING_SCHEDULE rows to wait-wake.jsonl",
+        "AI_COMPANY_MARATHON_STATE.json",
+        "AI_COMPANY_MARATHON_CYCLES.jsonl",
+        "lease.json",
+        "QUALIFIED_WORK_INVENTORY.json",
+        "QUALIFIED_WORK_RUNWAY.json",
+        ".ai-company/product-intelligence/QUALIFIED_WORK_INVENTORY.json + QUALIFIED_WORK_RUNWAY.json"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/usageLedger.ts",
+      "sha256": "bcb7b4340c3b21762c9d838f210afd2a8e15dbd824211ec131c655beef351659",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "usage.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/waitWake.ts",
+      "sha256": "453fb40ea0bf7e78f90748398d3fb79f721c87dbacc2c629f37b9c8631d629d2",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "appendFile"
+      ],
+      "targetLiterals": [
+        "wait-wake.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    },
+    {
+      "path": "server/aiCompany/worktreeManager.ts",
+      "sha256": "9b10a147975ed8df7ea4998fa23593fd9d511d3e5587724ccafb30b87a43c4d5",
+      "entrypoint": "MODULE_SOURCE",
+      "enabledState": "UNKNOWN_REQUIRES_RUNTIME_CALLER_RECONCILIATION",
+      "mutationReferences": [
+        "writeFile",
+        "mergeToMain"
+      ],
+      "targetLiterals": [
+        "product-mutations.jsonl"
+      ],
+      "authorityReferences": [],
+      "effectProof": "UNKNOWN",
+      "disposition": "SOURCE_CAPABLE_NOT_RUNTIME_PROVEN"
+    }
+  ],
+  "limitations": [
+    "Direct syntax search misses transitive writers and external integrations",
+    "Source references are not proof of enabled authority or process ownership",
+    "Existing WRITER_MAP historical facts remain historical; no certification"
+  ]
+}

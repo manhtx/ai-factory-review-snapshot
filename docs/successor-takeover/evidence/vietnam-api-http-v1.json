@@ -1,0 +1,19 @@
+{
+  "authoritative": false,
+  "environment": "temporary candidate Express process, loopback ephemeral port, closed after four requests",
+  "databaseOrProviderAccess": false,
+  "cases": [
+    {"method":"GET","path":"/api/v1/analytics/vietnam-credit-regime","http":200,"inputClass":"observed","status":"unavailable","factualObservations":null,"inference":null},
+    {"method":"POST","path":"/api/v1/analytics/vietnam-credit-regime","credit":9,"property":18,"http":200,"inputClass":"scenario","status":"valid","factualObservations":null,"rawSpread":9,"inference":"property_bubble_decoupling"},
+    {"method":"POST","path":"/api/analytics/vietnam-credit-regime","credit":300,"property":18,"http":200,"inputClass":"scenario","status":"invalid_input","factualObservations":null,"inference":null},
+    {"method":"POST","path":"/api/v1/analytics/vietnam-credit-regime","credit":null,"property":18,"http":400,"error":"creditGrowthYoY must be a finite number"}
+  ],
+  "legacySnapshotSemanticCrosscheck": {
+    "file": "/Users/manhtx/Documents/macro-successor-f0-I5xvdx/product-sqlite.backup",
+    "readOnly": true,
+    "credit": {"period":"2025-06-30","value":9.9,"unit":null,"frequency":"Semiannual","transformation":"level","seriesId":"SBV_CREDIT_GROWTH_H1"},
+    "property": {"period":"2026-03-31","value":7200,"unit":null,"frequency":"Quarterly","transformation":"level","seriesId":"CW_HCMC_APT_AVG_PRIMARY_PRICE"},
+    "interpretation": "Frozen rows match incompatible configured source identities; this is historical snapshot evidence, not current deployment data."
+  },
+  "limits": ["not full company runtime", "not observed annual-growth capability", "not canonical source/store closure"]
+}

@@ -1,0 +1,94 @@
+{
+  "sourceRevision": "b318825bba40bb7b9268d835a67cc08b548459ba",
+  "sourceTreeClean": false,
+  "commands": {
+    "typecheck": [
+      "/usr/local/bin/node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "lint": [
+      "/usr/local/bin/node",
+      "node_modules/eslint/bin/eslint.js",
+      "server/aiCompany/resourceGovernor.ts",
+      "server/aiCompany/resourceAdmissionAuthority.test.ts",
+      "server/aiCompany/resourceAdmissionProcess.test.ts",
+      "server/aiCompany/cliResourceAdmission.test.ts",
+      "scripts/ai-company-role-dispatch.mjs",
+      "--max-warnings=0"
+    ],
+    "tests": [
+      "/usr/local/bin/node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "server/aiCompany/adminWorkQueueTransport.test.ts",
+      "server/aiCompany/assignmentEnvelope.test.ts",
+      "server/aiCompany/attemptAuthority.test.ts",
+      "server/aiCompany/autonomousCoordinator.test.ts",
+      "server/aiCompany/backlogWorkPlanner.test.ts",
+      "server/aiCompany/cadenceQuorum.test.ts",
+      "server/aiCompany/ceoReviewLedger.test.ts",
+      "server/aiCompany/cliAttemptDispatch.test.ts",
+      "server/aiCompany/cliPmDecision.test.ts",
+      "server/aiCompany/cliReceiptPublication.test.ts",
+      "server/aiCompany/combinedEvidenceCapture.test.ts",
+      "server/aiCompany/currentRoleAuthority.test.ts",
+      "server/aiCompany/dependencyAdmission.test.ts",
+      "server/aiCompany/evidenceAdmissionIntegrity.test.ts",
+      "server/aiCompany/evidenceResolver.test.ts",
+      "server/aiCompany/evidenceSnapshot.test.ts",
+      "server/aiCompany/ideaLedger.test.ts",
+      "server/aiCompany/modelAdapter.test.ts",
+      "server/aiCompany/nativeAttemptLineage.test.ts",
+      "server/aiCompany/nativeDispatchIssuance.test.ts",
+      "server/aiCompany/nativeEvidenceAdmission.test.ts",
+      "server/aiCompany/nativeProviderContract.test.ts",
+      "server/aiCompany/nativeReceiptAuthority.test.ts",
+      "server/aiCompany/openaiCompatibleRoleAdapter.test.ts",
+      "server/aiCompany/opportunityScoring.test.ts",
+      "server/aiCompany/orchestrator.test.ts",
+      "server/aiCompany/preReleaseReviewGate.test.ts",
+      "server/aiCompany/queueMutationFence.test.ts",
+      "server/aiCompany/recoveryCoordinator.test.ts",
+      "server/aiCompany/recursiveDependencyAuthority.test.ts",
+      "server/aiCompany/releasePromotion.test.ts",
+      "server/aiCompany/researchSynthesis.test.ts",
+      "server/aiCompany/reviewTerminalAdmission.test.ts",
+      "server/aiCompany/roleEvidenceLedger.test.ts",
+      "server/aiCompany/roleEvidenceResolver.test.ts",
+      "server/aiCompany/roleWorkExecutor.test.ts",
+      "server/aiCompany/roleWorkQueue.atomic.test.ts",
+      "server/aiCompany/roleWorkQueue.test.ts",
+      "server/aiCompany/roleWorkQueueBypassGuards.test.ts",
+      "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts",
+      "server/aiCompany/runtime.test.ts",
+      "server/aiCompany/worktreeManager.test.ts",
+      "server/aiCompany/companyNbaRouter.test.ts",
+      "server/aiCompany/executionPlanner.test.ts",
+      "server/aiCompany/executionLease.test.ts",
+      "server/aiCompany/productIntelligenceRecoveryV2.test.ts",
+      "src/app/pages/RegimeDetectionPage.test.tsx",
+      "server/aiCompany/resourceGovernor.test.ts",
+      "server/aiCompany/resourceAdmissionAuthority.test.ts",
+      "server/aiCompany/resourceAdmissionProcess.test.ts",
+      "server/aiCompany/cliResourceAdmission.test.ts"
+    ]
+  },
+  "results": {
+    "typecheck": {
+      "exitCode": 0,
+      "signal": null,
+      "log": "/tmp/ai-factory-resource-group-full-typecheck.txt"
+    },
+    "lint": {
+      "exitCode": 0,
+      "signal": null,
+      "log": "/tmp/ai-factory-resource-group-full-lint.txt"
+    },
+    "tests": {
+      "exitCode": 1,
+      "signal": null,
+      "log": "/tmp/ai-factory-resource-group-full-tests.txt"
+    }
+  }
+}

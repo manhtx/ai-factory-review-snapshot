@@ -1,0 +1,9 @@
+import { recordNativeFixture } from './nativeReceiptTestFixture';
+import {mkdtemp} from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
+import {RoleWorkQueue} from './roleWorkQueue';import {RoleEvidenceLedger} from './roleEvidenceLedger';import {ResearchSignalLedger} from './researchSignalLedger';import {synthesizeCompletedResearch} from './researchSynthesis';
+// Temporary deterministic advisory fixtures, never real research/product evidence.
+export async function researchAuthorityFixture(projectId='unit',ideaId='I-1') {
+ const root=await mkdtemp(path.join(os.tmpdir(),'research-authority-')),evidence=new RoleEvidenceLedger(root),queue=new RoleWorkQueue(root,evidence),ledger=new ResearchSignalLedger(root);
+ for(const role of ['user-persona','ux-research','stakeholder-panel','domain-expert'] as const){const work=await queue.create({project_id:projectId,backlog_id:`${ideaId}:research:${role}`,title:'Unit advisory only',role,namespace:'N',run_id:'R'}),claim=await queue.claim(work.work_id,'fixture');const receipt=await recordNativeFixture(queue, evidence, {project_id:projectId,work_id:work.work_id,attempt_id:claim.attempt_id!,role,namespace:'N',run_id:'R',provider_id:'stub',model:'stub',output:'Advisory unit only',limitation:'No actual human or product research',usage:{input_tokens:0,output_tokens:0,estimated_cost_usd:0}}, claim.attempt_authority);await queue.submitForReview(work.work_id,claim.attempt_authority);await queue.complete(work.work_id,[receipt.evidence_id],{research_question:'Unit',source_reference:receipt.evidence_id,finding:'Advisory only',confidence:.8},undefined,undefined,undefined,undefined,claim.attempt_authority);}
+ const authority=await queue.currentAuthority(projectId);await synthesizeCompletedResearch({projectId,authority,ledger});return{root,queue,ledger,evidence,authority,rows:await queue.records(projectId),signals:await ledger.records(projectId)};
+}

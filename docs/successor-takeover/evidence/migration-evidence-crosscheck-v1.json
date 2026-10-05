@@ -1,0 +1,10 @@
+{
+  "schema": "successor-takeover.migration-evidence-crosscheck.v1",
+  "runtimeLedgerSha256": "be2c6a502c88f2bb63eb346587e46d51edad17a15f444af5205d825908818d99",
+  "missingFromProjectReferences": 383,
+  "resolvedOnlyByRuntimeLedger": 0,
+  "unresolvedInBoth": 383,
+  "overlappingIds": 0,
+  "overlappingUnequalContentHashes": 0,
+  "claimLimit": "Two captured dispatch ledgers only; no trust admission or global evidence absence claim"
+}

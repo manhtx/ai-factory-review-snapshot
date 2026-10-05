@@ -1,0 +1,1127 @@
+{
+  "schema": "successor-takeover.proof-graph.v1",
+  "authoritative": false,
+  "currentCandidateRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "historicalProofPolicy": "Older nodes retain historical evidence only; none certifies the current candidate without exact revision revalidation. No negative evidence removed.",
+  "purpose": "Explicit claim dependencies and limits for isolated candidate evidence; not an operational proof engine or closure certificate.",
+  "executionInventory": {
+    "path": "evidence/candidate-product-api-surface-v1.json",
+    "denominatorSha256": "049e9636d843a74a1d83b651b20de58b5170d782f9538aee5d5578542823844c",
+    "files": 887,
+    "postTestCheck": "MATCHED_AFTER_PRODUCT_API_REPAIRS; UNSEALED_CANDIDATE"
+  },
+  "nodes": [
+    {
+      "id": "controller-selection-falsification-1635505",
+      "claim": "Actual two OS issuers both accept the same expected revision and issue one identity for different controllers; actual role-dispatch with genuine revoked selection calls temporary stub and records DONE",
+      "evidence": "CONTROLLER_AUTHORITY_ROOT_CAUSE_REOPENED.md; evidence/execution-lease-race-1635505.json; evidence/revoked-lease-dispatch-1635505.json",
+      "sourceRevision": "1635505dfa3416a831048f308a3257fbc1370db6",
+      "status": "CURRENT_REPRODUCED_COUNTEREXAMPLES; SELECTION_IS_NOT_CONTROLLER_AUTHORITY",
+      "dependsOn": [],
+      "independent": false,
+      "missing": "Enforced actual controller gateway and transactional effect admission; no unsafe primitive promoted; denied review remains pending"
+    },
+    {
+      "id": "exact-source-239fe22-resource-lifecycle",
+      "claim": "Clean exact source533PASS51FILES, full tsc and scoped lint; actual provider orphan replacement withheld until group absence; actual coordinator initialization/release counterexample remains",
+      "evidence": "SOURCE_CANDIDATE_SEAL.json",
+      "sourceRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+      "status": "BUILDER_SCOPED_VERIFIED; CURRENT_COORDINATOR_COUNTEREXAMPLE; ASSURANCE_PENDING",
+      "dependsOn": [],
+      "independent": false,
+      "missing": "Controller lifetime architecture reopened; legacy/unbound provider, OS filesystem rights, complete writers, cross-store crashes, timing and safety-denied independent review remain OPEN"
+    },
+    {
+      "id": "exact-source-fc476ec-revalidation",
+      "claim": "Clean pinned Git source passed full typecheck, affected lint and 495 regression tests across 47 files; real two-OS-process stale capability operations reject, while unrestricted administrative block still mutates B",
+      "evidence": "SOURCE_CANDIDATE_SEAL.json",
+      "sourceRevision": "fc476ecf935cd68d570e3995bf7a11008b15f996",
+      "status": "BUILDER_SCOPED_VERIFIED; ADMIN_ACTOR_COUNTEREXAMPLE; ASSURANCE_PENDING",
+      "dependsOn": [],
+      "independent": false,
+      "missing": "Actual administrative/controller/provider OS rights, complete writer reconciliation, cross-store crash semantics, timing cause and safety-denied independent review remain open"
+    },
+    {
+      "id": "integrity-boundary",
+      "claim": "Recorded malformed ledger and kernel failure cases are contained by exact component revisions",
+      "evidence": "INTEGRITY_CANDIDATE_PROOF.json",
+      "status": "SCOPED_EVIDENCE_RECORDED",
+      "dependsOn": [],
+      "independent": true
+    },
+    {
+      "id": "g1-storage",
+      "claim": "Isolated transaction and logical receipt consistency",
+      "evidence": "G1_STORAGE_PROGRESS.json",
+      "status": "REVALIDATION_REQUIRED",
+      "dependsOn": [],
+      "independent": false,
+      "missing": "Schema-v2 independent recheck ended with tool safety error"
+    },
+    {
+      "id": "s1-state-coverage",
+      "claim": "Recorded state omission, empty-run and stale-projection cases contained in isolated candidate",
+      "evidence": "S1_STATE_PROGRESS.json",
+      "status": "REVALIDATION_REQUIRED",
+      "dependsOn": [],
+      "independent": false,
+      "missing": "Independent reviewer terminated at usage limit without findings"
+    },
+    {
+      "id": "wait-validation",
+      "claim": "Wait enum/date/history admission and supported wake behavior",
+      "evidence": "WAIT_VALIDATION_PROGRESS.json",
+      "status": "REVALIDATION_REQUIRED",
+      "dependsOn": [],
+      "independent": false,
+      "missing": "Independent verification, authenticated wakes and concurrent resume are not established"
+    },
+    {
+      "id": "combined-regression-v2",
+      "claim": "Selected 205 tests pass together at the recorded bounded source inventory",
+      "evidence": "evidence/combined-candidate-regression-v2.json",
+      "status": "VALID_SCOPED_TEST_RESULT",
+      "dependsOn": [],
+      "independent": false,
+      "limitations": "Selected tests only; test pass is not promotion, global invariant closure, runtime attestation, or proof of independent review. V1 remains historical evidence for its old revision."
+    },
+    {
+      "id": "successor-foundation",
+      "claim": "Successor objective/authority/evidence/durability foundation is ready for trust genesis",
+      "status": "UNPROVEN",
+      "dependsOn": [
+        "integrity-boundary",
+        "g1-storage",
+        "s1-state-coverage",
+        "wait-validation"
+      ],
+      "missing": "Objective/work/attempt/evidence transaction semantics, authenticated gateway, writer fencing and complete capability mapping"
+    },
+    {
+      "id": "trust-genesis",
+      "claim": "TRUST_EPOCH_1 may become authoritative",
+      "status": "UNPROVEN",
+      "dependsOn": [
+        "successor-foundation"
+      ],
+      "missing": "Independent foundational proof, legacy adjudication and handoff rehearsal"
+    },
+    {
+      "id": "product-regime-api",
+      "claim": "Recorded scenario/fact, unit, coercion and replacement failures contained in reviewed isolated components",
+      "status": "VALID_SCOPED_COMPONENT_PROOF",
+      "evidence": "VIETNAM_API_PRODUCT_PROGRESS.json",
+      "dependsOn": [],
+      "independent": true,
+      "limitations": "Source identity/freshness and annual observed-source capability remain open; no canonical promotion"
+    },
+    {
+      "id": "product-data-truth",
+      "claim": "Critical product data/source/store/runtime truth is closed",
+      "status": "UNPROVEN",
+      "dependsOn": [
+        "product-regime-api"
+      ],
+      "missing": "Source identity, semantic freshness, storage authority, complete consumer coverage and actual runtime proof"
+    },
+    {
+      "id": "operational-closure",
+      "claim": "Mission definition of done satisfied",
+      "status": "UNPROVEN",
+      "dependsOn": [
+        "trust-genesis",
+        "product-data-truth"
+      ],
+      "missing": "Migration, actual operation, restart/cold-start, Founder-absent operation, fresh final review and bootstrap retirement"
+    },
+    {
+      "id": "local-security-repair-20261002",
+      "claim": "Observed loopback socket and guarded current admin handlers; caller-controlled budget identities and named private-profile tracking repaired",
+      "status": "VALID_SCOPED_SOURCE_TEST_AND_RUNTIME_RESULT",
+      "sourceHashes": {
+        "server/index.ts": "3457118c42f54aeae3b91738f3c0e132e59450aaf83712ca94a050ed72f09587",
+        "server/rateLimit.ts": "001ec8c75eb912983b55fa7ebfce90b248fd1dc6539dc1a941e015e030cedbd0",
+        "server/rateLimit.test.ts": "a1fecdc580231fa882a951c6b72062bbd724362bcb2023f46e8fe988bbafe53b",
+        "scripts/audit-ai-company-secrets.mjs": "6ab8828ede51c3e0ce8d5eaad3e57830d47f891cdb7bb337a3afd2c7e90fae25",
+        "scripts/audit-ai-company-secrets.test.mjs": "6f91ba75b726f08194ffe8d0c4dacfaba0d2908a988ca9e0aed6050f14b76be9",
+        ".gitignore": "86c1991d00b3eb514eff16a3b942cc9a9c9e46b6b06594e2ea4141e7882ba253"
+      },
+      "evidence": [
+        "evidence/security-boundary-before.json",
+        "evidence/security-boundary-after.json",
+        "evidence/security-boundary-runtime.json",
+        "evidence/admin-rate-limit-before.txt",
+        "evidence/admin-rate-limit-after.txt",
+        "evidence/private-state-tests.txt",
+        "evidence/security-independent-review.json"
+      ],
+      "independent": true,
+      "dependsOn": [],
+      "limitations": [
+        "Current source/isolated behavior only, no whole security or successor closure",
+        "No exact loaded-runtime attestation",
+        "Named path census cannot detect arbitrary renamed secrets",
+        "Historical browser objects remain",
+        "No G1 denied action invoked"
+      ]
+    },
+    {
+      "id": "host-identity-hygiene-20261002",
+      "claim": "Six named live host identities excluded from current source and unreadable scope cannot yield a clean security audit",
+      "status": "VALID_SCOPED_INDEPENDENT_RESULT",
+      "sourceHashes": {
+        ".gitignore": "fa858e97433dad6019ccc22f08c1dc24d5eb7cd34d8dd13b468f96dc3532f50b",
+        "scripts/audit-ai-company-secrets.mjs": "4bf85a5918efb4f5c9600fe1487aca78f06c9f7d0bed8c3e3b2d3650724a6245",
+        "scripts/audit-ai-company-secrets.test.mjs": "746896ef44a75544309b79011e554e971b817ad92d60065f0f596c402db3f441"
+      },
+      "evidence": [
+        "evidence/host-identity-backup.json",
+        "evidence/host-identity-before.txt",
+        "evidence/host-identity-after.txt",
+        "evidence/security-unreadable-before.txt",
+        "evidence/security-unreadable-after.txt",
+        "evidence/host-identity-independent-review.json"
+      ],
+      "independent": true,
+      "dependsOn": [],
+      "limitations": [
+        "Non-atomic snapshots",
+        "Historical exposure OPEN",
+        "Broader state separation and lease/fencing correctness OPEN"
+      ]
+    },
+    {
+      "id": "evidence-admission-scoped-repair-20261002",
+      "claim": "Malformed ID/time/record/policy and corrupt JSONL inputs fail closed in the existing validator and reader",
+      "status": "VALID_SCOPED_INDEPENDENT_RESULT",
+      "sourceHashes": {
+        "server/aiCompany/evidenceResolver.ts": "3ba5654e0ea9e155121e18a02b7c336c4e2bdfa359480bad0d65d0701ea9269c",
+        "server/aiCompany/evidenceAdmissionIntegrity.test.ts": "75ca70e211314967eda4ba905dac20b0067d898cf8f4b6e03fb818fa59d4399a"
+      },
+      "evidence": [
+        "evidence/evidence-current-reproduction.json",
+        "evidence/evidence-admission-before.txt",
+        "evidence/evidence-admission-after.txt",
+        "evidence/evidence-policy-counterexample-before.txt",
+        "evidence/evidence-policy-after.txt",
+        "evidence/evidence-candidate-after.txt",
+        "evidence/evidence-independent-review.json"
+      ],
+      "independent": true,
+      "dependsOn": [],
+      "limitations": [
+        "Blank caller scopes still OPEN",
+        "Optional queue/review resolver still OPEN",
+        "Objective/attempt/execution revision binding still OPEN",
+        "No live ledger or transition tested",
+        "No successor promotion or G1 verification"
+      ]
+    },
+    {
+      "id": "mandatory-resolution-guard-20261002",
+      "claim": "complete() rejects missing resolver before its DONE write; read/intake preserved",
+      "status": "SUPERSEDED_BY_NATIVE_PIPELINE_SOURCE",
+      "sourceHashes": {
+        "server/aiCompany/roleWorkQueue.ts": "3d8aca14cca2a1d2f08620bf26285b7a3d48f2bc5400c2c6d1295cd0179e29ac",
+        "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts": "b077c99bfb4ed72badb13373baca37ec042caca4cf7385454106d540df352c8c",
+        "server/aiCompany/roleWorkQueue.test.ts": "98a44be4201d1445f0cfce3055b5f0ba6346b2cbf00d12e4ab50d461e92c2738",
+        "server/aiCompany/roleWorkQueueBypassGuards.test.ts": "5914c7dbd40d5cac9a26bec73829172da3e86a7748d41181cdd964d42ce1ec58",
+        "docs/successor-takeover/EVIDENCE_ADMISSION_INVESTIGATION.md": "316d4519acb02d55de8814ddbb2997670821b74072dd468ba0f19b096ae37b95"
+      },
+      "evidence": [
+        "evidence/mandatory-resolution-proof.json",
+        "evidence/mandatory-evidence-before.txt",
+        "evidence/mandatory-final-focused.txt",
+        "evidence/mandatory-evidence-compatibility.json"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "evidence-admission-scoped-repair-20261002"
+      ],
+      "limitations": [
+        "Native runtime missing matching evidence resolver",
+        "Provider dispatch happens before rejected completion",
+        "Native provider receipts currently synthesize coder fallback and self-review PASS",
+        "No candidate propagation, live runtime restart or promotion",
+        "No objective/attempt/revision admission binding or transactionality proof",
+        "No A/B/C/D closure"
+      ],
+      "supersededBy": "native-contract-admission-20261002",
+      "currentSourceBinding": "SUPERSEDED_BY_ATTEMPT_GUARD; historical proof retained; affected compatibility incomplete",
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "native-contract-admission-20261002",
+      "claim": "Native receipt resolution explicitly wired; no fabricated coder fallback or auto review PASS; declared citations retained; configured queue preflight before callback dispatch",
+      "status": "VALID_SCOPED_INDEPENDENT_RESULT_WORKTREE",
+      "sourceHashes": {
+        "server/aiCompany/roleEvidenceLedger.ts": "e943c2040b87fb9285811f0fbce71d8f8534231ab5453efc848ab77ac5239959",
+        "server/aiCompany/roleWorkExecutor.ts": "5549e245fec1cd13384f655f6afe8bf9b936e3fd27ae5c41d6048b009392eae2",
+        "server/aiCompany/roleWorkQueue.ts": "676953eb430c1d8af77458f8f8afe4373a134c9e1e000e6ec4acefc39c027ee1",
+        "server/aiCompany/autonomousCoordinator.ts": "35e6949efb96189c24cd5d04f1a8e1dc86f89e997f301b3eb7c5c07ad7c075e6",
+        "server/aiCompany/runtime.ts": "6b2ff72d067acfc1f6ac71d52149bd104734060ef6a5e72279163daaec76d2e6",
+        "server/index.ts": "004a64c0bff8e51b65bd40807949b33752d18724a88cc2bdcf1066df6d2073b0",
+        "server/aiCompany/nativeEvidenceAdmission.test.ts": "7a01fc96e078d729d6b0ba92cb8ed53cd6c1a92c1adeb112eb200f9bfc188f57",
+        "server/aiCompany/roleWorkExecutor.test.ts": "e3a095e53e27c68a34eaa39e56f9f9c8f3a97c65ef8b7b167906dc93b7addd00",
+        "server/aiCompany/roleEvidenceLedger.test.ts": "55f82c356f53e823525d5fe7c0c432eed1b86069cc3ae6b1aedb547cd9be31ae"
+      },
+      "evidence": [
+        "evidence/native-contract-proof.json",
+        "evidence/native-admission-before.txt",
+        "evidence/native-final-focused.txt",
+        "evidence/native-compatibility.json"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "evidence-admission-scoped-repair-20261002"
+      ],
+      "limitations": [
+        "No objective/attempt/execution revision binding or transactional terminal authority",
+        "Receipt hash/scope is not actual effect, independent product review or outcome",
+        "Non-PASS review terminal handling open",
+        "Remaining caller fixtures/configuration and workflow dependency scope open",
+        "Direct executor callback invocation outside queue preflight not certified",
+        "No live enabling/restart/migration/candidate propagation/promotion",
+        "No G1 denied action attempted"
+      ],
+      "currentSourceBinding": "SUPERSEDED_BY_ATTEMPT_GUARD; historical proof retained; affected compatibility incomplete",
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "review-terminal-dependency-20261002",
+      "claim": "Non-PASS review retains evidence in BLOCKED; ordinary success dependency denied; explicit same-scope correction can consume failed source without promoting it",
+      "status": "VALID_SCOPED_INDEPENDENT_RESULT_WORKTREE",
+      "sourceHashes": {
+        "server/aiCompany/roleWorkQueue.ts": "63c55fef47992d969f670011f90116ee757cf8d8207edd6bd9b3ca0017267181",
+        "server/aiCompany/roleWorkExecutor.ts": "587e6223d26cd7c73b868719d0146610cbd0481429cdaf0415f712808439bc48",
+        "server/aiCompany/autonomousCoordinator.ts": "3eda9fb1f148744e9d53a918a756bd72a9d4ad0a2fcd0313f857f3ae3f9cbca8",
+        "server/aiCompany/recoveryCoordinator.ts": "2a90ee024c280d7c71f5c0689ab5563c9630866e1dad7d84635ee51d6984ec7c",
+        "server/aiCompany/backlogWorkPlanner.ts": "c5dce834c91e2a62137eb510095b2ccfa7d7031cc9c76fc25185a327be157772",
+        "server/aiCompany/assignmentEnvelope.ts": "f9cfb2e942696807550699162222774d588a9291c18beeaff0c343d97c90e261",
+        "scripts/ai-company-run-ready.mjs": "82d8e21e31e0d1c7c363640057d596b8f0a4a9cec8afceb9a42f2760308bc019",
+        "scripts/ai-company-role-dispatch.mjs": "6dd8ad3ecf8ee236ce515d9a93b4454d0c96afeb564d225d2754330ae53e13ff",
+        "server/aiCompany/reviewTerminalAdmission.test.ts": "9b5bf450c4afcb0d1ca09706a200e04ec81dd71a395927b67a0a3ccdd1e7bdfc",
+        "server/aiCompany/autonomousCoordinator.test.ts": "66f3ed08112cde26d7d867e912446dd7afe2ae691cb58450220159293bd1e85c"
+      },
+      "evidence": [
+        "evidence/review-terminal-proof.json",
+        "evidence/review-terminal-before.txt",
+        "evidence/review-terminal-combined.txt",
+        "evidence/independent-terminal-rereview-result.json"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "evidence-admission-scoped-repair-20261002"
+      ],
+      "limitations": [
+        "Original-source reevaluation/closure still pending",
+        "Transactional/fenced attempt/revision-bound terminal authority unproven",
+        "Historical DONE evidence adjudication incomplete",
+        "Remaining explicit caller fixture/configuration and workflow scope incomplete",
+        "No liveCLI/native company providers/restart/migration/candidate propagation/promotion",
+        "A/B/C/D UNPROVEN; G1 denial respected"
+      ],
+      "currentSourceBinding": "SUPERSEDED_BY_ATTEMPT_GUARD; historical proof retained; affected compatibility incomplete",
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "planner-dependency-scope-20261002",
+      "claim": "Planner reviews inherit actual dependency scope; mixed scopes reject without artifact rewrite; explicit caller fixtures restore legitimate planner/recovery/daily intake behavior",
+      "status": "VALID_SCOPED_INDEPENDENT_RESULT_WORKTREE",
+      "sourceHashes": {
+        "server/aiCompany/backlogWorkPlanner.ts": "70bb80c927349289c23cec69a4604615217ca673457d71687f18b091a1bcb101",
+        "server/aiCompany/backlogWorkPlanner.test.ts": "f60bb851b83388cbb979d16a2144c6234610ba60432a408f382e03eafc0118c8",
+        "server/aiCompany/recoveryCoordinator.test.ts": "446adc852ec40ce3062e37fa5f164e2a2b9928e01a906b370f349c44f57cd948",
+        "server/aiCompany/runtime.test.ts": "6103cd5511a89224779cc5f913501665023eb0ab505f527201e9887ef5bb7481"
+      },
+      "evidence": [
+        "evidence/planner-scope-proof.json",
+        "evidence/planner-scope-before.txt",
+        "evidence/planner-scope-final.txt"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "review-terminal-dependency-20261002"
+      ],
+      "limitations": [
+        "Weekly governance independent dependency packet unverified",
+        "Original-source recovery reevaluation and canonicalterminalauthority OPEN",
+        "Scope is not objective/attempt/revision binding or outcome proof",
+        "No provider/liveCLI/restart/migration/candidatepromotion",
+        "A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "weekly-unit-admission-20261002",
+      "claim": "Weekly isolated contract admission retains all18roles; own reviewer receipt blocks five review roles and fails cycle",
+      "status": "VALID_SCOPED_INDEPENDENT_RESULT_WORKTREE",
+      "sourceHashes": {
+        "server/aiCompany/runtime.test.ts": "c447e77bb8d12e5903db5d8c080640cbdc6fb01491c6539604b46bb5291da088"
+      },
+      "evidence": [
+        "evidence/weekly-runtime-proof.json",
+        "evidence/pipeline-final.txt"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "planner-dependency-scope-20261002"
+      ],
+      "limitations": [
+        "One injected executor creates fixtures and producer labels; no independent actor authentication",
+        "Fixture input observations empty and real_product_outcome UNKNOWN",
+        "No product outcome, live provider, CLI, restart, migration, candidate promotion or A/B/C/D closure"
+      ]
+    },
+    {
+      "id": "queue-fence-scoped-20261002",
+      "claim": "Cooperative queue commits serialize across processes and reject stale work/dependency/selection snapshots; history replacement preserves original prefix; two synthetic historical entrypoints disabled",
+      "status": "VALID_SCOPED_INDEPENDENT_RESULT_WORKTREE",
+      "sourceHashes": {
+        "server/aiCompany/roleWorkQueue.ts": "ab70460a77a11b079c9578f5fb2e22039569741b0ce55908fd34000bed6526e7",
+        "server/aiCompany/queueMutationGate.ts": "007765747c2d758a63b332a58d723a6e8ce93d5af909ef9e7766bc8c04155c73",
+        "server/aiCompany/queueMutationFence.test.ts": "661429e83725c557e18ef75f7b6f8e2885b4fd2c251c533c9e18ddbdd707a0d9",
+        "scripts/record-workspace-synthesis-cycle.mjs": "437d3730a358c65a117339fcf1068ead64c60415c9b1b6fc68680d95356c0838",
+        "scripts/record-disclaimer-banner-cycle.mjs": "5aaba3eb4edebffce5b0d27ada805e9904e4fdb8b9b05b362054ebb18c19f0d9"
+      },
+      "evidence": [
+        "evidence/queue-fence-proof.json",
+        "evidence/independent-queue-fence-review.json",
+        "evidence/queue-fence-combined.txt"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "evidence-admission-scoped-repair-20261002"
+      ],
+      "limitations": [
+        "Only cooperative writers; OS-level alternate writer fence unproven",
+        "stale-attempt-counterexample.json demonstrates old attempt output accepted after newer owner claim",
+        "Role/evidence actor authentication, objective/attempt/revision identity, original source reevaluation OPEN",
+        "History rename preserves bytes/mode; full metadata/ACL conservation not certified",
+        "No runtime restart/enabling/migration/candidate propagation/promotion",
+        "A/B/C/D UNPROVEN; production autonomy DISABLED; G1 denial respected"
+      ],
+      "currentSourceBinding": "SUPERSEDED_BY_ATTEMPT_GUARD; historical proof retained; affected compatibility incomplete",
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "attempt-capability-partial-20261002",
+      "claim": "Queue positive transitions require explicit hashed attempt capability bound to queue/work/assignment/owner; runtime execution uses actual claimed row sans raw handle; stale attempt error cannot stop newer actor in reviewed paths",
+      "status": "PARTIAL_REPAIR_NOT_CALLER_MIGRATION_COMPLETE",
+      "sourceHashes": {
+        "server/aiCompany/roleWorkQueue.ts": "ece699a3570f0dc396a6ee43e28088c1ecbb01b15fa17f9cbb0c51e87c387770",
+        "server/aiCompany/roleWorkExecutor.ts": "0793bdab846a7e380bfbf89c6bfc58017a389a97c3e1044cf8d3c7382145e9a9",
+        "server/aiCompany/autonomousCoordinator.ts": "2648f4c10ae3462e2f2825935e766ad69b6a570e9bde01ff9dcff03241c2a8f9",
+        "server/aiCompany/attemptAuthority.test.ts": "0c2ac1cb24b9b0198efbed02469ee886c05ebb45ebbca318898936a478f4bd0b"
+      },
+      "evidence": [
+        "evidence/attempt-authority-proof.json",
+        "evidence/independent-attempt-authority-review.json"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "evidence-admission-scoped-repair-20261002"
+      ],
+      "limitations": [
+        "CLI still claims after provider and has work-only artifact fallback/parenttimeout identity adoption",
+        "Admin submit/complete handle transport not migrated",
+        "Own-output receipts not bound to actual attempt or exact execution revision",
+        "Actor identity and OSwriter fencing not globally proven",
+        "No runtime restart, provider dispatch, migration or candidate promotion",
+        "Previous151PASS is historical pre-attemptguard, not current broadgate",
+        "A/B/C/DUNPROVEN; G1denialpreserved;productionDISABLED"
+      ],
+      "currentSourceBinding": "QUEUE_HASH_SUPERSEDED_BY_CLI_SELECTED_STOP_OPTION; 41CASE_SCOPED_REGRESSION_CURRENT; historical proof retained",
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "cli-attempt-transport-scoped-20261002",
+      "claim": "Claim-before-provider, attempt artifact identity and bounded owned process-group cancellation; preexisting stopped or worker-DONE output cannot create semantic receipt in tested transport cases",
+      "status": "SCOPED_REPAIR; ATOMIC_ADMISSION_OPEN",
+      "sourceHashes": {
+        "scripts/ai-company-role-dispatch.mjs": "34eadf3b437e84bc8d66934b4e1d259d150b4a3a011c3d8b9416be4ac45db1fb",
+        "scripts/ai-company-run-ready.mjs": "9690c1d0964ea929440e45c2bf5a32e890afd1394dd0d2bdc52f3d69cfb3e047",
+        "server/aiCompany/roleWorkQueue.ts": "4674ece0fbf01dcf85f5aaa13c03600aee2d7059ef4d1c1d5b5f95951649f322",
+        "server/aiCompany/roleAttemptArtifact.ts": "8e9dcf3491d14cebd91bbb2ad9088bbd6bfd46974b77fe22bf10c26c46638759",
+        "server/aiCompany/worktreeManager.ts": "9b10a147975ed8df7ea4998fa23593fd9d511d3e5587724ccafb30b87a43c4d5",
+        "server/aiCompany/cliAttemptDispatch.test.ts": "3a3896b0d199c55a415e0a0481df3a8e071d7233b521530a295f56f12f48953e"
+      },
+      "evidence": [
+        "evidence/cli-attempt-proof.json",
+        "evidence/cli-attempt-combined.txt",
+        "evidence/independent-cli-descendant-result.json",
+        "evidence/independent-cli-timeout-result.json"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "attempt-capability-partial-20261002"
+      ],
+      "limitations": [
+        "State-check/receipt append not one atomic admission transaction; concurrent stop race remains OPEN",
+        "Own-output attempt/revision admission and independent producer lineage OPEN",
+        "Parent ACK stop/retry source-reviewed only; actual parent race tests OPEN",
+        "Admin resolver and capability transport unmigrated",
+        "Legacy broad compatibility 47PASS45FAIL historical snapshot remains unresolved; no global gate",
+        "Owned group only; escaped sessions/dispatcher SIGKILL/OS writer fencing OPEN",
+        "No real provider, product effect, live restart, migration or candidate promotion",
+        "A/B/C/D UNPROVEN; production autonomy DISABLED; G1 denial respected"
+      ],
+      "currentSourceBinding": "QUEUE_HASH_SUPERSEDED_BY_NATIVE_RECEIPT_BINDING; CLI7_REGRESSION_PASS; original scoped proof retained",
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "native-admin-attempt-binding-scoped-20261004",
+      "claim": "Native receipt binds claimed producer attempt; current completion cannot reuse tested old/unbound receipt; admin transports explicit claim handle and contract to same-root native resolver; root mismatch refuses mutation",
+      "status": "SCOPED_REPAIR; GLOBAL_ORIGIN_AND_EFFECT_AUTHORITY_OPEN",
+      "sourceHashes": {
+        "server/aiCompany/evidenceResolver.ts": "69bd74f05f77cb89d8635e207795973ca8a59f5d04e6579ca97f7d3d00982f74",
+        "server/aiCompany/roleEvidenceLedger.ts": "c771d142550811f0d770a21b94c21699d72eb9fdcf3b6af427b09774dac64706",
+        "server/aiCompany/roleWorkQueue.ts": "c20fb74107a38e0f55a5e3f61487c738ab66999f5e1b6223e839bf812a86708a",
+        "server/aiCompany/roleWorkExecutor.ts": "baaf4aedf294cd803429a7b24fa87895b0bee25f886edc97c1373318590e0103",
+        "server/aiCompany/nativeAttemptLineage.test.ts": "0e69427838a67fa164852ac1d92a632125c870c4f641b6f32cf930b0a61bc1bf",
+        "server/aiCompany/nativeEvidenceAdmission.test.ts": "691a18f75c0fd3695de3f577c9c2c8385c9accd64efbeab4f2855c782a03f3c3",
+        "server/aiCompany/roleEvidenceLedger.test.ts": "cfb2eb18a8d5328e84134df79653b5470c76f3b9119e9b48c5fcb65833d11e80",
+        "server/aiCompany/roleWorkExecutor.test.ts": "92958a4966e820f0841ff6a04397d04982d00c2de1a15054c31fcd71ec4d1621",
+        "server/aiCompany/adminWorkQueueTransport.ts": "c7c43e35122075e08294da8cf183567684e79744e31d062ef4b71eaec7888829",
+        "server/aiCompany/adminWorkQueueTransport.test.ts": "3e1b2be4d5f2cb1a5d57b3482421dd01f5a6311bdb0211a2d28ec9021a81b42e",
+        "server/index.ts": "1abdc1343475913014543cd9d9ed2905ed6862ee10bfc4a2438c1bab83a344c7"
+      },
+      "evidence": [
+        "evidence/native-admin-attempt-proof.json",
+        "evidence/native-admin-independent-review-result.json",
+        "evidence/native-admin-combined.txt"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "attempt-capability-partial-20261002",
+        "cli-attempt-transport-scoped-20261002"
+      ],
+      "limitations": [
+        "No actual HTTP/native live runtime enabling or restart; default native adapter scope only",
+        "Atomic receipt admission and producer capability/OS actor authentication OPEN",
+        "Exact execution revision/effect/outcome binding OPEN",
+        "Generic resolver can omit output origin; CLI own/dependency receipt origin and relabeling remain OPEN",
+        "Historical broadcaller47PASS45FAIL unresolved, not a current fullgate; candidate unpropagated/unsealed",
+        "Other fixed-path runtime ledgers and nondefault root coherence remain OPEN; admin mutation mismatch refuses",
+        "No real provider/product trial/migration/promotion/G1 action; A/B/C/DUNPROVEN"
+      ],
+      "currentSourceBinding": "SUPERSEDED_BY_SHARED_ORIGINAL_RESOLVER_IDENTITY_PRESENCE;201CASE_AFFECTED_REGRESSION_CURRENT; original review retained",
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "original-cli-native-lineage-caller-scoped-20261004",
+      "claim": "CLI does not replace declared citations or synthesize dependency evidence; original native/CLI provider receipts resolve with attempt binding and raw identity ambiguity rejection; same92 targeted caller tests pass with actual returned handles",
+      "status": "SCOPED_REPAIR; ACTUAL_PROVIDER_PACKET_AND_GLOBAL_AUTHORITY_OPEN",
+      "sourceHashes": {
+        "scripts/ai-company-role-dispatch.mjs": "cde62ce6a10ff154429f9e82b85113f80b7022e540e1d8eff904bb2a6e12da06",
+        "scripts/ai-company-run-ready.mjs": "09cccc51dc037c2da78aff8725b6db922f3a06b8cd34d305e05fd50cd515ecfb",
+        "server/index.ts": "70edc90548c204cff6b8599c29550c170192fbf25b444b8b4bbce39b256fea32",
+        "server/aiCompany/evidenceResolver.ts": "088a614c0baa320bc8fc43240bb32ed694018d5d49cf27dc7792b814c09b3f4f",
+        "server/aiCompany/roleEvidenceLedger.ts": "f59ad979461074574d8abf9b5fb92e359b9d8d1af5a7fc6d9fd235d7ddc5c204",
+        "server/aiCompany/roleEvidenceResolver.ts": "f35ec3a2939f106bddb98816ed40c1436230cb4a4ee16ee54c3a5a6bb7a261eb",
+        "server/aiCompany/roleEvidenceResolver.test.ts": "ce67726fd057761b2f85381007b969000bef53e0c443d92c05e3b26f0d0cf555",
+        "server/aiCompany/cliAttemptDispatch.test.ts": "5b4311e2683d4b2ad5591360e7c49170afdf494776ae91c8cac1a92985451056",
+        "server/aiCompany/roleWorkQueue.ts": "c20fb74107a38e0f55a5e3f61487c738ab66999f5e1b6223e839bf812a86708a",
+        "server/aiCompany/reviewTerminalAdmission.test.ts": "1b7eba6b03b5cbec8a1b51acd24abf0cc75b335a92694bf2cc5d1371d1cebad5",
+        "server/aiCompany/backlogWorkPlanner.test.ts": "677c0f88aace363fc840b965262156f07705a224f310e6d62027d4eeb561c281",
+        "server/aiCompany/queueMutationFence.test.ts": "994a37150ec21505b6154f08e9b7a5e47e669ee6169e7bc3b54a382a6068265c",
+        "server/aiCompany/roleWorkQueueBypassGuards.test.ts": "bd9cf8f6a6e79163924786f71d76f567d7d71ea94715fc77154c0557073f17ee",
+        "server/aiCompany/roleWorkQueue.test.ts": "da7bbe67ad6171921395b1db8dceb5877d6aefa4cb9b5fc19b7b573c6b49f487",
+        "server/aiCompany/recoveryCoordinator.test.ts": "a9bb2382b9962f4910ab54843ff58e4c2adad5004e60164cb568da2e61b13efd",
+        "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts": "d49dbb09da5ad9e8415a8b0b0f609afa519259a3a0ba3e66ba4e7bc998d21572",
+        "server/aiCompany/roleWorkQueue.atomic.test.ts": "12151f6f9a01c611b673a27db866b0a16eb935b797962bf53ae0d89bc8ee8adb"
+      },
+      "evidence": [
+        "evidence/cli-lineage-caller-proof.json",
+        "evidence/independent-cli-lineage-refined-review.json",
+        "evidence/native-caller-independent-92.txt",
+        "evidence/attempt-lineage-final-combined.txt"
+      ],
+      "independent": true,
+      "dependsOn": [
+        "native-admin-attempt-binding-scoped-20261004"
+      ],
+      "limitations": [
+        "Worktree source only; no live HTTP/runtime restart or candidate propagation/seal/promotion",
+        "Claim capability authenticates cooperating caller, not OS actor or actual effect",
+        "Source metadata, exact revision/effect, atomic receipt transaction/crossstore concurrent reads and original-source terminal reevaluation remain OPEN",
+        "Generic independent input resolver origin not closed; native actual assignment/provider input packet and research output semantics need review",
+        "Non-test run-real-provider-recovery-proof.mjs still has 3 calls without handle; not executed or automatically migrated; authorization/capability adjudication required without any G1 retry/bypass",
+        "Full repo typecheck FAIL11_OTHER_DIAGNOSTICS; these scoped passing tests are not full product/operation proof",
+        "A/B/C/D UNPROVEN; production autonomy DISABLED; real three-objective trial not started"
+      ],
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "native-provider-contract-scoped-20261004",
+      "claim": "Exact native assignment packet and explicit research output; bounded invocation requests/deadline and completed-receipt replay guard",
+      "status": "SCOPED_INDEPENDENT_REPAIR; GLOBAL_ISSUANCE_EFFECT_AUTHORITY_OPEN",
+      "evidence": [
+        "evidence/native-provider-contract-proof.json",
+        "evidence/native-contract-independent-result.json",
+        "evidence/native-contract-final-integrated.txt"
+      ],
+      "dependsOn": [
+        "original-cli-native-lineage-caller-scoped-20261004"
+      ],
+      "independent": true,
+      "limitations": [
+        "Root uncommitted source only; no live restart, HTTP activation, candidate propagation/sealing/promotion or public deployment",
+        "One request per native wrapper invocation; existing receipt replay rejected. Concurrent/no-response/crash/generic wrapper dispatch issuance remains OPEN",
+        "Text-only provider packet includes assignment metadata, not real referenced input bytes or tools; no actual product execution/effect/outcome evidence",
+        "Transcript remains RECEIVED/PROVIDER_OUTPUT; typed contract admission DONE does not prove product truth, independent review or outcome",
+        "OS actor/writer fencing, exact revision/effect, atomic receipt admission/crossstore reads, original-source terminal reevaluation and wider script callers remain OPEN",
+        "Full typecheck still FAIL11_OTHER_DIAGNOSTICS; scoped tests not full repo gate",
+        "Denied G1 action preserved, not retried/substituted/bypassed; A/B/C/D UNPROVEN and production autonomy DISABLED"
+      ],
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "native-dispatch-issuance-scoped-20261004",
+      "claim": "Cooperating native/model factories require durable current-attempt capability-bound issuance before provider, no same-attempt replay after noresponse/crash",
+      "status": "SCOPED_INDEPENDENT_REPAIR; ACTOR_CLI_EFFECT_REVISION_OPEN",
+      "evidence": [
+        "evidence/native-dispatch-issuance-proof.json",
+        "evidence/native-issuance-independent-result.json",
+        "evidence/native-issuance-final-integrated.txt"
+      ],
+      "dependsOn": [
+        "native-provider-contract-scoped-20261004"
+      ],
+      "independent": true,
+      "limitations": [
+        "Root uncommitted source only; runtime wiring reviewed as source, no live restart/enable or candidate propagation/seal/promotion",
+        "Reservation proves exclusive cooperating current-attempt dispatch admission, not OS actor identity or actual sent/success/external effect",
+        "Crash/no-response consumes same-attempt issuance; explicit bounded new claim may repeat uncertain external effects. Cross-attempt effect idempotency/cancellation remains OPEN",
+        "CLI dispatch is a separate path without this native reservation; no global provider effect-fencing claim",
+        "Independent receipt writer/atomic crossstore admission, exact source/effect/revision and original-source terminal re-evaluation remain OPEN",
+        "Actual input bytes/tool access, real product consumer/outcome and founder-absent operation remain UNPROVEN",
+        "Full repo typecheck FAIL11_OTHER_DIAGNOSTICS; no full repo gate PASS",
+        "Denied G1 boundary preserved without retry/substitution; A/B/C/D UNPROVEN; public production authority not enabled"
+      ],
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "cli-dispatch-issuance-scoped-20261004",
+      "claim": "CLI performs current-capability selected-row reservation immediately before provider spawn; actual stopped-before-admission work refuses provider",
+      "status": "SCOPED_INDEPENDENT_REPAIR; DEPENDENCY_ACTOR_EFFECT_REVISION_OPEN",
+      "dependsOn": [
+        "native-dispatch-issuance-scoped-20261004"
+      ],
+      "independent": true,
+      "evidence": [
+        "evidence/cli-dispatch-issuance-proof.json",
+        "evidence/cli-issuance-independent-result.json"
+      ],
+      "limitations": [
+        "Root uncommitted source only; no live provider/governor/runtime restart/candidate propagation/promotion or public release",
+        "Reservation is cooperating current-attempt issuance, not OS actor/network sent/success/effect/revision proof",
+        "Cancellation after reservation and crossattempt unknown external effect deduplication remain OPEN",
+        "Resource release on failure reviewed as source only; no real governor exercised",
+        "Actual current native probe: dependency QUARANTINED after claim, consumer still dispatches and DONE; new causal blocker recorded in dispatch-dependency-recheck-before.json",
+        "Atomic receipt/originalsource terminal re-evaluation and real input bytes/product consumers/outcome remain OPEN",
+        "Full typecheck FAIL11_OTHER_DIAGNOSTICS; scoped257tests not whole repo gate or A/B/C/D closure",
+        "G1 denial preserved, no retry/substitution; production authority not enabled"
+      ],
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "current-dependency-admission-scoped-20261005",
+        "limitation": "Historicalresult retained, wider authority open"
+      }
+    },
+    {
+      "id": "current-dependency-admission-scoped-20261005",
+      "claim": "Claim/dispatch/review/complete require current direct dependency viability and existingCAS, explicitcorrectiveexception retained",
+      "status": "SCOPED_INDEPENDENT_REPAIR; POSTTERMINAL_TRANSITIVE_AUTHORITY_OPEN",
+      "independent": true,
+      "dependsOn": [
+        "cli-dispatch-issuance-scoped-20261004"
+      ],
+      "evidence": [
+        "evidence/dependency-admission-proof.json",
+        "evidence/dependency-postterminal-before.json",
+        "evidence/dependency-admission-independent-results.json"
+      ],
+      "limitations": [
+        "Current direct dependency viability only; current postterminal/transitive gap reproduced: producerQUARANTINED, consumerIsSuccessful true, grandchildclaimaccepted",
+        "Producer replacement/attempt-version binding, recursive success consumption and old terminal dependency withdrawal remain OPEN",
+        "Current capability/CAS cooperative actor only; no OS actor, external effect/revision/atomic receipt proof",
+        "Provider effect authorized before withdrawal cannot be undone by terminal rejection; cancellation/crossattempt effect deduplication OPEN",
+        "Root uncommitted source only; no live provider/runtime enable/candidate propagation/promotion/public release",
+        "Actual product input bytes/consumer/outcome/founderabsence UNPROVEN; full repo typecheck11otherdiagnostics",
+        "G1 denial preserved without retry/substitution; allA/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "recursive-dependency-authority-scoped-20261005",
+        "limitation": "Prior exact-source evidence retained; not current certification"
+      }
+    },
+    {
+      "id": "recursive-dependency-authority-scoped-20261005",
+      "claim": "Recursive current dependency authority rechecked under queue commit gate; historical DONE cannot authorize migrated helper consumers after ancestor withdrawal",
+      "status": "SCOPED_INDEPENDENT_REPAIR; RAW_TERMINAL_CONSUMER_OPEN",
+      "independent": true,
+      "dependsOn": [
+        "current-dependency-admission-scoped-20261005"
+      ],
+      "evidence": [
+        "evidence/recursive-dependency-authority-proof.json",
+        "evidence/recursive-dependency-independent-after-review.json"
+      ],
+      "limitations": [
+        "Cooperative queue writers only; raw-status consumers not covered",
+        "Exact producer-attempt/input-version/effect binding OPEN",
+        "No product outcome, migration, cold start, founder absence or live attestation",
+        "No live enabling/candidate propagation/public deployment/G1 retry or substitution",
+        "All A/B/C/D UNPROVEN"
+      ]
+    },
+    {
+      "id": "raw-terminal-consumer-scoped-20261005",
+      "claim": "Current prerelease/quorum/new research synthesis consumers reject inadmissible full-snapshot dependency authority",
+      "status": "SCOPED_INDEPENDENT_REPAIR; PERSISTED_SIGNAL_AUTHORITY_OPEN",
+      "independent": true,
+      "dependsOn": [
+        "recursive-dependency-authority-scoped-20261005"
+      ],
+      "evidence": [
+        "evidence/raw-terminal-consumer-proof.json",
+        "evidence/raw-terminal-consumer-independent-results.json"
+      ],
+      "limitations": [
+        "Full supplied snapshot current at read only; stale snapshot and projection commit race OPEN",
+        "Already persisted research signals retain no current work/attempt/version revalidation",
+        "Duplicate/crossproject/current run selection and independent real actor evidence OPEN",
+        "Producer input/effect version binding and noncooperative writer frontier OPEN",
+        "No real product outcome/live enable/migration/candidate promotion/G1 retry or public release; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": {
+        "status": "PARTIALLY_SOURCE_SUPERSEDED",
+        "replacement": "persisted-research-origin-20261005",
+        "limitation": "Synthesis/runtime/index source changed; prerelease/cadence source unchanged; new material scope not independently certified"
+      }
+    },
+    {
+      "id": "persisted-research-authority-counterexample-20261005",
+      "claim": "Current persisted research signal quorum/source classifications are not trustworthy merely from role/confidence/ID",
+      "status": "CURRENT_REPRODUCED",
+      "independent": false,
+      "dependsOn": [
+        "raw-terminal-consumer-scoped-20261005"
+      ],
+      "evidence": [
+        "evidence/persisted-research-authority-before.json"
+      ],
+      "limitations": [
+        "Actual temporary advisory fixtures only; no live product/company/human evidence",
+        "No source repair yet; exact hashes recorded"
+      ]
+    },
+    {
+      "id": "persisted-research-origin-20261005",
+      "claim": "Bound current work/input advisory signals and removed inferred human labels/confidence boosts",
+      "status": "REVIEW_PENDING; CURRENT_RECEIPT_AUTHORITY_GAP_REPRODUCED",
+      "independent": false,
+      "dependsOn": [
+        "raw-terminal-consumer-scoped-20261005"
+      ],
+      "evidence": [
+        "evidence/persisted-research-origin-proof.json",
+        "evidence/research-origin-independent-review-denied.json",
+        "evidence/research-missing-receipt-before.json"
+      ],
+      "limitations": [
+        "Fresh independent review automatically rejected; not retried/rephrased/substituted; REVIEW_PENDING",
+        "Current receipt availability/content not re-resolved at consumers: actual missing receipt still READY_FOR_RE_SCORE",
+        "Caller stale snapshots and queue/signal/CEO/idea atomic write/read fence unproven",
+        "Legacy unbound signals preserved unverified; reconciliation and external verified research admission not implemented",
+        "No real product data/outcome/human research/live/candidate/G1/public actions; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": {
+        "status": "PARTIALLY_SOURCE_SUPERSEDED",
+        "replacement": "current-evidence-authority-staged-20261005",
+        "limitation": "Resolver/queue source changed, prior counterexample retained and caller gap still OPEN"
+      }
+    },
+    {
+      "id": "current-evidence-authority-staged-20261005",
+      "claim": "Original-store consistent snapshot and shared current evidence view exist; existing caller transition integration remains outstanding",
+      "status": "IN_PROGRESS; SHARED_SNAPSHOT_API_BUILDER_VERIFIED; CALLER_MIGRATION_AND_REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "persisted-research-origin-20261005"
+      ],
+      "evidence": [
+        "evidence/current-evidence-authority-stage-proof.json"
+      ],
+      "limitations": [
+        "Shared API not wired into authority transitions or existing product/company consumers; original missingreceipt READY path remains OPEN",
+        "Full-file read snapshot guards conservative; selected identity/read-set gate consistency and unrelated-writer concurrency not implemented",
+        "Full role contract/legacy terminal adjudication, original source/effect/execution attestation and writer fence remain OPEN",
+        "Builder evidence only; PD009 review denial preserved, no retry/substitute",
+        "No live enabling/product data/provider/candidate/G1/public actions; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "selected-evidence-transitions-20261005",
+        "limitation": "Historical staged results retained; actual readconsumer/writer frontier open"
+      }
+    },
+    {
+      "id": "selected-evidence-transitions-20261005",
+      "claim": "Four queue authority transitions revalidate selected current receipt identities and graph rows before append, tolerating unrelated healthy mutations",
+      "status": "IN_PROGRESS; TRANSITION_BUILDER_VERIFIED; READ_CONSUMER_WRITER_PREFLIGHT_REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "current-evidence-authority-staged-20261005"
+      ],
+      "evidence": [
+        "evidence/selected-evidence-transition-proof.json"
+      ],
+      "limitations": [
+        "Read consumers/quorum/prerelease/planner/synthesis/CEO/scoring still awaiting shared authority view integration",
+        "Receipt native/CLI writers not yet governed by common gate; cross-process check/append and duplicate receipt writer race OPEN",
+        "Unsupported resolver snapshot now refuses evidencedependent commit; preflight snapshot readiness check not yet integrated",
+        "No execution/OS actor/real effect/product outcome/cold start/migration/genesis attestation",
+        "Builder-only new material scope; independent review safety denial preserved, not retried/substituted; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": {
+        "status": "SOURCE_SUPERSEDED",
+        "replacement": "evidence-snapshot-preflight-20261005",
+        "limitation": "Prior transition evidence retained; reader/writer frontier still open"
+      }
+    },
+    {
+      "id": "evidence-snapshot-preflight-20261005",
+      "claim": "Unsupported/unavailable snapshot resolver cannot issue provider dispatch; configured real-ledger concurrency and crash marker preserved",
+      "status": "IN_PROGRESS; PREFLIGHT_BUILDER_VERIFIED; READER_WRITER_REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "selected-evidence-transitions-20261005"
+      ],
+      "evidence": [
+        "evidence/evidence-preflight-proof.json"
+      ],
+      "limitations": [
+        "Read consumers still structural; original missingreceipt readiness path not repaired yet",
+        "Native/CLI receipt writer gate and crossprocess check/append/duplicate concurrency remain OPEN",
+        "Snapshot preflight checks operational original-store reads but is not provider/OS actor/effect/revision attestation",
+        "Builder-only new material scope; fresh independent review denial retained without retry/substitution",
+        "No live/provider/product/candidate/G1/public deployment actions; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "SOURCE_SUPERSEDED; historical preflight proof retained; current affected regression337"
+    },
+    {
+      "id": "research-current-authority-20261005",
+      "claim": "Actual queue-issued immutable authority view, canonical private row accessor, current original evidence eligibility for research/quorum/CEO/idea/synthesis; plain arrays and forged/copied view fail closed",
+      "status": "IN_PROGRESS; BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "evidence-snapshot-preflight-20261005"
+      ],
+      "evidence": [
+        "evidence/research-current-authority-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; PD-009 independent review denied, no retry/substitution",
+        "No live HTTP/runtime restart, real model/human/product activity or candidate propagation",
+        "Receipt writer crossprocess/duplicate/check-to-append and projection atomicity remain OPEN",
+        "Other prerelease/cadence/planner/executor/coordinator/CLI readers remain to migrate",
+        "Advisory quorum never attests real users, independently verified delivery or product outcome",
+        "Full typecheck remains FAIL11; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "SOURCE_SUPERSEDED for runtime/index; research scoped proof retained; current341 regression"
+    },
+    {
+      "id": "readiness-current-authority-20261005",
+      "claim": "Prerelease/promotion/cadence consume issued canonical current evidence authority; runtime/index caller wiring",
+      "status": "IN_PROGRESS; BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "research-current-authority-20261005"
+      ],
+      "evidence": [
+        "evidence/readiness-current-authority-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; independent material review denied PD009, not retried/substituted",
+        "No actual release/HTTP/server restart/governance/provider/human/product/candidate effects",
+        "Planner/executor/coordinator/CLI readers remain structural",
+        "Receipt writer crossprocess/duplicates/check-to-append and projection atomicity OPEN",
+        "Full typecheck11baseline; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "SOURCE_SUPERSEDED by project scoped view repair; historical341 retained; current343 replacement"
+    },
+    {
+      "id": "readiness-project-scope-20261005",
+      "claim": "Canonical currentRows follows requested project; scoped success/dependency rejects foreign identities; full private dependency graph retained",
+      "status": "IN_PROGRESS; BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "readiness-current-authority-20261005"
+      ],
+      "evidence": [
+        "evidence/readiness-project-scope-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; PD009 independent review denial retained; no retry/substitute",
+        "Planner/executor/coordinator/CLI migration and receiptwriter crossprocess/duplicate/check-to-append/projection atomicity OPEN",
+        "No live HTTP/runtime/provider/human/product release/candidate/G1/public action",
+        "Full typecheck11baseline; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "Queue/gate/executor/coordinator source superseded; scoped343 historical retained; current350 replacement"
+    },
+    {
+      "id": "planner-current-authority-rejected-20261005",
+      "claim": "Naive full-file reader propagation is not safe under healthy worker concurrency",
+      "status": "REPRODUCED; ATTEMPT_REJECTED_ROLLED_BACK",
+      "independent": false,
+      "dependsOn": [
+        "readiness-project-scope-20261005"
+      ],
+      "evidence": [
+        "evidence/planner-current-authority-attempt.json"
+      ],
+      "limitations": [
+        "Prior343PASS only applies to accepted reader scope; remaining planner/executor/coordinator/CLI structural success OPEN",
+        "No independent review; PD009 denied, no retry/substitution",
+        "No live/provider/human/product/candidate/public effects"
+      ]
+    },
+    {
+      "id": "selected-terminal-read-20261005",
+      "claim": "Existing gate read-only branch and selected original evidence/current canonical graph query; executor/coordinator terminal success migrated; postcommit evidence failure preserves terminal history and requests revalidation",
+      "status": "IN_PROGRESS; BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "readiness-project-scope-20261005",
+        "planner-current-authority-rejected-20261005"
+      ],
+      "evidence": [
+        "evidence/selected-terminal-read-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; independent review safety denial PD009 retained without retry/substitute",
+        "Planner/CLI structural readers still OPEN; actual temp probe still generates2 reviews from receiptless DONE",
+        "Current success query is point-in-time only, not atomic downstream consumption or final certificate",
+        "Receiptwriters outside queue gate; crossprocess evidence/check-to-append/duplicate mutation and OS/revision/effect binding OPEN",
+        "No live HTTP/runtime/model/human/product/candidate/G1/public action",
+        "Full typecheck11baseline; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "Planner/test source superseded; selected terminal scoped350 proof retained;354 current affected regression"
+    },
+    {
+      "id": "planner-selected-read-20261005",
+      "claim": "PM and independent/pre-release planner uses selected currentSuccess receipts; approved proposal implementation linked to actual PM review original scope",
+      "status": "IN_PROGRESS; BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "selected-terminal-read-20261005"
+      ],
+      "evidence": [
+        "evidence/planner-selected-read-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; PD009 independent review denied, no retry/substitute",
+        "CLI PM artifact and dependency structural prechecks remain to migrate; claim/reservation already has selected evidence guard",
+        "Planner read/create not atomic; execution dependency admission protects subsequent effects",
+        "Planned/SPRINT_SELECTED and persisted backlog/score authority still unverified compatibility paths",
+        "Receiptwriter/crossprocess/check-to-append/duplicate and full artifact-output/actor/revision/effect binding and downstream atomicity OPEN",
+        "No live/runtime/model/human/product/candidate/G1/public effects",
+        "Full typecheck11baseline; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "Queue/CLI source superseded; scoped354 planner proof retained;361 current regression"
+    },
+    {
+      "id": "cli-selected-read-20261005",
+      "claim": "Shared selected dependency query under existing read-only queue gate; CLI assignment/dependency checks and canonical PM recommendation; run-ready strict canonical queue parser",
+      "status": "IN_PROGRESS; BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "planner-selected-read-20261005"
+      ],
+      "evidence": [
+        "evidence/cli-selected-read-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; PD009 independent review safety denied, no retry/substitute",
+        "PM test executes exact isolated source function; full healthy run-ready process loop not certified",
+        "Actual run-ready corruption negative only; no real provider/product/human outcomes",
+        "Native receipt duplicate race CURRENT_REPRODUCED; CLI/native writer gate and durability/attempt actor/revision/effect authority OPEN",
+        "Selected queries point-in-time; downstream atomic consumption and compatibility intake authority OPEN",
+        "Full typecheck11baseline; A/B/C/D UNPROVEN; no live/candidate/G1/public action"
+      ],
+      "currentApplicability": "Native ledger/gate source superseded; CLI scoped361 proof retained;366 current regression"
+    },
+    {
+      "id": "native-duplicate-receipt-race-20261005",
+      "claim": "Two native ledger instances can return success while creating duplicate identity and corrupt resolution",
+      "status": "CURRENT_REPRODUCED; OPEN_P0",
+      "independent": false,
+      "evidence": [
+        "evidence/native-receipt-race-before.json"
+      ],
+      "limitations": [
+        "Same-process two instances only; not multi-process or provider-effect proof"
+      ],
+      "currentApplicability": "HISTORICAL_REPRODUCED; scoped native publication builder repair, full writer/actor/crossstore closure OPEN"
+    },
+    {
+      "id": "native-receipt-publication-20261005",
+      "claim": "Native receipt identity inspection and durable publication under existing root queue SQLite gate; fixed target filename allowlist; same ID idempotent read, conflicting lineage refused",
+      "status": "IN_PROGRESS; BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "cli-selected-read-20261005",
+        "native-duplicate-receipt-race-20261005"
+      ],
+      "evidence": [
+        "evidence/native-receipt-publication-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; PD009 independent review denial retained without retry/substitute",
+        "CLI receipt writer still outside gate; native+CLI/cross-store identity/atomicity and downstream publication OPEN",
+        "Record API has not added actual queue attempt capability/OS actor/revision/effect authorization; direct store fixtures are not actual provider proof",
+        "Native canonical root binding and receipt-to-output/effect semantics remain unproven",
+        "No live/runtime/model/human/product/candidate/G1/public effect",
+        "Full typecheck11baseline; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "Source superseded by mandatory native routing; historical proof retained; current414 source hashes; combined capture false-negative separately OPEN"
+    },
+    {
+      "id": "cli-receipt-publication-20261005",
+      "claim": "CLI original receipt publication under shared root queue gate with actual canonical queue/capability, producer/issuance/identity/scope/hash checks, strict original ledger boundary and atomic durable file publication",
+      "status": "IN_PROGRESS; BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "native-receipt-publication-20261005"
+      ],
+      "evidence": [
+        "evidence/cli-receipt-publication-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; PD009 independent review denied, no retry/substitute/bypass",
+        "Native direct receipt writer still lacks queue capability/producer issuance authorization; same root/OS actor boundaries need independent proof",
+        "Actual queue capability fences cooperative CLI publisher; not authority attestation for arbitrary OS/root filesystem writers",
+        "Native+CLI cooperative shared gate does not provide atomic cross-store commit, crash/genesis/rollback or downstream projection transaction",
+        "Exact revision/input/effect/provenance semantics and compatibility intake authority OPEN",
+        "No live/runtime/provider/human/product/candidate/G1/public effects",
+        "Full typecheck11baseline; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "Source superseded by mandatory native routing; historical proof retained; current414 source hashes; combined capture false-negative separately OPEN"
+    },
+    {
+      "id": "native-receipt-authority-stage1-20261005",
+      "claim": "Queue-owned native receipt publication primitive with actual current capability/issuer and strict original store checks; mandatory ledger/adapter routing not implemented yet",
+      "status": "STAGE1_BUILDER_VERIFIED; NATIVE_INTEGRATION_OPEN; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "cli-receipt-publication-20261005"
+      ],
+      "evidence": [
+        "evidence/native-receipt-authority-stage1-proof.json",
+        "evidence/native-stale-publication-before.json",
+        "evidence/native-stale-publication-stage1-still-open.json"
+      ],
+      "limitations": [
+        "New publisher is not yet consumed by native ledger/adapter; actual stale actor counterexample remains reproduced",
+        "No independent assurance, live runtime/model/product/consumer/migration/candidate/public effect",
+        "OS actor/revision/input/effect authority, combined snapshot unrelated append, cross-store crash and downstream atomicity remain OPEN"
+      ],
+      "currentApplicability": "Source superseded by mandatory native routing; historical proof retained; current414 source hashes; combined capture false-negative separately OPEN"
+    },
+    {
+      "id": "native-receipt-authority-mandatory-20261005",
+      "claim": "Exclusive native ledger publication through actual queue capability/issuer gate; adapter handle transport and canonical root preflight; reserved attempt receipt IDs; unfenced fingerprint publisher retired",
+      "status": "BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "native-receipt-authority-stage1-20261005"
+      ],
+      "evidence": [
+        "evidence/native-receipt-authority-mandatory-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; preserved PD009/G1 review denial not retried/substituted/bypassed",
+        "Cooperative native/CLI publishers fence current attempt; arbitrary OS writers and full process/lease actor authority remain unproven",
+        "Revision/input/effect binding, cross-store crash and downstream atomicity and compatibility intake authority OPEN",
+        "Combined snapshot capture false-negative under unrelated valid append CURRENT_REPRODUCED",
+        "No actual model/provider/company/product/human/live/candidate/public effect; A/B/C/D UNPROVEN"
+      ],
+      "currentApplicability": "Combined resolver hash superseded; native414 original proof retained; current424 hash-bound regression covers native mandatory guards"
+    },
+    {
+      "id": "combined-evidence-capture-20261005",
+      "claim": "Combined snapshot factory validates complete original-store integrity with empty selected set, preserving bounded current identity decisions; direct resolve explicitly rechecks selected identity; full-view byte invalidation retained",
+      "status": "BUILDER_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "native-receipt-authority-mandatory-20261005"
+      ],
+      "evidence": [
+        "evidence/combined-evidence-capture-proof.json"
+      ],
+      "limitations": [
+        "Builder-only; independent review denied and not retried/substituted",
+        "No atomic cross-store or queue-to-projection commit, crash/rollback/genesis proof",
+        "No OS process/controller/lease actor fencing or exact revision/input/effect/consumer outcome proof",
+        "No live/model/provider/company/product/human/candidate/public effect; A/B/C/D UNPROVEN"
+      ]
+    }
+  ],
+  "invalidators": [
+    "material source/config/dependency change",
+    "changed operating envelope or policy",
+    "counterexample contradicting a claim",
+    "changed test oracle or denominator",
+    "evidence source unavailable or not bound to claimed revision"
+  ],
+  "automaticInvalidation": "NOT_IMPLEMENTED; this registry does not claim runtime transitive invalidation",
+  "promotion": "NOT_GRANTED",
+  "currentMissionId": "AI_FACTORY_FINAL_CONVERGENCE_V2"
+}

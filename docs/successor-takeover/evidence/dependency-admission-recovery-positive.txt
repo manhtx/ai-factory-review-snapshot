@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 922ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (5 tests) 402ms
+
+ Test Files  2 passed (2)
+      Tests  15 passed (15)
+   Start at  00:22:23
+   Duration  1.71s (transform 63ms, setup 0ms, collect 89ms, tests 1.32s, environment 0ms, prepare 50ms)
+

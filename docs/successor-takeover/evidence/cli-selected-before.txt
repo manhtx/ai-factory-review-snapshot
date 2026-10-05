@@ -1,0 +1,75 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts (13 tests | 1 failed | 12 skipped) 210ms
+   ↓ claims before stub provider, passes no capability, and ACKs its actual attempt
+   ↓ refuses provider dispatch when stopped while paused after claim ACK
+   ↓ does not adopt an existing claim or call the stub provider
+   ↓ never consumes a legacy work-only completion artifact for a silent new attempt
+   ↓ does not record semantic evidence after the claimed attempt was explicitly stopped
+   ↓ terminates the owned stub provider before exiting on dispatcher SIGTERM
+   ↓ awaits bounded group escalation when a descendant ignores SIGTERM
+   ↓ quarantines worker-written DONE before creating semantic receipts
+   ↓ preserves an unresolved provider citation and blocks instead of replacing it
+   ↓ CLI review preserves actual original reference for same-scope
+   ↓ CLI review preserves actual original reference for cross-scope
+   ↓ CLI review preserves actual original reference for unresolved
+   × rejects missing dependency receipts explicitly before claim or stub provider 210ms
+     → /Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:661
+        for(const input of inputs){const issues=currentRoleEvidenceErrors(input,current,tracking);if(issues.length)throw new Error(`current evidence authority failed: ${issues.join('; ')}`);}
+                                                                                                                         ^
+
+Error: current evidence authority failed: evidence 'ROLE-EVIDENCE-b651eac14885a06ee38b' cannot be resolved or does not exist; evidence 'ROLE-EVIDENCE-b651eac14885a06ee38b' has no source artifact
+    at <anonymous> (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:661:122)
+    at withQueueMutationGate (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/queueMutationGate.ts:40:24)
+    at async RoleWorkQueue.update (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:647:5)
+    at async RoleWorkQueue.claim (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:248:18)
+    at async <anonymous> (/Users/manhtx/Documents/Macro Research Platform/scripts/ai-company-role-dispatch.mjs:130:65)
+
+Node.js v24.18.0
+: expected 1 to be 4 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > rejects missing dependency receipts explicitly before claim or stub provider
+AssertionError: /Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:661
+        for(const input of inputs){const issues=currentRoleEvidenceErrors(input,current,tracking);if(issues.length)throw new Error(`current evidence authority failed: ${issues.join('; ')}`);}
+                                                                                                                         ^
+
+Error: current evidence authority failed: evidence 'ROLE-EVIDENCE-b651eac14885a06ee38b' cannot be resolved or does not exist; evidence 'ROLE-EVIDENCE-b651eac14885a06ee38b' has no source artifact
+    at <anonymous> (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:661:122)
+    at withQueueMutationGate (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/queueMutationGate.ts:40:24)
+    at async RoleWorkQueue.update (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:647:5)
+    at async RoleWorkQueue.claim (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:248:18)
+    at async <anonymous> (/Users/manhtx/Documents/Macro Research Platform/scripts/ai-company-role-dispatch.mjs:130:65)
+
+Node.js v24.18.0
+: expected 1 to be 4 // Object.is equality
+
+- Expected
++ Received
+
+- 4
++ 1
+
+ ❯ <anonymous> server/aiCompany/roleWorkQueue.ts:661:122
+    659|         const evidenceIds=new Set<string>();
+    660|         const tracking:EvidenceSnapshot|undefined=snapshot ? {resolve:…
+    661|         for(const input of inputs){const issues=currentRoleEvidenceErr…
+       |                                                                                                                          ^
+    662|         snapshot?.assertCurrent([...evidenceIds]);
+    663|       }
+ ❯ withQueueMutationGate server/aiCompany/queueMutationGate.ts:40:24
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:647:5
+ ❯ RoleWorkQueue.claim server/aiCompany/roleWorkQueue.ts:248:18
+ ❯ <anonymous> scripts/ai-company-role-dispatch.mjs:130:65
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:197:36
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  10:55:04
+   Duration  620ms (transform 70ms, setup 0ms, collect 87ms, tests 210ms, environment 0ms, prepare 38ms)
+

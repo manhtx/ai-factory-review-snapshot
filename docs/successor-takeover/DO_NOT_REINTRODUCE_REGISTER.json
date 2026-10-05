@@ -1,0 +1,15 @@
+{
+  "schema": "successor-takeover.negative-knowledge.v1",
+  "rules": [
+    "Never derive objective satisfaction solely from queue DONE.",
+    "Never treat provider output as independent outcome evidence.",
+    "Never derive product observation truth from governance PASS.",
+    "Never omit unknown lifecycle states from visible counts or triage.",
+    "Never let parallel schedulers/recovery writers gain authority by convention.",
+    "Never use Date.parse finiteness as proof of a real unambiguous calendar timestamp.",
+    "Never treat non-ESRCH process-probe errors as a dead owner.",
+    "Validate serialized bytes before append; validating a pre-serialization object is insufficient.",
+    "Never suppress corrupt ledger rows and return partial healthy state.",
+    "Never use another execution revision's tests or soak as current closure."
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "kind": "createProvenanceError",
+    "error": "QUEUE_COMMITTED_PROVENANCE_FAILURE: work state committed; inspect before retry",
+    "committedRows": 1,
+    "dir": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-gate-edge-SH9tTo"
+  },
+  {
+    "kind": "revisionOverflow",
+    "updateError": "queue revision exhausted; no mutation committed",
+    "subsequentReadError": "",
+    "bytesUnchanged": true,
+    "dir": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-gate-edge-D3Hgvl"
+  },
+  {
+    "kind": "rootRetarget",
+    "completion": "DONE",
+    "rootAState": "DONE",
+    "rootBState": "IN_REVIEW",
+    "base": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-gate-edge-ZDNYLl"
+  },
+  {
+    "file": "server/aiCompany/queueMutationGate.ts",
+    "sha256": "007765747c2d758a63b332a58d723a6e8ce93d5af909ef9e7766bc8c04155c73"
+  },
+  {
+    "file": "server/aiCompany/roleWorkQueue.ts",
+    "sha256": "ab70460a77a11b079c9578f5fb2e22039569741b0ce55908fd34000bed6526e7"
+  },
+  {
+    "file": "server/aiCompany/queueMutationFence.test.ts",
+    "sha256": "142bb1590a646345b6eddebac5394248275b3470684ea5a117a55bf40adad700"
+  }
+]

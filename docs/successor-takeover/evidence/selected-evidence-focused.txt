@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 292ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 8ms
+
+ Test Files  2 passed (2)
+      Tests  14 passed (14)
+   Start at  10:01:21
+   Duration  1.61s (transform 122ms, setup 0ms, collect 174ms, tests 300ms, environment 0ms, prepare 111ms)
+

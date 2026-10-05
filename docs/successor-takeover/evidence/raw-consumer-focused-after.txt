@@ -1,0 +1,38 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/researchSynthesis.test.ts (3 tests | 2 failed) 42ms
+   × research synthesis > turns completed research work into idempotent evidence signals 23ms
+     → role evidence scope, output and limitation are required
+   ✓ research synthesis > requires all four research perspectives before re-score 1ms
+   × does not synthesize historical DONE research after ancestor withdrawal 18ms
+     → role evidence scope, output and limitation are required
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (7 tests) 3ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (5 tests) 2ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/researchSynthesis.test.ts > research synthesis > turns completed research work into idempotent evidence signals
+Error: role evidence scope, output and limitation are required
+ ❯ RoleEvidenceLedger.record server/aiCompany/roleEvidenceLedger.ts:27:157
+
+ ❯ server/aiCompany/researchSynthesis.test.ts:15:85
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  server/aiCompany/researchSynthesis.test.ts > does not synthesize historical DONE research after ancestor withdrawal
+Error: role evidence scope, output and limitation are required
+ ❯ RoleEvidenceLedger.record server/aiCompany/roleEvidenceLedger.ts:27:157
+
+ ❯ finish server/aiCompany/researchSynthesis.test.ts:29:117
+ ❯ server/aiCompany/researchSynthesis.test.ts:30:114
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  2 failed | 16 passed (18)
+   Start at  09:29:17
+   Duration  806ms (transform 156ms, setup 0ms, collect 271ms, tests 49ms, environment 0ms, prepare 108ms)
+

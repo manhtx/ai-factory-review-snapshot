@@ -1,0 +1,125 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts (3 tests | 3 failed) 9ms
+   × native evidence admission > resolves actual assignment scope and original output hash through the native ledger 5ms
+     → expected 'undefined' to be 'function' // Object.is equality
+   × native evidence admission > does not manufacture a coder contract from unstructured provider prose 3ms
+     → promise resolved "{ …(4) }" instead of rejecting
+   × native evidence admission > does not manufacture independent QA PASS from an own-role receipt 1ms
+     → promise resolved "{ …(4) }" instead of rejecting
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > resolves actual assignment scope and original output hash through the native ledger
+AssertionError: expected 'undefined' to be 'function' // Object.is equality
+
+Expected: "function"
+Received: "undefined"
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts:17:73
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > does not manufacture a coder contract from unstructured provider prose
+AssertionError: promise resolved "{ …(4) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "evidence_ids": [
++     "ROLE-EVIDENCE-0b3c5797efe98c828313",
++   ],
++   "review_verdict": {
++     "confidence": 1,
++     "evidence": [
++       "ROLE-EVIDENCE-0b3c5797efe98c828313",
++     ],
++     "failure_class": "NONE",
++     "gate": "role_output",
++     "next_review_trigger": "downstream dependency ready",
++     "recovery_actions": [],
++     "recovery_required": false,
++     "retry_budget": 0,
++     "root_cause": "no blocking defect identified",
++     "summary": "bounded role output recorded",
++     "unblock_evidence": [],
++     "verdict": "PASS",
++   },
++   "structured_output": {
++     "evidence_ids": [
++       "ROLE-EVIDENCE-0b3c5797efe98c828313",
++     ],
++     "files_changed": [],
++     "files_not_changed": [],
++     "implementation_summary": "I did it; all tests passed",
++     "known_limitations": [],
++     "role": "coder",
++     "rollback_instruction": "git restore .",
++     "summary": "I did it; all tests passed",
++     "tests_failed": [],
++     "tests_run": [
++       "provider:complete",
++     ],
++   },
++   "usage": {
++     "input_tokens": 1,
++     "output_tokens": 1,
++   },
+  }
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts:28:246
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > does not manufacture independent QA PASS from an own-role receipt
+AssertionError: promise resolved "{ …(4) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "evidence_ids": [
++     "ROLE-EVIDENCE-2d0bb8c73b865ec66fef",
++   ],
++   "review_verdict": {
++     "confidence": 1,
++     "evidence": [
++       "ROLE-EVIDENCE-2d0bb8c73b865ec66fef",
++     ],
++     "failure_class": "NONE",
++     "gate": "role_output",
++     "next_review_trigger": "downstream dependency ready",
++     "recovery_actions": [],
++     "recovery_required": false,
++     "retry_budget": 0,
++     "root_cause": "no blocking defect identified",
++     "summary": "bounded role output recorded",
++     "unblock_evidence": [],
++     "verdict": "PASS",
++   },
++   "structured_output": undefined,
++   "usage": {
++     "input_tokens": 1,
++     "output_tokens": 1,
++   },
+  }
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts:35:230
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed (3)
+   Start at  20:56:52
+   Duration  433ms (transform 57ms, setup 0ms, collect 66ms, tests 9ms, environment 0ms, prepare 39ms)
+

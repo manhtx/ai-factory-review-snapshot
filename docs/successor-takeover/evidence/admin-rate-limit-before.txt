@@ -1,0 +1,38 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/rateLimit.test.ts (6 tests | 1 failed) 12ms
+   × TokenBucketLimiter > does not let one admin socket evade limits by rotating untrusted headers 9ms
+     → expected 1 to be +0 // Object.is equality
+   ✓ TokenBucketLimiter > allows requests within capacity and sets correct headers 0ms
+   ✓ TokenBucketLimiter > blocks requests when capacity is exhausted and returns HTTP 429 1ms
+   ✓ TokenBucketLimiter > isolates client buckets based on Bearer token or IP 1ms
+   ✓ TokenBucketLimiter > supports manual reset of buckets 0ms
+   ✓ TokenBucketLimiter > skips rate limiting when skip predicate returns true 0ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/rateLimit.test.ts > TokenBucketLimiter > does not let one admin socket evade limits by rotating untrusted headers
+AssertionError: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ server/rateLimit.test.ts:42:40
+     40|         const next = vi.fn();
+     41|         adminTokenBucketLimiter(mock.req, mock.res, next);
+     42|         expect(next.mock.calls.length).toBe(i < 60 ? 1 : 0);
+       |                                        ^
+     43|         expect(mock.getStatusCode()).toBe(i < 60 ? 200 : 429);
+     44|       }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 passed (6)
+   Start at  17:48:51
+   Duration  853ms (transform 36ms, setup 0ms, collect 25ms, tests 12ms, environment 0ms, prepare 73ms)

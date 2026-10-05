@@ -1,0 +1,48 @@
+{
+  "schema": "successor-takeover.s1-progress.v1",
+  "status": "ISOLATED_REPAIR_REGRESSION_VERIFIED_INDEPENDENT_REVIEW_PENDING",
+  "proposal": "STATE_COVERAGE_PROPOSAL.md",
+  "workspace": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+  "authority": "NONE",
+  "promotion": "NOT_GRANTED",
+  "sourceSha256": {
+    "server/aiCompany/workState.ts": "17ce26d28d3027dc78ac179dd8dbad225b6c7b6c4aef87be90b8417c29bfff95",
+    "server/aiCompany/objectiveEligibility.ts": "d79a45efb456448642897e259b80c4feea060921860e6940f4b97a9c84cddce4",
+    "server/aiCompany/autonomousNextAction.ts": "9707ad9ebe9c587fbdf55c740f36bc1956dc93ac7158a3f0680b2fca3ef4677f",
+    "server/aiCompany/autonomousNextAction.test.ts": "9ed01a68cfe0cb61327f89d49738213f8f18e132bd82c9d23c5ed70683818ebb",
+    "server/aiCompany/autonomousCoordinator.ts": "ed4db030ea3f3466842cbe2718188f82c8c78bf590339fe67f4fa11f35f8cc14",
+    "server/aiCompany/roleWorkQueue.ts": "fa882ffef36192a25a3d16a6cdbda2a506c54580f5c3c642e499325300858b54",
+    "server/aiCompany/stateCoverage.test.ts": "8874064ede4e6ae6d659dafce9e3de283bfbd6fd15b31e81f36fd8842497a630",
+    "scripts/ai-company-product-continuation.mjs": "1f2045b1ebfabaf50c8512c3217339a1a2c5b9bbfc7a43fbfbe1f4652aada900",
+    "scripts/ai-company-product-continuation.state.test.mjs": "976b4c117393a6a6f6cd587e3ead028d3cfeb3fe56944df7996db40204c81fd3",
+    "scripts/audit-autonomous-next-action.mjs": "cca2c7f7eafdb71228d427ed67aac406a2d67252ab3293b0b9ba8da7d2e4f476"
+  },
+  "evidence": {
+    "before": "evidence/s1-before.json: 15/15 failed on original behavior",
+    "initialRepair": "evidence/s1-first-repair.json: 57 passed",
+    "adapterHarnessFailure": "evidence/s1-adapter-first.json: 8 adapter cases could not start because Vitest does not provide import.meta.resolve; 19 reducer tests passed",
+    "adapterHarnessRepair": "evidence/s1-adapter-loader-repair.json: Node createRequire resolves the loader; all 8 isolated CLI cases passed",
+    "expanded": "evidence/s1-expanded-regression.json: 91 passed, 0 failed",
+    "staleProjectionBefore": "evidence/s1-stale-before.json: both stale marker/report cases failed before repair",
+    "staleProjectionRepair": "evidence/s1-stale-repair.json: 30 passed; evidence/s1-stale-expanded.json: 93 passed, 0 failed",
+    "lint": "All changed modules except continuation pass. Continuation retains two existing unused-variable errors reproduced in main.",
+    "typecheck": "Same 11 pre-existing diagnostics; no S1 diagnostic",
+    "diffCheck": "PASS"
+  },
+  "g1": "Frozen; source and test SHA256 unchanged from G1_STORAGE_PROGRESS.json. Independent recheck still incomplete.",
+  "independentS1Verifier": "01a0f5aa-bcd3-70c1-9d59-6df5094c1c4f",
+  "independentS1Outcome": "INCOMPLETE: reviewer terminated at account usage limit without findings. No independent approval inferred.",
+  "latestRecheck": {"reviewer": "01a0f6b3-657c-73b1-9142-cb78dc0bb09b", "status": "INCOMPLETE_USAGE_LIMIT", "builderChecks": "s1-exit-refresh-check.json: 35 passed; combined-candidate-regression-v2.json: 205 passed", "independentAcceptance": false},
+  "replacementS1Reviewer": {"agentId": "01a0f6b3-657c-73b1-9142-cb78dc0bb09b", "reason": "ordinaryUsageAllowed confirmed true; old reviewer handle returned not found", "scope": "S1 functional review only; G1 and wait changes excluded", "status": "DISPATCHED"},
+  "executionSurface": {"evidence": "evidence/candidate-execution-surface-s1-stale-repair.json", "files": 882, "denominatorSha256": "3ead9351fd46ac39ec94d2637fae98e5896205d471ae2f0a110599e1056e065f"},
+  "proofInvalidation": "Prior candidate whole-source execution inventory is stale due to intentional S1 changes. G1 component bytes unchanged, but no whole-candidate closure evidence transfers automatically.",
+  "remaining": [
+    "independent S1 review",
+    "projection concurrency/filesystem failure and attempt identity remain unproven; stale prior marker and healthy audit cases repaired",
+    "full objective satisfaction and evidence authority",
+    "runtime-authenticated ownership and typed wake enforcement",
+    "complete state/projection census",
+    "migration, live operation and cold-start proof"
+  ],
+  "claimLimit": "Contains reproduced state-omission and empty-run success cases in isolated candidate. It does not prove global objective conservation, full successor integrity or autonomous operation."
+}

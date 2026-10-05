@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (15 tests) 2614ms
+   ✓ healthy evidence supports current dependency authority; missing original receipts revoke it  943ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 747ms
+   ✓ native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request  379ms
+
+ Test Files  2 passed (2)
+      Tests  30 passed (30)
+   Start at  10:13:40
+   Duration  5.08s (transform 94ms, setup 0ms, collect 164ms, tests 3.36s, environment 0ms, prepare 525ms)
+

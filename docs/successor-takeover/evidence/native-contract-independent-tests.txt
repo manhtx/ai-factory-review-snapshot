@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 551ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 512ms
+
+ Test Files  2 passed (2)
+      Tests  27 passed (27)
+   Start at  22:48:14
+   Duration  1.55s (transform 66ms, setup 0ms, collect 87ms, tests 1.06s, environment 0ms, prepare 51ms)
+

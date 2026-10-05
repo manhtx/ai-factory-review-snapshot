@@ -1,0 +1,119 @@
+{
+  "schema": "ai-factory.scoped-proof.v1",
+  "observedAt": "2026-10-02T13:54:27.239517+00:00",
+  "sourceBaseRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "executionIdentity": "UNCOMMITTED_WORKTREE_BOUND_TO_HASHES",
+  "sourceHashes": {
+    "server/aiCompany/roleWorkQueue.ts": "3d8aca14cca2a1d2f08620bf26285b7a3d48f2bc5400c2c6d1295cd0179e29ac",
+    "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts": "b077c99bfb4ed72badb13373baca37ec042caca4cf7385454106d540df352c8c",
+    "server/aiCompany/roleWorkQueue.test.ts": "98a44be4201d1445f0cfce3055b5f0ba6346b2cbf00d12e4ab50d461e92c2738",
+    "server/aiCompany/roleWorkQueueBypassGuards.test.ts": "5914c7dbd40d5cac9a26bec73829172da3e86a7748d41181cdd964d42ce1ec58",
+    "docs/successor-takeover/EVIDENCE_ADMISSION_INVESTIGATION.md": "316d4519acb02d55de8814ddbb2997670821b74072dd468ba0f19b096ae37b95"
+  },
+  "claim": "complete() rejects missing resolver before its DONE write; read/intake preserved",
+  "failBefore": {
+    "file": "mandatory-evidence-before.txt",
+    "result": "1 failed / 7 passed; unresolved ID became DONE"
+  },
+  "focusedAfter": {
+    "file": "mandatory-final-focused.txt",
+    "result": "74 passed / 7 files"
+  },
+  "compatibility": {
+    "numTotalTests": 54,
+    "numPassedTests": 42,
+    "numFailedTests": 12,
+    "success": false
+  },
+  "compatibilityFailures": [
+    {
+      "file": "autonomousCoordinator.test.ts",
+      "test": "advances one invocation through ready work and bounded terminal state",
+      "error": "AssertionError: expected 'BLOCKED_EXTERNAL' to be 'SUCCESS' // Object.is equality"
+    },
+    {
+      "file": "autonomousCoordinator.test.ts",
+      "test": "recovers a HOLD without a manual next-wave trigger",
+      "error": "AssertionError: {\"status\":\"BLOCKED_EXTERNAL\",\"completed\":[],\"recovery_tasks\":[],\"runs\":1,\"interventions\":0,\"total_tokens_estimated\":4000,\"token_provenance\":\"ESTIMATED\",\"next_action\":{\"kind\":\"EXECUTE_READY_WORK\",\"reason\":\"dispatchable work remains\",\"work_ids\":[\"WORK-1790949209456-zqwg6z\"]},\"failure_reason\":\"completion requires an explicitly configured evidence resolver\"}: expected 'BLOCKED_EXTERNAL' to be 'SUCCESS' // Object.is equality"
+    },
+    {
+      "file": "autonomousCoordinator.test.ts",
+      "test": "reports provider usage as actual instead of relabeling context estimates",
+      "error": "AssertionError: expected 'BLOCKED_EXTERNAL' to be 'SUCCESS' // Object.is equality"
+    },
+    {
+      "file": "recoveryCoordinator.test.ts",
+      "test": "Scenario 1: QA fail -> Coder fix corrective task -> QA re-run",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "roleWorkExecutor.test.ts",
+      "test": "completes with evidence and blocks failed workers",
+      "error": "AssertionError: expected [] to have a length of 1 but got +0"
+    },
+    {
+      "file": "roleWorkExecutor.test.ts",
+      "test": "bridges a configured model only when it returns server-owned evidence",
+      "error": "AssertionError: expected [] to have a length of 1 but got +0"
+    },
+    {
+      "file": "roleWorkExecutor.test.ts",
+      "test": "creates server-owned evidence from bounded provider output",
+      "error": "TypeError: Cannot read properties of undefined (reading 'evidence_ids')"
+    },
+    {
+      "file": "roleWorkExecutor.test.ts",
+      "test": "returns a lineage-linked research result for user and review roles",
+      "error": "TypeError: Cannot read properties of undefined (reading 'research_result')"
+    },
+    {
+      "file": "roleWorkExecutor.test.ts",
+      "test": "runs ready work with bounded concurrency",
+      "error": "AssertionError: expected [] to have a length of 3 but got +0"
+    },
+    {
+      "file": "roleWorkExecutor.test.ts",
+      "test": "blocks work that has not started when the batch budget is exhausted",
+      "error": "AssertionError: expected [] to have a length of 1 but got +0"
+    },
+    {
+      "file": "runtime.test.ts",
+      "test": "runs an injected role executor after planning work",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    },
+    {
+      "file": "runtime.test.ts",
+      "test": "completes daily then weekly governance with independent review evidence",
+      "error": "AssertionError: expected false to be true // Object.is equality"
+    }
+  ],
+  "independentReview": {
+    "agent": "/root/mandatory_evidence_review",
+    "claimCeiling": "scoped configuration guard only",
+    "tests": "10/10 integration+atomic",
+    "falsification": "6 cases rejected; exact queue bytes unchanged; IN_REVIEW retained",
+    "reviewedQueueHash": "3d8aca14cca2a1d2f08620bf26285b7a3d48f2bc5400c2c6d1295cd0179e29ac",
+    "initialUsageFailure": "No proof produced; later bounded review completed",
+    "compatibilitySnapshot": "28 passed / 13 failed / 41 before 4 positive fixtures were explicitly configured"
+  },
+  "limitations": [
+    "Native runtime missing matching evidence resolver",
+    "Provider dispatch happens before rejected completion",
+    "Native provider receipts currently synthesize coder fallback and self-review PASS",
+    "No candidate propagation, live runtime restart or promotion",
+    "No objective/attempt/revision admission binding or transactionality proof",
+    "No A/B/C/D closure"
+  ],
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/aiCompany/roleWorkQueue.ts",
+      "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts",
+      "server/aiCompany/roleWorkQueue.test.ts",
+      "server/aiCompany/roleWorkQueueBypassGuards.test.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

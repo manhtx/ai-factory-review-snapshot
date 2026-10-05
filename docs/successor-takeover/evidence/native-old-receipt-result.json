@@ -1,0 +1,12 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-old-receipt-XbquhQ",
+  "firstAttempt": "b0251e2b-5cd3-4e6a-bf84-fc3b2b8e1fdc",
+  "secondAttempt": "6a9a036e-9d3c-4b78-8584-4a95fbead107",
+  "receiptId": "ROLE-EVIDENCE-2873163a213b83ac6a90",
+  "receiptAttempt": null,
+  "state": "DONE",
+  "error": "",
+  "oldReceiptAcceptedAsNewAttempt": true,
+  "providerCalls": 0,
+  "liveMutations": false
+}

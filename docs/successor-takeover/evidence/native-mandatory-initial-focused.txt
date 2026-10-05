@@ -1,0 +1,69 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3267ms
+ ❯ server/aiCompany/roleWorkExecutor.test.ts (8 tests | 1 failed) 501ms
+   ✓ role work execution loop > completes with evidence and blocks failed workers 61ms
+   ✓ role work execution loop > bridges a configured model only when it returns server-owned evidence 47ms
+   ✓ role work execution loop > blocks model output that has no evidence 32ms
+   ✓ role work execution loop > blocks execution when the coordinator has not recorded a handoff 19ms
+   ✓ role work execution loop > creates server-owned evidence from bounded provider output 115ms
+   × role work execution loop > returns a lineage-linked research result for user and review roles 50ms
+     → Cannot read properties of undefined (reading 'research_result')
+   ✓ role work execution loop > runs ready work with bounded concurrency 132ms
+   ✓ role work execution loop > blocks work that has not started when the batch budget is exhausted 42ms
+ ❯ server/aiCompany/dependencyAdmission.test.ts (6 tests | 2 failed) 806ms
+   × refuses dependency withdrawn before dispatch without transition 101ms
+     → expected [Function] to throw error including 'dependencies are not complete' but got 'native attempt already has a provider…'
+   ✓ refuses dependency withdrawn before review without transition 112ms
+   ✓ refuses dependency withdrawn before terminal without transition 123ms
+   × valid dependency still authorizes dispatch and terminal admission 92ms
+     → native attempt already has a provider receipt; repeated dispatch refused
+   ✓ withdrawal while evidence resolution is pending refuses terminal CAS 136ms
+   ✓ indirect withdrawal during evidence resolution refuses terminal commit 241ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 798ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 498ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 341ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 317ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 572ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 71ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/dependencyAdmission.test.ts > refuses dependency withdrawn before dispatch without transition
+AssertionError: expected [Function] to throw error including 'dependencies are not complete' but got 'native attempt already has a provider…'
+
+Expected: "dependencies are not complete"
+Received: "native attempt already has a provider receipt; repeated dispatch refused"
+
+ ❯ server/aiCompany/dependencyAdmission.test.ts:26:2
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  server/aiCompany/dependencyAdmission.test.ts > valid dependency still authorizes dispatch and terminal admission
+Error: native attempt already has a provider receipt; repeated dispatch refused
+ ❯ server/aiCompany/roleWorkExecutor.ts:55:65
+     53|     let task = nativeRoleTask(item);
+     54|     const receiptId = nativeProviderReceiptId(item.work_id, task.role_…
+     55|     if ((await ledger.inspectIdentity(receiptId)).exists) throw new Er…
+       |                                                                 ^
+     56|     const admitted = await queue.reserveProviderDispatch(item.work_id,…
+     57|     item = admitted;
+ ❯ server/aiCompany/dependencyAdmission.test.ts:29:248
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  server/aiCompany/roleWorkExecutor.test.ts > role work execution loop > returns a lineage-linked research result for user and review roles
+TypeError: Cannot read properties of undefined (reading 'research_result')
+ ❯ server/aiCompany/roleWorkExecutor.test.ts:95:32
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  2 failed | 7 passed (9)
+      Tests  3 failed | 90 passed (93)
+   Start at  11:33:58
+   Duration  8.58s (transform 113ms, setup 0ms, collect 233ms, tests 7.17s, environment 0ms, prepare 192ms)
+

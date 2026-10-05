@@ -1,0 +1,6 @@
+
+/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/backlogWorkPlanner.test.ts
+  1:10  error  'appendFile' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+

@@ -1,0 +1,22 @@
+{
+  "schema": "successor-takeover.envelope.v1",
+  "status": "INITIAL_OBSERVED_ENVELOPE_REQUIRES_COMPLETION_BEFORE_PROMOTION",
+  "platform": {"os": "macOS", "version": "15.3.1", "build": "24D70", "node": "v24.18.0"},
+  "repository": "/Users/manhtx/Documents/Macro Research Platform",
+  "scope": "local AI Company and Macro OS; no public production release",
+  "storage": {"control": ".ai-company/runtime and separately projected mission/product-intelligence files; canonicality unresolved", "product": "local SQLite and configured remote stores require current census", "postgres": "loopback port 5432 observed; ownership and product authority unresolved"},
+  "topology": [
+    {"label": "com.macrolens.ai-company-supervisor", "entrypoint": "server/index.ts", "port": 8787, "executorConfigured": false, "readiness": "UNKNOWN_TIMEOUT", "productionAutonomy": "DISABLED"},
+    {"label": "com.macrolens.ai-company-loop", "entrypoint": "scripts/ai-company-continuity-kernel.mjs", "keepAlive": true, "stopSentinelPresent": true},
+    {"label": "com.macrolens.ai-company-heartbeat", "entrypoint": "scripts/supabase-heartbeat.mjs pulse", "externalEffects": "database heartbeat; inspect before changing or invoking"}
+  ],
+  "provider": {"configuredId": "ollama-local", "observedListener": "127.0.0.1:11434", "modelAvailability": "UNVERIFIED", "callsMadeByTakeover": 0},
+  "filesystem": {"observedFreeGiBApprox": 15, "registeredGitWorktrees": 1155, "backupPath": "/Users/manhtx/Documents/macro-successor-f0-I5xvdx", "sourceRestoreVerified": true, "fullStateRestoreVerified": false},
+  "credentials": {"mechanism": "existing env-file/configuration; values not copied into mission documents", "exportsAllowed": false},
+  "network": "loopback service probes observed; remote source/provider availability unverified",
+  "restartSleepWake": "required by mission; not yet proven",
+  "dataSources": "source identity, licensing, freshness and citation to be traced independently from governance trust",
+  "resourceBoundary": "one foundational mutation at a time; isolated bounded diagnostics; derive migration capacity from measured backup size",
+  "reservedAuthority": ["public release", "financial transactions", "purchases", "external communications", "irreversible third-party action", "destructive account or credential change", "secret export", "irreplaceable user-data deletion", "envelope expansion", "product or business intent change"],
+  "closureClaims": []
+}

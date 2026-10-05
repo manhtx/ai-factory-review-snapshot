@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://macro-os.local/schemas/decision.schema.json",
+  "title": "AI Company Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision_id", "project_id", "question", "proposed_action", "risk_level", "decision_class", "status", "created_at"],
+  "properties": {
+    "decision_id": {"type": "string", "pattern": "^DEC-[A-Z0-9._-]+$"},
+    "project_id": {"type": "string", "minLength": 1},
+    "question": {"type": "string", "minLength": 1},
+    "options": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "proposed_action": {"type": "string", "minLength": 1},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "risk_level": {"enum": ["P0", "P1", "P2", "P3"]},
+    "decision_class": {"enum": ["CHAIRMAN_REQUIRED", "CEO_DELEGATED", "PM_DELEGATED", "WORKER_AUTONOMOUS"]},
+    "default_action": {"enum": ["STOP", "CEO_DECIDE", "CONTINUE", "REPORT_AFTER"]},
+    "status": {"enum": ["PROPOSED", "PENDING_APPROVAL", "APPROVED", "REJECTED", "REVISED", "EXPIRED", "EXECUTED"]},
+    "expires_at": {"type": ["string", "null"], "format": "date-time"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "decided_at": {"type": ["string", "null"], "format": "date-time"},
+    "decided_by": {"type": ["string", "null"]}
+  }
+}

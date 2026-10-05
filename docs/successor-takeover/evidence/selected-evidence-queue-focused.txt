@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 904ms
+   ✓ indirect withdrawal during evidence resolution refuses terminal commit  338ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (6 tests) 987ms
+   ✓ healthy evidence supports current dependency authority; missing original receipts revoke it  415ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 503ms
+
+ Test Files  3 passed (3)
+      Tests  22 passed (22)
+   Start at  10:01:50
+   Duration  3.39s (transform 124ms, setup 0ms, collect 266ms, tests 2.39s, environment 0ms, prepare 179ms)
+

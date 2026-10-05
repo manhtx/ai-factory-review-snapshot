@@ -1,0 +1,30 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/cli-lineage-laundering-7JSDTa",
+  "code": 0,
+  "sourceNamespace": "ORIGINAL",
+  "sourceRun": "ORIGINAL-RUN",
+  "reviewNamespace": "REVIEW",
+  "reviewRun": "REVIEW-RUN",
+  "originalReceipt": "ROLE-EVIDENCE-955fe65ce1ad79e8b294",
+  "declaredUnresolved": "UNRESOLVED-DECLARED",
+  "finalState": "DONE",
+  "admittedVerdict": {
+    "verdict": "PASS",
+    "gate": "Unit transport only",
+    "summary": "No product outcome",
+    "evidence": [
+      "ROLE-DISPATCH:DEPENDENCY:WORK-1791126206183-373yr1:1791126207804"
+    ],
+    "failure_class": "NONE",
+    "root_cause": "none",
+    "recovery_required": false,
+    "recovery_actions": [],
+    "unblock_evidence": [],
+    "retry_budget": 0,
+    "next_review_trigger": "unit only",
+    "confidence": 0.5
+  },
+  "stderr": "",
+  "falseScopeAndReferenceAdmission": true,
+  "providerCalls": 0
+}

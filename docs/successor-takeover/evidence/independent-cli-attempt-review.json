@@ -1,0 +1,23 @@
+{
+  "authoritative": false,
+  "reviewer": "review_terminal_independent",
+  "sourceHashes": {
+    "scripts/ai-company-role-dispatch.mjs": "34eadf3b437e84bc8d66934b4e1d259d150b4a3a011c3d8b9416be4ac45db1fb",
+    "scripts/ai-company-run-ready.mjs": "9690c1d0964ea929440e45c2bf5a32e890afd1394dd0d2bdc52f3d69cfb3e047",
+    "server/aiCompany/roleWorkQueue.ts": "4674ece0fbf01dcf85f5aaa13c03600aee2d7059ef4d1c1d5b5f95951649f322",
+    "server/aiCompany/roleAttemptArtifact.ts": "8e9dcf3491d14cebd91bbb2ad9088bbd6bfd46974b77fe22bf10c26c46638759",
+    "server/aiCompany/worktreeManager.ts": "9b10a147975ed8df7ea4998fa23593fd9d511d3e5587724ccafb30b87a43c4d5",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "3a3896b0d199c55a415e0a0481df3a8e071d7233b521530a295f56f12f48953e"
+  },
+  "result": "7CLI_PASS;4INDEPENDENT_PROBES_PASS",
+  "claims": "Scoped preexisting stop, owned-group termination, timeout and forgedDONE quarantine",
+  "limits": [
+    "Parent ACK source review only",
+    "State-check/receipt write non-atomic",
+    "Escaped sessions and dispatcher SIGKILL unproven",
+    "Admin receiptlineage exacteffectrevision open"
+  ],
+  "noRealProviders": true,
+  "noLiveMutations": true,
+  "noG1": true
+}

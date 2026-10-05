@@ -1,0 +1,109 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 18134ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1398ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1246ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  438ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1548ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1632ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  2345ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1434ms
+   ✓ CLI review preserves actual original reference for same-scope  1302ms
+   ✓ CLI review preserves actual original reference for cross-scope  1636ms
+   ✓ CLI review preserves actual original reference for unresolved  1601ms
+   ✓ rejects missing dependency receipts explicitly before claim or stub provider  385ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  2741ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2242ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  313ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  326ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  301ms
+   ✓ WorktreeManager > rejects mergeToMain when worktree has out of scope or forbidden changes  305ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3834ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1576ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1641ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3805ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 5501ms
+   ✓ research synthesis > requires current bound advisory perspectives before re-score  1130ms
+   ✓ denies changed-hash persisted signal authority  569ms
+   ✓ denies ambiguous persisted signal authority  474ms
+   ✓ mutable display rows cannot fabricate canonical research origin  300ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 4037ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  420ms
+   ✓ denies withdrawn current review authority  385ms
+   ✓ denies missing current review authority  386ms
+   ✓ denies nonpass current review authority  634ms
+   ✓ denies missing-verdict current review authority  380ms
+   ✓ uses full dependency snapshot before selecting review backlog  360ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  382ms
+   ✓ plain rows and copied views cannot certify prerelease  372ms
+   ✓ cannot approve an empty target project using healthy foreign work  433ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 2758ms
+   ✓ cadence quorum > passes only when every daily accountable role is done with evidence  382ms
+   ✓ denies withdrawn governance inputs despite historical DONE  354ms
+   ✓ denies missing governance inputs despite historical DONE  349ms
+   ✓ reads healthy dependencies outside cadence selection  367ms
+   ✓ revokes receiptless cadence and rejects stale views  386ms
+   ✓ plain rows and copied views cannot certify cadence  438ms
+   ✓ cannot approve target cadence using another project governance  369ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 1354ms
+   ✓ queue mutation fencing > historical record-workspace-synthesis-cycle.mjs rejects before any file effect  349ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 1445ms
+   ✓ does not generate prerelease reviews from receiptless QA/QC history  300ms
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (31 tests) 3361ms
+   ✓ allows current IN_REVIEW publication and rejects conflicting identity  775ms
+   ✓ two OS publishers dedupe with capability transported only in a private temporary fixture file  691ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 2382ms
+   ✓ two OS publishers dedupe with capability transported only in a private temporary fixture file  1740ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 4023ms
+   ✓ release promotion > holds promotion and requests escalation when quorum is incomplete  636ms
+   ✓ release promotion > promotes only after full independent quorum  1729ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  1658ms
+ ✓ server/aiCompany/combinedEvidenceCapture.test.ts (10 tests) 2006ms
+   ✓ combined selected success requires revalidation after withdrawal during capture  513ms
+   ✓ combined selected success requires revalidation after ambiguous during capture  307ms
+   ✓ combined full-view guard retains exact-byte invalidation after unrelated publication  382ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 1134ms
+   ✓ withdrawal while evidence resolution is pending refuses terminal CAS  302ms
+   ✓ indirect withdrawal during evidence resolution refuses terminal commit  308ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 1945ms
+   ✓ review terminal admission > retains QUALITY_FAIL as blocked and denies ordinary downstream authority  506ms
+   ✓ review terminal admission > allows an explicit same-scope corrective dependency without granting source success  449ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 1644ms
+   ✓ native provider actual contract boundary > refuses sequential replay after a receipt before another provider request  361ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 573ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 2157ms
+   ✓ native durable dispatch issuance > refuses missing capability before provider or marker  342ms
+   ✓ native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request  800ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 2049ms
+   ✓ two native writer instances publish one identity and preserve queue bytes  550ms
+   ✓ two OS processes publish the same native receipt once  673ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 324ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 519ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 1084ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 482ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 628ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 523ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 533ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 1036ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 390ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 372ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 613ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 235ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 263ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 78ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 11ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 65ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 24ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 4ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 18ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 159ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 5ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 4ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 2ms
+
+ Test Files  42 passed (42)
+      Tests  424 passed (424)
+   Start at  15:24:20
+   Duration  89.31s (transform 924ms, setup 0ms, collect 2.75s, tests 71.75s, environment 10ms, prepare 3.80s)
+

@@ -1,0 +1,20 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 1148ms
+   ✓ native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request  553ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 5065ms
+   ✓ CEO brief runtime > runs an injected role executor after planning work  311ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  2104ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  2029ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 915ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 597ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 529ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 365ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 303ms
+
+ Test Files  7 passed (7)
+      Tests  76 passed (76)
+   Start at  23:20:52
+   Duration  13.22s (transform 740ms, setup 0ms, collect 1.36s, tests 8.92s, environment 2ms, prepare 727ms)
+

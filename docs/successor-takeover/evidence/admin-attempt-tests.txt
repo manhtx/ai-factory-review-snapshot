@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 198ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  21:58:14
+   Duration  407ms (transform 58ms, setup 0ms, collect 69ms, tests 198ms, environment 0ms, prepare 31ms)
+

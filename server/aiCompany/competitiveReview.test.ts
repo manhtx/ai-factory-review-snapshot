@@ -1,0 +1,5 @@
+import { describe, expect, it } from 'vitest';
+import { reviewCompetitiveEvidence } from './competitiveReview';
+import type { CompetitiveEvidence } from './competitiveEvidenceLedger';
+const record = (retrieved_at: string): CompetitiveEvidence => ({ evidence_id: 'CI-1', project_id: 'macro-os', subject: 'Bloomberg', source_url: 'https://example.com', retrieved_at, observed_claim: 'claim', product_implication: 'implication', limitation: 'limitation' });
+describe('competitive review', () => { it('requires refresh for stale evidence', () => expect(reviewCompetitiveEvidence([record('2026-07-01T00:00:00Z')], new Date('2026-09-04T00:00:00Z'))).toMatchObject({ status: 'REFRESH_REQUIRED', staleEvidenceIds: ['CI-1'] })); it('reports current evidence and subjects', () => expect(reviewCompetitiveEvidence([record('2026-09-01T00:00:00Z')], new Date('2026-09-04T00:00:00Z'))).toMatchObject({ status: 'CURRENT', subjects: ['Bloomberg'] })); it('fails closed with no evidence', () => expect(reviewCompetitiveEvidence([], new Date('2026-09-04T00:00:00Z')).status).toBe('NO_EVIDENCE')); });

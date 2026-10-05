@@ -1,0 +1,40 @@
+{
+  "schema": "successor-takeover.additional-evidence-locations.v1",
+  "stores": [
+    {
+      "file": "runtime/projects/macro-os/role-evidence.jsonl",
+      "sha256": "baf489ef72f8ca006809c2723519df63680e553e6f9c0b29739453915c69acfa",
+      "records": 323,
+      "fields": [
+        "project_id",
+        "work_id",
+        "role",
+        "provider_id",
+        "model",
+        "output",
+        "limitation",
+        "usage",
+        "evidence_id",
+        "created_at"
+      ],
+      "matchedReferences": 291
+    },
+    {
+      "file": "evidence-ledger.jsonl",
+      "sha256": "323d5d3bae581ae4cf5524e60afe1c6844effa0375498002c7812973bff5dfcc",
+      "records": 4,
+      "fields": [
+        "id",
+        "epoch",
+        "type",
+        "description",
+        "result",
+        "metrics",
+        "verifier"
+      ],
+      "matchedReferences": 0
+    }
+  ],
+  "unresolvedAfterAdditionalStores": 92,
+  "claimLimit": "Matching IDs are locations only, not validation or trust; alias id checked as a locator, not an approved schema mapping"
+}

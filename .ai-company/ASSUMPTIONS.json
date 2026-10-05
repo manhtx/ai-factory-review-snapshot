@@ -1,0 +1,16 @@
+{
+  "assumptions": [
+    {
+      "id": "ASSUMP-001",
+      "statement": "Users prioritize data truth and verifiable provenance over flashy AI narratives.",
+      "validation_method": "User research panel feedback and retention metrics.",
+      "status": "validated"
+    },
+    {
+      "id": "ASSUMP-002",
+      "statement": "Economists and analysts require standardized Z-scores and lead/lag adjustments to evaluate macro indicators.",
+      "validation_method": "Compare workflow adoption and shareable URL click-through.",
+      "status": "validated"
+    }
+  ]
+}

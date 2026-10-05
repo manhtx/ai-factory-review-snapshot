@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-02T15:36:33.759Z",
+  "isolatedRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/queue-gate-cost-ykOBn4",
+  "initialBytes": 24040569,
+  "recordsBefore": 2715,
+  "samplesMs": [
+    141.02050000000003,
+    141.88295800000003,
+    108.09091699999993
+  ],
+  "medianMs": 141.02050000000003,
+  "originalPrefixPreserved": true,
+  "originalSha256": "16c4b360ed1e6f33bc8b5f2e9b0a9f68c94e54f0715bd01eec627eb36020acb5",
+  "finalBytes": 24044940,
+  "limits": [
+    "Temp-only copy; source file never written",
+    "3 local samples only; not sustained throughput/queue admission proof",
+    "Full history rewrite remains O(history bytes)"
+  ]
+}

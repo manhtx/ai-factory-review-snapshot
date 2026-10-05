@@ -1,0 +1,15 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/resourceAdmissionProcess.test.ts (7 tests) 2064ms
+   ✓ real stale OS A cannot release B or admit C while B is alive  417ms
+   ✓ two real recoverers of a proven dead owner admit only one successor  347ms
+   ✓ SIGKILL before owner publication releases exclusion but preserves unknown partial slot  311ms
+ ✓ server/aiCompany/resourceAdmissionAuthority.test.ts (23 tests) 257ms
+ ✓ server/aiCompany/resourceGovernor.test.ts (4 tests) 40ms
+
+ Test Files  3 passed (3)
+      Tests  34 passed (34)
+   Start at  16:31:57
+   Duration  3.07s (transform 61ms, setup 0ms, collect 90ms, tests 2.36s, environment 0ms, prepare 106ms)
+

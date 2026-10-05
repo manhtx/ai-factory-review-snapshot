@@ -1,0 +1,21 @@
+{
+  "scope": "Actual governor on temporary pause file; zero provider calls",
+  "outcomes": [
+    {
+      "name": "corrupt",
+      "decision": "ALLOW"
+    },
+    {
+      "name": "wrong-status",
+      "decision": "ALLOW"
+    },
+    {
+      "name": "invalid-date",
+      "decision": "ALLOW"
+    },
+    {
+      "name": "unknown-reset",
+      "decision": "ALLOW"
+    }
+  ]
+}

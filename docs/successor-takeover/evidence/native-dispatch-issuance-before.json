@@ -1,0 +1,45 @@
+{
+  "observedAt": "2026-10-04T15:52:25.267Z",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "30a7080c3f6b0ab178e94bac913d4a492d362d563b1fd9a6f2e5a04e27d4e8d1",
+    "server/aiCompany/roleWorkExecutor.ts": "5247a30b2ba9775af49491fbfcfca75c40be1890bb794edad77443b480db791c",
+    "server/aiCompany/roleEvidenceLedger.ts": "de4009ebc737fc85b494ae9fc94b179d3408236f386aa27fb6d7a54601e236b4"
+  },
+  "results": [
+    {
+      "mode": "concurrent",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dispatch-issuance-before-icSddk",
+      "stubProviderCalls": 2,
+      "realProviderCalls": 0,
+      "receipts": 2,
+      "outcomes": [
+        {
+          "status": "fulfilled"
+        },
+        {
+          "status": "fulfilled"
+        }
+      ],
+      "queueState": "CLAIMED"
+    },
+    {
+      "mode": "no-response",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dispatch-issuance-before-7u6dzy",
+      "stubProviderCalls": 2,
+      "realProviderCalls": 0,
+      "receipts": 0,
+      "outcomes": [
+        {
+          "status": "rejected",
+          "reason": "Error: Injected provider no response"
+        },
+        {
+          "status": "rejected",
+          "reason": "Error: Injected provider no response"
+        }
+      ],
+      "queueState": "CLAIMED"
+    }
+  ],
+  "networkCalls": 0
+}

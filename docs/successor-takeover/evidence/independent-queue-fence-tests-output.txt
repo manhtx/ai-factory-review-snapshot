@@ -1,0 +1,8 @@
+RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 570ms
+
+ Test Files  1 passed (1)
+      Tests  14 passed (14)
+   Start at  22:37:14
+   Duration  878ms (transform 57ms, setup 0ms, collect 67ms, tests 570ms, environment 0ms, prepare 31ms)

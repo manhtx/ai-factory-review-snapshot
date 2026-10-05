@@ -1,0 +1,71 @@
+{
+  "schema": "successor-takeover.canonicality-map.v1",
+  "status": "TARGET_CONTRACT_CURRENT_AMBIGUITY_OPEN",
+  "domains": [
+    {
+      "domain": "objective",
+      "owns": [
+        "intent",
+        "acceptance",
+        "satisfaction",
+        "reopening"
+      ],
+      "current": "queue-derived eligibility; dedicated authoritative objective reducer unverified"
+    },
+    {
+      "domain": "work",
+      "owns": [
+        "assignment",
+        "dependencies",
+        "review lifecycle"
+      ],
+      "current": "RoleWorkQueue"
+    },
+    {
+      "domain": "operation/attempt",
+      "owns": [
+        "dispatch effects",
+        "checkpoint",
+        "reconciliation",
+        "retry"
+      ],
+      "current": "DurableOperationLedger is cycle-level in marathon; per-work effect coverage unverified"
+    },
+    {
+      "domain": "authority",
+      "owns": [
+        "actor",
+        "scope",
+        "ownership revision"
+      ],
+      "current": "executionLease plus assignment/workflow policies; integration inconsistent"
+    },
+    {
+      "domain": "evidence/proof",
+      "owns": [
+        "evidence identity",
+        "admissibility",
+        "independent acceptance"
+      ],
+      "current": "evidence ledgers and optional resolver plus multiple review/promotion predicates"
+    },
+    {
+      "domain": "product data",
+      "owns": [
+        "observations",
+        "revisions",
+        "provenance",
+        "research context"
+      ],
+      "current": "SQLite/Supabase; separate from governance files"
+    },
+    {
+      "domain": "product outcome interface",
+      "owns": [
+        "observed research outcome lineage"
+      ],
+      "current": "OutcomeLedger in .ai-company/runtime/product-outcomes exposed by product-outcomes API; authority contract unresolved"
+    }
+  ],
+  "projections": "Derived read models do not become independent authority."
+}

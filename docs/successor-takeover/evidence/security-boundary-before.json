@@ -1,0 +1,30 @@
+{
+  "schema": "security-boundary.probe.v1",
+  "adminRoutes": 40,
+  "unauthorizedRequests": 80,
+  "authorizedInvalidControl": 400,
+  "disabledControl": 400,
+  "isolatedState": true,
+  "failures": [
+    {
+      "method": "post",
+      "path": "/api/admin/company/escalations",
+      "token": "missing",
+      "actual": 400
+    },
+    {
+      "method": "post",
+      "path": "/api/admin/company/escalations",
+      "token": "wrong",
+      "actual": 400
+    },
+    {
+      "control": "disabled",
+      "actual": 400
+    },
+    {
+      "control": "explicit-loopback",
+      "actual": "absent"
+    }
+  ]
+}

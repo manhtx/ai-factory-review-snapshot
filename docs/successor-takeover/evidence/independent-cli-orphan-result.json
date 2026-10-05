@@ -1,0 +1,20 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-cli-stop-JV0f3B",
+  "code": 143,
+  "ack": [
+    {
+      "type": "ROLE_ATTEMPT_CLAIMED",
+      "work_id": "WORK-1790959886917-hiuebg",
+      "attempt_id": "8acbd602-517f-476f-bac0-7fbe0394854b",
+      "output_name": "role-output-WORK-1790959886917-hiuebg-8acbd602-517f-476f-bac0-7fbe0394854b.md"
+    }
+  ],
+  "finalState": "BLOCKED",
+  "providerEffectAfterDispatcherStop": false,
+  "semanticEvidenceRowsAfterStop": 0,
+  "stderr": "",
+  "hashes": {
+    "scripts/ai-company-role-dispatch.mjs": "34eadf3b437e84bc8d66934b4e1d259d150b4a3a011c3d8b9416be4ac45db1fb",
+    "scripts/ai-company-run-ready.mjs": "9690c1d0964ea929440e45c2bf5a32e890afd1394dd0d2bdc52f3d69cfb3e047"
+  }
+}

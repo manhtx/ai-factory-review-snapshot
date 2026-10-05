@@ -1,0 +1,19 @@
+{
+  "schema": "successor-takeover.g1-progress.v1",
+  "status": "SCHEMA_V2_REPAIR_INDEPENDENT_RECHECK_INCOMPLETE",
+  "workspace": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+  "sources": ["server/aiCompany/successorGovernanceStore.ts", "server/aiCompany/successorGovernanceStore.test.ts"],
+  "implemented": ["explicit create-new and open-existing", "schema/mission/envelope/policy/trust-epoch binding", "current logical actor and expected revision admission", "transactional authority and command receipt", "command ID bound to payload digest"],
+  "observed": ["initial v1 had 8 targeted tests passing but independent verifier found three persisted-state failure classes", "four added damage tests failed before v2 repair", "v2 exact-schema/full-history validation: 12 targeted tests passed", "8 independent contender processes produced one commit and seven stale rejections", "confirmed SIGKILL before commit with no surviving DB connection reconstructed revision 0", "confirmed SIGKILL after commit before acknowledgement reconstructed revision 1 and replayed receipt", "changed-file lint passed", "typecheck has same 11 baseline errors outside new module"],
+  "sourceSha256": "ac2742e97dae0dfcf7b95cc5937a0fe6d3e6990245bd8f62000a52d1a6a65091",
+  "testSha256": "72cc220eb4ff664612216e1752b712282488daa22decbb6376309716bcf9baf8",
+  "targetedReplayEvidence": "evidence/g1-v2-targeted-replay.json: 12 passed, 0 failed; builder replay, not independent recheck",
+  "rejectedPriorRevision": {"sourceSha256": "22b81fbcc5c7ea624c2651643a0fdbe5d6c2a036d464ed98960539fbadbf4c66", "counterexamples": ["unknown trigger suppresses receipt", "altered receipt contradicts digest-bound payload", "deleted committed history or missing table accepted at reopen"], "probe": "evidence/g1-independent-probe.mjs"},
+  "independentVerifier": "01a0f573-b9ae-7b50-87d0-494c786747dc",
+  "independentRecheckOutcome": "Tool returned a cybersecurity safety error, not a completed verification result. No independent approval inferred and no promotion granted.",
+  "executionSurface": {"evidence": "evidence/candidate-execution-surface-g1.json", "files": 879, "effectBearingFiles": 226, "denominatorSha256": "c0d36f46fd27985ce0725ffe1b59b05ef8334bb86bcaeb7173c781a478951aa6", "recheck": "MATCHED"},
+  "environment": {"node": "v24.18.0", "sqlite": "3.53.1", "pythonFileComparator": "3.14.6", "platform": "darwin", "arch": "arm64", "filesystemMount": "/System/Volumes/Data on /dev/disk3s5"},
+  "authority": "NONE",
+  "remaining": ["independent falsification and repair", "runtime authentication and writer exclusion", "objective/work/attempt/evidence commit semantics", "full schema and receipt-integrity validation", "power/storage failure and backup restore", "versioned proof graph", "migration and local-authority handoff"],
+  "claimLimit": "Storage and logical fencing component only; no successor trust genesis, operating company, product closure or mission completion."
+}

@@ -1,0 +1,105 @@
+{
+  "observedAt": "2026-10-05T03:35:58.960Z",
+  "scope": "Actual temporary queue typed fixture only; zero real release/governance",
+  "before": {
+    "release": {
+      "ready": true,
+      "blockers": [],
+      "approvedRoles": [
+        "functional-qa",
+        "quality-control",
+        "stakeholder-panel",
+        "user-persona",
+        "ux-research",
+        "domain-expert"
+      ]
+    },
+    "promotion": {
+      "ready": true,
+      "blockers": [],
+      "approvedRoles": [
+        "functional-qa",
+        "quality-control",
+        "stakeholder-panel",
+        "user-persona",
+        "ux-research",
+        "domain-expert"
+      ],
+      "action": "PROMOTE",
+      "rollback_required": false
+    },
+    "cadence": {
+      "ok": true,
+      "cadence": "daily",
+      "required_roles": [
+        "ceo",
+        "ceo-guild",
+        "pm",
+        "data-engineer",
+        "sre"
+      ],
+      "completed_roles": [
+        "ceo",
+        "ceo-guild",
+        "pm",
+        "data-engineer",
+        "sre"
+      ],
+      "blockers": []
+    }
+  },
+  "staleErrors": [
+    "Error: evidence snapshot changed before decision; revalidation required",
+    "Error: evidence snapshot changed before decision; revalidation required"
+  ],
+  "after": {
+    "release": {
+      "ready": false,
+      "blockers": [
+        "functional-qa review current authority is invalid",
+        "quality-control review current authority is invalid",
+        "stakeholder-panel review current authority is invalid",
+        "user-persona review current authority is invalid",
+        "ux-research review current authority is invalid",
+        "domain-expert review current authority is invalid"
+      ],
+      "approvedRoles": []
+    },
+    "promotion": {
+      "ready": false,
+      "blockers": [
+        "functional-qa review current authority is invalid",
+        "quality-control review current authority is invalid",
+        "stakeholder-panel review current authority is invalid",
+        "user-persona review current authority is invalid",
+        "ux-research review current authority is invalid",
+        "domain-expert review current authority is invalid"
+      ],
+      "approvedRoles": [],
+      "action": "HOLD_AND_ESCALATE",
+      "rollback_required": false
+    },
+    "cadence": {
+      "ok": false,
+      "cadence": "daily",
+      "required_roles": [
+        "ceo",
+        "ceo-guild",
+        "pm",
+        "data-engineer",
+        "sre"
+      ],
+      "completed_roles": [],
+      "blockers": [
+        "governance work ceo current authority is invalid",
+        "governance work ceo-guild current authority is invalid",
+        "governance work pm current authority is invalid",
+        "governance work data-engineer current authority is invalid",
+        "governance work sre current authority is invalid"
+      ]
+    }
+  },
+  "historicalDonePreserved": true,
+  "realProviderCalls": 0,
+  "realProductReleases": 0
+}

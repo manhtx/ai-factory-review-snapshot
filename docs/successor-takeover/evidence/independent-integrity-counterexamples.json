@@ -1,0 +1,454 @@
+[
+  {
+    "name": "decode",
+    "field": "next_wake_at",
+    "value": "2026-02-30T00:00:00.000Z",
+    "accepted": true,
+    "interpreted": "2026-03-02T00:00:00.000Z"
+  },
+  {
+    "name": "decode",
+    "field": "next_wake_at",
+    "value": "2026-04-31T00:00:00Z",
+    "accepted": true,
+    "interpreted": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "name": "decode",
+    "field": "next_wake_at",
+    "value": "0",
+    "accepted": true,
+    "interpreted": "1999-12-31T17:00:00.000Z"
+  },
+  {
+    "name": "decode",
+    "field": "next_wake_at",
+    "value": "2026-01-01T00:00:00",
+    "accepted": true,
+    "interpreted": "2025-12-31T17:00:00.000Z"
+  },
+  {
+    "name": "decode",
+    "field": "next_wake_at",
+    "value": "not-a-date",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid next_wake_at"
+  },
+  {
+    "name": "decode",
+    "field": "operation_state",
+    "value": "running",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid operation_state"
+  },
+  {
+    "name": "decode",
+    "field": "operation_state",
+    "value": "RUNNING ",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid operation_state"
+  },
+  {
+    "name": "decode",
+    "field": "operation_state",
+    "value": "FUTURE_SUCCESS",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid operation_state"
+  },
+  {
+    "name": "decode",
+    "field": "next_safe_transition",
+    "value": "RETRY_FOREVER",
+    "accepted": true
+  },
+  {
+    "name": "decode",
+    "field": "next_safe_transition",
+    "value": "CLAIM\u0000",
+    "accepted": true
+  },
+  {
+    "name": "decode",
+    "field": "owner",
+    "value": "garbage",
+    "accepted": true
+  },
+  {
+    "name": "decode",
+    "field": "owner",
+    "value": "kernel-pid-0",
+    "accepted": true
+  },
+  {
+    "name": "decode",
+    "field": "owner",
+    "value": "kernel-pid-123junk",
+    "accepted": true
+  },
+  {
+    "name": "decode",
+    "field": "recovery_attempt",
+    "value": "1",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid recovery_attempt"
+  },
+  {
+    "name": "decode",
+    "field": "recovery_attempt",
+    "value": -1,
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid recovery_attempt"
+  },
+  {
+    "name": "decode",
+    "field": "recovery_attempt",
+    "value": 1.5,
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid recovery_attempt"
+  },
+  {
+    "name": "decode",
+    "field": "recovery_attempt",
+    "value": 9007199254740992,
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid recovery_attempt"
+  },
+  {
+    "name": "decode",
+    "field": "failure_class",
+    "value": "UNKNOWN",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid failure_class"
+  },
+  {
+    "name": "decode",
+    "field": "failure_class",
+    "value": "UNKNOWN_FAILURE ",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid failure_class"
+  },
+  {
+    "name": "invalid-date-effect",
+    "report": {
+      "orphaned_count": 1,
+      "reconciled": [
+        {
+          "operation_id": "op",
+          "previous_state": "WAITING_RESOURCE",
+          "new_state": "RESUME_DUE",
+          "action_taken": "MARKED_RESUME_DUE",
+          "reason": "Wake time 2026-02-30T00:00:00.000Z elapsed"
+        }
+      ]
+    },
+    "state": "RESUME_DUE"
+  },
+  {
+    "name": "healthy",
+    "result": {
+      "shouldWaitMs": 10000
+    },
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission",
+      "summary",
+      "RUNNER_REENTERED",
+      "dispatch",
+      "RUNNER_COMPLETED"
+    ]
+  },
+  {
+    "name": "throw-recoverStaleLeases",
+    "error": "INJECTED_recoverStaleLeases",
+    "calls": [
+      "acquire"
+    ]
+  },
+  {
+    "name": "throw-reconcileOrphanedReady",
+    "error": "INJECTED_reconcileOrphanedReady",
+    "calls": [
+      "acquire",
+      "recover"
+    ]
+  },
+  {
+    "name": "throw-reconcileOrphans",
+    "error": "INJECTED_reconcileOrphans",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans"
+    ]
+  },
+  {
+    "name": "throw-resumeDue",
+    "error": "INJECTED_resumeDue",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations"
+    ]
+  },
+  {
+    "name": "throw-summary",
+    "error": "INJECTED_summary",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "sentinel-EACCES",
+    "error": "INJECTED_SENTINEL",
+    "code": "EACCES",
+    "calls": []
+  },
+  {
+    "name": "sentinel-real-ENOTDIR",
+    "error": "ENOTDIR: not a directory, access '/tmp/successor-probe-run.W3eQTo/not-directory/COMPANY_STOP'",
+    "code": "ENOTDIR",
+    "calls": []
+  },
+  {
+    "name": "sentinel-real-EACCES",
+    "error": "EACCES: permission denied, access '/tmp/successor-probe-run.W3eQTo/denied/COMPANY_STOP'",
+    "code": "EACCES",
+    "calls": []
+  },
+  {
+    "name": "marathon-{broken",
+    "error": "MARATHON_OWNERSHIP_UNKNOWN: invalid owner JSON",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "marathon-{}",
+    "error": "MARATHON_OWNERSHIP_UNKNOWN: invalid owner PID",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "marathon-{\"pid\":\"123\"}",
+    "error": "MARATHON_OWNERSHIP_UNKNOWN: invalid owner PID",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "marathon-{\"pid\":0}",
+    "error": "MARATHON_OWNERSHIP_UNKNOWN: invalid owner PID",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "marathon-{\"pid\":-1}",
+    "error": "MARATHON_OWNERSHIP_UNKNOWN: invalid owner PID",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "marathon-{\"pid\":1.5}",
+    "error": "MARATHON_OWNERSHIP_UNKNOWN: invalid owner PID",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "marathon-EACCES",
+    "error": "INJECTED_OWNER",
+    "code": "EACCES",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "marathon-PID-EPERM",
+    "error": "INJECTED_PID_EPERM",
+    "code": "EPERM",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "operations",
+      "wake",
+      "authority",
+      "admission"
+    ]
+  },
+  {
+    "name": "operation-PID-EPERM",
+    "result": {
+      "shouldWaitMs": 10000
+    },
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "ORPHAN_OPERATIONS_RECONCILED",
+      "wake",
+      "authority",
+      "admission",
+      "summary",
+      "RUNNER_REENTERED",
+      "dispatch",
+      "RUNNER_COMPLETED"
+    ]
+  },
+  {
+    "name": "operation-PID-EPERM-state",
+    "state": "RESUME_DUE"
+  },
+  {
+    "name": "operation-malformed-owner",
+    "result": {
+      "shouldWaitMs": 10000
+    },
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "ORPHAN_OPERATIONS_RECONCILED",
+      "wake",
+      "authority",
+      "admission",
+      "summary",
+      "RUNNER_REENTERED",
+      "dispatch",
+      "RUNNER_COMPLETED"
+    ]
+  },
+  {
+    "name": "operation-malformed-owner-state",
+    "state": "RESUME_DUE"
+  },
+  {
+    "name": "operation-owner-alias",
+    "result": {
+      "shouldWaitMs": 10000
+    },
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans",
+      "wake",
+      "authority",
+      "admission",
+      "summary",
+      "RUNNER_REENTERED",
+      "dispatch",
+      "RUNNER_COMPLETED"
+    ]
+  },
+  {
+    "name": "operation-owner-alias-effect",
+    "seen": [
+      {
+        "pid": 0,
+        "signal": 0
+      }
+    ],
+    "state": "RUNNING"
+  },
+  {
+    "name": "serialized-contract-write",
+    "accepted": true
+  },
+  {
+    "name": "serialized-contract-read",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid recovery_contract"
+  },
+  {
+    "name": "serialized-contract-bytes",
+    "raw": "{\"operation_id\":\"serialize\",\"mission_id\":\"FOUNDER_ABSENCE_PROTOCOL\",\"semantic_cycle_id\":\"cycle\",\"action_id\":\"action\",\"operation_semantic\":\"inspect\",\"operation_state\":\"SUBMITTED\",\"attempt_id\":\"ATT-1790760565754-1\",\"idempotency_key\":\"88c46d36812be076833ef6e3103565fcb1ca6b7e736e4d8d9e2390e7cab1a9a0\",\"last_committed_transition\":null,\"checkpoint_reference\":null,\"next_safe_transition\":\"CLAIM\",\"execution_lease_id\":null,\"lease_revision\":1,\"controller\":\"unassigned\",\"provider\":\"unassigned\",\"runtime_model_id\":\"unassigned\",\"runner\":\"unassigned\",\"authority_scope\":\"PERPETUAL_AUTONOMY\",\"failure_class\":null,\"wait_reason\":null,\"reactivation_condition\":null,\"next_wake_at\":null,\"recovery_attempt\":0,\"owner\":null,\"owner_lease\":null,\"recovery_contract\":{\"recovery_policy\":\"RETRY_FOREVER\"},\"created_at\":\"2026-09-30T09:29:25.754Z\",\"updated_at\":\"2026-09-30T09:29:25.754Z\"}\n"
+  },
+  {
+    "name": "real-invalid-ledger-step",
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid operation_state",
+    "calls": [
+      "acquire",
+      "recover",
+      "orphans"
+    ]
+  },
+  {
+    "name": "real-invalid-ledger-preservation",
+    "unchanged": true
+  },
+  {
+    "name": "invalid-transition",
+    "accepted": false,
+    "error": "DURABLE_STATE_INTEGRITY: line 1: invalid operation_state",
+    "unchanged": true
+  },
+  {
+    "name": "identity",
+    "base": "/tmp/successor-probe-run.W3eQTo",
+    "before": {
+      "server/aiCompany/durableOperation.ts": "70065462a490e781fd1f18da33b094a9696f721018b82ffeeaf4e1d1a7e3e0c9",
+      "scripts/ai-company-continuity-kernel.mjs": "03fd018ffb52270c00cf6b4bc3016f9658c5f7daed18276e52910d815f4e1e5c"
+    },
+    "after": {
+      "server/aiCompany/durableOperation.ts": "70065462a490e781fd1f18da33b094a9696f721018b82ffeeaf4e1d1a7e3e0c9",
+      "scripts/ai-company-continuity-kernel.mjs": "03fd018ffb52270c00cf6b4bc3016f9658c5f7daed18276e52910d815f4e1e5c"
+    }
+  }
+]

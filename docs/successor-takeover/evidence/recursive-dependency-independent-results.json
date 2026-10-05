@@ -1,0 +1,80 @@
+{
+  "observedAt": "2026-10-04T17:37:29.288Z",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "57cb3ef4e73b72a5a5daab9a97f8760ee873a92603061e273af067d86b1ad5ff",
+    "server/aiCompany/roleWorkExecutor.ts": "6e2b453f56c7a1ce84504862fdebba8a2b83db4bfee09f0caf60991ca738b5fd",
+    "scripts/ai-company-role-dispatch.mjs": "49beebcfd080444e775b9378ebff40af30ec693be5ecbdd15968556adde8865f",
+    "server/aiCompany/dependencyAdmission.test.ts": "c16fae1d3dad6640c851ab53e6829b2f444e54cdbb88483d0e3eaac369f4d3ce",
+    "server/aiCompany/reviewTerminalAdmission.test.ts": "ea4b251217c8ca9c72871b319de96e3f6fcaac692400d0c204f5c6a57328290b",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "c5a5106543f59ffd60f9b4e947a5ef4af8a2911308d0c49559df9f71ac20e4b9",
+    "server/aiCompany/autonomousCoordinator.ts": "ab9cc3b40eaa76ed89b2e2e07133497c29e08f462c0a2ef87d1d3915f6fd1ef8",
+    "server/aiCompany/backlogWorkPlanner.ts": "819851a5b45d02644f8885a71eb4889d524fb91e844656a28c9e24e055a8d12b",
+    "scripts/ai-company-run-ready.mjs": "7d6f4cdb32b7b63bc317d2ee6da5ee45143a7f66e8563c1c8120cb6d317990e2",
+    "server/aiCompany/recursiveDependencyAuthority.test.ts": "4aa47bf8597fe4510987f5f0f2ecefafb3d7e40dc957fe16da5819ef42631ef1",
+    "server/aiCompany/backlogWorkPlanner.test.ts": "677c0f88aace363fc840b965262156f07705a224f310e6d62027d4eeb561c281",
+    "server/aiCompany/autonomousCoordinator.test.ts": "66f3ed08112cde26d7d867e912446dd7afe2ae691cb58450220159293bd1e85c"
+  },
+  "results": [
+    {
+      "phase": "claim",
+      "calls": 0,
+      "error": "Error: work dependencies are not complete: WORK-1791135447513-49yzs9",
+      "bytesUnchanged": true
+    },
+    {
+      "phase": "native-dispatch",
+      "calls": 0,
+      "error": "Error: work dependencies are not complete: WORK-1791135447573-9jkhh0",
+      "bytesUnchanged": true
+    },
+    {
+      "phase": "cli-before-reservation",
+      "code": 4,
+      "stubCalled": false,
+      "state": "CLAIMED",
+      "providerDispatch": false,
+      "stderr": "PROVIDER_DISPATCH_ADMISSION_FAILED work dependencies are not complete: WORK-1791135447631-4o5cqs\n",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-independent-mQeKQz"
+    },
+    {
+      "phase": "cli-after-provider",
+      "code": 1,
+      "stubCalled": true,
+      "state": "CLAIMED",
+      "providerDispatch": true,
+      "stderr": "/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:136\n  if (unresolved.length) throw new Error(`work dependencies are not complete: ${unresolved.join(', ')}`);\n                               ^\n\nError: work dependencies are not complete: WORK-1791135447804-uul0bk\n    at assertCurrentDependencies (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:136:32)\n    at <anonymous> (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:240:7)\n    at RoleWorkQueue.update (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:525:24)\n    at async <anonymous> (/Users/manhtx/Documents/Macro Research Platform/scripts/ai-company-role-dispatch.mjs:416:1)\n\nNode.js v24.18.0\n",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-independent-4QnGYQ"
+    },
+    {
+      "phase": "postterminal-withdrawal-now-denied",
+      "consumerSuccessful": false,
+      "grandchildAccepted": false,
+      "sourceState": "QUARANTINED"
+    }
+  ],
+  "realProviderCalls": 0,
+  "networkCalls": 0,
+  "focusedTests": {
+    "files": 6,
+    "passed": 53,
+    "failed": 0,
+    "durationSeconds": 17,
+    "breakdown": {
+      "recursiveDependencyAuthority": 10,
+      "dependencyAdmission": 5,
+      "reviewTerminalAdmission": 10,
+      "cliAttemptDispatch": 12,
+      "backlogWorkPlanner": 13,
+      "autonomousCoordinator": 3
+    }
+  },
+  "materialCounterexample": "recursive-dependency-independent-transitive-cas.json: ancestor quarantined during leaf async evidence validation still permits leaf DONE because CAS fences only direct dependency rows.",
+  "minimumCorrection": "Revalidate current recursive graph under commit gate, or CAS all identities/rows that affected graph admission including structural corrective context and missing identities.",
+  "limits": [
+    "No blanket closure: transitive CAS race reproduced against the exact queue hash.",
+    "Healthy graph/diamond/deep traversal and corrective exception pass focused tests.",
+    "Current predicates use canonical current snapshot and no persisted cache; actual CLI direct withdrawal guards remain effective.",
+    "Producer replacement, input-version/effect binding, raw-status consumers and arbitrary noncooperative writers remain OPEN.",
+    "No source edits, real providers, network, live/candidate/G1 actions."
+  ]
+}

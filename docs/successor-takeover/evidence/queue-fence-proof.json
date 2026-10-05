@@ -1,0 +1,36 @@
+{
+  "schema": "ai-factory.scoped-proof.v1",
+  "observedAt": "2026-10-02T15:40:01.454791+00:00",
+  "executionIdentity": "UNCOMMITTED_WORKTREE_HASHES; NOT_LIVE_ATTESTED",
+  "sourceHashes": {
+    "server/aiCompany/roleWorkQueue.ts": "ab70460a77a11b079c9578f5fb2e22039569741b0ce55908fd34000bed6526e7",
+    "server/aiCompany/queueMutationGate.ts": "007765747c2d758a63b332a58d723a6e8ce93d5af909ef9e7766bc8c04155c73",
+    "server/aiCompany/queueMutationFence.test.ts": "661429e83725c557e18ef75f7b6f8e2885b4fd2c251c533c9e18ddbdd707a0d9",
+    "scripts/record-workspace-synthesis-cycle.mjs": "437d3730a358c65a117339fcf1068ead64c60415c9b1b6fc68680d95356c0838",
+    "scripts/record-disclaimer-banner-cycle.mjs": "5aaba3eb4edebffce5b0d27ada805e9904e4fdb8b9b05b362054ebb18c19f0d9"
+  },
+  "claim": "Cooperative queue commits serialize across processes and reject stale work/dependency/selection snapshots; history replacement preserves original prefix; two synthetic historical entrypoints disabled",
+  "failBefore": "pending-terminal-counterexample.json: IN_REVIEW->BLOCKED->DONE; independent stale outer selection DONE->READY",
+  "passAfter": "pending-terminal-after.json: old completion rejected; BLOCKED retained",
+  "builder": "151PASS16FILES; changed-source lintPASS; fulltypecheckFAIL11otherdiagnostics",
+  "independent": "independent-queue-fence-review.json:14PASS plus independent batch/dependency/ABA/root/provenance/overflow controls",
+  "performance": "queue-gate-cost.json:3isolated24MBhistorysamples108-142ms; sustainedrateUNPROVEN",
+  "limitations": [
+    "Only cooperative writers; OS-level alternate writer fence unproven",
+    "stale-attempt-counterexample.json demonstrates old attempt output accepted after newer owner claim",
+    "Role/evidence actor authentication, objective/attempt/revision identity, original source reevaluation OPEN",
+    "History rename preserves bytes/mode; full metadata/ACL conservation not certified",
+    "No runtime restart/enabling/migration/candidate propagation/promotion",
+    "A/B/C/D UNPROVEN; production autonomy DISABLED; G1 denial respected"
+  ],
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/aiCompany/roleWorkQueue.ts",
+      "server/aiCompany/queueMutationFence.test.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

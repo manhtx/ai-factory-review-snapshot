@@ -1,0 +1,19 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-cli-stop-0495uX",
+  "code": 3,
+  "ack": [
+    {
+      "type": "ROLE_ATTEMPT_CLAIMED",
+      "work_id": "WORK-1790957278835-zq28t1",
+      "attempt_id": "02b2218e-6d19-4c6c-aea6-76c38ade897b",
+      "output_name": "role-output-WORK-1790957278835-zq28t1-02b2218e-6d19-4c6c-aea6-76c38ade897b.md"
+    }
+  ],
+  "finalState": "BLOCKED",
+  "semanticEvidenceRowsAfterStop": 0,
+  "stderr": "Dispatch attempt is inactive or lost ownership; output not admitted\n",
+  "hashes": {
+    "scripts/ai-company-role-dispatch.mjs": "e6b92eea50d3a1e79d13dbbecac8188a552d9b1180d26f38b847df836168e670",
+    "scripts/ai-company-run-ready.mjs": "9690c1d0964ea929440e45c2bf5a32e890afd1394dd0d2bdc52f3d69cfb3e047"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/cli-lineage-laundering-4Ikh41",
+  "code": 3,
+  "sourceNamespace": "ORIGINAL",
+  "sourceRun": "ORIGINAL-RUN",
+  "reviewNamespace": "REVIEW",
+  "reviewRun": "REVIEW-RUN",
+  "originalReceipt": "ROLE-EVIDENCE-571f6d79b9dd6ddad0d4",
+  "declaredUnresolved": "UNRESOLVED-DECLARED",
+  "finalState": "BLOCKED",
+  "stderr": "queue completion failed: evidence resolution failed: evidence 'UNRESOLVED-DECLARED' cannot be resolved or does not exist; inspect /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/cli-lineage-laundering-4Ikh41/.ai-company/logs/roles/2026-10-04T151223.883Z-functional-qa-WORK-1791126743607-da6xl0-11959559-d395-4606-94c7-88fd2bf734a1.log\n",
+  "falseScopeAndReferenceAdmission": false,
+  "providerCalls": 0
+}

@@ -1,0 +1,1357 @@
+{
+  "schema": "successor-takeover.hydration-backup-replay.v1",
+  "authoritative": false,
+  "generatedAt": "2026-10-02T09:30:10.848Z",
+  "backupSha256": "f88bd0896dc5879d48b39b8aa3335b0a35b158ea55295dd769a1f68a3d16f80c",
+  "candidate": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+  "total": 126,
+  "admitted": 96,
+  "withheld": 30,
+  "limitations": "Historical verified F0 SQLite backup and current candidate metadata only. API fallback/query shape reproduced, not live API/provider/storage or source authenticity proof. Provider operation eligibility not adjudicated. Withheld capability requires lineage/semantic reconciliation, not silent removal.",
+  "results": [
+    {
+      "indicatorId": "apartment-price-vn",
+      "admitted": true,
+      "frequency": "quarterly",
+      "unit": "USD/sqm",
+      "transformation": "level",
+      "freshness": "delayed",
+      "points": 1
+    },
+    {
+      "indicatorId": "bitcoin",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "USD",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "core-cpi-us",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "outdated",
+      "points": 823
+    },
+    {
+      "indicatorId": "core-pce-us",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "outdated",
+      "points": 799
+    },
+    {
+      "indicatorId": "cpi-de",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 831
+    },
+    {
+      "indicatorId": "cpi-fr",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 831
+    },
+    {
+      "indicatorId": "cpi-gb",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 831
+    },
+    {
+      "indicatorId": "cpi-jp",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 786
+    },
+    {
+      "indicatorId": "cpi-kr",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 755
+    },
+    {
+      "indicatorId": "cpi-us",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "outdated",
+      "points": 943
+    },
+    {
+      "indicatorId": "cpi-vn",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 30,
+      "actual": {
+        "frequency": "Annual",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "% YoY",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "credit-growth-vn",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 1,
+      "actual": {
+        "frequency": "Semiannual",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "% YoY",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "credit-spread-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 819,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "%",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "deposit-rate-vn",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 28,
+      "actual": {
+        "frequency": "Annual",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "% / năm",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "dxy",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "Index",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "em-cpi-br",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 533
+    },
+    {
+      "indicatorId": "em-cpi-id",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 676
+    },
+    {
+      "indicatorId": "em-cpi-in",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 807
+    },
+    {
+      "indicatorId": "em-cpi-mx",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "unavailable",
+      "points": 655
+    },
+    {
+      "indicatorId": "em-industrial-production-br",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 591
+    },
+    {
+      "indicatorId": "em-industrial-production-in",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 346
+    },
+    {
+      "indicatorId": "em-interbank-rate-id",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 336
+    },
+    {
+      "indicatorId": "em-interbank-rate-in",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 176
+    },
+    {
+      "indicatorId": "em-interbank-rate-mx",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 354
+    },
+    {
+      "indicatorId": "em-policy-rate-br",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 358
+    },
+    {
+      "indicatorId": "em-policy-rate-id",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 280
+    },
+    {
+      "indicatorId": "em-policy-rate-in",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 655
+    },
+    {
+      "indicatorId": "em-policy-rate-mx",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 64
+    },
+    {
+      "indicatorId": "ethereum",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 365,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "USD",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "eur-usd",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "USD/EUR",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "exports-cn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "exports-de",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 56
+    },
+    {
+      "indicatorId": "exports-ea",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 56
+    },
+    {
+      "indicatorId": "exports-gb",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 56
+    },
+    {
+      "indicatorId": "exports-in",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "exports-jp",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 55
+    },
+    {
+      "indicatorId": "exports-kr",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "exports-vn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 40
+    },
+    {
+      "indicatorId": "fed-balance-sheet",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 1238,
+      "actual": {
+        "frequency": "Weekly",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "B USD",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "fed-funds-rate",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 866,
+      "actual": {
+        "frequency": "Monthly",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "%",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "foreign-flow-vn",
+      "admitted": true,
+      "frequency": "daily",
+      "unit": "million VND",
+      "transformation": "level",
+      "freshness": "outdated",
+      "points": 3
+    },
+    {
+      "indicatorId": "gdp-growth-cn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 65
+    },
+    {
+      "indicatorId": "gdp-growth-de",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 65
+    },
+    {
+      "indicatorId": "gdp-growth-ea",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 65
+    },
+    {
+      "indicatorId": "gdp-growth-gb",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 65
+    },
+    {
+      "indicatorId": "gdp-growth-in",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 65
+    },
+    {
+      "indicatorId": "gdp-growth-jp",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 65
+    },
+    {
+      "indicatorId": "gdp-growth-kr",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 65
+    },
+    {
+      "indicatorId": "gdp-growth-vn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 41
+    },
+    {
+      "indicatorId": "gdp-vn",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 41,
+      "actual": {
+        "frequency": "Annual",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "quarterly",
+        "unit": "% YoY",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "global-m2",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "USD trillion",
+      "transformation": "level",
+      "freshness": "delayed",
+      "points": 48
+    },
+    {
+      "indicatorId": "gold",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "USD per troy ounce",
+      "transformation": "level",
+      "freshness": "outdated",
+      "points": 792
+    },
+    {
+      "indicatorId": "harmonized-unemployment-de",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 426
+    },
+    {
+      "indicatorId": "harmonized-unemployment-fr",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 522
+    },
+    {
+      "indicatorId": "harmonized-unemployment-gb",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 520
+    },
+    {
+      "indicatorId": "harmonized-unemployment-jp",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 858
+    },
+    {
+      "indicatorId": "harmonized-unemployment-kr",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 439
+    },
+    {
+      "indicatorId": "imports-cn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "imports-de",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 56
+    },
+    {
+      "indicatorId": "imports-ea",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 56
+    },
+    {
+      "indicatorId": "imports-gb",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 56
+    },
+    {
+      "indicatorId": "imports-in",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "imports-jp",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 55
+    },
+    {
+      "indicatorId": "imports-kr",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "imports-vn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "current US$",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 40
+    },
+    {
+      "indicatorId": "industrial-production-de",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 795
+    },
+    {
+      "indicatorId": "industrial-production-fr",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 819
+    },
+    {
+      "indicatorId": "industrial-production-gb",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 915
+    },
+    {
+      "indicatorId": "industrial-production-jp",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 831
+    },
+    {
+      "indicatorId": "industrial-production-kr",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 411
+    },
+    {
+      "indicatorId": "inflation-cn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 39
+    },
+    {
+      "indicatorId": "inflation-de",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "inflation-ea",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "inflation-gb",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "inflation-in",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "inflation-jp",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "inflation-kr",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "inflation-vn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 30
+    },
+    {
+      "indicatorId": "initial-claims-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Weekly",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "weekly",
+        "unit": "K claims",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "jolts-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 308,
+      "actual": {
+        "frequency": "Monthly",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "K openings",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "land-price-vn",
+      "admitted": true,
+      "frequency": "quarterly",
+      "unit": "Tr VND/m²",
+      "transformation": "level",
+      "freshness": "outdated",
+      "points": 1
+    },
+    {
+      "indicatorId": "lending-rate-vn",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 29,
+      "actual": {
+        "frequency": "Annual",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "% / năm",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "m1-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 811,
+      "actual": {
+        "frequency": "Monthly",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "B USD",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "m2-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 811,
+      "actual": {
+        "frequency": "Monthly",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "B USD",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "market-liquidity-vn",
+      "admitted": true,
+      "frequency": "daily",
+      "unit": "million VND",
+      "transformation": "level",
+      "freshness": "outdated",
+      "points": 4
+    },
+    {
+      "indicatorId": "new-supply-vn",
+      "admitted": true,
+      "frequency": "quarterly",
+      "unit": "units",
+      "transformation": "level",
+      "freshness": "outdated",
+      "points": 1
+    },
+    {
+      "indicatorId": "nfp-us",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "K jobs",
+      "transformation": "change",
+      "freshness": "outdated",
+      "points": 1050
+    },
+    {
+      "indicatorId": "pce-us",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "outdated",
+      "points": 799
+    },
+    {
+      "indicatorId": "pmi-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 1,
+      "actual": {
+        "frequency": "Monthly",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "Index",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "policy-rate-de",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "outdated",
+      "points": 798
+    },
+    {
+      "indicatorId": "policy-rate-fr",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 678
+    },
+    {
+      "indicatorId": "policy-rate-gb",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 829
+    },
+    {
+      "indicatorId": "policy-rate-jp",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "outdated",
+      "points": 290
+    },
+    {
+      "indicatorId": "policy-rate-kr",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 426
+    },
+    {
+      "indicatorId": "population-cn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "people",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "population-de",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "people",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "population-ea",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "people",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "population-gb",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "people",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "population-in",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "people",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "population-jp",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "people",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "population-kr",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "people",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "population-vn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "people",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 66
+    },
+    {
+      "indicatorId": "ppi-us",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "Index",
+      "transformation": "yoy",
+      "freshness": "outdated",
+      "points": 1351
+    },
+    {
+      "indicatorId": "reverse-repo-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "B USD",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "sofr-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "%",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "transaction-volume-vn",
+      "admitted": true,
+      "frequency": "quarterly",
+      "unit": "transactions",
+      "transformation": "level",
+      "freshness": "outdated",
+      "points": 1
+    },
+    {
+      "indicatorId": "unemployment-cn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 35
+    },
+    {
+      "indicatorId": "unemployment-de",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 35
+    },
+    {
+      "indicatorId": "unemployment-ea",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 35
+    },
+    {
+      "indicatorId": "unemployment-gb",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 35
+    },
+    {
+      "indicatorId": "unemployment-in",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 35
+    },
+    {
+      "indicatorId": "unemployment-jp",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 35
+    },
+    {
+      "indicatorId": "unemployment-kr",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 35
+    },
+    {
+      "indicatorId": "unemployment-us",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 943,
+      "actual": {
+        "frequency": "Monthly",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "%",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "unemployment-vn",
+      "admitted": true,
+      "frequency": "annual",
+      "unit": "%",
+      "transformation": "level",
+      "freshness": "unavailable",
+      "points": 35
+    },
+    {
+      "indicatorId": "us10y-yield",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "%",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "us2y-yield",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "%",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "us30y-yield",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "%",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "usd-cny",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "CNY/USD",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "usd-vnd",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 41,
+      "actual": {
+        "frequency": "Annual",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "annual",
+        "unit": "VND/USD",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "vn30",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "Points",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "vnindex",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "Points",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "vnindex-pb",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "x",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "vnindex-pe",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "monthly",
+        "unit": "x",
+        "transformation": "custom"
+      }
+    },
+    {
+      "indicatorId": "wage-growth-us",
+      "admitted": true,
+      "frequency": "monthly",
+      "unit": "% YoY",
+      "transformation": "yoy",
+      "freshness": "outdated",
+      "points": 233
+    },
+    {
+      "indicatorId": "yield-curve",
+      "admitted": false,
+      "reason": "Hydration admission: no compatible unit definition",
+      "points": 2000,
+      "actual": {
+        "frequency": "Daily",
+        "unit": null,
+        "transformation": "level"
+      },
+      "catalog": {
+        "frequency": "daily",
+        "unit": "%",
+        "transformation": "custom"
+      }
+    }
+  ]
+}

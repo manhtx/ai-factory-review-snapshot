@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests | 14 skipped) 138ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  10:59:12
+   Duration  472ms (transform 70ms, setup 0ms, collect 86ms, tests 138ms, environment 0ms, prepare 35ms)
+

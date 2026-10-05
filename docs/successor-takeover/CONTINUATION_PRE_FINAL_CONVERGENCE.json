@@ -1,0 +1,65 @@
+{
+  "schema": "successor-takeover.continuation.v2",
+  "authoritative": false,
+  "missionId": "AI_COMPANY_FINAL_SUCCESSOR_TAKEOVER",
+  "missionContract": "FOUNDER_MISSION.md",
+  "missionContractNormalizedSha256": "b9892948a34a9f97b88337b5f4d1dd5f63d846898de5db4f883057669085f2ad",
+  "operatingEnvelope": "OPERATING_ENVELOPE.json",
+  "phase": "ISOLATED_SUCCESSOR_FOUNDATIONS_WITH_PRODUCT_TRUTH_REPAIRS; TAKEOVER_CENSUS_AND_FOUNDATION_REVIEW_OPEN",
+  "trustEpoch": "LEGACY_EPOCH",
+  "executionRevision": "UNSEALED_DIRTY_CANDIDATE",
+  "candidate": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+  "candidateAuthority": "NONE",
+  "closure": {
+    "systemIntegrity": "UNPROVEN",
+    "productDataTruth": "UNPROVEN",
+    "autonomousOperation": "UNPROVEN"
+  },
+  "backup": {
+    "index": "F0_CAPTURE.json",
+    "privateRoot": "/Users/manhtx/Documents/macro-successor-f0-I5xvdx",
+    "status": "application/config/control snapshot and local SQLite restore verified within recorded scope; full cold-start not verified"
+  },
+  "maps": {
+    "target": "TARGET_SYSTEM_MAP.json: proposed, not frozen",
+    "canonicality": "CANONICALITY_MAP.json",
+    "capabilities": "CAPABILITY_PRESERVATION_MAP.json: representative static consumers, material completeness open",
+    "negativeKnowledge": "DO_NOT_REINTRODUCE_REGISTER.json",
+    "proofs": "PROOF_GRAPH.json: manual dependencies, automatic invalidation missing",
+    "executionSurface": "evidence/candidate-product-api-surface-v1.json: 887 files, bounded source census, no writer-absence proof"
+  },
+  "foundationFrontier": {
+    "integrityBoundary": "scoped independent evidence in INTEGRITY_CANDIDATE_PROOF.json; not global closure",
+    "g1": "frozen unpromoted; schema-v2 independent tool review denied, do not retry or route around denial",
+    "s1": "frozen unpromoted; findings repaired, independent final recheck stopped at usage limit",
+    "wait": "isolated validation repaired; independent review, authenticated events, concurrency and deadline/budget semantics open",
+    "transactionalSuccessor": "objective/work/attempt/evidence semantics, authenticated gateway and writer fencing not complete"
+  },
+  "productFrontier": {
+    "evidence": "VIETNAM_API_PRODUCT_PROGRESS.json",
+    "review": "adapter/page/API/resolver bounded independent recheck passed; no promotion",
+    "regression": "118 passed in evidence/product-regime-api-regression-v3.json",
+    "build": "passed",
+    "typecheck": "six existing company diagnostics",
+    "open": "upstream semantic freshness/source identity, compatible annual observed sources/adapter, storage authority and full runtime consumer proof"
+  },
+  "migration": {
+    "status": "UNVERIFIED_STAGING_REHEARSED_NO_CANONICAL_IMPORT",
+    "evidence": "evidence/migration-staging-rehearsal-v1.json",
+    "conservation": "9647 history rows/2715 latest rows preserved with external source anchor",
+    "open": "missing lineage/evidence adjudication, full schema adapter, handoff, fencing and rollback"
+  },
+  "runtime": {
+    "observation": "latest recorded 2026-09-30: executor disabled, running/ticking/ready false, loaded revision unattested",
+    "freshness": "HISTORICAL_REOBSERVE_BEFORE_RUNTIME_ACTION",
+    "canonicalServicesChanged": false
+  },
+  "nextCausalActions": [
+    "Trace source identity, units/transformation and semantic freshness through actual ingestion/API/hydration; contain remaining incompatible data claims using real contracts and snapshots.",
+    "Close permissible independent S1/wait obligations before more foundational mutation; do not route around denied G1 verification.",
+    "Complete objective/work/attempt/evidence transactional design, material capability/writer census and migration schema prerequisites before trust genesis or authority transfer."
+  ],
+  "founderAuthorityRequired": [],
+  "bootstrapGoalStatus": "ACTIVE",
+  "history": "CONTINUATION_HISTORY_20261002.json; historical claims are not current statuses"
+}

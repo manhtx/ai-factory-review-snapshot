@@ -1,0 +1,35 @@
+{
+  "observedAt": "2026-10-05T09:42:58.063Z",
+  "sourceRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "sourceTreeClean": true,
+  "resourceSourceHash": "40454585ad2768d52efebda8bc96d8833731e421c5d4ebca9ad77259f6861361",
+  "scope": "Actual agy role-dispatch entrypoint and real detached OS stub provider; temporary queue/governor stores; zero real providers/model calls/product effects",
+  "dispatcherPid": 70524,
+  "originalOwnerPid": 70524,
+  "providerPid": 70525,
+  "dispatcherExit": [
+    null,
+    "SIGKILL"
+  ],
+  "providerAliveAfterDispatcherExit": true,
+  "attempt": "e200c762-f898-4628-a23f-ba0afbca2540",
+  "durableProviderIssuance": true,
+  "newerAdmission": {
+    "decision": "WITHHELD",
+    "error": "RESOURCE_ADMISSION_BUSY: original provider group remains alive after dispatcher death"
+  },
+  "newerOwnerPid": 70524,
+  "originalLeasePreservedWhileProviderAlive": true,
+  "lateStubEffectAfterDispatcherDeath": true,
+  "groupAbsentBeforeRecovery": true,
+  "postQuiescenceAdmission": "ALLOW",
+  "postQuiescenceNewLease": true,
+  "conclusion": "Bound original provider group survives dispatcher death; replacement withheld until observed group absence; original stub effect is not a product or terminal success",
+  "limitations": [
+    "No actual agy service or model call",
+    "Unbound launch/legacy ownership still needs explicit reconciliation",
+    "No controller or queue administrative authority closure",
+    "No process-birth certificate or full OS filesystem fencing"
+  ],
+  "independent": false
+}

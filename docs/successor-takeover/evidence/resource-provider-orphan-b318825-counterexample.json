@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-10-05T09:13:26.312Z",
+  "sourceRevision": "b318825bba40bb7b9268d835a67cc08b548459ba",
+  "sourceTreeClean": true,
+  "resourceSourceHash": "f212e9441db5de69a4314c154d5a6a97de3189acb42ae1b833fcf8ed4bf1b215",
+  "scope": "Actual agy role-dispatch entrypoint and real detached OS stub provider; temporary queue/governor stores; zero real providers/model calls/product effects",
+  "dispatcherPid": 53272,
+  "originalOwnerPid": 53272,
+  "providerPid": 53281,
+  "dispatcherExit": [
+    null,
+    "SIGKILL"
+  ],
+  "providerAliveAfterDispatcherExit": true,
+  "attempt": "fa6e69a1-8610-46d8-999a-d0fe49770c70",
+  "durableProviderIssuance": true,
+  "newerAdmission": "ALLOW",
+  "newerOwnerPid": 53268,
+  "lateStubEffectAfterDispatcherDeath": true,
+  "conclusion": "Dispatcher PID death alone does not prove its provider effect plane is stopped",
+  "limitations": [
+    "No actual agy service or model call",
+    "Current source repair covers cooperative governor ownership only; detached provider lifecycle requires causal repair",
+    "No controller or queue administrative authority closure"
+  ]
+}

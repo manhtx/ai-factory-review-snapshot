@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (15 tests) 536ms
+
+ Test Files  1 passed (1)
+      Tests  15 passed (15)
+   Start at  11:14:03
+   Duration  893ms (transform 68ms, setup 0ms, collect 80ms, tests 536ms, environment 0ms, prepare 37ms)
+

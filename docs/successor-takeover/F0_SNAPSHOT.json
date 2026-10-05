@@ -1,0 +1,9 @@
+{
+  "schema": "ai-factory.f0-reference.v1",
+  "snapshot": "CURRENT_REALITY.json",
+  "sha256": "cfc623aa6f37e09b99a6896c57c3c13244494aadd811b7b3ba287a1f681847c3",
+  "stateFreeze": "NOT_PERFORMED",
+  "sourceCleanBeforeMission": true,
+  "restoreProof": "NOT_PERFORMED",
+  "missionSha256": "eb015a16e78427db6b2d548ec0365de540f82d0cfb6bbddd755d82ba8dac6e23"
+}

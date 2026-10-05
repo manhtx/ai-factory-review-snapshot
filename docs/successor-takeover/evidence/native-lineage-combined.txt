@@ -1,0 +1,33 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 425ms
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (7 tests) 8623ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1870ms
+   ✓ does not adopt an existing claim or call the stub provider  398ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1501ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  742ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1709ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1819ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  581ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4252ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1720ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1737ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 3143ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  605ms
+   ✓ WorktreeManager > overlays the current tracked working-tree revision into a new worktree  370ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  522ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  466ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  364ms
+   ✓ WorktreeManager > merges verified product changes into main git history and marks worktree MERGED  357ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 407ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 326ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 229ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 205ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 22ms
+
+ Test Files  9 passed (9)
+      Tests  67 passed (67)
+   Start at  21:52:35
+   Duration  19.84s (transform 464ms, setup 0ms, collect 843ms, tests 17.63s, environment 1ms, prepare 313ms)
+

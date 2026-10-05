@@ -1,0 +1,86 @@
+{
+  "schema": "ai-factory.tcb-manifest.v1",
+  "status": "OBSERVED_EXISTING_AUTHORITY_CANDIDATES; NOT_TRUSTED_OR_MINIMALITY_CERTIFIED",
+  "sourceRevision": "9483c43d72739b659552f3d5349a8cb190f66d81",
+  "components": [
+    {
+      "path": "server/aiCompany/roleWorkQueue.ts",
+      "sha256": "c2130844cd1951e8cd9e78b70ee06a8b7dd1d97a864ad33a6e205699dd142b4b",
+      "responsibility": "work state/terminal proposals",
+      "input": "assignment/output/evidence IDs",
+      "store": "JSONL queue",
+      "output": "UNSEALED_AUTHORITY_OR_PROJECTION; ADJUDICATION_OPEN",
+      "authorityDependency": "Current legacy callers; successor NONE",
+      "failureAndRecoverySemantics": "optional resolver and concurrent writes OPEN",
+      "tests": "EXISTING_COMPONENT_TESTS; GLOBAL_PROOF_OPEN"
+    },
+    {
+      "path": "server/aiCompany/evidenceResolver.ts",
+      "sha256": "3ba5654e0ea9e155121e18a02b7c336c4e2bdfa359480bad0d65d0701ea9269c",
+      "responsibility": "evidence resolution/admission",
+      "input": "stored record and context",
+      "store": "evidence JSONL",
+      "output": "UNSEALED_AUTHORITY_OR_PROJECTION; ADJUDICATION_OPEN",
+      "authorityDependency": "Current legacy callers; successor NONE",
+      "failureAndRecoverySemantics": "strict record/parser scoped repair; full lineage OPEN",
+      "tests": "EXISTING_COMPONENT_TESTS; GLOBAL_PROOF_OPEN"
+    },
+    {
+      "path": "server/aiCompany/reviewEvidenceContract.ts",
+      "sha256": "de97ce89dccdc276c825fefe2d37926914e6d8a9467456f8c0667408045c9883",
+      "responsibility": "review evidence validation",
+      "input": "review record/context",
+      "store": "caller supplied evidence",
+      "output": "UNSEALED_AUTHORITY_OR_PROJECTION; ADJUDICATION_OPEN",
+      "authorityDependency": "Current legacy callers; successor NONE",
+      "failureAndRecoverySemantics": "conditional resolver/context OPEN",
+      "tests": "EXISTING_COMPONENT_TESTS; GLOBAL_PROOF_OPEN"
+    },
+    {
+      "path": "server/aiCompany/executionLease.ts",
+      "sha256": "b14aa289bdac1905a399f9e7f297b3e01c26a40813b33ba2803c1248ef5c218a",
+      "responsibility": "legacy execution selection/affinity",
+      "input": "controller/provider/revision",
+      "store": "execution lease file",
+      "output": "UNSEALED_AUTHORITY_OR_PROJECTION; ADJUDICATION_OPEN",
+      "authorityDependency": "Current legacy callers; successor NONE",
+      "failureAndRecoverySemantics": "process fencing/liveness OPEN",
+      "tests": "EXISTING_COMPONENT_TESTS; GLOBAL_PROOF_OPEN"
+    },
+    {
+      "path": "server/aiCompany/durableOperation.ts",
+      "sha256": "f1bb88fb6b8cee91e7f19e7c34c83a52ae4b4898d809209b00fafda1c690b9cc",
+      "responsibility": "durable attempt/effect lifecycle",
+      "input": "operation transition",
+      "store": "durable operation JSONL",
+      "output": "UNSEALED_AUTHORITY_OR_PROJECTION; ADJUDICATION_OPEN",
+      "authorityDependency": "Current legacy callers; successor NONE",
+      "failureAndRecoverySemantics": "candidate repair differs; transactions/fencing OPEN",
+      "tests": "EXISTING_COMPONENT_TESTS; GLOBAL_PROOF_OPEN"
+    },
+    {
+      "path": "server/aiCompany/objectiveEligibility.ts",
+      "sha256": "4960aa6a5591579be029ea7112cdbfd25d36c6e8909db881640729de5d6a2a07",
+      "responsibility": "objective eligibility derived from work",
+      "input": "queue/project identity",
+      "store": "derived result",
+      "output": "UNSEALED_AUTHORITY_OR_PROJECTION; ADJUDICATION_OPEN",
+      "authorityDependency": "Current legacy callers; successor NONE",
+      "failureAndRecoverySemantics": "objective conservation and reducer authority OPEN",
+      "tests": "EXISTING_COMPONENT_TESTS; GLOBAL_PROOF_OPEN"
+    },
+    {
+      "path": "server/aiCompany/outcomeLedger.ts",
+      "sha256": "019210b0ac2d7ea1c2a7167aed51122799819b7dedd90cef5e0659a20648c8ee",
+      "responsibility": "product outcome records",
+      "input": "outcome/evidence/provenance",
+      "store": "outcome JSONL",
+      "output": "UNSEALED_AUTHORITY_OR_PROJECTION; ADJUDICATION_OPEN",
+      "authorityDependency": "Current legacy callers; successor NONE",
+      "failureAndRecoverySemantics": "independent reality/admission OPEN",
+      "tests": "EXISTING_COMPONENT_TESTS; GLOBAL_PROOF_OPEN"
+    }
+  ],
+  "modelOutputTrusted": false,
+  "unknownMaterialAuthorities": "OPEN_WRITER_REGISTRY"
+}

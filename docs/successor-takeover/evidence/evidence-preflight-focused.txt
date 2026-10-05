@@ -1,0 +1,51 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (14 tests) 1413ms
+ ❯ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests | 1 failed) 563ms
+   ✓ native durable dispatch issuance > admits one of concurrent same-claim native dispatches before provider 31ms
+   ✓ native durable dispatch issuance > uses committed canonical lineage when caller mutates its original snapshot during provider await 28ms
+   ✓ native durable dispatch issuance > no-response issuance survives a new queue/executor instance and refuses replay 26ms
+   ✓ native durable dispatch issuance > refuses missing capability before provider or marker 25ms
+   ✓ native durable dispatch issuance > refuses wrong capability before provider or marker 24ms
+   ✓ native durable dispatch issuance > refuses stale capability before provider or marker 55ms
+   ✓ native durable dispatch issuance > refuses changed selected intent and copied-root capability before provider 22ms
+   ✓ native durable dispatch issuance > an explicit bounded new claim permits one new issuance while old handle stays invalid 69ms
+   ✓ native durable dispatch issuance > refuses corrupt issuance marker null without rewriting history 19ms
+   ✓ native durable dispatch issuance > refuses corrupt issuance marker missing fields without rewriting history 20ms
+   ✓ native durable dispatch issuance > refuses corrupt issuance marker wrong attempt without rewriting history 20ms
+   ✓ native durable dispatch issuance > refuses corrupt issuance marker invalid time without rewriting history 20ms
+   ✓ native durable dispatch issuance > refuses corrupt issuance marker empty provider without rewriting history 20ms
+   ✓ native durable dispatch issuance > generic model role wrapper also consumes issuance before failure 32ms
+   × native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request 150ms
+     → expected [] to have a length of 1 but got +0
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 588ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 537ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/nativeDispatchIssuance.test.ts > native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request
+AssertionError: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ server/aiCompany/nativeDispatchIssuance.test.ts:144:61
+    142|     });
+    143|     const settled = await Promise.all([child(true), child(true)]);
+    144|     expect(settled.filter(row => row.signal === 'SIGKILL')).toHaveLeng…
+       |                                                             ^
+    145|     expect(settled.filter(row => row.code === 0 && JSON.parse(row.outp…
+    146|     const current = (await new RoleWorkQueue(f.root).records('unit'))[…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 42 passed (43)
+   Start at  10:08:54
+   Duration  3.92s (transform 98ms, setup 0ms, collect 165ms, tests 3.10s, environment 0ms, prepare 96ms)
+

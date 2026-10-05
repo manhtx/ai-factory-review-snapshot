@@ -1,0 +1,60 @@
+{
+  "schema": "ai-factory.post-seal-proof.v1",
+  "executionRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "observedAt": "2026-10-02T11:09:36.027598+00:00",
+  "sourceHashes": {
+    "server/index.ts": "3457118c42f54aeae3b91738f3c0e132e59450aaf83712ca94a050ed72f09587",
+    "server/rateLimit.ts": "001ec8c75eb912983b55fa7ebfce90b248fd1dc6539dc1a941e015e030cedbd0",
+    "server/aiCompany/evidenceResolver.ts": "3ba5654e0ea9e155121e18a02b7c336c4e2bdfa359480bad0d65d0701ea9269c",
+    "server/aiCompany/evidenceAdmissionIntegrity.test.ts": "75ca70e211314967eda4ba905dac20b0067d898cf8f4b6e03fb818fa59d4399a",
+    "scripts/audit-ai-company-secrets.mjs": "4bf85a5918efb4f5c9600fe1487aca78f06c9f7d0bed8c3e3b2d3650724a6245",
+    "scripts/audit-ai-company-secrets.test.mjs": "746896ef44a75544309b79011e554e971b817ad92d60065f0f596c402db3f441",
+    ".gitignore": "fa858e97433dad6019ccc22f08c1dc24d5eb7cd34d8dd13b468f96dc3532f50b"
+  },
+  "sourceRelevantDiff": "",
+  "securityProbe": {
+    "schema": "security-boundary.probe.v1",
+    "adminRoutes": 40,
+    "unauthorizedRequests": 80,
+    "authorizedInvalidControl": 400,
+    "disabledControl": 503,
+    "isolatedState": true,
+    "failures": []
+  },
+  "focusedVitest": "\n RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform\n\n \u2713 server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 11ms\n \u2713 server/rateLimit.test.ts (6 tests) 5ms\n \u2713 server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (5 tests) 15ms\n \u2713 server/aiCompany/architectureTrial.test.ts (12 tests) 9ms\n \u2713 server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms\n \u2713 server/aiCompany/reviewEvidenceContract.test.ts (4 tests) 2ms\n\n Test Files  6 passed (6)\n      Tests  57 passed (57)\n   Start at  18:08:23\n   Duration  1.32s (transform 96ms, setup 0ms, collect 156ms, tests 45ms, environment 0ms, prepare 191ms)",
+  "securityGuardTests": "\u2714 clean source inventory passes with a bounded claim (69.704291ms)\n\u2714 tracked browser profile fails without reading or printing contents (261.053084ms)\n\u2714 missing Git inventory fails closed (52.364667ms)\n\u2714 independent-review private path is rejected: ChromeProfile/Default/Preferences (78.011833ms)\n\u2714 independent-review private path is rejected: profiles/firefox/logins.json (80.775833ms)\n\u2714 independent-review private path is rejected: profiles/firefox/cookies.sqlite (67.08ms)\n\u2714 tracked live lease identity is rejected without deleting its working file (139.33075ms)\n\u2714 unreadable scope must not produce a clean audit (59.951166ms)\n\u2139 tests 8\n\u2139 suites 0\n\u2139 pass 8\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 870.631209",
+  "securityAudit": "no tracked browser/known live host identity paths or known secret patterns found within the audited scope; historical exposure is not certified",
+  "runtimeListener": "COMMAND   PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    62566 manhtx   23u  IPv4 0x1a707d1319ce5332      0t0  TCP 127.0.0.1:8787 (LISTEN)\n",
+  "runtimeSupervisor": {
+    "evidence": "in-process-company-supervisor",
+    "running": false,
+    "ticking": false,
+    "startedAt": null,
+    "lastTickAt": null,
+    "lastResults": [],
+    "readiness": {
+      "ready": false,
+      "blockers": [
+        "role executor is not enabled"
+      ],
+      "checkedAt": "2026-10-02T11:05:12.024Z"
+    }
+  },
+  "runtimeRevisionAttestation": "UNATTESTED; evidence validator repair not hot-reloaded",
+  "independentReview": [
+    "evidence/security-independent-review.json",
+    "evidence/host-identity-independent-review.json",
+    "evidence/evidence-independent-review.json"
+  ],
+  "claimCeiling": "SCOPED_LOCAL_SOURCE_TESTS_AND_SOCKET; ALL_BLOCKS_UNPROVEN",
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/index.ts",
+      "server/aiCompany/evidenceResolver.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

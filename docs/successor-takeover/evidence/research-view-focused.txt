@@ -1,0 +1,39 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4144ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1715ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1740ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 8ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 146ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/researchSynthesis.test.ts [ server/aiCompany/researchSynthesis.test.ts ]
+Error: Transform failed with 1 error:
+/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/researchSynthesis.test.ts:25:7: ERROR: The symbol "authority" has already been declared
+  Plugin: vite:esbuild
+  File: /Users/manhtx/Documents/Macro Research Platform/server/aiCompany/researchSynthesis.test.ts:25:7
+  
+  The symbol "authority" has already been declared
+  23 |      expect(evaluateResearchQuorum(signals.slice(0,3),'I-1',.6,'unit',authority)).toMatchObject({status:'RESEARCH_INCOMPLETE',missingRoles:['domain-expert']});
+  24 |      if(['withdrawn','changed-attempt','changed-result'].includes(kind)){rows[0].queue_revision!++;await appendFile(path.join(root,'role-work-queue.jsonl'),JSON.stringify(rows[0])+'\n');}
+  25 |   const authority=await queue.currentAuthority('unit');
+     |         ^
+  26 |   expect(evaluateResearchQuorum(signals,'I-1',.6,'unit',authority).status).toBe('READY_FOR_RE_SCORE');
+  27 |      expect(evaluateResearchQuorum(signals,'I-1',.6,'unit').status).toBe('RESEARCH_INCOMPLETE');
+  
+ ❯ failureErrorWithLog node_modules/esbuild/lib/main.js:1467:15
+ ❯ node_modules/esbuild/lib/main.js:736:50
+ ❯ responseCallbacks.<computed> node_modules/esbuild/lib/main.js:603:9
+ ❯ handleIncomingPacket node_modules/esbuild/lib/main.js:658:12
+ ❯ Socket.readFromStdout node_modules/esbuild/lib/main.js:581:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  19 passed (19)
+   Start at  10:20:11
+   Duration  5.46s (transform 213ms, setup 0ms, collect 316ms, tests 4.30s, environment 0ms, prepare 149ms)
+

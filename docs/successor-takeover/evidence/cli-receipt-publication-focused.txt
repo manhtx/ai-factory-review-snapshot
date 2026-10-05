@@ -1,0 +1,139 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts (15 tests | 6 failed) 12724ms
+   × claims before stub provider, passes no capability, and ACKs its actual attempt 1534ms
+     → CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
+: expected 3 to be +0 // Object.is equality
+   ✓ refuses provider dispatch when stopped while paused after claim ACK 134ms
+   ✓ does not adopt an existing claim or call the stub provider 107ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1140ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  316ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1405ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1491ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  300ms
+   × preserves an unresolved provider citation and blocks instead of replacing it 1075ms
+     → expected 'CLI_RECEIPT_PUBLICATION_FAILED: CLI r…' to contain 'cannot be resolved'
+   × CLI review preserves actual original reference for same-scope 1261ms
+     → CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
+: expected 3 to be +0 // Object.is equality
+   × CLI review preserves actual original reference for cross-scope 1197ms
+     → expected 'CLI_RECEIPT_PUBLICATION_FAILED: CLI r…' to match /mismatch/
+   × CLI review preserves actual original reference for unresolved 1209ms
+     → expected 'CLI_RECEIPT_PUBLICATION_FAILED: CLI r…' to match /cannot be resolved/
+   ✓ rejects missing dependency receipts explicitly before claim or stub provider 195ms
+   × CLI selected dependency admission preserves explicit same-scope failed-review correction 1176ms
+     → CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
+: expected 3 to be +0 // Object.is equality
+   ✓ run-ready rejects corrupt lifecycle JSON instead of persisting an empty-work wake 182ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (6 tests) 231ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > claims before stub provider, passes no capability, and ACKs its actual attempt
+AssertionError: CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
+: expected 3 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 3
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:71:38
+     69| it('claims before stub provider, passes no capability, and ACKs its ac…
+     70|   const input = await fixture(); const result = await dispatch(input);
+     71|   expect(result.code, result.stderr).toBe(0);
+       |                                      ^
+     72|   const row = (await input.queue.records())[0]; expect(row.state).toBe…
+     73|   const call = JSON.parse(await readFile(path.join(input.root, 'stub-c…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > preserves an unresolved provider citation and blocks instead of replacing it
+AssertionError: expected 'CLI_RECEIPT_PUBLICATION_FAILED: CLI r…' to contain 'cannot be resolved'
+
+- Expected
++ Received
+
+- cannot be resolved
++ CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
++
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:166:53
+    164| it('preserves an unresolved provider citation and blocks instead of re…
+    165|   const input=await fixture();const result=await dispatch(input,'unres…
+    166|   expect(result.code).toBe(3);expect(result.stderr).toContain('cannot …
+       |                                                     ^
+    167|   expect((await input.queue.records())[0].state).toBe('BLOCKED');
+    168|   expect(await readFile(path.join(input.runtime,'role-dispatch-evidenc…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > CLI review preserves actual original reference for same-scope
+AssertionError: CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
+: expected 3 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 3
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:187:61
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > CLI review preserves actual original reference for cross-scope
+AssertionError: expected 'CLI_RECEIPT_PUBLICATION_FAILED: CLI r…' to match /mismatch/
+
+- Expected: 
+/mismatch/
+
++ Received: 
+"CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
+"
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:188:96
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > CLI review preserves actual original reference for unresolved
+AssertionError: expected 'CLI_RECEIPT_PUBLICATION_FAILED: CLI r…' to match /cannot be resolved/
+
+- Expected: 
+/cannot be resolved/
+
++ Received: 
+"CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
+"
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:188:96
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > CLI selected dependency admission preserves explicit same-scope failed-review correction
+AssertionError: CLI_RECEIPT_PUBLICATION_FAILED: CLI receipt requires active issued provider attempt
+: expected 3 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 3
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:209:87
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/6]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  6 failed | 21 passed (27)
+   Start at  11:10:16
+   Duration  13.68s (transform 86ms, setup 0ms, collect 138ms, tests 12.96s, environment 0ms, prepare 87ms)
+

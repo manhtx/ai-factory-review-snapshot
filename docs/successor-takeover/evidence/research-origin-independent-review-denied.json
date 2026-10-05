@@ -1,0 +1,8 @@
+{
+  "observedAt": "2026-10-05T02:45:37.594839+00:00",
+  "action": "Fresh independent persisted research origin/source/scoring review via existing reviewer",
+  "status": "AUTOMATIC_SAFETY_REVIEW_REJECTED",
+  "reason": "This content was flagged for possible cybersecurity risk",
+  "policy": "Not retried, rephrased, substituted or bypassed",
+  "sourceRepairCertification": "REVIEW_PENDING; builder evidence is not independent certification"
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "ai-factory.writer-map.v1",
+  "observedAt": "2026-10-02T10:47:38.089166+00:00",
+  "sourceRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+  "complete": false,
+  "writers": [
+    {
+      "path": "server/index.ts",
+      "sha256": "3457118c42f54aeae3b91738f3c0e132e59450aaf83712ca94a050ed72f09587",
+      "sourceCapable": true,
+      "observedPid": 58145,
+      "configured": "API_ACTIVE_EXECUTOR_DISABLED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "server/dev.ts",
+      "sha256": "a56a6988671dbbf7123e6bf355083b5a51844bbf9ae43c7af00c817f73d4031a",
+      "sourceCapable": true,
+      "observedPid": null,
+      "configured": "UNVERIFIED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "scripts/ai-company-continuity-kernel.mjs",
+      "sha256": "5d8d0c77619ec2d0fa9e7e0efe16a35ca8219d0f398f02ea9c442367d7f641a1",
+      "sourceCapable": true,
+      "observedPid": 6108,
+      "configured": "STOP_SENTINEL_PRESENT",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "scripts/ai-company-run-ready.mjs",
+      "sha256": "c222400d59bd2b3cdaaf89c81f79d38968d6d051e321d5c382b56bbbef07740a",
+      "sourceCapable": true,
+      "observedPid": null,
+      "configured": "UNVERIFIED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "scripts/ai-company-product-continuation.mjs",
+      "sha256": "778da70b44691cf9a93b4f645ef3ab400b9ce4aed14d4ad87dcb06e14d1a77b8",
+      "sourceCapable": true,
+      "observedPid": null,
+      "configured": "UNVERIFIED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "scripts/supabase-heartbeat.mjs",
+      "sha256": "db0bd56b50ed0a762408ad85db1308e4b11552b8106a95e4176aa59f34e01031",
+      "sourceCapable": true,
+      "observedPid": null,
+      "configured": "UNVERIFIED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "server/aiCompany/roleWorkQueue.ts",
+      "sha256": "c2130844cd1951e8cd9e78b70ee06a8b7dd1d97a864ad33a6e205699dd142b4b",
+      "sourceCapable": true,
+      "observedPid": null,
+      "configured": "UNVERIFIED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "server/aiCompany/durableOperation.ts",
+      "sha256": "f1bb88fb6b8cee91e7f19e7c34c83a52ae4b4898d809209b00fafda1c690b9cc",
+      "sourceCapable": true,
+      "observedPid": null,
+      "configured": "UNVERIFIED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "server/aiCompany/executionLease.ts",
+      "sha256": "b14aa289bdac1905a399f9e7f297b3e01c26a40813b33ba2803c1248ef5c218a",
+      "sourceCapable": true,
+      "observedPid": null,
+      "configured": "UNVERIFIED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    },
+    {
+      "path": "server/aiCompany/outcomeLedger.ts",
+      "sha256": "019210b0ac2d7ea1c2a7167aed51122799819b7dedd90cef5e0659a20648c8ee",
+      "sourceCapable": true,
+      "observedPid": null,
+      "configured": "UNVERIFIED",
+      "successorAuthority": "NONE",
+      "targets": "UNRESOLVED_FULL_CENSUS"
+    }
+  ],
+  "nextAction": "Close all material runtime/source writers before genesis; do not infer absence from this bounded list."
+}

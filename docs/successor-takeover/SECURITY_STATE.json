@@ -1,0 +1,20 @@
+{
+  "schema": "ai-factory.security-state.v1",
+  "observedAt": "2026-10-02T10:57:41.046276+00:00",
+  "status": "PARTIAL_REPAIR_NOT_SECURITY_CLOSURE",
+  "localListener": "OBSERVED_127.0.0.1:8787",
+  "adminGuard": "SCOPED_40_ROUTES_INDEPENDENTLY_REVIEWED",
+  "trackedBrowserPaths": 0,
+  "historicalPrivateExposure": "OPEN",
+  "privateRuntimeTracking": "PARTIAL_KNOWN_HOST_IDENTITIES_REMOVED; BROADER_STORES_OPEN",
+  "otherMutationAuthorities": "OPEN",
+  "runtimeRevision": "UNATTESTED",
+  "productionAutonomy": "DISABLED_CONFIGURED",
+  "candidateAuthority": "NONE",
+  "evidence": [
+    "evidence/security-boundary-runtime.json",
+    "evidence/private-state-after.txt"
+  ],
+  "sourceRevision": "a514103b88430a3e10020286b4680b2e385f7e39",
+  "knownHostIdentitySourcePaths": "SIX_REMOVED_FROM_INDEX_REVIEWED; SOURCE_COMMIT_PENDING"
+}

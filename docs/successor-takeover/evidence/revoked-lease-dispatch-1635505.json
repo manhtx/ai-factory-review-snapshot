@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-05T09:51:30.903Z",
+  "sourceRevision": "1635505dfa3416a831048f308a3257fbc1370db6",
+  "sourceTreeClean": true,
+  "sourceHash": "9cad0e74479d5d0c899f4dac94eb588cde70d96bd2ff7b222219eb3ab1387d29",
+  "scope": "Actual execution lease issuer/revoker; actual role-dispatch entrypoint and genuine queued handoff/attempt; private temporary Node codex stub, no real providers/models/product effects",
+  "issuedLeaseId": "LEASE:MARATHON-ANTIGRAVITY-PERPETUAL-01:rev-1",
+  "leaseStatusBeforeDispatch": "REVOKED",
+  "leaseBytesPreserved": true,
+  "cliExitCode": 0,
+  "stderr": "",
+  "workState": "DONE",
+  "attemptId": "c85be56b-3647-4a57-9b32-d85a9a0cdb07",
+  "receiptLeaseId": "LEASE:MARATHON-ANTIGRAVITY-PERPETUAL-01:rev-1",
+  "receiptRevision": 1,
+  "stubCalled": true,
+  "conclusion": "Supplied genuinely revoked execution selection is not an enforced dispatch fence; its ID/revision is still attached to receipt while queue attempt authority permits temporary DONE. This is not product success or proof of unauthorized host access.",
+  "providerCompanyCalls": 0,
+  "independent": false
+}

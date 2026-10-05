@@ -1,0 +1,23 @@
+{
+  "schema": "ai-factory.scoped-proof.v1",
+  "observedAt": "2026-10-02T15:50:38.731Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/stale-attempt-probe-zAXZ9T",
+  "sourceHash": "ece699a3570f0dc396a6ee43e28088c1ecbb01b15fa17f9cbb0c51e87c387770",
+  "oldClaim": {
+    "owner": "old-owner",
+    "revision": 2
+  },
+  "newClaim": {
+    "owner": "new-owner",
+    "revision": 6
+  },
+  "staleAttemptRejected": true,
+  "error": "current claimed attempt authority is required; missing, stale or invalid capability",
+  "finalState": "IN_REVIEW",
+  "finalOwner": "new-owner",
+  "limits": [
+    "Temp-only callback; no provider/product effect",
+    "CLI and evidence attempt origin still OPEN",
+    "No live/G1 action"
+  ]
+}

@@ -1,0 +1,67 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests | 4 failed) 10ms
+   ✓ evidence admission integrity > admits a current matching control with exact content hash 1ms
+   ✓ evidence admission integrity > rejects identity 0ms
+   ✓ evidence admission integrity > rejects invalidTime 0ms
+   ✓ evidence admission integrity > rejects futureTime 0ms
+   ✓ evidence admission integrity > rejects invalidCalendar 0ms
+   ✓ evidence admission integrity > rejects missingZone 0ms
+   ✓ evidence admission integrity > rejects emptyProducer 0ms
+   ✓ evidence admission integrity > rejects malformedContent 0ms
+   ✓ evidence admission integrity > rejects missingNamespace 0ms
+   ✓ evidence admission integrity > rejects missingRun 0ms
+   ✓ evidence admission integrity > rejects invalid maximum age NaN 0ms
+   ✓ evidence admission integrity > rejects invalid maximum age Infinity 0ms
+   ✓ evidence admission integrity > rejects invalid maximum age -1 0ms
+   ✓ evidence admission integrity > rejects an invalid or throwing policy clock 0ms
+   × evidence admission integrity > rejects malformed supplied policy null 2ms
+     → Cannot read properties of null (reading 'expected_namespace')
+   × evidence admission integrity > rejects malformed supplied policy {"expected_namespace":"isolated","expected_run_id":"run-isolated","reviewer_role":"quality-control","max_age_ms":null} 0ms
+     → expected 0 to be greater than 0
+   × evidence admission integrity > rejects malformed supplied policy {"expected_namespace":"isolated","expected_run_id":"run-isolated","reviewer_role":"quality-control","now":false} 0ms
+     → expected 0 to be greater than 0
+   × evidence admission integrity > rejects malformed supplied policy {"expected_namespace":"isolated","expected_run_id":"run-isolated","reviewer_role":"quality-control","now":null} 0ms
+     → expected 0 to be greater than 0
+   ✓ evidence admission integrity > rejects damaged ledger rows without changing bytes: {corrupt 2ms
+   ✓ evidence admission integrity > rejects damaged ledger rows without changing bytes: null 1ms
+   ✓ evidence admission integrity > rejects damaged ledger rows without changing bytes: [] 1ms
+   ✓ evidence admission integrity > rejects damaged ledger rows without changing bytes: {} 1ms
+   ✓ evidence admission integrity > rejects damaged ledger rows without changing bytes: {"evidence_i 1ms
+   ✓ evidence admission integrity > resolves a valid ledger and treats a missing file as unresolved 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects malformed supplied policy null
+TypeError: Cannot read properties of null (reading 'expected_namespace')
+ ❯ validateEvidenceResolution server/aiCompany/evidenceResolver.ts:110:15
+    108|
+    109|   // 1. Namespace match
+    110|   if (context.expected_namespace && evidence.namespace !== context.exp…
+       |               ^
+    111|     errors.push(
+    112|       `evidence '${evidenceId}' namespace mismatch: expected '${contex…
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts:33:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects malformed supplied policy {"expected_namespace":"isolated","expected_run_id":"run-isolated","reviewer_role":"quality-control","max_age_ms":null}
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects malformed supplied policy {"expected_namespace":"isolated","expected_run_id":"run-isolated","reviewer_role":"quality-control","now":false}
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects malformed supplied policy {"expected_namespace":"isolated","expected_run_id":"run-isolated","reviewer_role":"quality-control","now":null}
+AssertionError: expected 0 to be greater than 0
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts:33:116
+     31|   for (const policy of [null, { ...context, max_age_ms: null }, { ...c…
+     32|     it(`rejects malformed supplied policy ${JSON.stringify(policy)}`, …
+     33|       expect(validateEvidenceResolution(record, 'EV-REAL', policy as u…
+       |                                                                                                                    ^
+     34|     });
+     35|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 20 passed (24)
+   Start at  18:04:37
+   Duration  383ms (transform 23ms, setup 0ms, collect 21ms, tests 10ms, environment 0ms, prepare 34ms)

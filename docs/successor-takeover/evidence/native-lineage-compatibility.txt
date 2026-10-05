@@ -1,0 +1,116 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests | 7 failed) 148ms
+   × native evidence admission > resolves actual assignment scope and original output hash through the native ledger 16ms
+     → native provider dispatch requires actual claimed attempt
+   ✓ native evidence admission > rejects missing resolver before dispatch or any queue write 15ms
+   ✓ native evidence admission > preserves legacy receipt history without fabricating its missing lineage 2ms
+   × native evidence admission > retains original content hash so changed receipt bytes fail admission 1ms
+     → native provider receipt requires a valid claimed attempt_id
+   × native evidence admission > rejects corrupt and duplicate native records without salvaging a requested receipt 0ms
+     → native provider receipt requires a valid claimed attempt_id
+   × native evidence admission > does not manufacture a coder contract from unstructured provider prose 10ms
+     → expected [Function] to throw error including 'invalid structured role output' but got 'native provider dispatch requires act…'
+   × native evidence admission > does not manufacture independent QA PASS from an own-role receipt 9ms
+     → expected [Function] to throw error including 'invalid review verdict' but got 'native provider dispatch requires act…'
+   ✓ native evidence admission > preserves unresolved citations from structured output instead of replacing them with a receipt 37ms
+   ✓ native evidence admission > preserves unresolved top-level adapter evidence instead of replacing it with a receipt 35ms
+   × native evidence admission > rejects own-role evidence for review work named by suffix even outside the review-role list 10ms
+     → native provider receipt requires a valid claimed attempt_id
+   × native evidence admission > accepts a real review contract citing a same-scope explicit dependency rather than its own receipt 10ms
+     → native provider receipt requires a valid claimed attempt_id
+ ❯ server/aiCompany/roleWorkExecutor.test.ts (8 tests | 1 failed) 343ms
+   ✓ role work execution loop > completes with evidence and blocks failed workers 68ms
+   ✓ role work execution loop > bridges a configured model only when it returns server-owned evidence 40ms
+   ✓ role work execution loop > blocks model output that has no evidence 27ms
+   ✓ role work execution loop > blocks execution when the coordinator has not recorded a handoff 18ms
+   × role work execution loop > creates server-owned evidence from bounded provider output 11ms
+     → native provider receipt requires a valid claimed attempt_id
+   ✓ role work execution loop > returns a lineage-linked research result for user and review roles 34ms
+   ✓ role work execution loop > runs ready work with bounded concurrency 109ms
+   ✓ role work execution loop > blocks work that has not started when the batch budget is exhausted 35ms
+ ❯ server/aiCompany/roleEvidenceLedger.test.ts (1 test | 1 failed) 2ms
+   × RoleEvidenceLedger > creates deterministic server-owned evidence and deduplicates 2ms
+     → native provider receipt requires a valid claimed attempt_id
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 9 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > resolves actual assignment scope and original output hash through the native ledger
+Error: native provider dispatch requires actual claimed attempt
+ ❯ server/aiCompany/roleWorkExecutor.ts:48:153
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts:16:245
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/9]⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > retains original content hash so changed receipt bytes fail admission
+Error: native provider receipt requires a valid claimed attempt_id
+ ❯ RoleEvidenceLedger.record server/aiCompany/roleEvidenceLedger.ts:23:146
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts:52:30
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/9]⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > rejects corrupt and duplicate native records without salvaging a requested receipt
+Error: native provider receipt requires a valid claimed attempt_id
+ ❯ RoleEvidenceLedger.record server/aiCompany/roleEvidenceLedger.ts:23:146
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts:60:30
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/9]⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > does not manufacture a coder contract from unstructured provider prose
+AssertionError: expected [Function] to throw error including 'invalid structured role output' but got 'native provider dispatch requires act…'
+
+Expected: "invalid structured role output"
+Received: "native provider dispatch requires actual claimed attempt"
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/9]⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > does not manufacture independent QA PASS from an own-role receipt
+AssertionError: expected [Function] to throw error including 'invalid review verdict' but got 'native provider dispatch requires act…'
+
+Expected: "invalid review verdict"
+Received: "native provider dispatch requires actual claimed attempt"
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/9]⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > rejects own-role evidence for review work named by suffix even outside the review-role list
+Error: native provider receipt requires a valid claimed attempt_id
+ ❯ RoleEvidenceLedger.record server/aiCompany/roleEvidenceLedger.ts:23:146
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts:108:30
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/9]⎯
+
+ FAIL  server/aiCompany/nativeEvidenceAdmission.test.ts > native evidence admission > accepts a real review contract citing a same-scope explicit dependency rather than its own receipt
+Error: native provider receipt requires a valid claimed attempt_id
+ ❯ RoleEvidenceLedger.record server/aiCompany/roleEvidenceLedger.ts:23:146
+
+ ❯ server/aiCompany/nativeEvidenceAdmission.test.ts:120:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/9]⎯
+
+ FAIL  server/aiCompany/roleEvidenceLedger.test.ts > RoleEvidenceLedger > creates deterministic server-owned evidence and deduplicates
+Error: native provider receipt requires a valid claimed attempt_id
+ ❯ RoleEvidenceLedger.record server/aiCompany/roleEvidenceLedger.ts:23:146
+
+ ❯ server/aiCompany/roleEvidenceLedger.test.ts:6:518
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/9]⎯
+
+ FAIL  server/aiCompany/roleWorkExecutor.test.ts > role work execution loop > creates server-owned evidence from bounded provider output
+Error: native provider receipt requires a valid claimed attempt_id
+ ❯ RoleEvidenceLedger.record server/aiCompany/roleEvidenceLedger.ts:23:146
+
+ ❯ server/aiCompany/roleWorkExecutor.test.ts:78:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/9]⎯
+
+
+ Test Files  3 failed (3)
+      Tests  9 failed | 11 passed (20)
+   Start at  21:50:43
+   Duration  994ms (transform 80ms, setup 0ms, collect 126ms, tests 494ms, environment 0ms, prepare 78ms)
+

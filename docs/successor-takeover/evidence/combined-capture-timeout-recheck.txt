@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 3561ms
+   ✓ native durable dispatch issuance > admits one of concurrent same-claim native dispatches before provider  2630ms
+ ✓ server/aiCompany/combinedEvidenceCapture.test.ts (10 tests) 954ms
+
+ Test Files  2 passed (2)
+      Tests  25 passed (25)
+   Start at  14:35:23
+   Duration  6.95s (transform 196ms, setup 0ms, collect 322ms, tests 4.51s, environment 0ms, prepare 159ms)
+

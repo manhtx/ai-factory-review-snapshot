@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 1002ms
+   ✓ native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request  414ms
+
+ Test Files  1 passed (1)
+      Tests  15 passed (15)
+   Start at  23:21:11
+   Duration  2.04s (transform 284ms, setup 0ms, collect 359ms, tests 1.00s, environment 0ms, prepare 132ms)
+

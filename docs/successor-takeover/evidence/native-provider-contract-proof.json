@@ -1,0 +1,136 @@
+{
+  "schema": "ai-factory.native-provider-contract-proof.v1",
+  "authoritative": false,
+  "observedAt": "2026-10-04T15:51:22.074696+00:00",
+  "sourceRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "sourceTreeClean": false,
+  "sourceHashes": {
+    "server/aiCompany/roleWorkExecutor.ts": "5247a30b2ba9775af49491fbfcfca75c40be1890bb794edad77443b480db791c",
+    "server/aiCompany/openaiCompatibleRoleAdapter.ts": "caa009117c8702498f39e43b398c500274938752345f889a64c031564580153b",
+    "server/aiCompany/roleEvidenceLedger.ts": "de4009ebc737fc85b494ae9fc94b179d3408236f386aa27fb6d7a54601e236b4",
+    "server/aiCompany/orchestrator.ts": "3febbe998529c58c471644eaffea8912d0de5193119050f4f863823e87313fd8",
+    "server/aiCompany/researchResult.ts": "4c16c1af4708fe96ab7b3c9c479f08bee5c94e6a68995adee16a514607818d1c",
+    "server/aiCompany/roleWorkQueue.ts": "30a7080c3f6b0ab178e94bac913d4a492d362d563b1fd9a6f2e5a04e27d4e8d1",
+    "server/aiCompany/nativeProviderContract.test.ts": "dd81bd2f54ac004a4bb91cc9bc2dcb2af0f5709d41110171e3c5d602221d04d7",
+    "server/aiCompany/nativeEvidenceAdmission.test.ts": "09a6f759725cd95388727613b1c68f6a548aa28a0e72d96bf88f419d39d3d216",
+    "server/aiCompany/roleWorkExecutor.test.ts": "59505a910e59b0c014f47bb6ff286888171e8066fba8265e7bd04ddf6911da0f",
+    "server/aiCompany/openaiCompatibleRoleAdapter.test.ts": "16e0c84b8a9338d0c75e4d2f5121fbe6871815942f086f28c1a7407dd75ee7d3"
+  },
+  "status": "SCOPED_INPUT_OUTPUT_AND_INVOCATION_BOUNDS_REPAIRED; GLOBAL_ISSUANCE_EFFECT_AUTHORITY_OPEN",
+  "evidence": {
+    "before": "native-provider-packet-result.json: original scope dropped; risk P2->P1 timeout17->60; prose converted to DONE",
+    "after": "native-provider-packet-after-result.json: full assignment exact, P2/criteria/timeout17 preserved; prose refused, direct work remains CLAIMED with RECEIVED advisory transcript",
+    "independent": "native-contract-independent-result.json; stable exact hashes, actual wire+typed fields+sequential replay+deadline probes",
+    "independentCounterexample": "native-contract-independent-before.json: sequential replay made2 requests, initial source hash unavailable explicitly recorded",
+    "integrated": "native-contract-final-integrated.txt:240PASS25FILES; original201denominator included",
+    "genericAdapter": "native-contract-model-adapter.txt:1PASS",
+    "independentTests": "native-contract-independent-tests.txt:27PASS",
+    "lint": "native-contract-final-lint.txt:PASS",
+    "typecheck": "native-contract-final-typecheck.txt:FAIL11_OTHER_DIAGNOSTICS"
+  },
+  "limitations": [
+    "Root uncommitted source only; no live restart, HTTP activation, candidate propagation/sealing/promotion or public deployment",
+    "One request per native wrapper invocation; existing receipt replay rejected. Concurrent/no-response/crash/generic wrapper dispatch issuance remains OPEN",
+    "Text-only provider packet includes assignment metadata, not real referenced input bytes or tools; no actual product execution/effect/outcome evidence",
+    "Transcript remains RECEIVED/PROVIDER_OUTPUT; typed contract admission DONE does not prove product truth, independent review or outcome",
+    "OS actor/writer fencing, exact revision/effect, atomic receipt admission/crossstore reads, original-source terminal reevaluation and wider script callers remain OPEN",
+    "Full typecheck still FAIL11_OTHER_DIAGNOSTICS; scoped tests not full repo gate",
+    "Denied G1 action preserved, not retried/substituted/bypassed; A/B/C/D UNPROVEN and production autonomy DISABLED"
+  ],
+  "actualCompanyProviderCalls": 0,
+  "twentyPassDecisionRecord": [
+    {
+      "pass": 1,
+      "result": "Current source and actual stub wire reobserved; dirty HEAD recorded"
+    },
+    {
+      "pass": 2,
+      "result": "Exact assignment and explicit provider contract required"
+    },
+    {
+      "pass": 3,
+      "result": "Original dropped packet and synthetic prose DONE retained"
+    },
+    {
+      "pass": 4,
+      "result": "Independent duplicate dispatch counterexample found and sequential receipt replay repaired"
+    },
+    {
+      "pass": 5,
+      "result": "Transport reduction and wrapper synthesis separately observed, not attributed to network"
+    },
+    {
+      "pass": 6,
+      "result": "Claim capability retained locally; provider receives nonsecret attempt only"
+    },
+    {
+      "pass": 7,
+      "result": "Concurrent dispatch and no-response issuance explicitly OPEN"
+    },
+    {
+      "pass": 8,
+      "result": "Malformed output/deadline/request-budget negatives pass"
+    },
+    {
+      "pass": 9,
+      "result": "Actual wire contains no raw token; no live/network/private/external action"
+    },
+    {
+      "pass": 10,
+      "result": "Original references preserved; unknown refs reject; transcript only RECEIVED"
+    },
+    {
+      "pass": 11,
+      "result": "Final independent stable source hashes plus exact source inventory; no whole revision certificate"
+    },
+    {
+      "pass": 12,
+      "result": "No supplied product observations or source bytes invented; real input access OPEN"
+    },
+    {
+      "pass": 13,
+      "result": "Prevents fabricated research success; no measured product-value claim"
+    },
+    {
+      "pass": 14,
+      "result": "No stacked config retries per native invocation; max token request respects assignment"
+    },
+    {
+      "pass": 15,
+      "result": "Existing fingerprint receipts retained; legitimate research/retry fixtures explicitly typed/budgeted"
+    },
+    {
+      "pass": 16,
+      "result": "Local uncommitted repair, no runtime/candidate migration; rollback drill NOT_PERFORMED"
+    },
+    {
+      "pass": 17,
+      "result": "Receipt replay prevents dispatch; atomicity/crash/no-response remains unresolved"
+    },
+    {
+      "pass": 18,
+      "result": "Reuse queue/adapter/ledger; no new store, scheduler or agent"
+    },
+    {
+      "pass": 19,
+      "result": "Fresh independent actual fake-fetch probes and27tests passed; initial counterexample hash limit retained"
+    },
+    {
+      "pass": 20,
+      "result": "Scoped repair supported; global authority/operation and all four blocks remain UNPROVEN"
+    }
+  ],
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/aiCompany/roleWorkExecutor.ts",
+      "server/aiCompany/roleWorkQueue.ts",
+      "server/aiCompany/nativeProviderContract.test.ts",
+      "server/aiCompany/nativeEvidenceAdmission.test.ts",
+      "server/aiCompany/roleWorkExecutor.test.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "ai-factory.independent-review.v1",
+  "observedAt": "2026-10-02T10:51:46.559538+00:00",
+  "reviewer": "fresh security_independent_review agent",
+  "scope": "Focused local listener/admin ordering/admin socket-budget/named browser-path census",
+  "sourceHashes": {
+    "server/index.ts": "3457118c42f54aeae3b91738f3c0e132e59450aaf83712ca94a050ed72f09587",
+    "server/rateLimit.ts": "001ec8c75eb912983b55fa7ebfce90b248fd1dc6539dc1a941e015e030cedbd0",
+    "server/rateLimit.test.ts": "a1fecdc580231fa882a951c6b72062bbd724362bcb2023f46e8fe988bbafe53b",
+    "scripts/audit-ai-company-secrets.mjs": "6ab8828ede51c3e0ce8d5eaad3e57830d47f891cdb7bb337a3afd2c7e90fae25",
+    "scripts/audit-ai-company-secrets.test.mjs": "6f91ba75b726f08194ffe8d0c4dacfaba0d2908a988ca9e0aed6050f14b76be9",
+    ".gitignore": "86c1991d00b3eb514eff16a3b942cc9a9c9e46b6b06594e2ea4141e7882ba253"
+  },
+  "initialCounterexamples": [
+    "Alternative profile paths missed",
+    "Caller-controlled admin budget identities",
+    "Unauthenticated nonmutating OPTIONS exception",
+    "HEAD browser state not yet removed"
+  ],
+  "recheck": {
+    "browserGuardTests": "6/6 PASS",
+    "adminLimiterTests": "6/6 PASS",
+    "focusedActionableFlaws": "NONE_FOUND"
+  },
+  "limitations": [
+    "Current source/isolated behavior only, no whole security or successor closure",
+    "No exact loaded-runtime attestation",
+    "Named path census cannot detect arbitrary renamed secrets",
+    "Historical browser objects remain",
+    "No G1 denied action invoked"
+  ],
+  "reservedActionsPerformed": []
+}

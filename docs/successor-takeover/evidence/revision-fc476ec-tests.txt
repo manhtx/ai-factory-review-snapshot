@@ -1,0 +1,93 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 14230ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1586ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1310ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  319ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1382ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1938ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  1060ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1141ms
+   ✓ CLI review preserves actual original reference for same-scope  1194ms
+   ✓ CLI review preserves actual original reference for cross-scope  1209ms
+   ✓ CLI review preserves actual original reference for unresolved  1185ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1262ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 3429ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 3841ms
+   ✓ pre-release review gate > fails closed until every independent review has evidence  305ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  384ms
+   ✓ denies withdrawn current review authority  437ms
+   ✓ denies missing current review authority  375ms
+   ✓ denies nonpass current review authority  377ms
+   ✓ denies missing-verdict current review authority  405ms
+   ✓ uses full dependency snapshot before selecting review backlog  370ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  385ms
+   ✓ plain rows and copied views cannot certify prerelease  386ms
+   ✓ cannot approve an empty target project using healthy foreign work  414ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 958ms
+   ✓ release promotion > promotes only after full independent quorum  409ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  417ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3814ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1574ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1532ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3384ms
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (31 tests) 1367ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 2529ms
+   ✓ cadence quorum > passes only when every daily accountable role is done with evidence  331ms
+   ✓ denies withdrawn governance inputs despite historical DONE  357ms
+   ✓ denies missing governance inputs despite historical DONE  326ms
+   ✓ reads healthy dependencies outside cadence selection  306ms
+   ✓ revokes receiptless cadence and rejects stale views  362ms
+   ✓ plain rows and copied views cannot certify cadence  380ms
+   ✓ cannot approve target cadence using another project governance  357ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 693ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2152ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  303ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  438ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  302ms
+   ✓ WorktreeManager > merges verified product changes into main git history and marks worktree MERGED  301ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 547ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 586ms
+ ✓ server/aiCompany/combinedEvidenceCapture.test.ts (10 tests) 892ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 922ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 744ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 1447ms
+   ✓ does not generate prerelease reviews from receiptless QA/QC history  332ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 595ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 759ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 509ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 566ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 596ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 347ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 466ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 343ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 513ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 376ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 328ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 307ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 511ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 336ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 237ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 261ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 22ms
+ ✓ server/aiCompany/executionLease.test.ts (20 tests) 23ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 83ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 55ms
+ ✓ server/aiCompany/companyNbaRouter.test.ts (23 tests) 5ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 13ms
+ ✓ server/aiCompany/productIntelligenceRecoveryV2.test.ts (11 tests) 3ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 8ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 8ms
+ ✓ server/aiCompany/executionPlanner.test.ts (13 tests) 4ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 3ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 4ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+ ✓ src/app/pages/RegimeDetectionPage.test.tsx (4 tests) 125ms
+
+ Test Files  47 passed (47)
+      Tests  495 passed (495)
+   Start at  15:37:29
+   Duration  56.22s (transform 533ms, setup 0ms, collect 1.42s, tests 48.94s, environment 427ms, prepare 1.27s)
+

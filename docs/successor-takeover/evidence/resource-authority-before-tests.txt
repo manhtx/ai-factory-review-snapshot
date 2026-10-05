@@ -1,0 +1,223 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts (17 tests | 17 failed) 85ms
+   × late A release preserves B and C cannot enter while B is alive 8ms
+     → promise resolved "undefined" instead of rejecting
+   × does not steal a slow live owner even under a +16-minute clock fault 12ms
+     → promise resolved "{ decision: { …(14) }, …(1) }" instead of rejecting
+   × issues distinct owner identities at an identical clock instant and keeps queue bytes untouched 6ms
+     → expected 'AGY-LEASE-1791158400000' not to be 'AGY-LEASE-1791158400000' // Object.is equality
+   × one concurrent acquisition wins without an initialization window 7ms
+     → expected [ { status: 'fulfilled', …(1) }, …(2) ] to have a length of 1 but got 3
+   × withholds missing owner state without deleting it 4ms
+     → expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+   × withholds corrupt owner state without deleting it 4ms
+     → expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+   × withholds invalid-pid owner state without deleting it 7ms
+     → RESOURCE_ADMISSION_BUSY: another Antigravity cognition lease is active
+   × withholds wrong-decision owner state without deleting it 4ms
+     → RESOURCE_ADMISSION_BUSY: another Antigravity cognition lease is active
+   × withholds symlink owner state without deleting it 3ms
+     → RESOURCE_ADMISSION_BUSY: another Antigravity cognition lease is active
+   × withholds hardlink owner state without deleting it 3ms
+     → RESOURCE_ADMISSION_BUSY: another Antigravity cognition lease is active
+   × withholds corrupt quota evidence rather than treating it as absent 4ms
+     → expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+   × withholds unknown-status quota evidence rather than treating it as absent 3ms
+     → expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+   × withholds invalid-date quota evidence rather than treating it as absent 3ms
+     → expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+   × withholds unknown-reset quota evidence rather than treating it as absent 3ms
+     → expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+   × does not follow an aliased quota file 4ms
+     → expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+   × does not reinterpret unreadable quota evidence as absence 4ms
+     → expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+   × retains the real quota-ledger bounded backoff when reset time is unknown 4ms
+     → expected 'ALLOW' to be 'HOLD_EXHAUSTED' // Object.is equality
+ ✓ server/aiCompany/resourceGovernor.test.ts (4 tests) 8ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 17 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > late A release preserves B and C cannot enter while B is alive
+AssertionError: promise resolved "undefined" instead of rejecting
+
+- Expected: 
+Error {
+  "message": "rejected promise",
+}
+
++ Received: 
+undefined
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:20:27
+     18|   await a.release(); const b = await acquireAntigravityAdmission({ roo…
+     19|   const bytes = await readFile(f.owner);
+     20|   await expect(a.release()).rejects.toThrow('RESOURCE_ADMISSION_STALE_…
+       |                           ^
+     21|   expect(await readFile(f.owner)).toEqual(bytes);
+     22|   await expect(acquireAntigravityAdmission({ root: f.root, model: 'fix…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > does not steal a slow live owner even under a +16-minute clock fault
+AssertionError: promise resolved "{ decision: { …(14) }, …(1) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "decision": {
++     "decision": "ALLOW",
++     "evidence_level": "ERROR_ONLY_RESOURCE_SIGNAL",
++     "executor": "agy",
++     "freshness": "unknown",
++     "lease_id": "AGY-LEASE-1791191510385",
++     "model_id": "fixture",
++     "observed_at": "2026-10-05T09:11:50.385Z",
++     "owner_pid": 44379,
++     "reason": "No structured preflight quota signal is exposed by the installed Antigravity CLI; allow only under error-only reactive policy.",
++     "remaining_fraction": null,
++     "reset_at": null,
++     "resource_pool_id": "antigravity-host",
++     "snapshot_age_ms": 0,
++     "source": "agy-cli-1.2.4:error-only",
++   },
++   "release": [Function release],
+  }
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:29:119
+     27|   const f = await fixture(); const a = await acquireAntigravityAdmissi…
+     28|   const bytes = await readFile(f.owner);
+     29|   await expect(acquireAntigravityAdmission({ root: f.root, model: 'fix…
+       |                                                                                                                       ^
+     30|   expect(await readFile(f.owner)).toEqual(bytes); await a.release();
+     31| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > issues distinct owner identities at an identical clock instant and keeps queue bytes untouched
+AssertionError: expected 'AGY-LEASE-1791158400000' not to be 'AGY-LEASE-1791158400000' // Object.is equality
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:38:35
+     36|   const now = new Date('2026-10-05T00:00:00.000Z'); const a = await ac…
+     37|   await a.release(); const b = await acquireAntigravityAdmission({ roo…
+     38|   expect(b.decision.lease_id).not.toBe(a.decision.lease_id); expect(aw…
+       |                                   ^
+     39|   const stored = await readFile(f.owner, 'utf8'); expect(JSON.parse(st…
+     40| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > one concurrent acquisition wins without an initialization window
+AssertionError: expected [ { status: 'fulfilled', …(1) }, …(2) ] to have a length of 1 but got 3
+
+- Expected
++ Received
+
+- 1
++ 3
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:45:20
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds missing owner state without deleting it
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds corrupt owner state without deleting it
+AssertionError: expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+
+Expected: "UNKNOWN"
+Received: "ALLOW"
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:58:128
+     56|   }
+     57|   const names = await readdir(f.lock); const bytes = kind === 'missing…
+     58|   const admission = await acquireAntigravityAdmission({ root: f.root, …
+       |                                                                                                                                ^
+     59|   await admission.release(); expect(await readdir(f.lock)).toEqual(nam…
+     60| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds invalid-pid owner state without deleting it
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds wrong-decision owner state without deleting it
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds symlink owner state without deleting it
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds hardlink owner state without deleting it
+Error: RESOURCE_ADMISSION_BUSY: another Antigravity cognition lease is active
+ ❯ acquireAntigravityAdmission server/aiCompany/resourceGovernor.ts:55:19
+     53|       await mkdir(lockPath);
+     54|     }
+     55|     catch { throw new Error('RESOURCE_ADMISSION_BUSY: another Antigrav…
+       |                   ^
+     56|   }
+     57|   const decision = await evaluateAntigravityAdmission({ root, model, n…
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:58:21
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds corrupt quota evidence rather than treating it as absent
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds unknown-status quota evidence rather than treating it as absent
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds invalid-date quota evidence rather than treating it as absent
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > withholds unknown-reset quota evidence rather than treating it as absent
+AssertionError: expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+
+Expected: "UNKNOWN"
+Received: "ALLOW"
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:69:93
+     67| ] as const)('withholds %s quota evidence rather than treating it as ab…
+     68|   const f = await fixture(); await mkdir(f.runtime, { recursive: true …
+     69|   expect((await evaluateAntigravityAdmission({ root: f.root, model: 'f…
+       |                                                                                             ^
+     70|   const admission = await acquireAntigravityAdmission({ root: f.root, …
+     71|   expect(await readFile(f.pause, 'utf8')).toBe(bytes); expect(await re…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > does not follow an aliased quota file
+AssertionError: expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+
+Expected: "UNKNOWN"
+Received: "ALLOW"
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:76:93
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > does not reinterpret unreadable quota evidence as absence
+AssertionError: expected 'ALLOW' to be 'UNKNOWN' // Object.is equality
+
+Expected: "UNKNOWN"
+Received: "ALLOW"
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:81:99
+     79| it('does not reinterpret unreadable quota evidence as absence', async …
+     80|   const f = await fixture(); await mkdir(f.runtime, { recursive: true …
+     81|   try { expect((await evaluateAntigravityAdmission({ root: f.root, mod…
+       |                                                                                                   ^
+     82|   finally { await chmod(f.pause, 0o600); }
+     83| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/17]⎯
+
+ FAIL  server/aiCompany/resourceAdmissionAuthority.test.ts > retains the real quota-ledger bounded backoff when reset time is unknown
+AssertionError: expected 'ALLOW' to be 'HOLD_EXHAUSTED' // Object.is equality
+
+Expected: "HOLD_EXHAUSTED"
+Received: "ALLOW"
+
+ ❯ server/aiCompany/resourceAdmissionAuthority.test.ts:87:136
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/17]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  17 failed | 4 passed (21)
+   Start at  15:55:49
+   Duration  888ms (transform 45ms, setup 0ms, collect 56ms, tests 93ms, environment 0ms, prepare 94ms)
+

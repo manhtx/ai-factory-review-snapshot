@@ -1,0 +1,181 @@
+import { hasNonPassReview, RoleWorkQueue, type RoleWorkItem, type AttemptAuthority } from './roleWorkQueue';
+import type { RoleWorkExecutor } from './roleWorkExecutor';
+import { coordinateRecovery } from './recoveryCoordinator';
+import type { RecoveryPlan } from './recoveryPlan';
+import type { ReviewVerdict } from './verdict';
+import { selectAutonomousNextAction, type AutonomousNextAction } from './autonomousNextAction';
+
+export type TerminalRunState = 'SUCCESS' | 'TERMINAL_HOLD' | 'BLOCKED_EXTERNAL' | 'FAILED' | 'CANCELLED' | 'FOUNDER_APPROVAL_REQUIRED' | 'BUDGET_EXHAUSTED';
+
+export type AutonomousRunResult = {
+  status: TerminalRunState;
+  completed: RoleWorkItem[];
+  recovery_tasks: RoleWorkItem[];
+  runs: number;
+  interventions: number;
+  total_tokens_consumed?: number;
+  total_tokens_estimated?: number;
+  token_provenance?: 'ACTUAL' | 'ESTIMATED' | 'MIXED';
+  next_action?: AutonomousNextAction;
+  failure_reason?: string;
+};
+
+export interface AutonomousRunOptions {
+  queue: RoleWorkQueue;
+  projectId: string;
+  runId: string;
+  namespace: string;
+  execute: RoleWorkExecutor;
+  verdictFor?: (item: RoleWorkItem) => ReviewVerdict | undefined;
+  recoveryFor?: (item: RoleWorkItem, verdict: ReviewVerdict) => RecoveryPlan | undefined;
+  maxRoleRuns?: number;
+  maxRecoveryDepth?: number;
+  maxRuntimeMs?: number;
+  hardTokenBudget?: number;
+  isCancelled?: () => boolean;
+  requiresFounderApproval?: (item: RoleWorkItem) => boolean;
+}
+
+export async function runAutonomousWorkflow(input: AutonomousRunOptions): Promise<AutonomousRunResult> {
+  const started = Date.now();
+  const maxRuns = input.maxRoleRuns ?? 20;
+  const maxDepth = input.maxRecoveryDepth ?? 2;
+  const maxRuntime = input.maxRuntimeMs ?? 60_000;
+  const completed: RoleWorkItem[] = [];
+  const recoveryTasks: RoleWorkItem[] = [];
+  let runs = 0;
+  let totalTokens = 0;
+  let totalEstimatedTokens = 0;
+  let actualUsageCount = 0;
+  let estimatedUsageCount = 0;
+  let latestRows: RoleWorkItem[] = [];
+  const resultWithUsage = (status: TerminalRunState, extra: Partial<AutonomousRunResult> = {}): AutonomousRunResult => ({
+    status, completed, recovery_tasks: recoveryTasks, runs, interventions: 0,
+    total_tokens_consumed: actualUsageCount > 0 && estimatedUsageCount === 0 ? totalTokens : undefined,
+    total_tokens_estimated: totalEstimatedTokens,
+    token_provenance: actualUsageCount > 0 ? (estimatedUsageCount > 0 ? 'MIXED' : 'ACTUAL') : 'ESTIMATED',
+    next_action: selectAutonomousNextAction({ rows: latestRows, completed, status }),
+    ...extra,
+  });
+
+  try { input.queue.assertEvidenceResolutionConfigured(); }
+  catch (error: unknown) {
+    return resultWithUsage('BLOCKED_EXTERNAL', { failure_reason: error instanceof Error ? error.message : String(error) });
+  }
+
+  while (Date.now() - started < maxRuntime && runs < maxRuns) {
+    if (input.isCancelled?.()) {
+      return resultWithUsage('CANCELLED', { failure_reason: 'Stop requested by supervisor' });
+    }
+
+    const currentAuthority = await input.queue.currentAuthority(input.projectId);
+    const rows = currentAuthority.currentRows().filter((x) => x.assignment?.run_id === input.runId && x.assignment.namespace === input.namespace);
+    latestRows = rows;
+    const ready = rows.filter((x) => x.state === 'READY' && (x.depends_on ?? []).every((id) => currentAuthority.dependencySatisfied(x, currentAuthority.rows.find((d) => d.work_id === id))));
+
+    if (!ready.length) {
+      if (rows.some((x) => x.state === 'BLOCKED' && hasNonPassReview(x))) return resultWithUsage('TERMINAL_HOLD', { failure_reason: 'non-PASS source remains unresolved after bounded correction' });
+      if (rows.some((x) => x.state === 'BLOCKED')) {
+        return resultWithUsage('BLOCKED_EXTERNAL', { failure_reason: rows.find((x) => x.state === 'BLOCKED')?.blocked_reason });
+      }
+      if (rows.length > 0 && rows.every(row => currentAuthority.isSuccessful(row))) {
+        return resultWithUsage('SUCCESS');
+      }
+      return resultWithUsage('TERMINAL_HOLD', { failure_reason: 'Unresolvable state without ready work' });
+    }
+
+    for (const item of ready) {
+      if (input.isCancelled?.()) {
+        return resultWithUsage('CANCELLED', { failure_reason: 'Execution cancelled' });
+      }
+
+      if (input.requiresFounderApproval?.(item)) {
+        return resultWithUsage('FOUNDER_APPROVAL_REQUIRED', { interventions: 1, failure_reason: `Founder approval required for ${item.work_id}` });
+      }
+
+      if (runs >= maxRuns) {
+        return resultWithUsage('BUDGET_EXHAUSTED', { failure_reason: 'Max role runs exceeded' });
+      }
+
+      const itemTokenEstimate = item.assignment?.context_budget?.target_tokens ?? 2000;
+      if (input.hardTokenBudget && (totalTokens + itemTokenEstimate > input.hardTokenBudget)) {
+        return resultWithUsage('BUDGET_EXHAUSTED', { failure_reason: `Hard token budget (${input.hardTokenBudget}) exceeded` });
+      }
+
+      runs += 1;
+      totalEstimatedTokens += itemTokenEstimate;
+
+      let authority: AttemptAuthority | undefined;
+      try {
+        const { attempt_authority, ...claimed } = await input.queue.claim(item.work_id, `coordinator:${item.role}`);
+        authority = attempt_authority;
+        const result = await input.execute(claimed, authority);
+        const actual = result.usage && Number.isFinite(result.usage.input_tokens) && Number.isFinite(result.usage.output_tokens)
+          ? Math.max(0, result.usage.input_tokens) + Math.max(0, result.usage.output_tokens)
+          : null;
+        if (actual == null) { totalTokens += itemTokenEstimate; estimatedUsageCount += 1; }
+        else { totalTokens += actual; actualUsageCount += 1; }
+        await input.queue.submitForReview(item.work_id, authority);
+        const verdict = result.review_verdict ?? input.verdictFor?.(item);
+        const isReviewTask =
+          ['functional-qa', 'quality-control', 'critic', 'security', 'adversarial-reviewer', 'release-security-gate'].includes(item.role) ||
+          item.work_id.endsWith('-REVIEW') ||
+          item.assignment?.task_type === 'code_review';
+        if (!verdict && isReviewTask) throw new Error(`Review contract missing for ${item.role}; refusing implicit PASS`);
+        const structuredOutput = result.structured_output;
+        const isStructuredRole = [
+          'pm',
+          'tech-lead',
+          'coder',
+          'backend-engineer',
+          'frontend-engineer',
+          'data-engineer',
+          'ceo',
+          'ceo-guild',
+        ].includes(item.role);
+
+        if (!structuredOutput && isStructuredRole) throw new Error(`Structured output missing for ${item.role}; refusing implicit completion`);
+        if (!structuredOutput && !result.research_result && !verdict) throw new Error(`Role completion contract missing for ${item.role}`);
+        const done = await input.queue.complete(
+          item.work_id,
+          result.evidence_ids,
+          result.research_result,
+          verdict,
+          structuredOutput, undefined, undefined, authority
+        );
+        if ((await input.queue.currentAuthority(input.projectId)).isSuccessful(done)) completed.push(done);
+
+        if (verdict && verdict.verdict !== 'PASS' && verdict.recovery_required && input.recoveryFor) {
+          let plan: RecoveryPlan | undefined;
+          try {
+            plan = input.recoveryFor(done, verdict);
+          } catch (planError: any) {
+            await input.queue.block(item.work_id, `Invalid recovery plan: ${planError?.message}`, done);
+            return resultWithUsage('FAILED', { failure_reason: `Invalid recovery plan: ${planError?.message}` });
+          }
+          if (!plan) return resultWithUsage('TERMINAL_HOLD', { failure_reason: 'Missing recovery plan for recoverable non-PASS' });
+          
+          const depth = Number((item.assignment?.objective_id ?? '').toUpperCase().startsWith('RECOVERY:'));
+          if (depth >= maxDepth) return resultWithUsage('TERMINAL_HOLD', { failure_reason: `Max recovery depth (${maxDepth}) reached` });
+          
+          const recovery = await coordinateRecovery({ queue: input.queue, plan, projectId: input.projectId, runId: input.runId, namespace: input.namespace, sourceWorkId: item.work_id, attempts: depth });
+          if (recovery.status === 'CREATED' && recovery.task) {
+            recoveryTasks.push(recovery.task);
+          } else if (recovery.status === 'ESCALATE') {
+            return resultWithUsage('FOUNDER_APPROVAL_REQUIRED', { interventions: 1, failure_reason: 'Recovery retry budget exceeded with ESCALATE policy' });
+          } else if (recovery.status !== 'DEDUPLICATED') {
+            return resultWithUsage('TERMINAL_HOLD', { failure_reason: 'Recovery coordinator returned terminal hold' });
+          }
+        }
+      } catch (execError: any) {
+        if (authority) {
+          try { await input.queue.blockAttempt(item.work_id, `Execution failed: ${execError?.message ?? String(execError)}`, authority); }
+          catch { return resultWithUsage('BLOCKED_EXTERNAL', { failure_reason: 'Attempt lost authority; newer work state preserved' }); }
+        }
+        return resultWithUsage('BLOCKED_EXTERNAL', { failure_reason: execError?.message });
+      }
+    }
+  }
+
+  return resultWithUsage('BUDGET_EXHAUSTED', { failure_reason: 'Max runtime or run budget reached' });
+}

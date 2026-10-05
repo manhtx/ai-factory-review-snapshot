@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (6 tests) 206ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  11:05:53
+   Duration  551ms (transform 64ms, setup 0ms, collect 85ms, tests 206ms, environment 0ms, prepare 25ms)
+

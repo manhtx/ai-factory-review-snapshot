@@ -1,0 +1,76 @@
+{
+  "providerCalls": 0,
+  "canonicalMutations": false,
+  "routeVerified": "source inspection only; server/index not imported",
+  "hashes": {
+    "server/aiCompany/roleEvidenceLedger.ts": "c771d142550811f0d770a21b94c21699d72eb9fdcf3b6af427b09774dac64706",
+    "server/aiCompany/roleWorkQueue.ts": "c20fb74107a38e0f55a5e3f61487c738ab66999f5e1b6223e839bf812a86708a",
+    "server/aiCompany/roleWorkExecutor.ts": "baaf4aedf294cd803429a7b24fa87895b0bee25f886edc97c1373318590e0103",
+    "server/aiCompany/evidenceResolver.ts": "69bd74f05f77cb89d8635e207795973ca8a59f5d04e6579ca97f7d3d00982f74",
+    "server/aiCompany/adminWorkQueueTransport.ts": "c7c43e35122075e08294da8cf183567684e79744e31d062ef4b71eaec7888829",
+    "server/aiCompany/adminWorkQueueTransport.test.ts": "3e1b2be4d5f2cb1a5d57b3482421dd01f5a6311bdb0211a2d28ec9021a81b42e",
+    "server/index.ts": "1abdc1343475913014543cd9d9ed2905ed6862ee10bfc4a2438c1bab83a344c7"
+  },
+  "results": [
+    {
+      "mode": "old-handle",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-admin-old-handle-4lvjyh",
+      "result": "current claimed attempt authority is required; missing, stale or invalid capability",
+      "before": "99b0d4f0d39f309826ba8224027a1563e55299e424f885f5aee22510b9f5d73d",
+      "after": "99b0d4f0d39f309826ba8224027a1563e55299e424f885f5aee22510b9f5d73d",
+      "handleTokenPersisted": false
+    },
+    {
+      "mode": "old-receipt-new-handle",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-admin-old-receipt-new-handle-MbuNKe",
+      "result": "provider-output evidence 'ROLE-EVIDENCE-34ca8c380914d377a2c2' does not belong to the selected producer attempt",
+      "before": "59b3dc6083c8a2440c40002ba728bc61f7bd545f63a363da2f0185d3fb0d243c",
+      "after": "59b3dc6083c8a2440c40002ba728bc61f7bd545f63a363da2f0185d3fb0d243c",
+      "handleTokenPersisted": false
+    },
+    {
+      "mode": "current-receipt",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-admin-current-receipt-Loco9l",
+      "result": "DONE",
+      "before": "4ae759a79fdc3bf9d698ffd9beee30dbfc6935a6a206b288a6a185ad40bc1c5a",
+      "after": "0fec5e484bfe12ddc1cd9128c6c5f8b44a713fd013af5ca75c811b07a54d5181",
+      "handleTokenPersisted": false
+    },
+    {
+      "mode": "missing-handle",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-admin-missing-handle-twYuqL",
+      "result": "current claimed attempt authority is required; missing, stale or invalid capability",
+      "before": "9a7259565e0ffca3e5b757a9edabe45a49ced8f78fe98f43f671d3b117caeedf",
+      "after": "9a7259565e0ffca3e5b757a9edabe45a49ced8f78fe98f43f671d3b117caeedf",
+      "handleTokenPersisted": false
+    },
+    {
+      "mode": "erase-origin",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-admin-erase-origin-Ue3crQ",
+      "result": "provider-output evidence 'ROLE-EVIDENCE-155aa27b2091724383d8' does not belong to the selected producer attempt",
+      "before": "be01f78bdedc9b9427cf3cc0351c22d43577a3e482177e99574826eb74b15f4a",
+      "after": "be01f78bdedc9b9427cf3cc0351c22d43577a3e482177e99574826eb74b15f4a",
+      "handleTokenPersisted": false
+    },
+    {
+      "mode": "malformed-attempt",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-admin-malformed-attempt-0g6MAQ",
+      "result": "evidence resolution failed: evidence 'ROLE-EVIDENCE-37ee9ea6a7181274aafd' has an invalid record shape",
+      "before": "a0f9dc529fbf54e27c759c9018570d3037b3c0551f5b40599cdb02b690df49f7",
+      "after": "a0f9dc529fbf54e27c759c9018570d3037b3c0551f5b40599cdb02b690df49f7",
+      "handleTokenPersisted": false
+    },
+    {
+      "mode": "root-guard",
+      "queueRoot": "/tmp/control/projects/macro-os",
+      "stateRoot": "/tmp/control",
+      "result": "ACCEPT"
+    },
+    {
+      "mode": "root-guard",
+      "queueRoot": "/tmp/wrong/projects/macro-os",
+      "stateRoot": "/tmp/control",
+      "result": "admin queue root differs from configured native runtime; mutation refused"
+    }
+  ]
+}

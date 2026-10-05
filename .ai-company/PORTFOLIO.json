@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "last_updated": "2026-08-31T17:25:00.000Z",
+  "portfolio_allocation": {
+    "core_improvements_pct": 60,
+    "adjacent_bets_pct": 25,
+    "transformational_bets_pct": 15
+  },
+  "core_initiatives": [
+    {
+      "id": "CORE-01",
+      "title": "Truth Reset & Zero-Hallucination UI Derivation",
+      "horizon": "H0",
+      "status": "completed",
+      "owner": "CPO",
+      "roi": "Immediate restoration of platform trust"
+    },
+    {
+      "id": "CORE-02",
+      "title": "Universal Compare Engine with Dual-View Analysis (Time-Series & Scatter Regression)",
+      "horizon": "H1",
+      "status": "completed",
+      "owner": "CPO",
+      "roi": "Core institutional research workflow activation"
+    },
+    {
+      "id": "CORE-03",
+      "title": "Calendar-Aware Freshness & Publication Schedules",
+      "horizon": "H1",
+      "status": "completed",
+      "owner": "CDO",
+      "roi": "Data timeliness precision without artificial lag warnings"
+    },
+    {
+      "id": "CORE-04",
+      "title": "Layered Semantic & Bounds Validation Engine",
+      "horizon": "H1",
+      "status": "completed",
+      "owner": "CDO",
+      "roi": "Eliminates economic unit errors and data spike hallucinations"
+    }
+  ],
+  "adjacent_bets": [
+    {
+      "id": "ADJ-01",
+      "title": "Vietnam Deep Credit & Real Estate Transmission Engine",
+      "horizon": "H2",
+      "status": "in_progress",
+      "owner": "Chief Economist",
+      "roi": "Frontier market specialization moat"
+    },
+    {
+      "id": "ADJ-02",
+      "title": "Multi-Agent Dialectic Debate & Grounded Evidence Commentary",
+      "horizon": "H2",
+      "status": "in_progress",
+      "owner": "Chief Research Officer",
+      "roi": "Differentiated AI grounding against generic chatbots"
+    }
+  ],
+  "transformational_bets": [
+    {
+      "id": "TRANS-01",
+      "title": "Global Macro Causal Knowledge Graph & Autonomous Policy Simulator",
+      "horizon": "H3",
+      "status": "concept",
+      "owner": "CEO",
+      "roi": "15-year platform standard replacing legacy terminals"
+    }
+  ]
+}

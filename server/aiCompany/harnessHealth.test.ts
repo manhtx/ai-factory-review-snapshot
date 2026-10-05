@@ -1,0 +1,3 @@
+import { expect, it } from 'vitest'; import { canRunTestPolicy, classifyHarnessFindings } from './harnessHealth';
+it('separates harness degradation from product failure',()=>{expect(classifyHarnessFindings([{test_scope:'server/index',classification:'BASELINE_HARNESS_FAILURE',detail:'port null'}])).toBe('DEGRADED');expect(classifyHarnessFindings([{test_scope:'api',classification:'PRODUCT_FAILURE',detail:'bad'}])).toBe('BROKEN');});
+it('blocks broad tests on degraded harness but permits bounded tests',()=>{expect(canRunTestPolicy('DEGRADED','targeted')).toBe(true);expect(canRunTestPolicy('DEGRADED','full_suite')).toBe(false);});

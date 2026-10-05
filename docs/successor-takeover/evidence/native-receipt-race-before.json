@@ -1,0 +1,10 @@
+{
+  "observedAt": "2026-10-05T03:59:52.597Z",
+  "scope": "Temporary native receipt writer only; no actual provider/effect authority",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-receipt-race-DnEHNy",
+  "successfulWriterCalls": 2,
+  "storedRows": 2,
+  "uniqueIdentities": 1,
+  "resolverError": "Error: corrupt native evidence ledger: duplicate evidence identity",
+  "realProviderCalls": 0
+}

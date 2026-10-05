@@ -1,0 +1,41 @@
+{
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "ee7339adb5033995705f95802fbf3a989767242c902c06a3592a4726418d936d",
+    "server/aiCompany/queueMutationGate.ts": "007765747c2d758a63b332a58d723a6e8ce93d5af909ef9e7766bc8c04155c73",
+    "server/aiCompany/dependencyAdmission.test.ts": "76cb00620d61f0c46da5531287979e7471af9cfdfc8889e296c00799ed81d081",
+    "server/aiCompany/recursiveDependencyAuthority.test.ts": "4aa47bf8597fe4510987f5f0f2ecefafb3d7e40dc957fe16da5819ef42631ef1",
+    "server/aiCompany/reviewTerminalAdmission.test.ts": "ea4b251217c8ca9c72871b319de96e3f6fcaac692400d0c204f5c6a57328290b",
+    "server/aiCompany/roleWorkExecutor.ts": "6e2b453f56c7a1ce84504862fdebba8a2b83db4bfee09f0caf60991ca738b5fd",
+    "server/aiCompany/autonomousCoordinator.ts": "ab9cc3b40eaa76ed89b2e2e07133497c29e08f462c0a2ef87d1d3915f6fd1ef8",
+    "server/aiCompany/backlogWorkPlanner.ts": "819851a5b45d02644f8885a71eb4889d524fb91e844656a28c9e24e055a8d12b",
+    "scripts/ai-company-role-dispatch.mjs": "49beebcfd080444e775b9378ebff40af30ec693be5ecbdd15968556adde8865f",
+    "scripts/ai-company-run-ready.mjs": "7d6f4cdb32b7b63bc317d2ee6da5ee45143a7f66e8563c1c8120cb6d317990e2",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "c5a5106543f59ffd60f9b4e947a5ef4af8a2911308d0c49559df9f71ac20e4b9",
+    "server/aiCompany/backlogWorkPlanner.test.ts": "677c0f88aace363fc840b965262156f07705a224f310e6d62027d4eeb561c281",
+    "server/aiCompany/autonomousCoordinator.test.ts": "66f3ed08112cde26d7d867e912446dd7afe2ae691cb58450220159293bd1e85c"
+  },
+  "focusedTests": {
+    "files": 6,
+    "passed": 54,
+    "failed": 0,
+    "durationSeconds": 17.49,
+    "breakdown": {
+      "recursiveDependencyAuthority": 10,
+      "dependencyAdmission": 6,
+      "reviewTerminalAdmission": 10,
+      "cliAttemptDispatch": 12,
+      "backlogWorkPlanner": 13,
+      "autonomousCoordinator": 3
+    }
+  },
+  "exactCounterexampleRerun": "Ancestor quarantine while leaf evidence resolution pending now rejects dependencies; leaf remains IN_REVIEW, exact queue bytes unchanged after withdrawal. Prior fail-before artifacts untouched.",
+  "commitCoverage": "All four authority operations pass true flag; claim/reserve/review also independently paused after prevalidation before commit, indirect source withdrawn, all deny without append. Completion executes synchronous recheck under acquired SQLite gate and before atomic append.",
+  "recoveryCompatibility": "Existing actual corrective queue fixture passes claim/reserve/review/complete with original failed source still BLOCKED; graph structural-context exception and recovery-cycle negative pass. Containment writers retain flag false.",
+  "limitations": [
+    "Cooperative writers only.",
+    "Current recursive viability is not exact producer-attempt/input-version binding.",
+    "Post-commit withdrawal cannot undo completed effects; predicates revoke current success.",
+    "Raw-status consumers remain unaudited beyond scoped migrated helpers.",
+    "No live/real-provider/network/candidate/G1 action, no production source edits."
+  ]
+}

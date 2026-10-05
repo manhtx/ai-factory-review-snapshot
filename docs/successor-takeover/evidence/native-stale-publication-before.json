@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-05T04:20:33.654Z",
+  "scope": "Actual queue/capability and paused stub provider only; zero real provider/effect",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-stale-publication-UHP2NQ",
+  "stubProviderCalls": 1,
+  "receiptRows": 1,
+  "receiptReturned": true,
+  "error": "",
+  "state": "BLOCKED",
+  "realProviderCalls": 0
+}

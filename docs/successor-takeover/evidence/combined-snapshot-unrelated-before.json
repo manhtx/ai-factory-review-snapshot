@@ -1,0 +1,10 @@
+{
+  "observedAt": "2026-10-05T07:26:17.692Z",
+  "scope": "Actual temporary queue/capability and provider receipt publisher; no model/company/product/human effects",
+  "before": true,
+  "after": false,
+  "error": "",
+  "selectedReceiptStillPresent": true,
+  "nativeRows": 2,
+  "realProviderCalls": 0
+}

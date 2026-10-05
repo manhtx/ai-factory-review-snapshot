@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://macro-os.local/schemas/evidence.schema.json",
+  "title": "AI Company Evidence Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evidence_id", "kind", "claim", "source", "collected_at", "confidence", "verification_status"],
+  "properties": {
+    "evidence_id": {"type": "string", "pattern": "^EVD-[A-Z0-9._-]+$"},
+    "kind": {"enum": ["SOURCE", "TEST", "TELEMETRY", "USER_FEEDBACK", "DOMAIN_REVIEW", "SCREENSHOT", "ARTIFACT", "COUNTER_EVIDENCE"]},
+    "claim": {"type": "string", "minLength": 1},
+    "source": {"type": "object", "additionalProperties": false, "required": ["uri", "label"], "properties": {"uri": {"type": "string", "minLength": 1}, "label": {"type": "string", "minLength": 1}, "line": {"type": ["integer", "null"], "minimum": 1}, "observed_at": {"type": ["string", "null"], "format": "date-time"}}},
+    "collected_at": {"type": "string", "format": "date-time"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "verification_status": {"enum": ["UNVERIFIED", "LOCALLY_VERIFIED", "INDEPENDENTLY_VERIFIED", "PRODUCTION_VERIFIED", "REJECTED"]},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "hash": {"type": ["string", "null"]}
+  }
+}

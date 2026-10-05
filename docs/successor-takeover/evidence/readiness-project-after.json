@@ -1,0 +1,35 @@
+{
+  "scope": "Temporary healthy foreign project only",
+  "release": {
+    "ready": false,
+    "blockers": [
+      "functional-qa review missing",
+      "quality-control review missing",
+      "stakeholder-panel review missing",
+      "user-persona review missing",
+      "ux-research review missing",
+      "domain-expert review missing"
+    ],
+    "approvedRoles": []
+  },
+  "cadence": {
+    "ok": false,
+    "cadence": "daily",
+    "required_roles": [
+      "ceo",
+      "ceo-guild",
+      "pm",
+      "data-engineer",
+      "sre"
+    ],
+    "completed_roles": [],
+    "blockers": [
+      "missing governance work: ceo",
+      "missing governance work: ceo-guild",
+      "missing governance work: pm",
+      "missing governance work: data-engineer",
+      "missing governance work: sre"
+    ]
+  },
+  "realProviderCalls": 0
+}

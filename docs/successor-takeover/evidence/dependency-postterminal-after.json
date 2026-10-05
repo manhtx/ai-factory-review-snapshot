@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-04T17:35:21.111Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-dispatch-before-ilxP74",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "57cb3ef4e73b72a5a5daab9a97f8760ee873a92603061e273af067d86b1ad5ff",
+    "server/aiCompany/roleWorkExecutor.ts": "6e2b453f56c7a1ce84504862fdebba8a2b83db4bfee09f0caf60991ca738b5fd"
+  },
+  "realProviderCalls": 0,
+  "networkCalls": 0,
+  "stubProviderCalls": 1,
+  "consumerIsSuccessful": false,
+  "grandchildClaimAccepted": false,
+  "sourceState": "QUARANTINED",
+  "dependentState": "DONE",
+  "providerDispatch": {
+    "attempt_id": "0749c029-e03f-43e0-a4c7-ac4d29f6eae5",
+    "provider_id": "unit-stub",
+    "issued_at": "2026-10-04T17:35:21.069Z"
+  }
+}

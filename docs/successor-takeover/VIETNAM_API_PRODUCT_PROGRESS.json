@@ -1,0 +1,24 @@
+{
+  "authoritative": false,
+  "promotion": "NOT_GRANTED",
+  "candidate": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+  "proposal": "VIETNAM_ANALYTICS_API_INVESTIGATION.md",
+  "originalFailures": {"automatic_price_level_as_growth":"reproduced", "caller_assumptions_as_facts":"reproduced", "null_as_zero_growth":"reproduced", "testsBeforeRepair":"3 failed"},
+  "behavior": ["incompatible observed analytics explicitly unavailable", "GET/POST scenarios preserved on both aliases", "caller provenance cannot grant observed trust", "invalid/stale/misaligned inference withheld", "strict number/date/option/mode admission", "internal heuristic and uncalibrated score disclosed", "spreads use percentage points", "empty hydration replacement withdraws current evidence"],
+  "reviewedSha256": {
+    "server/routes/analyticsRouter.ts":"412d0c3159ce7a33aef20f583370a50185a5b8fe7273f2de8d201898042bbe62",
+    "src/app/pages/RegimeDetectionPage.tsx":"781137dc84e0a9e0e4cb2fb14acc4856d5d17792f0d74dbab0547e08f13b0507",
+    "src/app/data/seriesUtils.ts":"949b41c39c999cb515a7bceea46f96d1896750d9196f0e74ffb7b8e04ae2e6b3",
+    "src/app/data/vietnamRegimeObservations.ts":"3f67e218778d7bf72eb545ee36e8355dcfd81233a6f0f79fece3ea3fa10c13c3"
+  },
+  "regression": {"passed":118,"failed":0,"files":11,"evidence":"evidence/product-regime-api-regression-v3.json"},
+  "independentReview": {"agent":"01a0fbc6-50b3-7273-8611-12bf4bf4a18c", "decision":"BOUNDED_RECHECK_PASSED", "pageAdmissionTests":62, "apiCalculatorResolverTests":116, "note":"overlapping suites, includes upstream limitation reproductions; counts do not establish global truth", "initialResolverFinding":"empty replacements returned prior fresh evidence", "findingDisposition":"reproduced as three failing tests, repaired, independently rechecked", "harnesses":["/private/tmp/regime-product-verifier.5lIgh4/adversarial.test.tsx","/private/tmp/vietnam-api-verifier.wVzLRN/independent.test.ts"]},
+  "httpEvidence":"evidence/vietnam-api-http-v1.json",
+  "renderEvidence": {"screenshot":"evidence/regime-scenario-pp-v3.jpg", "observed":"scenario spread +16.0 pp, uncalibrated rule score, observed facts unavailable", "environment":"candidate loopback Vite with no API proxy"},
+  "build":"PASS: 2380 modules transformed, final post-repair Vite build",
+  "lint":"changed files and whitespace checks passed",
+  "typecheck":"same six existing company diagnostics remain",
+  "executionSurface": {"file":"evidence/candidate-product-api-surface-v1.json","files":887,"effectBearingFiles":229,"denominatorSha256":"049e9636d843a74a1d83b651b20de58b5170d782f9538aee5d5578542823844c","check":"MATCHED", "limit":"bounded source census only"},
+  "remaining": ["source identity and semantic freshness admission", "compatible annual observed analytics adapter and sources", "managed storage authority and runtime product proof", "full responsive and populated-state verification", "global header clipping"],
+  "closure":"PRODUCT_DATA_TRUTH_UNPROVEN"
+}

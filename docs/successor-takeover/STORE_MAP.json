@@ -1,0 +1,77 @@
+{
+  "schema": "ai-factory.store-map.v1",
+  "observedAt": "2026-10-02T10:47:38.089166+00:00",
+  "sourceRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+  "completeness": "OPEN",
+  "stores": [
+    {
+      "domain": "control",
+      "path": "/Users/manhtx/Documents/Macro Research Platform/.ai-company",
+      "exists": true,
+      "authority": "UNRESOLVED",
+      "trackedPaths": 3938
+    },
+    {
+      "domain": "control",
+      "path": "/Users/manhtx/Documents/Macro Research Platform/.ai-company/runtime",
+      "exists": true,
+      "authority": "UNRESOLVED",
+      "trackedPaths": 11
+    },
+    {
+      "domain": "control",
+      "path": "/Users/manhtx/Documents/Macro Research Platform/.ai-company/runtime/projects/macro-os",
+      "exists": true,
+      "authority": "UNRESOLVED",
+      "trackedPaths": 0
+    },
+    {
+      "domain": "control",
+      "path": "/Users/manhtx/Documents/Macro Research Platform/.ai-company/runtime/product-outcomes",
+      "exists": false,
+      "authority": "UNRESOLVED",
+      "trackedPaths": 0
+    },
+    {
+      "domain": "product",
+      "path": "/Users/manhtx/Documents/Macro Research Platform/data",
+      "exists": true,
+      "authority": "UNRESOLVED",
+      "trackedPaths": 0
+    },
+    {
+      "domain": "candidate",
+      "path": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+      "exists": true,
+      "authority": "NONE",
+      "trackedPaths": null
+    },
+    {
+      "domain": "backup",
+      "path": "/Users/manhtx/Documents/macro-successor-f0-I5xvdx",
+      "exists": true,
+      "authority": "NONE",
+      "trackedPaths": null
+    },
+    {
+      "domain": "backup",
+      "path": "/Users/manhtx/Documents/macro-private-browser-953s2v4o",
+      "exists": true,
+      "authority": "NONE",
+      "trackedPaths": null
+    },
+    {
+      "domain": "backup",
+      "path": "/Users/manhtx/Documents/macro-convergence-source-ap_u3zos",
+      "exists": true,
+      "authority": "NONE",
+      "trackedPaths": null
+    }
+  ],
+  "remoteProductStorage": "CONFIGURATION_PRESENT; LIVE AUTHORITY/SCHEMA NOT ADJUDICATED",
+  "sqlitePaths": [],
+  "limitations": [
+    "No active SQLite integrity probe or secret output.",
+    "Store paths are not an authority certificate."
+  ]
+}

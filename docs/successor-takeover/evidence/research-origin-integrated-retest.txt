@@ -1,0 +1,118 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts (12 tests | 2 failed) 23125ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  2004ms
+   ✓ refuses provider dispatch when stopped while paused after claim ACK  586ms
+   ✓ does not adopt an existing claim or call the stub provider 201ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1361ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  462ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1567ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1546ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  555ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1275ms
+   × CLI review preserves actual original reference for same-scope 5006ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × CLI review preserves actual original reference for cross-scope 5004ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ CLI review preserves actual original reference for unresolved  3555ms
+ ❯ server/aiCompany/runtime.test.ts (13 tests | 1 failed) 12334ms
+   ✓ CEO brief runtime > is disabled unless explicitly enabled 1ms
+   ✓ CEO brief runtime > starts a stoppable unref interval when configured 1ms
+   ✓ CEO brief runtime > composes product scheduler and company supervisor for one project  797ms
+   ✓ CEO brief runtime > does not run product work when the readiness gate is blocked 86ms
+   ✓ CEO brief runtime > records readiness probe exceptions as an explicit blocker 85ms
+   ✓ CEO brief runtime > requires an explicit readiness gate in production 1ms
+   ✓ CEO brief runtime > runs an injected role executor after planning work  624ms
+   ✓ CEO brief runtime > does not mark a cycle done when role execution is blocked  672ms
+   ✓ CEO brief runtime > fails closed when verified cycle value is required but no outcome is evidenced 203ms
+   × CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false 5042ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  4706ms
+   ✓ CEO brief runtime > audits discovery evidence-supplier failures instead of hiding them 109ms
+   ✓ CEO brief runtime > persists one explicit wake when the runtime has no executable work 6ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 3854ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  909ms
+   ✓ WorktreeManager > overlays the current tracked working-tree revision into a new worktree  349ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  599ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  583ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  445ms
+   ✓ WorktreeManager > merges verified product changes into main git history and marks worktree MERGED  352ms
+   ✓ WorktreeManager > rejects mergeToMain when worktree has out of scope or forbidden changes  326ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 1842ms
+   ✓ native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request  1185ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (13 tests) 1114ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 1803ms
+   ✓ review terminal admission > does not let historical DONE with a retained HOLD unlock ordinary work  431ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 1215ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 826ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 615ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 857ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 1068ms
+   ✓ role work execution loop > runs ready work with bounded concurrency  461ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 744ms
+   ✓ CEO Recovery Coordinator & Scenarios > Scenario 1: QA fail -> Coder fix corrective task -> QA re-run  564ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 1290ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 341ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 927ms
+   ✓ preserves dependency receipt producer attempt instead of assigning the consuming attempt  309ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 380ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 522ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 474ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 432ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 288ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 309ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (13 tests) 179ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 80ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 10ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 17ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 13ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 22ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 45ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 11ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 3ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 3ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (7 tests) 3ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 3ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (5 tests) 3ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > CLI review preserves actual original reference for same-scope
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > CLI review preserves actual original reference for cross-scope
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:184:59
+    182| }
+    183| 
+    184| it.each(['same-scope','cross-scope','unresolved'] as const)('CLI revie…
+       |                                                           ^
+    185|   const input=await reviewFixture(mode);const file=path.join(input.run…
+    186|   const result=await dispatch(input);const current=(await input.queue.…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  server/aiCompany/runtime.test.ts > CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/runtime.test.ts:101:24
+     99|   });
+    100| 
+    101|   it.each([false, true])('isolated weekly contract admission with revi…
+       |                        ^
+    102|     const resolver = new InMemoryEvidenceResolver();
+    103|     const stateDir = await mkdtemp(path.join(os.tmpdir(), 'ai-company-…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+
+ Test Files  2 failed | 34 passed (36)
+      Tests  3 failed | 309 passed (312)
+   Start at  09:42:42
+   Duration  65.10s (transform 1.92s, setup 0ms, collect 4.36s, tests 54.75s, environment 3ms, prepare 1.20s)
+

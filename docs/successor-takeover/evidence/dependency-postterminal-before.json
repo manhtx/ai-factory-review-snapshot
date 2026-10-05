@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-04T17:24:00.293Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-dispatch-before-bnchSK",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "b5921c7ad639d1f3f7da18ee9f74f908f274651cd388857d484e5705330237de",
+    "server/aiCompany/roleWorkExecutor.ts": "13ee29708bfd414255550cbebace6748ddc18f984f214d83b4c9ac53892f0d9c"
+  },
+  "realProviderCalls": 0,
+  "networkCalls": 0,
+  "stubProviderCalls": 1,
+  "consumerIsSuccessful": true,
+  "grandchildClaimAccepted": true,
+  "sourceState": "QUARANTINED",
+  "dependentState": "DONE",
+  "providerDispatch": {
+    "attempt_id": "315c440a-f24a-4e68-8141-3b1d098703f2",
+    "provider_id": "unit-stub",
+    "issued_at": "2026-10-04T17:24:00.241Z"
+  }
+}

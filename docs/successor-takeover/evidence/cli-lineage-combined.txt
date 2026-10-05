@@ -1,0 +1,42 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (11 tests) 13395ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1171ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1121ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  543ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1825ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1950ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  567ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1424ms
+   ✓ CLI review preserves actual original reference for same-scope  1499ms
+   ✓ CLI review preserves actual original reference for cross-scope  1526ms
+   ✓ CLI review preserves actual original reference for unresolved  1641ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4080ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1632ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1565ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 4483ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  527ms
+   ✓ WorktreeManager > overlays the current tracked working-tree revision into a new worktree  418ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  797ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  687ms
+   ✓ WorktreeManager > rejects oversized durable role artifacts while retaining raw logs separately  412ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  636ms
+   ✓ WorktreeManager > merges verified product changes into main git history and marks worktree MERGED  574ms
+   ✓ WorktreeManager > rejects mergeToMain when worktree has out of scope or forbidden changes  429ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 420ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 406ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 309ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 223ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 192ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 198ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 191ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 19ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 7ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+
+ Test Files  13 passed (13)
+      Tests  116 passed (116)
+   Start at  22:12:20
+   Duration  26.48s (transform 420ms, setup 0ms, collect 795ms, tests 23.93s, environment 1ms, prepare 410ms)
+

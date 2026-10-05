@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-04T17:42:41.201Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-independent-fNR75x",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "ee7339adb5033995705f95802fbf3a989767242c902c06a3592a4726418d936d",
+    "server/aiCompany/recursiveDependencyAuthority.test.ts": "4aa47bf8597fe4510987f5f0f2ecefafb3d7e40dc957fe16da5819ef42631ef1"
+  },
+  "state": "",
+  "error": "Error: work dependencies are not complete: WORK-1791135761139-ykh4sb",
+  "sourceState": "QUARANTINED",
+  "middleState": "DONE",
+  "leafState": "IN_REVIEW",
+  "bytesUnchanged": true,
+  "currentLeafSuccess": false,
+  "realProviderCalls": 0,
+  "networkCalls": 0
+}

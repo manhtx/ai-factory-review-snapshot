@@ -1,0 +1,37 @@
+✓ server/aiCompany/cliAttemptDispatch.test.ts (11 tests) 13955ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1486ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1556ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  680ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1730ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1826ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  656ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1538ms
+   ✓ CLI review preserves actual original reference for same-scope  1473ms
+   ✓ CLI review preserves actual original reference for cross-scope  1359ms
+   ✓ CLI review preserves actual original reference for unresolved  1362ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 254ms
+
+ Test Files  2 passed (2)
+      Tests  19 passed (19)
+   Start at  22:12:25
+   Duration  15.29s (transform 237ms, setup 0ms, collect 381ms, tests 14.21s, environment 0ms, prepare 157ms)
+
+import path from 'node:path';
+import { JsonlEvidenceResolver, type IEvidenceResolver, type StoredEvidence } from './evidenceResolver';
+import { RoleEvidenceLedger } from './roleEvidenceLedger';
+
+/** Original provider receipts stay in their producer stores. This read-only
+ * adapter neither copies lineage nor treats corruption as absent evidence. */
+export class RoleEvidenceResolver implements IEvidenceResolver {
+  private readonly native: RoleEvidenceLedger;
+  private readonly cli: JsonlEvidenceResolver;
+  constructor(root: string) {
+    this.native = new RoleEvidenceLedger(root);
+    this.cli = new JsonlEvidenceResolver(path.join(root, 'role-dispatch-evidence.jsonl'), 'PROVIDER_OUTPUT');
+  }
+  async resolve(evidenceId: string): Promise<StoredEvidence | null> {
+    const [native, cli] = await Promise.all([this.native.inspectIdentity(evidenceId), this.cli.inspectIdentity(evidenceId)]);
+    if (native.exists && cli.exists) throw new Error(`ambiguous provider evidence identity '${evidenceId}' exists in both stores`);
+    return native.evidence ?? cli.evidence;
+  }
+}

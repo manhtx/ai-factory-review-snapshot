@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 10ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (6 tests) 546ms
+
+ Test Files  2 passed (2)
+      Tests  12 passed (12)
+   Start at  09:56:28
+   Duration  1.83s (transform 71ms, setup 0ms, collect 92ms, tests 556ms, environment 0ms, prepare 56ms)
+

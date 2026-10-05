@@ -1,0 +1,70 @@
+{
+  "schema": "successor-takeover.cycle-contract-probe.v1",
+  "sourceSha256": "1a3eb5964b24b4b50e2d3b76a3dacaaf16cc24817409343d3e4d482c96398312",
+  "selectedRisk": "P1",
+  "selectedRoles": [
+    "pm",
+    "data-engineer",
+    "functional-qa",
+    "quality-control"
+  ],
+  "assignments": [
+    {
+      "role": "pm",
+      "risk": "P2",
+      "workflow": "codex-product-cycle-product-p2",
+      "allowedPaths": [
+        ".ai-company/product-intelligence/RESEARCH_PORTFOLIO.json"
+      ],
+      "acceptance": [
+        "No production/runtime state is modified",
+        "Any code change is within allowed paths",
+        "A targeted regression test or justified no-change finding is recorded",
+        "Freshness/provenance semantics remain fail-closed"
+      ]
+    },
+    {
+      "role": "data-engineer",
+      "risk": "P2",
+      "workflow": "codex-product-cycle-product-p2",
+      "allowedPaths": [
+        ".ai-company/product-intelligence/RESEARCH_PORTFOLIO.json"
+      ],
+      "acceptance": [
+        "No production/runtime state is modified",
+        "Any code change is within allowed paths",
+        "A targeted regression test or justified no-change finding is recorded",
+        "Freshness/provenance semantics remain fail-closed"
+      ]
+    },
+    {
+      "role": "functional-qa",
+      "risk": "P2",
+      "workflow": "codex-product-cycle-product-p2",
+      "allowedPaths": [
+        ".ai-company/product-intelligence/RESEARCH_PORTFOLIO.json"
+      ],
+      "acceptance": [
+        "No production/runtime state is modified",
+        "Any code change is within allowed paths",
+        "A targeted regression test or justified no-change finding is recorded",
+        "Freshness/provenance semantics remain fail-closed"
+      ]
+    },
+    {
+      "role": "quality-control",
+      "risk": "P2",
+      "workflow": "codex-product-cycle-product-p2",
+      "allowedPaths": [
+        ".ai-company/product-intelligence/RESEARCH_PORTFOLIO.json"
+      ],
+      "acceptance": [
+        "No production/runtime state is modified",
+        "Any code change is within allowed paths",
+        "A targeted regression test or justified no-change finding is recorded",
+        "Freshness/provenance semantics remain fail-closed"
+      ]
+    }
+  ],
+  "claimLimit": "Actual creator CLI in temporary cwd with caller-shaped P1 route inputs. No provider, work executor, canonical state or historical-runtime attestation."
+}

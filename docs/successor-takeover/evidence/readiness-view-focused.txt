@@ -1,0 +1,27 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4496ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1701ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1975ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (9 tests) 3779ms
+   ✓ denies withdrawn current review authority  315ms
+   ✓ denies missing current review authority  317ms
+   ✓ denies nonpass current review authority  305ms
+   ✓ denies missing-verdict current review authority  380ms
+   ✓ uses full dependency snapshot before selecting review backlog  354ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  327ms
+   ✓ plain rows and copied views cannot certify prerelease  1210ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (7 tests) 2640ms
+   ✓ cadence quorum > passes only when every daily accountable role is done with evidence  1140ms
+   ✓ plain rows and copied views cannot certify cadence  311ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 1180ms
+   ✓ release promotion > holds promotion and requests escalation when quorum is incomplete  328ms
+   ✓ release promotion > promotes only after full independent quorum  513ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  338ms
+
+ Test Files  4 passed (4)
+      Tests  32 passed (32)
+   Start at  10:30:53
+   Duration  13.88s (transform 238ms, setup 0ms, collect 399ms, tests 12.09s, environment 0ms, prepare 232ms)
+

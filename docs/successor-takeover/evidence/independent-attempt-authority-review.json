@@ -1,0 +1,35 @@
+{
+  "schema": "ai-factory.independent-attempt-authority-review.v1",
+  "observed_date": "2026-10-02",
+  "reviewer": "review_terminal_independent",
+  "source_hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "ece699a3570f0dc396a6ee43e28088c1ecbb01b15fa17f9cbb0c51e87c387770",
+    "server/aiCompany/roleWorkExecutor.ts": "0793bdab846a7e380bfbf89c6bfc58017a389a97c3e1044cf8d3c7382145e9a9",
+    "server/aiCompany/autonomousCoordinator.ts": "2648f4c10ae3462e2f2825935e766ad69b6a570e9bde01ff9dcff03241c2a8f9",
+    "server/aiCompany/attemptAuthority.test.ts": "0c2ac1cb24b9b0198efbed02469ee886c05ebb45ebbca318898936a478f4bd0b"
+  },
+  "tests": {
+    "attempt_authority": 10,
+    "runtime": 13,
+    "coordinator": 3,
+    "passed": 26,
+    "failed": 0
+  },
+  "independent_reproduction": {
+    "stale_invalid_plan_failure": "newer owner remains IN_REVIEW; stale negative mutation rejected",
+    "coordinator_return": "BLOCKED_EXTERNAL"
+  },
+  "verdict": "SCOPED_QUEUE_AND_LOCAL_CALLER_ATTEMPT_GUARDS_VERIFIED",
+  "limits": [
+    "Cooperative local control-plane scope only; not actor authentication.",
+    "CLI/admin paths and native receipt attempt binding remain OPEN and unverified.",
+    "45 older fixture compatibility failures remain OPEN; this review does not replace their denominators.",
+    "Exact revision/effect binding and independent input lineage closure remain OPEN.",
+    "No live/provider/G1 activity; no broad mission closure certification."
+  ],
+  "artifacts": [
+    "independent-attempt-authority-tests-output.txt",
+    "independent-attempt-authority-recovery-probe.mts",
+    "independent-attempt-authority-recovery-result.json"
+  ]
+}

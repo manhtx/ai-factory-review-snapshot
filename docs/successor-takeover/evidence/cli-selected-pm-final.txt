@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 278ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  10:58:28
+   Duration  579ms (transform 60ms, setup 0ms, collect 76ms, tests 278ms, environment 0ms, prepare 25ms)
+

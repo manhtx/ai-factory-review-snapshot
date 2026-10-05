@@ -1,0 +1,151 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts (20 tests | 14 failed) 43ms
+   ✓ evidence admission integrity > admits a current matching control with exact content hash 1ms
+   × evidence admission integrity > rejects identity 4ms
+     → expected 0 to be greater than 0
+   × evidence admission integrity > rejects invalidTime 0ms
+     → expected 0 to be greater than 0
+   × evidence admission integrity > rejects futureTime 0ms
+     → expected 0 to be greater than 0
+   ✓ evidence admission integrity > rejects invalidCalendar 0ms
+   × evidence admission integrity > rejects missingZone 0ms
+     → expected 0 to be greater than 0
+   × evidence admission integrity > rejects emptyProducer 0ms
+     → expected 0 to be greater than 0
+   × evidence admission integrity > rejects malformedContent 0ms
+     → The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (42)
+   ✓ evidence admission integrity > rejects missingNamespace 0ms
+   ✓ evidence admission integrity > rejects missingRun 0ms
+   × evidence admission integrity > rejects invalid maximum age NaN 0ms
+     → expected 0 to be greater than 0
+   × evidence admission integrity > rejects invalid maximum age Infinity 0ms
+     → expected 0 to be greater than 0
+   ✓ evidence admission integrity > rejects invalid maximum age -1 0ms
+   × evidence admission integrity > rejects an invalid or throwing policy clock 0ms
+     → expected 0 to be greater than 0
+   × evidence admission integrity > rejects damaged ledger rows without changing bytes: {corrupt 15ms
+     → promise resolved "{ evidence_id: 'EV-REAL', …(7) }" instead of rejecting
+   × evidence admission integrity > rejects damaged ledger rows without changing bytes: null 6ms
+     → expected [Function] to throw error matching /corrupt evidence ledger/ but got 'Cannot read properties of null (readi…'
+   × evidence admission integrity > rejects damaged ledger rows without changing bytes: [] 3ms
+     → promise resolved "{ evidence_id: 'EV-REAL', …(7) }" instead of rejecting
+   × evidence admission integrity > rejects damaged ledger rows without changing bytes: {} 2ms
+     → promise resolved "{ evidence_id: 'EV-REAL', …(7) }" instead of rejecting
+   × evidence admission integrity > rejects damaged ledger rows without changing bytes: {"evidence_i 2ms
+     → promise resolved "{ evidence_id: 'EV-REAL', …(7) }" instead of rejecting
+   ✓ evidence admission integrity > resolves a valid ledger and treats a missing file as unresolved 7ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 14 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects identity
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects invalidTime
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects futureTime
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects missingZone
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects emptyProducer
+AssertionError: expected 0 to be greater than 0
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts:21:113
+     19|     malformedContent: { content: 42 }, missingNamespace: { namespace: …
+     20|   })) it(`rejects ${name}`, () => {
+     21|     expect(validateEvidenceResolution({ ...record, ...mutation } as St…
+       |                                                                                                                 ^
+     22|   });
+     23|   for (const maxAge of [NaN, Infinity, -1]) it(`rejects invalid maximu…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/14]⎯
+
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects malformedContent
+TypeError: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (42)
+ ❯ validateEvidenceResolution server/aiCompany/evidenceResolver.ts:118:45
+    116|
+    117|   // 3. Content hash verification
+    118|   const computedHash = createHash('sha256').update(evidence.content, '…
+       |                                             ^
+    119|   if (computedHash !== evidence.content_hash) {
+    120|     errors.push(
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts:21:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/14]⎯
+
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects invalid maximum age NaN
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects invalid maximum age Infinity
+AssertionError: expected 0 to be greater than 0
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts:24:102
+     22|   });
+     23|   for (const maxAge of [NaN, Infinity, -1]) it(`rejects invalid maximu…
+     24|     expect(validateEvidenceResolution(record, 'EV-REAL', { ...context,…
+       |                                                                                                      ^
+     25|   });
+     26|   it('rejects an invalid or throwing policy clock', () => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/14]⎯
+
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects an invalid or throwing policy clock
+AssertionError: expected 0 to be greater than 0
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts:28:96
+     26|   it('rejects an invalid or throwing policy clock', () => {
+     27|     for (const clock of [() => NaN, () => { throw new Error('clock una…
+     28|       expect(validateEvidenceResolution(record, 'EV-REAL', { ...contex…
+       |                                                                                                ^
+     29|     }
+     30|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/14]⎯
+
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects damaged ledger rows without changing bytes: {corrupt
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects damaged ledger rows without changing bytes: []
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects damaged ledger rows without changing bytes: {}
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects damaged ledger rows without changing bytes: {"evidence_i
+AssertionError: promise resolved "{ evidence_id: 'EV-REAL', …(7) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "content": "source fact",
++   "content_hash": "0783e35bad61252429edbbbde3f921bef9395b221aa6536bad9897e8bc21ab0b",
++   "created_at": "2026-10-02T00:00:00.000Z",
++   "evidence_id": "EV-REAL",
++   "namespace": "isolated",
++   "produced_by_role": "data-engineer",
++   "run_id": "run-isolated",
++   "source_artifact": "isolated fixture",
+  }
+
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts:38:72
+     36|         const bytes = JSON.stringify(record) + '\n' + suffix + '\n';
+     37|         await writeFile(file, bytes);
+     38|         await expect(new JsonlEvidenceResolver(file).resolve('EV-REAL'…
+       |                                                                        ^
+     39|         expect(await readFile(file, 'utf8')).toBe(bytes);
+     40|       } finally { await rm(root, { recursive: true, force: true }); }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/14]⎯
+
+ FAIL  server/aiCompany/evidenceAdmissionIntegrity.test.ts > evidence admission integrity > rejects damaged ledger rows without changing bytes: null
+AssertionError: expected [Function] to throw error matching /corrupt evidence ledger/ but got 'Cannot read properties of null (readi…'
+
+- Expected:
+/corrupt evidence ledger/
+
++ Received:
+"Cannot read properties of null (reading 'evidence_id')"
+
+ ❯ server/aiCompany/evidenceAdmissionIntegrity.test.ts:38:9
+     36|         const bytes = JSON.stringify(record) + '\n' + suffix + '\n';
+     37|         await writeFile(file, bytes);
+     38|         await expect(new JsonlEvidenceResolver(file).resolve('EV-REAL'…
+       |         ^
+     39|         expect(await readFile(file, 'utf8')).toBe(bytes);
+     40|       } finally { await rm(root, { recursive: true, force: true }); }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/14]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  14 failed | 6 passed (20)
+   Start at  18:01:00
+   Duration  808ms (transform 93ms, setup 0ms, collect 253ms, tests 43ms, environment 0ms, prepare 84ms)

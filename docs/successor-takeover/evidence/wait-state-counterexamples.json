@@ -1,0 +1,10 @@
+{
+  "schema": "successor-takeover.wait-state-probe.v1",
+  "sourceSha256": "453fb40ea0bf7e78f90748398d3fb79f721c87dbacc2c629f37b9c8631d629d2",
+  "unknownWakeAccepted": true,
+  "unknownWakeUsesManualFallback": true,
+  "unknownStateBecomesDue": true,
+  "invalidTimerPersisted": true,
+  "invalidTimerDueIn2099": false,
+  "claimLimit": "Temporary-directory function reproduction only; no live event, approval, executor or runtime invocation."
+}

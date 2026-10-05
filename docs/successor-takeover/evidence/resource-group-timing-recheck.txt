@@ -1,0 +1,18 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 2798ms
+   ✓ cadence quorum > passes only when every daily accountable role is done with evidence  434ms
+   ✓ denies withdrawn governance inputs despite historical DONE  341ms
+   ✓ denies missing governance inputs despite historical DONE  399ms
+   ✓ reads healthy dependencies outside cadence selection  363ms
+   ✓ revokes receiptless cadence and rejects stale views  390ms
+   ✓ plain rows and copied views cannot certify cadence  392ms
+   ✓ cannot approve target cadence using another project governance  364ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3174ms
+
+ Test Files  2 passed (2)
+      Tests  30 passed (30)
+   Start at  16:38:11
+   Duration  6.55s (transform 90ms, setup 0ms, collect 124ms, tests 5.97s, environment 0ms, prepare 59ms)
+

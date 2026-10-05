@@ -1,0 +1,46 @@
+{
+  "observedAt": "2026-10-04T16:22:12.139Z",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "d62ef1717ebf08d5cdc91130624151aa8e37edd359e7e657e95a2104e3809c1f",
+    "server/aiCompany/roleWorkExecutor.ts": "13ee29708bfd414255550cbebace6748ddc18f984f214d83b4c9ac53892f0d9c",
+    "server/aiCompany/roleEvidenceLedger.ts": "de4009ebc737fc85b494ae9fc94b179d3408236f386aa27fb6d7a54601e236b4"
+  },
+  "results": [
+    {
+      "mode": "concurrent",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dispatch-issuance-before-ALN7Ri",
+      "stubProviderCalls": 1,
+      "realProviderCalls": 0,
+      "receipts": 1,
+      "outcomes": [
+        {
+          "status": "fulfilled"
+        },
+        {
+          "status": "rejected",
+          "reason": "Error: stale queue mutation: work or dependency changed before commit"
+        }
+      ],
+      "queueState": "CLAIMED"
+    },
+    {
+      "mode": "no-response",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dispatch-issuance-before-0hbtZZ",
+      "stubProviderCalls": 1,
+      "realProviderCalls": 0,
+      "receipts": 0,
+      "outcomes": [
+        {
+          "status": "rejected",
+          "reason": "Error: Injected provider no response"
+        },
+        {
+          "status": "rejected",
+          "reason": "Error: stale queue selection: work changed before mutation"
+        }
+      ],
+      "queueState": "CLAIMED"
+    }
+  ],
+  "networkCalls": 0
+}

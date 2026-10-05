@@ -1,0 +1,73 @@
+{
+  "observedAt": "2026-10-04T17:26:25.614Z",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "b5921c7ad639d1f3f7da18ee9f74f908f274651cd388857d484e5705330237de",
+    "server/aiCompany/roleWorkExecutor.ts": "13ee29708bfd414255550cbebace6748ddc18f984f214d83b4c9ac53892f0d9c",
+    "scripts/ai-company-role-dispatch.mjs": "738092e1103bcb55aa9c00551a7bed8ff90f680e2f4a0f594bb567a72c75a224",
+    "server/aiCompany/dependencyAdmission.test.ts": "c16fae1d3dad6640c851ab53e6829b2f444e54cdbb88483d0e3eaac369f4d3ce",
+    "server/aiCompany/reviewTerminalAdmission.test.ts": "ea4b251217c8ca9c72871b319de96e3f6fcaac692400d0c204f5c6a57328290b",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "c5a5106543f59ffd60f9b4e947a5ef4af8a2911308d0c49559df9f71ac20e4b9"
+  },
+  "results": [
+    {
+      "phase": "claim",
+      "calls": 0,
+      "error": "Error: work dependencies are not complete: WORK-1791134783895-dh1pfb",
+      "bytesUnchanged": true
+    },
+    {
+      "phase": "native-dispatch",
+      "calls": 0,
+      "error": "Error: work dependencies are not complete: WORK-1791134783951-h91ive",
+      "bytesUnchanged": true
+    },
+    {
+      "phase": "cli-before-reservation",
+      "code": 4,
+      "stubCalled": false,
+      "state": "CLAIMED",
+      "providerDispatch": false,
+      "stderr": "PROVIDER_DISPATCH_ADMISSION_FAILED work dependencies are not complete: WORK-1791134784013-c8k863\n",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-independent-m74OpP"
+    },
+    {
+      "phase": "cli-after-provider",
+      "code": 1,
+      "stubCalled": true,
+      "state": "CLAIMED",
+      "providerDispatch": true,
+      "stderr": "/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:91\n  if (unresolved.length) throw new Error(`work dependencies are not complete: ${unresolved.join(', ')}`);\n                               ^\n\nError: work dependencies are not complete: WORK-1791134784174-wqu1cd\n    at assertCurrentDependencies (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:91:32)\n    at <anonymous> (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:195:7)\n    at RoleWorkQueue.update (/Users/manhtx/Documents/Macro Research Platform/server/aiCompany/roleWorkQueue.ts:480:24)\n    at async <anonymous> (/Users/manhtx/Documents/Macro Research Platform/scripts/ai-company-role-dispatch.mjs:416:1)\n\nNode.js v24.18.0\n",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-independent-KtPfjE"
+    },
+    {
+      "phase": "postterminal-known-open",
+      "consumerSuccessful": true,
+      "grandchildAccepted": true,
+      "sourceState": "QUARANTINED"
+    }
+  ],
+  "realProviderCalls": 0,
+  "networkCalls": 0,
+  "focusedTests": {
+    "command": "AI_COMPANY_VITEST_CACHE_DIR=/tmp/dependency-independent-cache ./node_modules/.bin/vitest run server/aiCompany/dependencyAdmission.test.ts server/aiCompany/reviewTerminalAdmission.test.ts server/aiCompany/cliAttemptDispatch.test.ts",
+    "files": 3,
+    "passed": 27,
+    "failed": 0,
+    "breakdown": {
+      "dependencyAdmission": 5,
+      "reviewTerminalAdmission": 10,
+      "cliAttemptDispatch": 12
+    },
+    "durationSeconds": 12.43,
+    "terminalRace": "pending evidence resolution plus dependency quarantine rejects stale queue mutation; consumer remains IN_REVIEW",
+    "correctiveException": "same-project/run/namespace explicit failed-review dependency admitted at reserve/review/complete; original failed source remains BLOCKED"
+  },
+  "limits": [
+    "Cooperative queue writers only; no OS-level protection against arbitrary authority-file modification.",
+    "Direct dependencies at claim/reservation/review/complete only.",
+    "Postterminal source withdrawal independently reproduced: consumer remains successful and grandchild claim succeeds.",
+    "Recursive validity, producer replacement and attempt/effect revision remain OPEN.",
+    "After-provider withdrawal refuses review admission but does not cancel already executed effects. CLI error remains uncaught exit1 with consumer CLAIMED; no terminal admission claimed.",
+    "No live/network/real-provider/candidate/G1 action; no production source edits."
+  ]
+}

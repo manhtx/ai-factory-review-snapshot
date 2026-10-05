@@ -1,0 +1,59 @@
+{
+  "schema": "ai-factory.native-admin-attempt-proof.v1",
+  "authoritative": false,
+  "observedAt": "2026-10-04T15:00:01.513110+00:00",
+  "sourceRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "sourceTreeClean": false,
+  "sourceHashes": {
+    "server/aiCompany/evidenceResolver.ts": "69bd74f05f77cb89d8635e207795973ca8a59f5d04e6579ca97f7d3d00982f74",
+    "server/aiCompany/roleEvidenceLedger.ts": "c771d142550811f0d770a21b94c21699d72eb9fdcf3b6af427b09774dac64706",
+    "server/aiCompany/roleWorkQueue.ts": "c20fb74107a38e0f55a5e3f61487c738ab66999f5e1b6223e839bf812a86708a",
+    "server/aiCompany/roleWorkExecutor.ts": "baaf4aedf294cd803429a7b24fa87895b0bee25f886edc97c1373318590e0103",
+    "server/aiCompany/nativeAttemptLineage.test.ts": "0e69427838a67fa164852ac1d92a632125c870c4f641b6f32cf930b0a61bc1bf",
+    "server/aiCompany/nativeEvidenceAdmission.test.ts": "691a18f75c0fd3695de3f577c9c2c8385c9accd64efbeab4f2855c782a03f3c3",
+    "server/aiCompany/roleEvidenceLedger.test.ts": "cfb2eb18a8d5328e84134df79653b5470c76f3b9119e9b48c5fcb65833d11e80",
+    "server/aiCompany/roleWorkExecutor.test.ts": "92958a4966e820f0841ff6a04397d04982d00c2de1a15054c31fcd71ec4d1621",
+    "server/aiCompany/adminWorkQueueTransport.ts": "c7c43e35122075e08294da8cf183567684e79744e31d062ef4b71eaec7888829",
+    "server/aiCompany/adminWorkQueueTransport.test.ts": "3e1b2be4d5f2cb1a5d57b3482421dd01f5a6311bdb0211a2d28ec9021a81b42e",
+    "server/index.ts": "1abdc1343475913014543cd9d9ed2905ed6862ee10bfc4a2438c1bab83a344c7"
+  },
+  "status": "SCOPED_REPAIR_NOT_FULL_ATTEMPT_EFFECT_AUTHORITY",
+  "failBefore": "native-old-receipt-result.json oldReceiptAcceptedAsNewAttempt=true",
+  "independent": "native-admin-independent-review-result.json; actual temp native and adapter byte-preservation controls;13tests",
+  "checks": {
+    "nativeAndAffectedPipeline": "67PASS9FILES",
+    "nativeAdminCombined": "74PASS10FILES; final action discriminant adapter update separately retested7",
+    "finalAdmin": "7PASS",
+    "independent": "13PASS_PLUS_ACTUAL_TEMP_PROBES",
+    "lint": "PASS_NATIVE_ADAPTER_INDEX",
+    "typecheck": "FAIL11_OTHER_DIAGNOSTICS",
+    "diffCheck": "PASS"
+  },
+  "limitations": [
+    "No actual HTTP/native live runtime enabling or restart; default native adapter scope only",
+    "Atomic receipt admission and producer capability/OS actor authentication OPEN",
+    "Exact execution revision/effect/outcome binding OPEN",
+    "Generic resolver can omit output origin; CLI own/dependency receipt origin and relabeling remain OPEN",
+    "Historical broadcaller47PASS45FAIL unresolved, not a current fullgate; candidate unpropagated/unsealed",
+    "Other fixed-path runtime ledgers and nondefault root coherence remain OPEN; admin mutation mismatch refuses",
+    "No real provider/product trial/migration/promotion/G1 action; A/B/C/DUNPROVEN"
+  ],
+  "providerCompanyCalls": 0,
+  "productionAutonomy": "DISABLED_CONFIGURED",
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/aiCompany/evidenceResolver.ts",
+      "server/aiCompany/roleEvidenceLedger.ts",
+      "server/aiCompany/roleWorkQueue.ts",
+      "server/aiCompany/roleWorkExecutor.ts",
+      "server/aiCompany/nativeAttemptLineage.test.ts",
+      "server/aiCompany/nativeEvidenceAdmission.test.ts",
+      "server/aiCompany/roleWorkExecutor.test.ts",
+      "server/index.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

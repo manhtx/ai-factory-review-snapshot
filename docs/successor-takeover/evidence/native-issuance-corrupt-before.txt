@@ -1,0 +1,137 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests | 5 failed | 10 skipped) 230ms
+   ↓ native durable dispatch issuance > admits one of concurrent same-claim native dispatches before provider
+   ↓ native durable dispatch issuance > uses committed canonical lineage when caller mutates its original snapshot during provider await
+   ↓ native durable dispatch issuance > no-response issuance survives a new queue/executor instance and refuses replay
+   ↓ native durable dispatch issuance > refuses missing capability before provider or marker
+   ↓ native durable dispatch issuance > refuses wrong capability before provider or marker
+   ↓ native durable dispatch issuance > refuses stale capability before provider or marker
+   ↓ native durable dispatch issuance > refuses changed selected intent and copied-root capability before provider
+   ↓ native durable dispatch issuance > an explicit bounded new claim permits one new issuance while old handle stays invalid
+   × native durable dispatch issuance > refuses corrupt issuance marker null without rewriting history 82ms
+     → promise resolved "[ { project_id: 'unit', …(15) } ]" instead of rejecting
+   × native durable dispatch issuance > refuses corrupt issuance marker missing fields without rewriting history 39ms
+     → promise resolved "[ { project_id: 'unit', …(15) } ]" instead of rejecting
+   × native durable dispatch issuance > refuses corrupt issuance marker wrong attempt without rewriting history 33ms
+     → promise resolved "[ { project_id: 'unit', …(15) } ]" instead of rejecting
+   × native durable dispatch issuance > refuses corrupt issuance marker invalid time without rewriting history 36ms
+     → promise resolved "[ { project_id: 'unit', …(15) } ]" instead of rejecting
+   × native durable dispatch issuance > refuses corrupt issuance marker empty provider without rewriting history 37ms
+     → promise resolved "[ { project_id: 'unit', …(15) } ]" instead of rejecting
+   ↓ native durable dispatch issuance > generic model role wrapper also consumes issuance before failure
+   ↓ native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/nativeDispatchIssuance.test.ts > native durable dispatch issuance > refuses corrupt issuance marker null without rewriting history
+ FAIL  server/aiCompany/nativeDispatchIssuance.test.ts > native durable dispatch issuance > refuses corrupt issuance marker missing fields without rewriting history
+ FAIL  server/aiCompany/nativeDispatchIssuance.test.ts > native durable dispatch issuance > refuses corrupt issuance marker wrong attempt without rewriting history
+ FAIL  server/aiCompany/nativeDispatchIssuance.test.ts > native durable dispatch issuance > refuses corrupt issuance marker invalid time without rewriting history
+ FAIL  server/aiCompany/nativeDispatchIssuance.test.ts > native durable dispatch issuance > refuses corrupt issuance marker empty provider without rewriting history
+AssertionError: promise resolved "[ { project_id: 'unit', …(15) } ]" instead of rejecting
+
+- Expected: 
+Error {
+  "message": "rejected promise",
+}
+
++ Received: 
+[
+  {
+    "assignment": {
+      "acceptance_criteria": [
+        "durable evidence recorded",
+      ],
+      "allowed_paths": [
+        "assigned workspace",
+      ],
+      "allowed_tools": [
+        "repository inspection",
+      ],
+      "allowed_verdicts": [
+        "PASS",
+        "REVISE",
+        "QUALITY_FAIL",
+        "HOLD",
+        "BLOCKED",
+      ],
+      "assignment_id": "ASSIGNMENT:WORK-1791130820119-0zqk3v",
+      "context_budget": {
+        "max_tokens": 8000,
+        "target_tokens": 4000,
+      },
+      "dependencies": [],
+      "escalation_policy": "bounded escalation",
+      "evidence_manifest": [
+        "assigned work item",
+      ],
+      "forbidden_paths": [
+        ".env",
+        ".ai-company/runtime",
+        ".ai-company/company-state.json",
+      ],
+      "forbidden_tools": [
+        "deployment",
+        "secret access",
+      ],
+      "inputs": [
+        "assigned work contract",
+      ],
+      "mutation_policy": "read_only",
+      "namespace": "project:unit",
+      "objective": "Unit issuance only; no effect/outcome claim",
+      "objective_id": "B",
+      "output_schema": "none",
+      "product_goal_alignment": [
+        "Product Goal alignment required",
+      ],
+      "product_id": "unit",
+      "retry_budget": 1,
+      "risk_level": "P1",
+      "role": "ux-research",
+      "run_id": "run-WORK-1791130820119-0zqk3v",
+      "scope": [
+        "assigned work only",
+      ],
+      "task_type": "role-work",
+      "test_policy": "targeted",
+      "timeout": 600,
+      "token_budget": 16000,
+      "work_id": "WORK-1791130820119-0zqk3v",
+    },
+    "attempt_id": "802a09c1-7721-4ea4-bf9a-ba8245e67911",
+    "attempt_token_hash": "f67d0b4ba64ba7fe7d4a3b097ff0c4458017218e15df25514a20af69e788390d",
+    "backlog_id": "B",
+    "created_at": "2026-10-04T16:20:20.118Z",
+    "depends_on": [],
+    "evidence_ids": [],
+    "owner": "fixture",
+    "project_id": "unit",
+    "provider_dispatch": null,
+    "queue_revision": 2,
+    "role": "ux-research",
+    "state": "CLAIMED",
+    "title": "Unit issuance only; no effect/outcome claim",
+    "updated_at": "2026-10-04T16:20:20.147Z",
+    "work_id": "WORK-1791130820119-0zqk3v",
+  },
+]
+
+ ❯ server/aiCompany/nativeDispatchIssuance.test.ts:120:41
+    118|     const bytes = rows.map(row => JSON.stringify(row)).join('\n') + '\…
+    119|     await writeFile(file, bytes);
+    120|     await expect(f.queue.records('unit')).rejects.toThrow('corrupt pro…
+       |                                         ^
+    121|     expect(await readFile(file, 'utf8')).toBe(bytes);
+    122|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  5 failed | 10 skipped (15)
+   Start at  23:20:18
+   Duration  1.47s (transform 313ms, setup 0ms, collect 390ms, tests 230ms, environment 0ms, prepare 142ms)
+

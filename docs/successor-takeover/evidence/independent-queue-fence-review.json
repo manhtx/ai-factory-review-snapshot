@@ -1,0 +1,39 @@
+{
+  "schema": "ai-factory.independent-queue-fence-review.v1",
+  "reviewer": "review_terminal_independent",
+  "observed_date": "2026-10-02",
+  "source_hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "ab70460a77a11b079c9578f5fb2e22039569741b0ce55908fd34000bed6526e7",
+    "server/aiCompany/queueMutationGate.ts": "007765747c2d758a63b332a58d723a6e8ce93d5af909ef9e7766bc8c04155c73",
+    "server/aiCompany/queueMutationFence.test.ts": "661429e83725c557e18ef75f7b6f8e2885b4fd2c251c533c9e18ddbdd707a0d9"
+  },
+  "focused_fence_tests": {
+    "passed": 14,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "independent_probes": {
+    "create_provenance": "explicit QUEUE_COMMITTED_PROVENANCE_FAILURE with committed row",
+    "revision_overflow": "rejects before write, exact bytes unchanged",
+    "root_alias_retarget": "commit stays initially bound root",
+    "duplicate_batch": "one accepted, one rejected",
+    "changed_dependency": "stale completion rejected",
+    "ABA_transition": "stale completion rejected"
+  },
+  "verdict": "SCOPED_COOPERATIVE_QUEUE_WRITE_FENCE_VERIFIED",
+  "limits": [
+    "Cooperative writers only; external direct file mutations are not excluded by an advisory SQLite gate.",
+    "No full execution-attempt capability binding or stale-owner authorization certification.",
+    "No evidence-ledger revision binding certification.",
+    "No actual production CLI/provider/runtime closure proof.",
+    "No G1 verification, substitute, or live canonical state mutation.",
+    "No broad A/B/C/D mission closure claim."
+  ],
+  "artifacts": [
+    "independent-queue-fence-tests-output.txt",
+    "independent-queue-fence-edges.mts",
+    "independent-queue-fence-edges-result.json",
+    "independent-queue-fence-cas-probes.mts",
+    "independent-queue-fence-cas-output.jsonl"
+  ]
+}

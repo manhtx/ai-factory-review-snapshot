@@ -1,0 +1,18 @@
+{
+  "observedAt": "2026-10-04T16:56:34.777Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/dependency-dispatch-before-ZYuKvt",
+  "hashes": {
+    "server/aiCompany/roleWorkQueue.ts": "d62ef1717ebf08d5cdc91130624151aa8e37edd359e7e657e95a2104e3809c1f",
+    "server/aiCompany/roleWorkExecutor.ts": "13ee29708bfd414255550cbebace6748ddc18f984f214d83b4c9ac53892f0d9c"
+  },
+  "realProviderCalls": 0,
+  "networkCalls": 0,
+  "stubProviderCalls": 1,
+  "sourceState": "QUARANTINED",
+  "dependentState": "DONE",
+  "providerDispatch": {
+    "attempt_id": "1a11fa0a-939f-4b5d-8028-44679d3cd10f",
+    "provider_id": "unit-stub",
+    "issued_at": "2026-10-04T16:56:34.750Z"
+  }
+}

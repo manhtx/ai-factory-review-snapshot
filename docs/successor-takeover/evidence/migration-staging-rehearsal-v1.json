@@ -1,0 +1,17 @@
+{
+  "schema": "successor-takeover.staging-rehearsal.v1",
+  "status": "UNVERIFIED_STAGING_ROUNDTRIP_PASSED",
+  "artifact": "/Users/manhtx/Documents/macro-successor-f0-I5xvdx/queue-unverified-staging-v1.json",
+  "sourceSha256": "16c4b360ed1e6f33bc8b5f2e9b0a9f68c94e54f0715bd01eec627eb36020acb5",
+  "historyRows": 9647,
+  "latestWorkRows": 2715,
+  "freshProcessVerify": "PASS_WITH_EXTERNAL_EXPECTED_SOURCE_DIGEST",
+  "anchorRepair": "One added regression failed before repair: missing external anchor accepted. Verifier now requires separately recorded expected source SHA256 and rejects coherently changed artifacts.",
+  "artifactSha256": "b9761efbecb0d177f0cb0d972f038aebbbb2c68e599151d259e8e892ffd68e84",
+  "artifactBytes": 44753644,
+  "checks": ["exact source byte reconstruction", "history count", "latest work identities and original values", "dependency edges", "all items unverified", "no fabricated missing assignment identity"],
+  "toolTests": "4 node tests passed including external anchor, changed trust classification, altered edge, omitted item, altered bytes and invalid history rejection",
+  "canonicalWrites": false,
+  "trustGranted": false,
+  "claimLimit": "Staging preservation only. No final-schema import, authority handoff, evidence admission, rollback or successor cold-start proof."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "ai-factory.independent-cli-lineage-review.v1",
+  "observed_date": "2026-10-04",
+  "reviewer": "review_terminal_independent",
+  "source_hashes": {
+    "server/aiCompany/roleEvidenceResolver.ts": "a8a8855392c585f68cc3906223363f5e15465c710b376172eb624d790acea5c6",
+    "server/aiCompany/evidenceResolver.ts": "af6223fc13d2fd735510094d2b64db3ce2feae23511f5d0e32e213a89d426b38",
+    "server/aiCompany/roleEvidenceLedger.ts": "c771d142550811f0d770a21b94c21699d72eb9fdcf3b6af427b09774dac64706",
+    "server/aiCompany/roleWorkQueue.ts": "c20fb74107a38e0f55a5e3f61487c738ab66999f5e1b6223e839bf812a86708a",
+    "scripts/ai-company-role-dispatch.mjs": "cde62ce6a10ff154429f9e82b85113f80b7022e540e1d8eff904bb2a6e12da06",
+    "scripts/ai-company-run-ready.mjs": "09cccc51dc037c2da78aff8725b6db922f3a06b8cd34d305e05fd50cd515ecfb",
+    "server/index.ts": "70edc90548c204cff6b8599c29550c170192fbf25b444b8b4bbce39b256fea32",
+    "server/aiCompany/roleEvidenceResolver.test.ts": "8da098e6b89054de34fe1ea0729f9a6a1cd0b2ddf7d1a1e75422ef646263901f",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "5b4311e2683d4b2ad5591360e7c49170afdf494776ae91c8cac1a92985451056"
+  },
+  "tests": {
+    "CLI": 11,
+    "sharedResolver": 6,
+    "passed": 17,
+    "failed": 0
+  },
+  "original_laundering_probe": {
+    "state": "BLOCKED",
+    "exit_code": 3,
+    "declared_reference": "UNRESOLVED-DECLARED",
+    "false_scope_and_reference_admission": false
+  },
+  "remaining_finding": {
+    "summary": "Cross-store identity collision accepted when the other store contains a legacy unbound row.",
+    "source_hash": "a8a8855392c585f68cc3906223363f5e15465c710b376172eb624d790acea5c6",
+    "limits": "Resolver ambiguity guard reproduction only; no product-effect admission proof."
+  },
+  "limits": [
+    "Temp-root fixtures and local stub provider only; no actual provider, live canonical state mutation or G1.",
+    "Cooperative queue/receipt callers only; actor identity, revision/effect authority and atomic receipt admission remain OPEN.",
+    "Generic independent input proof remains OPEN.",
+    "No broad mission or production closure certification."
+  ],
+  "artifacts": [
+    "independent-cli-lineage-original-probe.mts",
+    "independent-cli-lineage-original-current-result.json",
+    "independent-cli-lineage-legacy-collision-probe.mts",
+    "independent-cli-lineage-legacy-collision-result.json",
+    "independent-cli-lineage-focused-output.txt"
+  ]
+}

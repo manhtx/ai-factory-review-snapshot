@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 12ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (13 tests) 24ms
+
+ Test Files  2 passed (2)
+      Tests  20 passed (20)
+   Start at  21:34:55
+   Duration  466ms (transform 69ms, setup 0ms, collect 88ms, tests 37ms, environment 0ms, prepare 56ms)
+

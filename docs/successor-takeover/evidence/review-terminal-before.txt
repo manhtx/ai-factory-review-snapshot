@@ -1,0 +1,166 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts (7 tests | 6 failed) 22ms
+   × review terminal admission > retains HOLD as blocked and denies ordinary downstream authority 7ms
+     → expected { project_id: 'fixture', …(18) } to match object { state: 'BLOCKED', …(2) }
+(45 matching properties omitted from actual)
+   × review terminal admission > retains REVISE as blocked and denies ordinary downstream authority 2ms
+     → expected { project_id: 'fixture', …(18) } to match object { state: 'BLOCKED', …(2) }
+(45 matching properties omitted from actual)
+   × review terminal admission > retains QUALITY_FAIL as blocked and denies ordinary downstream authority 2ms
+     → expected { project_id: 'fixture', …(18) } to match object { state: 'BLOCKED', …(2) }
+(45 matching properties omitted from actual)
+   × review terminal admission > retains BLOCKED as blocked and denies ordinary downstream authority 2ms
+     → expected { project_id: 'fixture', …(18) } to match object { state: 'BLOCKED', …(2) }
+(45 matching properties omitted from actual)
+   ✓ review terminal admission > preserves PASS as successful ordinary dependency 2ms
+   × review terminal admission > allows an explicit same-scope corrective dependency without granting source success 3ms
+     → expected 'DONE' to be 'BLOCKED' // Object.is equality
+   × review terminal admission > rejects a corrective dependency from another run 3ms
+     → promise resolved "{ project_id: 'fixture', …(14) }" instead of rejecting
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > retains HOLD as blocked and denies ordinary downstream authority
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > retains REVISE as blocked and denies ordinary downstream authority
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > retains QUALITY_FAIL as blocked and denies ordinary downstream authority
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > retains BLOCKED as blocked and denies ordinary downstream authority
+AssertionError: expected { project_id: 'fixture', …(18) } to match object { state: 'BLOCKED', …(2) }
+(45 matching properties omitted from actual)
+
+- Expected
++ Received
+
+@@ -16,7 +16,7 @@
+      "root_cause": "fixture",
+      "summary": "fixture",
+      "unblock_evidence": [],
+      "verdict": "HOLD",
+    },
+-   "state": "BLOCKED",
++   "state": "DONE",
+  }
+
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:30:22
+     28|   it.each(['HOLD', 'REVISE', 'QUALITY_FAIL', 'BLOCKED'] as const)('ret…
+     29|     const { queue, review, contract, admitted } = await reviewFixture(…
+     30|     expect(admitted).toMatchObject({ state: 'BLOCKED', review_verdict:…
+       |                      ^
+     31|     const child = await queue.create({ project_id: 'fixture', backlog_…
+     32|     await expect(queue.claim(child.work_id, 'fixture')).rejects.toThro…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > allows an explicit same-scope corrective dependency without granting source success
+AssertionError: expected 'DONE' to be 'BLOCKED' // Object.is equality
+
+Expected: "BLOCKED"
+Received: "DONE"
+
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:46:88
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > rejects a corrective dependency from another run
+AssertionError: promise resolved "{ project_id: 'fixture', …(14) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "assignment": {
++     "acceptance_criteria": [
++       "durable evidence recorded",
++     ],
++     "allowed_paths": [
++       "assigned workspace",
++     ],
++     "allowed_tools": [
++       "repository inspection",
++     ],
++     "allowed_verdicts": [
++       "PASS",
++       "REVISE",
++       "QUALITY_FAIL",
++       "HOLD",
++       "BLOCKED",
++     ],
++     "assignment_id": "ASSIGNMENT:WORK-1790950695442-2ujglf",
++     "context_budget": {
++       "max_tokens": 8000,
++       "target_tokens": 4000,
++     },
++     "dependencies": [
++       "WORK-1790950695441-gibczo",
++     ],
++     "escalation_policy": "bounded escalation",
++     "evidence_manifest": [
++       "assigned work item",
++     ],
++     "forbidden_paths": [
++       ".env",
++       ".ai-company/runtime",
++       ".ai-company/company-state.json",
++     ],
++     "forbidden_tools": [
++       "deployment",
++       "secret access",
++     ],
++     "inputs": [
++       "assigned work contract",
++     ],
++     "mutation_policy": "read_only",
++     "namespace": "fixture",
++     "objective": "corrective work",
++     "objective_id": "BC",
++     "output_schema": "none",
++     "product_goal_alignment": [
++       "Product Goal alignment required",
++     ],
++     "product_id": "fixture",
++     "retry_budget": 1,
++     "risk_level": "P1",
++     "role": "sre",
++     "run_id": "FOREIGN",
++     "scope": [
++       "assigned work only",
++     ],
++     "task_type": "role-work",
++     "test_policy": "targeted",
++     "timeout": 600,
++     "token_budget": 16000,
++     "work_id": "WORK-1790950695442-2ujglf",
++   },
++   "backlog_id": "BC",
++   "created_at": "2026-10-02T14:18:15.442Z",
++   "depends_on": [
++     "WORK-1790950695441-gibczo",
++   ],
++   "evidence_ids": [],
++   "namespace": "fixture",
++   "owner": "fixture",
++   "project_id": "fixture",
++   "recovery_source_work_id": "WORK-1790950695441-gibczo",
++   "role": "sre",
++   "run_id": "FOREIGN",
++   "state": "CLAIMED",
++   "title": "corrective work",
++   "updated_at": "2026-10-02T14:18:15.442Z",
++   "work_id": "WORK-1790950695442-2ujglf",
+  }
+
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:52:60
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  6 failed | 1 passed (7)
+   Start at  21:18:15
+   Duration  434ms (transform 48ms, setup 0ms, collect 56ms, tests 22ms, environment 0ms, prepare 32ms)
+

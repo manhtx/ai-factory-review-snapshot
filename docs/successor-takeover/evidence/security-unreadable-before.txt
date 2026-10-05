@@ -1,0 +1,41 @@
+✔ clean source inventory passes with a bounded claim (117.638ms)
+✔ tracked browser profile fails without reading or printing contents (81.878875ms)
+✔ missing Git inventory fails closed (48.991917ms)
+✔ independent-review private path is rejected: ChromeProfile/Default/Preferences (173.478208ms)
+✔ independent-review private path is rejected: profiles/firefox/logins.json (76.945042ms)
+✔ independent-review private path is rejected: profiles/firefox/cookies.sqlite (68.406208ms)
+✔ tracked live lease identity is rejected without deleting its working file (134.879958ms)
+✖ unreadable scope must not produce a clean audit (56.183333ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 833.205291
+
+✖ failing tests:
+
+test at scripts/audit-ai-company-secrets.test.mjs:62:1
+✖ unreadable scope must not produce a clean audit (56.183333ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  0 !== 1
+
+      at file:///Users/manhtx/Documents/Macro%20Research%20Platform/scripts/audit-ai-company-secrets.test.mjs:66:10
+      at fixture (file:///Users/manhtx/Documents/Macro%20Research%20Platform/scripts/audit-ai-company-secrets.test.mjs:12:49)
+      at TestContext.<anonymous> (file:///Users/manhtx/Documents/Macro%20Research%20Platform/scripts/audit-ai-company-secrets.test.mjs:62:63)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

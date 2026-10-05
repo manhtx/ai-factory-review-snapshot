@@ -1,0 +1,14 @@
+{
+  "schema": "successor-takeover.wait-validation.v1",
+  "status": "ISOLATED_REPAIR_INDEPENDENT_REVIEW_PENDING",
+  "authority": "NONE",
+  "sourceSha256": "4820c01f8b18df16d04959b9114ebe60a557f1385359a24ff43604a4aebc931e",
+  "testSha256": "54637a68f6e7a565d6d5c30bed5e952e9a4a55e11f6c5f6c4bea33fb40f981ec",
+  "files": ["server/aiCompany/waitWake.ts", "server/aiCompany/waitWakeIntegrity.test.ts"],
+  "evidence": {"before": "evidence/wait-before.json: 12 failed", "firstRepair": "evidence/wait-first-repair.json: 55 passed", "expanded": "evidence/wait-expanded.json", "lint": "PASS", "typecheck": "same 11 existing errors outside package"},
+  "legacySnapshotRead": {"records": 872, "result": "ACCEPTED", "sha256": "37fbfe165851731937f78c2b9bfe38f1b3e75c63b89b92739959c102dbc75991", "bytesUnchanged": true, "source": "/Users/manhtx/Documents/macro-successor-f0-I5xvdx/control-suspended-restore/.ai-company/runtime/projects/macro-os/wait-wake.jsonl"},
+  "implemented": ["explicit runtime enums", "valid UTC dates and timer requirement", "serialized-byte admission", "historical-row validation before reduction", "explicit four-way wake classification", "invalid-clock/resume rejection", "refuse append through invalid history"],
+  "remaining": ["independent review", "authenticated events", "concurrent resume and transactional ownership", "deadline expiry/fallback policy", "objective-linked waits and budgets", "live migration and temporal proof"],
+  "proofInvalidation": "Earlier whole-candidate inventory is stale after this intentional source addition/change. Do not use older inventory as current attestation.",
+  "claimLimit": "Input/history validation and preserved wake semantics only. No full recovery closure or successor promotion."
+}

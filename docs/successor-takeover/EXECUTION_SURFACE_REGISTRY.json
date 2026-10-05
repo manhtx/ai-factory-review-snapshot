@@ -1,0 +1,106 @@
+{
+  "schema": "successor-takeover.execution-registry.v1",
+  "status": "BOUNDED_INVENTORY_WITH_OPEN_AUTHORITY_CENSUS",
+  "sourceInventory": "evidence/legacy-execution-surface.json",
+  "denominatorSha256": "9f3795e680f9a3d9ea19a8b7cafb5caf255ea41d159ea55fad1da2c6989af314",
+  "inventoryFiles": 875,
+  "effectBearingFiles": 222,
+  "scope": [
+    "server",
+    "api",
+    "scripts",
+    "src",
+    ".github",
+    "declared root package/config files"
+  ],
+  "omissions": [
+    "other repository-root executables",
+    "external installed service definitions captured separately",
+    "takeover tools in docs/successor-takeover/tools are observer tooling with explicit local backup/process effects",
+    "generated/dynamic code and dependencies require runtime-envelope accounting"
+  ],
+  "domains": [
+    {
+      "state": "EXECUTION_LEASE.json",
+      "writer": "server/aiCompany/executionLease.ts",
+      "mutators": [
+        "saveLease",
+        "createOrUpdateExecutionLease",
+        "takeoverExecutionLease",
+        "recordQuotaWait",
+        "clearQuotaWait",
+        "revokeLease"
+      ],
+      "currentProtocol": "non-atomic load/check/rename",
+      "counterexample": "eight commands with expected revision 1 all accepted revision 2"
+    },
+    {
+      "state": "role-work-queue.jsonl",
+      "writer": "server/aiCompany/roleWorkQueue.ts",
+      "mutators": [
+        "create",
+        "createBatch",
+        "update",
+        "append"
+      ],
+      "currentProtocol": "read/validate/append without cross-process serialization",
+      "directBypasses": [
+        "scripts/record-disclaimer-banner-cycle.mjs:197",
+        "scripts/record-workspace-synthesis-cycle.mjs:246"
+      ]
+    },
+    {
+      "state": "durable-operations.jsonl",
+      "writer": "server/aiCompany/durableOperation.ts",
+      "mutators": [
+        "createOperation",
+        "transition",
+        "recovery methods"
+      ],
+      "currentProtocol": "creation bypasses operation locks; locks do not establish current external authority or evidence"
+    },
+    {
+      "state": "cycle closure / dispatch",
+      "writer": "scripts/ai-company-marathon.mjs",
+      "currentProtocol": "durable-start failure is caught before dispatch; cycle closure precedes best-effort durable DONE"
+    },
+    {
+      "state": "supervision and recovery",
+      "writer": "scripts/ai-company-continuity-kernel.mjs",
+      "currentProtocol": "multiple separate queue/operation/wait/lease stores",
+      "candidate": "integrity exception containment independently replayed; source still unpromoted"
+    }
+  ],
+  "installedEntrypoints": [
+    {
+      "label": "com.macrolens.ai-company-supervisor",
+      "source": "server/index.ts",
+      "pid": 534,
+      "configured": true,
+      "executorEnabled": false,
+      "loadedSourceRevision": "UNATTESTED"
+    },
+    {
+      "label": "com.macrolens.ai-company-loop",
+      "source": "scripts/ai-company-continuity-kernel.mjs",
+      "pid": 6108,
+      "configured": true,
+      "stopSentinelPresent": true,
+      "loadedSourceRevision": "UNATTESTED"
+    },
+    {
+      "label": "com.macrolens.ai-company-heartbeat",
+      "source": "scripts/supabase-heartbeat.mjs",
+      "configured": true,
+      "remoteEffect": "database heartbeat",
+      "candidateAuthority": false
+    }
+  ],
+  "enforcement": {
+    "sourceDrift": "execution-surface.mjs check exits nonzero on scoped additions/removals/changes",
+    "runtimeWriterFencing": "NOT_ESTABLISHED",
+    "unknownEntryPoints": "Do not promote while materially authoritative paths remain undeclared/unfenced"
+  },
+  "verification": "five registry tests passed; real captured inventory rechecked unchanged",
+  "claimLimit": "No global writer absence, runtime source attestation or local authority cutover proven."
+}

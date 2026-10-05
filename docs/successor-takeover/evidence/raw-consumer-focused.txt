@@ -1,0 +1,34 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/researchSynthesis.test.ts (2 tests | 1 failed) 35ms
+   × research synthesis > turns completed research work into idempotent evidence signals 34ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ research synthesis > requires all four research perspectives before re-score 1ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (2 tests) 2ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (2 tests) 2ms
+ ✓ server/aiCompany/releasePromotion.test.ts (2 tests) 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/researchSynthesis.test.ts > research synthesis > turns completed research work into idempotent evidence signals
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:222:13
+    220|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    221|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    222|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    223|     }
+    224|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:239:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:525:24
+ ❯ server/aiCompany/researchSynthesis.test.ts:14:44
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 7 passed (8)
+   Start at  09:28:27
+   Duration  819ms (transform 86ms, setup 0ms, collect 134ms, tests 40ms, environment 1ms, prepare 101ms)
+

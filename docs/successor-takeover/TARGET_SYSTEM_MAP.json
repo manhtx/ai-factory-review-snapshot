@@ -1,0 +1,143 @@
+{
+  "schema": "successor-takeover.target-system-map.v1",
+  "frozen": false,
+  "consumerFieldSemantics": "Original consumer fields were proposed relationships, not verified direct imports. Verified edges and corrections are recorded in evidence/capability-edge-review.json; do not use this map alone as runtime reachability proof.",
+  "basis": "Independent static source/caller review by agent 01a0f1a6-909f-7f22-976b-231d736b1ebe; preserves all 13 mission section20 groups, splitting Evidence/Review/Proof into two rows",
+  "subsystems": [
+    {
+      "subsystem": "Mission/Objectives",
+      "disposition": "REFACTOR",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/objectiveEligibility.ts",
+      "consumer": "scripts/create-codex-product-cycle.mjs",
+      "rationale": "Queue-derived eligibility cannot own objective satisfaction, supersession and reopening.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Queue/Execution",
+      "disposition": "REFACTOR",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/roleWorkQueue.ts",
+      "consumer": "scripts/ai-company-marathon.mjs",
+      "rationale": "Preserve role DAG, dependencies, claims, review and quarantine; relate objective/work/operation/attempt explicitly.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Authority/Ownership",
+      "disposition": "REFACTOR",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/executionLease.ts",
+      "consumer": "scripts/ai-company-role-dispatch.mjs",
+      "rationale": "Compose ownership lease, assignment scope and workflow permission into a fenced dispatch decision.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Evidence/Review",
+      "disposition": "HARDEN",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/roleEvidenceLedger.ts",
+      "consumer": "server/aiCompany/roleWorkQueue.ts",
+      "rationale": "Require evidence resolution consistently; keep provider outputs advisory.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Proof/Promotion",
+      "disposition": "REFACTOR",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/preReleaseReviewGate.ts",
+      "consumer": "server/aiCompany/releasePromotion.ts",
+      "rationale": "DONE plus nonempty IDs proves neither admissible evidence nor independent outcome.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Failure/Recovery",
+      "disposition": "REFACTOR",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/recoveryCoordinator.ts",
+      "consumer": "scripts/ai-company-continuity-kernel.mjs",
+      "rationale": "Assign one recovery authority per effect; preserve objectives, bounded retries, unknown outcomes and escalation.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Provider/Executor",
+      "disposition": "HARDEN",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/openaiCompatibleRoleAdapter.ts",
+      "consumer": "server/index.ts",
+      "rationale": "Preserve bounded adapters, attempts, usage and dead letters behind effect contracts.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Runtime supervision",
+      "disposition": "REFACTOR",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/runtime.ts",
+      "consumer": "scripts/ai-company-continuity-kernel.mjs",
+      "rationale": "Separate process restart from semantic scheduling; retain checkpoint, stop and readiness behavior.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Resource management",
+      "disposition": "HARDEN",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/resourceGovernor.ts",
+      "consumer": "scripts/ai-company-role-dispatch.mjs",
+      "rationale": "Centralize admission ownership; reactive ALLOW is not verified capacity.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Storage",
+      "disposition": "REFACTOR",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/stateStore.ts",
+      "consumer": "server/db.ts",
+      "rationale": "Define governance transactions and reconstruction separately from product SQLite/Supabase contracts.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Data ingestion",
+      "disposition": "HARDEN",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/ingestion.ts",
+      "consumer": "server/scheduler.ts",
+      "rationale": "Preserve source parsers, quarantine, revisions, bounded ingestion and verified batch semantics.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Data identity/provenance/freshness",
+      "disposition": "HARDEN",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/observationReadContract.ts",
+      "consumer": "server/freshness.ts",
+      "rationale": "Preserve source vintage, period, revision and release-calendar meaning across consumers.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Product projections",
+      "disposition": "KEEP",
+      "capabilityDisposition": "PRESERVE",
+      "source": "src/app/pages/ResearchCopilotPage.tsx",
+      "consumer": "server/index.ts",
+      "rationale": "Preserve research loop and evidence inspection; governance state cannot become observation truth.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    },
+    {
+      "subsystem": "Learning/Self-improvement",
+      "disposition": "REFACTOR",
+      "capabilityDisposition": "PRESERVE",
+      "source": "server/aiCompany/behavioralAdaptation.ts",
+      "consumer": "UNCONFIRMED_NON_TEST_CONSUMER",
+      "rationale": "Preserve evidence-linked decisions; actual consumer and outcome proof required before activation.",
+      "status": "PROPOSED_STATIC_EVIDENCE_ONLY"
+    }
+  ],
+  "retirementsAuthorized": [],
+  "decisionChangingUnknowns": [
+    "enabled authoritative entrypoints",
+    "current objective/work/operation lineage",
+    "cross-process recovery/admission fencing",
+    "product backend transaction parity",
+    "unseen learning consumers"
+  ],
+  "claimLimit": "Not a closed-world census, runtime proof, frozen architecture or migration authorization"
+}

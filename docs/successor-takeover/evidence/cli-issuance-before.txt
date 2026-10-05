@@ -1,0 +1,65 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts (12 tests | 2 failed | 10 skipped) 2271ms
+   × claims before stub provider, passes no capability, and ACKs its actual attempt 1574ms
+     → expected { state: 'CLAIMED', …(2) } to match object { state: 'CLAIMED', …(3) }
+   × refuses provider dispatch when stopped while paused after claim ACK 696ms
+     → expected [ '.ai-company', 'stub-bin', …(1) ] to not include 'stub-call.json'
+   ↓ does not adopt an existing claim or call the stub provider
+   ↓ never consumes a legacy work-only completion artifact for a silent new attempt
+   ↓ does not record semantic evidence after the claimed attempt was explicitly stopped
+   ↓ terminates the owned stub provider before exiting on dispatcher SIGTERM
+   ↓ awaits bounded group escalation when a descendant ignores SIGTERM
+   ↓ quarantines worker-written DONE before creating semantic receipts
+   ↓ preserves an unresolved provider citation and blocks instead of replacing it
+   ↓ CLI review preserves actual original reference for same-scope
+   ↓ CLI review preserves actual original reference for cross-scope
+   ↓ CLI review preserves actual original reference for unresolved
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > claims before stub provider, passes no capability, and ACKs its actual attempt
+AssertionError: expected { state: 'CLAIMED', …(2) } to match object { state: 'CLAIMED', …(3) }
+
+- Expected
++ Received
+
+  {
+    "argsContainCapability": false,
+    "attempt_id": "b598a27c-ae4d-4acf-a911-8d1b86c59d7b",
+-   "provider_dispatch": {
+-     "attempt_id": "b598a27c-ae4d-4acf-a911-8d1b86c59d7b",
+-     "provider_id": "cli:codex:unit-stub",
+-   },
+    "state": "CLAIMED",
+  }
+
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:74:16
+     72|   const row = (await input.queue.records())[0]; expect(row.state).toBe…
+     73|   const call = JSON.parse(await readFile(path.join(input.root, 'stub-c…
+     74|   expect(call).toMatchObject({ state: 'CLAIMED', attempt_id: row.attem…
+       |                ^
+     75|   expect(result.messages).toEqual([{ type: 'ROLE_ATTEMPT_CLAIMED', wor…
+     76|   expect(await readFile(path.join(input.runtime, 'role-dispatch-eviden…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  server/aiCompany/cliAttemptDispatch.test.ts > refuses provider dispatch when stopped while paused after claim ACK
+AssertionError: expected [ '.ai-company', 'stub-bin', …(1) ] to not include 'stub-call.json'
+ ❯ server/aiCompany/cliAttemptDispatch.test.ts:89:41
+     87|   });
+     88|   expect(result.code).not.toBe(0);
+     89|   expect(await readdir(input.root)).not.toContain('stub-call.json');
+       |                                         ^
+     90|   expect((await input.queue.records())[0]).toMatchObject({ state: 'BLO…
+     91|   expect(await readdir(input.runtime)).not.toContain('role-dispatch-ev…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 10 skipped (12)
+   Start at  23:52:23
+   Duration  2.93s (transform 128ms, setup 0ms, collect 162ms, tests 2.27s, environment 0ms, prepare 66ms)
+

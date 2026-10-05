@@ -1,0 +1,103 @@
+{
+  "schema": "ai-factory.scoped-proof.v1",
+  "observedAt": "2026-10-02T14:10:01.224073+00:00",
+  "sourceBaseRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "executionIdentity": "UNCOMMITTED_WORKTREE_HASHES; NOT_LIVE_ATTESTED",
+  "sourceHashes": {
+    "server/aiCompany/roleEvidenceLedger.ts": "e943c2040b87fb9285811f0fbce71d8f8534231ab5453efc848ab77ac5239959",
+    "server/aiCompany/roleWorkExecutor.ts": "5549e245fec1cd13384f655f6afe8bf9b936e3fd27ae5c41d6048b009392eae2",
+    "server/aiCompany/roleWorkQueue.ts": "676953eb430c1d8af77458f8f8afe4373a134c9e1e000e6ec4acefc39c027ee1",
+    "server/aiCompany/autonomousCoordinator.ts": "35e6949efb96189c24cd5d04f1a8e1dc86f89e997f301b3eb7c5c07ad7c075e6",
+    "server/aiCompany/runtime.ts": "6b2ff72d067acfc1f6ac71d52149bd104734060ef6a5e72279163daaec76d2e6",
+    "server/index.ts": "004a64c0bff8e51b65bd40807949b33752d18724a88cc2bdcf1066df6d2073b0",
+    "server/aiCompany/nativeEvidenceAdmission.test.ts": "7a01fc96e078d729d6b0ba92cb8ed53cd6c1a92c1adeb112eb200f9bfc188f57",
+    "server/aiCompany/roleWorkExecutor.test.ts": "e3a095e53e27c68a34eaa39e56f9f9c8f3a97c65ef8b7b167906dc93b7addd00",
+    "server/aiCompany/roleEvidenceLedger.test.ts": "55f82c356f53e823525d5fe7c0c432eed1b86069cc3ae6b1aedb547cd9be31ae"
+  },
+  "claim": "Native receipt resolution explicitly wired; no fabricated coder fallback or auto review PASS; declared citations retained; configured queue preflight before callback dispatch",
+  "failBefore": "native-admission-before.txt:3/3 failures",
+  "focusedAfter": "native-final-focused.txt:94/94 across10files",
+  "independentReview": {
+    "agent": "/root/native_contract_review",
+    "result": "20/20 native11/executor8/ledger1",
+    "sourceHashesStable": true,
+    "counterexample": {
+      "queueHash": "ed50ea1f6313c623680c2a01f9125a613f823da3897d1f2351b17d9b25163c66",
+      "reproduction": "user-persona FIXTURE-REVIEW actual PASS cited own receipt and completed1",
+      "finalControl": "suffix/code_review same-role receipt rejected; valid coder preserved"
+    },
+    "controls": [
+      "Wrong namespace/run rejected",
+      "Same-role QA rejected",
+      "Valid coder completes with real isolated fixture",
+      "Unresolved top-level adapter citation rejected",
+      "Autonomous preflight callback0, queuebytes unchanged"
+    ],
+    "claimCeiling": "Scoped source admission only"
+  },
+  "compatibility": {
+    "numTotalTests": 54,
+    "numPassedTests": 48,
+    "numFailedTests": 6,
+    "success": false
+  },
+  "remainingFailures": [
+    {
+      "file": "autonomousCoordinator.test.ts",
+      "test": "advances one invocation through ready work and bounded terminal state",
+      "error": "AssertionError: expected 'BLOCKED_EXTERNAL' to be 'SUCCESS' // Object.is equality"
+    },
+    {
+      "file": "autonomousCoordinator.test.ts",
+      "test": "recovers a HOLD without a manual next-wave trigger",
+      "error": "AssertionError: {\"status\":\"BLOCKED_EXTERNAL\",\"completed\":[],\"recovery_tasks\":[],\"runs\":0,\"interventions\":0,\"total_tokens_estimated\":0,\"token_provenance\":\"ESTIMATED\",\"next_action\":{\"kind\":\"WAITING_FOR_EXTERNAL_EVIDENCE\",\"reason\":\"external dependency prevented safe continuation\",\"wake_condition\":\"external-dependency-resolved\"},\"failure_reason\":\"completion requires an explicitly configured evidence resolver\"}: expected 'BLOCKED_EXTERNAL' to be 'SUCCESS' // Object.is equality"
+    },
+    {
+      "file": "autonomousCoordinator.test.ts",
+      "test": "reports provider usage as actual instead of relabeling context estimates",
+      "error": "AssertionError: expected 'BLOCKED_EXTERNAL' to be 'SUCCESS' // Object.is equality"
+    },
+    {
+      "file": "recoveryCoordinator.test.ts",
+      "test": "Scenario 1: QA fail -> Coder fix corrective task -> QA re-run",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "runtime.test.ts",
+      "test": "runs an injected role executor after planning work",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "runtime.test.ts",
+      "test": "completes daily then weekly governance with independent review evidence",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    }
+  ],
+  "securityProbe": "native-security-probe.json:40routes80rejections; authorizedinvalid400/adminunset503",
+  "typecheck": "11 unrelated diagnostics; no full gate pass",
+  "limitations": [
+    "No objective/attempt/execution revision binding or transactional terminal authority",
+    "Receipt hash/scope is not actual effect, independent product review or outcome",
+    "Non-PASS review terminal handling open",
+    "Remaining caller fixtures/configuration and workflow dependency scope open",
+    "Direct executor callback invocation outside queue preflight not certified",
+    "No live enabling/restart/migration/candidate propagation/promotion",
+    "No G1 denied action attempted"
+  ],
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/aiCompany/roleEvidenceLedger.ts",
+      "server/aiCompany/roleWorkExecutor.ts",
+      "server/aiCompany/roleWorkQueue.ts",
+      "server/aiCompany/autonomousCoordinator.ts",
+      "server/index.ts",
+      "server/aiCompany/nativeEvidenceAdmission.test.ts",
+      "server/aiCompany/roleWorkExecutor.test.ts",
+      "server/aiCompany/roleEvidenceLedger.test.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

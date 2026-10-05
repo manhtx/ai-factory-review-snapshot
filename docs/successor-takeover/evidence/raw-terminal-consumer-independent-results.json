@@ -1,0 +1,273 @@
+{
+  "observedAt": "2026-10-05T02:30:46.612Z",
+  "cases": [
+    {
+      "kind": "withdrawn",
+      "promotion": {
+        "ready": false,
+        "blockers": [
+          "functional-qa review current authority is invalid",
+          "quality-control review current authority is invalid",
+          "stakeholder-panel review current authority is invalid",
+          "user-persona review current authority is invalid",
+          "ux-research review current authority is invalid",
+          "domain-expert review current authority is invalid"
+        ],
+        "approvedRoles": [],
+        "action": "HOLD_AND_ESCALATE",
+        "rollback_required": false
+      },
+      "cadence": {
+        "ok": false,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [],
+        "blockers": [
+          "governance work ceo current authority is invalid",
+          "governance work ceo-guild current authority is invalid",
+          "governance work pm current authority is invalid",
+          "governance work data-engineer current authority is invalid",
+          "governance work sre current authority is invalid"
+        ]
+      }
+    },
+    {
+      "kind": "healthy",
+      "promotion": {
+        "ready": true,
+        "blockers": [],
+        "approvedRoles": [
+          "functional-qa",
+          "quality-control",
+          "stakeholder-panel",
+          "user-persona",
+          "ux-research",
+          "domain-expert"
+        ],
+        "action": "PROMOTE",
+        "rollback_required": false
+      },
+      "cadence": {
+        "ok": true,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "kind": "missing",
+      "promotion": {
+        "ready": false,
+        "blockers": [
+          "functional-qa review current authority is invalid",
+          "quality-control review current authority is invalid",
+          "stakeholder-panel review current authority is invalid",
+          "user-persona review current authority is invalid",
+          "ux-research review current authority is invalid",
+          "domain-expert review current authority is invalid"
+        ],
+        "approvedRoles": [],
+        "action": "HOLD_AND_ESCALATE",
+        "rollback_required": false
+      },
+      "cadence": {
+        "ok": false,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [],
+        "blockers": [
+          "governance work ceo current authority is invalid",
+          "governance work ceo-guild current authority is invalid",
+          "governance work pm current authority is invalid",
+          "governance work data-engineer current authority is invalid",
+          "governance work sre current authority is invalid"
+        ]
+      }
+    },
+    {
+      "kind": "invalid-pass",
+      "promotion": {
+        "ready": false,
+        "blockers": [
+          "functional-qa review current authority is invalid"
+        ],
+        "approvedRoles": [
+          "quality-control",
+          "stakeholder-panel",
+          "user-persona",
+          "ux-research",
+          "domain-expert"
+        ],
+        "action": "HOLD_AND_ESCALATE",
+        "rollback_required": false
+      },
+      "cadence": {
+        "ok": true,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "kind": "hold",
+      "promotion": {
+        "ready": false,
+        "blockers": [
+          "functional-qa review current authority is invalid"
+        ],
+        "approvedRoles": [
+          "quality-control",
+          "stakeholder-panel",
+          "user-persona",
+          "ux-research",
+          "domain-expert"
+        ],
+        "action": "HOLD_AND_ESCALATE",
+        "rollback_required": false
+      },
+      "cadence": {
+        "ok": true,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "blockers": []
+      }
+    },
+    {
+      "kind": "missing-pass",
+      "promotion": {
+        "ready": false,
+        "blockers": [
+          "functional-qa review current authority is invalid"
+        ],
+        "approvedRoles": [
+          "quality-control",
+          "stakeholder-panel",
+          "user-persona",
+          "ux-research",
+          "domain-expert"
+        ],
+        "action": "HOLD_AND_ESCALATE",
+        "rollback_required": false
+      },
+      "cadence": {
+        "ok": true,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "blockers": []
+      }
+    }
+  ],
+  "synthesis": {
+    "healthySignals": 2,
+    "withdrawnSignals": 0,
+    "missingSignals": 0,
+    "withdrawnStoredSignals": [],
+    "historicalLeafState": "DONE"
+  },
+  "hashes": {
+    "preReleaseReviewGate.ts": "a3c0d52db14f8bc3c48c991092d5ead29f3f8a4c71fb2cfabbb1e0e8b25c6b71",
+    "cadenceQuorum.ts": "8f4ac711c133b211097b9bf4d7ea7ba06956a3dd5c1a2165b48bb0a203452994",
+    "researchSynthesis.ts": "be7844698ec29908b7ee37216adcaeef632b563337c8a121bca273a4de109fc5",
+    "releasePromotion.ts": "c00e68576e055f1a2da92b00945a77c9cc4e8fef9a186cf506d83a631da7f3fc",
+    "roleWorkQueue.ts": "ee7339adb5033995705f95802fbf3a989767242c902c06a3592a4726418d936d",
+    "preReleaseReviewGate.test.ts": "76f39bc7bc208e8d73e1d69fe9abb0ac202468a04cec2836cc68300b40b6a781",
+    "cadenceQuorum.test.ts": "b373131d52ffb3df3670859a151aafc17b7422fc1a7c2bf5c7956ee9b3c006f7",
+    "researchSynthesis.test.ts": "cfeaaa1f775449810f0f45cfcf9402c8dd2ac78e279161b3ba74475bc727dec9",
+    "releasePromotion.test.ts": "e565d875a1359bc5a8a30a463fe864d39135015bf0f2a134ae282ad580d4301c",
+    "runtime.ts": "6b2ff72d067acfc1f6ac71d52149bd104734060ef6a5e72279163daaec76d2e6",
+    "runtime.test.ts": "c447e77bb8d12e5903db5d8c080640cbdc6fb01491c6539604b46bb5291da088"
+  },
+  "realProviderCalls": 0,
+  "networkCalls": 0,
+  "focusedTests": {
+    "passed": 31,
+    "failed": 0,
+    "files": 5,
+    "durationSeconds": 5.66,
+    "breakdown": {
+      "preReleaseReviewGate": 7,
+      "releasePromotion": 3,
+      "cadenceQuorum": 5,
+      "researchSynthesis": 3,
+      "runtime": 13
+    }
+  },
+  "interimFixtureFailure": {
+    "passed": 29,
+    "failed": 2,
+    "error": "role evidence scope, output and limitation are required",
+    "resolution": "Parent supplied actual assignment namespace/run to native receipts; unchanged assertions and production admission guards."
+  },
+  "review": "Each consumer passes the full original input snapshot to isSuccessfulRoleWork, preserving nonmatching-backlog dependencies. runtime reads fresh full project rows immediately before quorum and synthesis; prerelease endpoint likewise passes full fresh project records. Valid complete PASS withdrawn/missing controls deny approval; healthy source outside target backlog authorizes. Temporary actual queue advisory synthesis healthy2, withdrawn0, missing0; historical DONE retained.",
+  "limits": [
+    "Only current caller-provided snapshot admission verified; callers can still pass stale complete snapshots.",
+    "Synthesis checks and async signal writes are not atomic with queue mutation.",
+    "Already stored advisory signals and downstream revalidation remain OPEN.",
+    "Exact producer attempt/input-version/effect binding, crossproject aggregation/role ambiguity and broader raw-status consumers remain OPEN.",
+    "No real provider/network/live/candidate/G1 actions; production source unchanged by reviewer."
+  ]
+}

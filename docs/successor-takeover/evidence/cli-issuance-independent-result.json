@@ -1,0 +1,47 @@
+{
+  "observedAt": "2026-10-04T16:55:06.849Z",
+  "sourceHashesBefore": {
+    "scripts/ai-company-role-dispatch.mjs": "738092e1103bcb55aa9c00551a7bed8ff90f680e2f4a0f594bb567a72c75a224",
+    "server/aiCompany/roleWorkQueue.ts": "d62ef1717ebf08d5cdc91130624151aa8e37edd359e7e657e95a2104e3809c1f",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "c5a5106543f59ffd60f9b4e947a5ef4af8a2911308d0c49559df9f71ac20e4b9"
+  },
+  "sourceHashesAfter": {
+    "scripts/ai-company-role-dispatch.mjs": "738092e1103bcb55aa9c00551a7bed8ff90f680e2f4a0f594bb567a72c75a224",
+    "server/aiCompany/roleWorkQueue.ts": "d62ef1717ebf08d5cdc91130624151aa8e37edd359e7e657e95a2104e3809c1f",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "c5a5106543f59ffd60f9b4e947a5ef4af8a2911308d0c49559df9f71ac20e4b9"
+  },
+  "sourceStable": true,
+  "realProviders": 0,
+  "networkCalls": 0,
+  "canonicalMutations": false,
+  "results": [
+    {
+      "mode": "success-marker",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-cli-issuance-ZIM9J4",
+      "code": 0,
+      "stderr": "",
+      "stubCalled": true,
+      "stubObservation": {
+        "state": "CLAIMED",
+        "attempt_id": "80c62bd6-391a-4c7d-9b54-bc55995da6f9",
+        "marker": {
+          "attempt_id": "80c62bd6-391a-4c7d-9b54-bc55995da6f9",
+          "provider_id": "cli:codex:unit-stub",
+          "issued_at": "2026-10-04T16:55:05.028Z"
+        },
+        "handleInArgs": false
+      },
+      "state": "DONE"
+    },
+    {
+      "mode": "stop-after-claim-ack",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-cli-issuance-Z0eQm4",
+      "code": 4,
+      "stderr": "PROVIDER_DISPATCH_ADMISSION_FAILED stale queue selection: work changed before mutation\n",
+      "stubCalled": false,
+      "stubObservation": null,
+      "state": "BLOCKED",
+      "stoppedHistoryUnchanged": true
+    }
+  ]
+}

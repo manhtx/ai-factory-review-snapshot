@@ -1,0 +1,125 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/runtime.test.ts (13 tests | 3 failed) 1272ms
+   ✓ CEO brief runtime > is disabled unless explicitly enabled 1ms
+   ✓ CEO brief runtime > starts a stoppable unref interval when configured 1ms
+   ✓ CEO brief runtime > composes product scheduler and company supervisor for one project 70ms
+   ✓ CEO brief runtime > does not run product work when the readiness gate is blocked 46ms
+   ✓ CEO brief runtime > records readiness probe exceptions as an explicit blocker 46ms
+   ✓ CEO brief runtime > requires an explicit readiness gate in production 1ms
+   × CEO brief runtime > runs an injected role executor after planning work 217ms
+     → expected false to be true // Object.is equality
+   ✓ CEO brief runtime > does not mark a cycle done when role execution is blocked  395ms
+   ✓ CEO brief runtime > fails closed when verified cycle value is required but no outcome is evidenced 58ms
+   × CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false 161ms
+     → expected false to be true // Object.is equality
+   × CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true 184ms
+     → expected false to be true // Object.is equality
+   ✓ CEO brief runtime > audits discovery evidence-supplier failures instead of hiding them 86ms
+   ✓ CEO brief runtime > persists one explicit wake when the runtime has no executable work 6ms
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts (14 tests | 1 failed) 701ms
+   ✓ backlog work planner > routes series canonicalization to backend and ingestion cadence to data engineering 1ms
+   ✓ backlog work planner > creates idempotent governance work for the active cadence 54ms
+   ✓ backlog work planner > maps work to validated roles and is idempotent 20ms
+   ✓ backlog work planner > routes proposed product work through PM review instead of direct execution 10ms
+   ✓ backlog work planner > promotes proposed work only after an explicit PM PROCEED decision 43ms
+   ✓ backlog work planner > does not let a quarantined historical execution suppress a new PM approval 60ms
+   ✓ backlog work planner > rechecks legacy prose PM decisions instead of treating them as approval 70ms
+   ✓ backlog work planner > creates independent QA and QC reviews after implementation completion 111ms
+   ✓ backlog work planner > requires a reason for blocking and reports overdue work for escalation 22ms
+   ✓ backlog work planner > opens stakeholder, user, UX and domain reviews only after QA and QC pass 147ms
+   ✓ backlog work planner > creates research work for unscored or low-evidence ideas idempotently 39ms
+   × backlog work planner > rejects mixed-scope pre-release dependencies without creating a fabricated common scope 28ms
+     → promise resolved "[]" instead of rejecting
+   ✓ backlog work planner > rejects control plane continuity work without runtime failure evidence under CONTINUITY FREEZE 11ms
+   ✓ does not generate QA/QC from DONE whose original receipts disappeared 85ms
+ ❯ server/aiCompany/roleWorkExecutor.test.ts (8 tests | 1 failed) 579ms
+   ✓ role work execution loop > completes with evidence and blocks failed workers 67ms
+   ✓ role work execution loop > bridges a configured model only when it returns server-owned evidence 46ms
+   ✓ role work execution loop > blocks model output that has no evidence 33ms
+   ✓ role work execution loop > blocks execution when the coordinator has not recorded a handoff 19ms
+   ✓ role work execution loop > creates server-owned evidence from bounded provider output 83ms
+   ✓ role work execution loop > returns a lineage-linked research result for user and review roles 47ms
+   × role work execution loop > runs ready work with bounded concurrency 181ms
+     → attempt lost authority; newer work state preserved: evidence snapshot changed before decision; revalidation required
+   ✓ role work execution loop > blocks work that has not started when the batch budget is exhausted 102ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 376ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/backlogWorkPlanner.test.ts > backlog work planner > rejects mixed-scope pre-release dependencies without creating a fabricated common scope
+AssertionError: promise resolved "[]" instead of rejecting
+
+- Expected: 
+Error {
+  "message": "rejected promise",
+}
+
++ Received: 
+[]
+
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts:170:73
+    168|     }
+    169|     const before = await queue.records();
+    170|     await expect(planPreReleaseReviews({ projectId: 'macro-os', queue …
+       |                                                                         ^
+    171|     expect(await queue.records()).toEqual(before);
+    172|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  server/aiCompany/roleWorkExecutor.test.ts > role work execution loop > runs ready work with bounded concurrency
+Error: attempt lost authority; newer work state preserved: evidence snapshot changed before decision; revalidation required
+ ❯ worker server/aiCompany/roleWorkExecutor.ts:147:27
+    145|           if (authority) {
+    146|             try { blocked.push(await input.queue.blockAttempt(item.wor…
+    147|             catch { throw new Error(`attempt lost authority; newer wor…
+       |                           ^
+    148|           } else {
+    149|             // A failed claim grants no permission to stop another act…
+ ❯ executeReadyRoleWork server/aiCompany/roleWorkExecutor.ts:157:5
+ ❯ server/aiCompany/roleWorkExecutor.test.ts:101:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  server/aiCompany/runtime.test.ts > CEO brief runtime > runs an injected role executor after planning work
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ server/aiCompany/runtime.test.ts:81:98
+     79|     await runtime.tick();
+     80|     expect(executed.length).toBeGreaterThan(0);
+     81|     expect((await runtime.workQueue.records('macro-os')).every((item) …
+       |                                                                                                  ^
+     82|     runtime.stop();
+     83|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  server/aiCompany/runtime.test.ts > CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false
+ FAIL  server/aiCompany/runtime.test.ts > CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ server/aiCompany/runtime.test.ts:115:42
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+
+ Test Files  3 failed | 1 passed (4)
+      Tests  5 failed | 34 passed (39)
+   Start at  10:41:42
+   Duration  4.46s (transform 335ms, setup 0ms, collect 514ms, tests 2.93s, environment 0ms, prepare 188ms)
+

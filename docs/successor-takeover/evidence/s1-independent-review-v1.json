@@ -1,0 +1,12 @@
+{
+  "reviewer": "01a0f6b3-657c-73b1-9142-cb78dc0bb09b",
+  "verdict": "REPAIR_REQUIRED",
+  "findings": [
+    {"id": "S1-DUPLICATE-LINEAGE", "finding": "Unknown lineage overwritten by duplicate work ID then DONE", "scope": "eligibility function boundary; product-cycle queue caller separately validates history"},
+    {"id": "S1-STALE-EXIT-ACTION", "finding": "Executor failure persists BLOCKED but result reports EXECUTE_READY_WORK from old READY snapshot", "scope": "actual temporary queue; pre-existing defect retained by candidate"}
+  ],
+  "reviewerVerification": "51 focused tests passed, ten scoped hashes unchanged, two extra concrete reproductions found",
+  "builderReplay": "s1-review-before.json: 2 failed before repair; s1-review-repair.json: 60 passed after repair",
+  "recheck": "REQUESTED_SAME_REVIEWER",
+  "limits": "No canonical state, providers or services; G1 and wait packages excluded; no concurrency, filesystem fault, runtime or mission closure claim"
+}

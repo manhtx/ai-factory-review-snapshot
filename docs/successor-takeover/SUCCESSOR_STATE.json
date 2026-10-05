@@ -1,0 +1,11 @@
+{
+  "schema": "ai-factory.successor-state.v1",
+  "observedAt": "2026-10-02T10:47:38.089166+00:00",
+  "path": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+  "revision": "d23b29342c9865a2a4f0cbdbe6ccb838522f00a5",
+  "dirty": true,
+  "authority": "NONE",
+  "promotion": "NOT_GRANTED",
+  "historicalCandidateProof": "REVALIDATION_REQUIRED",
+  "nextAction": "Reuse and reconcile candidate only after security and exact identity review; no blind restart."
+}

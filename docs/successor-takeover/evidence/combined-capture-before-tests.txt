@@ -1,0 +1,35 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/combinedEvidenceCapture.test.ts (7 tests | 1 failed) 649ms
+   × combined selected success permits unrelated authorized receipt during capture 107ms
+     → expected false to be true // Object.is equality
+   ✓ direct combined resolution rejects selected withdrawal during capture 98ms
+   ✓ direct combined resolution rejects selected mutation during capture 97ms
+   ✓ direct combined resolution rejects selected ambiguous during capture 93ms
+   ✓ global corrupt original history denies selected query during capture 87ms
+   ✓ global duplicate original history denies selected query during capture 83ms
+   ✓ combined full-view guard retains exact-byte invalidation after unrelated publication 83ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/combinedEvidenceCapture.test.ts > combined selected success permits unrelated authorized receipt during capture
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ server/aiCompany/combinedEvidenceCapture.test.ts:49:19
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 passed (7)
+   Start at  14:31:25
+   Duration  1.25s (transform 75ms, setup 0ms, collect 100ms, tests 649ms, environment 0ms, prepare 42ms)
+

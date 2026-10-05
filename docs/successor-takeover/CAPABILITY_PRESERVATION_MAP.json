@@ -1,0 +1,1243 @@
+{
+  "schema": "successor-takeover.capability-preservation.v1",
+  "authoritative": false,
+  "sourceDenominator": "9f3795e680f9a3d9ea19a8b7cafb5caf255ea41d159ea55fad1da2c6989af314",
+  "status": "BOUNDED_SOURCE_CONSUMER_MAP",
+  "capabilities": [
+    {
+      "subsystem": "Mission/Objectives",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/objectiveEligibility.ts",
+      "sourceSha256": "4960aa6a5591579be029ea7112cdbfd25d36c6e8909db881640729de5d6a2a07",
+      "requiredBehavior": "Queue-derived eligibility cannot own objective satisfaction, supersession and reopening.",
+      "directConsumers": [
+        {
+          "consumer": "scripts/create-codex-product-cycle.mjs",
+          "source": "server/aiCompany/objectiveEligibility.ts",
+          "line": 7,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/objectiveEligibility.test.ts",
+          "source": "server/aiCompany/objectiveEligibility.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": true
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "scripts/create-codex-product-cycle.mjs"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Queue/Execution",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/roleWorkQueue.ts",
+      "sourceSha256": "c2130844cd1951e8cd9e78b70ee06a8b7dd1d97a864ad33a6e205699dd142b4b",
+      "requiredBehavior": "Preserve role DAG, dependencies, claims, review and quarantine; relate objective/work/operation/attempt explicitly.",
+      "directConsumers": [
+        {
+          "consumer": "scripts/ai-company-continuity-kernel.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 29,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-marathon.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 16,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-product-continuation.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-role-dispatch.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 361,
+          "kind": "DYNAMIC_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-run-ready.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 7,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/audit-autonomous-next-action.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 3,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/canary-founder-zero-continuity.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/create-codex-adversarial-benchmarks.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/create-codex-benchmark-b0.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/create-codex-benchmark-v2.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/create-codex-product-cycle.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/create-codex-recovery-benchmark.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/quarantine-historical-blocked-work.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 7,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/run-benchmark-b0.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 12,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/run-final-canary-c0-c22.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 17,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/run-product-cycle-001.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 13,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/run-real-provider-recovery-proof.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 23,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/test-adversarial-attacks.mjs",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 25,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/autonomousCoordinator.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/autonomousCoordinator.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/autonomousNextAction.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/backlogWorkPlanner.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/backlogWorkPlanner.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/cadenceQuorum.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 3,
+          "kind": "TYPE_IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/cadenceQuorum.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 3,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/implicitCompletionGuard.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/index.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 54,
+          "kind": "REEXPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/leanRuntimeScenarios.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/preReleaseReviewGate.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 3,
+          "kind": "TYPE_IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/preReleaseReviewGate.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/productPathInterruption.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 7,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/providerDrivenRecoveryEvidence.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 4,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/recoveryCoordinator.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/recoveryCoordinator.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/recoveryFingerprintDeduplication.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/releasePromotion.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 4,
+          "kind": "TYPE_IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/releasePromotion.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 2,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/researchSynthesis.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/researchSynthesis.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 2,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/reviseContinuation.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/reviseContinuation.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 3,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/roleEvidenceLedger.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 4,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkExecutionLedger.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 3,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkExecutor.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkExecutor.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkQueue.atomic.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkQueue.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkQueueBypassGuards.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/runtime.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 10,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/runtimeProofAdversarial.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/runtimeProofMatrix.test.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/truthProjection.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 4,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/index.ts",
+          "source": "server/aiCompany/roleWorkQueue.ts",
+          "line": 203,
+          "kind": "IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "api/index.ts",
+        "scripts/ai-company-continuity-kernel.mjs",
+        "scripts/ai-company-marathon.mjs",
+        "scripts/ai-company-product-continuation.mjs",
+        "scripts/ai-company-role-dispatch.mjs",
+        "scripts/ai-company-run-ready.mjs",
+        "scripts/audit-autonomous-next-action.mjs",
+        "scripts/canary-founder-zero-continuity.mjs",
+        "scripts/create-codex-adversarial-benchmarks.mjs",
+        "scripts/create-codex-benchmark-b0.mjs",
+        "scripts/create-codex-benchmark-v2.mjs",
+        "scripts/create-codex-product-cycle.mjs",
+        "scripts/create-codex-recovery-benchmark.mjs",
+        "scripts/quarantine-historical-blocked-work.mjs",
+        "scripts/run-benchmark-b0.mjs",
+        "scripts/run-final-canary-c0-c22.mjs",
+        "scripts/run-product-cycle-001.mjs",
+        "scripts/run-real-provider-recovery-proof.mjs",
+        "scripts/test-adversarial-attacks.mjs",
+        "server/aiCompany/autonomousCoordinator.ts",
+        "server/aiCompany/backlogWorkPlanner.ts",
+        "server/aiCompany/index.ts",
+        "server/aiCompany/recoveryCoordinator.ts",
+        "server/aiCompany/reviseContinuation.ts",
+        "server/aiCompany/roleWorkExecutor.ts",
+        "server/aiCompany/runtime.ts",
+        "server/aiCompany/truthProjection.ts",
+        "server/index.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Authority/Ownership",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/executionLease.ts",
+      "sourceSha256": "b14aa289bdac1905a399f9e7f297b3e01c26a40813b33ba2803c1248ef5c218a",
+      "requiredBehavior": "Compose ownership lease, assignment scope and workflow permission into a fenced dispatch decision.",
+      "directConsumers": [
+        {
+          "consumer": "scripts/ai-company-continuity-kernel.mjs",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 31,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-marathon.mjs",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 25,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-product-continuation.mjs",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 26,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-role-dispatch.mjs",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 13,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-run-ready.mjs",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 12,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/canary-founder-zero-continuity.mjs",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 7,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/run-final-canary-c0-c22.mjs",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 18,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/companyNbaRouter.test.ts",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 12,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/companyNbaRouter.test.ts",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 328,
+          "kind": "DYNAMIC_IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/executionLease.test.ts",
+          "source": "server/aiCompany/executionLease.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "scripts/ai-company-continuity-kernel.mjs",
+        "scripts/ai-company-marathon.mjs",
+        "scripts/ai-company-product-continuation.mjs",
+        "scripts/ai-company-role-dispatch.mjs",
+        "scripts/ai-company-run-ready.mjs",
+        "scripts/canary-founder-zero-continuity.mjs",
+        "scripts/run-final-canary-c0-c22.mjs"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Evidence/Review",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/roleEvidenceLedger.ts",
+      "sourceSha256": "cada3218a211715b43968a4067f954ec41834110450caa47864f140422bb7fc9",
+      "requiredBehavior": "Require evidence resolution consistently; keep provider outputs advisory.",
+      "directConsumers": [
+        {
+          "consumer": "server/aiCompany/index.ts",
+          "source": "server/aiCompany/roleEvidenceLedger.ts",
+          "line": 43,
+          "kind": "REEXPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/roleEvidenceLedger.test.ts",
+          "source": "server/aiCompany/roleEvidenceLedger.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkExecutor.test.ts",
+          "source": "server/aiCompany/roleEvidenceLedger.ts",
+          "line": 8,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/roleWorkExecutor.ts",
+          "source": "server/aiCompany/roleEvidenceLedger.ts",
+          "line": 3,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/index.ts",
+          "source": "server/aiCompany/roleEvidenceLedger.ts",
+          "line": 223,
+          "kind": "IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "api/index.ts",
+        "server/aiCompany/index.ts",
+        "server/aiCompany/roleWorkExecutor.ts",
+        "server/aiCompany/runtime.ts",
+        "server/index.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Proof/Promotion",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/preReleaseReviewGate.ts",
+      "sourceSha256": "186966455ecc3ce5dc3bd1af48b68e9a353f1d996cc656b1e270d1d6b76faaf0",
+      "requiredBehavior": "DONE plus nonempty IDs proves neither admissible evidence nor independent outcome.",
+      "directConsumers": [
+        {
+          "consumer": "server/aiCompany/index.ts",
+          "source": "server/aiCompany/preReleaseReviewGate.ts",
+          "line": 57,
+          "kind": "REEXPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/preReleaseReviewGate.test.ts",
+          "source": "server/aiCompany/preReleaseReviewGate.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/releasePromotion.test.ts",
+          "source": "server/aiCompany/preReleaseReviewGate.ts",
+          "line": 3,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/releasePromotion.ts",
+          "source": "server/aiCompany/preReleaseReviewGate.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/index.ts",
+          "source": "server/aiCompany/preReleaseReviewGate.ts",
+          "line": 204,
+          "kind": "IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "api/index.ts",
+        "server/aiCompany/index.ts",
+        "server/aiCompany/releasePromotion.ts",
+        "server/index.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Failure/Recovery",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/recoveryCoordinator.ts",
+      "sourceSha256": "43621519bcb999203b0aa4fda4b83bb9537aa000748fd21d8c96449f93766d27",
+      "requiredBehavior": "Assign one recovery authority per effect; preserve objectives, bounded retries, unknown outcomes and escalation.",
+      "directConsumers": [
+        {
+          "consumer": "scripts/ai-company-role-dispatch.mjs",
+          "source": "server/aiCompany/recoveryCoordinator.ts",
+          "line": 461,
+          "kind": "DYNAMIC_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/run-real-provider-recovery-proof.mjs",
+          "source": "server/aiCompany/recoveryCoordinator.ts",
+          "line": 24,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/autonomousCoordinator.ts",
+          "source": "server/aiCompany/recoveryCoordinator.ts",
+          "line": 3,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/leanRuntimeScenarios.test.ts",
+          "source": "server/aiCompany/recoveryCoordinator.ts",
+          "line": 12,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/providerDrivenRecoveryEvidence.test.ts",
+          "source": "server/aiCompany/recoveryCoordinator.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/recoveryCoordinator.test.ts",
+          "source": "server/aiCompany/recoveryCoordinator.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/recoveryFingerprintDeduplication.test.ts",
+          "source": "server/aiCompany/recoveryCoordinator.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/runtimeProofAdversarial.test.ts",
+          "source": "server/aiCompany/recoveryCoordinator.ts",
+          "line": 7,
+          "kind": "IMPORT",
+          "test": true
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "scripts/ai-company-role-dispatch.mjs",
+        "scripts/run-benchmark-b0.mjs",
+        "scripts/run-product-cycle-001.mjs",
+        "scripts/run-real-provider-recovery-proof.mjs",
+        "server/aiCompany/autonomousCoordinator.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Provider/Executor",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/openaiCompatibleRoleAdapter.ts",
+      "sourceSha256": "927d9f11e728e7f6e79c6777db7be9ab79e6e352a1e2ae130861db7a2dfbd356",
+      "requiredBehavior": "Preserve bounded adapters, attempts, usage and dead letters behind effect contracts.",
+      "directConsumers": [
+        {
+          "consumer": "server/aiCompany/index.ts",
+          "source": "server/aiCompany/openaiCompatibleRoleAdapter.ts",
+          "line": 44,
+          "kind": "REEXPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/openaiCompatibleRoleAdapter.test.ts",
+          "source": "server/aiCompany/openaiCompatibleRoleAdapter.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/index.ts",
+          "source": "server/aiCompany/openaiCompatibleRoleAdapter.ts",
+          "line": 225,
+          "kind": "IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "api/index.ts",
+        "server/aiCompany/index.ts",
+        "server/index.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Runtime supervision",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/runtime.ts",
+      "sourceSha256": "bfd7a8e20d8af284c2615addcc308b96f1473f4de51a301134005ee5a0e0c5a7",
+      "requiredBehavior": "Separate process restart from semantic scheduling; retain checkpoint, stop and readiness behavior.",
+      "directConsumers": [
+        {
+          "consumer": "server/aiCompany/runtime.test.ts",
+          "source": "server/aiCompany/runtime.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/runtime.test.ts",
+          "source": "server/aiCompany/runtime.ts",
+          "line": 3,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/index.ts",
+          "source": "server/aiCompany/runtime.ts",
+          "line": 197,
+          "kind": "IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "api/index.ts",
+        "server/index.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Resource management",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/resourceGovernor.ts",
+      "sourceSha256": "5c9f3bdf3d36522e47bc05002aaea2aa9a1c1aa15bed6f1a65dc90c0e26314f8",
+      "requiredBehavior": "Centralize admission ownership; reactive ALLOW is not verified capacity.",
+      "directConsumers": [
+        {
+          "consumer": "scripts/ai-company-continuity-kernel.mjs",
+          "source": "server/aiCompany/resourceGovernor.ts",
+          "line": 32,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-marathon.mjs",
+          "source": "server/aiCompany/resourceGovernor.ts",
+          "line": 21,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "scripts/ai-company-role-dispatch.mjs",
+          "source": "server/aiCompany/resourceGovernor.ts",
+          "line": 12,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/resourceGovernor.test.ts",
+          "source": "server/aiCompany/resourceGovernor.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": true
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "scripts/ai-company-continuity-kernel.mjs",
+        "scripts/ai-company-marathon.mjs",
+        "scripts/ai-company-role-dispatch.mjs"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Storage",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/stateStore.ts",
+      "sourceSha256": "179c8f887f290dbf30fb13ada19f3b39ab11586fe2f9d5fe8186143611254a51",
+      "requiredBehavior": "Define governance transactions and reconstruction separately from product SQLite/Supabase contracts.",
+      "directConsumers": [
+        {
+          "consumer": "server/aiCompany/briefStateAdapter.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/briefStateAdapter.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 1,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/composition.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/dangerousActions.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 1,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/decisionGate.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 7,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/decisionGate.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 2,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/healthMetrics.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 1,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/healthProvider.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/healthProvider.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 3,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/index.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 2,
+          "kind": "REEXPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/macroOsTrial.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/orchestrator.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 6,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/orchestrator.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 1,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/orchestratorProductionConfig.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 3,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/policyEngine.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 1,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/projectOrchestrator.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 8,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/projectScopedStore.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 7,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/projectScopedStore.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 2,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/releaseRollback.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/releaseRollback.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 1,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/roleContracts.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 1,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/stateStore.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/telegramControl.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/aiCompany/telegramControl.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 2,
+          "kind": "TYPE_IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/aiCompany/telegramWebhook.test.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/index.ts",
+          "source": "server/aiCompany/stateStore.ts",
+          "line": 194,
+          "kind": "IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "api/index.ts",
+        "scripts/run-macro-os-corpus.mjs",
+        "server/aiCompany/composition.ts",
+        "server/aiCompany/index.ts",
+        "server/aiCompany/macroOsCorpus.ts",
+        "server/aiCompany/macroOsTrial.ts",
+        "server/aiCompany/orchestrator.ts",
+        "server/aiCompany/runtime.ts",
+        "server/aiCompany/trialEvaluation.ts",
+        "server/index.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Data ingestion",
+      "disposition": "PRESERVE",
+      "source": "server/ingestion.ts",
+      "sourceSha256": "003ec4ebef136b8345541c5daf9421b7e29ea8a46df9bdf4bebef8eca488db7a",
+      "requiredBehavior": "Preserve source parsers, quarantine, revisions, bounded ingestion and verified batch semantics.",
+      "directConsumers": [
+        {
+          "consumer": "scripts/audit-ism-ingestion.mjs",
+          "source": "server/ingestion.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/adaptiveIngestionPoller.ts",
+          "source": "server/ingestion.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/index.ts",
+          "source": "server/ingestion.ts",
+          "line": 30,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/ingestion.test.ts",
+          "source": "server/ingestion.ts",
+          "line": 3,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/scheduler.ts",
+          "source": "server/ingestion.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "api/index.ts",
+        "scripts/audit-ism-ingestion.mjs",
+        "server/adaptiveIngestionPoller.ts",
+        "server/index.ts",
+        "server/routes/index.ts",
+        "server/routes/pollerRouter.ts",
+        "server/scheduler.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Data identity/provenance/freshness",
+      "disposition": "PRESERVE",
+      "source": "server/observationReadContract.ts",
+      "sourceSha256": "35730cdc7c2a01d88fecf27e725cc5c4e2ab1823d274b66dcc1cdbefc2215177",
+      "requiredBehavior": "Preserve source vintage, period, revision and release-calendar meaning across consumers.",
+      "directConsumers": [
+        {
+          "consumer": "server/index.ts",
+          "source": "server/observationReadContract.ts",
+          "line": 128,
+          "kind": "IMPORT",
+          "test": false
+        },
+        {
+          "consumer": "server/observationParity.test.ts",
+          "source": "server/observationReadContract.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/observationReadContract.test.ts",
+          "source": "server/observationReadContract.ts",
+          "line": 2,
+          "kind": "IMPORT",
+          "test": true
+        },
+        {
+          "consumer": "server/supabase.ts",
+          "source": "server/observationReadContract.ts",
+          "line": 8,
+          "kind": "IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "api/index.ts",
+        "scripts/audit-ism-ingestion.mjs",
+        "server/adaptiveIngestionPoller.ts",
+        "server/forecastOutcomeFeedback.ts",
+        "server/index.ts",
+        "server/ingestion.ts",
+        "server/macroDebate.ts",
+        "server/routes/alertsRouter.ts",
+        "server/routes/evidenceRouter.ts",
+        "server/routes/index.ts",
+        "server/routes/pollerRouter.ts",
+        "server/scheduler.ts",
+        "server/storageErrors.ts",
+        "server/supabase.ts"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Product projections",
+      "disposition": "PRESERVE",
+      "source": "src/app/pages/ResearchCopilotPage.tsx",
+      "sourceSha256": "36cdfcc2fd12e5385f38025a56058b6c07889dfe48c32bcaf3f43d5da1683f32",
+      "requiredBehavior": "Preserve research loop and evidence inspection; governance state cannot become observation truth.",
+      "directConsumers": [
+        {
+          "consumer": "src/app/App.tsx",
+          "source": "src/app/pages/ResearchCopilotPage.tsx",
+          "line": 27,
+          "kind": "DYNAMIC_IMPORT",
+          "test": false
+        }
+      ],
+      "transitiveNonTestConsumers": [
+        "src/app/App.tsx",
+        "src/main.tsx"
+      ],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    },
+    {
+      "subsystem": "Learning/Self-improvement",
+      "disposition": "PRESERVE",
+      "source": "server/aiCompany/behavioralAdaptation.ts",
+      "sourceSha256": "8ae9370f8254dc80bebc75144753d05ffe7a5000c24b5a6d3f43fbc7e6625b97",
+      "requiredBehavior": "Preserve evidence-linked decisions; actual consumer and outcome proof required before activation.",
+      "directConsumers": [
+        {
+          "consumer": "server/aiCompany/behavioralAdaptation.test.ts",
+          "source": "server/aiCompany/behavioralAdaptation.ts",
+          "line": 5,
+          "kind": "IMPORT",
+          "test": true
+        }
+      ],
+      "transitiveNonTestConsumers": [],
+      "runtimeReachability": "UNVERIFIED",
+      "preservedBySuccessor": "UNPROVEN"
+    }
+  ],
+  "unresolved": [
+    {
+      "file": "scripts/generate-indicator-catalog-metadata.mjs",
+      "line": 14,
+      "kind": "DYNAMIC_IMPORT",
+      "reason": "NON_LITERAL"
+    },
+    {
+      "file": "scripts/generate-indicator-catalog-metadata.mjs",
+      "line": 15,
+      "kind": "DYNAMIC_IMPORT",
+      "reason": "NON_LITERAL"
+    },
+    {
+      "file": "scripts/generate-indicator-catalog-metadata.mjs",
+      "line": 19,
+      "kind": "DYNAMIC_IMPORT",
+      "reason": "NON_LITERAL"
+    },
+    {
+      "file": "scripts/generate-indicator-catalog-metadata.mjs",
+      "line": 20,
+      "kind": "DYNAMIC_IMPORT",
+      "reason": "NON_LITERAL"
+    },
+    {
+      "file": "scripts/generate-indicator-catalog-metadata.mjs",
+      "line": 21,
+      "kind": "DYNAMIC_IMPORT",
+      "reason": "NON_LITERAL"
+    },
+    {
+      "file": "scripts/generate-indicator-catalog-metadata.mjs",
+      "line": 22,
+      "kind": "DYNAMIC_IMPORT",
+      "reason": "NON_LITERAL"
+    }
+  ],
+  "limitations": [
+    "Representative subsystem sources are not a complete capability denominator",
+    "Module edges do not prove symbol invocation or active runtime use",
+    "Inline type-only imports may be conservatively counted as runtime edges",
+    "Nonrelative aliases, reflection, generated code and external runtime wiring require separate review"
+  ],
+  "retirementsAuthorized": [],
+  "migrationAcceptance": "Every required behavior needs adapter and end-to-end proof before retirement; no absence-based deletion."
+}

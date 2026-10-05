@@ -1,0 +1,92 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 12804ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1474ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1493ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1350ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1414ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1083ms
+   ✓ CLI review preserves actual original reference for same-scope  1188ms
+   ✓ CLI review preserves actual original reference for cross-scope  1163ms
+   ✓ CLI review preserves actual original reference for unresolved  1361ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1180ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 3731ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  368ms
+   ✓ denies withdrawn current review authority  404ms
+   ✓ denies missing current review authority  378ms
+   ✓ denies nonpass current review authority  354ms
+   ✓ denies missing-verdict current review authority  385ms
+   ✓ uses full dependency snapshot before selecting review backlog  394ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  348ms
+   ✓ plain rows and copied views cannot certify prerelease  383ms
+   ✓ cannot approve an empty target project using healthy foreign work  422ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3659ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1557ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1465ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 3486ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3305ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 2949ms
+   ✓ cadence quorum > passes only when every daily accountable role is done with evidence  345ms
+   ✓ denies withdrawn governance inputs despite historical DONE  706ms
+   ✓ denies missing governance inputs despite historical DONE  360ms
+   ✓ reads healthy dependencies outside cadence selection  330ms
+   ✓ revokes receiptless cadence and rejects stale views  353ms
+   ✓ plain rows and copied views cannot certify cadence  365ms
+   ✓ cannot approve target cadence using another project governance  377ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 1872ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 1391ms
+   ✓ does not generate prerelease reviews from receiptless QA/QC history  316ms
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (31 tests) 1672ms
+   ✓ two OS publishers dedupe with capability transported only in a private temporary fixture file  439ms
+ ✓ server/aiCompany/resourceAdmissionProcess.test.ts (5 tests) 1421ms
+   ✓ real stale OS A cannot release B or admit C while B is alive  335ms
+   ✓ two real recoverers of a proven dead owner admit only one successor  336ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 1045ms
+   ✓ release promotion > promotes only after full independent quorum  395ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  488ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 924ms
+ ✓ server/aiCompany/combinedEvidenceCapture.test.ts (10 tests) 861ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 759ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 732ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 683ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 506ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 570ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 517ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 320ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 521ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 514ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 387ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 594ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 459ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 455ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 409ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 517ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 321ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 463ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 547ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 294ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 226ms
+ ✓ server/aiCompany/resourceAdmissionAuthority.test.ts (19 tests) 111ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 79ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 59ms
+ ✓ server/aiCompany/executionLease.test.ts (20 tests) 20ms
+ ✓ server/aiCompany/resourceGovernor.test.ts (4 tests) 28ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 13ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 12ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 7ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 8ms
+ ✓ server/aiCompany/companyNbaRouter.test.ts (23 tests) 5ms
+ ✓ server/aiCompany/executionPlanner.test.ts (13 tests) 3ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 3ms
+ ✓ server/aiCompany/productIntelligenceRecoveryV2.test.ts (11 tests) 3ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 2ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 2ms
+ ✓ src/app/pages/RegimeDetectionPage.test.tsx (4 tests) 132ms
+
+ Test Files  50 passed (50)
+      Tests  523 passed (523)
+   Start at  16:12:33
+   Duration  57.92s (transform 517ms, setup 0ms, collect 1.71s, tests 49.40s, environment 443ms, prepare 1.82s)
+

@@ -1,0 +1,17 @@
+{
+  "schema": "successor-takeover.observation.v1",
+  "missionId": "AI_COMPANY_FINAL_SUCCESSOR_TAKEOVER",
+  "observedAt": "2026-09-30T05:12:41.057Z",
+  "head": "d23b29342c9865a2a4f0cbdbe6ccb838522f00a5",
+  "source": "server/aiCompany/durableOperation.ts",
+  "sourceSha256": "f1bb88fb6b8cee91e7f19e7c34c83a52ae4b4898d809209b00fafda1c690b9cc",
+  "isolatedState": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/macro-successor-replay-ofscCC",
+  "oracle": "Founder Mission I3, I5, I6, I7, I9, I14",
+  "probes": {
+    "duplicateCreate": {"fulfilled": 2, "latestSemantics": "conflicting-semantics", "status": "INVARIANT_VIOLATED"},
+    "directCompletion": {"from": "SUBMITTED", "accepted": "DONE", "status": "INVARIANT_VIOLATED"},
+    "terminalRevival": {"from": "DONE", "accepted": "RUNNING", "status": "INVARIANT_VIOLATED"},
+    "corruptionRead": {"appended": "{broken-json", "returnedRows": 1, "threw": false, "status": "INVARIANT_VIOLATED"}
+  },
+  "claimLimit": "Current-source isolated reproduction only; live-path reachability and successor repair remain unverified. No canonical state or provider was used."
+}

@@ -1,0 +1,722 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/queueMutationFence.test.ts (14 tests | 7 failed) 449ms
+   × queue mutation fencing > rejects delayed completion after block without any append 27ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × queue mutation fencing > rejects delayed completion after quarantine without any append 18ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × queue mutation fencing > does not reopen DONE from an outer stale-lease selection 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ queue mutation fencing > permits only one claim across independent processes 121ms
+   ✓ queue mutation fencing > releases the OS gate when its process dies 40ms
+   × queue mutation fencing > rejects symlink queue aliases with original bytes preserved 15ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × queue mutation fencing > rejects hardlink queue aliases with original bytes preserved 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × queue mutation fencing > preserves exact history prefix and permission bits 18ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ queue mutation fencing > rejects invalid history without salvage or overwrite 2ms
+   ✓ queue mutation fencing > rejects exhausted revisions without making history unreadable 13ms
+   ✓ queue mutation fencing > classifies a create provenance error as committed 10ms
+   × queue mutation fencing > binds canonical root before a directory alias retarget 14ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ queue mutation fencing > historical record-workspace-synthesis-cycle.mjs rejects before any file effect 69ms
+   ✓ queue mutation fencing > historical record-disclaimer-banner-cycle.mjs rejects before any file effect 67ms
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts (13 tests | 5 failed) 269ms
+   ✓ backlog work planner > routes series canonicalization to backend and ingestion cadence to data engineering 1ms
+   ✓ backlog work planner > creates idempotent governance work for the active cadence 52ms
+   ✓ backlog work planner > maps work to validated roles and is idempotent 21ms
+   ✓ backlog work planner > routes proposed product work through PM review instead of direct execution 9ms
+   × backlog work planner > promotes proposed work only after an explicit PM PROCEED decision 18ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × backlog work planner > does not let a quarantined historical execution suppress a new PM approval 35ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × backlog work planner > rechecks legacy prose PM decisions instead of treating them as approval 15ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × backlog work planner > creates independent QA and QC reviews after implementation completion 16ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ backlog work planner > requires a reason for blocking and reports overdue work for escalation 20ms
+   × backlog work planner > opens stakeholder, user, UX and domain reviews only after QA and QC pass 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ backlog work planner > creates research work for unscored or low-evidence ideas idempotently 35ms
+   ✓ backlog work planner > rejects mixed-scope pre-release dependencies without creating a fabricated common scope 22ms
+   ✓ backlog work planner > rejects control plane continuity work without runtime failure evidence under CONTINUITY FREEZE 9ms
+ ❯ server/aiCompany/roleWorkQueue.test.ts (9 tests | 4 failed) 198ms
+   ✓ role work queue > puts mandatory secret and control-plane paths in default assignments 10ms
+   × role work queue > enforces role ownership lifecycle and evidence-backed completion 20ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ role work queue > recovers stale claimed and in-review work for restart 25ms
+   ✓ role work queue > quarantines blocked work with provenance and preserves the append-only record 24ms
+   ✓ role work queue > quarantines stale READY work without touching current READY work 19ms
+   × role work queue > does not let downstream roles claim before upstream evidence is complete 24ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × role work queue > rejects completion if structured output validation fails 18ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × role work queue > rejects completing product task when MetricContract is missing or invalid 21ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ role work queue > reconciles unclaimable orphans whose dependencies are quarantined or blocked 36ms
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests | 11 failed) 210ms
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects evidence-only completion when no contract is provided 25ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects completion when structured output is missing for structured roles 21ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects completion when wrong role contract is provided in structured output 21ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects completion when review role lacks ReviewVerdict or ReviewEvidenceRecord 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects completion when evidence IDs are empty, whitespace, or invalid 20ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects product task when MetricContract is missing 19ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > allows completion when all required contracts are validly supplied 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects coder task when output_schema is set to none to attempt bypass 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects coder task when reviewVerdict is provided but structuredOutput is missing 18ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects backend-engineer task when only evidence is provided 15ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue Bypass Guards (Phase 1) > rejects review role when structuredOutput is provided but review contract is missing 20ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts (9 tests | 9 failed) 160ms
+   × review terminal admission > retains HOLD as blocked and denies ordinary downstream authority 21ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × review terminal admission > retains REVISE as blocked and denies ordinary downstream authority 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × review terminal admission > retains QUALITY_FAIL as blocked and denies ordinary downstream authority 16ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × review terminal admission > retains BLOCKED as blocked and denies ordinary downstream authority 15ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × review terminal admission > preserves PASS as successful ordinary dependency 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × review terminal admission > allows an explicit same-scope corrective dependency without granting source success 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × review terminal admission > rejects a corrective dependency from another run 19ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × review terminal admission > does not let historical DONE with a retained HOLD unlock ordinary work 18ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × review terminal admission > rejects a recovery marker that does not name a declared dependency 19ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests | 6 failed) 137ms
+   × RoleWorkQueue evidence resolver integration > requires explicit resolution before completion and preserves queue bytes on rejection 20ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ RoleWorkQueue evidence resolver integration > preserves reader and intake capability without granting completion authority 8ms
+   × RoleWorkQueue evidence resolver integration > propagates resolver inspection failure without recording DONE 20ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue evidence resolver integration > refuses an evidence-only completion when the ID cannot resolve 18ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue evidence resolver integration > accepts a resolved, hashed evidence record in the same run and namespace 16ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue evidence resolver integration > rejects a structured output that declares unresolved evidence not used for completion 20ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   × RoleWorkQueue evidence resolver integration > accepts engineering prose even when it contains a copied role-shaped example 17ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ RoleWorkQueue evidence resolver integration > quarantines a precommitted terminal record instead of leaving it as DONE 18ms
+ ❯ server/aiCompany/recoveryCoordinator.test.ts (7 tests | 1 failed) 100ms
+   × CEO Recovery Coordinator & Scenarios > Scenario 1: QA fail -> Coder fix corrective task -> QA re-run 23ms
+     → current claimed attempt authority is required; missing, stale or invalid capability
+   ✓ CEO Recovery Coordinator & Scenarios > Scenario 2: QA missing evidence -> CEO HOLD -> coordinator creates evidence collection task 17ms
+   ✓ CEO Recovery Coordinator & Scenarios > Scenario 3: CEO detects scope drift -> terminal hold / blocked escalation 9ms
+   ✓ CEO Recovery Coordinator & Scenarios > Scenario 4 & 5: Provider timeout with bounded retry and budget exhaustion 15ms
+   ✓ CEO Recovery Coordinator & Scenarios > Scenario 6: Recovery chain exceeding max depth triggers TERMINAL_HOLD 8ms
+   ✓ CEO Recovery Coordinator & Scenarios > Scenario 7: Duplicate recovery requests are deduplicated 18ms
+   ✓ CEO Recovery Coordinator & Scenarios > Scenario 8: CEO review never auto-promotes release without independent verification 10ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 420ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 320ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 14ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 43 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/backlogWorkPlanner.test.ts > backlog work planner > promotes proposed work only after an explicit PM PROCEED decision
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts:55:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/43]⎯
+
+ FAIL  server/aiCompany/backlogWorkPlanner.test.ts > backlog work planner > does not let a quarantined historical execution suppress a new PM approval
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts:69:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/43]⎯
+
+ FAIL  server/aiCompany/backlogWorkPlanner.test.ts > backlog work planner > rechecks legacy prose PM decisions instead of treating them as approval
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts:81:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/43]⎯
+
+ FAIL  server/aiCompany/backlogWorkPlanner.test.ts > backlog work planner > creates independent QA and QC reviews after implementation completion
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts:102:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/43]⎯
+
+ FAIL  server/aiCompany/backlogWorkPlanner.test.ts > backlog work planner > opens stakeholder, user, UX and domain reviews only after QA and QC pass
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/backlogWorkPlanner.test.ts:143:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/43]⎯
+
+ FAIL  server/aiCompany/queueMutationFence.test.ts > queue mutation fencing > rejects delayed completion after block without any append
+ FAIL  server/aiCompany/queueMutationFence.test.ts > queue mutation fencing > rejects delayed completion after quarantine without any append
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ fixture server/aiCompany/queueMutationFence.test.ts:22:3
+ ❯ server/aiCompany/queueMutationFence.test.ts:29:54
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/43]⎯
+
+ FAIL  server/aiCompany/queueMutationFence.test.ts > queue mutation fencing > does not reopen DONE from an outer stale-lease selection
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ fixture server/aiCompany/queueMutationFence.test.ts:22:3
+ ❯ server/aiCompany/queueMutationFence.test.ts:46:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/43]⎯
+
+ FAIL  server/aiCompany/queueMutationFence.test.ts > queue mutation fencing > rejects symlink queue aliases with original bytes preserved
+ FAIL  server/aiCompany/queueMutationFence.test.ts > queue mutation fencing > rejects hardlink queue aliases with original bytes preserved
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ fixture server/aiCompany/queueMutationFence.test.ts:22:3
+ ❯ server/aiCompany/queueMutationFence.test.ts:84:21
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/43]⎯
+
+ FAIL  server/aiCompany/queueMutationFence.test.ts > queue mutation fencing > preserves exact history prefix and permission bits
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ fixture server/aiCompany/queueMutationFence.test.ts:22:3
+ ❯ server/aiCompany/queueMutationFence.test.ts:93:28
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/43]⎯
+
+ FAIL  server/aiCompany/queueMutationFence.test.ts > queue mutation fencing > binds canonical root before a directory alias retarget
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ fixture server/aiCompany/queueMutationFence.test.ts:22:3
+ ❯ server/aiCompany/queueMutationFence.test.ts:132:37
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/43]⎯
+
+ FAIL  server/aiCompany/recoveryCoordinator.test.ts > CEO Recovery Coordinator & Scenarios > Scenario 1: QA fail -> Coder fix corrective task -> QA re-run
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/recoveryCoordinator.test.ts:40:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/43]⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > retains HOLD as blocked and denies ordinary downstream authority
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > retains REVISE as blocked and denies ordinary downstream authority
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > retains QUALITY_FAIL as blocked and denies ordinary downstream authority
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > retains BLOCKED as blocked and denies ordinary downstream authority
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ reviewFixture server/aiCompany/reviewTerminalAdmission.test.ts:18:3
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:30:51
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/43]⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > preserves PASS as successful ordinary dependency
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ reviewFixture server/aiCompany/reviewTerminalAdmission.test.ts:18:3
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:37:41
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/43]⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > allows an explicit same-scope corrective dependency without granting source success
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ reviewFixture server/aiCompany/reviewTerminalAdmission.test.ts:18:3
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:44:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/43]⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > rejects a corrective dependency from another run
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ reviewFixture server/aiCompany/reviewTerminalAdmission.test.ts:18:3
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:54:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/43]⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > does not let historical DONE with a retained HOLD unlock ordinary work
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ reviewFixture server/aiCompany/reviewTerminalAdmission.test.ts:18:3
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:60:47
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/43]⎯
+
+ FAIL  server/aiCompany/reviewTerminalAdmission.test.ts > review terminal admission > rejects a recovery marker that does not name a declared dependency
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ reviewFixture server/aiCompany/reviewTerminalAdmission.test.ts:18:3
+ ❯ server/aiCompany/reviewTerminalAdmission.test.ts:67:31
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueue.test.ts > role work queue > enforces role ownership lifecycle and evidence-backed completion
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueue.test.ts:26:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueue.test.ts > role work queue > does not let downstream roles claim before upstream evidence is complete
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueue.test.ts:68:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueue.test.ts > role work queue > rejects completion if structured output validation fails
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueue.test.ts:79:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueue.test.ts > role work queue > rejects completing product task when MetricContract is missing or invalid
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueue.test.ts:133:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects evidence-only completion when no contract is provided
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:26:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects completion when structured output is missing for structured roles
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:44:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects completion when wrong role contract is provided in structured output
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:62:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects completion when review role lacks ReviewVerdict or ReviewEvidenceRecord
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:95:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[25/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects completion when evidence IDs are empty, whitespace, or invalid
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:113:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[26/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects product task when MetricContract is missing
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:188:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[27/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > allows completion when all required contracts are validly supplied
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:222:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[28/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects coder task when output_schema is set to none to attempt bypass
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:295:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[29/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects coder task when reviewVerdict is provided but structuredOutput is missing
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:313:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[30/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects backend-engineer task when only evidence is provided
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:347:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[31/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueBypassGuards.test.ts > RoleWorkQueue Bypass Guards (Phase 1) > rejects review role when structuredOutput is provided but review contract is missing
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueBypassGuards.test.ts:365:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[32/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts > RoleWorkQueue evidence resolver integration > requires explicit resolution before completion and preserves queue bytes on rejection
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:14:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[33/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts > RoleWorkQueue evidence resolver integration > propagates resolver inspection failure without recording DONE
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:36:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[34/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts > RoleWorkQueue evidence resolver integration > refuses an evidence-only completion when the ID cannot resolve
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:49:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[35/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts > RoleWorkQueue evidence resolver integration > accepts a resolved, hashed evidence record in the same run and namespace
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:64:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[36/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts > RoleWorkQueue evidence resolver integration > rejects a structured output that declares unresolved evidence not used for completion
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:80:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[37/43]⎯
+
+ FAIL  server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts > RoleWorkQueue evidence resolver integration > accepts engineering prose even when it contains a copied role-shaped example
+Error: current claimed attempt authority is required; missing, stale or invalid capability
+ ❯ RoleWorkQueue.assertAttempt server/aiCompany/roleWorkQueue.ts:171:13
+    169|       || typeof item.attempt_token_hash !== 'string' || !/^[a-f0-9]{64…
+    170|       || !timingSafeEqual(Buffer.from(item.attempt_token_hash, 'hex'),…
+    171|       throw new Error('current claimed attempt authority is required; …
+       |             ^
+    172|     }
+    173|   }
+ ❯ server/aiCompany/roleWorkQueue.ts:176:12
+ ❯ RoleWorkQueue.update server/aiCompany/roleWorkQueue.ts:450:24
+ ❯ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:95:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[38/43]⎯
+
+
+ Test Files  7 failed | 3 passed (10)
+      Tests  43 failed | 49 passed (92)
+   Start at  22:12:57
+   Duration  3.62s (transform 99ms, setup 0ms, collect 214ms, tests 2.28s, environment 1ms, prepare 207ms)
+

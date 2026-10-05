@@ -1,0 +1,3 @@
+{"batchConcurrentDuplicate":"oneAcceptedOneRejected"}
+{"scenario":"dependencyChange","accepted":false,"error":"stale queue mutation: work or dependency changed before commit"}
+{"scenario":"ABA","accepted":false,"error":"stale queue mutation: work or dependency changed before commit"}

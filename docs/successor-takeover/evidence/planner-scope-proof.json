@@ -1,0 +1,48 @@
+{
+  "schema": "ai-factory.scoped-proof.v1",
+  "observedAt": "2026-10-02T14:38:54.552629+00:00",
+  "executionIdentity": "UNCOMMITTED_WORKTREE_HASHES; NOT_LIVE_ATTESTED",
+  "sourceHashes": {
+    "server/aiCompany/backlogWorkPlanner.ts": "70bb80c927349289c23cec69a4604615217ca673457d71687f18b091a1bcb101",
+    "server/aiCompany/backlogWorkPlanner.test.ts": "f60bb851b83388cbb979d16a2144c6234610ba60432a408f382e03eafc0118c8",
+    "server/aiCompany/recoveryCoordinator.test.ts": "446adc852ec40ce3062e37fa5f164e2a2b9928e01a906b370f349c44f57cd948",
+    "server/aiCompany/runtime.test.ts": "6103cd5511a89224779cc5f913501665023eb0ab505f527201e9887ef5bb7481"
+  },
+  "claim": "Planner reviews inherit actual dependency scope; mixed scopes reject without artifact rewrite; explicit caller fixtures restore legitimate planner/recovery/daily intake behavior",
+  "failBefore": "planner-scope-before.txt existing12tests had1actualscopefailure afterexplicitfixtures",
+  "builder": "Planner13PASS; planner+recovery20PASS; scope/native/terminal33PASS; runtime11PASS1FAIL_OF12",
+  "independent": {
+    "agent": "/root/planner_scope_review",
+    "plannerTests": "13PASS",
+    "controls": [
+      "actual backend\u2192QA/QC DONE\u21924prerelease scopes",
+      "original evidence bytes unchanged",
+      "missing assignment/run and blank namespace reject",
+      "mixed namespace/run reject with byte-identical ledger"
+    ],
+    "reviewedSourceHash": "70bb80c927349289c23cec69a4604615217ca673457d71687f18b091a1bcb101",
+    "caveat": "Non-string historical run fails closed viaTypeError; intended diagnostic notnormalized"
+  },
+  "remainingRuntimeFailure": [
+    "completes daily then weekly governance with independent review evidence"
+  ],
+  "typecheck": "11otherdiagnostics; noaffectedmoduleerrors",
+  "limitations": [
+    "Weekly governance independent dependency packet unverified",
+    "Original-source recovery reevaluation and canonicalterminalauthority OPEN",
+    "Scope is not objective/attempt/revision binding or outcome proof",
+    "No provider/liveCLI/restart/migration/candidatepromotion",
+    "A/B/C/D UNPROVEN"
+  ],
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/aiCompany/backlogWorkPlanner.test.ts",
+      "server/aiCompany/recoveryCoordinator.test.ts",
+      "server/aiCompany/runtime.test.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

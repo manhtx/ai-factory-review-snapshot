@@ -1,0 +1,15 @@
+{
+  "schema": "ai-factory.product-frontier.v1",
+  "observedAt": "2026-10-02T10:47:38.089166+00:00",
+  "status": "UNKNOWN_REVALIDATION_REQUIRED",
+  "historicalEvidence": [
+    "HYDRATION_SEMANTIC_IDENTITY_INVESTIGATION.md",
+    "VIETNAM_API_PRODUCT_PROGRESS.json"
+  ],
+  "currentAdjudicatedCounts": null,
+  "currentMigrationCounts": null,
+  "limitations": [
+    "Historical 126/96/30 and 9647/2715 not used as current truth.",
+    "Candidate product repairs retained; source-to-consumer current proof incomplete."
+  ]
+}

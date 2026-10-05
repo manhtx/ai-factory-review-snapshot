@@ -1,0 +1,111 @@
+{
+  "schema": "ai-factory.scoped-proof.v1",
+  "observedAt": "2026-10-02T14:30:21.491189+00:00",
+  "baseRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "executionIdentity": "UNCOMMITTED_SOURCE_HASHES; NOT_LIVE_ATTESTED",
+  "sourceHashes": {
+    "server/aiCompany/roleWorkQueue.ts": "63c55fef47992d969f670011f90116ee757cf8d8207edd6bd9b3ca0017267181",
+    "server/aiCompany/roleWorkExecutor.ts": "587e6223d26cd7c73b868719d0146610cbd0481429cdaf0415f712808439bc48",
+    "server/aiCompany/autonomousCoordinator.ts": "3eda9fb1f148744e9d53a918a756bd72a9d4ad0a2fcd0313f857f3ae3f9cbca8",
+    "server/aiCompany/recoveryCoordinator.ts": "2a90ee024c280d7c71f5c0689ab5563c9630866e1dad7d84635ee51d6984ec7c",
+    "server/aiCompany/backlogWorkPlanner.ts": "c5dce834c91e2a62137eb510095b2ccfa7d7031cc9c76fc25185a327be157772",
+    "server/aiCompany/assignmentEnvelope.ts": "f9cfb2e942696807550699162222774d588a9291c18beeaff0c343d97c90e261",
+    "scripts/ai-company-run-ready.mjs": "82d8e21e31e0d1c7c363640057d596b8f0a4a9cec8afceb9a42f2760308bc019",
+    "scripts/ai-company-role-dispatch.mjs": "6dd8ad3ecf8ee236ce515d9a93b4454d0c96afeb564d225d2754330ae53e13ff",
+    "server/aiCompany/reviewTerminalAdmission.test.ts": "9b5bf450c4afcb0d1ca09706a200e04ec81dd71a395927b67a0a3ccdd1e7bdfc",
+    "server/aiCompany/autonomousCoordinator.test.ts": "66f3ed08112cde26d7d867e912446dd7afe2ae691cb58450220159293bd1e85c"
+  },
+  "claim": "Non-PASS review retains evidence in BLOCKED; ordinary success dependency denied; explicit same-scope correction can consume failed source without promoting it",
+  "failBefore": "4nonPASS and2recovery/scoperegessions fail,1PASScontrolpasses; rawreview-terminal-before.txt",
+  "builderCombined": "118_PASS_13_FILES",
+  "independent": {
+    "agent": "/root/review_terminal_independent",
+    "finalTests": "32_PASS",
+    "counterexample": "Orphan reconciler quarantined valid corrective source condition; two production CLI gates also state-only",
+    "finalRecheck": "READY after reconciliation; validclaim; scripts sharedpredicate; per-edge assignmentprojection; no globalcompletedlaundering",
+    "negativeControls": [
+      "wrong run/ns/project/source",
+      "ordinary failed dependency",
+      "undeclared recoverymarker",
+      "historical DONE/HOLD",
+      "conflicting PASS/REJECT",
+      "malformed legacyPASS",
+      "duplicatecompletion",
+      "emptyworkflow"
+    ],
+    "runtimeCeiling": "ActualCLI neverlaunched; syntax/sourceproofonly"
+  },
+  "compatibility": {
+    "numTotalTests": 31,
+    "numPassedTests": 23,
+    "numFailedTests": 8,
+    "success": false
+  },
+  "remainingFailures": [
+    {
+      "file": "backlogWorkPlanner.test.ts",
+      "test": "promotes proposed work only after an explicit PM PROCEED decision",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "backlogWorkPlanner.test.ts",
+      "test": "does not let a quarantined historical execution suppress a new PM approval",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "backlogWorkPlanner.test.ts",
+      "test": "rechecks legacy prose PM decisions instead of treating them as approval",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "backlogWorkPlanner.test.ts",
+      "test": "creates independent QA and QC reviews after implementation completion",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "backlogWorkPlanner.test.ts",
+      "test": "opens stakeholder, user, UX and domain reviews only after QA and QC pass",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "recoveryCoordinator.test.ts",
+      "test": "Scenario 1: QA fail -> Coder fix corrective task -> QA re-run",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "runtime.test.ts",
+      "test": "runs an injected role executor after planning work",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    },
+    {
+      "file": "runtime.test.ts",
+      "test": "completes daily then weekly governance with independent review evidence",
+      "error": "Error: completion requires an explicitly configured evidence resolver"
+    }
+  ],
+  "typecheck": "11_other_diagnostics;0affected",
+  "invalidated": "Old HOLD recovery SUCCESS/3DONE assertion",
+  "limitations": [
+    "Original-source reevaluation/closure still pending",
+    "Transactional/fenced attempt/revision-bound terminal authority unproven",
+    "Historical DONE evidence adjudication incomplete",
+    "Remaining explicit caller fixture/configuration and workflow scope incomplete",
+    "No liveCLI/native company providers/restart/migration/candidate propagation/promotion",
+    "A/B/C/D UNPROVEN; G1 denial respected"
+  ],
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/aiCompany/roleWorkQueue.ts",
+      "server/aiCompany/roleWorkExecutor.ts",
+      "server/aiCompany/autonomousCoordinator.ts",
+      "server/aiCompany/backlogWorkPlanner.ts",
+      "scripts/ai-company-run-ready.mjs",
+      "scripts/ai-company-role-dispatch.mjs",
+      "server/aiCompany/reviewTerminalAdmission.test.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

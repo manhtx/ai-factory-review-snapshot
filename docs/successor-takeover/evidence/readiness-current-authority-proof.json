@@ -1,0 +1,312 @@
+{
+  "schema": "ai-factory.readiness-current-authority-proof.v1",
+  "authoritative": false,
+  "observedAt": "2026-10-05T03:34:48.073371+00:00",
+  "sourceRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "sourceTreeClean": false,
+  "sourceHashes": {
+    "scripts/ai-company-role-dispatch.mjs": "49beebcfd080444e775b9378ebff40af30ec693be5ecbdd15968556adde8865f",
+    "scripts/ai-company-run-ready.mjs": "7d6f4cdb32b7b63bc317d2ee6da5ee45143a7f66e8563c1c8120cb6d317990e2",
+    "scripts/record-disclaimer-banner-cycle.mjs": "5aaba3eb4edebffce5b0d27ada805e9904e4fdb8b9b05b362054ebb18c19f0d9",
+    "scripts/record-workspace-synthesis-cycle.mjs": "437d3730a358c65a117339fcf1068ead64c60415c9b1b6fc68680d95356c0838",
+    "server/aiCompany/adminWorkQueueTransport.test.ts": "3e1b2be4d5f2cb1a5d57b3482421dd01f5a6311bdb0211a2d28ec9021a81b42e",
+    "server/aiCompany/adminWorkQueueTransport.ts": "c7c43e35122075e08294da8cf183567684e79744e31d062ef4b71eaec7888829",
+    "server/aiCompany/assignmentEnvelope.test.ts": "4fbe95a2eed6aec2d18698199cb682607c7e5858e4989a95d1f9ab7a3a789337",
+    "server/aiCompany/assignmentEnvelope.ts": "f9cfb2e942696807550699162222774d588a9291c18beeaff0c343d97c90e261",
+    "server/aiCompany/attemptAuthority.test.ts": "0c2ac1cb24b9b0198efbed02469ee886c05ebb45ebbca318898936a478f4bd0b",
+    "server/aiCompany/autonomousCoordinator.test.ts": "66f3ed08112cde26d7d867e912446dd7afe2ae691cb58450220159293bd1e85c",
+    "server/aiCompany/autonomousCoordinator.ts": "ab9cc3b40eaa76ed89b2e2e07133497c29e08f462c0a2ef87d1d3915f6fd1ef8",
+    "server/aiCompany/backlogWorkPlanner.test.ts": "677c0f88aace363fc840b965262156f07705a224f310e6d62027d4eeb561c281",
+    "server/aiCompany/backlogWorkPlanner.ts": "819851a5b45d02644f8885a71eb4889d524fb91e844656a28c9e24e055a8d12b",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "c5a5106543f59ffd60f9b4e947a5ef4af8a2911308d0c49559df9f71ac20e4b9",
+    "server/aiCompany/dependencyAdmission.test.ts": "b6c5531d88021be1307246b40ffaa7c3c1ac050c02a931d3c0b1d906af31906f",
+    "server/aiCompany/evidenceAdmissionIntegrity.test.ts": "75ca70e211314967eda4ba905dac20b0067d898cf8f4b6e03fb818fa59d4399a",
+    "server/aiCompany/evidenceResolver.test.ts": "41f47307bf73fe11f05366ef5faf5c4446eb9ecf049921ce76a21b2dad9c4d3d",
+    "server/aiCompany/evidenceResolver.ts": "32d90644524b7c3ff5699edc7eb025cb0517a45a559ae41542cd0d797476819f",
+    "server/aiCompany/modelAdapter.test.ts": "8fd5d7302ff005a09f294c6c6cdb23906c28cd63e880d668a5e45cd0bd13a3d0",
+    "server/aiCompany/nativeAttemptLineage.test.ts": "e3e36ceaf13c5c40835900dcf9501d6f6bd2856123fd76a4534d5d8d6c9efbe4",
+    "server/aiCompany/nativeDispatchIssuance.test.ts": "e0c79187e8730d284d321a3002674b20034f427248de46a8a9b2a44d3ca84d29",
+    "server/aiCompany/nativeEvidenceAdmission.test.ts": "9ee5e397173c6d4cb31593ad30c2bf17480abfcc74070746e0f449adf527ab29",
+    "server/aiCompany/nativeProviderContract.test.ts": "6e42aa31586c7ce489d416dc4602f90271bac08baedac1f192670a400212c9f6",
+    "server/aiCompany/openaiCompatibleRoleAdapter.test.ts": "16e0c84b8a9338d0c75e4d2f5121fbe6871815942f086f28c1a7407dd75ee7d3",
+    "server/aiCompany/openaiCompatibleRoleAdapter.ts": "caa009117c8702498f39e43b398c500274938752345f889a64c031564580153b",
+    "server/aiCompany/orchestrator.test.ts": "1fe4ce9e89d9fa5c1262e022a0d6ab00181ceb9d40d01ad41b8e2daced0986a3",
+    "server/aiCompany/orchestrator.ts": "3febbe998529c58c471644eaffea8912d0de5193119050f4f863823e87313fd8",
+    "server/aiCompany/queueMutationFence.test.ts": "994a37150ec21505b6154f08e9b7a5e47e669ee6169e7bc3b54a382a6068265c",
+    "server/aiCompany/queueMutationGate.ts": "007765747c2d758a63b332a58d723a6e8ce93d5af909ef9e7766bc8c04155c73",
+    "server/aiCompany/recoveryCoordinator.test.ts": "a9bb2382b9962f4910ab54843ff58e4c2adad5004e60164cb568da2e61b13efd",
+    "server/aiCompany/recoveryCoordinator.ts": "2a90ee024c280d7c71f5c0689ab5563c9630866e1dad7d84635ee51d6984ec7c",
+    "server/aiCompany/researchResult.ts": "4c16c1af4708fe96ab7b3c9c479f08bee5c94e6a68995adee16a514607818d1c",
+    "server/aiCompany/reviewTerminalAdmission.test.ts": "ea4b251217c8ca9c72871b319de96e3f6fcaac692400d0c204f5c6a57328290b",
+    "server/aiCompany/roleAttemptArtifact.ts": "8e9dcf3491d14cebd91bbb2ad9088bbd6bfd46974b77fe22bf10c26c46638759",
+    "server/aiCompany/roleEvidenceLedger.test.ts": "cfb2eb18a8d5328e84134df79653b5470c76f3b9119e9b48c5fcb65833d11e80",
+    "server/aiCompany/roleEvidenceLedger.ts": "c678104b8db76edfe1a111f581c6aa2a43bf893965e2c1af1886e996fff96b69",
+    "server/aiCompany/roleEvidenceResolver.test.ts": "ce67726fd057761b2f85381007b969000bef53e0c443d92c05e3b26f0d0cf555",
+    "server/aiCompany/roleEvidenceResolver.ts": "9b58e53f1245cecb104adbdb52d378c1d22ad71fe92cc447c76b9dfb5437ca8d",
+    "server/aiCompany/roleWorkExecutor.test.ts": "4c865cf45ffe3fe4062486a90e8d934f26b9260a996918d5d522f00b33ed8270",
+    "server/aiCompany/roleWorkExecutor.ts": "6e2b453f56c7a1ce84504862fdebba8a2b83db4bfee09f0caf60991ca738b5fd",
+    "server/aiCompany/roleWorkQueue.atomic.test.ts": "12151f6f9a01c611b673a27db866b0a16eb935b797962bf53ae0d89bc8ee8adb",
+    "server/aiCompany/roleWorkQueue.test.ts": "da7bbe67ad6171921395b1db8dceb5877d6aefa4cb9b5fc19b7b573c6b49f487",
+    "server/aiCompany/roleWorkQueue.ts": "0d15f1288100c0104723cc20c680cee74e6f4ea742fe369a2f0e7b55844f67f9",
+    "server/aiCompany/roleWorkQueueBypassGuards.test.ts": "bd9cf8f6a6e79163924786f71d76f567d7d71ea94715fc77154c0557073f17ee",
+    "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts": "b2662ee4919e46c5fcaef0ef613af415f5a70e00a52e5b7d9474f6e23922b6a8",
+    "server/aiCompany/runtime.test.ts": "c447e77bb8d12e5903db5d8c080640cbdc6fb01491c6539604b46bb5291da088",
+    "server/aiCompany/worktreeManager.test.ts": "7ad8d890e9d87ba7fee1a6ac9354d3921e43c193be9959e8a5f152fa7ca69ea7",
+    "server/aiCompany/worktreeManager.ts": "9b10a147975ed8df7ea4998fa23593fd9d511d3e5587724ccafb30b87a43c4d5",
+    "server/index.ts": "7376fb0d32a27a111f67d223f128c44c862c367a17c9996216530850c11f19ea",
+    "server/aiCompany/recursiveDependencyAuthority.test.ts": "4aa47bf8597fe4510987f5f0f2ecefafb3d7e40dc957fe16da5819ef42631ef1",
+    "server/aiCompany/preReleaseReviewGate.ts": "ed9d8428c7591b7400bd00f3d5f6d3c81d323cb2b7c02a3dff6ac82e89b2d896",
+    "server/aiCompany/preReleaseReviewGate.test.ts": "725763c2740647979cd91db31e900ec66ca3fa3d5a7d6ec6ea486304b3097268",
+    "server/aiCompany/releasePromotion.ts": "ac7da75611745a9694a5bfa175bbc175278312c6ce51918091bd93565689f055",
+    "server/aiCompany/releasePromotion.test.ts": "000c98f1de7d59ade8440dd218e356c9fb631b1e0f07f84e5b6738ed58baca47",
+    "server/aiCompany/cadenceQuorum.ts": "d71d1e234176e7f5c7da09fad97e489162a8182c3f7538ecc6edaec0d50aed1d",
+    "server/aiCompany/cadenceQuorum.test.ts": "8112e5f4a4efc6bcf6384c60f5930f68c38a026d82417a364d3988efb39a85bf",
+    "server/aiCompany/researchSynthesis.ts": "25a41026664f73d9c710d2ea03d188a8fb15865f243c3667e9f17f3e37afefd2",
+    "server/aiCompany/researchSynthesis.test.ts": "db0a8e0ef87b5e29fbbd400982c8ff4999fd506bf725497cd6792046a1cb360e",
+    "server/aiCompany/researchSignalLedger.ts": "f3e528e3fe81c267009a306c08b58fef1fab1a4665f1bee0126a8e7ba69b89b9",
+    "server/aiCompany/ceoReviewLedger.ts": "0e3192deac86dac1bc304927d42f894f69a1d32710db261c2f103750ed8d4b84",
+    "server/aiCompany/opportunityScoring.ts": "7d72df80bdd1aa6e7adc1a8fa64a260cd778ba0c7ef9ed8389e75348b744a461",
+    "server/aiCompany/opportunityScoring.test.ts": "facebc30ebd13ac92aca929ea1a2ff814e3a830557b0bb223e7310da02615638",
+    "server/aiCompany/ideaLedger.test.ts": "7152826bba1f7252f84b00a3fc1f116d52bfcb6d8eff4571c192721d97074e0f",
+    "server/aiCompany/ceoReviewLedger.test.ts": "4c65ee1e224dd17e01f8928e3df1a99c2644372169cf5a189c906aa2d224b6d0",
+    "server/aiCompany/runtime.ts": "13d7f92821ae4f7146fe4a3d147bb5d483946003e4bcd5c97014a3af0d1d6075",
+    "server/aiCompany/evidenceSnapshot.test.ts": "3b85fc0a50d33235a2a231acf1c4c11ce0cfd251f5e7b45bbeed6440e5f4911f",
+    "server/aiCompany/currentRoleAuthority.test.ts": "81ec6b02bee5d2cc695f90e6d8415f5ff861e7d5fd8f76aa9acc6f00100d5559",
+    "server/aiCompany/ideaLedger.ts": "2fb5e4f96622e25f4558ff8a829d4d509a8d1fc9f9b9295d401796b1213bddaf",
+    "server/aiCompany/researchAuthorityTestFixture.ts": "943bd43a88ba653e36bc14b4eb5d7d807395dff87d1395d4ae5701313e2d8c85",
+    "server/aiCompany/readinessAuthorityTestFixture.ts": "d2d70f169de0fe0fe3d92f4490bce8310d5e5f0282f78b1c5d78394a86228d02"
+  },
+  "status": "BUILDER_VERIFIED; REVIEW_PENDING",
+  "tests": {
+    "focused": "32PASS4FILES",
+    "regression": "341PASS38FILES",
+    "lint": "PASS",
+    "diff": "PASS",
+    "typecheck": "FAIL11_BASELINE"
+  },
+  "before": {
+    "scope": "Temporary typed fixture only; no real release/governance",
+    "before": {
+      "release": {
+        "ready": true,
+        "blockers": [],
+        "approvedRoles": [
+          "functional-qa",
+          "quality-control",
+          "stakeholder-panel",
+          "user-persona",
+          "ux-research",
+          "domain-expert"
+        ]
+      },
+      "cadence": {
+        "ok": true,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "blockers": []
+      }
+    },
+    "after": {
+      "release": {
+        "ready": true,
+        "blockers": [],
+        "approvedRoles": [
+          "functional-qa",
+          "quality-control",
+          "stakeholder-panel",
+          "user-persona",
+          "ux-research",
+          "domain-expert"
+        ]
+      },
+      "cadence": {
+        "ok": true,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "blockers": []
+      }
+    },
+    "realProviderCalls": 0
+  },
+  "after": {
+    "observedAt": "2026-10-05T03:32:31.191Z",
+    "scope": "Actual temporary queue typed fixture only; zero real release/governance",
+    "before": {
+      "release": {
+        "ready": true,
+        "blockers": [],
+        "approvedRoles": [
+          "functional-qa",
+          "quality-control",
+          "stakeholder-panel",
+          "user-persona",
+          "ux-research",
+          "domain-expert"
+        ]
+      },
+      "promotion": {
+        "ready": true,
+        "blockers": [],
+        "approvedRoles": [
+          "functional-qa",
+          "quality-control",
+          "stakeholder-panel",
+          "user-persona",
+          "ux-research",
+          "domain-expert"
+        ],
+        "action": "PROMOTE",
+        "rollback_required": false
+      },
+      "cadence": {
+        "ok": true,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "blockers": []
+      }
+    },
+    "staleErrors": [
+      "Error: evidence snapshot changed before decision; revalidation required",
+      "Error: evidence snapshot changed before decision; revalidation required"
+    ],
+    "after": {
+      "release": {
+        "ready": false,
+        "blockers": [
+          "functional-qa review current authority is invalid",
+          "quality-control review current authority is invalid",
+          "stakeholder-panel review current authority is invalid",
+          "user-persona review current authority is invalid",
+          "ux-research review current authority is invalid",
+          "domain-expert review current authority is invalid"
+        ],
+        "approvedRoles": []
+      },
+      "promotion": {
+        "ready": false,
+        "blockers": [
+          "functional-qa review current authority is invalid",
+          "quality-control review current authority is invalid",
+          "stakeholder-panel review current authority is invalid",
+          "user-persona review current authority is invalid",
+          "ux-research review current authority is invalid",
+          "domain-expert review current authority is invalid"
+        ],
+        "approvedRoles": [],
+        "action": "HOLD_AND_ESCALATE",
+        "rollback_required": false
+      },
+      "cadence": {
+        "ok": false,
+        "cadence": "daily",
+        "required_roles": [
+          "ceo",
+          "ceo-guild",
+          "pm",
+          "data-engineer",
+          "sre"
+        ],
+        "completed_roles": [],
+        "blockers": [
+          "governance work ceo current authority is invalid",
+          "governance work ceo-guild current authority is invalid",
+          "governance work pm current authority is invalid",
+          "governance work data-engineer current authority is invalid",
+          "governance work sre current authority is invalid"
+        ]
+      }
+    },
+    "historicalDonePreserved": true,
+    "realProviderCalls": 0,
+    "realProductReleases": 0
+  },
+  "repair": "Prerelease/promotion/cadence consume issued canonical current evidence authority; runtime/index caller wiring",
+  "limitations": [
+    "Builder-only; independent material review denied PD009, not retried/substituted",
+    "No actual release/HTTP/server restart/governance/provider/human/product/candidate effects",
+    "Planner/executor/coordinator/CLI readers remain structural",
+    "Receipt writer crossprocess/duplicates/check-to-append and projection atomicity OPEN",
+    "Full typecheck11baseline; A/B/C/D UNPROVEN"
+  ],
+  "twentyPassDecision": {
+    "coverage": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "evidenceConsidered": [
+      "current source hashes",
+      "actual missingreceipt true before/false after",
+      "retained DONE history",
+      "341 regressions with four new adversarial controls",
+      "PD009 denial",
+      "typecheck baseline"
+    ],
+    "decision": "Scoped source repair; do not close material obligation or promote candidate",
+    "authority": "Standing local reversible mission section5",
+    "residualUncertainty": [
+      "Builder-only; independent material review denied PD009, not retried/substituted",
+      "No actual release/HTTP/server restart/governance/provider/human/product/candidate effects",
+      "Planner/executor/coordinator/CLI readers remain structural",
+      "Receipt writer crossprocess/duplicates/check-to-append and projection atomicity OPEN",
+      "Full typecheck11baseline; A/B/C/D UNPROVEN"
+    ],
+    "rollback": "Scoped WIP source revert only; no live data effects"
+  }
+}

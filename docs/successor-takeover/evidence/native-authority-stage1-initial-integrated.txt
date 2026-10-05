@@ -1,0 +1,128 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 13207ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1541ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1171ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  764ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1437ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1463ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  331ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1180ms
+   ✓ CLI review preserves actual original reference for same-scope  1170ms
+   ✓ CLI review preserves actual original reference for cross-scope  1174ms
+   ✓ CLI review preserves actual original reference for unresolved  1181ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1218ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3969ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1796ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1489ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 3219ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  346ms
+   ✓ denies withdrawn current review authority  350ms
+   ✓ denies missing current review authority  332ms
+   ✓ denies nonpass current review authority  323ms
+   ✓ denies missing-verdict current review authority  322ms
+   ✓ uses full dependency snapshot before selecting review backlog  322ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  322ms
+   ✓ plain rows and copied views cannot certify prerelease  318ms
+   ✓ cannot approve an empty target project using healthy foreign work  333ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 2927ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 2639ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 2193ms
+   ✓ revokes receiptless cadence and rejects stale views  395ms
+   ✓ cannot approve target cadence using another project governance  346ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2710ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  328ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  641ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  471ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  343ms
+   ✓ WorktreeManager > merges verified product changes into main git history and marks worktree MERGED  301ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 1330ms
+ ❯ server/aiCompany/nativeReceiptAuthority.test.ts (26 tests | 1 failed) 1067ms
+   × concurrent native publishers dedupe without changing queue bytes or exposing capability 46ms
+     → expected '/private/var/folders/8m/8nn14wlx6hs7s…' to be '/var/folders/8m/8nn14wlx6hs7sngr9z5xr…' // Object.is equality
+   ✓ refuses missing authority or receipt mismatch 35ms
+   ✓ refuses owner authority or receipt mismatch 34ms
+   ✓ refuses role authority or receipt mismatch 32ms
+   ✓ refuses id authority or receipt mismatch 31ms
+   ✓ refuses pass authority or receipt mismatch 30ms
+   ✓ refuses invalid-time authority or receipt mismatch 36ms
+   ✓ refuses future-time authority or receipt mismatch 29ms
+   ✓ refuses usage authority or receipt mismatch 31ms
+   ✓ copied queue bytes do not transfer a capability to another root 26ms
+   ✓ terminal success cannot publish or idempotently republish a receipt 53ms
+   ✓ refuses token mismatch without receipt publication 23ms
+   ✓ refuses scope mismatch without receipt publication 30ms
+   ✓ refuses project mismatch without receipt publication 25ms
+   ✓ refuses attempt mismatch without receipt publication 27ms
+   ✓ refuses hash mismatch without receipt publication 29ms
+   ✓ refuses provider mismatch without receipt publication 31ms
+   ✓ requires issued attempt and refuses publication after terminal containment 65ms
+   ✓ allows current IN_REVIEW publication and rejects conflicting identity 50ms
+   ✓ refuses corrupt original ledger and preserves bytes 29ms
+   ✓ refuses duplicate original ledger and preserves bytes 28ms
+   ✓ refuses unterminated original ledger and preserves bytes 27ms
+   ✓ refuses alias original ledger and preserves bytes 31ms
+   ✓ refuses hash original ledger and preserves bytes 25ms
+   ✓ stale and wrong-root capabilities cannot publish 83ms
+   ✓ two OS publishers dedupe with capability transported only in a private temporary fixture file 180ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 871ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 744ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  348ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 720ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 709ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 673ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 730ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 666ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 521ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 487ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 614ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 425ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 322ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 907ms
+   ✓ does not report SUCCESS for DONE history without original receipts  593ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 361ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 302ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 289ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 324ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 271ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (6 tests) 218ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 319ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 629ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 436ms
+   ✓ CEO readiness requires current advisory origin and is revoked by withdrawal  433ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 83ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 23ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 15ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 17ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 8ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 7ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 3ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 2ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/nativeReceiptAuthority.test.ts > concurrent native publishers dedupe without changing queue bytes or exposing capability
+AssertionError: expected '/private/var/folders/8m/8nn14wlx6hs7s…' to be '/var/folders/8m/8nn14wlx6hs7sngr9z5xr…' // Object.is equality
+
+Expected: "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-authority-rlYz3S/role-evidence.jsonl#ROLE-EVIDENCE-WORK-1791174439378-atsigp:1632f4b0-5b47-483b-bfa7-733dbad08e75"
+Received: "/private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-authority-rlYz3S/role-evidence.jsonl#ROLE-EVIDENCE-WORK-1791174439378-atsigp:1632f4b0-5b47-483b-bfa7-733dbad08e75"
+
+ ❯ server/aiCompany/nativeReceiptAuthority.test.ts:15:28
+     13|  const f=await fixture(),queueFile=path.join(f.root,'role-work-queue.j…
+     14|  const [a,b]=await Promise.all([f.queue.publishNativeReceipt(f.receipt…
+     15|  expect(a.source_artifact).toBe(`${f.file}#${f.receipt.evidence_id}`);
+       |                            ^
+     16|  const bytes=await readFile(f.file,'utf8');expect(bytes.trim().split('…
+     17| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 40 passed (41)
+      Tests  1 failed | 407 passed (408)
+   Start at  11:26:44
+   Duration  51.58s (transform 517ms, setup 0ms, collect 1.30s, tests 44.96s, environment 3ms, prepare 1.26s)
+

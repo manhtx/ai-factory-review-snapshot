@@ -1,0 +1,93 @@
+{
+  "observedAt": "2026-10-05T02:28:03.665Z",
+  "scope": "In-memory fault snapshots only; no canonical company work or product evidence",
+  "promotion": {
+    "ready": true,
+    "blockers": [],
+    "approvedRoles": [
+      "functional-qa",
+      "quality-control",
+      "stakeholder-panel",
+      "user-persona",
+      "ux-research",
+      "domain-expert"
+    ],
+    "action": "PROMOTE",
+    "rollback_required": false
+  },
+  "currentReleaseSuccess": [
+    {
+      "role": "functional-qa",
+      "success": false
+    },
+    {
+      "role": "quality-control",
+      "success": false
+    },
+    {
+      "role": "stakeholder-panel",
+      "success": false
+    },
+    {
+      "role": "user-persona",
+      "success": false
+    },
+    {
+      "role": "ux-research",
+      "success": false
+    },
+    {
+      "role": "domain-expert",
+      "success": false
+    }
+  ],
+  "cadence": {
+    "ok": true,
+    "cadence": "daily",
+    "required_roles": [
+      "ceo",
+      "ceo-guild",
+      "pm",
+      "data-engineer",
+      "sre"
+    ],
+    "completed_roles": [
+      "ceo",
+      "ceo-guild",
+      "pm",
+      "data-engineer",
+      "sre"
+    ],
+    "blockers": []
+  },
+  "currentGovernanceSuccess": [
+    {
+      "role": "ceo",
+      "success": false
+    },
+    {
+      "role": "ceo-guild",
+      "success": false
+    },
+    {
+      "role": "pm",
+      "success": false
+    },
+    {
+      "role": "data-engineer",
+      "success": false
+    },
+    {
+      "role": "sre",
+      "success": false
+    }
+  ],
+  "sourceHashes": {
+    "preReleaseReviewGate.ts": "186966455ecc3ce5dc3bd1af48b68e9a353f1d996cc656b1e270d1d6b76faaf0",
+    "releasePromotion.ts": "c00e68576e055f1a2da92b00945a77c9cc4e8fef9a186cf506d83a631da7f3fc",
+    "cadenceQuorum.ts": "35142f40987069ba5a5988740a08c42723232c28d746f28e35d2ac96a9c61b7e",
+    "roleWorkQueue.ts": "ee7339adb5033995705f95802fbf3a989767242c902c06a3592a4726418d936d"
+  },
+  "realProviderCalls": 0,
+  "networkCalls": 0
+}

@@ -1,0 +1,75 @@
+{
+  "observedAt": "2026-10-05T09:13:27.313Z",
+  "sourceRevision": "b318825bba40bb7b9268d835a67cc08b548459ba",
+  "resourceSourceHash": "f212e9441db5de69a4314c154d5a6a97de3189acb42ae1b833fcf8ed4bf1b215",
+  "scope": "Five actual OS processes, real governor acquisition/release, isolated stores, zero model/provider/product calls",
+  "staleRelease": {
+    "aClaim": {
+      "type": "claim",
+      "accepted": true,
+      "leaseId": "AGY-LEASE-1791191606885-aac1faa3-b6b0-4472-9427-92ab8dc3ce84",
+      "pid": 53311
+    },
+    "aFirstRelease": {
+      "type": "release",
+      "accepted": true,
+      "pid": 53311
+    },
+    "bClaim": {
+      "type": "claim",
+      "accepted": true,
+      "leaseId": "AGY-LEASE-1791191606938-d4224341-7259-4b84-9125-9aa36789c081",
+      "pid": 53313
+    },
+    "beforeLateRelease": {
+      "present": true,
+      "leaseId": "AGY-LEASE-1791191606938-d4224341-7259-4b84-9125-9aa36789c081",
+      "ownerPid": 53313,
+      "hash": "e946cb8f2b7f4443a1876ad1653f606e42a0ad14d5c97ed1dde4e5f198052db1"
+    },
+    "aLateRelease": {
+      "type": "release",
+      "accepted": false,
+      "error": "RESOURCE_ADMISSION_STALE_RELEASE: original owner cannot release the current slot",
+      "pid": 53311
+    },
+    "afterLateRelease": {
+      "present": true,
+      "leaseId": "AGY-LEASE-1791191606938-d4224341-7259-4b84-9125-9aa36789c081",
+      "ownerPid": 53313,
+      "hash": "e946cb8f2b7f4443a1876ad1653f606e42a0ad14d5c97ed1dde4e5f198052db1"
+    },
+    "cClaimWhileBLive": {
+      "type": "claim",
+      "accepted": false,
+      "error": "RESOURCE_ADMISSION_BUSY: current owner remains alive; age does not authorize takeover",
+      "pid": 53315
+    },
+    "bIdentityPreserved": true
+  },
+  "expiredLiveOwner": {
+    "agedAClaim": {
+      "type": "claim",
+      "accepted": true,
+      "leaseId": "AGY-LEASE-1791191607278-5d6796d8-ed22-471a-b87f-da381b9f2324",
+      "pid": 53316
+    },
+    "agedBClaim": {
+      "type": "claim",
+      "accepted": false,
+      "error": "RESOURCE_ADMISSION_BUSY: current owner remains alive; age does not authorize takeover",
+      "pid": 53317
+    },
+    "clockFault": "Injected supported now argument +16 minutes; A OS process remains alive",
+    "current": {
+      "present": true,
+      "leaseId": "AGY-LEASE-1791191607278-5d6796d8-ed22-471a-b87f-da381b9f2324",
+      "ownerPid": 53316,
+      "hash": "69c6233c96c17035c020dab5bae7d42c5d269ed36f9c2c0574514068d197d354"
+    }
+  },
+  "limitations": [
+    "Resource admission only; no controller authority, provider effect or product outcome certification",
+    "Direct queue administrative API counterexample remains open"
+  ]
+}

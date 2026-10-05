@@ -1,0 +1,16 @@
+✔ clean source inventory passes with a bounded claim (114.932833ms)
+✔ tracked browser profile fails without reading or printing contents (238.586416ms)
+✔ missing Git inventory fails closed (71.767209ms)
+✔ independent-review private path is rejected: ChromeProfile/Default/Preferences (98.492709ms)
+✔ independent-review private path is rejected: profiles/firefox/logins.json (126.310334ms)
+✔ independent-review private path is rejected: profiles/firefox/cookies.sqlite (89.014708ms)
+✔ tracked live lease identity is rejected without deleting its working file (424.899833ms)
+✔ unreadable scope must not produce a clean audit (274.356792ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1587.141375

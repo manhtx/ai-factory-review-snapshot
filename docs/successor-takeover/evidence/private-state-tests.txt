@@ -1,0 +1,14 @@
+✔ clean source inventory passes with a bounded claim (112.724333ms)
+✔ tracked browser profile fails without reading or printing contents (103.322375ms)
+✔ missing Git inventory fails closed (60.595375ms)
+✔ independent-review private path is rejected: ChromeProfile/Default/Preferences (86.856542ms)
+✔ independent-review private path is rejected: profiles/firefox/logins.json (130.885417ms)
+✔ independent-review private path is rejected: profiles/firefox/cookies.sqlite (542.236834ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1137.130958

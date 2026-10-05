@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 32ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (5 tests) 45ms
+ ✓ server/aiCompany/architectureTrial.test.ts (12 tests) 39ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 4ms
+ ✓ server/aiCompany/reviewEvidenceContract.test.ts (4 tests) 9ms
+
+ Test Files  5 passed (5)
+      Tests  51 passed (51)
+   Start at  18:05:21
+   Duration  2.53s (transform 289ms, setup 0ms, collect 866ms, tests 128ms, environment 1ms, prepare 308ms)

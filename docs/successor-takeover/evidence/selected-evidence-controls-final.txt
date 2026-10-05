@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (13 tests) 2633ms
+   ✓ unrelated queue and evidence append after captured snapshot does not block selected claim  842ms
+   ✓ two healthy independent terminal commits share producer without blocking each other  492ms
+
+ Test Files  1 passed (1)
+      Tests  13 passed (13)
+   Start at  10:04:20
+   Duration  3.19s (transform 89ms, setup 0ms, collect 339ms, tests 2.63s, environment 0ms, prepare 27ms)
+

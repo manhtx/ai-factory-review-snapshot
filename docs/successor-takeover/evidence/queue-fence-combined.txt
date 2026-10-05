@@ -1,0 +1,27 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4062ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1732ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1646ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (9 tests) 855ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (13 tests) 682ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 545ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 365ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 312ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 260ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 237ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 212ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 191ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 199ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 12ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 7ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 3ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 3ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+
+ Test Files  16 passed (16)
+      Tests  151 passed (151)
+   Start at  22:36:34
+   Duration  9.97s (transform 158ms, setup 0ms, collect 326ms, tests 7.94s, environment 1ms, prepare 319ms)
+

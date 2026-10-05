@@ -1,0 +1,17 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (13 tests) 6688ms
+   ✓ snapshot preserves internal rows and freshness policy is checked at use time  1520ms
+   ✓ missing producer receipt refuses actual reserve transition  303ms
+   ✓ missing producer receipt refuses actual complete transition  661ms
+   ✓ unrelated queue and evidence append after captured snapshot does not block selected claim  484ms
+   ✓ selected receipt changed after snapshot refuses locked admission  1479ms
+   ✓ two healthy independent terminal commits share producer without blocking each other  978ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 10ms
+
+ Test Files  2 passed (2)
+      Tests  19 passed (19)
+   Start at  10:03:28
+   Duration  7.79s (transform 168ms, setup 0ms, collect 212ms, tests 6.70s, environment 0ms, prepare 130ms)
+

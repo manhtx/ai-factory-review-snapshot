@@ -1,0 +1,186 @@
+scripts/ai-company-product-continuation.mjs:5:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/ai-company-product-continuation.mjs:49:const queue = new RoleWorkQueue(runtimeRoot);
+scripts/record-workspace-synthesis-cycle.mjs:11:const workQueueFile = path.join(runtime, 'role-work-queue.jsonl');
+scripts/ai-company-continuity-kernel.mjs:29:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/ai-company-continuity-kernel.mjs:41:const queue = new RoleWorkQueue(projectStateDir);
+scripts/audit-codex-product-cycle-evaluation.test.mjs:11:    const queue = path.join(runtime, 'role-work-queue.jsonl');
+scripts/create-codex-adversarial-benchmarks.mjs:1:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/create-codex-adversarial-benchmarks.mjs:5:const queue = new RoleWorkQueue(runtime); const handoffs = new RoleHandoffLedger(runtime); const stamp = Date.now();
+scripts/create-dogfood-baseline.mjs:14:const queuePath = join(root, '.ai-company', 'runtime', 'projects', 'macro-os', 'role-work-queue.jsonl');
+scripts/audit-codex-product-cycle-integrity.test.mjs:12:    writeFileSync(path.join(runtime, 'role-work-queue.jsonl'), JSON.stringify(item) + '\n');
+scripts/audit-codex-product-cycle-integrity.test.mjs:26:    writeFileSync(path.join(runtime, 'role-work-queue.jsonl'), items.map((item) => JSON.stringify(item)).join('\n') + '\n');
+scripts/canary-founder-zero-continuity.mjs:6:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/canary-founder-zero-continuity.mjs:17:  const queue = new RoleWorkQueue(stateDir);
+scripts/create-codex-benchmark-b0.mjs:1:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/create-codex-benchmark-b0.mjs:7:const queue = new RoleWorkQueue(runtime);
+scripts/test-adversarial-attacks.mjs:25:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/test-adversarial-attacks.mjs:231:      const queue = new RoleWorkQueue(path.join(tempDir, 'sink-h'));
+scripts/run-product-cycle-001.mjs:13:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/run-product-cycle-001.mjs:31:const queue = new RoleWorkQueue(runtimeRoot);
+scripts/audit-ai-company-current-state.mjs:12:const queue = await readJsonl('role-work-queue.jsonl');
+scripts/audit-ai-company-current-state.mjs:30:  source: path.relative(root, path.join(runtime, 'role-work-queue.jsonl')),
+scripts/ai-company-run-ready.mjs:7:import { isSuccessfulRoleWork, roleDependencySatisfied, RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/ai-company-run-ready.mjs:83:const queue = new RoleWorkQueue(runtimeRoot, new JsonlEvidenceResolver(path.join(runtimeRoot, 'role-dispatch-evidence.jsonl')));
+scripts/ai-company-run-ready.mjs:268:  const work = latest(await readRows(path.join(runtimeRoot, 'role-work-queue.jsonl')));
+scripts/ai-company-run-ready.mjs:332:    const afterWave = latest(await readRows(path.join(runtimeRoot, 'role-work-queue.jsonl')));
+scripts/ai-company-role-dispatch.mjs:87:const queuePath = path.join(runtimeRoot, 'role-work-queue.jsonl');
+scripts/ai-company-role-dispatch.mjs:362:const { RoleWorkQueue } = await import('../server/aiCompany/roleWorkQueue.ts');
+scripts/ai-company-role-dispatch.mjs:363:const queue = new RoleWorkQueue(runtimeRoot, new JsonlEvidenceResolver(path.join(runtimeRoot, 'role-dispatch-evidence.jsonl')));
+scripts/run-benchmark-b0.mjs:12:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/run-benchmark-b0.mjs:21:const queue = new RoleWorkQueue(runtimeRoot);
+scripts/create-ai-company-health-h0.mjs:24:  read('projects/macro-os/role-work-queue.jsonl'), read('projects/macro-os/role-work-executions.jsonl'), read('projects/macro-os/provider-attempts.jsonl'), read('projects/macro-os/provider-telemetry.jsonl'), read('projects/macro-os/role-dispatch-evidence.jsonl'), read('projects/macro-os/ai-usage-events.jsonl'), read('projects/macro-os/role-handoffs.jsonl'), read('projects/macro-os/security-violation-events.jsonl'),
+scripts/audit-codex-product-epoch.mjs:17:const queueRows = (await readFile(path.join(root, '.ai-company/runtime/projects/macro-os/role-work-queue.jsonl'), 'utf8'))
+scripts/create-codex-benchmark-v2.mjs:1:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/create-codex-benchmark-v2.mjs:5:const queue = new RoleWorkQueue(runtime); const handoffs = new RoleHandoffLedger(runtime); const stamp = Date.now();
+scripts/record-disclaimer-banner-cycle.mjs:11:const workQueueFile = path.join(runtime, 'role-work-queue.jsonl');
+scripts/create-codex-product-cycle.mjs:5:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/create-codex-product-cycle.mjs:27:const queue = new RoleWorkQueue(runtime);
+scripts/create-codex-recovery-benchmark.mjs:1:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts'; import { RoleHandoffLedger } from '../server/aiCompany/roleHandoffLedger.ts'; import path from 'node:path';
+scripts/create-codex-recovery-benchmark.mjs:2:const root=process.cwd(),runtime=path.join(root,'.ai-company','runtime','projects','macro-os'),stamp=Date.now(),runId=`codex-recovery-${stamp}`,namespace=`recovery-proof-${stamp}`,base=`CODEX-RECOVERY-${stamp}`;const q=new RoleWorkQueue(runtime),h=new RoleHandoffLedger(runtime);const roles=['pm','functional-qa','quality-control','ceo-guild'];const ids=roles.map(r=>`${base}-${r}`);const items=await q.createBatch(roles.map((role,i)=>({work_id:ids[i],project_id:'macro-os',backlog_id:`${base}:recoverable-hold`,title:'Recoverable HOLD proof: intentionally missing evidence; detect, assign recovery, re-review and finish',role,run_id:runId,namespace,workflow_id:'codex-recovery-proof',depends_on:i?[ids[i-1]]:[]})));for(let i=0;i<items.length;i++)await h.record({project_id:'macro-os',work_id:items[i].work_id,from_role:i?items[i-1].role:'ceo',to_role:items[i].role,actor:'recovery-proof-coordinator',objective:items[i].title,context:['recoverable-hold-spec','missing-evidence-condition'],evidence_ids:['recoverable-hold-spec'],acceptance_criteria:['bounded artifact','typed result']});console.log(JSON.stringify({runId,namespace,backlogPrefix:base,ids}));
+scripts/ai-company-doctor.test.mjs:6:    for (const term of ['PRODUCT_GOAL_MASTER.md', 'MASTER_BUILD_PLAN.md', 'RUNNER', 'company-state.json', 'role-work-queue.jsonl']) expect(source).toContain(term);
+scripts/audit-codex-product-cycle-evaluation.mjs:14:for (const row of await readJsonl(path.join(runtime, 'role-work-queue.jsonl'))) if (row.run_id === runId || row.assignment?.run_id === runId) latest.set(row.work_id, row);
+scripts/quarantine-historical-blocked-work.mjs:7:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/quarantine-historical-blocked-work.mjs:15:const queue = new RoleWorkQueue(runtime, new JsonlEvidenceResolver(path.join(runtime, 'role-dispatch-evidence.jsonl')));
+scripts/audit-codex-product-cycle-integrity.mjs:18:for (const row of readJsonl(path.join(runtime, 'role-work-queue.jsonl'))) {
+scripts/execute-watchlist-alert-cycle.mjs:4:// Use the guarded RoleWorkQueue/dispatcher boundary and its evidence contracts.
+scripts/audit-autonomous-next-action.mjs:3:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/audit-autonomous-next-action.mjs:8:const queue = new RoleWorkQueue(runtimeRoot);
+scripts/audit-autonomous-next-action.mjs:15: const report = { generated_at: new Date().toISOString(), project_id: process.env.AI_COMPANY_PROJECT_ID || 'macro-os', source: path.join(runtimeRoot, 'role-work-queue.jsonl'), row_count: rows.length, counts, pending_completed_cycle: false, action: boundedAction, historical_backlog_warning: counts.BLOCKED > 20 ? 'BLOCKED_BACKLOG_REQUIRES_TRIAGE' : null, activity_theater_guard: action.kind === 'WAITING_FOR_MEANINGFUL_WORK' ? 'PASS' : 'NOT_APPLICABLE' };
+scripts/ai-company-doctor.mjs:21:const queuePath = path.join(root, '.ai-company/runtime/projects/macro-os/role-work-queue.jsonl');
+scripts/run-real-provider-recovery-proof.mjs:23:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/run-real-provider-recovery-proof.mjs:127:const queue = new RoleWorkQueue(runtimeRoot);
+scripts/ai-company-marathon.mjs:16:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/ai-company-marathon.mjs:39:const queue = new RoleWorkQueue(runtimeRoot);
+scripts/run-final-canary-c0-c22.mjs:17:import { RoleWorkQueue } from '../server/aiCompany/roleWorkQueue.ts';
+scripts/run-final-canary-c0-c22.mjs:33:  const queue = new RoleWorkQueue(stateDir);
+server/aiCompany/recoveryFingerprintDeduplication.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/recoveryFingerprintDeduplication.test.ts:12:    const queue = new RoleWorkQueue(dir);
+server/index.ts:203:import { RoleWorkQueue } from "./aiCompany/roleWorkQueue.js";
+server/index.ts:241:const companyWorkQueue = new RoleWorkQueue(companyRuntimeRoot);
+server/aiCompany/recoveryCoordinator.test.ts:6:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/recoveryCoordinator.test.ts:33:    const queue = new RoleWorkQueue(root, resolver);
+server/aiCompany/recoveryCoordinator.test.ts:179:    const queue = new RoleWorkQueue(root);
+server/aiCompany/recoveryCoordinator.test.ts:208:    const queue = new RoleWorkQueue(root);
+server/aiCompany/recoveryCoordinator.test.ts:235:    const queue = new RoleWorkQueue(root);
+server/aiCompany/recoveryCoordinator.test.ts:274:    const queue = new RoleWorkQueue(root);
+server/aiCompany/recoveryCoordinator.test.ts:303:    const queue = new RoleWorkQueue(root);
+server/aiCompany/recoveryCoordinator.test.ts:332:    const queue = new RoleWorkQueue(root);
+server/aiCompany/backlogWorkPlanner.ts:1:import { isSuccessfulRoleWork, RoleWorkQueue, type RoleWorkItem } from './roleWorkQueue';
+server/aiCompany/backlogWorkPlanner.ts:49:export async function planBacklogWork(input: { projectId: string; items: PlannerBacklogItem[]; queue: RoleWorkQueue }): Promise<{ created: RoleWorkItem[]; existing: number }> {
+server/aiCompany/backlogWorkPlanner.ts:119:export async function planIndependentReviews(input: { projectId: string; queue: RoleWorkQueue }): Promise<RoleWorkItem[]> {
+server/aiCompany/backlogWorkPlanner.ts:133:export async function planPreReleaseReviews(input: { projectId: string; queue: RoleWorkQueue }): Promise<RoleWorkItem[]> {
+server/aiCompany/backlogWorkPlanner.ts:150:export async function planResearchWork(input: { projectId: string; ideas: ProductIdea[]; queue: RoleWorkQueue }): Promise<RoleWorkItem[]> {
+server/aiCompany/backlogWorkPlanner.ts:166:export async function planCadenceGovernanceWork(input: { projectId: string; cadence: OperatingReviewCadence; queue: RoleWorkQueue }): Promise<RoleWorkItem[]> {
+server/aiCompany/runtimeProofAdversarial.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/runtimeProofAdversarial.test.ts:13:    const q = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'proof-')));
+server/aiCompany/runtimeProofAdversarial.test.ts:18:    const q = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'proof-')));
+server/aiCompany/runtimeProofAdversarial.test.ts:40:    const root = await mkdtemp(path.join(os.tmpdir(), 'conflict-')); const queue = new RoleWorkQueue(root); const handoffs = new RoleHandoffLedger(root);
+server/aiCompany/recoveryCoordinator.ts:5:import { RoleWorkQueue, type RoleWorkItem } from './roleWorkQueue';
+server/aiCompany/recoveryCoordinator.ts:98:  queue: RoleWorkQueue;
+server/aiCompany/roleWorkQueue.ts:93:export class RoleWorkQueue {
+server/aiCompany/roleWorkQueue.ts:95:  constructor(private readonly rootDir: string, private readonly evidenceResolver?: IEvidenceResolver) { this.file = path.join(rootDir, 'role-work-queue.jsonl'); }
+server/aiCompany/implicitCompletionGuard.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/implicitCompletionGuard.test.ts:10:  const queue = new RoleWorkQueue(root);
+server/aiCompany/leanRuntimeScenarios.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/leanRuntimeScenarios.test.ts:75:    const queue = new RoleWorkQueue(tmpDir);
+server/aiCompany/leanRuntimeScenarios.test.ts:186:    const queue = new RoleWorkQueue(tmpDir);
+server/aiCompany/leanRuntimeScenarios.test.ts:322:    const queue = new RoleWorkQueue(tmpDir);
+server/aiCompany/leanRuntimeScenarios.test.ts:406:    const queue = new RoleWorkQueue(tmpDir);
+server/aiCompany/leanRuntimeScenarios.test.ts:466:    const queue = new RoleWorkQueue(tmpDir);
+server/aiCompany/truthProjection.ts:4:import { RoleWorkQueue, type RoleWorkItem } from './roleWorkQueue';
+server/aiCompany/truthProjection.ts:207:  const queue = new RoleWorkQueue(runtimePath);
+server/aiCompany/truthProjection.ts:834:Evidence: .ai-company/runtime/projects/macro-os/role-work-queue.jsonl (READY=3, DONE=1150, QUARANTINED=1025)
+server/aiCompany/runtimeProofMatrix.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/runtimeProofMatrix.test.ts:19:      const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'state-success-')));
+server/aiCompany/runtimeProofMatrix.test.ts:54:      const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'state-hold-')));
+server/aiCompany/runtimeProofMatrix.test.ts:108:      const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'state-blocked-')));
+server/aiCompany/runtimeProofMatrix.test.ts:128:      const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'state-cancel-')));
+server/aiCompany/runtimeProofMatrix.test.ts:158:      const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'state-founder-')));
+server/aiCompany/runtimeProofMatrix.test.ts:175:      const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'state-budget-')));
+server/aiCompany/backlogWorkPlanner.test.ts:7:import { RoleWorkQueue, type RoleWorkItem } from './roleWorkQueue';
+server/aiCompany/backlogWorkPlanner.test.ts:11:  const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), prefix)), resolver);
+server/aiCompany/backlogWorkPlanner.test.ts:25:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'cadence-work-')));
+server/aiCompany/backlogWorkPlanner.test.ts:34:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'planner-')));
+server/aiCompany/backlogWorkPlanner.test.ts:42:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'pm-gate-planner-')));
+server/aiCompany/backlogWorkPlanner.test.ts:129:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'triage-')));
+server/aiCompany/backlogWorkPlanner.test.ts:155:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'research-planner-')));
+server/aiCompany/backlogWorkPlanner.test.ts:163:    const queue = new RoleWorkQueue(root);
+server/aiCompany/backlogWorkPlanner.test.ts:167:      await appendFile(path.join(root, 'role-work-queue.jsonl'), JSON.stringify({ ...item, state: 'DONE', review_verdict: { verdict: 'PASS', gate: 'historical fixture', summary: 'fixture', evidence: ['ISOLATED'], failure_class: 'NONE', root_cause: 'none', recovery_required: false, recovery_actions: [], unblock_evidence: [], retry_budget: 0, next_review_trigger: 'fixture', confidence: .5 } }) + '\n');
+server/aiCompany/backlogWorkPlanner.test.ts:175:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'freeze-planner-')));
+server/aiCompany/providerDrivenRecoveryEvidence.test.ts:4:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/providerDrivenRecoveryEvidence.test.ts:139:    const queue = new RoleWorkQueue(tmpRoot);
+server/aiCompany/roleWorkExecutor.ts:1:import { RoleWorkQueue, roleDependencySatisfied, isSuccessfulRoleWork, type RoleWorkItem } from './roleWorkQueue';
+server/aiCompany/roleWorkExecutor.ts:75:export async function executeReadyRoleWork(input: { projectId: string; queue: RoleWorkQueue; handoffs?: RoleHandoffLedger; ownerPrefix?: string; execute: RoleWorkExecutor; maxConcurrent?: number; maxDurationMs?: number }): Promise<{ completed: RoleWorkItem[]; blocked: RoleWorkItem[] }> {
+server/aiCompany/roleWorkQueueBypassGuards.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/roleWorkQueueBypassGuards.test.ts:9:describe('RoleWorkQueue Bypass Guards (Phase 1)', () => {
+server/aiCompany/roleWorkQueueBypassGuards.test.ts:13:    const queue = new RoleWorkQueue(dir, resolver);
+server/aiCompany/roleWorkQueue.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/roleWorkQueue.test.ts:8:function registerFixtureEvidence(resolver: InMemoryEvidenceResolver, item: Awaited<ReturnType<RoleWorkQueue['create']>>, id: string) {
+server/aiCompany/roleWorkQueue.test.ts:15:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-assignment-')));
+server/aiCompany/roleWorkQueue.test.ts:22:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-')), resolver);
+server/aiCompany/roleWorkQueue.test.ts:36:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-recovery-')));
+server/aiCompany/roleWorkQueue.test.ts:45:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-quarantine-')));
+server/aiCompany/roleWorkQueue.test.ts:54:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-ready-quarantine-')));
+server/aiCompany/roleWorkQueue.test.ts:63:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-deps-')), resolver);
+server/aiCompany/roleWorkQueue.test.ts:76:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-structured-')));
+server/aiCompany/roleWorkQueue.test.ts:90:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-metric-')), resolver);
+server/aiCompany/roleWorkQueue.test.ts:192:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-work-orphan-')));
+server/aiCompany/researchSynthesis.test.ts:6:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/researchSynthesis.test.ts:12:    const root = await mkdtemp(path.join(os.tmpdir(), 'synthesis-')); const queue = new RoleWorkQueue(root);
+server/aiCompany/productPathInterruption.test.ts:7:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/productPathInterruption.test.ts:12:    const queue = new RoleWorkQueue(dir);
+server/aiCompany/productPathInterruption.test.ts:14:    const code = `import { RoleWorkQueue } from './server/aiCompany/roleWorkQueue.ts'; const q=new RoleWorkQueue(process.argv[1]); await q.claim(process.argv[2],'child:backend-engineer'); console.log('CLAIMED'); setInterval(()=>{},1000);`;
+server/aiCompany/productPathInterruption.test.ts:25:    const restarted = new RoleWorkQueue(dir);
+server/aiCompany/productPathInterruption.test.ts:35:    const rows = (await readFile(join(dir, 'role-work-queue.jsonl'), 'utf8')).trim().split('\n').map((line) => JSON.parse(line));
+server/aiCompany/runtime.ts:11:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/runtime.ts:43:async function materializeRoleHandoffs(projectId: string, queue: RoleWorkQueue, handoffs: RoleHandoffLedger) {
+server/aiCompany/runtime.ts:104:  const queue = new RoleWorkQueue(root, input.evidenceResolver);
+server/aiCompany/autonomousCoordinator.test.ts:1:import { expect, it } from 'vitest'; import { mkdtemp } from 'node:fs/promises'; import os from 'node:os'; import path from 'node:path'; import { RoleWorkQueue } from './roleWorkQueue'; import { runAutonomousWorkflow } from './autonomousCoordinator'; import type { RecoveryPlan } from './recoveryPlan';
+server/aiCompany/autonomousCoordinator.test.ts:12:it('advances one invocation through ready work and bounded terminal state',async()=>{const resolver=new InMemoryEvidenceResolver();const queue=new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(),'auto-')),resolver);const a=await queue.create({project_id:'macro-os',backlog_id:'B',title:'a',role:'pm'});await queue.create({project_id:'macro-os',backlog_id:'B',title:'b',role:'functional-qa',run_id:a.assignment!.run_id,namespace:a.assignment!.namespace,depends_on:[a.work_id]});registerFixture(resolver,a,`E:${a.work_id}`);const execute:RoleWorkExecutor=async(item)=>item.role==='pm'?({evidence_ids:[`E:${item.work_id}`],structured_output:pmOutput(`E:${item.work_id}`)}):({evidence_ids:[`E:${a.work_id}`],review_verdict:{verdict:'PASS',gate:'qa',summary:'dependency fixture inspected',evidence:[`E:${a.work_id}`],failure_class:'NONE',root_cause:'none',recovery_required:false,recovery_actions:[],unblock_evidence:[],retry_budget:0,next_review_trigger:'none',confidence:1}});const result=await runAutonomousWorkflow({queue,projectId:'macro-os',runId:a.assignment!.run_id,namespace:a.assignment!.namespace,execute});expect(result.status).toBe('SUCCESS');expect(result.completed).toHaveLength(2);expect(result.next_action?.kind).toBe('REVIEW_COMPLETED_CYCLE');expect((await queue.records()).every(x=>x.state==='DONE')).toBe(true);});
+server/aiCompany/autonomousCoordinator.test.ts:15:  const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'auto-recovery-')), resolver);
+server/aiCompany/autonomousCoordinator.test.ts:40:it('reports provider usage as actual instead of relabeling context estimates', async()=>{const resolver=new InMemoryEvidenceResolver();const queue=new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(),'auto-usage-')),resolver);const item=await queue.create({project_id:'macro-os',backlog_id:'B',title:'usage',role:'pm'});registerFixture(resolver,item,`E:${item.work_id}`);const result=await runAutonomousWorkflow({queue,projectId:'macro-os',runId:item.assignment!.run_id,namespace:item.assignment!.namespace,execute:async(work:any)=>({evidence_ids:[`E:${work.work_id}`],usage:{input_tokens:11,output_tokens:7},structured_output:pmOutput(`E:${work.work_id}`)})});expect(result.status).toBe('SUCCESS');expect(result.total_tokens_consumed).toBe(18);expect(result.total_tokens_estimated).toBe(item.assignment!.context_budget.target_tokens);expect(result.token_provenance).toBe('ACTUAL');});
+server/aiCompany/reviewTerminalAdmission.test.ts:6:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/reviewTerminalAdmission.test.ts:13:  const queue = new RoleWorkQueue(root, resolver);
+server/aiCompany/reviewTerminalAdmission.test.ts:61:    await appendFile(path.join(root, 'role-work-queue.jsonl'), JSON.stringify({ ...admitted, state: 'DONE' }) + '\n');
+server/aiCompany/nativeEvidenceAdmission.test.ts:6:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/nativeEvidenceAdmission.test.ts:14:    const queue = new RoleWorkQueue(root, ledger);
+server/aiCompany/nativeEvidenceAdmission.test.ts:28:    const queue = new RoleWorkQueue(root);
+server/aiCompany/nativeEvidenceAdmission.test.ts:30:    const before = await readFile(path.join(root, 'role-work-queue.jsonl'), 'utf8');
+server/aiCompany/nativeEvidenceAdmission.test.ts:34:    expect(await readFile(path.join(root, 'role-work-queue.jsonl'), 'utf8')).toBe(before);
+server/aiCompany/nativeEvidenceAdmission.test.ts:71:    const item = await new RoleWorkQueue(root).create({ project_id: 'macro-os', backlog_id: 'B', title: 'bounded code work', role: 'coder' });
+server/aiCompany/nativeEvidenceAdmission.test.ts:78:    const item = await new RoleWorkQueue(root).create({ project_id: 'macro-os', backlog_id: 'B', title: 'bounded review', role: 'functional-qa' });
+server/aiCompany/nativeEvidenceAdmission.test.ts:85:    const queue = new RoleWorkQueue(root, ledger);
+server/aiCompany/nativeEvidenceAdmission.test.ts:96:    const queue = new RoleWorkQueue(root, ledger);
+server/aiCompany/nativeEvidenceAdmission.test.ts:106:    const queue = new RoleWorkQueue(root, ledger);
+server/aiCompany/nativeEvidenceAdmission.test.ts:118:    const queue = new RoleWorkQueue(root, ledger);
+server/aiCompany/autonomousCoordinator.ts:1:import { roleDependencySatisfied, isSuccessfulRoleWork, hasNonPassReview, RoleWorkQueue, type RoleWorkItem } from './roleWorkQueue';
+server/aiCompany/autonomousCoordinator.ts:24:  queue: RoleWorkQueue;
+server/aiCompany/reviseContinuation.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/reviseContinuation.test.ts:11:    const queue = new RoleWorkQueue(root);
+server/aiCompany/roleWorkQueue.atomic.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/roleWorkQueue.atomic.test.ts:8:describe('RoleWorkQueue atomic DAG creation', () => {
+server/aiCompany/roleWorkQueue.atomic.test.ts:10:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'dag-')));
+server/aiCompany/roleWorkQueue.atomic.test.ts:18:  it('commits a valid DAG as one batch', async () => { const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'dag-'))); await queue.createBatch([spec('a'), spec('b', ['a'])]); expect((await queue.records()).map((x) => x.work_id)).toEqual(['a', 'b']); });
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:6:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:8:describe('RoleWorkQueue evidence resolver integration', () => {
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:11:    const queue = new RoleWorkQueue(root);
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:15:    const before = await readFile(path.join(root, 'role-work-queue.jsonl'), 'utf8');
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:19:    expect(await readFile(path.join(root, 'role-work-queue.jsonl'), 'utf8')).toBe(before);
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:25:    const queue = new RoleWorkQueue(root);
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:27:    expect(await new RoleWorkQueue(root).records()).toEqual([item]);
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:33:    const queue = new RoleWorkQueue(root, { resolve() { throw new Error('evidence inspection unavailable'); } });
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:37:    const before = await readFile(path.join(root, 'role-work-queue.jsonl'), 'utf8');
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:41:    expect(await readFile(path.join(root, 'role-work-queue.jsonl'), 'utf8')).toBe(before);
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:46:    const queue = new RoleWorkQueue(root, new JsonlEvidenceResolver(path.join(root, 'role-dispatch-evidence.jsonl')));
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:58:    const queue = new RoleWorkQueue(root, new JsonlEvidenceResolver(evidencePath));
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:74:    const queue = new RoleWorkQueue(root, new JsonlEvidenceResolver(evidencePath));
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:89:    const queue = new RoleWorkQueue(root, new JsonlEvidenceResolver(evidencePath));
+server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts:103:    const queue = new RoleWorkQueue(root);
+server/aiCompany/reviseContinuation.ts:3:import { RoleWorkQueue, type RoleWorkItem } from './roleWorkQueue';
+server/aiCompany/reviseContinuation.ts:25:  queue: RoleWorkQueue;
+server/aiCompany/roleWorkExecutor.test.ts:5:import { RoleWorkQueue } from './roleWorkQueue';
+server/aiCompany/roleWorkExecutor.test.ts:14:  const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), prefix)), resolver);
+server/aiCompany/roleWorkExecutor.test.ts:15:  const register = (item: Awaited<ReturnType<RoleWorkQueue['create']>>, id: string) => {
+server/aiCompany/roleWorkExecutor.test.ts:66:    const queue = new RoleWorkQueue(root, new InMemoryEvidenceResolver());
+server/aiCompany/roleWorkExecutor.test.ts:76:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-evidence-queue-')), ledger);
+server/aiCompany/roleWorkExecutor.test.ts:86:    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'role-research-queue-')), ledger);

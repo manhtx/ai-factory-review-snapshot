@@ -1,0 +1,71 @@
+{
+  "observedAt": "2026-10-05T08:49:03.529Z",
+  "sourceRevision": "68af05b30851c0ffd7522cab4567d616b1bcec32",
+  "resourceSourceHash": "5c9f3bdf3d36522e47bc05002aaea2aa9a1c1aa15bed6f1a65dc90c0e26314f8",
+  "scope": "Five actual OS processes, real governor acquisition/release, isolated stores, zero model/provider/product calls",
+  "staleRelease": {
+    "aClaim": {
+      "type": "claim",
+      "accepted": true,
+      "leaseId": "AGY-LEASE-1791190143349",
+      "pid": 42001
+    },
+    "aFirstRelease": {
+      "type": "release",
+      "accepted": true,
+      "pid": 42001
+    },
+    "bClaim": {
+      "type": "claim",
+      "accepted": true,
+      "leaseId": "AGY-LEASE-1791190143357",
+      "pid": 42002
+    },
+    "beforeLateRelease": {
+      "present": true,
+      "leaseId": "AGY-LEASE-1791190143357",
+      "ownerPid": 42002,
+      "hash": "4c5b907b6161880440533cd3eb55cecfdf06a82757c0de357e044265850ff0ee"
+    },
+    "aLateRelease": {
+      "type": "release",
+      "accepted": true,
+      "pid": 42001
+    },
+    "afterLateRelease": {
+      "present": false
+    },
+    "cClaimWhileBLive": {
+      "type": "claim",
+      "accepted": true,
+      "leaseId": "AGY-LEASE-1791190143359",
+      "pid": 42003
+    },
+    "bIdentityPreserved": false
+  },
+  "expiredLiveOwner": {
+    "agedAClaim": {
+      "type": "claim",
+      "accepted": true,
+      "leaseId": "AGY-LEASE-1791190143525",
+      "pid": 42004
+    },
+    "agedBClaim": {
+      "type": "claim",
+      "accepted": true,
+      "leaseId": "AGY-LEASE-1791191103527",
+      "pid": 42005
+    },
+    "clockFault": "Injected supported now argument +16 minutes; A OS process remains alive",
+    "current": {
+      "present": true,
+      "leaseId": "AGY-LEASE-1791191103527",
+      "ownerPid": 42005,
+      "hash": "194a50282f3ff06555cd872b4a7d3bea973c41e288fb0a76683f8d13ba4a8b71"
+    }
+  },
+  "limitations": [
+    "Resource admission only; no controller authority, provider effect or product outcome certification",
+    "Direct queue administrative API counterexample remains open"
+  ]
+}

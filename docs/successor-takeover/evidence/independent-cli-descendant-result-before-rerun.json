@@ -1,0 +1,20 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-cli-stop-coExja",
+  "code": 143,
+  "ack": [
+    {
+      "type": "ROLE_ATTEMPT_CLAIMED",
+      "work_id": "WORK-1790957325212-1vo8j9",
+      "attempt_id": "0493e2ee-830d-4254-b8e1-58e3c992e71f",
+      "output_name": "role-output-WORK-1790957325212-1vo8j9-0493e2ee-830d-4254-b8e1-58e3c992e71f.md"
+    }
+  ],
+  "finalState": "BLOCKED",
+  "providerEffectAfterDispatcherStop": true,
+  "semanticEvidenceRowsAfterStop": 0,
+  "stderr": "",
+  "hashes": {
+    "scripts/ai-company-role-dispatch.mjs": "e6b92eea50d3a1e79d13dbbecac8188a552d9b1180d26f38b847df836168e670",
+    "scripts/ai-company-run-ready.mjs": "9690c1d0964ea929440e45c2bf5a32e890afd1394dd0d2bdc52f3d69cfb3e047"
+  }
+}

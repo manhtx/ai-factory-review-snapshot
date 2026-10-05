@@ -1,0 +1,87 @@
+{
+  "schema": "successor-takeover.transaction-feasibility.v1",
+  "generatedAt": "2026-10-01T03:07:20.802Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/successor-transaction-proof-iGwu4C",
+  "engine": "files",
+  "harnessSha256": "ff21f1a79bfa31b18b7c11243962985e45682b22da4aa576cc05ac1236cd6a2e",
+  "fileWorkerSha256": "52c86252780328a0336cddad437cb2e800e4fefcb19841216d0a9d8047aaab7e",
+  "concurrentOutcomes": [
+    {
+      "type": "result",
+      "outcome": "STALE_REJECTED",
+      "command": "contender-0"
+    },
+    {
+      "type": "result",
+      "outcome": "STALE_REJECTED",
+      "command": "contender-1"
+    },
+    {
+      "type": "result",
+      "outcome": "STALE_REJECTED",
+      "command": "contender-2"
+    },
+    {
+      "type": "result",
+      "outcome": "STALE_REJECTED",
+      "command": "contender-3"
+    },
+    {
+      "type": "result",
+      "outcome": "STALE_REJECTED",
+      "command": "contender-4"
+    },
+    {
+      "type": "result",
+      "outcome": "STALE_REJECTED",
+      "command": "contender-5"
+    },
+    {
+      "type": "result",
+      "outcome": "COMMITTED",
+      "revision": 2,
+      "command": "contender-6"
+    },
+    {
+      "type": "result",
+      "outcome": "STALE_REJECTED",
+      "command": "contender-7"
+    }
+  ],
+  "duplicateCommand": {
+    "type": "result",
+    "outcome": "REPLAY",
+    "revision": 2,
+    "command": "contender-6"
+  },
+  "interruptedCommit": {
+    "outcome": "KILLED_WITH_OPEN_TRANSACTION"
+  },
+  "afterCrash": {
+    "id": 1,
+    "revision": 2,
+    "owner": "contender-6"
+  },
+  "recovered": {
+    "type": "result",
+    "outcome": "COMMITTED",
+    "revision": 3,
+    "command": "after-crash"
+  },
+  "durable": {
+    "id": 1,
+    "revision": 3,
+    "owner": "after-crash"
+  },
+  "receipts": [
+    {
+      "command": "contender-6",
+      "revision": 2
+    },
+    {
+      "command": "after-crash",
+      "revision": 3
+    }
+  ],
+  "claimLimit": "Disposable engine feasibility for revision CAS, receipt replay and process-crash atomicity only. File variant uses POSIX flock and fsynced atomic whole-state replacement. No mission/authority/evidence policy, full effect idempotency, power-loss recovery, hostile writer exclusion or migration proof."
+}

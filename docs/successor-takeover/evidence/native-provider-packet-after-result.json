@@ -1,0 +1,160 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-packet-Wy7Xoa",
+  "stubFetchCalls": 1,
+  "realProviderCalls": 0,
+  "canonicalAssignment": {
+    "assignment_id": "ASSIGNMENT:UNIT-PACKET",
+    "run_id": "UNIT-RUN",
+    "namespace": "UNIT-NAMESPACE",
+    "product_id": "isolated",
+    "objective_id": "REAL-CONTRACT-UNIT",
+    "work_id": "UNIT-PACKET",
+    "role": "ux-research",
+    "task_type": "role-work",
+    "objective": "Inspect exact original packet; no product outcome",
+    "product_goal_alignment": [
+      "Product Goal alignment required"
+    ],
+    "scope": [
+      "only packet fixture"
+    ],
+    "allowed_paths": [
+      "docs/PRODUCT_GOAL.md"
+    ],
+    "forbidden_paths": [
+      ".env",
+      ".ai-company/runtime",
+      ".ai-company/company-state.json",
+      "private-unit-path"
+    ],
+    "allowed_tools": [
+      "repository inspection"
+    ],
+    "forbidden_tools": [
+      "deployment",
+      "secret access"
+    ],
+    "inputs": [
+      "assigned work contract"
+    ],
+    "evidence_manifest": [
+      "assigned work item"
+    ],
+    "dependencies": [],
+    "acceptance_criteria": [
+      "preserve exact supplied acceptance"
+    ],
+    "output_schema": "none",
+    "allowed_verdicts": [
+      "PASS",
+      "REVISE",
+      "QUALITY_FAIL",
+      "HOLD",
+      "BLOCKED"
+    ],
+    "risk_level": "P2",
+    "mutation_policy": "read_only",
+    "test_policy": "targeted",
+    "context_budget": {
+      "target_tokens": 4000,
+      "max_tokens": 8000
+    },
+    "token_budget": 16000,
+    "timeout": 17,
+    "retry_budget": 0,
+    "escalation_policy": "bounded escalation"
+  },
+  "actualUserPacket": {
+    "task_id": "UNIT-PACKET",
+    "project_id": "isolated",
+    "risk_level": "P2",
+    "acceptance_criteria": [
+      "preserve exact supplied acceptance"
+    ],
+    "budget": {
+      "max_attempts": 1,
+      "timeout_seconds": 17
+    },
+    "role_execution": {
+      "assignment": {
+        "assignment_id": "ASSIGNMENT:UNIT-PACKET",
+        "run_id": "UNIT-RUN",
+        "namespace": "UNIT-NAMESPACE",
+        "product_id": "isolated",
+        "objective_id": "REAL-CONTRACT-UNIT",
+        "work_id": "UNIT-PACKET",
+        "role": "ux-research",
+        "task_type": "role-work",
+        "objective": "Inspect exact original packet; no product outcome",
+        "product_goal_alignment": [
+          "Product Goal alignment required"
+        ],
+        "scope": [
+          "only packet fixture"
+        ],
+        "allowed_paths": [
+          "docs/PRODUCT_GOAL.md"
+        ],
+        "forbidden_paths": [
+          ".env",
+          ".ai-company/runtime",
+          ".ai-company/company-state.json",
+          "private-unit-path"
+        ],
+        "allowed_tools": [
+          "repository inspection"
+        ],
+        "forbidden_tools": [
+          "deployment",
+          "secret access"
+        ],
+        "inputs": [
+          "assigned work contract"
+        ],
+        "evidence_manifest": [
+          "assigned work item"
+        ],
+        "dependencies": [],
+        "acceptance_criteria": [
+          "preserve exact supplied acceptance"
+        ],
+        "output_schema": "none",
+        "allowed_verdicts": [
+          "PASS",
+          "REVISE",
+          "QUALITY_FAIL",
+          "HOLD",
+          "BLOCKED"
+        ],
+        "risk_level": "P2",
+        "mutation_policy": "read_only",
+        "test_policy": "targeted",
+        "context_budget": {
+          "target_tokens": 4000,
+          "max_tokens": 8000
+        },
+        "token_budget": 16000,
+        "timeout": 17,
+        "retry_budget": 0,
+        "escalation_policy": "bounded escalation"
+      },
+      "attempt_id": "b58f9ad7-c9ac-43fd-abc7-a0a594914c5a",
+      "receipt_evidence_id": "ROLE-EVIDENCE-UNIT-PACKET:b58f9ad7-c9ac-43fd-abc7-a0a594914c5a"
+    }
+  },
+  "scopeDropped": false,
+  "actualRisk": "P2",
+  "actualCriteria": [
+    "preserve exact supplied acceptance"
+  ],
+  "actualBudget": {
+    "max_attempts": 1,
+    "timeout_seconds": 17
+  },
+  "proseRejected": "invalid research result: Unexpected token 'U', \"Unstructur\"... is not valid JSON",
+  "finalState": "CLAIMED",
+  "receiptStatus": [
+    "RECEIVED"
+  ],
+  "capabilityLeaked": false
+}

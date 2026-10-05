@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 296ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 25ms
+
+ Test Files  2 passed (2)
+      Tests  12 passed (12)
+   Start at  21:52:07
+   Duration  887ms (transform 68ms, setup 0ms, collect 91ms, tests 321ms, environment 0ms, prepare 60ms)
+

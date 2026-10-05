@@ -1,0 +1,54 @@
+{
+  "observedAt": "2026-10-05T08:24:49.391Z",
+  "sourceRevision": "453a9a1a1dc5307aaf6c300be893204c176a927d",
+  "scope": "Actual two OS processes using queue APIs; isolated store; no provider/model/product effects",
+  "aClaim": {
+    "type": "claimed",
+    "attempt": "96a62240-f458-45ce-a54f-87926e7a43ab",
+    "pid": 30110
+  },
+  "bClaim": {
+    "type": "claimed",
+    "attempt": "795eaa80-3f8f-44f1-87a8-37a57510a3f5",
+    "pid": 30111
+  },
+  "late": {
+    "type": "lateResult",
+    "outcomes": {
+      "reserve": {
+        "accepted": false,
+        "error": "stale queue selection: work changed before mutation"
+      },
+      "publish": {
+        "accepted": false,
+        "error": "current claimed attempt authority is required; missing, stale or invalid capability"
+      },
+      "admission": {
+        "accepted": false,
+        "error": "current claimed attempt authority is required; missing, stale or invalid capability"
+      },
+      "complete": {
+        "accepted": false,
+        "error": "current claimed attempt authority is required; missing, stale or invalid capability"
+      },
+      "blockAttempt": {
+        "accepted": false,
+        "error": "current claimed attempt authority is required; missing, stale or invalid capability"
+      }
+    }
+  },
+  "queueUnchangedByCapabilityOperations": true,
+  "bAttemptPreserved": true,
+  "stateAfterLate": "IN_REVIEW",
+  "unrestrictedAdministrativeBlock": {
+    "type": "adminResult",
+    "accepted": true
+  },
+  "stateAfterAdmin": "BLOCKED",
+  "adminBlockRetainedBIdentity": true,
+  "limitations": [
+    "OS isolation is not an authorization boundary for the unrestricted administrative queue API",
+    "No controller lease authority was fabricated or claimed",
+    "No actual provider effect or cross-store atomicity proof"
+  ]
+}

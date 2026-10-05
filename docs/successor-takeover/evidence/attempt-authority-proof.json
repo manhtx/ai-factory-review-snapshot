@@ -1,0 +1,38 @@
+{
+  "schema": "ai-factory.scoped-proof.v1",
+  "observedAt": "2026-10-02T15:52:48.188970+00:00",
+  "executionIdentity": "UNCOMMITTED_WORKTREE_HASHES; NOT_LIVE_ATTESTED",
+  "sourceHashes": {
+    "server/aiCompany/roleWorkQueue.ts": "ece699a3570f0dc396a6ee43e28088c1ecbb01b15fa17f9cbb0c51e87c387770",
+    "server/aiCompany/roleWorkExecutor.ts": "0793bdab846a7e380bfbf89c6bfc58017a389a97c3e1044cf8d3c7382145e9a9",
+    "server/aiCompany/autonomousCoordinator.ts": "2648f4c10ae3462e2f2825935e766ad69b6a570e9bde01ff9dcff03241c2a8f9",
+    "server/aiCompany/attemptAuthority.test.ts": "0c2ac1cb24b9b0198efbed02469ee886c05ebb45ebbca318898936a478f4bd0b"
+  },
+  "claim": "Queue positive transitions require explicit hashed attempt capability bound to queue/work/assignment/owner; runtime execution uses actual claimed row sans raw handle; stale attempt error cannot stop newer actor in reviewed paths",
+  "status": "PARTIAL_REPAIR_NOT_CALLER_MIGRATION_COMPLETE",
+  "builder": "26PASS3FILES; changed-source lintPASS; fulltypecheckFAIL11otherdiagnostics",
+  "independent": "independent-attempt-authority-review.json:26PASS plus stale invalid-plan interleaving denied after selected-row fix",
+  "failBefore": "stale-attempt-counterexample.json: old-owneroutputDONE undernewowner",
+  "passAfter": "stale-attempt-after.json: oldauthorityrejected;newownerIN_REVIEW",
+  "compatibility": "47PASS45FAIL_OF92; preserved raw attempt-authority-compatibility.txt; older explicitclaimhandle fixtures/callers incomplete",
+  "limitations": [
+    "CLI still claims after provider and has work-only artifact fallback/parenttimeout identity adoption",
+    "Admin submit/complete handle transport not migrated",
+    "Own-output receipts not bound to actual attempt or exact execution revision",
+    "Actor identity and OSwriter fencing not globally proven",
+    "No runtime restart, provider dispatch, migration or candidate promotion",
+    "Previous151PASS is historical pre-attemptguard, not current broadgate",
+    "A/B/C/DUNPROVEN; G1denialpreserved;productionDISABLED"
+  ],
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "server/aiCompany/roleWorkQueue.ts",
+      "server/aiCompany/roleWorkExecutor.ts",
+      "server/aiCompany/autonomousCoordinator.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

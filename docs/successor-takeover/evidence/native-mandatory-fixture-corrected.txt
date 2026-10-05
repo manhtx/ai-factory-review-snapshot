@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 736ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 464ms
+
+ Test Files  2 passed (2)
+      Tests  14 passed (14)
+   Start at  11:35:21
+   Duration  1.66s (transform 80ms, setup 0ms, collect 111ms, tests 1.20s, environment 0ms, prepare 55ms)
+

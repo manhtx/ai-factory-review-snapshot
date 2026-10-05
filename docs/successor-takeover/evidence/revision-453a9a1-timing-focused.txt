@@ -1,0 +1,24 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 18302ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  2533ms
+   ✓ refuses provider dispatch when stopped while paused after claim ACK  410ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  2153ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  885ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1757ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1925ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  1205ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1597ms
+   ✓ CLI review preserves actual original reference for same-scope  1271ms
+   ✓ CLI review preserves actual original reference for cross-scope  1478ms
+   ✓ CLI review preserves actual original reference for unresolved  1200ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1273ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 1249ms
+   ✓ native durable dispatch issuance > independent processes admit one reservation and committed marker survives SIGKILL before request  603ms
+
+ Test Files  2 passed (2)
+      Tests  30 passed (30)
+   Start at  15:23:27
+   Duration  23.39s (transform 335ms, setup 0ms, collect 442ms, tests 19.55s, environment 0ms, prepare 151ms)
+

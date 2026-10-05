@@ -1,0 +1,5 @@
+import { expect, it } from 'vitest';
+import { detectReviewConflict, validateReviewVerdict, type ReviewVerdict } from './verdict';
+const hold: ReviewVerdict = { verdict: 'HOLD', gate: 'evidence', summary: 'missing', evidence: ['E'], failure_class: 'INSUFFICIENT_EVIDENCE', root_cause: 'missing input', recovery_required: true, recovery_actions: ['collect'], accountable_role: 'sre', unblock_evidence: ['runtime report'], retry_budget: 2, next_review_trigger: 'report exists', confidence: .8 };
+it('keeps review verdict separate and validates recoverable HOLD', () => { expect(validateReviewVerdict(hold)).toEqual([]); expect(validateReviewVerdict({ ...hold, failure_class: 'EXTERNAL_BLOCKER' })).toContain('HOLD requires INSUFFICIENT_EVIDENCE'); });
+it('detects QA and QC disagreement without choosing a winner',()=>{expect(detectReviewConflict([{...hold,verdict:'PASS',failure_class:'NONE',recovery_required:false,recovery_actions:[],root_cause:'none'},{...hold,verdict:'QUALITY_FAIL',failure_class:'QUALITY_DEFECT'}])).toMatchObject({conflict:true,recovery_required:true});});

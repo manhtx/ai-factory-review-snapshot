@@ -1,0 +1,24 @@
+{
+  "schema": "ai-factory.counterexample.v1",
+  "observedAt": "2026-10-02T15:28:11.450Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/pending-terminal-probe-zBzjpZ",
+  "sourceHash": "756d914506016880eacd1a8e3287a4dfc7ecfd1c7f9cd0796ae5bccdb48ba50e",
+  "blockState": "BLOCKED",
+  "completion": {
+    "accepted": false,
+    "error": "stale queue mutation: work or dependency changed before commit"
+  },
+  "states": [
+    "READY",
+    "CLAIMED",
+    "IN_REVIEW",
+    "BLOCKED"
+  ],
+  "finalState": "BLOCKED",
+  "reproduced": false,
+  "limits": [
+    "Temp-only single process deterministic race",
+    "No actual product effect or actor identity proof",
+    "No live writer or G1 probe"
+  ]
+}

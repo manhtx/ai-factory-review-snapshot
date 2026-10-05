@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/researchSynthesis.test.ts (3 tests) 238ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  09:30:01
+   Duration  489ms (transform 56ms, setup 0ms, collect 106ms, tests 238ms, environment 0ms, prepare 27ms)
+

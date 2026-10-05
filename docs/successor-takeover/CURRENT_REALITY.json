@@ -1,0 +1,141 @@
+{
+  "schema": "ai-factory.f0.v1",
+  "authoritative": false,
+  "observedAt": "2026-10-02T10:40:34.838687+00:00",
+  "missionId": "AI_FACTORY_FINAL_CONVERGENCE_V2",
+  "missionSha256": "eb015a16e78427db6b2d548ec0365de540f82d0cfb6bbddd755d82ba8dac6e23",
+  "root": "/Users/manhtx/Documents/Macro Research Platform",
+  "sourceRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+  "sourceStatus": {
+    "exitCode": 0,
+    "stdout": "## codex/ai-company-hardening-20260910...origin/codex/ai-company-hardening-20260910\n?? docs/successor-takeover/FINAL_CONVERGENCE_MISSION.md\n",
+    "stderr": ""
+  },
+  "remoteRefs": {
+    "exitCode": 0,
+    "stdout": "e520d166770d41b67281b3b1b20c6bae35e90150\trefs/heads/codex/ai-company-hardening-20260910\n775d600a12c996e4f04a2b25668167306d4394f1\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "worktreeCount": 1156,
+  "nonRuntimeWorktrees": [
+    {
+      "worktree": "/Users/manhtx/Documents/Macro Research Platform",
+      "HEAD": "e520d166770d41b67281b3b1b20c6bae35e90150",
+      "branch": "refs/heads/codex/ai-company-hardening-20260910"
+    },
+    {
+      "worktree": "/Users/manhtx/.codex/worktrees/authority-cas-e1-5927/Macro Research Platform",
+      "HEAD": "0fca987ffcc1e47d237d8bed1acb2de66bc0a252",
+      "detached": true
+    },
+    {
+      "worktree": "/Users/manhtx/.codex/worktrees/authority-cas-e1/Macro Research Platform",
+      "HEAD": "775d600a12c996e4f04a2b25668167306d4394f1",
+      "detached": true
+    },
+    {
+      "worktree": "/Users/manhtx/.codex/worktrees/f0-candidate-full/Macro Research Platform",
+      "HEAD": "076a5cd450e04fdc4d450895d645844982352dbf",
+      "detached": true
+    },
+    {
+      "worktree": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+      "HEAD": "d23b29342c9865a2a4f0cbdbe6ccb838522f00a5",
+      "detached": true
+    }
+  ],
+  "candidate": {
+    "path": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+    "revision": "d23b29342c9865a2a4f0cbdbe6ccb838522f00a5",
+    "status": {
+      "exitCode": 0,
+      "stdout": " M scripts/ai-company-continuity-kernel.mjs\n M scripts/ai-company-product-continuation.mjs\n M scripts/audit-autonomous-next-action.mjs\n M server/aiCompany/autonomousCoordinator.ts\n M server/aiCompany/autonomousNextAction.test.ts\n M server/aiCompany/autonomousNextAction.ts\n M server/aiCompany/durableOperation.ts\n M server/aiCompany/roleWorkQueue.ts\n M server/aiCompany/waitWake.ts\n M server/forecastTrust.test.ts\n M server/forecastTrust.ts\n M server/freshness.ts\n M server/routes/analyticsRouter.test.ts\n M server/routes/analyticsRouter.ts\n M src/app/components/workspace/CorrelationPanel.tsx\n M src/app/data/dataContract.ts\n M src/app/data/forecastTrust.test.ts\n M src/app/data/forecastTrust.ts\n M src/app/data/seriesUtils.test.ts\n M src/app/data/seriesUtils.ts\n M src/app/data/types.ts\n M src/app/pages/ForecastCenterPage.tsx\n M src/app/pages/RegimeDetectionPage.tsx\n M src/app/services/platformApi.ts\n?? docs/AI_COMPANY_BOOTSTRAP_CHECKPOINT.json\n?? docs/AI_COMPANY_BOOTSTRAP_EXECUTION.md\n?? docs/DESIGN_SYSTEM.md\n?? docs/FEATURE_PROPOSAL_ARCHITECTURE_EVIDENCE_RESOLUTION.md\n?? docs/FEATURE_PROPOSAL_MACRO_OS_UX_TRANSFORMATION.md\n?? docs/FEATURE_PROPOSAL_RESEARCH_INTERACTION_LAYER.md\n?? docs/UI_COMPONENT_INVENTORY.md\n?? docs/UI_REDESIGN_CHANGELOG.md\n?? docs/UI_REDESIGN_PROGRESS.md\n?? docs/UI_REDESIGN_REMAINING_ISSUES.md\n?? docs/UI_RESEARCH_EXPERIENCE_EXPERIMENT_LEDGER.md\n?? docs/UI_UX_REDESIGN_AUDIT.md\n?? docs/UI_VISUAL_QA.md\n?? docs/audit/BACKLOG_INTAKE_AND_PM_GROOMING_CURRENT_STATE.md\n?? docs/audit/CURRENT_PRODUCT_BACKLOG_AND_SPRINT_FLOW.md\n?? docs/audit/ENTERPRISE_REFERENCE_ARCHITECTURE_ADOPTION_REVIEW.md\n?? docs/product/BACKLOG_INTAKE_OPERATING_MODEL.md\n?? docs/product/PRODUCT_BACKLOG_OPERATING_MODEL.md\n?? docs/successor-takeover/\n?? node_modules\n?? scripts/ai-company-continuity-kernel.integrity.test.mjs\n?? scripts/ai-company-experiment-runner.sh\n?? scripts/ai-company-loop-supervisor.sh\n?? scripts/ai-company-product-continuation.state.test.mjs\n?? scripts/ai-company-quota-pause.mjs\n?? scripts/ai-company-run-ready.timeout.test.mjs\n?? scripts/ai-company-shadow-planner.mjs\n?? scripts/audit-activity-to-value-routing.mjs\n?? scripts/audit-ai-company-current-state.mjs\n?? scripts/audit-api-period-integrity.mjs\n?? scripts/audit-autonomous-next-action.test.mjs\n?? scripts/audit-codex-product-cycle-evaluation.mjs\n?? scripts/audit-codex-product-cycle-evaluation.test.mjs\n?? scripts/audit-compare-funnel-contract.mjs\n?? scripts/audit-compare-funnel-contract.test.mjs\n?? scripts/audit-current-stage-capabilities.mjs\n?? scripts/audit-current-stage-capabilities.test.mjs\n?? scripts/audit-fred-contracts.test.mjs\n?? scripts/audit-fred-quarantine-consistency.mjs\n?? scripts/audit-fred-quarantine-consistency.test.mjs\n?? scripts/audit-fred-revision-parity.mjs\n?? scripts/audit-ism-ingestion.mjs\n?? scripts/audit-source-urls.test.mjs\n?? scripts/capture-visual-qa.mjs\n?? scripts/cdp-capture.mjs\n?? scripts/create-ai-company-health-h0.mjs\n?? scripts/create-data-bottleneck-report.mjs\n?? scripts/create-dogfood-baseline.mjs\n?? scripts/evaluate-architecture-trial-decision.mjs\n?? scripts/execute-watchlist-alert-cycle.mjs\n?? scripts/groom-disclaimer-banner-cycle.mjs\n?? scripts/groom-founder-candidate-sprint.mjs\n?? scripts/install-loop-agent.sh\n?? scripts/intake-founder-ux-debt.mjs\n?? scripts/quarantine-historical-blocked-work.mjs\n?? scripts/record-disclaimer-banner-cycle.mjs\n?? scripts/record-workspace-synthesis-cycle.mjs\n?? scripts/render-supabase-heartbeat-launchd-plist.mjs\n?? scripts/render-supabase-heartbeat-launchd-plist.test.mjs\n?? scripts/repair-frontier-research-identity.mjs\n?? scripts/run-architecture-trial.mjs\n?? scripts/run-autonomous-evolution.mjs\n?? scripts/run-product-sensors.mjs\n?? scripts/run-verified-product-kernel-check.mjs\n?? scripts/supabase-heartbeat.mjs\n?? scripts/supabase-heartbeat.test.mjs\n?? scripts/update-marathon-m2-records.mjs\n?? server/aiCompany/architectureEvaluator.test.ts\n?? server/aiCompany/architectureEvaluator.ts\n?? server/aiCompany/architectureLearningReplay.test.ts\n?? server/aiCompany/architectureLearningReplay.ts\n?? server/aiCompany/architectureTrial.test.ts\n?? server/aiCompany/architectureTrial.ts\n?? server/aiCompany/backlogGrooming.test.ts\n?? server/aiCompany/backlogGrooming.ts\n?? server/aiCompany/backlogIntake.test.ts\n?? server/aiCompany/backlogIntakeAdapters.test.ts\n?? server/aiCompany/durableOperationIntegrity.test.ts\n?? server/aiCompany/evidenceQuality.test.ts\n?? server/aiCompany/evidenceQuality.ts\n?? server/aiCompany/legacyHoldAndEvidencePipeline.test.ts\n?? server/aiCompany/lineage.test.ts\n?? server/aiCompany/lineage.ts\n?? server/aiCompany/livenessProof.test.ts\n?? server/aiCompany/livenessProof.ts\n?? server/aiCompany/marathonState.test.ts\n?? server/aiCompany/marathonState.ts\n?? server/aiCompany/objectiveEligibility.test.ts\n?? server/aiCompany/objectiveEligibility.ts\n?? server/aiCompany/productBacklog.test.ts\n?? server/aiCompany/productBacklog.ts\n?? server/aiCompany/productIntelligence.test.ts\n?? server/aiCompany/productIntelligence.ts\n?? server/aiCompany/productIntelligenceRecoveryV2.test.ts\n?? server/aiCompany/productMutationJournal.test.ts\n?? server/aiCompany/productMutationJournal.ts\n?? server/aiCompany/productPathInterruption.test.ts\n?? server/aiCompany/quotaPause.test.ts\n?? server/aiCompany/quotaPause.ts\n?? server/aiCompany/reviseContinuation.test.ts\n?? server/aiCompany/reviseContinuation.ts\n?? server/aiCompany/sprintLedger.test.ts\n?? server/aiCompany/sprintLedger.ts\n?? server/aiCompany/stateCoverage.test.ts\n?? server/aiCompany/stateProjection.test.ts\n?? server/aiCompany/stateProjection.ts\n?? server/aiCompany/structuredRoleOutputConfidence.test.ts\n?? server/aiCompany/successorGovernanceStore.test.ts\n?? server/aiCompany/successorGovernanceStore.ts\n?? server/aiCompany/taskExecutionPolicy.test.ts\n?? server/aiCompany/taskExecutionPolicy.ts\n?? server/aiCompany/waitWakeIntegrity.test.ts\n?? server/aiCompany/workIntent.test.ts\n?? server/aiCompany/workIntent.ts\n?? server/aiCompany/workState.ts\n?? server/observationParity.test.ts\n?? server/routes/analyticsRouter.truth.test.ts\n?? src/app/components/design-system/\n?? src/app/components/research/\n?? src/app/components/workspace/ResearchSynthesisPanel.tsx\n?? src/app/context/ResearchContext.test.tsx\n?? src/app/context/ResearchContext.tsx\n?? src/app/data/sourceFreshness.ts\n?? src/app/data/vietnamCreditRegime.test.ts\n?? src/app/data/vietnamCreditRegime.ts\n?? src/app/data/vietnamRegimeObservations.test.ts\n?? src/app/data/vietnamRegimeObservations.ts\n?? src/app/pages/DesignSystemPage.tsx\n?? src/app/pages/ForecastCenterPage.test.tsx\n?? src/app/pages/RegimeDetectionPage.test.tsx\n?? src/app/pages/RegimeDetectionPage.truth.test.tsx\n?? src/app/pages/WorkspaceDetailPage.test.tsx\n?? src/app/services/hydrationAdmission.ts\n?? src/app/services/platformApi.hydration.test.ts\n?? supabase/migrations/20260914120000_ai_company_heartbeat.sql\n?? supabase/migrations/20260914150000_backup_verification_manifest.sql\n?? supabase/migrations/20260916160000_source_revision_identity.sql\n",
+      "stderr": ""
+    },
+    "authority": "NONE"
+  },
+  "listeners": {
+    "exitCode": 0,
+    "stdout": "COMMAND     PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nrapportd    405 manhtx    8u  IPv4 0x387ec237588283fd      0t0  TCP *:51927 (LISTEN)\nrapportd    405 manhtx    9u  IPv6 0xa8532349f1a54fc2      0t0  TCP *:51927 (LISTEN)\nControlCe   424 manhtx    8u  IPv4 0x2d2e0662f8bec887      0t0  TCP *:7000 (LISTEN)\nControlCe   424 manhtx    9u  IPv6 0x43490591c2af68e8      0t0  TCP *:7000 (LISTEN)\nControlCe   424 manhtx   10u  IPv4  0x1a9bfc8ff52447b      0t0  TCP *:5000 (LISTEN)\nControlCe   424 manhtx   11u  IPv6 0xfe0f28d2006006d9      0t0  TCP *:5000 (LISTEN)\nollama      519 manhtx    3u  IPv4  0xe775535b7ecda92      0t0  TCP 127.0.0.1:11434 (LISTEN)\npostgres    527 manhtx    7u  IPv6 0x6557dd1edf1b25a0      0t0  TCP [::1]:5432 (LISTEN)\npostgres    527 manhtx    8u  IPv4 0xb09e6e380574799a      0t0  TCP 127.0.0.1:5432 (LISTEN)\nnode        534 manhtx   22u  IPv6 0x5ec765ced5f8a27c      0t0  TCP *:8787 (LISTEN)\nAntigravi 43142 manhtx   32u  IPv4 0x40d7c4a0d6b2e378      0t0  TCP 127.0.0.1:50029 (LISTEN)\nAntigravi 43142 manhtx   40u  IPv4 0xc98ce40b79a972e5      0t0  TCP 127.0.0.1:50030 (LISTEN)\nlanguage_ 43160 manhtx    7u  IPv4 0xbfdb9678b071a076      0t0  TCP 127.0.0.1:50031 (LISTEN)\nlanguage_ 43160 manhtx    8u  IPv4 0x3d5b8163b47ad782      0t0  TCP 127.0.0.1:50032 (LISTEN)\nfigma_age 69295 manhtx    3u  IPv4 0xdc7b3e8d1da4138a      0t0  TCP 127.0.0.1:44950 (LISTEN)\nfigma_age 69295 manhtx   10u  IPv4 0xab526a15aa11ad4a      0t0  TCP 127.0.0.1:44960 (LISTEN)\n",
+    "stderr": ""
+  },
+  "processes": {
+    "exitCode": 0,
+    "stdout": "  PID  PPID STARTED                      ARGS\n  534     1 Mon Sep 21 13:46:30 2026     /usr/local/bin/node --env-file=/Users/manhtx/Documents/Macro Research Platform/.env.local --import tsx server/index.ts\n 6108     1 Tue Sep 22 13:55:47 2026     /usr/local/bin/node --import tsx /Users/manhtx/Documents/Macro Research Platform/scripts/ai-company-continuity-kernel.mjs\n",
+    "stderr": ""
+  },
+  "disk": {
+    "exitCode": 0,
+    "stdout": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s5   228Gi   166Gi    17Gi    91%    5.4M  181M    3%   /System/Volumes/Data\n",
+    "stderr": ""
+  },
+  "supervisors": [
+    {
+      "path": "/Users/manhtx/Library/LaunchAgents/com.macrolens.ai-company-heartbeat.plist",
+      "label": "com.macrolens.ai-company-heartbeat",
+      "program": [
+        "/usr/local/bin/node",
+        "/Users/manhtx/Documents/Macro Research Platform/scripts/supabase-heartbeat.mjs",
+        "pulse"
+      ],
+      "workingDirectory": "/Users/manhtx/Documents/Macro Research Platform",
+      "keepAlive": null,
+      "safeConfiguration": {
+        "PRODUCTION_AUTONOMY": "DISABLED"
+      }
+    },
+    {
+      "path": "/Users/manhtx/Library/LaunchAgents/com.macrolens.ai-company-loop.plist",
+      "label": "com.macrolens.ai-company-loop",
+      "program": [
+        "/usr/local/bin/node",
+        "--import",
+        "tsx",
+        "/Users/manhtx/Documents/Macro Research Platform/scripts/ai-company-continuity-kernel.mjs"
+      ],
+      "workingDirectory": "/Users/manhtx/Documents/Macro Research Platform",
+      "keepAlive": true,
+      "safeConfiguration": {
+        "PRODUCTION_AUTONOMY": "DISABLED",
+        "AI_COMPANY_STATE_DIR": "/Users/manhtx/Documents/Macro Research Platform/.ai-company/runtime"
+      }
+    },
+    {
+      "path": "/Users/manhtx/Library/LaunchAgents/com.macrolens.ai-company-supervisor.plist",
+      "label": "com.macrolens.ai-company-supervisor",
+      "program": [
+        "/usr/local/bin/node",
+        "--env-file=/Users/manhtx/Documents/Macro Research Platform/.env.local",
+        "--import",
+        "tsx",
+        "server/index.ts"
+      ],
+      "workingDirectory": "/Users/manhtx/Documents/Macro Research Platform",
+      "keepAlive": true,
+      "safeConfiguration": {
+        "PRODUCTION_AUTONOMY": "DISABLED",
+        "AI_COMPANY_ROLE_EXECUTOR_ENABLED": "false",
+        "AI_COMPANY_STATE_DIR": "/Users/manhtx/Documents/Macro Research Platform/.ai-company/runtime",
+        "MACRO_LLM_PROVIDER_ID": "ollama-local",
+        "MACRO_LLM_MODEL": "qwen3:8b"
+      }
+    }
+  ],
+  "trackedPrivateBrowserPathCount": 637,
+  "trackedPrivatePathsDigest": "9b8af0b298d46a3da4db060f0113b03baf4a4f20c3e2a0a9300a462b5e8b8f47",
+  "runtimeRevision": "UNATTESTED",
+  "trustEpoch": "LEGACY_EPOCH",
+  "closure": {
+    "A": "UNPROVEN",
+    "B": "UNPROVEN",
+    "C": "UNPROVEN",
+    "D": "UNPROVEN"
+  },
+  "limitations": [
+    "F0 observations are sequential, not a transactional frozen store snapshot.",
+    "No secret values inspected/exported.",
+    "Store and writer census incomplete.",
+    "Candidate dirty source retained unchanged.",
+    "Git history privacy/external exposure unresolved."
+  ]
+}

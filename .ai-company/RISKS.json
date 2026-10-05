@@ -1,0 +1,25 @@
+{
+  "risks": [
+    {
+      "id": "RISK-001",
+      "category": "Data Licensing",
+      "description": "Redistribution restrictions on commercial provider feeds (e.g. OpenBB / ICE DXY index).",
+      "severity": "high",
+      "mitigation": "Use open government/multilateral feeds (FRED, World Bank, OECD) and explicit proxy labelling."
+    },
+    {
+      "id": "RISK-002",
+      "category": "External API Quota",
+      "description": "Provider rate-limits or downtime on live ingestion.",
+      "severity": "medium",
+      "mitigation": "Tiered caching, stale-while-revalidate, fail-closed diagnostic boundaries."
+    },
+    {
+      "id": "RISK-003",
+      "category": "Cognitive Overload",
+      "description": "Exposing too many raw metrics without guided JTBD workflows.",
+      "severity": "medium",
+      "mitigation": "6 Primary Hubs navigation, preset hypothesis comparisons, Command Palette search."
+    }
+  ]
+}

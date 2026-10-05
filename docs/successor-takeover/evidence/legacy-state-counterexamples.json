@@ -1,0 +1,56 @@
+{
+  "schema": "successor-takeover.legacy-state-probe.v1",
+  "sourceHashes": {
+    "server/aiCompany/objectiveEligibility.ts": "4960aa6a5591579be029ea7112cdbfd25d36c6e8909db881640729de5d6a2a07",
+    "server/aiCompany/autonomousNextAction.ts": "a42bff585db3cdc43bed03ba9761e016bc275af0feea8b35e239fc8839655972",
+    "server/aiCompany/autonomousCoordinator.ts": "a58eb8eae0618dbe70ab76be1e86433ddb5aafaebd5cebc47c5f1974c833fb2e"
+  },
+  "unknownEffectiveState": {
+    "objective_id": "objective-1",
+    "result": "ELIGIBLE",
+    "blocker_ids": [],
+    "lineage_states": {
+      "work-1": "FUTURE_STATE"
+    },
+    "relevant_version": "c34b8a7fb3ecca6f471b109c",
+    "attempt_key": "9c9239f9c068367c871ffe03ff4b4e47"
+  },
+  "queueStates": {
+    "FUTURE_STATE": {
+      "kind": "WAITING_FOR_MEANINGFUL_WORK",
+      "reason": "no useful safe work is currently available",
+      "wake_condition": "new-authorized-work-or-product-evidence"
+    },
+    "CLAIMED": {
+      "kind": "WAITING_FOR_MEANINGFUL_WORK",
+      "reason": "no useful safe work is currently available",
+      "wake_condition": "new-authorized-work-or-product-evidence"
+    },
+    "IN_REVIEW": {
+      "kind": "WAITING_FOR_MEANINGFUL_WORK",
+      "reason": "no useful safe work is currently available",
+      "wake_condition": "new-authorized-work-or-product-evidence"
+    },
+    "QUARANTINED": {
+      "kind": "WAITING_FOR_MEANINGFUL_WORK",
+      "reason": "no useful safe work is currently available",
+      "wake_condition": "new-authorized-work-or-product-evidence"
+    }
+  },
+  "emptyRun": {
+    "status": "SUCCESS",
+    "completed": [],
+    "recovery_tasks": [],
+    "runs": 0,
+    "interventions": 0,
+    "total_tokens_estimated": 0,
+    "token_provenance": "ESTIMATED",
+    "next_action": {
+      "kind": "WAITING_FOR_MEANINGFUL_WORK",
+      "reason": "no useful safe work is currently available",
+      "wake_condition": "new-authorized-work-or-product-evidence"
+    }
+  },
+  "executionCalls": 0,
+  "claimLimit": "Direct function reproduction with in-memory fixtures; no observed live dispatch or production incidence inferred."
+}

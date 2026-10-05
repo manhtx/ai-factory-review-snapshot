@@ -1,0 +1,23 @@
+{
+  "schema": "ai-factory.counterexample.v1",
+  "observedAt": "2026-10-02T15:38:05.602Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/stale-attempt-probe-Ckd7Cg",
+  "sourceHash": "ab70460a77a11b079c9578f5fb2e22039569741b0ce55908fd34000bed6526e7",
+  "oldClaim": {
+    "owner": "old-owner",
+    "revision": 2
+  },
+  "newClaim": {
+    "owner": "new-owner",
+    "revision": 6
+  },
+  "staleEvidenceAccepted": true,
+  "finalState": "DONE",
+  "finalOwner": "new-owner",
+  "reproduced": true,
+  "limits": [
+    "Temp-only local callback; no provider or product effect",
+    "Snapshot CAS fixes pending writes, not caller attempt capability",
+    "No live or G1 action"
+  ]
+}

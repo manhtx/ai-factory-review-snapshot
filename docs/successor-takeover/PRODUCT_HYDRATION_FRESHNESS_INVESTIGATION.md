@@ -1,0 +1,15 @@
+# Hydration freshness loss — isolated repair, independent verification open
+
+`hydrateActualIndicators` in `platformApi.ts` passes API snapshot freshness into `resolveIndicatorSeries`. The latter constructs provenance without copying that field. `isCurrentSourceBackedIndicator` requires freshness exactly `fresh`, so actual hydrated observations can lose their current-evidence eligibility while retaining actual/verified labels.
+
+An isolated direct call with actual/verified observations and `freshness: fresh` produced output freshness undefined. No provider, DB, live service or canonical state was involved. This is a reproducible source path; prevalence in the running deployment remains unverified.
+
+Affected impact cone: every hydrated current-data consumer, including indicator cards, regime detection, dashboards and analysis. Product Goal sections 9–11 require preserved provenance/freshness and honest unavailable states. The new regime page correctly withholds inference for missing freshness; it does not compensate by inventing freshness.
+
+Proposed permanent repair: preserve the supplied typed freshness field through series resolution; never derive freshness from actual/verified or current retrieval time. Test fresh, delayed, outdated, unavailable and omitted freshness through the actual resolver and current-data eligibility. Verify callers and related hydrate tests before implementation. Investigate whether source-period/series identity requires further admission independently. Standing mission authority covers the isolated repair after documenting this proposal.
+
+Separate open product consumer: analyticsRouter's Vietnam credit/property endpoint passes price levels as property YoY. That requires a semantic input adapter and explicit observed-versus-scenario response contract; UI tests do not verify that API.
+
+Implementation: preserve `provenance.freshness` in the resolver output. Four supplied-status regressions failed before the change. Afterward all five cases (including unknown/omitted) preserve their input status, and only fresh enters current eligibility. Related product tests pass; independent page review excludes this resolver, so its independent acceptance remains open. No canonical deployment or data mutation occurred.
+
+Independent resolver review reproduced a second failure: empty replacement series immediately returns the previous indicator, preserving old values and `fresh` despite supplied unavailable freshness. Permanent repair: replacement resolution must always construct the replacement projection, including an empty series. Empty replacements have empty observation dates, unavailable freshness and no current evidence eligibility even if a caller claims fresh. This changes only in-memory display state; stored historical observations remain untouched. Snapshot placeholders for empty series must not be used as current observations. Test empty replacements with fresh/unavailable/omitted freshness and verify the real current-evidence gate rejects each. Then recheck independently.

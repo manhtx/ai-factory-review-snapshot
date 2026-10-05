@@ -1,0 +1,10 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-cross-store-legacy-rDVSg9",
+  "collisionId": "ROLE-EVIDENCE-cb634ae5be64ce3a4391",
+  "otherStoreRowUnbound": true,
+  "error": "ambiguous provider evidence identity 'ROLE-EVIDENCE-cb634ae5be64ce3a4391' exists in both stores",
+  "reverseLegacyNativeCollisionRejected": true,
+  "reverseError": "ambiguous provider evidence identity 'ROLE-EVIDENCE-cb634ae5be64ce3a4391' exists in both stores",
+  "ambiguousIdentityAccepted": false,
+  "sourceHash": "f35ec3a2939f106bddb98816ed40c1436230cb4a4ee16ee54c3a5a6bb7a261eb"
+}

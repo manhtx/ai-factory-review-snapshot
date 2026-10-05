@@ -1,0 +1,25 @@
+{
+  "schema": "ai-factory.counterexample.v1",
+  "observedAt": "2026-10-02T15:21:17.479Z",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/pending-terminal-probe-85IIIn",
+  "sourceHash": "63c55fef47992d969f670011f90116ee757cf8d8207edd6bd9b3ca0017267181",
+  "blockState": "BLOCKED",
+  "completion": {
+    "accepted": true,
+    "state": "DONE"
+  },
+  "states": [
+    "READY",
+    "CLAIMED",
+    "IN_REVIEW",
+    "BLOCKED",
+    "DONE"
+  ],
+  "finalState": "DONE",
+  "reproduced": true,
+  "limits": [
+    "Temp-only single process deterministic race",
+    "No actual product effect or actor identity proof",
+    "No live writer or G1 probe"
+  ]
+}

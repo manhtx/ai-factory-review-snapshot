@@ -1,0 +1,6 @@
+import { mkdtemp } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { describe, expect, it } from 'vitest';
+import { ResearchSignalLedger } from './researchSignalLedger';
+describe('research signal ledger', () => { it('persists user and market evidence with bounded confidence', async () => { const ledger = new ResearchSignalLedger(await mkdtemp(path.join(os.tmpdir(), 'signals-'))); const signal = { signal_id: 'S-1', project_id: 'macro-os', source_type: 'USER_INTERVIEW' as const, persona: 'macro analyst', research_question: 'can users explain today\'s move?', source_reference: 'UX-SESSION-1', finding: 'needs evidence graph', confidence: .8 }; await expect(ledger.record(signal)).resolves.toMatchObject({ signal_id: 'S-1', confidence: .8 }); await expect(ledger.record(signal)).resolves.toMatchObject({ signal_id: 'S-1' }); }); it('rejects missing source and invalid confidence', async () => { const ledger = new ResearchSignalLedger(await mkdtemp(path.join(os.tmpdir(), 'signals-invalid-'))); await expect(ledger.record({ signal_id: 'S-2', project_id: 'macro-os', source_type: 'MARKET_EVIDENCE', persona: 'investor', research_question: 'q', source_reference: '', finding: 'f', confidence: 1.2 })).rejects.toThrow('source'); }); });

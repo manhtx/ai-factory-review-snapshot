@@ -1,0 +1,17 @@
+{
+  "schema": "successor-takeover.capability-dynamic-review.v1",
+  "sourceMap": "../CAPABILITY_PRESERVATION_MAP.json",
+  "findings": [
+    {"source": "scripts/ai-company-role-dispatch.mjs:361", "behavior": "Dynamically loads RoleWorkQueue and supplies JsonlEvidenceResolver for role-dispatch-evidence.jsonl", "migrationObligation": "Preserve resolver-backed terminal admission; do not replace dispatcher with the weaker optional-resolver construction used by other callers"},
+    {"source": "scripts/ai-company-role-dispatch.mjs:461", "behavior": "Dynamically loads coordinateRecovery when a guild decision includes a recovery plan", "migrationObligation": "Preserve recovery-plan validation, role mapping and dependency lineage through the successor adapter"},
+    {"source": "src/app/App.tsx:27", "behavior": "Lazy import of ResearchCopilotPage", "migrationObligation": "Preserve routed research capability even though no static page import exists"}
+  ],
+  "nonliteralImportsReviewed": {
+    "source": "scripts/generate-indicator-catalog-metadata.mjs:14",
+    "count": 6,
+    "resolution": "Source inspection only: dataContract, dataSources, 11 named fixture indicator modules, and three expansion modules are loaded through pathToFileURL. Generator was not executed.",
+    "effect": "Build-time metadata generation; source explicitly emits empty series and simulated/unverified provenance. Runtime consumption and output-path policy remain separate obligations."
+  },
+  "validation": "Known dynamic page edge, recovery edge and queue re-export edge found in generated map; all 14 representative sources carry exact inventory hashes",
+  "claimLimit": "Source paths and contracts, not observed invocation or migration acceptance."
+}

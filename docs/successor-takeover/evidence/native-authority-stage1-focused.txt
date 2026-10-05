@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (16 tests) 1092ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 781ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (6 tests) 249ms
+
+ Test Files  3 passed (3)
+      Tests  38 passed (38)
+   Start at  11:25:31
+   Duration  2.92s (transform 110ms, setup 0ms, collect 161ms, tests 2.12s, environment 0ms, prepare 93ms)
+

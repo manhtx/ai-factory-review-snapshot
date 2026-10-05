@@ -1,0 +1,49 @@
+{
+  "schema": "successor-takeover.capability-edge-review.v1",
+  "status": "PARTIAL_STATIC_CENSUS_NOT_RUNTIME_PROOF",
+  "inventory": "legacy-execution-surface.json",
+  "denominatorSha256": "9f3795e680f9a3d9ea19a8b7cafb5caf255ea41d159ea55fad1da2c6989af314",
+  "method": "Resolve recorded relative static imports against each importer directory, normalize source extensions, then inspect named symbols and dynamic page imports with rg. Static import edges include type-only dependencies unless separately classified.",
+  "findings": [
+    {
+      "capability": "Evidence recording and work completion admission",
+      "sources": ["server/aiCompany/roleEvidenceLedger.ts", "server/aiCompany/roleWorkQueue.ts"],
+      "verifiedEdges": ["server/index.ts:223 imports RoleEvidenceLedger", "server/index.ts:4692 constructs RoleEvidenceLedger", "server/aiCompany/roleWorkExecutor.ts:3 imports RoleEvidenceLedger", "server/aiCompany/roleWorkExecutor.ts:58 accepts ledger in executor factory"],
+      "correction": "Target map queue consumer is a proposed semantic relationship, not a direct ledger import by queue. Runtime resolver wiring requires separate inspection.",
+      "preservation": "PRESERVE"
+    },
+    {
+      "capability": "Research copilot page",
+      "source": "src/app/pages/ResearchCopilotPage.tsx",
+      "verifiedEdges": ["src/app/App.tsx:27 lazy dynamic import", "src/app/App.tsx:78 copilot route"],
+      "correction": "No static import match does not imply no consumer. Existing inventory records dynamic-load call markers but does not resolve their targets. server/index.ts is not the direct page consumer.",
+      "preservation": "PRESERVE"
+    },
+    {
+      "capability": "Behavioral policy adaptation",
+      "source": "server/aiCompany/behavioralAdaptation.ts",
+      "verifiedEdges": ["server/aiCompany/behavioralAdaptation.test.ts:5 imports BehavioralAdaptationEngine"],
+      "correction": "No non-test named-symbol consumer found in scoped server/scripts/src search. learningToBacklog.ts does not import this engine. Do not claim active behavioral adaptation or retire it based on this bounded negative search.",
+      "reachability": "SOURCE_CAPABLE_ONLY_RUNTIME_UNPROVEN",
+      "preservation": "PRESERVE_PENDING_REQUIRED_CAPABILITY_ADJUDICATION"
+    },
+    {
+      "capability": "Experiment learning to backlog",
+      "source": "server/aiCompany/learningToBacklog.ts",
+      "verifiedEdges": ["server/aiCompany/index.ts:96 re-export", "server/aiCompany/learningToBacklog.test.ts:7 direct test import"],
+      "correction": "Re-export is not an observed invocation. Non-test activation remains unproven.",
+      "preservation": "PRESERVE"
+    },
+    {
+      "capability": "Role queue lifecycle",
+      "source": "server/aiCompany/roleWorkQueue.ts",
+      "requiredBehavior": ["dependency-gated claims", "role-specific completion contracts", "review evidence", "quarantine visibility", "bounded retry", "orphan disposition"],
+      "verifiedSourceLocations": ["roleWorkQueue.ts:82 claim dependencies", "roleWorkQueue.ts:86 complete", "roleWorkQueue.ts:252 summary", "roleWorkQueue.ts:255 quarantineBlocked", "roleWorkQueue.ts:257 requeueBlocked", "roleWorkQueue.ts:258 reconcileOrphanedReady"],
+      "consumersInclude": ["server/index.ts", "server/aiCompany/runtime.ts", "scripts/ai-company-marathon.mjs", "scripts/ai-company-continuity-kernel.mjs"],
+      "preservation": "REIMPLEMENT_WITH_EXISTING_CONTRACTS_PRESERVED",
+      "limitation": "Source behavior inventory only, not verification that these contracts are sufficient or runtime enforced."
+    }
+  ],
+  "retirementAuthorized": false,
+  "remaining": ["full capability map", "dynamic/re-export/transitive consumers", "enabled runtime invocation and writer ownership", "adapter compatibility tests", "product workflow preservation"]
+}

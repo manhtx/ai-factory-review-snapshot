@@ -1,0 +1,40 @@
+
+ RUN  v3.2.7 /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/ai-factory-public-snapshot-EHh5Aj
+
+ ❯ server/aiCompany/cliResourceAdmission.test.ts (4 tests | 1 failed) 4228ms
+   ✓ actual agy dispatcher admits a current stub result only after its bound group exits  1802ms
+   × actual SIGKILL leaves the provider alive and preserves admission until its entire group disappears 698ms
+     → expected 'EPERM' to be 'ESRCH' // Object.is equality
+   ✓ leader completion with a surviving actual descendant withholds release and terminal receipts  512ms
+   ✓ an actual spawn error preserves marked UNKNOWN ownership and never grants terminal success  1215ms
+ ✓ server/aiCompany/resourceAdmissionProcess.test.ts (7 tests) 1669ms
+   ✓ real stale OS A cannot release B or admit C while B is alive  302ms
+   ✓ real live owner survives a clock expiry fault from another OS actor  310ms
+ ✓ server/aiCompany/resourceAdmissionAuthority.test.ts (23 tests) 270ms
+ ✓ server/aiCompany/resourceGovernor.test.ts (4 tests) 46ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cliResourceAdmission.test.ts > actual SIGKILL leaves the provider alive and preserves admission until its entire group disappears
+AssertionError: expected 'EPERM' to be 'ESRCH' // Object.is equality
+
+Expected: "ESRCH"
+Received: "EPERM"
+
+ ❯ groupAbsent server/aiCompany/cliResourceAdmission.test.ts:33:98
+     31|   const deadline = Date.now() + 2000;
+     32|   while (Date.now() < deadline) {
+     33|     try { process.kill(-pid, 0); } catch (error) { expect((error as No…
+       |                                                                                                  ^
+     34|     await new Promise(resolve => setTimeout(resolve, 10));
+     35|   }
+ ❯ server/aiCompany/cliResourceAdmission.test.ts:79:124
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 37 passed (38)
+   Start at  17:08:43
+   Duration  6.88s (transform 118ms, setup 0ms, collect 181ms, tests 6.21s, environment 0ms, prepare 135ms)
+

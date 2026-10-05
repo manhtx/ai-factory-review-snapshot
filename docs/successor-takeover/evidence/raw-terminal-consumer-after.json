@@ -1,0 +1,93 @@
+{
+  "observedAt": "2026-10-05T02:29:44.304Z",
+  "scope": "In-memory fault snapshots only; no canonical company work or product evidence",
+  "promotion": {
+    "ready": false,
+    "blockers": [
+      "functional-qa review current authority is invalid",
+      "quality-control review current authority is invalid",
+      "stakeholder-panel review current authority is invalid",
+      "user-persona review current authority is invalid",
+      "ux-research review current authority is invalid",
+      "domain-expert review current authority is invalid"
+    ],
+    "approvedRoles": [],
+    "action": "HOLD_AND_ESCALATE",
+    "rollback_required": false
+  },
+  "currentReleaseSuccess": [
+    {
+      "role": "functional-qa",
+      "success": false
+    },
+    {
+      "role": "quality-control",
+      "success": false
+    },
+    {
+      "role": "stakeholder-panel",
+      "success": false
+    },
+    {
+      "role": "user-persona",
+      "success": false
+    },
+    {
+      "role": "ux-research",
+      "success": false
+    },
+    {
+      "role": "domain-expert",
+      "success": false
+    }
+  ],
+  "cadence": {
+    "ok": false,
+    "cadence": "daily",
+    "required_roles": [
+      "ceo",
+      "ceo-guild",
+      "pm",
+      "data-engineer",
+      "sre"
+    ],
+    "completed_roles": [],
+    "blockers": [
+      "governance work ceo current authority is invalid",
+      "governance work ceo-guild current authority is invalid",
+      "governance work pm current authority is invalid",
+      "governance work data-engineer current authority is invalid",
+      "governance work sre current authority is invalid"
+    ]
+  },
+  "currentGovernanceSuccess": [
+    {
+      "role": "ceo",
+      "success": false
+    },
+    {
+      "role": "ceo-guild",
+      "success": false
+    },
+    {
+      "role": "pm",
+      "success": false
+    },
+    {
+      "role": "data-engineer",
+      "success": false
+    },
+    {
+      "role": "sre",
+      "success": false
+    }
+  ],
+  "sourceHashes": {
+    "preReleaseReviewGate.ts": "a3c0d52db14f8bc3c48c991092d5ead29f3f8a4c71fb2cfabbb1e0e8b25c6b71",
+    "releasePromotion.ts": "c00e68576e055f1a2da92b00945a77c9cc4e8fef9a186cf506d83a631da7f3fc",
+    "cadenceQuorum.ts": "8f4ac711c133b211097b9bf4d7ea7ba06956a3dd5c1a2165b48bb0a203452994",
+    "roleWorkQueue.ts": "ee7339adb5033995705f95802fbf3a989767242c902c06a3592a4726418d936d"
+  },
+  "realProviderCalls": 0,
+  "networkCalls": 0
+}

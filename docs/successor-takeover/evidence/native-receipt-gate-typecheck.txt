@@ -1,0 +1,17 @@
+
+> @figma/my-make-file@0.0.1 typecheck
+> tsc --noEmit
+
+server/aiCompany/companyNbaRouter.test.ts(12,10): error TS2305: Module '"./executionLease"' has no exported member 'resolveCurrentAuthority'.
+server/aiCompany/companyNbaRouter.ts(214,7): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'CandidateWorkDescriptor'.
+server/aiCompany/companyNbaRouter.ts(262,7): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'CandidateWorkDescriptor'.
+server/aiCompany/companyNbaRouter.ts(299,9): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'CandidateWorkDescriptor'.
+server/aiCompany/executionLease.test.ts(5,61): error TS5097: An import path can only end with a '.ts' extension when 'allowImportingTsExtensions' is enabled.
+server/aiCompany/productIntelligenceRecoveryV2.test.ts(120,52): error TS2345: Argument of type 'RegenerativeProductQuestion' is not assignable to parameter of type 'DecisionRelevantUncertainty'.
+  Type 'RegenerativeProductQuestion' is missing the following properties from type 'DecisionRelevantUncertainty': uncertainty_id, uncertainty, why_it_matters, is_material
+src/app/pages/RegimeDetectionPage.tsx(49,34): error TS2551: Property 'changePercent' does not exist on type 'Snapshot'. Did you mean 'changePct'?
+src/app/pages/RegimeDetectionPage.tsx(50,39): error TS2551: Property 'changePercent' does not exist on type 'Snapshot'. Did you mean 'changePct'?
+src/app/pages/RegimeDetectionPage.tsx(51,36): error TS2551: Property 'changePercent' does not exist on type 'Snapshot'. Did you mean 'changePct'?
+src/app/pages/RegimeDetectionPage.tsx(211,31): error TS2367: This comparison appears to be unintentional because the types 'DataStatus | undefined' and '"verified"' have no overlap.
+src/app/pages/RegimeDetectionPage.tsx(302,54): error TS2322: Type '"warning" | "critical" | "positive"' is not assignable to type '"warning" | "neutral" | "purple" | "positive" | "negative" | "info" | undefined'.
+  Type '"critical"' is not assignable to type '"warning" | "neutral" | "purple" | "positive" | "negative" | "info" | undefined'.

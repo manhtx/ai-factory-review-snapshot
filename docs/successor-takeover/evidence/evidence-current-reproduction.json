@@ -1,0 +1,38 @@
+{
+  "schema": "ai-factory.evidence-current-probe.v1",
+  "observedAt": "2026-10-02T10:58:34.695Z",
+  "executionRevision": "9483c43d72739b659552f3d5349a8cb190f66d81",
+  "sourceHashes": {
+    "server/aiCompany/evidenceResolver.ts": "9d2d5c4b9942825b92d11ae314e90005b80a778b814fca61487b5b2822a720c5",
+    "server/aiCompany/roleWorkQueue.ts": "c2130844cd1951e8cd9e78b70ee06a8b7dd1d97a864ad33a6e205699dd142b4b"
+  },
+  "isolatedState": true,
+  "providerCalls": 0,
+  "cases": [
+    {
+      "name": "valid-control",
+      "errors": []
+    },
+    {
+      "name": "wrong-id",
+      "errors": []
+    },
+    {
+      "name": "invalid-time",
+      "errors": []
+    },
+    {
+      "name": "future-time",
+      "errors": []
+    }
+  ],
+  "corruptLedgerResolved": "EV-REAL",
+  "completion": {
+    "state": "DONE",
+    "unresolvedEvidenceAccepted": [
+      "EV-UNRESOLVED"
+    ]
+  },
+  "classification": "CURRENT_REPRODUCED",
+  "claimCeiling": "SOURCE_AND_ISOLATED_BEHAVIOR_ONLY; NO_LIVE_TRANSITION"
+}

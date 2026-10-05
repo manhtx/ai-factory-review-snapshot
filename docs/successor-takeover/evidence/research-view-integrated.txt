@@ -1,0 +1,63 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (12 tests) 11063ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1478ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1121ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  315ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1376ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1490ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  334ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1114ms
+   ✓ CLI review preserves actual original reference for same-scope  1198ms
+   ✓ CLI review preserves actual original reference for cross-scope  1195ms
+   ✓ CLI review preserves actual original reference for unresolved  1173ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3887ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1557ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1685ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2428ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  353ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  355ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  358ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  441ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 2501ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (15 tests) 1493ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 932ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 847ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 526ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 531ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (13 tests) 641ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 648ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 679ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 523ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 455ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 180ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 472ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 485ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 662ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 457ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 230ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 236ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 213ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 202ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 198ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 59ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (1 test) 24ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 7ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 16ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 21ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 3ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 18ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 7ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (7 tests) 4ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (5 tests) 2ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 2ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 2ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+
+ Test Files  38 passed (38)
+      Tests  337 passed (337)
+   Start at  10:22:22
+   Duration  37.42s (transform 455ms, setup 0ms, collect 1.19s, tests 30.66s, environment 3ms, prepare 1.39s)
+

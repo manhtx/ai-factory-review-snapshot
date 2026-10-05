@@ -1,0 +1,236 @@
+{
+  "observedAt": "2026-10-04T16:21:49.084Z",
+  "sourceHashesBefore": {
+    "server/aiCompany/roleWorkQueue.ts": "d62ef1717ebf08d5cdc91130624151aa8e37edd359e7e657e95a2104e3809c1f",
+    "server/aiCompany/roleWorkExecutor.ts": "13ee29708bfd414255550cbebace6748ddc18f984f214d83b4c9ac53892f0d9c",
+    "server/aiCompany/autonomousCoordinator.ts": "650192a231869218d2a1abc79cd9377df0e250c1d32259fdb35a26f54fc65933",
+    "server/aiCompany/roleEvidenceLedger.ts": "de4009ebc737fc85b494ae9fc94b179d3408236f386aa27fb6d7a54601e236b4",
+    "server/aiCompany/nativeDispatchIssuance.test.ts": "498debb11a383a198d4bbc0195aaaa3d2c1fecce98a7c1093cdd5a7355fe40b2",
+    "server/index.ts": "9253373bce37f1cd0ba1a28bd95d7c884d3e0de9abb83a8c38cb72198d4bd460"
+  },
+  "sourceHashesAfter": {
+    "server/aiCompany/roleWorkQueue.ts": "d62ef1717ebf08d5cdc91130624151aa8e37edd359e7e657e95a2104e3809c1f",
+    "server/aiCompany/roleWorkExecutor.ts": "13ee29708bfd414255550cbebace6748ddc18f984f214d83b4c9ac53892f0d9c",
+    "server/aiCompany/autonomousCoordinator.ts": "650192a231869218d2a1abc79cd9377df0e250c1d32259fdb35a26f54fc65933",
+    "server/aiCompany/roleEvidenceLedger.ts": "de4009ebc737fc85b494ae9fc94b179d3408236f386aa27fb6d7a54601e236b4",
+    "server/aiCompany/nativeDispatchIssuance.test.ts": "498debb11a383a198d4bbc0195aaaa3d2c1fecce98a7c1093cdd5a7355fe40b2",
+    "server/index.ts": "9253373bce37f1cd0ba1a28bd95d7c884d3e0de9abb83a8c38cb72198d4bd460"
+  },
+  "sourceStable": true,
+  "realProviderCalls": 0,
+  "networkCalls": 0,
+  "canonicalMutations": false,
+  "results": [
+    {
+      "mode": "concurrent",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-UVh8O0",
+      "stubCalls": 1,
+      "outcomes": [
+        "stale queue mutation: work or dependency changed before commit",
+        "fulfilled"
+      ],
+      "receipts": 1,
+      "receiptMetadata": [
+        {
+          "role": "ux-research",
+          "namespace": "project:unit"
+        }
+      ],
+      "initialQueueHash": "5f3f541ffd80e60a15bdbf4e28ad9ee686c9b14d4c622a6048e5902fb6ea997a",
+      "finalQueueHash": "5a414751dd4e7ddf9bbb569c943df94a8235bf683d1ebc7f4f79bb22785894a1",
+      "marker": {
+        "attempt_id": "f0887be2-0348-4a33-a5ff-dc5f40dedc87",
+        "provider_id": "stub",
+        "issued_at": "2026-10-04T16:21:48.398Z"
+      },
+      "capabilityLeaked": false,
+      "capabilityPersisted": false
+    },
+    {
+      "mode": "no-response-restart",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-sf4yTe",
+      "stubCalls": 1,
+      "outcomes": [
+        "Injected no response; external effect unknown",
+        "provider dispatch already issued for this attempt; effect may be unknown, repeated dispatch refused"
+      ],
+      "receipts": 0,
+      "receiptMetadata": [],
+      "initialQueueHash": "ab0588a7a645dd219cc5da04ce9e9bc0863ba23cc8536250a8fb534e50e876b6",
+      "finalQueueHash": "f6bcb8ff06e59a886876746ae424b5b37683580e3e1c11ff74093df983dd6f4b",
+      "marker": {
+        "attempt_id": "0217677f-fdc4-4bfc-b706-a58574dac737",
+        "provider_id": "stub",
+        "issued_at": "2026-10-04T16:21:48.470Z"
+      },
+      "capabilityLeaked": false,
+      "capabilityPersisted": false
+    },
+    {
+      "mode": "missing-authority",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-nb2z38",
+      "stubCalls": 0,
+      "outcomes": [
+        "current claimed attempt authority is required; missing, stale or invalid capability"
+      ],
+      "receipts": 0,
+      "receiptMetadata": [],
+      "initialQueueHash": "168b01907a27fd282ba4629f2d97c0340152c9380b1bca9b98058e87ca7622d6",
+      "finalQueueHash": "168b01907a27fd282ba4629f2d97c0340152c9380b1bca9b98058e87ca7622d6",
+      "capabilityLeaked": false,
+      "capabilityPersisted": false
+    },
+    {
+      "mode": "wrong-authority",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-Hla60V",
+      "stubCalls": 0,
+      "outcomes": [
+        "current claimed attempt authority is required; missing, stale or invalid capability"
+      ],
+      "receipts": 0,
+      "receiptMetadata": [],
+      "initialQueueHash": "29bad0ec26a6eb926c856cef700677e16165274bd3815610d0f4100f2027b262",
+      "finalQueueHash": "29bad0ec26a6eb926c856cef700677e16165274bd3815610d0f4100f2027b262",
+      "capabilityLeaked": false,
+      "capabilityPersisted": false
+    },
+    {
+      "mode": "mutated-assignment",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-Z5JgGx",
+      "stubCalls": 0,
+      "outcomes": [
+        "stale queue selection: work changed before mutation"
+      ],
+      "receipts": 0,
+      "receiptMetadata": [],
+      "initialQueueHash": "e16d5bb031849712187a810a4df9fb4cb259865be9c2b4da52073b2641ea9ff6",
+      "finalQueueHash": "e16d5bb031849712187a810a4df9fb4cb259865be9c2b4da52073b2641ea9ff6",
+      "capabilityLeaked": false,
+      "capabilityPersisted": false
+    },
+    {
+      "mode": "model-no-response",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-UORur5",
+      "stubCalls": 1,
+      "outcomes": [
+        "Injected no response; external effect unknown",
+        "provider dispatch already issued for this attempt; effect may be unknown, repeated dispatch refused"
+      ],
+      "receipts": 0,
+      "receiptMetadata": [],
+      "initialQueueHash": "03fa8fa85eecd3291dbcfeb746ffbc0e2bb12036fd0785e2766b8fa9f331b9b0",
+      "finalQueueHash": "13aa49065cc7b8b0e0cc300f091739704936c334685e262aafe059070576d2aa",
+      "marker": {
+        "attempt_id": "5632d89e-8728-4fee-be05-1d5d80551843",
+        "provider_id": "stub",
+        "issued_at": "2026-10-04T16:21:48.629Z"
+      },
+      "capabilityLeaked": false,
+      "capabilityPersisted": false
+    },
+    {
+      "mode": "new-claim",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-gxNNLg",
+      "stubCalls": 2,
+      "outcomes": [
+        "Injected no response; external effect unknown",
+        "provider dispatch already issued for this attempt; effect may be unknown, repeated dispatch refused",
+        "Injected no response; external effect unknown"
+      ],
+      "receipts": 0,
+      "receiptMetadata": [],
+      "initialQueueHash": "7bea0f143902efb560ca7ce9c6469a329fb475c57efc4deeb5e5d457a00cacc9",
+      "finalQueueHash": "0bd6015fe76d019f8a859e46aad7126231258ac6cf026e5962db12e4802397d1",
+      "marker": {
+        "attempt_id": "0918a428-b74d-481b-9b25-e1b605090601",
+        "provider_id": "stub",
+        "issued_at": "2026-10-04T16:21:48.759Z"
+      },
+      "capabilityLeaked": false,
+      "capabilityPersisted": false
+    },
+    {
+      "mode": "provider-pending-input-mutation",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-ORRxbD",
+      "stubCalls": 1,
+      "outcomes": [
+        "fulfilled"
+      ],
+      "receipts": 1,
+      "receiptMetadata": [
+        {
+          "role": "ux-research",
+          "namespace": "project:unit"
+        }
+      ],
+      "initialQueueHash": "8c922804c60bcf29f5ee159fccac15f9e22f3265694b6b070070aaa44f1c363d",
+      "finalQueueHash": "50528447cdd79a05ee32544b359f444c4438f0370b9148285edc17c92767ac7e",
+      "marker": {
+        "attempt_id": "7ed43c24-1925-463a-b463-efc04c38c9ae",
+        "provider_id": "stub",
+        "issued_at": "2026-10-04T16:21:48.813Z"
+      },
+      "capabilityLeaked": false,
+      "capabilityPersisted": false
+    },
+    {
+      "mode": "committed-provenance-failure",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-iz2gst",
+      "stubCalls": 0,
+      "error": "QUEUE_COMMITTED_PROVENANCE_FAILURE: work state committed; inspect before retry",
+      "marker": {
+        "attempt_id": "6db4e9bd-9055-40e9-85c7-52b20f941e07",
+        "provider_id": "stub",
+        "issued_at": "2026-10-04T16:21:48.878Z"
+      }
+    },
+    {
+      "mode": "malformed-historical-marker",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-u1O9nM",
+      "invalid": null,
+      "error": "corrupt provider dispatch at queue row 1",
+      "stubCalls": 0,
+      "historyUnchanged": true
+    },
+    {
+      "mode": "malformed-historical-marker",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-NcKitC",
+      "invalid": {},
+      "error": "corrupt provider dispatch at queue row 1",
+      "stubCalls": 0,
+      "historyUnchanged": true
+    },
+    {
+      "mode": "malformed-historical-marker",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-iiTAXT",
+      "invalid": [],
+      "error": "corrupt provider dispatch at queue row 1",
+      "stubCalls": 0,
+      "historyUnchanged": true
+    },
+    {
+      "mode": "malformed-historical-marker",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-BHjcIs",
+      "invalid": {
+        "attempt_id": "bad",
+        "provider_id": "stub",
+        "issued_at": "2026-10-04T16:21:48.902Z"
+      },
+      "error": "corrupt provider dispatch at queue row 1",
+      "stubCalls": 0,
+      "historyUnchanged": true
+    },
+    {
+      "mode": "malformed-historical-marker",
+      "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-issuance-QYg7HI",
+      "invalid": {
+        "provider_id": "stub",
+        "attempt_id": "00000000-0000-0000-0000-000000000000",
+        "issued_at": "2026-10-04T00:00:00Z"
+      },
+      "error": "corrupt provider dispatch at queue row 1",
+      "stubCalls": 0,
+      "historyUnchanged": true
+    }
+  ]
+}

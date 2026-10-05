@@ -1,0 +1,275 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 12684ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  1421ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1263ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  325ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1393ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1481ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  394ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1123ms
+   ✓ CLI review preserves actual original reference for same-scope  1229ms
+   ✓ CLI review preserves actual original reference for cross-scope  1162ms
+   ✓ CLI review preserves actual original reference for unresolved  1170ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1191ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 3846ms
+   ✓ pre-release review gate > fails closed until every independent review has evidence  395ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  376ms
+   ✓ denies withdrawn current review authority  414ms
+   ✓ denies missing current review authority  361ms
+   ✓ denies nonpass current review authority  351ms
+   ✓ denies missing-verdict current review authority  411ms
+   ✓ uses full dependency snapshot before selecting review backlog  373ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  381ms
+   ✓ plain rows and copied views cannot certify prerelease  367ms
+   ✓ cannot approve an empty target project using healthy foreign work  413ms
+ ✓ server/aiCompany/cliResourceAdmission.test.ts (4 tests) 3429ms
+   ✓ actual agy dispatcher admits a current stub result only after its bound group exits  1610ms
+   ✓ actual SIGKILL leaves the provider alive and preserves admission until its entire group disappears  319ms
+   ✓ leader completion with a surviving actual descendant withholds release and terminal receipts  327ms
+   ✓ an actual spawn error preserves marked UNKNOWN ownership and never grants terminal success  1172ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3831ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1585ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1570ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 4224ms
+   ✓ denies changed-hash persisted signal authority  301ms
+   ✓ missing receipts revoke actual quorum and new synthesis while preserving signal history  493ms
+   ✓ mutable display rows cannot fabricate canonical research origin  451ms
+ ❯ server/aiCompany/currentRoleAuthority.test.ts (22 tests | 4 failed) 36006ms
+   ✓ healthy evidence supports current dependency authority; missing original receipts revoke it  611ms
+   ✓ rejects current hash receipt mismatch 156ms
+   ✓ rejects current attempt receipt mismatch  636ms
+   ✓ rejects current age receipt mismatch 252ms
+   ✓ resolver without snapshot cannot silently authorize successful history 115ms
+   ✓ snapshot preserves internal rows and freshness policy is checked at use time  499ms
+   ✓ missing producer receipt refuses actual claim transition  505ms
+   ✓ missing producer receipt refuses actual reserve transition 173ms
+   ✓ missing producer receipt refuses actual review transition  496ms
+   ✓ missing producer receipt refuses actual complete transition 182ms
+   ✓ unrelated queue and evidence append after captured snapshot does not block selected claim  3549ms
+   ✓ selected receipt changed after snapshot refuses locked admission 210ms
+   ✓ two healthy independent terminal commits share producer without blocking each other 267ms
+   ✓ unsupported snapshot resolver refuses native provider before call or issuance 210ms
+   ✓ configured but unavailable snapshot refuses provider before issuance  507ms
+   ✓ selected current success reads without rewriting or creating queue bytes 140ms
+   ✓ selected current success permits unrelated valid queue and receipt appends during capture 155ms
+   ✓ selected current success rejects changed receipt during capture 146ms
+   × selected current success denies missing receipts, unavailable snapshots and stale or foreign selections 5225ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × concurrent selected terminal queries tolerate independent healthy completions 7909ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × receipt loss after terminal commit requests revalidation without blocking committed history 6691ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × selected dependency query checks original receipts and exact work/dependency identities 7261ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cadenceQuorum.test.ts (8 tests | 6 failed) 54156ms
+   × cadence quorum > fails when an accountable role is missing or unevidenced 7300ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × cadence quorum > passes only when every daily accountable role is done with evidence 5913ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × denies withdrawn governance inputs despite historical DONE 9685ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × denies missing governance inputs despite historical DONE 5391ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × reads healthy dependencies outside cadence selection 15372ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   × revokes receiptless cadence and rejects stale views 5004ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ plain rows and copied views cannot certify cadence  4504ms
+   ✓ cannot approve target cadence using another project governance  985ms
+ ✓ server/aiCompany/resourceAdmissionProcess.test.ts (7 tests) 2427ms
+   ✓ real stale OS A cannot release B or admit C while B is alive  730ms
+   ✓ two real recoverers of a proven dead owner admit only one successor  303ms
+   ✓ dispatcher death preserves an actual live provider group and recovery waits for group absence  404ms
+   ✓ SIGKILL in a marked but unbound launch window preserves UNKNOWN rather than replacement  348ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2691ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  332ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  373ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  320ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  555ms
+   ✓ WorktreeManager > merges verified product changes into main git history and marks worktree MERGED  395ms
+   ✓ WorktreeManager > rejects mergeToMain when worktree has out of scope or forbidden changes  311ms
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (31 tests) 3962ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 2845ms
+   ✓ does not generate prerelease reviews from receiptless QA/QC history  636ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 2423ms
+   ✓ release promotion > holds promotion and requests escalation when quorum is incomplete  463ms
+   ✓ release promotion > promotes only after full independent quorum  1167ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  791ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 1043ms
+ ✓ server/aiCompany/combinedEvidenceCapture.test.ts (10 tests) 1077ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 932ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 888ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 795ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 534ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 629ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 374ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 567ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 358ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 565ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 514ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 496ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 343ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 380ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 361ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 264ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 296ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 192ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 320ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 237ms
+ ✓ server/aiCompany/resourceAdmissionAuthority.test.ts (23 tests) 224ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 208ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 72ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 62ms
+ ✓ server/aiCompany/resourceGovernor.test.ts (4 tests) 55ms
+ ✓ server/aiCompany/executionLease.test.ts (20 tests) 20ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 15ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 13ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 8ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 7ms
+ ✓ server/aiCompany/companyNbaRouter.test.ts (23 tests) 6ms
+ ✓ server/aiCompany/productIntelligenceRecoveryV2.test.ts (11 tests) 3ms
+ ✓ server/aiCompany/executionPlanner.test.ts (13 tests) 3ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 3ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 2ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+ ✓ src/app/pages/RegimeDetectionPage.test.tsx (4 tests) 127ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 10 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cadenceQuorum.test.ts > cadence quorum > fails when an accountable role is missing or unevidenced
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cadenceQuorum.test.ts:11:3
+      9| 
+     10| describe('cadence quorum', () => {
+     11|   it('fails when an accountable role is missing or unevidenced', async…
+       |   ^
+     12|     const f = await fixture(['ceo']);
+     13|     const authority = await faultReadinessWork(f, 'ceo', { evidence_id…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/10]⎯
+
+ FAIL  server/aiCompany/cadenceQuorum.test.ts > cadence quorum > passes only when every daily accountable role is done with evidence
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cadenceQuorum.test.ts:18:3
+     16|     expect(result.blockers).toEqual(expect.arrayContaining(['governanc…
+     17|   });
+     18|   it('passes only when every daily accountable role is done with evide…
+       |   ^
+     19|     const f = await fixture();
+     20|     expect(evaluateCadenceQuorum({ cadence: 'daily', authority: f.auth…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/10]⎯
+
+ FAIL  server/aiCompany/cadenceQuorum.test.ts > denies withdrawn governance inputs despite historical DONE
+ FAIL  server/aiCompany/cadenceQuorum.test.ts > denies missing governance inputs despite historical DONE
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cadenceQuorum.test.ts:23:33
+     21|   });
+     22| });
+     23| it.each(['withdrawn', 'missing'])('denies %s governance inputs despite…
+       |                                 ^
+     24|   const f = await fixture();
+     25|   if (kind === 'withdrawn') await f.queue.quarantine(f.source.work_id,…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/10]⎯
+
+ FAIL  server/aiCompany/cadenceQuorum.test.ts > reads healthy dependencies outside cadence selection
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cadenceQuorum.test.ts:30:1
+     28|   expect(result.ok).toBe(false); expect(result.completed_roles).toEqua…
+     29| });
+     30| it('reads healthy dependencies outside cadence selection', async () =>…
+       | ^
+     31|   const f = await fixture();
+     32|   expect(f.source.backlog_id).toBe('SOURCE');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/10]⎯
+
+ FAIL  server/aiCompany/cadenceQuorum.test.ts > revokes receiptless cadence and rejects stale views
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cadenceQuorum.test.ts:35:1
+     33|   expect(evaluateCadenceQuorum({ cadence: 'daily', authority: f.author…
+     34| });
+     35| it('revokes receiptless cadence and rejects stale views', async () => {
+       | ^
+     36|   const f = await fixture(); await unlink(path.join(f.root, 'role-evid…
+     37|   expect(() => evaluateCadenceQuorum({ cadence: 'daily', authority: f.…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/10]⎯
+
+ FAIL  server/aiCompany/currentRoleAuthority.test.ts > selected current success denies missing receipts, unavailable snapshots and stale or foreign selections
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/currentRoleAuthority.test.ts:49:1
+     47|  await expect(queue.currentSuccess(f.consumer)).rejects.toThrow('selec…
+     48| });
+     49| it('selected current success denies missing receipts, unavailable snap…
+       | ^
+     50|  const f=await fixture();
+     51|  expect(await f.queue.currentSuccess({...f.consumer,project_id:'foreig…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/10]⎯
+
+ FAIL  server/aiCompany/currentRoleAuthority.test.ts > concurrent selected terminal queries tolerate independent healthy completions
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/currentRoleAuthority.test.ts:58:1
+     56|  expect((await f.queue.records()).find(row=>row.work_id===f.consumer.w…
+     57| });
+     58| it('concurrent selected terminal queries tolerate independent healthy …
+       | ^
+     59|  const f=await fixture();
+     60|  const prepare=async()=>{
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/10]⎯
+
+ FAIL  server/aiCompany/currentRoleAuthority.test.ts > receipt loss after terminal commit requests revalidation without blocking committed history
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/currentRoleAuthority.test.ts:69:1
+     67| });
+     68| 
+     69| it('receipt loss after terminal commit requests revalidation without b…
+       | ^
+     70|  const f=await fixture(),{executeReadyRoleWork}=await import('./roleWo…
+     71|  await f.queue.create({project_id:'unit',backlog_id:'LEAF',title:'Unit…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/10]⎯
+
+ FAIL  server/aiCompany/currentRoleAuthority.test.ts > selected dependency query checks original receipts and exact work/dependency identities
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/currentRoleAuthority.test.ts:79:1
+     77| });
+     78| 
+     79| it('selected dependency query checks original receipts and exact work/…
+       | ^
+     80|  const f=await fixture(),work=await f.queue.create({project_id:'unit',…
+     81|  expect(await f.queue.currentDependencySatisfied(work,f.consumer)).toB…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/10]⎯
+
+
+ Test Files  2 failed | 49 passed (51)
+      Tests  10 failed | 523 passed (533)
+   Start at  16:35:18
+   Duration  160.45s (transform 1.49s, setup 0ms, collect 2.53s, tests 144.52s, environment 422ms, prepare 1.49s)
+

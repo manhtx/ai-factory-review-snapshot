@@ -1,0 +1,19 @@
+{
+  "schema": "ai-factory.independent-review.v1",
+  "observedAt": "2026-10-02T10:57:41.046276+00:00",
+  "reviewer": "fresh security_independent_review agent",
+  "scope": "Six live host identity source removals and fail-closed scope reads",
+  "sourceHashes": {
+    ".gitignore": "fa858e97433dad6019ccc22f08c1dc24d5eb7cd34d8dd13b468f96dc3532f50b",
+    "scripts/audit-ai-company-secrets.mjs": "4bf85a5918efb4f5c9600fe1487aca78f06c9f7d0bed8c3e3b2d3650724a6245",
+    "scripts/audit-ai-company-secrets.test.mjs": "746896ef44a75544309b79011e554e971b817ad92d60065f0f596c402db3f441"
+  },
+  "result": "8/8 isolated audit tests PASS; exact six staged removals; six working files retained and ignored",
+  "backupReview": "Metadata, existence, file sizes and private root mode checked; no independent content rehash",
+  "limitations": [
+    "Non-atomic snapshots",
+    "Historical exposure OPEN",
+    "Broader state separation and lease/fencing correctness OPEN"
+  ],
+  "deniedG1Revisited": false
+}

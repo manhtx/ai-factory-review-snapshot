@@ -1,0 +1,4 @@
+export type HarnessHealth = 'HEALTHY'|'DEGRADED'|'BROKEN'|'UNKNOWN';
+export type HarnessFinding = { test_scope: string; classification: 'BASELINE_HARNESS_FAILURE'|'PRODUCT_FAILURE'|'PASS'|'UNKNOWN'; detail: string };
+export function classifyHarnessFindings(findings: HarnessFinding[]): HarnessHealth { if(!findings.length)return 'UNKNOWN'; if(findings.some(x=>x.classification==='PRODUCT_FAILURE'))return 'BROKEN'; if(findings.some(x=>x.classification==='BASELINE_HARNESS_FAILURE'))return 'DEGRADED'; return findings.every(x=>x.classification==='PASS')?'HEALTHY':'UNKNOWN'; }
+export function canRunTestPolicy(health: HarnessHealth, policy: 'none'|'targeted'|'affected'|'full_suite'): boolean { if (policy === 'none') return true; if (health === 'BROKEN' || health === 'UNKNOWN') return false; return health === 'HEALTHY' || policy !== 'full_suite'; }

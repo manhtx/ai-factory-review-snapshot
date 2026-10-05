@@ -1,0 +1,228 @@
+{
+  "schema": "ai-factory.native-receipt-authority-mandatory.v1",
+  "authoritative": false,
+  "observedAt": "2026-10-05T07:29:38.240281+00:00",
+  "sourceRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "sourceTreeClean": false,
+  "sourceHashes": {
+    "scripts/ai-company-role-dispatch.mjs": "cee0908a96dde27fcca47e2cd2ae15753ef7520b30b2b6c8fdd309dba3dea6a6",
+    "scripts/ai-company-run-ready.mjs": "80dc6fa54bfe14c03667b25fa389603e8ba11ebb8dabf91afd7eb11283e8fcc6",
+    "scripts/record-disclaimer-banner-cycle.mjs": "5aaba3eb4edebffce5b0d27ada805e9904e4fdb8b9b05b362054ebb18c19f0d9",
+    "scripts/record-workspace-synthesis-cycle.mjs": "437d3730a358c65a117339fcf1068ead64c60415c9b1b6fc68680d95356c0838",
+    "server/aiCompany/adminWorkQueueTransport.test.ts": "697bb4eaee7214557df45ab7d913a13298077f66dce6a5819ba3ef277eb68b0c",
+    "server/aiCompany/adminWorkQueueTransport.ts": "c7c43e35122075e08294da8cf183567684e79744e31d062ef4b71eaec7888829",
+    "server/aiCompany/assignmentEnvelope.test.ts": "4fbe95a2eed6aec2d18698199cb682607c7e5858e4989a95d1f9ab7a3a789337",
+    "server/aiCompany/assignmentEnvelope.ts": "f9cfb2e942696807550699162222774d588a9291c18beeaff0c343d97c90e261",
+    "server/aiCompany/attemptAuthority.test.ts": "0c2ac1cb24b9b0198efbed02469ee886c05ebb45ebbca318898936a478f4bd0b",
+    "server/aiCompany/autonomousCoordinator.test.ts": "c230530135a7f6e69ee5057ea82219f7dd05e8eb2bee0e4e811c26cfcb8024b4",
+    "server/aiCompany/autonomousCoordinator.ts": "54868cdf485c7aa77955400b742b2f0ce03c26e2049114624be0bf907818127c",
+    "server/aiCompany/backlogWorkPlanner.test.ts": "77f7efe0642333e1a765267ebff26274b117eeaeb32b91f94dbfe8c3f92baddc",
+    "server/aiCompany/backlogWorkPlanner.ts": "28534ad2938535d7dcd0fa62ae77c3ad2c11070100a0c45870ed1b4b6dacbed8",
+    "server/aiCompany/cadenceQuorum.test.ts": "8e32c571bec1bb5b42391742300700d593ab895bc95d69b2f754e8689e3fa9df",
+    "server/aiCompany/cadenceQuorum.ts": "d71d1e234176e7f5c7da09fad97e489162a8182c3f7538ecc6edaec0d50aed1d",
+    "server/aiCompany/ceoReviewLedger.test.ts": "4c65ee1e224dd17e01f8928e3df1a99c2644372169cf5a189c906aa2d224b6d0",
+    "server/aiCompany/ceoReviewLedger.ts": "0e3192deac86dac1bc304927d42f894f69a1d32710db261c2f103750ed8d4b84",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "4e5a7b227e3b1d7708bae16214faeed9f330d9ed0cbf722fc10d5a2c509995dd",
+    "server/aiCompany/cliPmDecision.test.ts": "3ceb69d8886973aed9f5f5d247b685d3cdde68cf58cdae66f039a92b9ded0ab6",
+    "server/aiCompany/cliReceiptPublication.test.ts": "2df2ab3b227057810f32a3da71467ee65df217eecbcca6e77c5641522b7e6d58",
+    "server/aiCompany/currentRoleAuthority.test.ts": "4ac25b51f5518a595ff0d80c35a8022d6609bc573a34b38e8c0329c128fbd719",
+    "server/aiCompany/dependencyAdmission.test.ts": "0ba9d5d2b9546701de997a9ec5b5f44ff7a1fbcce80cd4eb593b72117dcfd3af",
+    "server/aiCompany/evidenceAdmissionIntegrity.test.ts": "75ca70e211314967eda4ba905dac20b0067d898cf8f4b6e03fb818fa59d4399a",
+    "server/aiCompany/evidenceResolver.test.ts": "41f47307bf73fe11f05366ef5faf5c4446eb9ecf049921ce76a21b2dad9c4d3d",
+    "server/aiCompany/evidenceResolver.ts": "bf963b7caf71b81f4e84cf63849a4ad6dc5de6eb9b8d7d5e41b6bf2045885f1e",
+    "server/aiCompany/evidenceSnapshot.test.ts": "972baa63c951d9e73ad8c5d4a83e684dac7cb20b00db203ef021da8483ba18b6",
+    "server/aiCompany/ideaLedger.test.ts": "7152826bba1f7252f84b00a3fc1f116d52bfcb6d8eff4571c192721d97074e0f",
+    "server/aiCompany/ideaLedger.ts": "2fb5e4f96622e25f4558ff8a829d4d509a8d1fc9f9b9295d401796b1213bddaf",
+    "server/aiCompany/modelAdapter.test.ts": "8fd5d7302ff005a09f294c6c6cdb23906c28cd63e880d668a5e45cd0bd13a3d0",
+    "server/aiCompany/nativeAttemptLineage.test.ts": "5ae050bd7c5bd50921e0325f49699c393e91904a786f701ef624f84bf8e7bf43",
+    "server/aiCompany/nativeDispatchIssuance.test.ts": "e0c79187e8730d284d321a3002674b20034f427248de46a8a9b2a44d3ca84d29",
+    "server/aiCompany/nativeEvidenceAdmission.test.ts": "7f34486a61960346951f7e940de40a86821760cd9696bc632a251aa640f1a935",
+    "server/aiCompany/nativeProviderContract.test.ts": "48ccdbfc7717ea6289913f3a3fadde93b1e3471d3288f82d92131938b3beeae1",
+    "server/aiCompany/nativeReceiptAuthority.test.ts": "53522631e5ad9c63419926a78208d55c0a3704c988128eb58f766eed29121f79",
+    "server/aiCompany/nativeReceiptTestFixture.ts": "4e273dfb0aa96141b41232e428bc9619e86948fc62b01005639e0b9172867786",
+    "server/aiCompany/openaiCompatibleRoleAdapter.test.ts": "16e0c84b8a9338d0c75e4d2f5121fbe6871815942f086f28c1a7407dd75ee7d3",
+    "server/aiCompany/openaiCompatibleRoleAdapter.ts": "caa009117c8702498f39e43b398c500274938752345f889a64c031564580153b",
+    "server/aiCompany/opportunityScoring.test.ts": "facebc30ebd13ac92aca929ea1a2ff814e3a830557b0bb223e7310da02615638",
+    "server/aiCompany/opportunityScoring.ts": "7d72df80bdd1aa6e7adc1a8fa64a260cd778ba0c7ef9ed8389e75348b744a461",
+    "server/aiCompany/orchestrator.test.ts": "1fe4ce9e89d9fa5c1262e022a0d6ab00181ceb9d40d01ad41b8e2daced0986a3",
+    "server/aiCompany/orchestrator.ts": "3febbe998529c58c471644eaffea8912d0de5193119050f4f863823e87313fd8",
+    "server/aiCompany/preReleaseReviewGate.test.ts": "bc618e2979ca79d787100910dde5d62aaff16a04627c74151c03c835c6d3fc0c",
+    "server/aiCompany/preReleaseReviewGate.ts": "ed9d8428c7591b7400bd00f3d5f6d3c81d323cb2b7c02a3dff6ac82e89b2d896",
+    "server/aiCompany/queueMutationFence.test.ts": "994a37150ec21505b6154f08e9b7a5e47e669ee6169e7bc3b54a382a6068265c",
+    "server/aiCompany/queueMutationGate.ts": "b957ba6a65c53d139ee8f2e106b6db8c502c594771cf217a27fc1c7270ebd5d4",
+    "server/aiCompany/readinessAuthorityTestFixture.ts": "bf2029ac6d66d19f52a1ad2167afd1c7fa54056087b2af7ec33c3ccea101d841",
+    "server/aiCompany/recoveryCoordinator.test.ts": "a9bb2382b9962f4910ab54843ff58e4c2adad5004e60164cb568da2e61b13efd",
+    "server/aiCompany/recoveryCoordinator.ts": "2a90ee024c280d7c71f5c0689ab5563c9630866e1dad7d84635ee51d6984ec7c",
+    "server/aiCompany/recursiveDependencyAuthority.test.ts": "4aa47bf8597fe4510987f5f0f2ecefafb3d7e40dc957fe16da5819ef42631ef1",
+    "server/aiCompany/releasePromotion.test.ts": "000c98f1de7d59ade8440dd218e356c9fb631b1e0f07f84e5b6738ed58baca47",
+    "server/aiCompany/releasePromotion.ts": "ac7da75611745a9694a5bfa175bbc175278312c6ce51918091bd93565689f055",
+    "server/aiCompany/researchAuthorityTestFixture.ts": "31ef976fea641a954ffba28b1f3f51ce07928233d974dfda62af0b693a500137",
+    "server/aiCompany/researchResult.ts": "4c16c1af4708fe96ab7b3c9c479f08bee5c94e6a68995adee16a514607818d1c",
+    "server/aiCompany/researchSignalLedger.ts": "f3e528e3fe81c267009a306c08b58fef1fab1a4665f1bee0126a8e7ba69b89b9",
+    "server/aiCompany/researchSynthesis.test.ts": "980e4a925db1fe5f364360145d30dde246bf4f6f656c2f5ebbc04a12691444e3",
+    "server/aiCompany/researchSynthesis.ts": "25a41026664f73d9c710d2ea03d188a8fb15865f243c3667e9f17f3e37afefd2",
+    "server/aiCompany/reviewTerminalAdmission.test.ts": "a731a87f862f66c3d680b309b91eeb01b6a058fca8dd2724c33efe773709bf8c",
+    "server/aiCompany/roleAttemptArtifact.ts": "8e9dcf3491d14cebd91bbb2ad9088bbd6bfd46974b77fe22bf10c26c46638759",
+    "server/aiCompany/roleEvidenceLedger.test.ts": "18ef4c59a0d453f295f2534dff0591de3c92b797638f09a063b092e67f4c2324",
+    "server/aiCompany/roleEvidenceLedger.ts": "eab1f56e4ef60001636e4e708f42b4a81a3055ee717cf7820ae957550b510c7a",
+    "server/aiCompany/roleEvidenceResolver.test.ts": "2788e5eb000171bf30962acdfe6a49ed7c04ed5362d27db5e272ba89ee98d433",
+    "server/aiCompany/roleEvidenceResolver.ts": "9b58e53f1245cecb104adbdb52d378c1d22ad71fe92cc447c76b9dfb5437ca8d",
+    "server/aiCompany/roleWorkExecutor.test.ts": "8727ff2ce937d433264257527f4f0b1c196136e778e7b2c3f05dcf5eac72a238",
+    "server/aiCompany/roleWorkExecutor.ts": "2d16eec10624942e0633f4bceaad7ee1b56336ed2664568646c72f2a314b9fc5",
+    "server/aiCompany/roleWorkQueue.atomic.test.ts": "12151f6f9a01c611b673a27db866b0a16eb935b797962bf53ae0d89bc8ee8adb",
+    "server/aiCompany/roleWorkQueue.test.ts": "da7bbe67ad6171921395b1db8dceb5877d6aefa4cb9b5fc19b7b573c6b49f487",
+    "server/aiCompany/roleWorkQueue.ts": "f084872551a3bbe11c52609f78be1a3b2dbef12645392f4570b932c811da8c6d",
+    "server/aiCompany/roleWorkQueueBypassGuards.test.ts": "bd9cf8f6a6e79163924786f71d76f567d7d71ea94715fc77154c0557073f17ee",
+    "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts": "b2662ee4919e46c5fcaef0ef613af415f5a70e00a52e5b7d9474f6e23922b6a8",
+    "server/aiCompany/runtime.test.ts": "c447e77bb8d12e5903db5d8c080640cbdc6fb01491c6539604b46bb5291da088",
+    "server/aiCompany/runtime.ts": "13d7f92821ae4f7146fe4a3d147bb5d483946003e4bcd5c97014a3af0d1d6075",
+    "server/aiCompany/worktreeManager.test.ts": "7ad8d890e9d87ba7fee1a6ac9354d3921e43c193be9959e8a5f152fa7ca69ea7",
+    "server/aiCompany/worktreeManager.ts": "9b10a147975ed8df7ea4998fa23593fd9d511d3e5587724ccafb30b87a43c4d5",
+    "server/index.ts": "7376fb0d32a27a111f67d223f128c44c862c367a17c9996216530850c11f19ea"
+  },
+  "status": "BUILDER_VERIFIED; REVIEW_PENDING",
+  "tests": {
+    "expanded": "414PASS41FILES",
+    "initialFocused": "90PASS3FAIL93_PRESERVED",
+    "correctedCallerFocused": "14PASS2FILES",
+    "initialExpanded": "413PASS1FAIL414_PRESERVED",
+    "newNativePublisherAndAdapterControls": "31PASS",
+    "nativeLedgerControls": "7PASS",
+    "lint": "PASS19_CHANGED_FILES",
+    "diff": "PASS",
+    "typecheck": "FAIL11_BASELINE"
+  },
+  "observedCounterexampleBefore": {
+    "observedAt": "2026-10-05T04:20:33.654Z",
+    "scope": "Actual queue/capability and paused stub provider only; zero real provider/effect",
+    "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-stale-publication-UHP2NQ",
+    "stubProviderCalls": 1,
+    "receiptRows": 1,
+    "receiptReturned": true,
+    "error": "",
+    "state": "BLOCKED",
+    "realProviderCalls": 0
+  },
+  "repair": "Exclusive native ledger publication through actual queue capability/issuer gate; adapter handle transport and canonical root preflight; reserved attempt receipt IDs; unfenced fingerprint publisher retired",
+  "decisions": [
+    {
+      "pass": 1,
+      "topic": "CURRENT_REALITY",
+      "evidenceAndDecision": "Current actual source hashes and temporary paused adapter observed; final before1 after0 native receipts after BLOCKED."
+    },
+    {
+      "pass": 2,
+      "topic": "FIRST_PRINCIPLES",
+      "evidenceAndDecision": "Current capability and issuer must be checked at publication commit, under the shared root lock."
+    },
+    {
+      "pass": 3,
+      "topic": "HISTORICAL_CONTRADICTION",
+      "evidenceAndDecision": "Serialized native dedupe alone did not prevent a blocked actor from publishing."
+    },
+    {
+      "pass": 4,
+      "topic": "FALSIFICATION",
+      "evidenceAndDecision": "Actual paused adapter block/quarantine/reclaim denies publication; combined snapshot false-negative newly reproduced separately."
+    },
+    {
+      "pass": 5,
+      "topic": "COMPETING_HYPOTHESIS",
+      "evidenceAndDecision": "Receipt observed before terminal completion; typed output parsing or terminal reducer is not the cause of this publication gap."
+    },
+    {
+      "pass": 6,
+      "topic": "AUTHORITY",
+      "evidenceAndDecision": "Ledger.record exclusively routes current capability to locked canonical queue publisher; missing capability/no queue denies, no compatibility bypass."
+    },
+    {
+      "pass": 7,
+      "topic": "CONCURRENCY",
+      "evidenceAndDecision": "Same-process and actual two OS native ledger publication dedupe one identity; current issuance/reclaimed actor controls pass."
+    },
+    {
+      "pass": 8,
+      "topic": "FAILURE_SEMANTICS",
+      "evidenceAndDecision": "Corrupt/duplicate/unterminated/hash-corrupt/aliased history rejects without append; old effects not erased."
+    },
+    {
+      "pass": 9,
+      "topic": "SECURITY",
+      "evidenceAndDecision": "Canonical root identity checked before provider; foreign root zero calls/no marker, realpath alias positive. Private0600 capability process fixture deleted."
+    },
+    {
+      "pass": 10,
+      "topic": "EVIDENCE",
+      "evidenceAndDecision": "Original output/hash/scope/time/producer/work/attempt/issuance validated; evidence remains RECEIVED."
+    },
+    {
+      "pass": 11,
+      "topic": "REVISION_IDENTITY",
+      "evidenceAndDecision": "Final414 tests bind HEAD plus full current affected hashes, dirty source only; earlier408 proof retained as historical."
+    },
+    {
+      "pass": 12,
+      "topic": "PRODUCT_DATA_TRUTH",
+      "evidenceAndDecision": "No actual research/model/data/product effect; only temporary typed fixture bytes."
+    },
+    {
+      "pass": 13,
+      "topic": "PRODUCT_VALUE",
+      "evidenceAndDecision": "Precondition for trustworthy research evidence, not a measured product outcome."
+    },
+    {
+      "pass": 14,
+      "topic": "RESOURCE_ECONOMICS",
+      "evidenceAndDecision": "Deterministic gate and bounded tests; zero model/provider calls and zero extra agents."
+    },
+    {
+      "pass": 15,
+      "topic": "MIGRATION_COMPATIBILITY",
+      "evidenceAndDecision": "Actual legitimate test claims/issuance migrated; old fingerprint writer retired; unbound legacy receipt bytes remain preserved and unresolved."
+    },
+    {
+      "pass": 16,
+      "topic": "ROLLBACK",
+      "evidenceAndDecision": "Safe source restoration from prior hashes preserves all original receipt histories; no live migration."
+    },
+    {
+      "pass": 17,
+      "topic": "SECOND_ORDER_EFFECTS",
+      "evidenceAndDecision": "Prepublished consumer receipt and mismatched roots exposed invalid fixtures; changed-attempt injected dispatch made structurally coherent to test origin admission. Initial failures preserved."
+    },
+    {
+      "pass": 18,
+      "topic": "SIMPLIFICATION",
+      "evidenceAndDecision": "Retired duplicated unfenced native publication body and fingerprint IDs; reuse existing queue gate/parser/capability checks, no new store."
+    },
+    {
+      "pass": 19,
+      "topic": "INDEPENDENT_VERIFICATION",
+      "evidenceAndDecision": "Builder controls only; preserved safety-denied reviewer is not retried or substituted."
+    },
+    {
+      "pass": 20,
+      "topic": "CONVERGENCE",
+      "evidenceAndDecision": "Scoped native actor publication repaired with414 tests and actual probe; combined capture, OS actor, effect/revision/crash and final independent assurance remain OPEN."
+    }
+  ],
+  "limitations": [
+    "Builder-only; preserved PD009/G1 review denial not retried/substituted/bypassed",
+    "Cooperative native/CLI publishers fence current attempt; arbitrary OS writers and full process/lease actor authority remain unproven",
+    "Revision/input/effect binding, cross-store crash and downstream atomicity and compatibility intake authority OPEN",
+    "Combined snapshot capture false-negative under unrelated valid append CURRENT_REPRODUCED",
+    "No actual model/provider/company/product/human/live/candidate/public effect; A/B/C/D UNPROVEN"
+  ],
+  "nextAction": "Repair reproduced combined snapshot unrelated append false-negative using existing selected-ID snapshot checks; preserve default full-view invalidation and selected original-store corruption/mutation/ambiguity refusal; then actor/effect/crash proof",
+  "observedCounterexampleAfter": {
+    "observedAt": "2026-10-05T07:27:49.049Z",
+    "scope": "Actual queue/capability and paused stub provider only; zero real provider/effect",
+    "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-stale-publication-1BgwII",
+    "stubProviderCalls": 1,
+    "receiptRows": 0,
+    "receiptReturned": false,
+    "error": "Error: native receipt requires active issued provider attempt",
+    "state": "BLOCKED",
+    "realProviderCalls": 0
+  }
+}

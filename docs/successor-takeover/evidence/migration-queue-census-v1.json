@@ -1,0 +1,31 @@
+{
+  "schema": "successor-takeover.migration-queue-census.v1",
+  "snapshotRoot": "/Users/manhtx/Documents/macro-successor-f0-I5xvdx/control-suspended-restore/.ai-company/runtime/projects/macro-os",
+  "sourceHashes": {
+    "role-work-queue.jsonl": "16c4b360ed1e6f33bc8b5f2e9b0a9f68c94e54f0715bd01eec627eb36020acb5",
+    "role-dispatch-evidence.jsonl": "07674ee9fa43640e74ac908ab53680ea6564ef81866ddbfba6f1bc13adc4a9a1"
+  },
+  "historyRows": 9647,
+  "latestWorkRows": 2715,
+  "unknownHistoricalStates": 0,
+  "counts": {
+    "READY": 1,
+    "CLAIMED": 0,
+    "IN_REVIEW": 0,
+    "DONE": 1573,
+    "BLOCKED": 0,
+    "QUARANTINED": 1141
+  },
+  "missingObjective": 49,
+  "missingRun": 49,
+  "missingNamespace": 49,
+  "objectiveBacklogDisagreement": 1475,
+  "missingDependencyReferences": 0,
+  "completed": {
+    "rows": 1573,
+    "missingEvidenceIds": 1,
+    "evidenceReferences": 1593,
+    "unresolvedInProjectDispatchLedger": 383
+  },
+  "claimLimit": "Structural counts only; DONE and resolvable IDs are not validated outcomes. Other evidence stores are not searched. No row is classified trusted or migrated."
+}

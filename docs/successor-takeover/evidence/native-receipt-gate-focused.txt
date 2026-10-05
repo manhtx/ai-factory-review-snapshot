@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3650ms
+   ✓ snapshot preserves internal rows and freshness policy is checked at use time  1163ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 877ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (6 tests) 275ms
+
+ Test Files  3 passed (3)
+      Tests  42 passed (42)
+   Start at  11:04:52
+   Duration  5.65s (transform 104ms, setup 0ms, collect 175ms, tests 4.80s, environment 0ms, prepare 98ms)
+

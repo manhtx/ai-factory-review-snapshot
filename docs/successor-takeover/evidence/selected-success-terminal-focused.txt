@@ -1,0 +1,16 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4193ms
+   ✓ CEO brief runtime > runs an injected role executor after planning work  522ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1636ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1537ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 495ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (21 tests) 2259ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 295ms
+
+ Test Files  4 passed (4)
+      Tests  46 passed (46)
+   Start at  10:47:29
+   Duration  9.05s (transform 361ms, setup 0ms, collect 534ms, tests 7.24s, environment 0ms, prepare 188ms)
+

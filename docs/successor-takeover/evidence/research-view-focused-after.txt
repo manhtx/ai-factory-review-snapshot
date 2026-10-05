@@ -1,0 +1,17 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/researchSynthesis.test.ts (16 tests) 3585ms
+   ✓ research synthesis > requires current bound advisory perspectives before re-score  735ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 7015ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  4288ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1890ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 434ms
+   ✓ CEO readiness requires current advisory origin and is revoked by withdrawal  424ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 22ms
+
+ Test Files  4 passed (4)
+      Tests  35 passed (35)
+   Start at  10:21:31
+   Duration  14.06s (transform 715ms, setup 0ms, collect 1.06s, tests 11.06s, environment 0ms, prepare 363ms)
+

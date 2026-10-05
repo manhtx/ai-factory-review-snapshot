@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 760ms
+
+ Test Files  1 passed (1)
+      Tests  15 passed (15)
+   Start at  10:10:50
+   Duration  1.04s (transform 75ms, setup 0ms, collect 119ms, tests 760ms, environment 0ms, prepare 28ms)
+

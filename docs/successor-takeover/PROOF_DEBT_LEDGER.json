@@ -1,0 +1,122 @@
+{
+  "schema": "ai-factory.proof-debt.v1",
+  "items": [
+    {
+      "proofDebtId": "PD-001",
+      "reason": "Loaded runtime reports local-unattested",
+      "scope": "A/C",
+      "risk": "Blocks trust promotion",
+      "createdRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Exact source/config/process attestation",
+      "revisitCondition": "Before any affected trust promotion or final completion"
+    },
+    {
+      "proofDebtId": "PD-002",
+      "reason": "Historical browser objects remain published lineage",
+      "scope": "A",
+      "risk": "Blocks trust promotion",
+      "createdRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Adjudicate exposure without secret output; reserved external action only if necessary",
+      "revisitCondition": "Before any affected trust promotion or final completion"
+    },
+    {
+      "proofDebtId": "PD-003",
+      "reason": "Writer and store census bounded/incomplete",
+      "scope": "A/C",
+      "risk": "Blocks trust promotion",
+      "createdRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Closed-world material authority census",
+      "revisitCondition": "Before any affected trust promotion or final completion"
+    },
+    {
+      "proofDebtId": "PD-004",
+      "reason": "G1 independent review previously denied; no bypass permitted",
+      "scope": "A/C",
+      "risk": "Blocks trust promotion",
+      "createdRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Resolve authorized verification boundary without retrying denied action",
+      "revisitCondition": "Before any affected trust promotion or final completion"
+    },
+    {
+      "proofDebtId": "PD-005",
+      "reason": "Cold start, rollback, founder absence and three real objectives unproven",
+      "scope": "C/D",
+      "risk": "Blocks trust promotion",
+      "createdRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Mission-required direct evidence",
+      "revisitCondition": "Before any affected trust promotion or final completion"
+    },
+    {
+      "proofDebtId": "PD-006",
+      "reason": "Non-admin persistent mutation route authority not yet adjudicated",
+      "scope": "A/B",
+      "risk": "Blocks trust promotion",
+      "createdRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Enumerate actual effects and intended consumer authorization",
+      "revisitCondition": "Before any affected trust promotion or final completion"
+    },
+    {
+      "proofDebtId": "PD-007",
+      "reason": "Exact pinned239fe22 builder533; actual coordinator overwrite/release, concurrent selection CAS collision and revoked-selection dispatch counterexamples; controller gateway, OS rights, cross-store effects and PD009 OPEN",
+      "scope": "A/D",
+      "risk": "Blocks valid native progression; synthetic fallback/self-review and legacy missing lineage remain P0",
+      "createdRevision": "3db6742c2d0d8538fe0fc6348976375f25600076+WORKTREE_HASHES",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Reopen controller lifetime authority root cause before further tactical repair; bind real issuer/work/attempt/provider/effect authority, preserve legitimate recovery/admin paths and prove original-store product consumption",
+      "revisitCondition": "Next causal repair; before runtime enable, candidate promotion or final completion",
+      "currentEvidenceRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+      "currentEvidence": [
+        "SOURCE_CANDIDATE_SEAL.json",
+        "evidence/resource-provider-group-239fe22.json",
+        "evidence/coordinator-init-239fe22-counterexample.json",
+        "evidence/execution-lease-race-1635505.json",
+        "evidence/revoked-lease-dispatch-1635505.json"
+      ],
+      "currentEvidenceCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6"
+    },
+    {
+      "proofDebtId": "PD-008",
+      "reason": "Exact pinned239fe22 builder533; actual coordinator overwrite/release, concurrent selection CAS collision and revoked-selection dispatch counterexamples; controller gateway, OS rights, cross-store effects and PD009 OPEN",
+      "scope": "A/D",
+      "risk": "Blocks canonical success/outcome/operating closure",
+      "createdRevision": "3db6742c2d0d8538fe0fc6348976375f25600076+REVIEW_TERMINAL_WORKTREE_HASHES",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Reopen controller lifetime authority root cause before further tactical repair; bind real issuer/work/attempt/provider/effect authority, preserve legitimate recovery/admin paths and prove original-store product consumption",
+      "revisitCondition": "Before original-source SUCCESS, native/CLI enablement, successor promotion or final completion",
+      "currentEvidenceRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+      "currentEvidence": [
+        "SOURCE_CANDIDATE_SEAL.json",
+        "evidence/resource-provider-group-239fe22.json",
+        "evidence/coordinator-init-239fe22-counterexample.json",
+        "evidence/execution-lease-race-1635505.json",
+        "evidence/revoked-lease-dispatch-1635505.json"
+      ],
+      "currentEvidenceCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6"
+    },
+    {
+      "proofDebtId": "PD-009",
+      "reason": "Fresh persisted research origin/source/scoring independent review rejected by automatic safety review; no retry/substitute/bypass",
+      "scope": "A/B/D",
+      "risk": "Blocks independent closure for new material repair",
+      "createdRevision": "3db6742c2d0d8538fe0fc6348976375f25600076+RESEARCH_ORIGIN_DIRTY_HASHES",
+      "owner": "successor-execution-lead",
+      "blocking": true,
+      "requiredClosure": "Authorized independent verification boundary without bypassing denied review; until then REVIEW_PENDING",
+      "revisitCondition": "Before trust promotion or material closure"
+    }
+  ]
+}

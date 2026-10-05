@@ -1,0 +1,67 @@
+{
+  "schema": "ai-factory.cli-lineage-caller-proof.v1",
+  "authoritative": false,
+  "observedAt": "2026-10-04T15:31:55.231541+00:00",
+  "sourceRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "sourceTreeClean": false,
+  "sourceHashes": {
+    "scripts/ai-company-role-dispatch.mjs": "cde62ce6a10ff154429f9e82b85113f80b7022e540e1d8eff904bb2a6e12da06",
+    "scripts/ai-company-run-ready.mjs": "09cccc51dc037c2da78aff8725b6db922f3a06b8cd34d305e05fd50cd515ecfb",
+    "server/index.ts": "70edc90548c204cff6b8599c29550c170192fbf25b444b8b4bbce39b256fea32",
+    "server/aiCompany/evidenceResolver.ts": "088a614c0baa320bc8fc43240bb32ed694018d5d49cf27dc7792b814c09b3f4f",
+    "server/aiCompany/roleEvidenceLedger.ts": "f59ad979461074574d8abf9b5fb92e359b9d8d1af5a7fc6d9fd235d7ddc5c204",
+    "server/aiCompany/roleEvidenceResolver.ts": "f35ec3a2939f106bddb98816ed40c1436230cb4a4ee16ee54c3a5a6bb7a261eb",
+    "server/aiCompany/roleEvidenceResolver.test.ts": "ce67726fd057761b2f85381007b969000bef53e0c443d92c05e3b26f0d0cf555",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "5b4311e2683d4b2ad5591360e7c49170afdf494776ae91c8cac1a92985451056",
+    "server/aiCompany/roleWorkQueue.ts": "c20fb74107a38e0f55a5e3f61487c738ab66999f5e1b6223e839bf812a86708a",
+    "server/aiCompany/reviewTerminalAdmission.test.ts": "1b7eba6b03b5cbec8a1b51acd24abf0cc75b335a92694bf2cc5d1371d1cebad5",
+    "server/aiCompany/backlogWorkPlanner.test.ts": "677c0f88aace363fc840b965262156f07705a224f310e6d62027d4eeb561c281",
+    "server/aiCompany/queueMutationFence.test.ts": "994a37150ec21505b6154f08e9b7a5e47e669ee6169e7bc3b54a382a6068265c",
+    "server/aiCompany/roleWorkQueueBypassGuards.test.ts": "bd9cf8f6a6e79163924786f71d76f567d7d71ea94715fc77154c0557073f17ee",
+    "server/aiCompany/roleWorkQueue.test.ts": "da7bbe67ad6171921395b1db8dceb5877d6aefa4cb9b5fc19b7b573c6b49f487",
+    "server/aiCompany/recoveryCoordinator.test.ts": "a9bb2382b9962f4910ab54843ff58e4c2adad5004e60164cb568da2e61b13efd",
+    "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts": "d49dbb09da5ad9e8415a8b0b0f609afa519259a3a0ba3e66ba4e7bc998d21572",
+    "server/aiCompany/roleWorkQueue.atomic.test.ts": "12151f6f9a01c611b673a27db866b0a16eb935b797962bf53ae0d89bc8ee8adb"
+  },
+  "status": "SCOPED_LINEAGE_AND_CALLER_REGRESSION_REPAIRED; FULL_AUTHORITY_UNPROVEN",
+  "evidence": {
+    "failBefore": "cli-lineage-laundering-result.json: unresolved citation and different source scope admitted DONE",
+    "failAfter": "independent-cli-lineage-refined-laundering-result.json: BLOCKED, citation preserved",
+    "ambiguityFailBefore": "independent-cli-lineage-legacy-collision-result.json",
+    "ambiguityAfter": "independent-cli-lineage-refined-collision-result.json",
+    "independentLineage": "independent-cli-lineage-refined-review.json:19PASS",
+    "callerBefore": "caller-before-migration.txt:49PASS43FAIL/92",
+    "callerAfter": "caller-after-migration.txt:92PASS/92",
+    "independentCaller": "native-caller-independent-92.txt:92PASS; native-caller-independent-authority.txt:10PASS",
+    "integrated": "attempt-lineage-final-combined.txt:201PASS22FILES"
+  },
+  "checks": {
+    "lint": "PASS_CHANGED_SOURCE_AND_MIGRATED_TESTS",
+    "typecheck": "FAIL11_OTHER_DIAGNOSTICS",
+    "diff": "PASS"
+  },
+  "limitations": [
+    "Worktree source only; no live HTTP/runtime restart or candidate propagation/seal/promotion",
+    "Claim capability authenticates cooperating caller, not OS actor or actual effect",
+    "Source metadata, exact revision/effect, atomic receipt transaction/crossstore concurrent reads and original-source terminal reevaluation remain OPEN",
+    "Generic independent input resolver origin not closed; native actual assignment/provider input packet and research output semantics need review",
+    "Non-test run-real-provider-recovery-proof.mjs still has 3 calls without handle; not executed or automatically migrated; authorization/capability adjudication required without any G1 retry/bypass",
+    "Full repo typecheck FAIL11_OTHER_DIAGNOSTICS; these scoped passing tests are not full product/operation proof",
+    "A/B/C/D UNPROVEN; production autonomy DISABLED; real three-objective trial not started"
+  ],
+  "actualCompanyProviderCalls": 0,
+  "currentApplicability": {
+    "status": "SOURCE_SUPERSEDED_FOR_CHANGED_PATHS",
+    "observedAt": "2026-10-04T17:27:55.044472+00:00",
+    "changedPaths": [
+      "scripts/ai-company-role-dispatch.mjs",
+      "server/index.ts",
+      "server/aiCompany/roleEvidenceLedger.ts",
+      "server/aiCompany/cliAttemptDispatch.test.ts",
+      "server/aiCompany/roleWorkQueue.ts",
+      "server/aiCompany/reviewTerminalAdmission.test.ts"
+    ],
+    "replacementScopedEvidence": "dependency-admission-proof.json",
+    "limitation": "Historical exactsource result retained; current larger scope unproven"
+  }
+}

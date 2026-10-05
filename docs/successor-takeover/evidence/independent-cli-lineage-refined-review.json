@@ -1,0 +1,46 @@
+{
+  "schema": "ai-factory.independent-cli-lineage-refined-review.v1",
+  "observed_date": "2026-10-04",
+  "reviewer": "review_terminal_independent",
+  "source_hashes": {
+    "server/aiCompany/roleEvidenceResolver.ts": "f35ec3a2939f106bddb98816ed40c1436230cb4a4ee16ee54c3a5a6bb7a261eb",
+    "server/aiCompany/evidenceResolver.ts": "088a614c0baa320bc8fc43240bb32ed694018d5d49cf27dc7792b814c09b3f4f",
+    "server/aiCompany/roleEvidenceLedger.ts": "f59ad979461074574d8abf9b5fb92e359b9d8d1af5a7fc6d9fd235d7ddc5c204",
+    "server/aiCompany/roleWorkQueue.ts": "c20fb74107a38e0f55a5e3f61487c738ab66999f5e1b6223e839bf812a86708a",
+    "scripts/ai-company-role-dispatch.mjs": "cde62ce6a10ff154429f9e82b85113f80b7022e540e1d8eff904bb2a6e12da06",
+    "scripts/ai-company-run-ready.mjs": "09cccc51dc037c2da78aff8725b6db922f3a06b8cd34d305e05fd50cd515ecfb",
+    "server/index.ts": "70edc90548c204cff6b8599c29550c170192fbf25b444b8b4bbce39b256fea32",
+    "server/aiCompany/roleEvidenceResolver.test.ts": "ce67726fd057761b2f85381007b969000bef53e0c443d92c05e3b26f0d0cf555",
+    "server/aiCompany/cliAttemptDispatch.test.ts": "5b4311e2683d4b2ad5591360e7c49170afdf494776ae91c8cac1a92985451056"
+  },
+  "tests": {
+    "CLI": 11,
+    "sharedResolver": 8,
+    "passed": 19,
+    "failed": 0
+  },
+  "independent_controls": {
+    "original_unresolved_scope_laundering": "BLOCKED/exit3; declared unresolved reference preserved",
+    "native_bound_cli_unbound_collision": "rejected both-store identity presence",
+    "native_unbound_cli_bound_collision": "rejected both-store identity presence"
+  },
+  "verdict": "SCOPED_ORIGINAL_LINEAGE_AND_IDENTITY_AMBIGUITY_GUARDS_VERIFIED",
+  "preserved_fail_before": [
+    "independent-cli-lineage-legacy-collision-result.json",
+    "independent-cli-lineage-legacy-collision-probe.mts",
+    "cli-lineage-laundering-result.json",
+    "cli-lineage-laundering-probe.mts"
+  ],
+  "limits": [
+    "Temporary roots and bounded local stubs only; no actual providers, live canonical mutation or G1.",
+    "Cooperative source and receipt callers only; not actor identity authentication.",
+    "State-check-to-receipt-write and cross-store concurrent reads are not atomic semantic admission proof.",
+    "Exact revision/effect binding, generic independent-input authority and production workflow closure remain OPEN."
+  ],
+  "artifacts": [
+    "independent-cli-lineage-refined-collision-probe.mts",
+    "independent-cli-lineage-refined-collision-result.json",
+    "independent-cli-lineage-refined-laundering-result.json",
+    "independent-cli-lineage-refined-focused-output.txt"
+  ]
+}

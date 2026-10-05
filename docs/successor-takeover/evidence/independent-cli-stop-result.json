@@ -1,0 +1,19 @@
+{
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/independent-cli-stop-WMdX0X",
+  "code": 3,
+  "ack": [
+    {
+      "type": "ROLE_ATTEMPT_CLAIMED",
+      "work_id": "WORK-1790959886198-71vpnj",
+      "attempt_id": "97380f5a-dbb6-46f3-8936-9ecf02e67db2",
+      "output_name": "role-output-WORK-1790959886198-71vpnj-97380f5a-dbb6-46f3-8936-9ecf02e67db2.md"
+    }
+  ],
+  "finalState": "BLOCKED",
+  "semanticEvidenceRowsAfterStop": 0,
+  "stderr": "Dispatch attempt is inactive or lost ownership; output not admitted\n",
+  "hashes": {
+    "scripts/ai-company-role-dispatch.mjs": "34eadf3b437e84bc8d66934b4e1d259d150b4a3a011c3d8b9416be4ac45db1fb",
+    "scripts/ai-company-run-ready.mjs": "9690c1d0964ea929440e45c2bf5a32e890afd1394dd0d2bdc52f3d69cfb3e047"
+  }
+}

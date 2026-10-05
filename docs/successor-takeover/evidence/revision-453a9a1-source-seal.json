@@ -1,0 +1,131 @@
+{
+  "schema": "ai-factory.source-candidate-seal.v1",
+  "authoritative": false,
+  "observedAt": "2026-10-05T08:31:42.863Z",
+  "missionId": "AI_FACTORY_FINAL_CONVERGENCE_V2",
+  "candidateRevision": "453a9a1a1dc5307aaf6c300be893204c176a927d",
+  "parentRevision": "3db6742c2d0d8538fe0fc6348976375f25600076",
+  "gitTree": "0dd71c32967922545e6562b6ea7e04ac9b96c5a0",
+  "branch": "codex/ai-company-hardening-20260910",
+  "sourceSeal": "IMMUTABLE_GIT_SOURCE_IDENTIFIED",
+  "cleanAtTestStart": true,
+  "cleanAtTestEnd": true,
+  "authority": "NONE",
+  "trustStatus": "UNTRUSTED_REVIEW_PENDING",
+  "productionAutonomy": "DISABLED",
+  "proofVersion": "revision-453a9a1-revalidation.v1",
+  "checkpointVersion": "ai-factory.checkpoint.v1",
+  "configHashes": {
+    "package.json": "b4bcd81b2209059c97e47e44891b6521d3ae508dc95c2c2903b28d21692f6ad4",
+    "package-lock.json": "1590ed7ecf3287c2c5dbf1fc808e5a5ae25c12a9281c4db48b7ad54541376813",
+    "tsconfig.json": "bc6d8576be528b4ba5b80062f01ba1bd1866d55c172346f05580e1890897b2f4",
+    "vite.config.ts": "af281c7ffdbbef8d2b4087bf24198a333ff0d2a6ac6d53b7ce7a4b7ff162a383",
+    "vitest.config.ts": "c972b286bd32b514712b25d215d26b2ed04f9275dcbd25b86e86cd402beea29e"
+  },
+  "declaredTcbManifest": {
+    "path": "evidence/combined-evidence-capture-proof.json",
+    "artifactHash": "785e64224b901c50c2d79557007eaafa357a390affb39f7a42307c81cbcb72c2",
+    "sourceHashesMatchCandidate": true,
+    "count": 75,
+    "scope": "sourceHashes member only; historical test assertions NOT imported"
+  },
+  "tcbCompleteness": "OPEN_MATERIAL_WRITER_CENSUS",
+  "schemaVerification": "Applied schema UNKNOWN; exact tracked migration source is bound by gitTree",
+  "trackedSchemaManifestSha256": "01acbfeaaef50cf8398061081469ed8bab1745dd5eaf1ebd6453a807f37e7535",
+  "trackedSchemaManifestCount": 25,
+  "commands": {
+    "suite": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "server/aiCompany/adminWorkQueueTransport.test.ts",
+      "server/aiCompany/assignmentEnvelope.test.ts",
+      "server/aiCompany/attemptAuthority.test.ts",
+      "server/aiCompany/autonomousCoordinator.test.ts",
+      "server/aiCompany/backlogWorkPlanner.test.ts",
+      "server/aiCompany/cadenceQuorum.test.ts",
+      "server/aiCompany/ceoReviewLedger.test.ts",
+      "server/aiCompany/cliAttemptDispatch.test.ts",
+      "server/aiCompany/cliPmDecision.test.ts",
+      "server/aiCompany/cliReceiptPublication.test.ts",
+      "server/aiCompany/combinedEvidenceCapture.test.ts",
+      "server/aiCompany/currentRoleAuthority.test.ts",
+      "server/aiCompany/dependencyAdmission.test.ts",
+      "server/aiCompany/evidenceAdmissionIntegrity.test.ts",
+      "server/aiCompany/evidenceResolver.test.ts",
+      "server/aiCompany/evidenceSnapshot.test.ts",
+      "server/aiCompany/ideaLedger.test.ts",
+      "server/aiCompany/modelAdapter.test.ts",
+      "server/aiCompany/nativeAttemptLineage.test.ts",
+      "server/aiCompany/nativeDispatchIssuance.test.ts",
+      "server/aiCompany/nativeEvidenceAdmission.test.ts",
+      "server/aiCompany/nativeProviderContract.test.ts",
+      "server/aiCompany/nativeReceiptAuthority.test.ts",
+      "server/aiCompany/openaiCompatibleRoleAdapter.test.ts",
+      "server/aiCompany/opportunityScoring.test.ts",
+      "server/aiCompany/orchestrator.test.ts",
+      "server/aiCompany/preReleaseReviewGate.test.ts",
+      "server/aiCompany/queueMutationFence.test.ts",
+      "server/aiCompany/recoveryCoordinator.test.ts",
+      "server/aiCompany/recursiveDependencyAuthority.test.ts",
+      "server/aiCompany/releasePromotion.test.ts",
+      "server/aiCompany/researchSynthesis.test.ts",
+      "server/aiCompany/reviewTerminalAdmission.test.ts",
+      "server/aiCompany/roleEvidenceLedger.test.ts",
+      "server/aiCompany/roleEvidenceResolver.test.ts",
+      "server/aiCompany/roleWorkExecutor.test.ts",
+      "server/aiCompany/roleWorkQueue.atomic.test.ts",
+      "server/aiCompany/roleWorkQueue.test.ts",
+      "server/aiCompany/roleWorkQueueBypassGuards.test.ts",
+      "server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts",
+      "server/aiCompany/runtime.test.ts",
+      "server/aiCompany/worktreeManager.test.ts"
+    ],
+    "focused": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "server/aiCompany/cliAttemptDispatch.test.ts",
+      "server/aiCompany/nativeDispatchIssuance.test.ts"
+    ],
+    "typecheck": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "probe": [
+      "node",
+      "--import",
+      "tsx",
+      "/tmp/ai-factory-os-stale-actor.mts"
+    ]
+  },
+  "results": {
+    "initial": "423PASS_1SIGTERM_TIMEOUT_424",
+    "focused": "30PASS",
+    "repeat": "424PASS42FILES",
+    "typecheck": "FAIL11",
+    "timing": "UNKNOWN_CAUSE; NOT_REPRODUCED_IN_RECHECKS",
+    "osActor": "5_STALE_CAPABILITY_OPERATIONS_DENIED; UNRESTRICTED_ADMIN_BLOCK_MUTATES_B"
+  },
+  "artifactHashes": {
+    "docs/successor-takeover/evidence/revision-453a9a1-initial-tests.txt": "771182d0dac961489f01c029b5db046141084519376497e9120f75a8acde9639",
+    "docs/successor-takeover/evidence/revision-453a9a1-repeat-tests.txt": "af139e7d8417e46867d4193868db2f4705b43bd9059982899a616cf905014570",
+    "docs/successor-takeover/evidence/revision-453a9a1-timing-focused.txt": "3508a9278cb6ae23cb91224254c11d861575d49813ed8e4a64271d4bd8d3258b",
+    "docs/successor-takeover/evidence/revision-453a9a1-typecheck.txt": "483de47c6bc1f7e12c4c8c4bb72600e6972c88d60bfb9df0898bfe6d00568ecd",
+    "docs/successor-takeover/evidence/revision-453a9a1-os-stale-actor.json": "21855518636684d7981751953c98e75900fcdebb27386728bf110a274d499954",
+    "docs/successor-takeover/evidence/revision-453a9a1-os-stale-actor-probe.mts": "50ff5265520cd6b974edbc343a37f15b6f974ecb6bc8134b97bc07f41be8b245"
+  },
+  "proofAssociation": {
+    "subjectRevision": "453a9a1a1dc5307aaf6c300be893204c176a927d",
+    "evidenceCarrier": "Subsequent documentation-only Git commit identified externally; carrier is not the source candidate",
+    "historicalProof": "Dirty-tree 3db6742 combined-capture and earlier proofs are historical, not current exact-revision certification",
+    "previousCandidate": "Dirty d23b293 worktree preserved; superseded for current candidate selection; authority NONE"
+  },
+  "independentReview": "REVIEW_PENDING; automatic safety rejection preserved; no retry or substitution",
+  "limitations": [
+    "Source identity seal only; no assurance seal or Block A closure",
+    "Actual controller/lease/provider effect and administrative actor rights OPEN",
+    "No cross-store atomicity, migration, trust genesis, cold start or production enabling"
+  ]
+}

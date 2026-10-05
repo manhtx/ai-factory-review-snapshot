@@ -1,0 +1,9 @@
+{
+  "schema": "security-boundary.probe.v1",
+  "adminRoutes": 40,
+  "unauthorizedRequests": 80,
+  "authorizedInvalidControl": 400,
+  "disabledControl": 503,
+  "isolatedState": true,
+  "failures": []
+}

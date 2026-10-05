@@ -1,0 +1,12 @@
+{
+  "observation": "Independent sequential dispatch counterexample before completed-receipt preflight",
+  "sourceHashAvailable": false,
+  "sourceHashLimitation": "The initial stdin counterexample did not capture file hashes. Do not attribute it to the final hashes.",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-repeat-claim-cC2OA4",
+  "attempt_id": "5e2b3434-679a-4d4a-81b8-7c3e811dcf18",
+  "requestCount": 2,
+  "secondError": "native attempt receipt identity reused with different output or lineage",
+  "receiptCount": 1,
+  "realProviderCalls": 0,
+  "canonicalMutations": false
+}

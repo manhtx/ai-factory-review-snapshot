@@ -1,0 +1,50 @@
+{
+  "observedAt": "2026-10-05T03:35:59.598Z",
+  "scope": "Actual temporary queue/advisory receipts; zero human or product evidence",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/research-authority-jQRxcl",
+  "before": {
+    "basis": "AI_ADVISORY_ONLY",
+    "status": "READY_FOR_RE_SCORE",
+    "missingRoles": [],
+    "weakRoles": []
+  },
+  "after": {
+    "basis": "AI_ADVISORY_ONLY",
+    "status": "RESEARCH_INCOMPLETE",
+    "missingRoles": [
+      "user-persona",
+      "ux-research",
+      "stakeholder-panel",
+      "domain-expert"
+    ],
+    "weakRoles": []
+  },
+  "staleError": "Error: evidence snapshot changed before decision; revalidation required",
+  "ceoBefore": [
+    "IDEA-UNIT"
+  ],
+  "ceoAfter": [],
+  "newSignals": 0,
+  "historicalWork": [
+    {
+      "work_id": "WORK-1791171359407-pwc4dx",
+      "state": "DONE"
+    },
+    {
+      "work_id": "WORK-1791171359471-bfpaho",
+      "state": "DONE"
+    },
+    {
+      "work_id": "WORK-1791171359506-uosfqq",
+      "state": "DONE"
+    },
+    {
+      "work_id": "WORK-1791171359550-g4kpu7",
+      "state": "DONE"
+    }
+  ],
+  "signalsPreserved": true,
+  "realProviderCalls": 0,
+  "realHumanObservations": 0,
+  "realCompanyObjectives": 0
+}

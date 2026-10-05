@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 30ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (9 tests) 29ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 17ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 10ms
+
+ Test Files  4 passed (4)
+      Tests  31 passed (31)
+   Start at  21:23:45
+   Duration  826ms (transform 76ms, setup 0ms, collect 126ms, tests 87ms, environment 0ms, prepare 91ms)
+

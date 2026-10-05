@@ -1,0 +1,63 @@
+{
+  "schema": "ai-factory.continuation.v3",
+  "authoritative": false,
+  "missionId": "AI_FACTORY_FINAL_CONVERGENCE_V2",
+  "missionContract": "FINAL_CONVERGENCE_MISSION.md",
+  "missionSha256": "eb015a16e78427db6b2d548ec0365de540f82d0cfb6bbddd755d82ba8dac6e23",
+  "goalStatus": "ACTIVE",
+  "phase": "SECURITY_SCOPED_REPAIRS_SEALED; EVIDENCE_ADMISSION_SCOPED_REPAIR_REVIEWED; TRUST_FOUNDATION_OPEN",
+  "sourceRevision": "9483c43d72739b659552f3d5349a8cb190f66d81",
+  "candidate": "SUCCESSOR_STATE.json",
+  "trustEpoch": "LEGACY_EPOCH",
+  "candidateAuthority": "NONE",
+  "blocks": {
+    "A": "UNPROVEN",
+    "B": "UNPROVEN",
+    "C": "UNPROVEN",
+    "D": "UNPROVEN"
+  },
+  "closureMatrix": "CLOSURE_MATRIX.json",
+  "proofDebt": "PROOF_DEBT_LEDGER.json",
+  "activeObjective": "Remove false-success evidence admission while preserving objective and forensic state",
+  "work": "Existing validator and reader causal repair",
+  "attempt": "evidence-admission-repair-20261002",
+  "authority": "Founder mission section 5 safe local reversible work only",
+  "effects": [
+    "Early admin guard applied",
+    "API reloaded loopback",
+    "637 browser paths removed from index; local profile and byte-verified backup preserved",
+    "Focused index/rateLimit patch also applied to unpromoted candidate after git apply --check",
+    "Six live host identity paths removed from index; local files retained with byte-copy backups",
+    "Unreadable audit file no longer becomes clean success",
+    "Validator and JSONL reader repaired in root/candidate; no live ledger rewrite or runtime promotion"
+  ],
+  "evidence": [
+    "evidence/security-boundary-before.json",
+    "evidence/security-boundary-after.json",
+    "evidence/security-boundary-runtime.json",
+    "evidence/private-browser-backup.json"
+  ],
+  "migration": "NOT_PERFORMED",
+  "productTruth": "PRODUCT_TRUTH_FRONTIER.json",
+  "tests": {
+    "securityProbe": "PASS_AFTER_REPRODUCED_FAIL",
+    "rateLimiter": "6_PASS_AFTER_REPRODUCED_FAIL",
+    "privacyGuard": "8_PASS_AFTER_FALSE_CLEAN_REPRODUCED",
+    "typecheck": "FAIL_11_DIAGNOSTICS_OUTSIDE_SECURITY_DIFF",
+    "evidenceAdmission": "51_PASS_ROOT_AND_CANDIDATE_WITH_INDEPENDENT_RECHECK"
+  },
+  "independentReview": "Two fresh scope-specific reviewers; counterexamples repaired and rechecked; final mission assurance not performed",
+  "resources": {
+    "companyProviderCalls": 0,
+    "independentReviewerDispatches": 2,
+    "codexGoalToolAggregateTokensObserved": 311666,
+    "aggregateMeasurementMethod": "CODEX_GOAL_TOOL_REPORTED; NOT_NORMALIZED_PROVIDER_BILLING; includes mission cognition, not company product operation",
+    "inputOutputCachedReasoningBreakdown": "UNKNOWN",
+    "cost": "UNKNOWN",
+    "productOutcomesVerified": 0,
+    "routineFounderMessagesDuringEngineeringWindow": 0,
+    "founderAbsenceTrial": "NOT_STARTED"
+  },
+  "nextSafeAction": "Close mandatory evidence resolution across all actual terminal callers and scope/lineage context; first document runtime writer/consumer contracts and fail-before fixtures. No synthetic work, provider dispatch, G1 retry, genesis, migration or public release.",
+  "previousCheckpoint": "CONTINUATION_PRE_FINAL_CONVERGENCE.json"
+}

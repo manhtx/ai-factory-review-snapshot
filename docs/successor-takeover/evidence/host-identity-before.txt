@@ -1,0 +1,1 @@
+live host identity is tracked: 6 paths; preserve local state and separate it from source authority

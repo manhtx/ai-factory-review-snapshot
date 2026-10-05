@@ -1,0 +1,18 @@
+{
+  "authoritative": false,
+  "missionId": "AI_COMPANY_FINAL_SUCCESSOR_TAKEOVER",
+  "candidate": "/Users/manhtx/.codex/worktrees/successor-integrity/Macro Research Platform",
+  "promotion": "NOT_GRANTED",
+  "originalCounterexamples": {"tests": "src/app/pages/RegimeDetectionPage.truth.test.tsx", "before": "2 failed", "after": "2 passed"},
+  "changes": ["explicit annual observation admission", "no observed default numbers/dates/verification", "observed facts remain separate from scenario inputs", "context-derived observations refresh on hydration and reset", "invalid observed inference withheld", "actual source links and design-system tones"],
+  "relatedRegression": {"files": 7, "passed": 55, "failed": 0, "evidence": "evidence/regime-product-regression-v2.json"},
+  "lint": "changed files passed",
+  "typecheck": "6 existing company diagnostics remain; five RegimeDetectionPage diagnostics removed",
+  "browser": {"origin": "http://127.0.0.1:5197", "backendProxy": false, "observed": ["home and regime route render", "empty VN facts visibly unavailable", "empty VN inference withheld", "bubble preset produces scenario inference and +16 percentage-point assumption", "observed facts remain unavailable during scenario"], "limitations": ["only desktop empty-data/scenario rendered so far", "populated API/hydration rendering not verified", "no claim of error-free app or responsive coverage"]},
+  "independentReview": {"agent": "01a0fbc6-50b3-7273-8611-12bf4bf4a18c", "status": "BOUNDED_ADAPTER_PAGE_ACCEPTANCE", "foundAndRepaired": ["credit mom admitted as YoY", "property percent MoM admitted as YoY", "unknown custom price transformation admitted"], "recheck": "31 candidate plus 29 independent tests passed; overlapping with related regression, not additive proof", "harness": "/private/tmp/regime-product-verifier.5lIgh4/adversarial.test.tsx", "sourceHashPrefixes": {"adapter": "3f67e218778d7bf7", "page": "3c8183e78808f2b9"}, "exclusions": ["upstream source freshness/identity", "actual series resolver", "API and running company"]},
+  "hydrationFreshnessRepair": {"file": "src/app/data/seriesUtils.ts", "change": "preserve supplied freshness without inferring it", "before": "4 regressions failed", "after": "fresh/delayed/outdated/unavailable/unknown preserved; only fresh eligible", "independentReview": "NOT_YET_REVIEWED"},
+  "responsiveObservation": {"viewport": "390x844", "documentWidth": 390, "viteErrorOverlay": false, "facts": "unavailable values remain visible", "limitation": "global header telemetry clipped visually; populated and cross-device verification remains open", "screenshots": ["evidence/regime-empty-desktop-v1.jpg", "evidence/regime-empty-mobile-v1.jpg"]},
+  "openProductFailures": ["analytics API admits apartment price level as annual growth", "source semantic identity and freshness are upstream assertions", "methodology attribution lacks supporting citation", "mobile global header clipping"],
+  "closure": "PRODUCT_DATA_TRUTH_UNPROVEN",
+  "supersededCurrentRevision": "VIETNAM_API_PRODUCT_PROGRESS.json; prior page/first resolver revision is historical"
+}

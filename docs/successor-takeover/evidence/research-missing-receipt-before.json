@@ -1,0 +1,131 @@
+{
+  "missingReceipt": null,
+  "observedAt": "2026-10-05T02:46:17.030Z",
+  "scope": "Actual temporary queue and advisory stub receipts only; no real company objective or human research",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/persisted-research-authority-NuqeTv",
+  "admitted": 5,
+  "before": {
+    "basis": "AI_ADVISORY_ONLY",
+    "status": "READY_FOR_RE_SCORE",
+    "missingRoles": [],
+    "weakRoles": []
+  },
+  "after": {
+    "basis": "AI_ADVISORY_ONLY",
+    "status": "READY_FOR_RE_SCORE",
+    "missingRoles": [],
+    "weakRoles": []
+  },
+  "resynthesis": 0,
+  "currentWorkSuccess": [
+    {
+      "role": "user-persona",
+      "success": true,
+      "historicalState": "DONE"
+    },
+    {
+      "role": "ux-research",
+      "success": true,
+      "historicalState": "DONE"
+    },
+    {
+      "role": "stakeholder-panel",
+      "success": true,
+      "historicalState": "DONE"
+    },
+    {
+      "role": "domain-expert",
+      "success": true,
+      "historicalState": "DONE"
+    }
+  ],
+  "persistedSignalTypes": [
+    {
+      "role": "user-persona",
+      "source_type": "AI_ADVISORY"
+    },
+    {
+      "role": "ux-research",
+      "source_type": "AI_ADVISORY"
+    },
+    {
+      "role": "stakeholder-panel",
+      "source_type": "AI_ADVISORY"
+    },
+    {
+      "role": "domain-expert",
+      "source_type": "AI_ADVISORY"
+    }
+  ],
+  "signalWorkAttemptVersionBinding": [
+    {
+      "role": "user-persona",
+      "keys": [
+        "signal_id",
+        "project_id",
+        "source_type",
+        "work_origin",
+        "persona",
+        "research_question",
+        "source_reference",
+        "finding",
+        "confidence",
+        "created_at"
+      ]
+    },
+    {
+      "role": "ux-research",
+      "keys": [
+        "signal_id",
+        "project_id",
+        "source_type",
+        "work_origin",
+        "persona",
+        "research_question",
+        "source_reference",
+        "finding",
+        "confidence",
+        "created_at"
+      ]
+    },
+    {
+      "role": "stakeholder-panel",
+      "keys": [
+        "signal_id",
+        "project_id",
+        "source_type",
+        "work_origin",
+        "persona",
+        "research_question",
+        "source_reference",
+        "finding",
+        "confidence",
+        "created_at"
+      ]
+    },
+    {
+      "role": "domain-expert",
+      "keys": [
+        "signal_id",
+        "project_id",
+        "source_type",
+        "work_origin",
+        "persona",
+        "research_question",
+        "source_reference",
+        "finding",
+        "confidence",
+        "created_at"
+      ]
+    }
+  ],
+  "hashes": {
+    "researchSynthesis.ts": "38c10e98275626954b5180db775eaa266db31f00b472e9fba8e851d010bd6ad1",
+    "researchSignalLedger.ts": "f3e528e3fe81c267009a306c08b58fef1fab1a4665f1bee0126a8e7ba69b89b9",
+    "ceoReviewLedger.ts": "b29c65a2be86062324bca4dc1bf90d964756c06fcc369e737119880f26f0dc08",
+    "roleWorkQueue.ts": "ee7339adb5033995705f95802fbf3a989767242c902c06a3592a4726418d936d"
+  },
+  "realProviderCalls": 0,
+  "realHumans": 0,
+  "networkCalls": 0
+}

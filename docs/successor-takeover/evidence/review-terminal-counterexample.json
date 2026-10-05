@@ -1,0 +1,11 @@
+{
+  "schema": "ai-factory.counterexample.v1",
+  "isolated": true,
+  "providerCalls": 0,
+  "sourceHash": "676953eb430c1d8af77458f8f8afe4373a134c9e1e000e6ec4acefc39c027ee1",
+  "reviewVerdict": "HOLD",
+  "reviewState": "DONE",
+  "downstreamClaim": "CLAIMED",
+  "classification": "CURRENT_REPRODUCED",
+  "conclusion": "Non-PASS review DONE satisfies ordinary success dependency; no approved terminal reducer"
+}

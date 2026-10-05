@@ -1,0 +1,15 @@
+{
+  "schema": "successor-takeover.f0-capture.v1",
+  "status": "PARTIAL_F0_APPLICATION_RESTORE_VERIFIED",
+  "head": "d23b29342c9865a2a4f0cbdbe6ccb838522f00a5",
+  "backupDirectory": "/Users/manhtx/Documents/macro-successor-f0-I5xvdx",
+  "application": {"archive": "application.tgz", "bytes": 2937596, "sha256": "5c2a3a2074ee9c22bb2d8d78d7c886a6b4e0f7e40dde9ea279e9f957373a1cec", "restoredFiles": 1127, "restoredBytes": 7643950, "sourceMismatches": [], "scope": ["server", "src", "scripts", "docs", "api", "supabase", "package.json", "package-lock.json", "tsconfig.json", "vite.config.ts", "AGENTS.md"]},
+  "controlObservation": {"archive": "control-state-observation.tgz", "bytes": 18617950, "sha256": "185532791a6135ac10248d98cae14c9d2ec0aa29913ee570262610e34283f20f", "consistency": "UNVERIFIED_LIVE_CAPTURE", "migrationBackup": false},
+  "suspendedControlSnapshot": {"archive": "control-state-suspended.tgz", "sha256": "08bd4d6e6e8645ab6d91ffe4b33a44de147b1aa2f6c98568c9c063614a4bdc9c", "capturedAt": "2026-09-30T09:39:35.299Z", "restoredFiles": 1648, "restoredBytes": 99432160, "stableBeforeAfterCapture": true, "restoredBytesMatch": true, "declaredWritersSuspended": [534, 6108], "resumedSameProcessIdentities": true, "scope": "regular control-root files plus runtime, mission, product-intelligence, backlogs, memory, workflows, prompts and epochs", "claimLimit": "Known company writers suspended during capture and restored files matched; not proof of absence of undeclared writers or whole-system migration readiness"},
+  "gitHistory": {"archive": "initial-head.bundle", "bytes": 8190436, "sha256": "03d5123d658fd7816d587e6bbc72ce81e4dbf48047b3449d083264b5deefa00a", "verification": "git bundle verify passed; full history reachable from initial HEAD; other branch refs not captured"},
+  "productDatabase": {"archive": "product-sqlite.backup", "bytes": 107814912, "sha256": "f88bd0896dc5879d48b39b8aa3335b0a35b158ea55295dd769a1f68a3d16f80c", "method": "SQLite online backup from read-only source connection", "restoredCheck": "immutable read of backup: PRAGMA quick_check = ok", "tables": 16, "observations": 145132, "claimLimit": "local SQLite only; not remote store reconciliation or data-truth validation"},
+  "privateConfiguration": {"archives": ["local-configuration-private.tgz", "company-service-definitions-private.tgz"], "permissions": "0600 files within 0700 backup directory", "contents": "local env/config and three company LaunchAgent definitions; no values emitted to reports", "restoreVerified": true, "restoredFiles": 22, "byteMismatches": 0},
+  "remaining": ["complete application root/config and symlink inventory", "preserve other required branch refs if used", "consistent control-state snapshot with writer fencing", "complete reconstruction test"],
+  "previousSnapshot": {"path": "research_closure/F0_SUT_SNAPSHOT_MANIFEST.json", "head": "ec417c9a78ac6d098e472d7ac8fffb1e65308227", "currentBaseline": false},
+  "claimLimit": "Application archive restored to separate directory and every regular file compared to current source. This is not full-system F0 or migration readiness."
+}

@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3595ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1325ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1641ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 381ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (3 tests) 204ms
+
+ Test Files  3 passed (3)
+      Tests  26 passed (26)
+   Start at  22:48:37
+   Duration  4.92s (transform 138ms, setup 0ms, collect 207ms, tests 4.18s, environment 0ms, prepare 80ms)
+

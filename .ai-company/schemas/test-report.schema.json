@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://macro-os.local/schemas/test-report.schema.json",
+  "title": "Independent Test Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["report_id", "task_id", "agent_id", "test_class", "result", "cases", "created_at"],
+  "properties": {
+    "report_id": {"type": "string", "pattern": "^TST-[A-Z0-9._-]+$"},
+    "task_id": {"type": "string", "minLength": 1},
+    "agent_id": {"type": "string", "minLength": 1},
+    "test_class": {"enum": ["REQUIREMENTS", "FUNCTIONAL", "REGRESSION", "INTEGRATION", "E2E", "DATA_QC", "SECURITY", "PERFORMANCE", "ACCESSIBILITY", "VISUAL", "ADVERSARIAL"]},
+    "result": {"enum": ["PASS", "FAIL", "BLOCKED", "INCONCLUSIVE"]},
+    "cases": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["case_id", "description", "result"], "properties": {"case_id": {"type": "string"}, "description": {"type": "string"}, "result": {"enum": ["PASS", "FAIL", "SKIP"]}, "evidence_ids": {"type": "array", "items": {"type": "string"}}, "notes": {"type": ["string", "null"]}}}},
+    "created_at": {"type": "string", "format": "date-time"}
+  }
+}

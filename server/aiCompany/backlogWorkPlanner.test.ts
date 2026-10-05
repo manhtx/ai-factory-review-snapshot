@@ -1,0 +1,244 @@
+import { mkdtemp } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { describe, expect, it } from 'vitest';
+import { planBacklogWork, planCadenceGovernanceWork, planIndependentReviews, planPreReleaseReviews, planResearchWork, roleForBacklog } from './backlogWorkPlanner';
+import { InMemoryEvidenceResolver } from './evidenceResolver';
+import { RoleWorkQueue, type RoleWorkItem } from './roleWorkQueue';
+
+async function fixtureQueue(prefix: string) {
+  const resolver = new InMemoryEvidenceResolver();
+  const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), prefix)), resolver);
+  const register = (item: RoleWorkItem, id: string) => {
+    const row = resolver.createEvidence({ evidence_id: id, namespace: item.assignment!.namespace, run_id: item.assignment!.run_id, produced_by_role: item.role, content: 'Isolated planner fixture; no product effect proof.' });
+    resolver.register({ ...row, work_id: item.work_id, source_artifact: 'backlogWorkPlanner.test.ts' });
+  };
+  return { queue, register };
+}
+
+describe('backlog work planner', () => {
+  it('routes series canonicalization to backend and ingestion cadence to data engineering', () => {
+    expect(roleForBacklog({ title: 'Canonicalize repeated periods in series payload' })).toBe('backend-engineer');
+    expect(roleForBacklog({ title: 'Align provider ingestion cadence' })).toBe('data-engineer');
+  });
+  it('creates idempotent governance work for the active cadence', async () => {
+    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'cadence-work-')));
+    const first = await planCadenceGovernanceWork({ projectId: 'macro-os', cadence: 'monthly', queue });
+    const second = await planCadenceGovernanceWork({ projectId: 'macro-os', cadence: 'monthly', queue });
+    expect(first.map((item) => item.role)).toEqual(expect.arrayContaining(['ceo', 'pm', 'stakeholder-panel', 'domain-expert', 'ai-engineer', 'security']));
+    expect(second).toHaveLength(0);
+    expect(first[0].title).toContain('evidence:');
+  });
+  it('maps work to validated roles and is idempotent', async () => {
+    expect(roleForBacklog({ title: 'Provider observations are stale', status: 'planned' })).toBe('data-engineer');
+    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'planner-')));
+    const input = { projectId: 'macro-os', items: [{ id: 'B-1', title: 'Provider observations are stale', status: 'planned' }, { id: 'B-2', title: 'API recovery', status: 'planned' }] };
+    expect((await planBacklogWork({ ...input, queue })).created).toHaveLength(2);
+    expect((await planBacklogWork({ ...input, queue })).created).toHaveLength(0);
+    expect(await queue.records('macro-os')).toHaveLength(2);
+  });
+
+  it('routes proposed product work through PM review instead of direct execution', async () => {
+    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'pm-gate-planner-')));
+    const input = { projectId: 'macro-os', items: [{ backlog_id: 'B-PROPOSED', title: 'Improve freshness display', status: 'PROPOSED' }] };
+    const first = await planBacklogWork({ ...input, queue });
+    expect(first.created).toHaveLength(1);
+    expect(first.created[0]).toMatchObject({ backlog_id: 'PM_REVIEW:B-PROPOSED', role: 'pm' });
+    expect(await planBacklogWork({ ...input, queue })).toMatchObject({ created: [], existing: 1 });
+    expect((await queue.records('macro-os')).some((item) => item.backlog_id === 'B-PROPOSED' && item.role !== 'pm')).toBe(false);
+  });
+
+  it('promotes proposed work only after an explicit PM PROCEED decision', async () => {
+    const { queue, register } = await fixtureQueue('pm-promote-planner-');
+    const review = await queue.create({ project_id: 'macro-os', backlog_id: 'PM_REVIEW:B-PROPOSED', title: 'PM review', role: 'pm' });
+    const claimAuthority1 = await queue.claim(review.work_id, 'pm');
+    await queue.submitForReview(review.work_id, claimAuthority1.attempt_authority);
+    register(review, 'PM-EVIDENCE');
+    await queue.complete(review.work_id, ['PM-EVIDENCE'], undefined, undefined, { role: 'pm', problem: 'p', target_user: 'u', product_goal_objective: 'g', evidence_ids: ['PM-EVIDENCE'], facts: ['f'], assumptions: [], scope: ['s'], non_goals: [], recommendation: 'PROCEED', confidence: 0.9, unknowns: [] }, undefined, undefined, claimAuthority1.attempt_authority);
+    const result = await planBacklogWork({ projectId: 'macro-os', items: [{ backlog_id: 'B-PROPOSED', title: 'Repair API', status: 'PROPOSED' }], queue });
+    expect(result.created).toHaveLength(1);
+    expect(result.created[0]).toMatchObject({ backlog_id: 'B-PROPOSED', role: 'backend-engineer' });
+  });
+
+  it('does not let a quarantined historical execution suppress a new PM approval', async () => {
+    const { queue, register } = await fixtureQueue('pm-history-planner-');
+    const old = await queue.create({ project_id: 'macro-os', backlog_id: 'B-HISTORY', title: 'Repair API', role: 'backend-engineer' });
+    await queue.quarantine(old.work_id, 'superseded historical execution');
+    const review = await queue.create({ project_id: 'macro-os', backlog_id: 'PM_REVIEW:B-HISTORY:recheck', title: 'PM recheck', role: 'pm' });
+    const claimAuthority2 = await queue.claim(review.work_id, 'pm');
+    await queue.submitForReview(review.work_id, claimAuthority2.attempt_authority);
+    register(review, 'PM-EVIDENCE');
+    await queue.complete(review.work_id, ['PM-EVIDENCE'], undefined, undefined, { role: 'pm', problem: 'p', target_user: 'u', product_goal_objective: 'g', evidence_ids: ['PM-EVIDENCE'], facts: ['f'], assumptions: [], scope: ['s'], non_goals: [], recommendation: 'PROCEED', confidence: 0.9, unknowns: [] }, undefined, undefined, claimAuthority2.attempt_authority);
+    const result = await planBacklogWork({ projectId: 'macro-os', items: [{ backlog_id: 'B-HISTORY', title: 'Repair API', status: 'PROPOSED' }], queue });
+    expect(result.created).toHaveLength(1);
+    expect(result.created[0]).toMatchObject({ backlog_id: 'B-HISTORY', role: 'backend-engineer' });
+  });
+
+  it('rechecks legacy prose PM decisions instead of treating them as approval', async () => {
+    const { queue, register } = await fixtureQueue('pm-recheck-planner-');
+    const review = await queue.create({ project_id: 'macro-os', backlog_id: 'PM_REVIEW:B-PROPOSED', title: 'legacy PM review', role: 'pm' });
+    const claimAuthority3 = await queue.claim(review.work_id, 'pm');
+    await queue.submitForReview(review.work_id, claimAuthority3.attempt_authority);
+    register(review, 'PM-EVIDENCE');
+    await queue.complete(review.work_id, ['PM-EVIDENCE'], undefined, undefined, { role: 'pm', problem: 'p', target_user: 'u', product_goal_objective: 'g', evidence_ids: ['PM-EVIDENCE'], facts: ['f'], assumptions: [], scope: ['s'], non_goals: [], recommendation: 'PROCEED', confidence: 0.9, unknowns: [] }, undefined, undefined, claimAuthority3.attempt_authority);
+    // Simulate a legacy record by using a non-contract recommendation in a
+    // separate review ledger item; the planner must request recheck, never
+    // create implementation work from it.
+    const legacy = await queue.create({ project_id: 'macro-os', backlog_id: 'PM_REVIEW:B-LEGACY', title: 'legacy PM review', role: 'pm' });
+    const claimAuthority4 = await queue.claim(legacy.work_id, 'pm');
+    await queue.submitForReview(legacy.work_id, claimAuthority4.attempt_authority);
+    register(legacy, 'PM-EVIDENCE-2');
+    await queue.complete(legacy.work_id, ['PM-EVIDENCE-2'], undefined, undefined, { role: 'pm', problem: 'p', target_user: 'u', product_goal_objective: 'g', evidence_ids: ['PM-EVIDENCE-2'], facts: ['f'], assumptions: [], scope: ['s'], non_goals: [], recommendation: 'HOLD', confidence: 0.9, unknowns: [] }, undefined, undefined, claimAuthority4.attempt_authority);
+    // A valid HOLD is not a legacy prose record and must not promote or recheck.
+    const result = await planBacklogWork({ projectId: 'macro-os', items: [{ backlog_id: 'B-LEGACY', title: 'Repair API', status: 'PROPOSED' }], queue });
+    expect(result.created).toHaveLength(0);
+    expect((await queue.records('macro-os')).some((item) => item.backlog_id === 'B-LEGACY' && item.role !== 'pm')).toBe(false);
+  });
+
+  it('creates independent QA and QC reviews after implementation completion', async () => {
+    const { queue, register } = await fixtureQueue('review-planner-');
+    const item = await queue.create({ project_id: 'macro-os', backlog_id: 'B-1', title: 'Repair API', role: 'backend-engineer' });
+    const claimAuthority5 = await queue.claim(item.work_id, 'backend');
+    await queue.submitForReview(item.work_id, claimAuthority5.attempt_authority);
+    register(item, 'API-TEST-1');
+    await queue.complete(item.work_id, ['API-TEST-1'], undefined, undefined, {
+      role: 'backend-engineer',
+      files_changed: ['server/api.ts'],
+      files_not_changed: [],
+      implementation_summary: 'API repaired',
+      summary: 'API repaired',
+      tests_run: ['npm test'],
+      tests_failed: [],
+      known_limitations: [],
+      rollback_instruction: 'git restore .',
+      evidence_ids: ['API-TEST-1'],
+    }, undefined, undefined, claimAuthority5.attempt_authority);
+    const reviews = await planIndependentReviews({ projectId: 'macro-os', queue });
+    expect(reviews).toHaveLength(2);
+    for (const review of reviews) {
+      expect(review.assignment).toMatchObject({ run_id: item.assignment!.run_id, namespace: item.assignment!.namespace });
+      const claimAuthority6 = await queue.claim(review.work_id, review.role);
+      await queue.submitForReview(review.work_id, claimAuthority6.attempt_authority);
+      await queue.complete(review.work_id, ['API-TEST-1'], undefined, { verdict: 'PASS', gate: 'fixture', summary: 'dependency fixture inspected', evidence: ['API-TEST-1'], failure_class: 'NONE', root_cause: 'none', recovery_required: false, recovery_actions: [], unblock_evidence: [], retry_budget: 0, next_review_trigger: 'fixture', confidence: .5 }, undefined, undefined, undefined, claimAuthority6.attempt_authority);
+    }
+    expect(await planIndependentReviews({ projectId: 'macro-os', queue })).toHaveLength(0);
+    expect((await queue.records('macro-os')).map((row) => row.role)).toEqual(expect.arrayContaining(['functional-qa', 'quality-control']));
+  });
+
+  it('requires a reason for blocking and reports overdue work for escalation', async () => {
+    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'triage-')));
+    const item = await queue.create({ project_id: 'macro-os', backlog_id: 'B-1', title: 'Blocked provider repair', role: 'data-engineer', due_at: '2026-09-01T00:00:00Z' });
+    await expect(queue.block(item.work_id, '')).rejects.toThrow('block reason');
+    await queue.block(item.work_id, 'provider contract unavailable');
+    const triage = await queue.triage('macro-os', new Date('2026-09-04T00:00:00Z'));
+    expect(triage.blocked[0]).toMatchObject({ state: 'BLOCKED', blocked_reason: 'provider contract unavailable' });
+    expect(triage.overdue).toHaveLength(0);
+  });
+
+  it('opens stakeholder, user, UX and domain reviews only after QA and QC pass', async () => {
+    const { queue, register } = await fixtureQueue('pre-release-');
+    const source = await queue.create({ project_id: 'macro-os', backlog_id: 'B-1', title: 'source fixture', role: 'user-persona', namespace: 'fixture', run_id: 'shared' });
+    register(source, 'SOURCE');
+    const claimAuthority7 = await queue.claim(source.work_id, 'fixture');
+    await queue.submitForReview(source.work_id, claimAuthority7.attempt_authority);
+    await queue.complete(source.work_id, ['SOURCE'], { research_question: 'fixture', source_reference: 'SOURCE', finding: 'fixture', confidence: .5 }, undefined, undefined, undefined, undefined, claimAuthority7.attempt_authority);
+    for (const role of ['functional-qa', 'quality-control'] as const) {
+      const item = await queue.create({ project_id: 'macro-os', backlog_id: `B-1:review:${role}`, title: `${role} review`, role, namespace: source.assignment!.namespace, run_id: source.assignment!.run_id, depends_on: [source.work_id] });
+      const claimAuthority8 = await queue.claim(item.work_id, role);
+      await queue.submitForReview(item.work_id, claimAuthority8.attempt_authority);
+      await queue.complete(item.work_id, ['SOURCE'], undefined, { verdict: 'PASS', gate: 'pre_release', summary: 'dependency inspected', evidence: ['SOURCE'], failure_class: 'NONE', root_cause: 'none', recovery_required: false, recovery_actions: [], unblock_evidence: [], retry_budget: 0, next_review_trigger: 'fixture', confidence: .5 }, undefined, undefined, undefined, claimAuthority8.attempt_authority);
+    }
+    expect(await planPreReleaseReviews({ projectId: 'macro-os', queue })).toHaveLength(4);
+    expect(await planPreReleaseReviews({ projectId: 'macro-os', queue })).toHaveLength(0);
+  });
+  it('creates research work for unscored or low-evidence ideas idempotently', async () => {
+    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'research-planner-')));
+    const ideas = [{ idea_id: 'I-1', project_id: 'macro-os', title: 'Evidence graph', problem: 'p', target_persona: 'u', product_goal_reference: 'g', differentiation_hypothesis: 'd', validation_metric: 'm', status: 'DISCOVERED' as const, created_at: '' }];
+    expect(await planResearchWork({ projectId: 'macro-os', ideas, queue })).toHaveLength(4);
+    expect(await planResearchWork({ projectId: 'macro-os', ideas, queue })).toHaveLength(0);
+  });
+
+  it('rejects mixed-scope pre-release dependencies without creating a fabricated common scope', async () => {
+    const root = await mkdtemp(path.join(os.tmpdir(), 'planner-mixed-scope-'));
+    const resolver = new InMemoryEvidenceResolver();
+    const queue = new RoleWorkQueue(root, resolver);
+    for (const role of ['functional-qa', 'quality-control'] as const) {
+      const item = await queue.create({ project_id: 'macro-os', backlog_id: `B:review:${role}`, title: 'scoped unit fixture', role, namespace: 'fixture', run_id: role });
+      const claim = await queue.claim(item.work_id, 'fixture');
+      const id = `ISOLATED-${role}`;
+      const receipt = resolver.createEvidence({ evidence_id: id, namespace: 'fixture', run_id: role, produced_by_role: 'isolated-fixture-input-loader', content: 'Unit input only; no independent product review' });
+      resolver.register({ ...receipt, work_id: item.work_id, source_artifact: 'backlogWorkPlanner.test.ts' });
+      await queue.submitForReview(item.work_id, claim.attempt_authority);
+      await queue.complete(item.work_id, [id], undefined, { verdict: 'PASS', gate: 'unit fixture', summary: 'fixture', evidence: [id], failure_class: 'NONE', root_cause: 'unit', recovery_required: false, recovery_actions: [], unblock_evidence: [], retry_budget: 0, next_review_trigger: 'fixture', confidence: .5 }, undefined, undefined, undefined, claim.attempt_authority);
+    }
+    const before = await queue.records();
+    await expect(planPreReleaseReviews({ projectId: 'macro-os', queue })).rejects.toThrow('dependency scope is missing or inconsistent');
+    expect(await queue.records()).toEqual(before);
+  });
+
+  it('rejects control plane continuity work without runtime failure evidence under CONTINUITY FREEZE', async () => {
+    const queue = new RoleWorkQueue(await mkdtemp(path.join(os.tmpdir(), 'freeze-planner-')));
+    const frozenItem = {
+      backlog_id: 'CP-1',
+      project_id: 'macro-os',
+      title: 'Extend continuity kernel with distributed coordination',
+      problem: 'Improve control plane supervisor lease',
+      status: 'SPRINT_SELECTED',
+      pm_review_status: 'APPROVED',
+      sprint_id: 'SPRINT-1',
+      work_class: 'CONTROL_PLANE_CONTINUITY',
+    };
+
+    const plannedUnauth = await planBacklogWork({ projectId: 'macro-os', items: [frozenItem], queue });
+    expect(plannedUnauth.created).toHaveLength(0);
+
+    const authorizedItem = {
+      ...frozenItem,
+      runtime_failure_evidence_id: 'RFE-2026-CRASH-001',
+    };
+    const plannedAuth = await planBacklogWork({ projectId: 'macro-os', items: [authorizedItem], queue });
+    expect(plannedAuth.created).toHaveLength(1);
+  });
+});
+
+it('does not generate QA/QC from DONE whose original receipts disappeared', async () => {
+  const { readinessAuthorityFixture } = await import('./readinessAuthorityTestFixture');
+  const { unlink } = await import('node:fs/promises');
+  const f = await readinessAuthorityFixture(['data-engineer']);
+  await unlink(path.join(f.root, 'role-evidence.jsonl'));
+  expect(await planIndependentReviews({ projectId: 'unit', queue: f.queue })).toEqual([]);
+  expect((await f.queue.records('unit')).every(row => row.state === 'DONE')).toBe(true);
+});
+it('does not generate prerelease reviews from receiptless QA/QC history', async () => {
+  const { readinessAuthorityFixture } = await import('./readinessAuthorityTestFixture');
+  const { unlink, appendFile } = await import('node:fs/promises');
+  const f = await readinessAuthorityFixture(['functional-qa','quality-control']);
+  for (const row of f.rows.filter(row=>['functional-qa','quality-control'].includes(row.role))) await appendFile(path.join(f.root,'role-work-queue.jsonl'),JSON.stringify({...row,backlog_id:`B:review:${row.role}`,queue_revision:row.queue_revision!+1})+'\n');
+  expect(await planPreReleaseReviews({ projectId: 'unit', queue: f.queue })).toHaveLength(4);
+  // A second fresh fixture proves receipt loss rather than idempotence.
+  const missing = await readinessAuthorityFixture(['functional-qa','quality-control']);
+  for (const row of missing.rows.filter(row=>['functional-qa','quality-control'].includes(row.role))) await appendFile(path.join(missing.root,'role-work-queue.jsonl'),JSON.stringify({...row,backlog_id:`B:review:${row.role}`,queue_revision:row.queue_revision!+1})+'\n');
+  await unlink(path.join(missing.root,'role-evidence.jsonl'));
+  expect(await planPreReleaseReviews({ projectId: 'unit', queue: missing.queue })).toEqual([]);
+});
+it('binds PM approved work to actual approval scope and refuses claim after approval receipt loss', async () => {
+  const { readinessAuthorityFixture } = await import('./readinessAuthorityTestFixture');
+  const { unlink, appendFile } = await import('node:fs/promises');
+  const f = await readinessAuthorityFixture(['pm']),pm=f.rows.find(row=>row.role==='pm')!;
+  await appendFile(path.join(f.root,'role-work-queue.jsonl'),JSON.stringify({...pm,backlog_id:'PM_REVIEW:B',queue_revision:pm.queue_revision!+1})+'\n');
+  const items=[{backlog_id:'B',title:'Repair API',status:'PROPOSED'}];
+  const planned=await planBacklogWork({projectId:'unit',items,queue:f.queue});
+  expect(planned.created).toHaveLength(1);
+  expect(planned.created[0]).toMatchObject({depends_on:[pm.work_id],namespace:'N',run_id:'R'});
+  await unlink(path.join(f.root,'role-evidence.jsonl'));
+  await expect(f.queue.claim(planned.created[0].work_id,'fixture')).rejects.toThrow(/evidence/);
+});
+it('missing PM receipt cannot promote a proposed backlog item', async () => {
+  const { readinessAuthorityFixture } = await import('./readinessAuthorityTestFixture');
+  const { unlink, appendFile } = await import('node:fs/promises');
+  const f=await readinessAuthorityFixture(['pm']),pm=f.rows.find(row=>row.role==='pm')!;
+  await appendFile(path.join(f.root,'role-work-queue.jsonl'),JSON.stringify({...pm,backlog_id:'PM_REVIEW:B',queue_revision:pm.queue_revision!+1})+'\n');
+  await unlink(path.join(f.root,'role-evidence.jsonl'));
+  expect((await planBacklogWork({projectId:'unit',items:[{backlog_id:'B',title:'Repair API',status:'PROPOSED'}],queue:f.queue})).created).toEqual([]);
+  expect((await f.queue.records('unit')).some(row=>row.backlog_id==='B')).toBe(false);
+});

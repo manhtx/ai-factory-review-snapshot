@@ -1,0 +1,13 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (20 tests) 3243ms
+   ✓ resolver without snapshot cannot silently authorize successful history  983ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 822ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 20ms
+
+ Test Files  3 passed (3)
+      Tests  36 passed (36)
+   Start at  10:46:01
+   Duration  4.85s (transform 77ms, setup 0ms, collect 136ms, tests 4.08s, environment 0ms, prepare 117ms)
+

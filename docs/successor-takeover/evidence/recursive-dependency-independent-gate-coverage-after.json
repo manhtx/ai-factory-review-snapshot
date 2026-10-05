@@ -1,0 +1,27 @@
+{
+  "observedAt": "2026-10-04T17:42:41.563Z",
+  "hash": "ee7339adb5033995705f95802fbf3a989767242c902c06a3592a4726418d936d",
+  "results": [
+    {
+      "phase": "claim",
+      "error": "Error: work dependencies are not complete: WORK-1791135761329-jkjrly",
+      "bytesUnchanged": true,
+      "leafState": "READY"
+    },
+    {
+      "phase": "reserve",
+      "error": "Error: work dependencies are not complete: WORK-1791135761406-29nyz8",
+      "bytesUnchanged": true,
+      "leafState": "CLAIMED"
+    },
+    {
+      "phase": "review",
+      "error": "Error: work dependencies are not complete: WORK-1791135761497-lh85b4",
+      "bytesUnchanged": true,
+      "leafState": "CLAIMED"
+    }
+  ],
+  "realProviderCalls": 0,
+  "networkCalls": 0,
+  "method": "Temporary queue instance boundRoot wrapper pauses commit entry after initial prevalidation; production source unchanged."
+}

@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-05T04:02:55.674Z",
+  "scope": "Actual two OS child processes, temp receipts only; old records read paused300ms to expose check/append schedule",
+  "root": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/native-multiprocess-24PcPE",
+  "results": [
+    {
+      "code": 0,
+      "stdout": "{\"ok\":true,\"id\":\"ROLE-EVIDENCE-UNIT-WORK:00000000-0000-4000-8000-000000000001\"}\n",
+      "stderr": ""
+    },
+    {
+      "code": 0,
+      "stdout": "{\"ok\":true,\"id\":\"ROLE-EVIDENCE-UNIT-WORK:00000000-0000-4000-8000-000000000001\"}\n",
+      "stderr": ""
+    }
+  ],
+  "storedRows": 2,
+  "uniqueIdentities": 1,
+  "realProviderCalls": 0
+}

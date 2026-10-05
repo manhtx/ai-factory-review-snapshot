@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliResourceAdmission.test.ts (4 tests) 3666ms
+   ✓ actual agy dispatcher admits a current stub result only after its bound group exits  1548ms
+   ✓ actual SIGKILL leaves the provider alive and preserves admission until its entire group disappears  463ms
+   ✓ leader completion with a surviving actual descendant withholds release and terminal receipts  466ms
+   ✓ an actual spawn error preserves marked UNKNOWN ownership and never grants terminal success  1188ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  16:34:04
+   Duration  3.91s (transform 72ms, setup 0ms, collect 89ms, tests 3.67s, environment 0ms, prepare 33ms)
+

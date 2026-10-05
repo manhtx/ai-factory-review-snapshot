@@ -1,0 +1,195 @@
+{
+  "schema": "ai-factory.product-map-candidate.v1",
+  "sourceRevision": "fc476ecf935cd68d570e3995bf7a11008b15f996",
+  "observedAt": "2026-10-05T08:40:18.542Z",
+  "mode": "READ_ONLY_CENSUS",
+  "complete": false,
+  "productGoal": "docs/PRODUCT_GOAL.md",
+  "sources": {
+    "src/app/App.tsx": "2085dc6024223dea573040e9a3038f7c838e0e7a7b946129a0b89dc491eb3eef",
+    "src/app/config/routeAcceptance.ts": "1c1902c5127de77d68b75e7d7b3213f69311b17e6a6b13a306ecd09489087eec"
+  },
+  "facts": {
+    "routes": [
+      {
+        "route": "/world",
+        "page": "DashboardPage"
+      },
+      {
+        "route": "/countries",
+        "page": "CountryExplorerPage"
+      },
+      {
+        "route": "/countries/:code",
+        "page": "CountryExplorerPage"
+      },
+      {
+        "route": "/indicators",
+        "page": "IndicatorsPage"
+      },
+      {
+        "route": "/indicators/:id",
+        "page": "IndicatorDetailPage"
+      },
+      {
+        "route": "/central-banks",
+        "page": "FedIntelligencePage"
+      },
+      {
+        "route": "/central-banks/:code",
+        "page": "FedIntelligencePage"
+      },
+      {
+        "route": "/fed-intelligence",
+        "page": "FedIntelligencePage"
+      },
+      {
+        "route": "/markets",
+        "page": "RegimeDetectionPage"
+      },
+      {
+        "route": "/history",
+        "page": "CyclesPage"
+      },
+      {
+        "route": "/history/events/:id",
+        "page": "CycleDetailPage"
+      },
+      {
+        "route": "/compare",
+        "page": "RelationshipsPage"
+      },
+      {
+        "route": "/workspaces",
+        "page": "WorkspacesPage"
+      },
+      {
+        "route": "/workspaces/:id",
+        "page": "WorkspaceDetailPage"
+      },
+      {
+        "route": "/forecasts",
+        "page": "ForecastCenterPage"
+      },
+      {
+        "route": "/ai",
+        "page": "AIPage"
+      },
+      {
+        "route": "/data-sources",
+        "page": "DataSourcesPage"
+      },
+      {
+        "route": "/settings",
+        "page": "SettingsPage"
+      },
+      {
+        "route": "/cycles",
+        "page": "CyclesPage"
+      },
+      {
+        "route": "/cycles/:id",
+        "page": "CycleDetailPage"
+      },
+      {
+        "route": "/similarity",
+        "page": "HistoricalSimilarityPage"
+      },
+      {
+        "route": "/scenarios",
+        "page": "ScenarioAnalysisPage"
+      },
+      {
+        "route": "/scorecards",
+        "page": "ScorecardPage"
+      },
+      {
+        "route": "/regimes",
+        "page": "RegimeDetectionPage"
+      },
+      {
+        "route": "/monitoring",
+        "page": "MonitoringPage"
+      },
+      {
+        "route": "/copilot",
+        "page": "ResearchCopilotPage"
+      },
+      {
+        "route": "/briefing",
+        "page": "DailyBriefingPage"
+      },
+      {
+        "route": "/watchlist",
+        "page": "WatchlistPage"
+      },
+      {
+        "route": "/relationships",
+        "page": "RelationshipsPage"
+      },
+      {
+        "route": "/alerts",
+        "page": "AlertsPage"
+      },
+      {
+        "route": "/openbb-reviews",
+        "page": "OpenBBReviewsPage"
+      },
+      {
+        "route": "/openbb-pilot-gate",
+        "page": "OpenBBPilotGatePage"
+      },
+      {
+        "route": "/fallback-reviews",
+        "page": "FallbackReviewsPage"
+      },
+      {
+        "route": "/mvp-readiness",
+        "page": "MvpReadinessPage"
+      }
+    ],
+    "missingExactAcceptancePatterns": [
+      "/world",
+      "/countries/:code",
+      "/central-banks",
+      "/central-banks/:code",
+      "/markets",
+      "/history",
+      "/history/events/:id",
+      "/compare"
+    ]
+  },
+  "maturityDimensions": [
+    "Intent",
+    "ScopeLegitimacy",
+    "Specification",
+    "Implementation",
+    "DataReadiness",
+    "SemanticIntegrity",
+    "Canonicality",
+    "RuntimeReachability",
+    "ConsumerConnection",
+    "Verification",
+    "Persistence",
+    "UXProminence",
+    "MeasurementReadiness",
+    "Outcome",
+    "Automation"
+  ],
+  "maturity": "UNKNOWN in every dimension; route implementation source is present only",
+  "capabilityIdentity": "UNKNOWN; routes are implementations, not capabilities",
+  "remainingCensus": [
+    "Goal/MVP/Roadmap meaning",
+    "APIs and consumers",
+    "domain duplicates",
+    "data stores/migrations",
+    "tests telemetry outcomes",
+    "backlog frontier research portfolio",
+    "candidate lineage"
+  ],
+  "limitations": [
+    "No runtime/outcome proof or BUILD dispatch",
+    "No capability completion claim or canonical alias adjudication"
+  ],
+  "reobservation": "Exact route/acceptance source hashes unchanged at current candidate; maturity still UNKNOWN"
+}

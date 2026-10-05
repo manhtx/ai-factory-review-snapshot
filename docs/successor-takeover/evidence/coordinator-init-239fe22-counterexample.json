@@ -1,0 +1,25 @@
+{
+  "observedAt": "2026-10-05T09:42:04.353Z",
+  "sourceRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "sourceTreeClean": true,
+  "sourceHash": "80dc6fa54bfe14c03667b25fa389603e8ba11ebb8dabf91afd7eb11283e8fcc6",
+  "scope": "Actual coordinator entrypoint; real three OS actors; SIGSTOP at owner publication; one temporary isolated control root; all actors held before work dispatch; no provider/model calls",
+  "aPid": 70224,
+  "bPid": 70229,
+  "cPid": 70232,
+  "bAliveAtAOverwrite": true,
+  "bOwnerBytesPreserved": false,
+  "aExitSignal": null,
+  "aExitCode": 143,
+  "ownerAbsentAfterATermination": true,
+  "cAcquiredWhileBAlive": true,
+  "providerCompanyCalls": 0,
+  "conclusion": "Partial initialization permits a second live coordinator; resumed first initializer overwrites ownership and its unconditional signal-release deletes the live successor slot",
+  "blocks": {
+    "A": "UNPROVEN",
+    "B": "UNPROVEN",
+    "C": "UNPROVEN",
+    "D": "UNPROVEN"
+  },
+  "independent": false
+}

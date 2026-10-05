@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 253ms
+
+ Test Files  1 passed (1)
+      Tests  13 passed (13)
+   Start at  21:46:20
+   Duration  557ms (transform 123ms, setup 0ms, collect 157ms, tests 253ms, environment 0ms, prepare 32ms)
+

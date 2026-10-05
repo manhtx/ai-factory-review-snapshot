@@ -1,0 +1,29 @@
+{
+  "schema": "security-boundary.runtime.v1",
+  "observedAt": "2026-10-02T10:43:32.199637+00:00",
+  "sourceRevision": "e520d166770d41b67281b3b1b20c6bae35e90150",
+  "indexSha256": "3457118c42f54aeae3b91738f3c0e132e59450aaf83712ca94a050ed72f09587",
+  "sourceDirty": true,
+  "listener": "COMMAND   PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    58145 manhtx   23u  IPv4 0xf4d7ba2845edd558      0t0  TCP 127.0.0.1:8787 (LISTEN)\n",
+  "requests": [
+    {
+      "path": "/api/live",
+      "status": 200,
+      "body": {
+        "status": "alive",
+        "time": "2026-10-02T10:43:32.135Z",
+        "runtimeRevision": "local-unattested"
+      }
+    },
+    {
+      "path": "/api/admin/company/escalations",
+      "status": 401,
+      "body": {
+        "error": "Unauthorized"
+      }
+    }
+  ],
+  "runtimeRevisionAttestation": "UNATTESTED",
+  "successorAuthority": "NONE",
+  "productionAutonomy": "DISABLED_CONFIGURED"
+}
