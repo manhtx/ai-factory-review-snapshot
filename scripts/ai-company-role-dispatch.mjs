@@ -52,6 +52,12 @@ if (engineeringRoles.has(role) && process.env.AI_COMPANY_REQUIRE_WORKTREE === 't
   process.exit(4);
 }
 if (workspace && path.resolve(workspace) === root) { console.error('Workspace must be isolated from the control-plane checkout'); process.exit(4); }
+let sandboxProfile;
+if (runner === 'agy' && workspace && process.platform === 'darwin' && process.env.AI_COMPANY_MAC_SANDBOX === 'true') {
+  const { macSandboxProfile } = await import('../server/aiCompany/macSandbox.ts');
+  // Validate filesystem scope before claiming a queue attempt.
+  sandboxProfile = macSandboxProfile(controlRoot, workspace);
+}
 
 const roleRules = {
   'ceo-guild': 'Synthesize CEO, PM, user, data, domain, stakeholder, delivery and security evidence; resolve trade-offs and record ACCEPT/VALIDATE/HOLD/REJECT direction. Never authorize release.',
@@ -210,10 +216,9 @@ let executableArgs = commandArgs;
 let profilePath;
 const isolatedVitestConfig = path.join('/tmp', `ai-company-vitest-${workId}.config.mjs`);
 await writeFile(isolatedVitestConfig, `export default { cacheDir: ${JSON.stringify(path.join('/tmp', `ai-company-vitest-${workId}`))}, test: { fileParallelism: false, hookTimeout: 30000 } };\n`, 'utf8');
-if (runner === 'agy' && workspace && process.platform === 'darwin' && process.env.AI_COMPANY_MAC_SANDBOX === 'true') {
-  const { macSandboxProfile } = await import('../server/aiCompany/macSandbox.ts');
+if (sandboxProfile) {
   profilePath = path.join('/tmp', `ai-company-${workId}-${Date.now()}.sb`);
-  await writeFile(profilePath, macSandboxProfile(root, workspace));
+  await writeFile(profilePath, sandboxProfile);
   executable = '/usr/bin/sandbox-exec';
   executableArgs = ['-f', profilePath, command, ...commandArgs];
 }

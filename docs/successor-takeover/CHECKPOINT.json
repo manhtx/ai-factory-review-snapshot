@@ -3,16 +3,16 @@
   "authoritative": false,
   "missionId": "AI_FACTORY_FINAL_CONVERGENCE_V2",
   "missionSha256": "eb015a16e78427db6b2d548ec0365de540f82d0cfb6bbddd755d82ba8dac6e23",
-  "phase": "CONTROLLER_ARCHITECTURE_REOPENED; ACTUAL_SELECTION_CAS_AND_REVOKED_DISPATCH_COUNTEREXAMPLES",
-  "observedAt": "2026-10-05T09:57:33.044669+00:00",
-  "sourceRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "phase": "BOUNDED_WORKER_SANDBOX_REPAIRED_AND_EXACT_SOURCE_SEALED; CONTROLLER_GATEWAY_OPEN",
+  "observedAt": "2026-10-05T10:40:43.039603+00:00",
+  "sourceRevision": "a534211443a2e251136a21150e8054461d7d5a00",
   "sourceTreeCleanAtProof": true,
-  "candidateRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "candidateRevision": "a534211443a2e251136a21150e8054461d7d5a00",
   "candidateAuthority": "NONE",
   "sourceCandidateSeal": "SOURCE_CANDIDATE_SEAL.json; source identity only, assurance pending",
-  "currentPublication": "Private origin matched1635505 at last publication; pinned tested source239fe22; subsequent counterexample evidence is documentation-only carrier history; PUBLIC snapshot destination pending",
+  "currentPublication": "Public b8f1448 is historical1113 export pinned239; current a534211 snapshot refresh pending",
   "previousCandidate": "d23b293 dirty worktree preserved; superseded for current candidate selection",
-  "exactRevisionResults": "239fe22 clean533PASS51FILES; full tscPASS; scoped lintPASS; coordinator original entrypoint counterexample persists",
+  "exactRevisionResults": "Clean539PASS53FILES; full tscPASS; affected lintPASS; actual sandbox and dispatcher fixtures builder-only",
   "actorCounterexample": "Actual three OS coordinators: partial initialization lets B replace A; resumed A overwrites B; A signal-release deletes B slot; C enters while B alive",
   "productReconciliation": "MASTER_PRODUCT_MAP_CANDIDATE.json preliminary fc476ec-era census; incomplete, no maturity/runtime/outcome promotion",
   "trustEpoch": "LEGACY_EPOCH",
@@ -34,7 +34,8 @@
     "Original-source recovery re-evaluation and canonical/fenced terminal authority unproven",
     "Native+CLI cooperative receipt capability and selected combined capture repaired builder424; actual controller/lease/OS actor authority, revision/input/effect/cross-store crash/downstream atomicity/compatibility intake/PD009 OPEN",
     "CURRENT_REPRODUCED actual coordinator partial-init overwrite and stale signal-release; controller architecture root cause reopened",
-    "Execution selection CAS not serialized; genuinely revoked lease ignored at actual role-dispatch; selection cannot be promoted to controller authority"
+    "Execution selection CAS not serialized; genuinely revoked lease ignored at actual role-dispatch; selection cannot be promoted to controller authority",
+    "Profile activation/other runners, inherited privileged environment, outside-control-root reads and hardlinks remain OPEN"
   ],
   "openP1": [
     "Historical native and CLI timing failures remain UNKNOWN_CAUSE; current full regression passes",
@@ -45,8 +46,8 @@
   ],
   "proofDebt": "PROOF_DEBT_LEDGER.json; nine blocking debts incl PD009independentreviewdenial",
   "activeObjective": "Resolve actual administrative/controller/OS/provider writer authority and cross-store/crash semantics",
-  "work": "Actual two-OS-process selection issuer race and revoked-selection role-dispatch reproduced; model selection rejected as controller lifetime authority; effect placements and existing primitive comparison documented",
-  "attempt": "No source edits or live enabling this turn; pinned239fe22 historical current source533PASS remains scoped; fresh negative probes at clean carrier1635505 are not independent approval",
+  "work": "Optional macOS sandbox canonical scope repair; actual dispatcher validates supplied control root before claim; no live provider or company operation",
+  "attempt": "Six actual boundary tests PASS; exact clean regression539PASS; OS counterexamples and initial red tests preserved",
   "authority": "Founder standing local reversible work only; no public production authority",
   "effects": [
     "3 local commits; no push or deployment",
@@ -87,7 +88,8 @@
     "Root native ledger mandatory queue capability/issuer publication and actual adapter/root preflight; unfenced writer retired; legitimate fixtures moved to actual claim/issuance; temp process/stub tests only",
     "Root combined resolver capture selected-scope repair and direct selected resolution recheck; temp actual capture/publication probe and10controls only",
     "b318825 cooperative resource repair and239fe22 provider lifecycle source commits; isolated stubs/actual OS processes only; no live services restarted; no real model/product effects; candidate authority NONE",
-    "Original issuer/revoker and actual role-dispatch temporary Node fixture only; two real selection issuer processes; no production or model calls; no source or legacy worktree edits"
+    "Original issuer/revoker and actual role-dispatch temporary Node fixture only; two real selection issuer processes; no production or model calls; no source or legacy worktree edits",
+    "User-authorized public source/evidence inspection repository created; no parent Git history, browser/session files, live runtime/leases/databases/provider logs or credentials copied; original repo remainsPRIVATE; no deployment/runtime enabling"
   ],
   "evidence": "SOURCE_CANDIDATE_SEAL.json",
   "historicalFindingClassifications": {
@@ -151,7 +153,8 @@
     "timingResidual": "INITIAL_FULL523PASS10TIMEOUTS; FOCUSED30PASS; CLEAN_FULL533PASS; UNKNOWN_CAUSE",
     "resourceLifecycle": "23UNIT+7OS+4GOVERNOR+4ACTUAL_CLI_CONTROLS; ORIGINAL_PROVIDER_ORPHAN_RETAINED",
     "executionSelectionActual": "GENUINE_EXPECTED_REV1_TWO_OS_ISSUERS_BOTH_ACCEPT_SAME_REV2_ID",
-    "revokedSelectionActual": "GENUINE_REVOKED_ID_PASSED_TO_ACTUAL_DISPATCH; TEMP_STUB_CALLED; RECEIPT_AND_DONE; AUTHORITY_NOT_ENFORCED"
+    "revokedSelectionActual": "GENUINE_REVOKED_ID_PASSED_TO_ACTUAL_DISPATCH; TEMP_STUB_CALLED; RECEIPT_AND_DONE; AUTHORITY_NOT_ENFORCED",
+    "publicSnapshot": "FIRST37PASS1EPERM; UNCHANGED_CLI4PASS_AND_FULL38PASS4FILES; EPERM_CAUSE_UNKNOWN; ANONYMOUS_TREE_ALL1306_BLOBS_MATCH"
   },
   "independentReview": "Shared new API builder-only; existing fresh material review safety denial remains PD009; not retried/substituted",
   "migration": "NOT_PERFORMED",
@@ -160,7 +163,7 @@
   "founderAbsenceTrial": "NOT_STARTED",
   "productionAutonomy": "DISABLED_CONFIGURED",
   "deniedG1Verification": "PRESERVED; NOT_RETRIED_OR_BYPASSED",
-  "nextSafeAction": "Specify existing transactional authority/controller gateway integration and exact effect-boundary placement/delegation/reconciliation before source edits. Retire duplicated coordinator/supervisor authority claims; selection remains provenance/config. Preserve actual issuer race, revoked-dispatch, coordinator and provider counterexamples, timing UNKNOWN and PD009 denial; no live enabling.",
+  "nextSafeAction": "Publish current exact source/evidence snapshot; then actual dummy privileged-environment inheritance probe and existing controller gateway effect placement; no third tactical coordinator patch",
   "worktreeSourceHashes": {
     "scripts/ai-company-role-dispatch.mjs": "9cad0e74479d5d0c899f4dac94eb588cde70d96bd2ff7b222219eb3ab1387d29",
     "scripts/ai-company-run-ready.mjs": "80dc6fa54bfe14c03667b25fa389603e8ba11ebb8dabf91afd7eb11283e8fcc6",
@@ -250,6 +253,7 @@
   },
   "effectHistoryPolicy": "Existing effects entries are historical rollout history only; old uncommitted/no-push wording is not a statement of current Git state.",
   "resourceAuthority": "GROUP_BOUND cooperative lifecycle guarded with actual OS proof; LAUNCH_UNCERTAIN/legacy reconciliation OPEN; coordinator authority counterexample OPEN",
-  "publicationAccess": "PRIVATE repository observed; public snapshot destination choice pending; no full-repository visibility change authorized by AI Factory-only scope",
-  "observedCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6"
+  "publicationAccess": "PUBLIC https://github.com/manhtx/ai-factory-review-snapshot; anonymous manifest/tree verified; all1306 remote blobs match; original repositoryPRIVATE",
+  "observedCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6",
+  "publicReviewSnapshot": "evidence/public-review-snapshot-publication.json; immutable snapshot b8f1448 from carrier1113cd7; source1299 +generated6 +manifest1; fresh Git history; no live machine stores or parent history"
 }

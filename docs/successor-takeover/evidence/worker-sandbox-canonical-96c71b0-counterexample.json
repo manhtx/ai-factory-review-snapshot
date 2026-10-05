@@ -1,0 +1,13 @@
+{
+  "observedAt": "2026-10-05T10:23:59.069Z",
+  "scope": "Actual current profile and OS sandbox; canonical temporary paths under /private/tmp; dummy fixture only; no live state/providers",
+  "sourceRevision": "96c71b0cfa81c08af6fd996fd3977abd8bef91a8",
+  "sourceTreeClean": true,
+  "profileSourceHash": "fb0ea2b039a22bc70cb9eea1c4707cf4fa333258cd7c8b63955f42e5195179d8",
+  "exitCode": 0,
+  "signal": null,
+  "stdout": "{\"privateRead\":true,\"controlWrite\":true,\"workerWrite\":true}\n",
+  "stderr": "",
+  "profileHash": "ac4bef2a40d07131a934da9449c3930e361e982d95395f91d20b8f1523886e11",
+  "independent": false
+}

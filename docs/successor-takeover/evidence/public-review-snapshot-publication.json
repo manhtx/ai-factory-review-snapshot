@@ -1,0 +1,23 @@
+{
+  "observedAt": "2026-10-05T10:16:31.344Z",
+  "publicRepository": "https://github.com/manhtx/ai-factory-review-snapshot",
+  "visibility": "PUBLIC",
+  "snapshotCommit": "b8f1448a1680f794b8f0373f76c99b76c9a59836",
+  "branch": "codex/ai-factory-review",
+  "sourceCarrierRevision": "1113cd7b53da5c985489c4163f3512da3e7f0cb7",
+  "pinnedCandidateRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "anonymousRemoteManifestRead": true,
+  "anonymousRemoteTreeRead": true,
+  "authenticationHeadersSent": false,
+  "manifestSha256": "36a30d78f7df0cc9f5e219064d7c99a296a989fbe86e17197026c8630314a301",
+  "allRemoteBlobIdentitiesMatch": true,
+  "remoteTrackedFiles": 1306,
+  "exportedSourceFiles": 1299,
+  "historyCommits": 1,
+  "proofAuthority": "NONE",
+  "productionAutonomy": "DISABLED",
+  "initialSmoke": "37PASS1EPERM; UNKNOWN_CAUSE",
+  "unchangedRechecks": "CLI4PASS; FULL38PASS4FILES",
+  "parentRepositoryVisibility": "PRIVATE",
+  "sourceAndEvidenceExportOnly": true
+}

@@ -1,11 +1,11 @@
 {
   "schema": "ai-factory.source-candidate-seal.v1",
   "authoritative": false,
-  "observedAt": "2026-10-05T10:40:43.039603+00:00",
+  "observedAt": "2026-10-05T09:39:27.533Z",
   "missionId": "AI_FACTORY_FINAL_CONVERGENCE_V2",
-  "candidateRevision": "a534211443a2e251136a21150e8054461d7d5a00",
-  "parentRevision": "96c71b0cfa81c08af6fd996fd3977abd8bef91a8",
-  "gitTree": "86fac2cca36a55b1cab5b45257a2344d5be27cfc",
+  "candidateRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "parentRevision": "b318825bba40bb7b9268d835a67cc08b548459ba",
+  "gitTree": "d984488a4a82a85ea3d98b1212bf05fb194e073f",
   "branch": "codex/ai-company-hardening-20260910",
   "sourceSeal": "IMMUTABLE_GIT_SOURCE_IDENTIFIED",
   "cleanAtTestStart": true,
@@ -83,10 +83,7 @@
       "server/aiCompany/resourceAdmissionProcess.test.ts": "f400d3e3054984992e91aa98efed65087c624f843166df38ca434a8051a91dbd",
       "server/aiCompany/cliResourceAdmission.test.ts": "ffcc500a1a72643afc578e85b3ca87b931b173e6eea0c5ff7e3be3fd5eed4980",
       "server/aiCompany/resourceGovernor.ts": "40454585ad2768d52efebda8bc96d8833731e421c5d4ebca9ad77259f6861361",
-      "scripts/ai-company-role-dispatch.mjs": "26220bf9cbfde9f629b8b15b9fe248af4bab6c78634ad4be8ec08726f0eab506",
-      "server/aiCompany/cliSandboxBoundary.test.ts": "0be77cb4fc9a33a76e2902f3d85048ebffd08bdcdcce7303e293a4ea719b511b",
-      "server/aiCompany/macSandbox.test.ts": "084aa651d45e1fc11c7b24776bad1012a475b2adaf045caf0a29c3fb9e7668db",
-      "server/aiCompany/macSandbox.ts": "e37a998c74c39171263df1a3b11677e698076b4aca7a372763422cff309d1833"
+      "scripts/ai-company-role-dispatch.mjs": "9cad0e74479d5d0c899f4dac94eb588cde70d96bd2ff7b222219eb3ab1387d29"
     }
   },
   "tcbCompleteness": "OPEN_MATERIAL_WRITER_CENSUS",
@@ -100,11 +97,12 @@
       "--noEmit"
     ],
     "lint": [
-      "node",
+      "/usr/local/bin/node",
       "node_modules/eslint/bin/eslint.js",
-      "server/aiCompany/macSandbox.ts",
-      "server/aiCompany/macSandbox.test.ts",
-      "server/aiCompany/cliSandboxBoundary.test.ts",
+      "server/aiCompany/resourceGovernor.ts",
+      "server/aiCompany/resourceAdmissionAuthority.test.ts",
+      "server/aiCompany/resourceAdmissionProcess.test.ts",
+      "server/aiCompany/cliResourceAdmission.test.ts",
       "scripts/ai-company-role-dispatch.mjs",
       "--max-warnings=0"
     ],
@@ -162,30 +160,29 @@
       "server/aiCompany/resourceGovernor.test.ts",
       "server/aiCompany/resourceAdmissionAuthority.test.ts",
       "server/aiCompany/resourceAdmissionProcess.test.ts",
-      "server/aiCompany/cliResourceAdmission.test.ts",
-      "server/aiCompany/macSandbox.test.ts",
-      "server/aiCompany/cliSandboxBoundary.test.ts"
+      "server/aiCompany/cliResourceAdmission.test.ts"
     ]
   },
   "results": {
-    "currentSuite": "539PASS53FILES",
+    "currentSuite": "533PASS51FILES",
     "typecheck": "PASS_FULL_TSC_NO_EMIT",
     "lint": "PASS_AFFECTED_FILES_AND_ROLE_DISPATCH",
     "resourceProvider": "ACTUAL_GROUP_SURVIVAL_WITHHOLDS_REPLACEMENT; OBSERVED_GROUP_ABSENCE_PERMITS_NEW_GRANT; UNBOUND_LAUNCH_UNKNOWN",
     "coordinator": "CURRENT_REPRODUCED_INIT_OVERWRITE_AND_UNCONDITIONAL_RELEASE; THREE_ACTUAL_OS_ACTORS",
-    "timing": "Current clean539PASS; all historical timing failures retained; cause UNKNOWN",
-    "workerSandbox": "BUILDER_SCOPED_VERIFIED: actual protected control read/write and symlink escapes denied; canonical and alias workspace writes permitted; supplied dispatcher root protected; invalid workspace denied before claim; separate fixture signal denied"
+    "timing": "Initial full WIP523PASS10TIMEOUTS; focused unchanged-deadline30PASS; clean current533PASS; cause UNKNOWN"
   },
   "artifactHashes": {
-    "docs/successor-takeover/evidence/revision-a534211-command-results.json": "b91a48aab181a520e10f3fecff0a5b7b6e72e04e83024fab17b6832dcb7db5dd",
-    "docs/successor-takeover/evidence/revision-a534211-lint.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "docs/successor-takeover/evidence/revision-a534211-tests.txt": "39b34aef683382dc953b71cbd9cbf39d82d1902879387cb115ff2ee89b11928f",
-    "docs/successor-takeover/evidence/revision-a534211-typecheck.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "docs/successor-takeover/evidence/coordinator-init-239fe22-counterexample.json": "99b9cf2b24c80eb1d5d6d9133933f6ed45b75e95bf3855579394d8a9b710016f",
+    "docs/successor-takeover/evidence/resource-provider-group-239fe22.json": "96d002e5a2fee8c430c95cb498fa9de56325bed7d341a014a7769f24a90d05c7",
+    "docs/successor-takeover/evidence/revision-239fe22-command-results.json": "f5f195f8d2514275011939d30c3fc684a35006ac1c1c946a43915d0fa8dbab25",
+    "docs/successor-takeover/evidence/revision-239fe22-lint.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/successor-takeover/evidence/revision-239fe22-tests.txt": "3876f3599178671b7a7aa788f7db2c9cb43c54c12d3b0b62e3975694f7fa08f8",
+    "docs/successor-takeover/evidence/revision-239fe22-typecheck.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "proofAssociation": {
-    "subjectRevision": "a534211443a2e251136a21150e8054461d7d5a00",
+    "subjectRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
     "evidenceCarrier": "Subsequent documentation-only commit; Git identity read externally; not the source candidate",
-    "supersededSourceSeal": "evidence/revision-239fe22-source-seal-historical.json retained, historical source533 not current certification",
+    "supersededSourceSeal": "evidence/revision-fc476ec-source-seal.json retained; not current certification",
     "historicalProof": "b318825 stage1 523PASS is historical and contains original provider orphan counterexample; initial lifecycle failure evidence retained; current533 is a clean exact run",
     "previousCandidate": "Dirty d23b293 checkout preserved; authority NONE"
   },
@@ -194,8 +191,7 @@
     "Source identity seal only; no assurance seal or Block A closure",
     "Actual coordinator init/late release counterexample CURRENT_REPRODUCED; ownership root cause reopened before third tactical repair",
     "Unbound/legacy provider state needs reconciliation; process/group birth identity and unrestricted host rights OPEN",
-    "Cross-store atomicity, complete writer census, migration, genesis, cold start, timing cause and independent review OPEN",
-    "Optional macOS profile fixture repair only; activation/other runners/environment privileges/outside-root reads/hardlinks/real-provider compatibility/controller gateway OPEN"
+    "Cross-store atomicity, complete writer census, migration, genesis, cold start, timing cause and independent review OPEN"
   ],
   "typecheckAdjudication": "All eleven baseline diagnostics repaired; current full tsc PASS. Historical baseline retained unchanged."
 }

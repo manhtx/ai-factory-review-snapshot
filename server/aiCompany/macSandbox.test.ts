@@ -1,12 +1,79 @@
-import { describe, expect, it } from 'vitest';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { spawn, spawnSync } from 'node:child_process';
+import { once } from 'node:events';
+import { afterEach, describe, expect, it } from 'vitest';
 import { macSandboxProfile } from './macSandbox';
 
+const roots: string[] = [];
+afterEach(() => { for (const root of roots.splice(0)) fs.rmSync(root, { recursive: true, force: true }); });
+function fixture(base = os.tmpdir()) {
+  const root = fs.mkdtempSync(path.join(base, 'factory-sandbox-test-'));
+  roots.push(root);
+  const control = path.join(root, 'control');
+  const workspace = path.join(control, '.ai-company', 'worktrees', 'assigned');
+  fs.mkdirSync(workspace, { recursive: true });
+  fs.mkdirSync(path.join(control, 'node_modules'));
+  fs.writeFileSync(path.join(control, 'private-fixture'), 'PRIVATE_FIXTURE_ONLY');
+  fs.writeFileSync(path.join(control, 'node_modules', 'dependency-fixture'), 'DEPENDENCY_FIXTURE_ONLY');
+  fs.symlinkSync(control, path.join(workspace, 'escape'));
+  return { root, control, workspace };
+}
+const macIt = process.platform === 'darwin' ? it : it.skip;
+
 describe('macSandboxProfile', () => {
-  it('allows workspace writes while denying network and unrelated writes', () => {
-    const profile = macSandboxProfile('/repo', '/repo/.ai-company/worktrees/T');
-    expect(profile).toContain('(allow file-write* (subpath "/repo/.ai-company/worktrees/T"))');
-    expect(profile).toContain('(deny default)');
-    expect(profile).not.toContain('network-outbound');
-    expect(profile).not.toContain('(allow file-write* (subpath "/repo"))');
+  it('rejects equal roots, workspace ancestors and nonexistent directories', () => {
+    const f = fixture();
+    expect(() => macSandboxProfile(f.control, f.control)).toThrow();
+    expect(() => macSandboxProfile(f.control, f.root)).toThrow();
+    expect(() => macSandboxProfile(f.control, path.join(f.root, 'missing'))).toThrow();
   });
+
+  macIt('denies signalling a separate fixture process while permitting self signal', async () => {
+    const f = fixture('/private/tmp');
+    const other = spawn(process.execPath, ['-e', 'setInterval(() => {}, 1000)'], { stdio: 'ignore' });
+    await once(other, 'spawn');
+    try {
+      const result = spawnSync('/usr/bin/sandbox-exec', ['-p', macSandboxProfile(f.control, f.workspace), process.execPath, '-e', `
+        const attempt = pid => { try { process.kill(pid, 'SIGCONT'); return true; } catch { return false; } };
+        console.log(JSON.stringify({ self: attempt(process.pid), other: attempt(Number(process.argv[1])) }));
+      `, String(other.pid)], { encoding: 'utf8', timeout: 10_000 });
+      expect(result.error).toBeUndefined();
+      expect(result.status, result.stderr).toBe(0);
+      expect(JSON.parse(result.stdout)).toEqual({ self: true, other: false });
+    } finally {
+      const exited = once(other, 'exit'); other.kill('SIGKILL'); await exited;
+    }
+  });
+
+  for (const kind of ['canonical-temp', 'aliased-temp'] as const) {
+    macIt(`enforces actual OS permissions for ${kind} nested workspace`, () => {
+      const f = fixture(kind === 'canonical-temp' ? '/private/tmp' : '/tmp');
+      const profile = macSandboxProfile(f.control, f.workspace);
+      const result = spawnSync('/usr/bin/sandbox-exec', ['-p', profile, process.execPath, '-e', `
+        const fs = require('node:fs');
+        const [control, workspace] = process.argv.slice(1);
+        const attempt = (fn) => { try { fn(); return true; } catch { return false; } };
+        console.log(JSON.stringify({
+          privateRead: attempt(() => fs.readFileSync(control + '/private-fixture')),
+          controlWrite: attempt(() => fs.writeFileSync(control + '/forbidden', 'fixture')),
+          workspaceWrite: attempt(() => fs.writeFileSync(workspace + '/allowed', 'fixture')),
+          escapeRead: attempt(() => fs.readFileSync(workspace + '/escape/private-fixture')),
+          escapeWrite: attempt(() => fs.writeFileSync(workspace + '/escape/forbidden-alias', 'fixture')),
+          dependencyRead: attempt(() => fs.readFileSync(control + '/node_modules/dependency-fixture')),
+          dependencyWrite: attempt(() => fs.writeFileSync(control + '/node_modules/forbidden', 'fixture')),
+          unrelatedTempWrite: attempt(() => fs.writeFileSync(control + '/../forbidden-temp', 'fixture')),
+        }));
+      `, f.control, f.workspace], { encoding: 'utf8', timeout: 10_000 });
+      expect(result.error).toBeUndefined();
+      expect(result.status, result.stderr).toBe(0);
+      expect(JSON.parse(result.stdout)).toEqual({
+        privateRead: false, controlWrite: false, workspaceWrite: true,
+        escapeRead: false, escapeWrite: false, dependencyRead: true, dependencyWrite: false, unrelatedTempWrite: false,
+      });
+      expect(fs.existsSync(path.join(f.control, 'forbidden'))).toBe(false);
+      expect(fs.existsSync(path.join(f.workspace, 'allowed'))).toBe(true);
+    });
+  }
 });

@@ -1,0 +1,63 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/macSandbox.test.ts (3 tests | 3 failed) 174ms
+   × macSandboxProfile > rejects equal roots, workspace ancestors and nonexistent directories 9ms
+     → expected [Function] to throw an error
+   × macSandboxProfile > enforces actual OS permissions for canonical-temp nested workspace 89ms
+     → expected { privateRead: true, …(6) } to deeply equal { privateRead: false, …(6) }
+   × macSandboxProfile > enforces actual OS permissions for aliased-temp nested workspace 75ms
+     → expected { privateRead: true, …(6) } to deeply equal { privateRead: false, …(6) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/macSandbox.test.ts > macSandboxProfile > rejects equal roots, workspace ancestors and nonexistent directories
+AssertionError: expected [Function] to throw an error
+ ❯ server/aiCompany/macSandbox.test.ts:27:59
+     25|   it('rejects equal roots, workspace ancestors and nonexistent directo…
+     26|     const f = fixture();
+     27|     expect(() => macSandboxProfile(f.control, f.control)).toThrow();
+       |                                                           ^
+     28|     expect(() => macSandboxProfile(f.control, f.root)).toThrow();
+     29|     expect(() => macSandboxProfile(f.control, path.join(f.root, 'missi…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  server/aiCompany/macSandbox.test.ts > macSandboxProfile > enforces actual OS permissions for canonical-temp nested workspace
+ FAIL  server/aiCompany/macSandbox.test.ts > macSandboxProfile > enforces actual OS permissions for aliased-temp nested workspace
+AssertionError: expected { privateRead: true, …(6) } to deeply equal { privateRead: false, …(6) }
+
+- Expected
++ Received
+
+  {
+-   "controlWrite": false,
++   "controlWrite": true,
+    "dependencyRead": true,
+-   "dependencyWrite": false,
+-   "escapeRead": false,
+-   "escapeWrite": false,
+-   "privateRead": false,
++   "dependencyWrite": true,
++   "escapeRead": true,
++   "escapeWrite": true,
++   "privateRead": true,
+    "workspaceWrite": true,
+  }
+
+ ❯ server/aiCompany/macSandbox.test.ts:52:41
+     50|       expect(result.error).toBeUndefined();
+     51|       expect(result.status, result.stderr).toBe(0);
+     52|       expect(JSON.parse(result.stdout)).toEqual({
+       |                                         ^
+     53|         privateRead: false, controlWrite: false, workspaceWrite: true,
+     54|         escapeRead: false, escapeWrite: false, dependencyRead: true, d…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed (3)
+   Start at  17:32:47
+   Duration  1.79s (transform 154ms, setup 0ms, collect 99ms, tests 174ms, environment 0ms, prepare 647ms)
+

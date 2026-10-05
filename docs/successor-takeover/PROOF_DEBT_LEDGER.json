@@ -85,7 +85,8 @@
         "evidence/execution-lease-race-1635505.json",
         "evidence/revoked-lease-dispatch-1635505.json"
       ],
-      "currentEvidenceCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6"
+      "currentEvidenceCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6",
+      "workerSandboxCandidate": "a534211 clean539PASS53FILES; optional macOS fixture repair only; controller/environment/writer/effect authority OPEN"
     },
     {
       "proofDebtId": "PD-008",
@@ -105,7 +106,8 @@
         "evidence/execution-lease-race-1635505.json",
         "evidence/revoked-lease-dispatch-1635505.json"
       ],
-      "currentEvidenceCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6"
+      "currentEvidenceCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6",
+      "workerSandboxCandidate": "a534211 clean539PASS53FILES; optional macOS fixture repair only; controller/environment/writer/effect authority OPEN"
     },
     {
       "proofDebtId": "PD-009",

@@ -1,7 +1,7 @@
 {
   "schema": "successor-takeover.proof-graph.v1",
   "authoritative": false,
-  "currentCandidateRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "currentCandidateRevision": "a534211443a2e251136a21150e8054461d7d5a00",
   "historicalProofPolicy": "Older nodes retain historical evidence only; none certifies the current candidate without exact revision revalidation. No negative evidence removed.",
   "purpose": "Explicit claim dependencies and limits for isolated candidate evidence; not an operational proof engine or closure certificate.",
   "executionInventory": {
@@ -11,6 +11,27 @@
     "postTestCheck": "MATCHED_AFTER_PRODUCT_API_REPAIRS; UNSEALED_CANDIDATE"
   },
   "nodes": [
+    {
+      "id": "worker-sandbox-a534211",
+      "sourceRevision": "a534211443a2e251136a21150e8054461d7d5a00",
+      "claim": "Optional macOS profile and actual dispatcher deny protected control reads/writes; canonical workspace writes succeed; clean539PASS53FILES/full tsc/scoped lint",
+      "evidence": "SOURCE_CANDIDATE_SEAL.json; evidence/revision-a534211-command-results.json; WORKER_SANDBOX_CAUSAL_REPAIR.md",
+      "status": "BUILDER_SCOPED_VERIFIED; ASSURANCE_PENDING",
+      "independent": false,
+      "dependsOn": [],
+      "missing": "Activation/other runners/environment privileges/outside-root reads/hardlinks/real-provider compatibility/controller gateway/cross-store effects/PD009 OPEN"
+    },
+    {
+      "id": "public-review-snapshot-b8f1448",
+      "claim": "User-requested AI Factory source and retained evidence exported to a separate public repository; anonymous manifest/tree reads verify all1306 remote blobs; no parent repository Git history or live machine stores copied",
+      "evidence": "evidence/public-review-snapshot-publication.json",
+      "sourceRevision": "1113cd7b53da5c985489c4163f3512da3e7f0cb7",
+      "snapshotRevision": "b8f1448a1680f794b8f0373f76c99b76c9a59836",
+      "status": "PUBLIC_TOOL_ACCESS_VERIFIED; NO_ASSURANCE_OR_RUNTIME_AUTHORITY",
+      "dependsOn": [],
+      "independent": false,
+      "missing": "External review findings not received or admitted; denied review remains pending; controller/OS/effect authority still OPEN"
+    },
     {
       "id": "controller-selection-falsification-1635505",
       "claim": "Actual two OS issuers both accept the same expected revision and issue one identity for different controllers; actual role-dispatch with genuine revoked selection calls temporary stub and records DONE",

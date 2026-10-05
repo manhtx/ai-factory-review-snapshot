@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/ai-factory-public-snapshot-EHh5Aj
+
+ ✓ server/aiCompany/cliSandboxBoundary.test.ts (2 tests) 1583ms
+   ✓ actual dispatcher protects the supplied control root distinct from its checkout  1468ms
+ ✓ server/aiCompany/macSandbox.test.ts (4 tests) 94ms
+
+ Test Files  2 passed (2)
+      Tests  6 passed (6)
+   Start at  17:42:51
+   Duration  2.01s (transform 85ms, setup 0ms, collect 107ms, tests 1.68s, environment 0ms, prepare 64ms)
+

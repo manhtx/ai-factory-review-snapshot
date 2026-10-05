@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-05T10:07:18.628Z",
+  "observedAt": "2026-10-05T10:44:37.511Z",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "1113cd7b53da5c985489c4163f3512da3e7f0cb7",
-  "pinnedTestedCandidateRevision": "239fe220b453ce11e83f8da805e907cb0d9b1687",
+  "sourceCarrierRevision": "de906ec9f11f7fdadfc73c10dfebe34cb1740739",
+  "pinnedTestedCandidateRevision": "a534211443a2e251136a21150e8054461d7d5a00",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
     {
@@ -265,12 +265,6 @@
       "source": "current-source-carrier"
     },
     {
-      "path": ".ai-company/handoff.md",
-      "sha256": "f21374010a40f96359eedec5c225d98f9d3bdc2c025b34582d044ef84b89c624",
-      "bytes": 13824,
-      "source": "current-source-carrier"
-    },
-    {
       "path": ".ai-company/INCIDENTS.md",
       "sha256": "a58ef766835dc886b0e8cd2ecd668dfa581c155106522bd59c08607c6f501ff7",
       "bytes": 725,
@@ -325,6 +319,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": ".ai-company/PRODUCTION_DATA_REMEDIATION_PLAN.md",
+      "sha256": "de44a41fdcc82eb0e80c0edf26664f575983eacc80a3d87fb513f553dcd3c32c",
+      "bytes": 2081,
+      "source": "current-source-carrier"
+    },
+    {
       "path": ".ai-company/PRODUCT_GOAL_MASTER.md",
       "sha256": "16cb88f6dea6b8bdf335b97be2e3a54bf1901f52bf42e5ffa8e3a7423e3fd420",
       "bytes": 25734,
@@ -340,18 +340,6 @@
       "path": ".ai-company/PRODUCT_STRATEGY.md",
       "sha256": "7baec2ca6ea94453bf2019637a101e4e604644a2df91328938627cf6b456ac64",
       "bytes": 1634,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/PRODUCTION_DATA_REMEDIATION_PLAN.md",
-      "sha256": "de44a41fdcc82eb0e80c0edf26664f575983eacc80a3d87fb513f553dcd3c32c",
-      "bytes": 2081,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/prompts/run-next-epoch.md",
-      "sha256": "235d5776d6d0c6afa079584aca7b1140371811f7dbacbbcaa6d361a311b050ab",
-      "bytes": 3897,
       "source": "current-source-carrier"
     },
     {
@@ -400,48 +388,6 @@
       "path": ".ai-company/ROADMAP.json",
       "sha256": "871449a6fd7b23b244527d456dad8e39b2bb0f56f3ff3f93ea37eee6dde02fce",
       "bytes": 1304,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/schemas/backlog-item.schema.json",
-      "sha256": "00621d13710803dd66e43eca54de3294157f7c9e22e5782ffe7eaddd83293e33",
-      "bytes": 1539,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/schemas/company-state.schema.json",
-      "sha256": "2a564a3fb10a34af1dc556a1774ffdda3d98c0d3701cbf00a1e7ff3bc29d0a39",
-      "bytes": 1043,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/schemas/decision.schema.json",
-      "sha256": "ed25f0723db0fe8f7b8b0944728392c896a78fae66a513715aaa96a8687ade3e",
-      "bytes": 1381,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/schemas/evidence.schema.json",
-      "sha256": "d739aae26f3f66a12457272c5fae7d21bb4f1f1ae6670595ac3a7114c44c3e2a",
-      "bytes": 1303,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/schemas/scorecard.schema.json",
-      "sha256": "93c27419e8403fa3d9885ffaf8da53603db014ceaf155c84b73243a8b55fe7ac",
-      "bytes": 1204,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/schemas/task.schema.json",
-      "sha256": "42b60f3e72a7bda9e33cbde445c73519046a1f4bf657a51ed0faf1476c3e9c06",
-      "bytes": 2177,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": ".ai-company/schemas/test-report.schema.json",
-      "sha256": "1c82c428e994094862d2d1b709becd0f8bdef3a1f17a3d15f28b47e1563b0e07",
-      "bytes": 1210,
       "source": "current-source-carrier"
     },
     {
@@ -523,6 +469,60 @@
       "source": "current-source-carrier"
     },
     {
+      "path": ".ai-company/handoff.md",
+      "sha256": "f21374010a40f96359eedec5c225d98f9d3bdc2c025b34582d044ef84b89c624",
+      "bytes": 13824,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": ".ai-company/prompts/run-next-epoch.md",
+      "sha256": "235d5776d6d0c6afa079584aca7b1140371811f7dbacbbcaa6d361a311b050ab",
+      "bytes": 3897,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": ".ai-company/schemas/backlog-item.schema.json",
+      "sha256": "00621d13710803dd66e43eca54de3294157f7c9e22e5782ffe7eaddd83293e33",
+      "bytes": 1539,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": ".ai-company/schemas/company-state.schema.json",
+      "sha256": "2a564a3fb10a34af1dc556a1774ffdda3d98c0d3701cbf00a1e7ff3bc29d0a39",
+      "bytes": 1043,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": ".ai-company/schemas/decision.schema.json",
+      "sha256": "ed25f0723db0fe8f7b8b0944728392c896a78fae66a513715aaa96a8687ade3e",
+      "bytes": 1381,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": ".ai-company/schemas/evidence.schema.json",
+      "sha256": "d739aae26f3f66a12457272c5fae7d21bb4f1f1ae6670595ac3a7114c44c3e2a",
+      "bytes": 1303,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": ".ai-company/schemas/scorecard.schema.json",
+      "sha256": "93c27419e8403fa3d9885ffaf8da53603db014ceaf155c84b73243a8b55fe7ac",
+      "bytes": 1204,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": ".ai-company/schemas/task.schema.json",
+      "sha256": "42b60f3e72a7bda9e33cbde445c73519046a1f4bf657a51ed0faf1476c3e9c06",
+      "bytes": 2177,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": ".ai-company/schemas/test-report.schema.json",
+      "sha256": "1c82c428e994094862d2d1b709becd0f8bdef3a1f17a3d15f28b47e1563b0e07",
+      "bytes": 1210,
+      "source": "current-source-carrier"
+    },
+    {
       "path": ".ai-company/workflows/bug-fix.json",
       "sha256": "8bbd34d343e3d52c89a65f2db7c9314d6fd6d2a893a666679161ff623ef617eb",
       "bytes": 574,
@@ -574,6 +574,24 @@
       "path": "docs/AI_COMPANY_PHASE0_REALITY_AUDIT.md",
       "sha256": "d850dfc0defc2a488ae40950e4890d68e8b2f22b6f70e03790578d9fe126af55",
       "bytes": 3040,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/FEATURE_PROPOSAL_AI_COMPANY_OPERATING_MODEL.md",
+      "sha256": "7e558105323e3261e9d9572c7d36b4f30ed2cfbe204d75b1195c436bff2a1864",
+      "bytes": 26279,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/FEATURE_PROPOSAL_ARCHITECTURE_EVIDENCE_RESOLUTION.md",
+      "sha256": "ca9b7907b3bb925b9280318be0d57ada9ad11a7af48d79975f391c5d09c52374",
+      "bytes": 1696,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/PRODUCT_GOAL.md",
+      "sha256": "4feb7743b0dcf1beb5c209175ae79e774ba680f1a868a569378ae6aec0b5a617",
+      "bytes": 18320,
       "source": "current-source-carrier"
     },
     {
@@ -673,27 +691,9 @@
       "source": "current-source-carrier"
     },
     {
-      "path": "docs/FEATURE_PROPOSAL_AI_COMPANY_OPERATING_MODEL.md",
-      "sha256": "7e558105323e3261e9d9572c7d36b4f30ed2cfbe204d75b1195c436bff2a1864",
-      "bytes": 26279,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/FEATURE_PROPOSAL_ARCHITECTURE_EVIDENCE_RESOLUTION.md",
-      "sha256": "ca9b7907b3bb925b9280318be0d57ada9ad11a7af48d79975f391c5d09c52374",
-      "bytes": 1696,
-      "source": "current-source-carrier"
-    },
-    {
       "path": "docs/migration_plan.md",
       "sha256": "df440c46816ac50b7247ec096dafb500d2a10471c0739d193b94a00117ff7065",
       "bytes": 1837,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/PRODUCT_GOAL.md",
-      "sha256": "4feb7743b0dcf1beb5c209175ae79e774ba680f1a868a569378ae6aec0b5a617",
-      "bytes": 18320,
       "source": "current-source-carrier"
     },
     {
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "b91d0c88175ed73fdae7e659da9bcc6f078610b51e0914545e749037a5b367ea",
-      "bytes": 26640,
+      "sha256": "f77d86fe7d27e3352e9f4fbd8367fd766ddccbac7ed0bd665de831c710e2c123",
+      "bytes": 26936,
       "source": "current-source-carrier"
     },
     {
@@ -752,8 +752,14 @@
     },
     {
       "path": "docs/successor-takeover/CLOSURE_MATRIX.json",
-      "sha256": "5d25b6c0088b476e5d0446cc730d9275f709adc9207547e192e8d316744c1340",
-      "bytes": 55432,
+      "sha256": "5af7aa430de434c9293f8d18bf81ee45dbe9dcf2ea72a89d9d7113e39c5270b9",
+      "bytes": 55481,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/CONTINUATION.json",
+      "sha256": "427e2d69cfb8ae3a8172192d08e125a5efa754c942b71a613aa42e80fdfb0348",
+      "bytes": 3183,
       "source": "current-source-carrier"
     },
     {
@@ -766,12 +772,6 @@
       "path": "docs/successor-takeover/CONTINUATION_PRE_FINAL_CONVERGENCE.json",
       "sha256": "43c1dd61f859fb3f59345d66f62f084f6a5e3ef8f027eb100e4589d1373b17bd",
       "bytes": 3967,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/CONTINUATION.json",
-      "sha256": "427e2d69cfb8ae3a8172192d08e125a5efa754c942b71a613aa42e80fdfb0348",
-      "bytes": 3183,
       "source": "current-source-carrier"
     },
     {
@@ -820,6 +820,312 @@
       "path": "docs/successor-takeover/EVIDENCE_ADMISSION_INVESTIGATION.md",
       "sha256": "80015d12b8d2f356676d006d6d388c9ab1c5abbf50194803dcc2c6d6618b7a02",
       "bytes": 17407,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/EXECUTION_SURFACE_DESIGN.md",
+      "sha256": "ac7150d45adeacd61b9b6bc711bc7e6fa985c0c54a6501ff3a8072511d92a4fa",
+      "bytes": 3294,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/EXECUTION_SURFACE_REGISTRY.json",
+      "sha256": "50c0db6e6b5d626186e055b4e0e767da56e1958d36e5f33147e55c2a215a1526",
+      "bytes": 3765,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/F0_CAPTURE.json",
+      "sha256": "fffc78c92b4d1100d0e69fa9d836ea62af1231e837c762186a8cce54476eb809",
+      "bytes": 3109,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/F0_SNAPSHOT.json",
+      "sha256": "dcd4567219c9e8ffd5f64dfa83336cc05813365bc57fb18a9cdda22bdff0e5a2",
+      "bytes": 355,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/FINAL_CONVERGENCE_MISSION.md",
+      "sha256": "eb015a16e78427db6b2d548ec0365de540f82d0cfb6bbddd755d82ba8dac6e23",
+      "bytes": 74290,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/FOUNDER_MISSION.md",
+      "sha256": "baaefae321e91857be92ed8834c3c554307c76e90b6cf6cdf8152128864d2a4e",
+      "bytes": 56539,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/G1_STORAGE_PROGRESS.json",
+      "sha256": "def65953167e074f18fe4c338b0727b2c73f4d063716026f93c60429a5251a29",
+      "bytes": 2981,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/HYDRATION_SEMANTIC_IDENTITY_INVESTIGATION.md",
+      "sha256": "5723d6614751321d144c1e86db0eda2d331edad0571d2a0a6473bc711624bbcd",
+      "bytes": 7213,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/INITIAL_FAILURE_EVIDENCE.json",
+      "sha256": "b63b4742261cb2391ff2827c88fb2afdbdfeb72ef2483009d786db23df2dc6c1",
+      "bytes": 1113,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/INTEGRITY_BOUNDARY_PROPOSAL.md",
+      "sha256": "b05a54d5ec83ddf5ef113557cfec63f777d6a8f679e48696855d1f1d6259b0df",
+      "bytes": 5375,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/INTEGRITY_CANDIDATE_PROOF.json",
+      "sha256": "9c8819c9ea01c5c7b3916b1651e9a8a824e92f877df8c361c41bd9d473984b29",
+      "bytes": 4756,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/MASTER_PRODUCT_MAP_CANDIDATE.json",
+      "sha256": "5d00c55dc011e2c12419889e23998a54b471a97b9ea9485c51f6581b44f1bc56",
+      "bytes": 4633,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/MIGRATION_PREFLIGHT.md",
+      "sha256": "72ea7b048b119ba3e74c0b3cf8d0ead29e489b6805ed1670580744ce454e8cf9",
+      "bytes": 4285,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/MIGRATION_STAGING_DESIGN.md",
+      "sha256": "966f38428d6020e7605139f4a07d535814644ecd3604c2d820455f39d22569fd",
+      "bytes": 2121,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/NATIVE_DISPATCH_ISSUANCE_INVESTIGATION.md",
+      "sha256": "749eaa21ec16f4476d9c8089935c998bb358a44b4e27825fc689108b323d5bbf",
+      "bytes": 5109,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/NATIVE_PROVIDER_CONTRACT_INVESTIGATION.md",
+      "sha256": "7faf665ee81b328d88cc34272624e4b2c0e360bfef3a05fcd3b021ffa6da9d5a",
+      "bytes": 7079,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/OPERATING_ENVELOPE.json",
+      "sha256": "4f76788119c8d93bf2034ce06e25aac2279632fe113ac33c63d4996f8b7d8c57",
+      "bytes": 2452,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/PENDING_TERMINAL_INVESTIGATION.md",
+      "sha256": "603b4954730ebcb0047bb851f83d4bde06fc213c16c7c0fd6c921bbb3467162e",
+      "bytes": 11196,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/PERSISTED_RESEARCH_AUTHORITY_INVESTIGATION.md",
+      "sha256": "68f3163207d602e2e2bfded4dbedd77ef164647f08047cf4a93a12276b9600e0",
+      "bytes": 5725,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/PRIVATE_HOST_STATE_INVESTIGATION.md",
+      "sha256": "d99f94deb9a5dab4d2c2185851ab1645259183c13314ca04679972c0f845b5e4",
+      "bytes": 4217,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/PRODUCT_HYDRATION_FRESHNESS_INVESTIGATION.md",
+      "sha256": "b6db25cfd236ccaac5a361c18ad0e1c161b88a21003bd2890a28c38a0820f02e",
+      "bytes": 3050,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/PRODUCT_TRUTH_FRONTIER.json",
+      "sha256": "df93fbaf5708d3a061f7c4cd71ce414957d1e40781810fc69f27ea3080169386",
+      "bytes": 519,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/PROOF_DEBT_LEDGER.json",
+      "sha256": "e08c5659d0f2afb26201578cb7921775ad4b3cfc90dac59b5f73a50ab7b978df",
+      "bytes": 6701,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/PROOF_GRAPH.json",
+      "sha256": "04d9589c9d28514d6a42f3d58f3251419881a5295cd02a9045aa6744dedbe7fa",
+      "bytes": 67603,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/RAW_TERMINAL_CONSUMER_INVESTIGATION.md",
+      "sha256": "ff7271f720012e652e5ffc642ab2bbe88bf90eb27d7d1d95e5b774298afdcfc5",
+      "bytes": 4737,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/RECURSIVE_DEPENDENCY_AUTHORITY_INVESTIGATION.md",
+      "sha256": "c86e02b107e7beb83e499e485ffdcca1f714559c866a23c695340c8221db53f6",
+      "bytes": 3827,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/REGIME_PRODUCT_TRUTH_INVESTIGATION.md",
+      "sha256": "9388c4fb374a71808d7ef3bee185fc1624ab44dedc3a867b5b5b6cbf973209c9",
+      "bytes": 5543,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/REGIME_PRODUCT_TRUTH_PROGRESS.json",
+      "sha256": "877ffb5388c46748ba5fab1934411df5f28c46bbce09dcd0babd9e9844bee5d0",
+      "bytes": 3101,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/RESOURCE_ADMISSION_AUTHORITY_INVESTIGATION.md",
+      "sha256": "9b06dec583f1a41145e84792577c4dbbbba0e12dce9f5ed76ce2b3b063bf42af",
+      "bytes": 14685,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/REVIEW_TERMINAL_INVESTIGATION.md",
+      "sha256": "d5ceccac14559d8059c81f31e6e7d00b560a346a3b0ae75d6fd9d19772265f81",
+      "bytes": 8368,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/REVISION_AND_ACTOR_CONTINUATION.md",
+      "sha256": "5516401ffa0cd96f273bfb99538ccad7b72196cd82600320447d60e01182198e",
+      "bytes": 5347,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/S1_STATE_PROGRESS.json",
+      "sha256": "631e8d94c247d298462c7ba8f158b1efb7d189f2a9393745a8e1dc3abae5a592",
+      "bytes": 4393,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/SECURITY_BOUNDARY_INVESTIGATION.md",
+      "sha256": "082c9bc9dad0fea0f01952b8ea0ac5bbfbd8e455dbebe89044a037b9c226696f",
+      "bytes": 5561,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/SECURITY_STATE.json",
+      "sha256": "0765a950f32d5ac0eccb4fe9c8fe6f3ff89a0ec87cbf9681a2c08707c9a4eb85",
+      "bytes": 827,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/SOURCE_CANDIDATE_SEAL.json",
+      "sha256": "0efab4e591490fcfb02f9176118fec9ff64631f451ff53422e714e61305863c4",
+      "bytes": 15193,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/STATE_COVERAGE_INVESTIGATION.md",
+      "sha256": "6e4092a0b43297b36b60b73584665d81228685cdf23fa1109f98c69c871d9286",
+      "bytes": 3047,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/STATE_COVERAGE_PROPOSAL.md",
+      "sha256": "07baa815772cb36354b1d12280e96d1c58bdb3ad5f6e11657fa70d935ea59bf1",
+      "bytes": 4956,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/STORE_MAP.json",
+      "sha256": "8e7f57b5f0d3181e62c94feff30f5043617f3d288061efb4c1cd52a4f504e901",
+      "bytes": 2253,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/SUCCESSOR_STATE.json",
+      "sha256": "62d79df3d887fb6532d935e5e661d24327def947bd03c51524fa94938b4462c4",
+      "bytes": 485,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/TAKEOVER_PLAN.md",
+      "sha256": "7240f81d50fd9991db9967b53082558fa9c2b102cab8642f64da0fd297197c53",
+      "bytes": 4428,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/TARGET_SYSTEM_MAP.json",
+      "sha256": "57d57605848c0830c4d2b56619ebcce2c946b427d74230196f760b7bac932d28",
+      "bytes": 6511,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/TCB_MANIFEST.json",
+      "sha256": "200148b1918b257444efe61612524fb109a7c06e820f79299fb0073747844b3f",
+      "bytes": 4336,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/TRANSACTION_AUTHORITY_DECISION.md",
+      "sha256": "5d772748e7aef91ae57b9c31e0c40a3e0c02a88f7da6c6ab0cd3be93aeb2801d",
+      "bytes": 8026,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/TYPECHECK_ADJUDICATION_453A9A1.json",
+      "sha256": "19ec5bbf5cb598866c78d48ae67ab582f82181b308f1e957753d7d1a6d6cf60f",
+      "bytes": 4257,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/VIETNAM_ANALYTICS_API_INVESTIGATION.md",
+      "sha256": "7435acced5d7b9c0eeac8b6a6236dd01db1dfe28f00aa6b181a3da0809383dd9",
+      "bytes": 3928,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/VIETNAM_API_PRODUCT_PROGRESS.json",
+      "sha256": "8fc604e16cd01a2e2184635890a5d4b1c14ac72317a147a19ceab27d62357c85",
+      "bytes": 3007,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/WAIT_STATE_INVESTIGATION.md",
+      "sha256": "b6b93df2b9ccabd1dd3b90994b1a93a4d22fbe324909a8d59fed1810df21156a",
+      "bytes": 3789,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/WAIT_VALIDATION_PROGRESS.json",
+      "sha256": "783d13ff270b8e1b3e27ddd5e18cfd14149d932fc79ae625c62c4bcc1d5ef24f",
+      "bytes": 1743,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/WORKER_SANDBOX_CAUSAL_REPAIR.md",
+      "sha256": "e92b523616f8c554d60e6494658104d5cc7edb65a8f31921fac55fba2994f57e",
+      "bytes": 2967,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/WRITER_CENSUS_CANDIDATE.json",
+      "sha256": "709e7de23c81b1794022f01262d57763700d2641cd0069b4f4702abb33a6beb2",
+      "bytes": 67084,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/WRITER_MAP.json",
+      "sha256": "ae784b568599e75b6d4949a2783e52c4039daeac0ea402af36dbc051396442da",
+      "bytes": 3490,
       "source": "current-source-carrier"
     },
     {
@@ -2767,6 +3073,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/public-review-snapshot-publication.json",
+      "sha256": "6f5e13aa8d1a0dff7cea265daa9063bcc5a0a82a842e51329f7772a2dddb727e",
+      "bytes": 970,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/queue-fence-combined.txt",
       "sha256": "585751ff8ae65b4f09c7b6cfc7abf807f80df51fd99b2c742fdad620ec0d8d34",
       "bytes": 1523,
@@ -3469,6 +3781,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/revision-239fe22-source-seal-historical.json",
+      "sha256": "85e1da361b050fa7480d59aa8db754334eb2ea0ca84f2ae0126071259bb248c4",
+      "bytes": 14690,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/revision-239fe22-tests.txt",
       "sha256": "3876f3599178671b7a7aa788f7db2c9cb43c54c12d3b0b62e3975694f7fa08f8",
       "bytes": 8266,
@@ -3520,6 +3838,30 @@
       "path": "docs/successor-takeover/evidence/revision-453a9a1-typecheck.txt",
       "sha256": "483de47c6bc1f7e12c4c8c4bb72600e6972c88d60bfb9df0898bfe6d00568ecd",
       "bytes": 2199,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-a534211-command-results.json",
+      "sha256": "b91a48aab181a520e10f3fecff0a5b7b6e72e04e83024fab17b6832dcb7db5dd",
+      "bytes": 11160,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-a534211-lint.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-a534211-tests.txt",
+      "sha256": "39b34aef683382dc953b71cbd9cbf39d82d1902879387cb115ff2ee89b11928f",
+      "bytes": 7183,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-a534211-typecheck.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
       "source": "current-source-carrier"
     },
     {
@@ -3889,255 +4231,21 @@
       "source": "current-source-carrier"
     },
     {
-      "path": "docs/successor-takeover/EXECUTION_SURFACE_DESIGN.md",
-      "sha256": "ac7150d45adeacd61b9b6bc711bc7e6fa985c0c54a6501ff3a8072511d92a4fa",
-      "bytes": 3294,
+      "path": "docs/successor-takeover/evidence/worker-sandbox-alias-96c71b0-counterexample.json",
+      "sha256": "a44cfe1dc683f6f60b3f1a897bbe61e33dd5b4e9cfab4949dd4b838e89dbe061",
+      "bytes": 631,
       "source": "current-source-carrier"
     },
     {
-      "path": "docs/successor-takeover/EXECUTION_SURFACE_REGISTRY.json",
-      "sha256": "50c0db6e6b5d626186e055b4e0e767da56e1958d36e5f33147e55c2a215a1526",
-      "bytes": 3765,
+      "path": "docs/successor-takeover/evidence/worker-sandbox-canonical-96c71b0-counterexample.json",
+      "sha256": "269ca5f11f18ef43f74f76f1450ea5693d09293dc607bd42eb1da9561238aeb1",
+      "bytes": 614,
       "source": "current-source-carrier"
     },
     {
-      "path": "docs/successor-takeover/F0_CAPTURE.json",
-      "sha256": "fffc78c92b4d1100d0e69fa9d836ea62af1231e837c762186a8cce54476eb809",
-      "bytes": 3109,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/F0_SNAPSHOT.json",
-      "sha256": "dcd4567219c9e8ffd5f64dfa83336cc05813365bc57fb18a9cdda22bdff0e5a2",
-      "bytes": 355,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/FINAL_CONVERGENCE_MISSION.md",
-      "sha256": "eb015a16e78427db6b2d548ec0365de540f82d0cfb6bbddd755d82ba8dac6e23",
-      "bytes": 74290,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/FOUNDER_MISSION.md",
-      "sha256": "baaefae321e91857be92ed8834c3c554307c76e90b6cf6cdf8152128864d2a4e",
-      "bytes": 56539,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/G1_STORAGE_PROGRESS.json",
-      "sha256": "def65953167e074f18fe4c338b0727b2c73f4d063716026f93c60429a5251a29",
-      "bytes": 2981,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/HYDRATION_SEMANTIC_IDENTITY_INVESTIGATION.md",
-      "sha256": "5723d6614751321d144c1e86db0eda2d331edad0571d2a0a6473bc711624bbcd",
-      "bytes": 7213,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/INITIAL_FAILURE_EVIDENCE.json",
-      "sha256": "b63b4742261cb2391ff2827c88fb2afdbdfeb72ef2483009d786db23df2dc6c1",
-      "bytes": 1113,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/INTEGRITY_BOUNDARY_PROPOSAL.md",
-      "sha256": "b05a54d5ec83ddf5ef113557cfec63f777d6a8f679e48696855d1f1d6259b0df",
-      "bytes": 5375,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/INTEGRITY_CANDIDATE_PROOF.json",
-      "sha256": "9c8819c9ea01c5c7b3916b1651e9a8a824e92f877df8c361c41bd9d473984b29",
-      "bytes": 4756,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/MASTER_PRODUCT_MAP_CANDIDATE.json",
-      "sha256": "5d00c55dc011e2c12419889e23998a54b471a97b9ea9485c51f6581b44f1bc56",
-      "bytes": 4633,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/MIGRATION_PREFLIGHT.md",
-      "sha256": "72ea7b048b119ba3e74c0b3cf8d0ead29e489b6805ed1670580744ce454e8cf9",
-      "bytes": 4285,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/MIGRATION_STAGING_DESIGN.md",
-      "sha256": "966f38428d6020e7605139f4a07d535814644ecd3604c2d820455f39d22569fd",
-      "bytes": 2121,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/NATIVE_DISPATCH_ISSUANCE_INVESTIGATION.md",
-      "sha256": "749eaa21ec16f4476d9c8089935c998bb358a44b4e27825fc689108b323d5bbf",
-      "bytes": 5109,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/NATIVE_PROVIDER_CONTRACT_INVESTIGATION.md",
-      "sha256": "7faf665ee81b328d88cc34272624e4b2c0e360bfef3a05fcd3b021ffa6da9d5a",
-      "bytes": 7079,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/OPERATING_ENVELOPE.json",
-      "sha256": "4f76788119c8d93bf2034ce06e25aac2279632fe113ac33c63d4996f8b7d8c57",
-      "bytes": 2452,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/PENDING_TERMINAL_INVESTIGATION.md",
-      "sha256": "603b4954730ebcb0047bb851f83d4bde06fc213c16c7c0fd6c921bbb3467162e",
-      "bytes": 11196,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/PERSISTED_RESEARCH_AUTHORITY_INVESTIGATION.md",
-      "sha256": "68f3163207d602e2e2bfded4dbedd77ef164647f08047cf4a93a12276b9600e0",
-      "bytes": 5725,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/PRIVATE_HOST_STATE_INVESTIGATION.md",
-      "sha256": "d99f94deb9a5dab4d2c2185851ab1645259183c13314ca04679972c0f845b5e4",
-      "bytes": 4217,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/PRODUCT_HYDRATION_FRESHNESS_INVESTIGATION.md",
-      "sha256": "b6db25cfd236ccaac5a361c18ad0e1c161b88a21003bd2890a28c38a0820f02e",
-      "bytes": 3050,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/PRODUCT_TRUTH_FRONTIER.json",
-      "sha256": "df93fbaf5708d3a061f7c4cd71ce414957d1e40781810fc69f27ea3080169386",
-      "bytes": 519,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/PROOF_DEBT_LEDGER.json",
-      "sha256": "555392a1240e2f765a1c1a6deb61d64168bd0d47fec67901622a75bef74d23f8",
-      "bytes": 6397,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/PROOF_GRAPH.json",
-      "sha256": "ce37bcb760cd26a260fe2a8720d42acdd495ab940c10647fcd8c8fa9c9865f54",
-      "bytes": 66111,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/RAW_TERMINAL_CONSUMER_INVESTIGATION.md",
-      "sha256": "ff7271f720012e652e5ffc642ab2bbe88bf90eb27d7d1d95e5b774298afdcfc5",
-      "bytes": 4737,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/RECURSIVE_DEPENDENCY_AUTHORITY_INVESTIGATION.md",
-      "sha256": "c86e02b107e7beb83e499e485ffdcca1f714559c866a23c695340c8221db53f6",
-      "bytes": 3827,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/REGIME_PRODUCT_TRUTH_INVESTIGATION.md",
-      "sha256": "9388c4fb374a71808d7ef3bee185fc1624ab44dedc3a867b5b5b6cbf973209c9",
-      "bytes": 5543,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/REGIME_PRODUCT_TRUTH_PROGRESS.json",
-      "sha256": "877ffb5388c46748ba5fab1934411df5f28c46bbce09dcd0babd9e9844bee5d0",
-      "bytes": 3101,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/RESOURCE_ADMISSION_AUTHORITY_INVESTIGATION.md",
-      "sha256": "9b06dec583f1a41145e84792577c4dbbbba0e12dce9f5ed76ce2b3b063bf42af",
-      "bytes": 14685,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/REVIEW_TERMINAL_INVESTIGATION.md",
-      "sha256": "d5ceccac14559d8059c81f31e6e7d00b560a346a3b0ae75d6fd9d19772265f81",
-      "bytes": 8368,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/REVISION_AND_ACTOR_CONTINUATION.md",
-      "sha256": "5516401ffa0cd96f273bfb99538ccad7b72196cd82600320447d60e01182198e",
-      "bytes": 5347,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/S1_STATE_PROGRESS.json",
-      "sha256": "631e8d94c247d298462c7ba8f158b1efb7d189f2a9393745a8e1dc3abae5a592",
-      "bytes": 4393,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/SECURITY_BOUNDARY_INVESTIGATION.md",
-      "sha256": "082c9bc9dad0fea0f01952b8ea0ac5bbfbd8e455dbebe89044a037b9c226696f",
-      "bytes": 5561,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/SECURITY_STATE.json",
-      "sha256": "0765a950f32d5ac0eccb4fe9c8fe6f3ff89a0ec87cbf9681a2c08707c9a4eb85",
-      "bytes": 827,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/SOURCE_CANDIDATE_SEAL.json",
-      "sha256": "85e1da361b050fa7480d59aa8db754334eb2ea0ca84f2ae0126071259bb248c4",
-      "bytes": 14690,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/STATE_COVERAGE_INVESTIGATION.md",
-      "sha256": "6e4092a0b43297b36b60b73584665d81228685cdf23fa1109f98c69c871d9286",
-      "bytes": 3047,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/STATE_COVERAGE_PROPOSAL.md",
-      "sha256": "07baa815772cb36354b1d12280e96d1c58bdb3ad5f6e11657fa70d935ea59bf1",
-      "bytes": 4956,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/STORE_MAP.json",
-      "sha256": "8e7f57b5f0d3181e62c94feff30f5043617f3d288061efb4c1cd52a4f504e901",
-      "bytes": 2253,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/SUCCESSOR_STATE.json",
-      "sha256": "62d79df3d887fb6532d935e5e661d24327def947bd03c51524fa94938b4462c4",
-      "bytes": 485,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/TAKEOVER_PLAN.md",
-      "sha256": "7240f81d50fd9991db9967b53082558fa9c2b102cab8642f64da0fd297197c53",
-      "bytes": 4428,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/TARGET_SYSTEM_MAP.json",
-      "sha256": "57d57605848c0830c4d2b56619ebcce2c946b427d74230196f760b7bac932d28",
-      "bytes": 6511,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/TCB_MANIFEST.json",
-      "sha256": "200148b1918b257444efe61612524fb109a7c06e820f79299fb0073747844b3f",
-      "bytes": 4336,
+      "path": "docs/successor-takeover/evidence/worker-sandbox-red-before-repair.txt",
+      "sha256": "e11fb00dd526f0096fc1e8e54f644224703c93f73a231713415b7e52a5328604",
+      "bytes": 2878,
       "source": "current-source-carrier"
     },
     {
@@ -4243,54 +4351,6 @@
       "source": "current-source-carrier"
     },
     {
-      "path": "docs/successor-takeover/TRANSACTION_AUTHORITY_DECISION.md",
-      "sha256": "5d772748e7aef91ae57b9c31e0c40a3e0c02a88f7da6c6ab0cd3be93aeb2801d",
-      "bytes": 8026,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/TYPECHECK_ADJUDICATION_453A9A1.json",
-      "sha256": "19ec5bbf5cb598866c78d48ae67ab582f82181b308f1e957753d7d1a6d6cf60f",
-      "bytes": 4257,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/VIETNAM_ANALYTICS_API_INVESTIGATION.md",
-      "sha256": "7435acced5d7b9c0eeac8b6a6236dd01db1dfe28f00aa6b181a3da0809383dd9",
-      "bytes": 3928,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/VIETNAM_API_PRODUCT_PROGRESS.json",
-      "sha256": "8fc604e16cd01a2e2184635890a5d4b1c14ac72317a147a19ceab27d62357c85",
-      "bytes": 3007,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/WAIT_STATE_INVESTIGATION.md",
-      "sha256": "b6b93df2b9ccabd1dd3b90994b1a93a4d22fbe324909a8d59fed1810df21156a",
-      "bytes": 3789,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/WAIT_VALIDATION_PROGRESS.json",
-      "sha256": "783d13ff270b8e1b3e27ddd5e18cfd14149d932fc79ae625c62c4bcc1d5ef24f",
-      "bytes": 1743,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/WRITER_CENSUS_CANDIDATE.json",
-      "sha256": "709e7de23c81b1794022f01262d57763700d2641cd0069b4f4702abb33a6beb2",
-      "bytes": 67084,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "docs/successor-takeover/WRITER_MAP.json",
-      "sha256": "ae784b568599e75b6d4949a2783e52c4039daeac0ea402af36dbc051396442da",
-      "bytes": 3490,
-      "source": "current-source-carrier"
-    },
-    {
       "path": "eslint.config.js",
       "sha256": "6184bb66f8f6f4516dea26589a5512c7ded5517f187c52ee3d91172cf38a6c16",
       "bytes": 864,
@@ -4382,8 +4442,8 @@
     },
     {
       "path": "scripts/ai-company-role-dispatch.mjs",
-      "sha256": "9cad0e74479d5d0c899f4dac94eb588cde70d96bd2ff7b222219eb3ab1387d29",
-      "bytes": 58779,
+      "sha256": "26220bf9cbfde9f629b8b15b9fe248af4bab6c78634ad4be8ec08726f0eab506",
+      "bytes": 58929,
       "source": "current-source-carrier"
     },
     {
@@ -5353,6 +5413,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "server/aiCompany/cliSandboxBoundary.test.ts",
+      "sha256": "0be77cb4fc9a33a76e2902f3d85048ebffd08bdcdcce7303e293a4ea719b511b",
+      "bytes": 4423,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "server/aiCompany/combinedEvidenceCapture.test.ts",
       "sha256": "e9d062e98d044ffbd5171cbf6fc21e7e52256cd1b53737ff87a1d79a39caea32",
       "bytes": 6983,
@@ -5839,6 +5905,18 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "server/aiCompany/macSandbox.test.ts",
+      "sha256": "084aa651d45e1fc11c7b24776bad1012a475b2adaf045caf0a29c3fb9e7668db",
+      "bytes": 4495,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "server/aiCompany/macSandbox.ts",
+      "sha256": "e37a998c74c39171263df1a3b11677e698076b4aca7a372763422cff309d1833",
+      "bytes": 1630,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "server/aiCompany/macroOsCorpus.test.ts",
       "sha256": "7a44445f8fd5d1f50d9d38636f72d9bc5a2cff9b16afdf2694f4a56c47b1f2a9",
       "bytes": 951,
@@ -5860,18 +5938,6 @@
       "path": "server/aiCompany/macroOsTrial.ts",
       "sha256": "afc4c59e24bfefec3d98d7dd94c7c44cefe7a179adc82778f1541222bcde77f0",
       "bytes": 4683,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "server/aiCompany/macSandbox.test.ts",
-      "sha256": "78ed027399883b28eb495782470dfddfb4e83590a7eccb3d7fdb5a8d5b304062",
-      "bytes": 586,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "server/aiCompany/macSandbox.ts",
-      "sha256": "fb0ea2b039a22bc70cb9eea1c4707cf4fa333258cd7c8b63955f42e5195179d8",
-      "bytes": 713,
       "source": "current-source-carrier"
     },
     {
@@ -6193,18 +6259,6 @@
       "source": "current-source-carrier"
     },
     {
-      "path": "server/aiCompany/productionGate.test.ts",
-      "sha256": "2bb36d8f9fc4b9e78c5ac709781365b05920fc87534baddc862f4dfce6dbc91e",
-      "bytes": 764,
-      "source": "current-source-carrier"
-    },
-    {
-      "path": "server/aiCompany/productionGate.ts",
-      "sha256": "afe90550d27f6b7864fadd1e8451616f608de36e841e335cae5ac83f2b10cc63",
-      "bytes": 932,
-      "source": "current-source-carrier"
-    },
-    {
       "path": "server/aiCompany/productMemory.test.ts",
       "sha256": "5aa340a13f8deeac662884ca7d7c3f70cb72b8da1a4a3494aac92e9754a7a69e",
       "bytes": 5195,
@@ -6298,6 +6352,18 @@
       "path": "server/aiCompany/productRealityProbe.ts",
       "sha256": "67bf38cf503cdd5fff43b09e94fb32ef025466dabf559238c73d1b0d1089b7dc",
       "bytes": 1912,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "server/aiCompany/productionGate.test.ts",
+      "sha256": "2bb36d8f9fc4b9e78c5ac709781365b05920fc87534baddc862f4dfce6dbc91e",
+      "bytes": 764,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "server/aiCompany/productionGate.ts",
+      "sha256": "afe90550d27f6b7864fadd1e8451616f608de36e841e335cae5ac83f2b10cc63",
+      "bytes": 932,
       "source": "current-source-carrier"
     },
     {
@@ -7858,9 +7924,10 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "78cbce78b40cddbe43c0c82452f6cc2681c5d3f0f27ef31d3686ae2c737fba69",
+    "README.md": "f284785818d539cce5959cdcbd9a6a911f2d984539841053b03c7af44b1350b1",
     ".gitignore": "e5f8c22a34a4276fad274295f8478b7f5d2dd2179f000df586ea5be3dfdaca23",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "154f5a64be810480b2fb9f715eaea189b60f7a5953bbd778625390fc65ef6d34",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "d253d6fd21aac0024ad924d44b18fb6381d8b9a6b871367a448bddc418ddffad",
+    "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
     "snapshot-verification/initial-smoke-37-pass-1-eperm.txt": "f487f73b0138d4ad22b69cc6c7a59a13c554169cf96de7db81921fd359b4fd64",
     "snapshot-verification/unchanged-cli-recheck.txt": "239df5d90ab968e5496f3e18226cb9abe79cf381eafcc718a7a484183c84309e",
     "snapshot-verification/unchanged-full-smoke-recheck.txt": "c88604db04597993c38b5fae1e6bfd7cdd4fccec22ddf8030ebdd19f4e166921"
