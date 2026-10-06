@@ -1264,7 +1264,7 @@
     "Provider launch uncertainty/legacy reconciliation and process/group birth identity",
     "Full-suite timing cause UNKNOWN despite exact clean533PASS"
   ],
-  "currentCandidateRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
-  "currentProofAssociation": "SOURCE_CANDIDATE_SEAL.json; clean548PASS54FILES/full tsc/scoped lint; bounded Codex utility/callsite proof only; actual actor/gateway/operating envelope UNPROVEN",
+  "currentCandidateRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
+  "currentProofAssociation": "SOURCE_CANDIDATE_SEAL.json; clean550PASS54FILES/full tsc/scoped lint; fixture lifecycle proof only, actor/gateway/operating envelope remainUNPROVEN",
   "currentOpenCounterexample": "evidence/coordinator-init-239fe22-counterexample.json; actual controller init overwrite and stale signal-release"
 }

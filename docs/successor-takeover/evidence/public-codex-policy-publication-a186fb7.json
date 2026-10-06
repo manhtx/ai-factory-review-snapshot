@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-06T04:29:43.480522+00:00",
+  "snapshotRevision": "a186fb7ffc65e9809997a4bcb0063bbadf73a670",
+  "sourceCarrierRevision": "13ef2af271c9aecafd626c45c706583ba2c23bfc",
+  "testedSourceCandidate": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
+  "anonymousAccessVerified": true,
+  "remoteBlobs": 1357,
+  "allBlobHashesMatch": true,
+  "manifestSha256": "f817bd3304811608ccc507ae10334655418d1c7230eb39093844530f093662ad",
+  "sourceRegression": "Exact clean548PASS54FILES/full tsc/scoped lint",
+  "exportSmoke": "Initial14PASS1TIMEOUT; target3TIMEOUTS; later unchanged15PASS3FILES; causeUNKNOWN; no deadline change",
+  "independent": false,
+  "authority": "NONE",
+  "productionAutonomy": "DISABLED"
+}

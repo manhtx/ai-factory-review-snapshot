@@ -1,0 +1,17 @@
+
+ RUN  v3.2.7 /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/ai-factory-public-snapshot-EHh5Aj
+
+ ✓ server/aiCompany/cliSandboxBoundary.test.ts (9 tests) 4890ms
+   ✓ actual dispatcher protects the supplied control root distinct from its checkout  1776ms
+   ✓ actual Codex transport excludes controller privileges and loader overrides  1968ms
+   ✓ readonly Codex transport records its trusted final message as the attempt artifact  472ms
+ ✓ server/aiCompany/macSandbox.test.ts (5 tests) 427ms
+   ✓ macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile  324ms
+ ✓ server/aiCompany/codexReadableRoot.test.ts (3 tests) 524ms
+   ✓ actual installed Codex utility enforces generated read-only policy  393ms
+
+ Test Files  3 passed (3)
+      Tests  17 passed (17)
+   Start at  11:52:50
+   Duration  6.35s (transform 97ms, setup 0ms, collect 132ms, tests 5.84s, environment 0ms, prepare 105ms)
+

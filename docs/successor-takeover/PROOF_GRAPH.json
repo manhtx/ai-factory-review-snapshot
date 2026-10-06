@@ -1,7 +1,7 @@
 {
   "schema": "successor-takeover.proof-graph.v1",
   "authoritative": false,
-  "currentCandidateRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
+  "currentCandidateRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
   "historicalProofPolicy": "Older nodes retain historical evidence only; none certifies the current candidate without exact revision revalidation. No negative evidence removed.",
   "purpose": "Explicit claim dependencies and limits for isolated candidate evidence; not an operational proof engine or closure certificate.",
   "executionInventory": {
@@ -11,6 +11,34 @@
     "postTestCheck": "MATCHED_AFTER_PRODUCT_API_REPAIRS; UNSEALED_CANDIDATE"
   },
   "nodes": [
+    {
+      "id": "fixture-lifetime-af1672b",
+      "sourceRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
+      "claim": "Local fixture admission closes before cleanup; actual delayed writer and child close drained before deletion; exact550PASS54FILES with original test deadline",
+      "evidence": "FIXTURE_LIFETIME_REPAIR.md; evidence/revision-af1672b-command-results.json",
+      "status": "BUILDER_SCOPED_VERIFIED; PREPARATION_LATENCY_UNKNOWN",
+      "independent": false,
+      "dependsOn": [
+        "codex-readable-root-6d81ac5"
+      ],
+      "missing": "Production quiescence, timing envelope, effective exec/all tool permissions/auth/AGY/caller migration/gateway/review"
+    },
+    {
+      "id": "public-named-policy-a186fb7",
+      "sourceRevision": "13ef2af271c9aecafd626c45c706583ba2c23bfc",
+      "snapshotRevision": "a186fb7ffc65e9809997a4bcb0063bbadf73a670",
+      "claim": "Anonymous1357remote blobs match; exact source6d81ac5 source548PASS54FILES; initial/repeated export failures retained and later unchanged15PASS",
+      "evidence": [
+        "evidence/public-codex-policy-publication-a186fb7.json",
+        "evidence/codex-policy-export-timing-results.json"
+      ],
+      "status": "PUBLIC_TOOL_ACCESS_VERIFIED; TIMING_CAUSE_UNKNOWN; NO_RUNTIME_AUTHORITY",
+      "independent": false,
+      "dependsOn": [
+        "codex-readable-root-6d81ac5"
+      ],
+      "missing": "Fixture lifetime/latency, real exec/model/all tool surfaces/config/auth/AGY/caller migration/gateway/independent review"
+    },
     {
       "id": "codex-readable-root-6d81ac5",
       "sourceRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",

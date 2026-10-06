@@ -2,9 +2,9 @@
 
 Source snapshot for external code and evidence inspection of Macro Research Platform's AI Factory. The original repository remains private. This repository starts with a new Git history; it contains no parent repository history or live machine stores.
 
-Source carrier: `13ef2af271c9aecafd626c45c706583ba2c23bfc`.
+Source carrier: `fef3107dad5434ebdeaffb403e102d95cd0a76fb`.
 
-Pinned tested source candidate: `6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3`. Its recorded clean run passed 548 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
+Pinned tested source candidate: `af1672b880928c6fe3004686b9cec8d87426d09e`. Its recorded clean run passed 550 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
 
 ## Inspect
 
@@ -41,3 +41,5 @@ Gateway design and fresh bounded counterexamples are in `docs/successor-takeover
 Current policy: `CODEX_READABLE_ROOT_POLICY.md`. Actual installed utility tests verify generated read-only/write profiles with dummy control/auth files, symlink escapes and read-only dependencies. Dispatcher transport is wired, but real model/tool surfaces, config precedence, authentication, AGY/non-workspace migration and gateway enrollment remain open. Earlier source/export runs retain their original subjects.
 
 The first current export smoke passed14/15 and timed out in AGY fixture preparation. Three unchanged target rechecks also timed out; root target passed. A logging-only diagnostic observed queue/handoff preparation8595ms before dispatcher spawn and cleanup ENOTEMPTY. A later split diagnostic observed21/23ms and passed; the unchanged full export recheck passed15/15. Cause remains UNKNOWN; no deadline was increased. All logs are retained in `docs/successor-takeover/evidence/codex-policy-export-timing-results.json`. Fixture lifetime/cleanup debt remains open.
+
+Current fixture lifetime repair closes fixture admission, drains initialization/dispatch jobs and actual child close before deleting owned roots. Two new real filesystem/child controls pass without increasing test deadlines. This repairs the fixture cleanup contract, not production controller/Git quiescence or unexplained preparation latency. See `FIXTURE_LIFETIME_REPAIR.md`; all prior timing failures remain historical evidence.

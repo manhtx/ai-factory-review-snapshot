@@ -1,0 +1,114 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 15122ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  2045ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1323ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  705ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1605ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1615ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  453ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1279ms
+   ✓ CLI review preserves actual original reference for same-scope  1371ms
+   ✓ CLI review preserves actual original reference for cross-scope  1347ms
+   ✓ CLI review preserves actual original reference for unresolved  1353ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1370ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3282ms
+ ✓ server/aiCompany/cliResourceAdmission.test.ts (4 tests) 4051ms
+   ✓ actual agy dispatcher admits a current stub result only after its bound group exits  1590ms
+   ✓ actual SIGKILL leaves the provider alive and preserves admission until its entire group disappears  745ms
+   ✓ leader completion with a surviving actual descendant withholds release and terminal receipts  513ms
+   ✓ an actual spawn error preserves marked UNKNOWN ownership and never grants terminal success  1203ms
+ ✓ server/aiCompany/cliSandboxBoundary.test.ts (9 tests) 5078ms
+   ✓ actual dispatcher protects the supplied control root distinct from its checkout  1410ms
+   ✓ actual Codex transport excludes controller privileges and loader overrides  1387ms
+   ✓ readonly Codex transport records its trusted final message as the attempt artifact  635ms
+   ✓ actual dispatcher rejects nonexistent workspace before changing a queued attempt  573ms
+   ✓ actual agy dispatcher rejects an aliased control root as workspace before claim  362ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 7062ms
+   ✓ CEO brief runtime > runs an injected role executor after planning work  371ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  4201ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1769ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 3698ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  385ms
+   ✓ denies withdrawn current review authority  373ms
+   ✓ denies missing current review authority  393ms
+   ✓ denies nonpass current review authority  361ms
+   ✓ denies missing-verdict current review authority  396ms
+   ✓ uses full dependency snapshot before selecting review backlog  326ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  412ms
+   ✓ plain rows and copied views cannot certify prerelease  364ms
+   ✓ cannot approve an empty target project using healthy foreign work  387ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 3463ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2470ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  301ms
+   ✓ WorktreeManager > overlays the current tracked working-tree revision into a new worktree  329ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  447ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  391ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  307ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 2694ms
+   ✓ denies withdrawn governance inputs despite historical DONE  344ms
+   ✓ denies missing governance inputs despite historical DONE  354ms
+   ✓ reads healthy dependencies outside cadence selection  345ms
+   ✓ revokes receiptless cadence and rejects stale views  379ms
+   ✓ plain rows and copied views cannot certify cadence  350ms
+   ✓ cannot approve target cadence using another project governance  501ms
+ ✓ server/aiCompany/resourceAdmissionProcess.test.ts (7 tests) 2566ms
+   ✓ real stale OS A cannot release B or admit C while B is alive  559ms
+   ✓ two real recoverers of a proven dead owner admit only one successor  587ms
+   ✓ a slow initialization under the OS gate cannot be replaced before owner publication  375ms
+   ✓ dispatcher death preserves an actual live provider group and recovery waits for group absence  312ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 1315ms
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (31 tests) 1399ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 355ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 763ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 393ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 874ms
+   ✓ release promotion > promotes only after full independent quorum  334ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  391ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 893ms
+ ✓ server/aiCompany/combinedEvidenceCapture.test.ts (10 tests) 855ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 699ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 743ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 305ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 531ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 602ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 531ms
+ ✓ server/aiCompany/codexReadableRoot.test.ts (3 tests) 477ms
+   ✓ actual installed Codex utility enforces generated read-only policy  380ms
+ ✓ server/aiCompany/macSandbox.test.ts (5 tests) 537ms
+   ✓ macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile  435ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 516ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 398ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 500ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 533ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 309ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 264ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 320ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 348ms
+ ✓ server/aiCompany/resourceAdmissionAuthority.test.ts (23 tests) 271ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 231ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 221ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 210ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 74ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 57ms
+ ✓ server/aiCompany/resourceGovernor.test.ts (4 tests) 35ms
+ ✓ server/aiCompany/executionLease.test.ts (20 tests) 30ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 17ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 16ms
+ ✓ server/aiCompany/companyNbaRouter.test.ts (23 tests) 10ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 10ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 13ms
+ ✓ server/aiCompany/productIntelligenceRecoveryV2.test.ts (11 tests) 5ms
+ ✓ server/aiCompany/executionPlanner.test.ts (13 tests) 7ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 4ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 3ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+ ✓ src/app/pages/RegimeDetectionPage.test.tsx (4 tests) 153ms
+
+ Test Files  54 passed (54)
+      Tests  550 passed (550)
+   Start at  11:38:24
+   Duration  75.38s (transform 1.31s, setup 0ms, collect 2.68s, tests 65.32s, environment 530ms, prepare 1.70s)
+

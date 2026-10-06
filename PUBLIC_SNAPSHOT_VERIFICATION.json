@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
-  "observedAt": "2026-10-06T03:31:51.397Z",
-  "sourceCarrierRevision": "13ef2af271c9aecafd626c45c706583ba2c23bfc",
-  "pinnedSourceCandidate": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
-  "exportedSourceFiles": 1348,
+  "observedAt": "2026-10-06T04:57:50.513Z",
+  "sourceCarrierRevision": "fef3107dad5434ebdeaffb403e102d95cd0a76fb",
+  "pinnedSourceCandidate": "af1672b880928c6fe3004686b9cec8d87426d09e",
+  "exportedSourceFiles": 1355,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -23,7 +23,7 @@
     "failed": 0,
     "files": 4
   },
-  "sourceFullRegression": "Exact clean6d81ac5:548PASS54FILES/full tsc/scoped lint; not full export suite",
+  "sourceFullRegression": "Exact cleanaf1672b:550PASS54FILES/full tsc/scoped lint; not all repository tests or full export suite",
   "gitHistory": "Continues the fresh snapshot history; no parent repository commits copied",
   "currentAuthority": "NONE",
   "independentReview": "REVIEW_PENDING; previous safety rejection preserved; no retry/substitute",
@@ -57,15 +57,12 @@
     "sourceFullRegression": "Historical exact candidate239fe22 533PASS51FILES; not rerun as full snapshot suite"
   },
   "currentExportBoundarySmoke": {
-    "initial": "14PASS1TIMEOUT",
-    "unchangedTargets": "3TIMEOUTS",
-    "rootTarget": "1PASS",
-    "preparationDiagnostic": "8595ms before spawn +cleanupENOTEMPTY, then split21/23ms PASS",
-    "unchangedFullRecheck": "15PASS3FILES",
-    "cause": "UNKNOWN",
-    "deadlines": "UNCHANGED",
-    "dependencyMethod": "Temporary local installed dependencies symlink removed; not clean npm ci",
-    "evidence": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json"
+    "passed": 17,
+    "failed": 0,
+    "files": 3,
+    "log": "snapshot-verification/current-fixture-lifetime-17-pass.txt",
+    "scope": "Sourceaf1672b fixture lifecycle; not production/controller quiescence",
+    "dependencyMethod": "Temporary installed local dependency link removed; not clean npm ci"
   },
   "staticImportMethod": "TypeScript AST imports/exports and literal import/require calls; embedded fixture code strings excluded",
   "previousWorkerSnapshotVerification": {
@@ -79,7 +76,18 @@
       "dependencyMethod": "Temporary installed local dependency symlink removed; not clean npm ci"
     }
   },
-  "currentUpdate": "Named Codex policy source and caller transport change, with prior failures retained",
+  "currentUpdate": "Fixture lifetime repair only; no production actor/permission changes",
   "newCounterexamples": "Actual preclaim Git effect after controller exit; installed Codex utility private-read fixture. Builder-only, no independent review or actual model tool invocation.",
-  "priorCounterexampleUpdate": "Documentation/forensic harnesses only; no application source changes. Previous 10-test export run remains subject to identical e542070 app bytes; not rerun merely for doc changes."
+  "priorCounterexampleUpdate": "Documentation/forensic harnesses only; no application source changes. Previous 10-test export run remains subject to identical e542070 app bytes; not rerun merely for doc changes.",
+  "previousNamedPolicyExport": {
+    "initial": "14PASS1TIMEOUT",
+    "unchangedTargets": "3TIMEOUTS",
+    "rootTarget": "1PASS",
+    "preparationDiagnostic": "8595ms before spawn +cleanupENOTEMPTY, then split21/23ms PASS",
+    "unchangedFullRecheck": "15PASS3FILES",
+    "cause": "UNKNOWN",
+    "deadlines": "UNCHANGED",
+    "dependencyMethod": "Temporary local installed dependencies symlink removed; not clean npm ci",
+    "evidence": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json"
+  }
 }

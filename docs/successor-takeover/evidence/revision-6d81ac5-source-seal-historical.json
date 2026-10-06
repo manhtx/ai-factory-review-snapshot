@@ -1,11 +1,11 @@
 {
   "schema": "ai-factory.source-candidate-seal.v1",
   "authoritative": false,
-  "observedAt": "2026-10-06T04:44:41.662217+00:00",
+  "observedAt": "2026-10-06T04:01:49.554575+00:00",
   "missionId": "AI_FACTORY_FINAL_CONVERGENCE_V2",
-  "candidateRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
-  "parentRevision": "95cdc06ede22cc6adb88f019e53133c830540d73",
-  "gitTree": "3385d4e737232c29abe796123f1c650291be4c2d",
+  "candidateRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
+  "parentRevision": "dc491020f47526cbcf02fc241bb7f91cce2a91b8",
+  "gitTree": "ff7d6de3575249da89d2bc5864cf650440f39a4f",
   "branch": "codex/ai-company-hardening-20260910",
   "sourceSeal": "IMMUTABLE_GIT_SOURCE_IDENTIFIED",
   "cleanAtTestStart": true,
@@ -13,7 +13,7 @@
   "authority": "NONE",
   "trustStatus": "UNTRUSTED_REVIEW_PENDING",
   "productionAutonomy": "DISABLED",
-  "proofVersion": "revision-af1672b-fixture-lifetime.v1",
+  "proofVersion": "revision-6d81ac5-codex-read-policy.v1",
   "checkpointVersion": "ai-factory.checkpoint.v1",
   "configHashes": {
     "package.json": "b4bcd81b2209059c97e47e44891b6521d3ae508dc95c2c2903b28d21692f6ad4",
@@ -84,7 +84,7 @@
       "server/aiCompany/cliResourceAdmission.test.ts": "ffcc500a1a72643afc578e85b3ca87b931b173e6eea0c5ff7e3be3fd5eed4980",
       "server/aiCompany/resourceGovernor.ts": "40454585ad2768d52efebda8bc96d8833731e421c5d4ebca9ad77259f6861361",
       "scripts/ai-company-role-dispatch.mjs": "f2a5c1e601bf4525ea7f3cfcd544adc6b0b546ea2931b7cc02654b33a0323a60",
-      "server/aiCompany/cliSandboxBoundary.test.ts": "7f4cde1269e67dcd34e67d136c81f0a498855eb5d3341d36e93e4d3e5f99bc02",
+      "server/aiCompany/cliSandboxBoundary.test.ts": "6c391b08f8fe42796404d32af073b79027d3e0e9c263113ecafd7b96bfe193bb",
       "server/aiCompany/macSandbox.test.ts": "543f91f21f6652b6b3210ce619a16b6665c73b0e308a8b38b2df6832396212b8",
       "server/aiCompany/macSandbox.ts": "8bb4f4565cb2ff7419c85fab4c68beb5741856303af4120428bf2a3b59c25c56",
       ".gitignore": "7fe76a2f80ebd6751262fc27e862568c12a62a8314e366d2e523688bd1b849fd",
@@ -104,7 +104,11 @@
     "lint": [
       "node",
       "node_modules/eslint/bin/eslint.js",
+      "server/aiCompany/macSandbox.ts",
+      "server/aiCompany/codexReadableRoot.test.ts",
+      "server/aiCompany/cliAttemptDispatch.test.ts",
       "server/aiCompany/cliSandboxBoundary.test.ts",
+      "scripts/ai-company-role-dispatch.mjs",
       "--max-warnings=0"
     ],
     "tests": [
@@ -168,7 +172,7 @@
     ]
   },
   "results": {
-    "currentSuite": "550PASS54FILES",
+    "currentSuite": "548PASS54FILES",
     "typecheck": "PASS_FULL_TSC_NO_EMIT",
     "lint": "PASS_AFFECTED_FILES_AND_ROLE_DISPATCH",
     "resourceProvider": "ACTUAL_GROUP_SURVIVAL_WITHHOLDS_REPLACEMENT; OBSERVED_GROUP_ABSENCE_PERMITS_NEW_GRANT; UNBOUND_LAUNCH_UNKNOWN",
@@ -176,19 +180,18 @@
     "timing": "Current clean539PASS; all historical timing failures retained; cause UNKNOWN",
     "workerSandbox": "Actual protected content/private metadata/enumeration and symlink escape denied; exact ancestor metadata and owned child signalling permitted; foreign signal denied; actual nested Vitest native-config exits0",
     "workerEnvironment": "Both dispatcher runners exclude dummy controller/SSH/arbitrary secret and loader keys; config/cache/temp in canonical attempt workspace; aliased control root denied before claim",
-    "codexReadableRoot": "Actual installed utility generated profiles deny dummy control/auth/symlink reads and dependency writes; permit dependency reads/attempt temp; workspace product writes only in write mode. Actual dispatcher selects named policy/no legacy sandbox; missing workspace preclaim refusal. Stubs verify readonly final-file transport, not actual model tool.",
-    "fixtureLifetime": "Actual delayed filesystem writer drains before deletion; actual child close awaited; closed initialization cannot deliver usable fixture; deadlines unchanged. Production Git/provider quiescence not certified."
+    "codexReadableRoot": "Actual installed utility generated profiles deny dummy control/auth/symlink reads and dependency writes; permit dependency reads/attempt temp; workspace product writes only in write mode. Actual dispatcher selects named policy/no legacy sandbox; missing workspace preclaim refusal. Stubs verify readonly final-file transport, not actual model tool."
   },
   "artifactHashes": {
-    "docs/successor-takeover/evidence/revision-af1672b-command-results.json": "f7138c9b61dfbcef7b228b8dd9bf972025e60b6ba3e3e6b382eb5c5fe9e276ab",
-    "docs/successor-takeover/evidence/revision-af1672b-lint.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "docs/successor-takeover/evidence/revision-af1672b-tests.txt": "0d571420a1eb60e585586c7bfaf38fe1a1d50501c7980268fd778de1418b1dd6",
-    "docs/successor-takeover/evidence/revision-af1672b-typecheck.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "docs/successor-takeover/evidence/revision-6d81ac5-command-results.json": "386363c32301f3804027e59d1502111de36abbcf7814ddb2ff58dd412430c83f",
+    "docs/successor-takeover/evidence/revision-6d81ac5-lint.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/successor-takeover/evidence/revision-6d81ac5-tests.txt": "9a0f99150f6b446ea2d8330fd85b0abd2f444c7aa0180e08f2d8b1ab4931217b",
+    "docs/successor-takeover/evidence/revision-6d81ac5-typecheck.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "proofAssociation": {
-    "subjectRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
+    "subjectRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
     "evidenceCarrier": "Subsequent documentation-only commit; Git identity read externally; not the source candidate",
-    "supersededSourceSeal": "evidence/revision-6d81ac5-source-seal-historical.json; preserved prior548 proof/failures",
+    "supersededSourceSeal": "evidence/revision-e542070-source-seal-historical.json; retained historical543",
     "historicalProof": "b318825 stage1 523PASS is historical and contains original provider orphan counterexample; initial lifecycle failure evidence retained; current533 is a clean exact run",
     "previousCandidate": "Dirty d23b293 checkout preserved; authority NONE"
   },

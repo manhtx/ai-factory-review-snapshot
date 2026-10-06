@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-06T04:27:44.014Z",
+  "observedAt": "2026-10-06T04:57:50.513Z",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "13ef2af271c9aecafd626c45c706583ba2c23bfc",
-  "pinnedTestedCandidateRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
+  "sourceCarrierRevision": "fef3107dad5434ebdeaffb403e102d95cd0a76fb",
+  "pinnedTestedCandidateRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
     {
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "fc598fe3f9af2f1834c88fb619655fd1b1ae20c02ae4b36cb80538efd5508865",
-      "bytes": 34916,
+      "sha256": "016a347f717195d9097c53b67483e7f19edd5d153d07054d849290995efb5140",
+      "bytes": 35062,
       "source": "current-source-carrier"
     },
     {
@@ -752,8 +752,8 @@
     },
     {
       "path": "docs/successor-takeover/CLOSURE_MATRIX.json",
-      "sha256": "d2c52c2acf55ce1c015359915c550bcdacd3814d67a783d88a8f74876278df83",
-      "bytes": 55469,
+      "sha256": "5741983e033c22043f0286c4f2c529a8c38e2540d321593d1e41987854b3e04e",
+      "bytes": 55455,
       "source": "current-source-carrier"
     },
     {
@@ -862,6 +862,12 @@
       "path": "docs/successor-takeover/FINAL_CONVERGENCE_MISSION.md",
       "sha256": "eb015a16e78427db6b2d548ec0365de540f82d0cfb6bbddd755d82ba8dac6e23",
       "bytes": 74290,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/FIXTURE_LIFETIME_REPAIR.md",
+      "sha256": "cc1733ca6b7bb9a455263821913c5d97e377091379c4e92230fac35ff962a1b5",
+      "bytes": 1566,
       "source": "current-source-carrier"
     },
     {
@@ -974,8 +980,8 @@
     },
     {
       "path": "docs/successor-takeover/PROOF_GRAPH.json",
-      "sha256": "3ae7448a6fa1c34e6254c08f9cdd617420d8c8c22b2f186a2780592afc5b58be",
-      "bytes": 71536,
+      "sha256": "7897cbd8df7f27a5fd956ed1b234b5eec2375b9902ab500acc34ada06ce5a978",
+      "bytes": 73067,
       "source": "current-source-carrier"
     },
     {
@@ -1040,8 +1046,8 @@
     },
     {
       "path": "docs/successor-takeover/SOURCE_CANDIDATE_SEAL.json",
-      "sha256": "4a692d042b73fe06afc378f5606fdd9de1e621984c0a426a2550c5f41475ac09",
-      "bytes": 16426,
+      "sha256": "ab7b3991503d9a9cce75b36bea63e209290e1344398a057d7e1d23168ccd4e87",
+      "bytes": 16480,
       "source": "current-source-carrier"
     },
     {
@@ -3193,6 +3199,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/public-codex-policy-publication-a186fb7.json",
+      "sha256": "5dbf444bdd7ebb642d932eac8bfe1d0c89b8fd2d0f7b4db88be4ffe0b53ce50b",
+      "bytes": 716,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/public-gateway-design-publication-46fd63a.json",
       "sha256": "6d0b067bdb2d0d2265ffc3d26f1f295cc85e7981411b16f6e003d2bb5e8398fb",
       "bytes": 625,
@@ -3991,6 +4003,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/revision-6d81ac5-source-seal-historical.json",
+      "sha256": "4a692d042b73fe06afc378f5606fdd9de1e621984c0a426a2550c5f41475ac09",
+      "bytes": 16426,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/revision-6d81ac5-tests.txt",
       "sha256": "9a0f99150f6b446ea2d8330fd85b0abd2f444c7aa0180e08f2d8b1ab4931217b",
       "bytes": 8786,
@@ -4028,6 +4046,30 @@
     },
     {
       "path": "docs/successor-takeover/evidence/revision-a534211-typecheck.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-af1672b-command-results.json",
+      "sha256": "f7138c9b61dfbcef7b228b8dd9bf972025e60b6ba3e3e6b382eb5c5fe9e276ab",
+      "bytes": 11275,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-af1672b-lint.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-af1672b-tests.txt",
+      "sha256": "0d571420a1eb60e585586c7bfaf38fe1a1d50501c7980268fd778de1418b1dd6",
+      "bytes": 8275,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-af1672b-typecheck.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
       "source": "current-source-carrier"
@@ -5636,8 +5678,8 @@
     },
     {
       "path": "server/aiCompany/cliSandboxBoundary.test.ts",
-      "sha256": "6c391b08f8fe42796404d32af073b79027d3e0e9c263113ecafd7b96bfe193bb",
-      "bytes": 8819,
+      "sha256": "7f4cde1269e67dcd34e67d136c81f0a498855eb5d3341d36e93e4d3e5f99bc02",
+      "bytes": 12321,
       "source": "current-source-carrier"
     },
     {
@@ -8152,9 +8194,10 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "8821305e352f38b8ef14cd3c1de7ba5f20256c5c5b955d2eab82068d1f8f617c",
+    "README.md": "6f08aed7c30bd670768400eda95e8d3e2f481be1d814f40aad0935d72d8b6f83",
     ".gitignore": "2f79870e866856827b5e9458c9ce2ac0f3a958ae468b4eb2f7dcc7649852010c",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "272f5c95a2dc3e2db510009b7caac950e514a1b7e81a859e7506c53bd1b0e68d",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "f895704fbcf4f8502b48838f36531bf5b1cf116138eaaecccca3ccf1ef61ec4b",
+    "snapshot-verification/current-fixture-lifetime-17-pass.txt": "23630c18c4c1397a0d6f627cc8b588573ac2b07fe38d9ff447cc4cb19ad61306",
     "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
     "snapshot-verification/current-worker-contract-10-pass.txt": "b78f8ef949eea7d8bb7a2de24d49255989678674a6b8c96cb7614593fc403d57",
     "snapshot-verification/initial-smoke-37-pass-1-eperm.txt": "f487f73b0138d4ad22b69cc6c7a59a13c554169cf96de7db81921fd359b4fd64",
