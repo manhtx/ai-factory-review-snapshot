@@ -1,0 +1,114 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 15465ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  2038ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1333ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  537ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1649ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1677ms
+   ✓ quarantines worker-written DONE before creating semantic receipts  518ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1491ms
+   ✓ CLI review preserves actual original reference for same-scope  1414ms
+   ✓ CLI review preserves actual original reference for cross-scope  1341ms
+   ✓ CLI review preserves actual original reference for unresolved  1370ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1394ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 3840ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  1659ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1555ms
+ ✓ server/aiCompany/cliSandboxBoundary.test.ts (9 tests) 3916ms
+   ✓ actual dispatcher protects the supplied control root distinct from its checkout  1360ms
+   ✓ actual Codex transport excludes controller privileges and loader overrides  1298ms
+   ✓ readonly Codex transport records its trusted final message as the attempt artifact  488ms
+ ✓ server/aiCompany/cliResourceAdmission.test.ts (4 tests) 4251ms
+   ✓ actual agy dispatcher admits a current stub result only after its bound group exits  1970ms
+   ✓ actual SIGKILL leaves the provider alive and preserves admission until its entire group disappears  543ms
+   ✓ leader completion with a surviving actual descendant withholds release and terminal receipts  527ms
+   ✓ an actual spawn error preserves marked UNKNOWN ownership and never grants terminal success  1212ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 3981ms
+   ✓ pre-release review gate > fails closed until every independent review has evidence  319ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  397ms
+   ✓ denies withdrawn current review authority  437ms
+   ✓ denies missing current review authority  427ms
+   ✓ denies nonpass current review authority  399ms
+   ✓ denies missing-verdict current review authority  414ms
+   ✓ uses full dependency snapshot before selecting review backlog  442ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  378ms
+   ✓ plain rows and copied views cannot certify prerelease  388ms
+   ✓ cannot approve an empty target project using healthy foreign work  378ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 3628ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3702ms
+   ✓ two healthy independent terminal commits share producer without blocking each other  481ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 4630ms
+   ✓ cadence quorum > passes only when every daily accountable role is done with evidence  360ms
+   ✓ denies withdrawn governance inputs despite historical DONE  369ms
+   ✓ denies missing governance inputs despite historical DONE  375ms
+   ✓ reads healthy dependencies outside cadence selection  561ms
+   ✓ revokes receiptless cadence and rejects stale views  949ms
+   ✓ plain rows and copied views cannot certify cadence  896ms
+   ✓ cannot approve target cadence using another project governance  887ms
+ ✓ server/aiCompany/resourceAdmissionProcess.test.ts (7 tests) 1983ms
+   ✓ real stale OS A cannot release B or admit C while B is alive  417ms
+   ✓ SIGKILL in a marked but unbound launch window preserves UNKNOWN rather than replacement  385ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 2616ms
+   ✓ WorktreeManager > creates an isolated workspace, captures changes, and refuses dirty cleanup  336ms
+   ✓ WorktreeManager > detects and propagates a role change to a file that was already dirty at baseline  433ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  495ms
+   ✓ WorktreeManager > inventories active, dirty, completed and missing worktrees without deleting them  382ms
+   ✓ WorktreeManager > merges verified product changes into main git history and marks worktree MERGED  312ms
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (31 tests) 2331ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 1599ms
+   ✓ does not generate prerelease reviews from receiptless QA/QC history  311ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 1041ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 887ms
+   ✓ release promotion > promotes only after full independent quorum  383ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  381ms
+ ✓ server/aiCompany/combinedEvidenceCapture.test.ts (10 tests) 905ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 742ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 728ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 776ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 648ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 1009ms
+   ✓ role work execution loop > runs ready work with bounded concurrency  363ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 563ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 633ms
+ ✓ server/aiCompany/codexReadableRoot.test.ts (3 tests) 450ms
+   ✓ actual installed Codex utility enforces generated read-only policy  347ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 516ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 547ms
+ ✓ server/aiCompany/macSandbox.test.ts (5 tests) 531ms
+   ✓ macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile  403ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 383ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 376ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 322ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 340ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 343ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 338ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 535ms
+ ✓ server/aiCompany/resourceAdmissionAuthority.test.ts (23 tests) 275ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 304ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 219ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 214ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 255ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 87ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 112ms
+ ✓ server/aiCompany/resourceGovernor.test.ts (4 tests) 35ms
+ ✓ server/aiCompany/executionLease.test.ts (20 tests) 25ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 23ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 19ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 11ms
+ ✓ server/aiCompany/companyNbaRouter.test.ts (23 tests) 9ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 7ms
+ ✓ server/aiCompany/executionPlanner.test.ts (13 tests) 5ms
+ ✓ server/aiCompany/productIntelligenceRecoveryV2.test.ts (11 tests) 4ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 4ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 2ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 3ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+ ✓ src/app/pages/RegimeDetectionPage.test.tsx (4 tests) 145ms
+
+ Test Files  54 passed (54)
+      Tests  550 passed (550)
+   Start at  14:32:03
+   Duration  76.60s (transform 788ms, setup 0ms, collect 2.00s, tests 66.31s, environment 507ms, prepare 1.69s)
+

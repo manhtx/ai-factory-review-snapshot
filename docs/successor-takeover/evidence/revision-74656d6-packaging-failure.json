@@ -1,0 +1,43 @@
+{
+  "classification": "EVIDENCE_PACKAGING_HASH_FAILURE_REPAIRED",
+  "invalidCarrier": "67da3c2",
+  "testedSourceRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
+  "cause": "Patch generation trimEnd changed trailing log whitespace and represented empty logs with a newline; persisted log bytes did not match raw log hashes",
+  "failure": "Source seal artifact check raised AssertionError before publication to separate public snapshot; private docs carrier commit nonetheless occurred",
+  "repair": "Restore original raw bytes from the exact completed run; validate every artifact hash; no test results modified or rerun to hide the packaging failure",
+  "authority": "NONE",
+  "rows": [
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-tests.txt",
+      "packaged67da3c2Sha256": "acb74c3f621ece58abafe448141e21aa2de05ed84ed4a7792013c299068e2b03",
+      "expectedRawSha256": "d2c5e22f3be031bbc8420064ac115250fd6379bcbba40dac7a4a8da0b41689aa",
+      "restoredSha256": "d2c5e22f3be031bbc8420064ac115250fd6379bcbba40dac7a4a8da0b41689aa",
+      "beforeMatched": false,
+      "afterMatched": true
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-typecheck.txt",
+      "packaged67da3c2Sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "expectedRawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "restoredSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "beforeMatched": false,
+      "afterMatched": true
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-lint.txt",
+      "packaged67da3c2Sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "expectedRawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "restoredSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "beforeMatched": false,
+      "afterMatched": true
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-nativeProbe.txt",
+      "packaged67da3c2Sha256": "c6955fbb6370ef61b5d0e7f16e5c5b6421d77c384110793484a473fa34c2ab08",
+      "expectedRawSha256": "c6955fbb6370ef61b5d0e7f16e5c5b6421d77c384110793484a473fa34c2ab08",
+      "restoredSha256": "c6955fbb6370ef61b5d0e7f16e5c5b6421d77c384110793484a473fa34c2ab08",
+      "beforeMatched": true,
+      "afterMatched": true
+    }
+  ]
+}

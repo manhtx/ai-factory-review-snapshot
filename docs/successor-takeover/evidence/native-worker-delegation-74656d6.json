@@ -1,0 +1,96 @@
+{
+  "sourceRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
+  "cleanAtStart": true,
+  "cleanAtEnd": true,
+  "scriptSha256": "3862eec970c25c0ae33ff214eb2d2d7ebb1a6f268979bbbeed8baf0194b6b2d8",
+  "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+  "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+  "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+  "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-72BX4q",
+  "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+  "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+  "observations": [
+    {
+      "legacyOverride": false,
+      "ignoreUserConfig": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "advertisedToolNames": [
+        "exec_command",
+        "write_stdin",
+        "update_plan",
+        "request_user_input",
+        "view_image",
+        "web_search"
+      ],
+      "delegationAbsent": true,
+      "permissionChecks": {
+        "controlRead": false,
+        "authRead": false,
+        "escapeRead": false,
+        "workspaceRead": true,
+        "dependencyRead": true,
+        "workspaceWrite": false
+      },
+      "checksPass": true,
+      "finalResponse": "DUMMY_FIXTURE_FINISHED",
+      "projectMarkerPresent": false
+    },
+    {
+      "legacyOverride": true,
+      "ignoreUserConfig": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "advertisedToolNames": [
+        "exec_command",
+        "write_stdin",
+        "update_plan",
+        "request_user_input",
+        "view_image",
+        "web_search"
+      ],
+      "delegationAbsent": true,
+      "permissionChecks": {
+        "controlRead": false,
+        "authRead": false,
+        "escapeRead": false,
+        "workspaceRead": true,
+        "dependencyRead": true,
+        "workspaceWrite": false
+      },
+      "checksPass": true,
+      "finalResponse": "DUMMY_FIXTURE_FINISHED",
+      "projectMarkerPresent": false
+    },
+    {
+      "legacyOverride": true,
+      "ignoreUserConfig": false,
+      "exitCode": 0,
+      "timedOut": false,
+      "advertisedToolNames": [
+        "exec_command",
+        "write_stdin",
+        "update_plan",
+        "request_user_input",
+        "view_image",
+        "web_search"
+      ],
+      "delegationAbsent": true,
+      "permissionChecks": {
+        "controlRead": false,
+        "authRead": false,
+        "escapeRead": false,
+        "workspaceRead": true,
+        "dependencyRead": true,
+        "workspaceWrite": false
+      },
+      "checksPass": true,
+      "finalResponse": "DUMMY_FIXTURE_FINISHED",
+      "projectMarkerPresent": true
+    }
+  ],
+  "beforeRepair": "clean52ebd1f advertised multi_agent_v1 incl spawn/resume/send_input/wait/close; no agents invoked",
+  "independent": false,
+  "authority": "NONE",
+  "limits": "No OS spawn/provider authority, managed config, AGY/auth, writable mode all-tool or gateway closure"
+}

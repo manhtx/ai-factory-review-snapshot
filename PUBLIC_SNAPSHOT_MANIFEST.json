@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-06T07:28:36.076475+00:00",
+  "observedAt": "2026-10-06T07:37:49.293592+00:00",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "0add358f9b36e9acca7a79114fb57f159258e504",
-  "pinnedTestedCandidateRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
+  "sourceCarrierRevision": "91d916a2efc28a9e1df02429504b1b2b8d87c118",
+  "pinnedTestedCandidateRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
     {
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "2277331df7c0d6fb01d1c6df86f7ed54b0ebb9fa875b9a654d6acb7f9e26f348",
-      "bytes": 35104,
+      "sha256": "14536ddd0420a2c963dbfc27ccfdaafc80ffde21b80ab57682deb00711cf305c",
+      "bytes": 35298,
       "source": "current-source-carrier"
     },
     {
@@ -980,8 +980,8 @@
     },
     {
       "path": "docs/successor-takeover/PROOF_GRAPH.json",
-      "sha256": "6d4d3819ff23c5ea397640cb35876aa25a387907e46af90e5e5edf39ce2352bb",
-      "bytes": 73728,
+      "sha256": "d91034760edd1e1f52828baa6bc479dfe1af0889b34e7e21da70453d3ee70da5",
+      "bytes": 75264,
       "source": "current-source-carrier"
     },
     {
@@ -1046,8 +1046,8 @@
     },
     {
       "path": "docs/successor-takeover/SOURCE_CANDIDATE_SEAL.json",
-      "sha256": "ab7b3991503d9a9cce75b36bea63e209290e1344398a057d7e1d23168ccd4e87",
-      "bytes": 16480,
+      "sha256": "9544777824a14d5681f4f63c1f4df4822a0ec0aa12caecd573f52ead652abe5c",
+      "bytes": 16246,
       "source": "current-source-carrier"
     },
     {
@@ -1126,6 +1126,12 @@
       "path": "docs/successor-takeover/WAIT_VALIDATION_PROGRESS.json",
       "sha256": "783d13ff270b8e1b3e27ddd5e18cfd14149d932fc79ae625c62c4bcc1d5ef24f",
       "bytes": 1743,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/WORKER_DELEGATION_BOUNDARY.md",
+      "sha256": "6298e3509a526e02854002b80b1adc44b8526a93be626cab1a2a127f1e0cffcd",
+      "bytes": 3854,
       "source": "current-source-carrier"
     },
     {
@@ -1598,8 +1604,8 @@
     },
     {
       "path": "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs",
-      "sha256": "b386d70707d3d3a5c767a7406920ed8d287dae3922efcb2dd4d6951d087c02ee",
-      "bytes": 10239,
+      "sha256": "3862eec970c25c0ae33ff214eb2d2d7ebb1a6f268979bbbeed8baf0194b6b2d8",
+      "bytes": 10655,
       "source": "current-source-carrier"
     },
     {
@@ -2959,6 +2965,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/native-worker-delegation-74656d6.json",
+      "sha256": "ea31549adb64405621ffa803c40ec00cae1c05f577fa641e250dcadd55346350",
+      "bytes": 3145,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/pending-terminal-after.json",
       "sha256": "5cf52fb94ea25727bc40b6ecb8d68e18c64ce3585de88fe7bbebb01dc4c777bb",
       "bytes": 705,
@@ -3232,6 +3244,12 @@
       "path": "docs/successor-takeover/evidence/public-gateway-design-publication-46fd63a.json",
       "sha256": "6d0b067bdb2d0d2265ffc3d26f1f295cc85e7981411b16f6e003d2bb5e8398fb",
       "bytes": 625,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/public-native-exec-publication-530dd65.json",
+      "sha256": "4651cc28eea7fca06bd04e99928c3cf4a992f1f3df7ae86e12741afd54d1cf54",
+      "bytes": 533,
       "source": "current-source-carrier"
     },
     {
@@ -4045,6 +4063,42 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-command-results.json",
+      "sha256": "e8a9fa03680166adf13df4e6658548ef1780b80cd713c37c1269c7109dbae95d",
+      "bytes": 12156,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-lint.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-nativeProbe.txt",
+      "sha256": "c6955fbb6370ef61b5d0e7f16e5c5b6421d77c384110793484a473fa34c2ab08",
+      "bytes": 670,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-packaging-failure.json",
+      "sha256": "0a709d32246b10ce580499ac28c3b7d2b01144e44f1ae2fbcab26c8480e2b910",
+      "bytes": 2438,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-tests.txt",
+      "sha256": "d2c5e22f3be031bbc8420064ac115250fd6379bcbba40dac7a4a8da0b41689aa",
+      "bytes": 8283,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-74656d6-typecheck.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/revision-a534211-command-results.json",
       "sha256": "b91a48aab181a520e10f3fecff0a5b7b6e72e04e83024fab17b6832dcb7db5dd",
       "bytes": 11160,
@@ -4084,6 +4138,12 @@
       "path": "docs/successor-takeover/evidence/revision-af1672b-lint.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-af1672b-source-seal-historical.json",
+      "sha256": "ab7b3991503d9a9cce75b36bea63e209290e1344398a057d7e1d23168ccd4e87",
+      "bytes": 16480,
       "source": "current-source-carrier"
     },
     {
@@ -6206,8 +6266,8 @@
     },
     {
       "path": "server/aiCompany/macSandbox.ts",
-      "sha256": "8bb4f4565cb2ff7419c85fab4c68beb5741856303af4120428bf2a3b59c25c56",
-      "bytes": 4865,
+      "sha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "bytes": 4895,
       "source": "current-source-carrier"
     },
     {
@@ -8218,14 +8278,16 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "11c90ca5b2c15ae3e78648e9d618c0ebbb73f98f7647692fe33b53ffd02cc51c",
+    "README.md": "3b66cac3f5a7b675b4e7d89fdaba99946b3a867e0324e9f2c29e1f9572158af2",
     ".gitignore": "2f79870e866856827b5e9458c9ce2ac0f3a958ae468b4eb2f7dcc7649852010c",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "970b0351fb831c05f7c43606ec41cb89a18cc7ec6b14e7d8aa7d8bdf9569acb0",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "0a6dac0714b0bfd6f59f33b28b8f06e7d8c5eafd2cf2f84000751e2c5f148003",
     "snapshot-verification/current-fixture-lifetime-17-pass.txt": "23630c18c4c1397a0d6f627cc8b588573ac2b07fe38d9ff447cc4cb19ad61306",
     "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
     "snapshot-verification/current-worker-contract-10-pass.txt": "b78f8ef949eea7d8bb7a2de24d49255989678674a6b8c96cb7614593fc403d57",
     "snapshot-verification/initial-smoke-37-pass-1-eperm.txt": "f487f73b0138d4ad22b69cc6c7a59a13c554169cf96de7db81921fd359b4fd64",
     "snapshot-verification/unchanged-cli-recheck.txt": "239df5d90ab968e5496f3e18226cb9abe79cf381eafcc718a7a484183c84309e",
-    "snapshot-verification/unchanged-full-smoke-recheck.txt": "c88604db04597993c38b5fae1e6bfd7cdd4fccec22ddf8030ebdd19f4e166921"
+    "snapshot-verification/unchanged-full-smoke-recheck.txt": "c88604db04597993c38b5fae1e6bfd7cdd4fccec22ddf8030ebdd19f4e166921",
+    "snapshot-verification/current-no-delegation-tests-pass.txt": "41dd244e3de866a4ab74a982626cf4bc50fa1b304a0715abf2c092bbc008d19b",
+    "snapshot-verification/current-no-delegation-native-pass.txt": "00fbd6f3065eb59d65a19c97fe38a6801cd990521f96f19e3eed3b40b32182f4"
   }
 }

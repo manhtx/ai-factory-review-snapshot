@@ -1,0 +1,12 @@
+{
+  "observedAt": "2026-10-06T07:28:55.386356+00:00",
+  "snapshotRevision": "530dd65dfec6ef5699553b5a3a8cc7c26c6bd655",
+  "sourceCarrierRevision": "0add358f9b36e9acca7a79114fb57f159258e504",
+  "testedNativeProbeRevision": "52ebd1f6073fa53f5ebe6cc77658f65f93e8c9a2",
+  "anonymousAccessVerified": true,
+  "remoteBlobs": 1369,
+  "allBlobHashesMatch": true,
+  "authority": "NONE",
+  "productionAutonomy": "DISABLED",
+  "scope": "Public native exec/project/image fixture evidence, not all-tool/managed/auth/gateway/independent closure"
+}

@@ -2,9 +2,9 @@
 
 Source snapshot for external code and evidence inspection of Macro Research Platform's AI Factory. The original repository remains private. This repository starts with a new Git history; it contains no parent repository history or live machine stores.
 
-Source carrier: `0add358f9b36e9acca7a79114fb57f159258e504`.
+Source carrier: `91d916a2efc28a9e1df02429504b1b2b8d87c118`.
 
-Pinned tested source candidate: `af1672b880928c6fe3004686b9cec8d87426d09e`. Its recorded clean run passed 550 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
+Pinned tested source candidate: `74656d665bb88ad22d67eb40215f76a481d65e5d`. Its recorded clean run passed 550 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
 
 ## Inspect
 
@@ -47,3 +47,7 @@ Current fixture lifetime repair closes fixture admission, drains initialization/
 ## Native exec/project/image evidence
 
 `docs/successor-takeover/evidence/codex-native-exec-project-and-image-52ebd1f.json` records three clean-source native CLI configuration fixtures. A localhost dummy provider drives actual exec_command and view_image; private dummy reads/readonly writes are rejected and workspace/dependency/image positive controls succeed. The trusted final-response file is recorded. Native binary and launcher hashes are bound to the probe. Earlier invalid TMPDIR fixture is retained. This is source fixture evidence, not real model reasoning, managed-config/auth/AGY/all-tool/gateway proof, independent review, or an export rerun.
+
+## Worker delegation removal
+
+Current source74656d6 explicitly supplies `agents.enabled=false` through the dispatcher permission helper. Three native export fixtures advertise no multi-agent namespace or agent tools even when a trusted project requests agents enabled. Actual exec/image permission controls pass and trusted final response is saved. Current export smoke passes17 tests/3 files with temporary installed dependencies removed afterward; it is not clean npm ci. The original source run passes550 tests/54 files, tsc and affected lint. Exact source, native binary hashes and before-repair schemas are retained in `WORKER_DELEGATION_BOUNDARY.md` and its evidence. Log packaging whitespace mismatch is retained as negative evidence; original exact log bytes have been restored and hashes verified. Ordinary subprocess/provider authority, writable-mode all-tool coverage, managed configuration, AGY/auth and controller gateway remain OPEN.

@@ -1,7 +1,7 @@
 {
   "schema": "successor-takeover.proof-graph.v1",
   "authoritative": false,
-  "currentCandidateRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
+  "currentCandidateRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
   "historicalProofPolicy": "Older nodes retain historical evidence only; none certifies the current candidate without exact revision revalidation. No negative evidence removed.",
   "purpose": "Explicit claim dependencies and limits for isolated candidate evidence; not an operational proof engine or closure certificate.",
   "executionInventory": {
@@ -12,6 +12,34 @@
   },
   "nodes": [
     {
+      "id": "native-worker-no-delegation-74656d6",
+      "sourceRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
+      "claim": "Explicit agents.enabled=false removes native multi-agent schemas in three config fixtures while native exec/image boundary/final-response controls pass; clean550PASS54FILES/tsc/lint",
+      "evidence": [
+        "WORKER_DELEGATION_BOUNDARY.md",
+        "evidence/native-worker-delegation-74656d6.json",
+        "evidence/revision-74656d6-command-results.json"
+      ],
+      "status": "BUILDER_SCOPED_VERIFIED; AUTHORITY_NONE",
+      "independent": false,
+      "dependsOn": [
+        "native-exec-project-image-52ebd1f"
+      ],
+      "missing": "Writable-mode all-tool/managed/auth/AGY/caller migration/gateway/independent closure"
+    },
+    {
+      "id": "native-exec-project-image-52ebd1f",
+      "sourceRevision": "52ebd1f6073fa53f5ebe6cc77658f65f93e8c9a2",
+      "claim": "Clean native CLI three project config cases: exec_command dummy deny/allow controls, view_image private denied/workspace delivered, trusted final response saved; actual native payload hash retained",
+      "evidence": "evidence/codex-native-exec-project-and-image-52ebd1f.json",
+      "status": "BUILDER_SCOPED_NATIVE_VERIFIED; SYNTHETIC_LOCALHOST_PROVIDER",
+      "independent": false,
+      "dependsOn": [
+        "codex-readable-root-6d81ac5"
+      ],
+      "missing": "Managed layers, other tool surfaces/delegation, real provider/auth/AGY/caller migration/gateway/independent assurance"
+    },
+    {
       "id": "public-fixture-lifetime-125f5d1",
       "sourceRevision": "fef3107dad5434ebdeaffb403e102d95cd0a76fb",
       "snapshotRevision": "125f5d1850cd9bbfd3c0786f98a9609538dca3a3",
@@ -19,7 +47,9 @@
       "evidence": "evidence/public-fixture-lifetime-publication-125f5d1.json",
       "status": "PUBLIC_TOOL_ACCESS_VERIFIED; NO_RUNTIME_AUTHORITY",
       "independent": false,
-      "dependsOn": ["fixture-lifetime-af1672b"],
+      "dependsOn": [
+        "fixture-lifetime-af1672b"
+      ],
       "missing": "Preparation latency, effective exec/all tool policy/auth/AGY/caller migration/gateway/independent review"
     },
     {

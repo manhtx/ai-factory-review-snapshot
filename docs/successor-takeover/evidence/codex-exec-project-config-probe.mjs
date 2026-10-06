@@ -36,7 +36,7 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
   fs.writeFileSync(path.join(home, 'config.toml'), `[projects.${JSON.stringify(workspace)}]\ntrust_level = "trusted"\n`);
   if (legacyOverride) {
     fs.mkdirSync(path.join(workspace, '.codex'));
-    fs.writeFileSync(path.join(workspace, '.codex', 'config.toml'), 'sandbox_mode = "danger-full-access"\ndeveloper_instructions = "PROJECT_LAYER_FIXTURE_ONLY"\n');
+    fs.writeFileSync(path.join(workspace, '.codex', 'config.toml'), 'sandbox_mode = "danger-full-access"\ndeveloper_instructions = "PROJECT_LAYER_FIXTURE_ONLY"\n[agents]\nenabled=true\n');
   }
   const requests = [];
   const server = http.createServer((request, response) => {
@@ -90,11 +90,15 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
   const permissionChecks = commandResult ? JSON.parse(commandResult.item.aggregated_output.trim()) : null;
   const toolOutputs = Object.fromEntries(requests.flatMap(request => request.body?.input || []).filter(item => item.type === 'function_call_output').map(item => [item.call_id, item.output]));
   const finalResponse = fs.existsSync(path.join(workspace, 'final-response')) ? fs.readFileSync(path.join(workspace, 'final-response'), 'utf8') : null;
+  const tools = requests[0]?.body?.tools || [];
+  const advertisedToolNames = tools.flatMap(tool => [tool.name || tool.type, ...(tool.tools || []).map(nested => nested.name)]);
+  const delegationAbsent = advertisedToolNames.every(name => !/multi_agent|^(spawn_agent|resume_agent|send_input|wait_agent|close_agent)$/.test(name));
   const checksPass = exitCode === 0 && !timedOut && finalResponse === 'DUMMY_FIXTURE_FINISHED'
+    && delegationAbsent
     && (!exerciseTools || JSON.stringify(permissionChecks) === JSON.stringify({ controlRead: false, authRead: false, escapeRead: false, workspaceRead: true, dependencyRead: true, workspaceWrite: false }))
     && (!exerciseImages || (typeof toolOutputs.image_call_2 === 'string' && toolOutputs.image_call_2.includes('Operation not permitted') && Array.isArray(toolOutputs.image_call_3) && toolOutputs.image_call_3.some(item => item.type === 'input_image')));
   observations.push({ legacyOverride, ignoreUserConfig, exitCode, signal, timedOut, args, stdout, stderr, requests,
-    finalResponse, permissionChecks, checksPass });
+    finalResponse, permissionChecks, advertisedToolNames, delegationAbsent, checksPass });
 }
 const launcher = fs.realpathSync('/Users/manhtx/.npm-global/bin/codex');
 const require = createRequire(launcher);

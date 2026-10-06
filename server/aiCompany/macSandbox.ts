@@ -26,7 +26,7 @@ export function codexWorkerPermissionArgs(controlRoot: string, workspace: string
   const key = 'factory-worker';
   const scoped = `":workspace_roots" = { "." = ${JSON.stringify(mode === 'read-only' ? 'read' : 'write')} }`;
   const table = [...Object.entries(filesystem).map(([name, access]) => `${JSON.stringify(name)} = ${JSON.stringify(access)}`), scoped].join(', ');
-  return ['-c', `default_permissions=${JSON.stringify(key)}`, '-c', `permissions.${key}.extends=":workspace"`, '-c', `permissions.${key}.filesystem={ ${table} }`, '-c', `permissions.${key}.network.enabled=false`];
+  return ['-c', `default_permissions=${JSON.stringify(key)}`, '-c', `permissions.${key}.extends=":workspace"`, '-c', `permissions.${key}.filesystem={ ${table} }`, '-c', `permissions.${key}.network.enabled=false`, '-c', 'agents.enabled=false'];
 }
 
 /** Optional macOS runner profile. Protects the control checkout outside the

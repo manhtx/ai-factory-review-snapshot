@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
-  "observedAt": "2026-10-06T07:28:36.076475+00:00",
-  "sourceCarrierRevision": "0add358f9b36e9acca7a79114fb57f159258e504",
-  "pinnedSourceCandidate": "af1672b880928c6fe3004686b9cec8d87426d09e",
-  "exportedSourceFiles": 1359,
+  "observedAt": "2026-10-06T07:38:48.271862+00:00",
+  "sourceCarrierRevision": "91d916a2efc28a9e1df02429504b1b2b8d87c118",
+  "pinnedSourceCandidate": "74656d665bb88ad22d67eb40215f76a481d65e5d",
+  "exportedSourceFiles": 1369,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -23,7 +23,7 @@
     "failed": 0,
     "files": 4
   },
-  "sourceFullRegression": "Exact cleanaf1672b:550PASS54FILES/full tsc/scoped lint; not all repository tests or full export suite",
+  "sourceFullRegression": "Exact clean74656d6:550PASS54FILES/full tsc/affected source lint; not all repository tests",
   "gitHistory": "Continues the fresh snapshot history; no parent repository commits copied",
   "currentAuthority": "NONE",
   "independentReview": "REVIEW_PENDING; previous safety rejection preserved; no retry/substitute",
@@ -90,6 +90,14 @@
     "dependencyMethod": "Temporary local installed dependencies symlink removed; not clean npm ci",
     "evidence": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json"
   },
-  "nativeExecBoundary": "Exact clean52ebd1f three configuration cases; actual exec_command and view_image dummy controls pass; source evidence only, no export-native rerun",
-  "currentChangeScope": "Probe/docs/evidence only; production source candidate remains af1672b; earlier full regression and export smoke not rerun or promoted"
+  "nativeExecBoundary": "Current export actual exec_command/view_image three config cases PASS; delegation schemas absent incl trusted project requesting enabled=true",
+  "currentChangeScope": "Explicit worker agents.enabled=false; prior native/delegation/default evidence retained; no production authority",
+  "currentExportVerification": {
+    "tests": "17PASS3FILES",
+    "native": "3 native config cases PASS",
+    "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+    "scriptSha256": "3862eec970c25c0ae33ff214eb2d2d7ebb1a6f268979bbbeed8baf0194b6b2d8",
+    "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+    "scope": "Working export bytes match source carrier91d916a; temporary installed dependencies linked/removed; export working tree was uncommitted during smoke, not clean npm ci or all-tool/managed/auth/gateway proof"
+  }
 }

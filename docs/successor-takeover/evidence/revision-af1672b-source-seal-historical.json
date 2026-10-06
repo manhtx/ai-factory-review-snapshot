@@ -1,11 +1,11 @@
 {
   "schema": "ai-factory.source-candidate-seal.v1",
   "authoritative": false,
-  "observedAt": "2026-10-06T07:33:22.698108+00:00",
+  "observedAt": "2026-10-06T04:44:41.662217+00:00",
   "missionId": "AI_FACTORY_FINAL_CONVERGENCE_V2",
-  "candidateRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
-  "parentRevision": "5631d6c64c27d3f05964f043d67c255facea245b",
-  "gitTree": "f579576c8f134be9e46421949ba1fdff0d32a4f7",
+  "candidateRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
+  "parentRevision": "95cdc06ede22cc6adb88f019e53133c830540d73",
+  "gitTree": "3385d4e737232c29abe796123f1c650291be4c2d",
   "branch": "codex/ai-company-hardening-20260910",
   "sourceSeal": "IMMUTABLE_GIT_SOURCE_IDENTIFIED",
   "cleanAtTestStart": true,
@@ -13,7 +13,7 @@
   "authority": "NONE",
   "trustStatus": "UNTRUSTED_REVIEW_PENDING",
   "productionAutonomy": "DISABLED",
-  "proofVersion": "revision-74656d6-native-delegation.v1",
+  "proofVersion": "revision-af1672b-fixture-lifetime.v1",
   "checkpointVersion": "ai-factory.checkpoint.v1",
   "configHashes": {
     "package.json": "b4bcd81b2209059c97e47e44891b6521d3ae508dc95c2c2903b28d21692f6ad4",
@@ -86,10 +86,9 @@
       "scripts/ai-company-role-dispatch.mjs": "f2a5c1e601bf4525ea7f3cfcd544adc6b0b546ea2931b7cc02654b33a0323a60",
       "server/aiCompany/cliSandboxBoundary.test.ts": "7f4cde1269e67dcd34e67d136c81f0a498855eb5d3341d36e93e4d3e5f99bc02",
       "server/aiCompany/macSandbox.test.ts": "543f91f21f6652b6b3210ce619a16b6665c73b0e308a8b38b2df6832396212b8",
-      "server/aiCompany/macSandbox.ts": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "server/aiCompany/macSandbox.ts": "8bb4f4565cb2ff7419c85fab4c68beb5741856303af4120428bf2a3b59c25c56",
       ".gitignore": "7fe76a2f80ebd6751262fc27e862568c12a62a8314e366d2e523688bd1b849fd",
-      "server/aiCompany/codexReadableRoot.test.ts": "0741598973ac76d285a67a074452406f92a220356127fa5a8d5fe89f9ad65c7a",
-      "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs": "3862eec970c25c0ae33ff214eb2d2d7ebb1a6f268979bbbeed8baf0194b6b2d8"
+      "server/aiCompany/codexReadableRoot.test.ts": "0741598973ac76d285a67a074452406f92a220356127fa5a8d5fe89f9ad65c7a"
     }
   },
   "tcbCompleteness": "OPEN_MATERIAL_WRITER_CENSUS",
@@ -103,9 +102,9 @@
       "--noEmit"
     ],
     "lint": [
-      "/usr/local/bin/node",
+      "node",
       "node_modules/eslint/bin/eslint.js",
-      "server/aiCompany/macSandbox.ts",
+      "server/aiCompany/cliSandboxBoundary.test.ts",
       "--max-warnings=0"
     ],
     "tests": [
@@ -166,36 +165,30 @@
       "server/aiCompany/macSandbox.test.ts",
       "server/aiCompany/cliSandboxBoundary.test.ts",
       "server/aiCompany/codexReadableRoot.test.ts"
-    ],
-    "nativeProbe": [
-      "/usr/local/bin/node",
-      "--import",
-      "tsx",
-      "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs",
-      "/tmp/codex-no-delegation-exact-74656d6.json",
-      "--exercise-tools",
-      "--exercise-images"
     ]
   },
   "results": {
     "currentSuite": "550PASS54FILES",
     "typecheck": "PASS_FULL_TSC_NO_EMIT",
-    "lint": "PASS_MAC_SANDBOX_AFFECTED_SOURCE",
-    "nativeWorkerTools": "Three actual native exec/image config fixtures PASS; multi-agent schema absent including project enabling agents; native payload hash bound",
-    "scope": "Builder scoped evidence only; earlier lifecycle/authority/timing proofs remain historical and independently open"
+    "lint": "PASS_AFFECTED_FILES_AND_ROLE_DISPATCH",
+    "resourceProvider": "ACTUAL_GROUP_SURVIVAL_WITHHOLDS_REPLACEMENT; OBSERVED_GROUP_ABSENCE_PERMITS_NEW_GRANT; UNBOUND_LAUNCH_UNKNOWN",
+    "coordinator": "CURRENT_REPRODUCED_INIT_OVERWRITE_AND_UNCONDITIONAL_RELEASE; THREE_ACTUAL_OS_ACTORS",
+    "timing": "Current clean539PASS; all historical timing failures retained; cause UNKNOWN",
+    "workerSandbox": "Actual protected content/private metadata/enumeration and symlink escape denied; exact ancestor metadata and owned child signalling permitted; foreign signal denied; actual nested Vitest native-config exits0",
+    "workerEnvironment": "Both dispatcher runners exclude dummy controller/SSH/arbitrary secret and loader keys; config/cache/temp in canonical attempt workspace; aliased control root denied before claim",
+    "codexReadableRoot": "Actual installed utility generated profiles deny dummy control/auth/symlink reads and dependency writes; permit dependency reads/attempt temp; workspace product writes only in write mode. Actual dispatcher selects named policy/no legacy sandbox; missing workspace preclaim refusal. Stubs verify readonly final-file transport, not actual model tool.",
+    "fixtureLifetime": "Actual delayed filesystem writer drains before deletion; actual child close awaited; closed initialization cannot deliver usable fixture; deadlines unchanged. Production Git/provider quiescence not certified."
   },
   "artifactHashes": {
-    "docs/successor-takeover/evidence/revision-74656d6-tests.txt": "d2c5e22f3be031bbc8420064ac115250fd6379bcbba40dac7a4a8da0b41689aa",
-    "docs/successor-takeover/evidence/revision-74656d6-typecheck.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "docs/successor-takeover/evidence/revision-74656d6-lint.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "docs/successor-takeover/evidence/revision-74656d6-nativeProbe.txt": "c6955fbb6370ef61b5d0e7f16e5c5b6421d77c384110793484a473fa34c2ab08",
-    "docs/successor-takeover/evidence/revision-74656d6-command-results.json": "e8a9fa03680166adf13df4e6658548ef1780b80cd713c37c1269c7109dbae95d",
-    "docs/successor-takeover/evidence/native-worker-delegation-74656d6.json": "ea31549adb64405621ffa803c40ec00cae1c05f577fa641e250dcadd55346350"
+    "docs/successor-takeover/evidence/revision-af1672b-command-results.json": "f7138c9b61dfbcef7b228b8dd9bf972025e60b6ba3e3e6b382eb5c5fe9e276ab",
+    "docs/successor-takeover/evidence/revision-af1672b-lint.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/successor-takeover/evidence/revision-af1672b-tests.txt": "0d571420a1eb60e585586c7bfaf38fe1a1d50501c7980268fd778de1418b1dd6",
+    "docs/successor-takeover/evidence/revision-af1672b-typecheck.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "proofAssociation": {
-    "subjectRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
+    "subjectRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
     "evidenceCarrier": "Subsequent documentation-only commit; Git identity read externally; not the source candidate",
-    "supersededSourceSeal": "evidence/revision-af1672b-source-seal-historical.json; all earlier evidence retained",
+    "supersededSourceSeal": "evidence/revision-6d81ac5-source-seal-historical.json; preserved prior548 proof/failures",
     "historicalProof": "b318825 stage1 523PASS is historical and contains original provider orphan counterexample; initial lifecycle failure evidence retained; current533 is a clean exact run",
     "previousCandidate": "Dirty d23b293 checkout preserved; authority NONE"
   },
@@ -207,8 +200,7 @@
     "Cross-store atomicity, complete writer census, migration, genesis, cold start, timing cause and independent review OPEN",
     "Optional macOS profile fixture repair only; activation/other runners/environment privileges/outside-root reads/hardlinks/real-provider compatibility/controller gateway OPEN",
     "CLI inheritance and nested Vitest fixture only; HOME/CODEX_HOME/private history/hardlinks/activation/real-provider auth/compatibility/controller gateway OPEN. No further profile exception without reopened architecture.",
-    "Named profile is beta; actual model/all tool surfaces/project-managed config/provider auth/non-workspace migration/AGY scope/gateway/Git effect quiescence/PD009 OPEN",
-    "Delegation tool removal does not prohibit ordinary subprocesses or certify other tool surfaces, managed config or actual controller/provider authority"
+    "Named profile is beta; actual model/all tool surfaces/project-managed config/provider auth/non-workspace migration/AGY scope/gateway/Git effect quiescence/PD009 OPEN"
   ],
   "typecheckAdjudication": "All eleven baseline diagnostics repaired; current full tsc PASS. Historical baseline retained unchanged."
 }
