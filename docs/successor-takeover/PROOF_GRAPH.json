@@ -1,7 +1,7 @@
 {
   "schema": "successor-takeover.proof-graph.v1",
   "authoritative": false,
-  "currentCandidateRevision": "e5420707853c3a18bd84f6b3e769597a0867e893",
+  "currentCandidateRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
   "historicalProofPolicy": "Older nodes retain historical evidence only; none certifies the current candidate without exact revision revalidation. No negative evidence removed.",
   "purpose": "Explicit claim dependencies and limits for isolated candidate evidence; not an operational proof engine or closure certificate.",
   "executionInventory": {
@@ -11,6 +11,18 @@
     "postTestCheck": "MATCHED_AFTER_PRODUCT_API_REPAIRS; UNSEALED_CANDIDATE"
   },
   "nodes": [
+    {
+      "id": "codex-readable-root-6d81ac5",
+      "sourceRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
+      "claim": "Named tool policy wired to actual Codex spawn without legacy sandbox flag; utility rejects private/alias reads and unapproved writes; readonly product paths protected with scoped attempt temp; exact548PASS54FILES",
+      "evidence": "CODEX_READABLE_ROOT_POLICY.md; SOURCE_CANDIDATE_SEAL.json; evidence/revision-6d81ac5-command-results.json",
+      "status": "BUILDER_SCOPED_VERIFIED; REAL_MODEL_AND_REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "worker-environment-contract-e542070"
+      ],
+      "missing": "Real model/all tool surfaces/config layers/provider auth/caller migration/AGY/Git effect quiescence/gateway/independent review"
+    },
     {
       "id": "controller-git-effect-and-readable-root-20261006",
       "sourceRevision": "9f2f94147bb5fcfeebb312fac8be2a69cad0cfa2",

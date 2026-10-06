@@ -1,0 +1,48 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/codexReadableRoot.test.ts (3 tests | 1 failed) 511ms
+   ✓ rejects unsafe roots, modes and writable aliases 5ms
+   × actual installed Codex utility enforces generated read-only policy 418ms
+     → expected { controlRead: false, …(6) } to deeply equal { controlRead: false, …(6) }
+   ✓ actual installed Codex utility enforces generated workspace-write policy 87ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/codexReadableRoot.test.ts > actual installed Codex utility enforces generated read-only policy
+AssertionError: expected { controlRead: false, …(6) } to deeply equal { controlRead: false, …(6) }
+
+- Expected
++ Received
+
+@@ -3,7 +3,7 @@
+    "controlRead": false,
+    "dependencyRead": true,
+    "dependencyWrite": false,
+    "escapeRead": false,
+    "tempWrite": true,
+-   "workspaceWrite": false,
++   "workspaceWrite": true,
+  }
+
+ ❯ server/aiCompany/codexReadableRoot.test.ts:36:37
+     34|   `,f.control,f.workspace,f.home,f.temp],{cwd:f.workspace,env:{PATH:'/…
+     35|   expect(result.error).toBeUndefined();expect(result.status,result.std…
+     36|   expect(JSON.parse(result.stdout)).toEqual({controlRead:false,authRea…
+       |                                     ^
+     37| });
+     38| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed (3)
+   Start at  10:43:37
+   Duration  1.09s (transform 24ms, setup 0ms, collect 20ms, tests 511ms, environment 0ms, prepare 47ms)
+
+npm notice
+npm notice New major version of npm available! 11.16.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

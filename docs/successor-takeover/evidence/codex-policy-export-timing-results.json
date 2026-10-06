@@ -1,0 +1,24 @@
+{
+  "observedAt": "2026-10-06T04:25:56.843339+00:00",
+  "sourceRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
+  "exportCarrier": "918dc2db5b4ed2e6a2989c570c2784a72c8353ef",
+  "scope": "Export tests plus logging-only temporary diagnostic copies; original source/deadlines unchanged",
+  "initialExport": "14PASS1TIMEOUT",
+  "repeatedTarget": "3TIMEOUTS",
+  "rootTarget": "1PASS unchanged",
+  "diagnostics": "First queue/handoff preparation8595ms before child spawn, cleanup ENOTEMPTY; later queue21ms/handoff23ms/fixture24ms and same target PASS",
+  "fullUnchangedRecheck": "15PASS3FILES",
+  "cause": "UNKNOWN; host load observed, not proved causal; no flaky/benign classification",
+  "fixtureCleanupDebt": "Pending: initialization can continue after test timeout and race deletion; no production quiescence proof",
+  "independent": false,
+  "artifacts": [
+    "codex-policy-export-14-pass-1-timeout.txt",
+    "codex-policy-export-target-timeout-1.txt",
+    "codex-policy-export-target-timeout-2.txt",
+    "codex-policy-export-target-timeout-3.txt",
+    "codex-policy-root-target-unchanged-pass.txt",
+    "codex-policy-preparation-stall-and-cleanup-failure.txt",
+    "codex-policy-preparation-split-unchanged-pass.txt",
+    "codex-policy-export-15-unchanged-pass.txt"
+  ]
+}

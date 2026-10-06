@@ -1,0 +1,13 @@
+{
+  "observedAt": "2026-10-06T03:32:56.320880+00:00",
+  "snapshotRevision": "46fd63a4897cb35596b5de2b00e70505520bb5f9",
+  "sourceCarrierRevision": "33b9e68634783c7d1da8354f939d4727764187bb",
+  "testedSourceCandidate": "e5420707853c3a18bd84f6b3e769597a0867e893",
+  "anonymousAccessVerified": true,
+  "remoteBlobs": 1336,
+  "allBlobHashesMatch": true,
+  "manifestSha256": "4bba9f31059c7bf6c67d13547095f5fe96813067165cc3bfd60de44520bd9f1d",
+  "scope": "Documentation and bounded Git/sandbox counterexamples; application source unchanged; no fresh full-suite or model-tool claim",
+  "independent": false,
+  "authority": "NONE"
+}

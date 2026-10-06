@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-06T03:31:51.397Z",
+  "observedAt": "2026-10-06T04:27:44.014Z",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "33b9e68634783c7d1da8354f939d4727764187bb",
-  "pinnedTestedCandidateRevision": "e5420707853c3a18bd84f6b3e769597a0867e893",
+  "sourceCarrierRevision": "13ef2af271c9aecafd626c45c706583ba2c23bfc",
+  "pinnedTestedCandidateRevision": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
     {
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "ef47573868f21883cf3885bae1d3b5e70c2b6c50f971ee2a80b1f504618557f4",
-      "bytes": 34681,
+      "sha256": "fc598fe3f9af2f1834c88fb619655fd1b1ae20c02ae4b36cb80538efd5508865",
+      "bytes": 34916,
       "source": "current-source-carrier"
     },
     {
@@ -752,8 +752,14 @@
     },
     {
       "path": "docs/successor-takeover/CLOSURE_MATRIX.json",
-      "sha256": "757c310aaa1bd231def8e122aece09f1020a291de26a3f084db68a8d52c1459e",
-      "bytes": 55461,
+      "sha256": "d2c52c2acf55ce1c015359915c550bcdacd3814d67a783d88a8f74876278df83",
+      "bytes": 55469,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/CODEX_READABLE_ROOT_POLICY.md",
+      "sha256": "ff0ade5b6ae5fe69677801128f63f17727995d81b5b5219d026e5b81f35a58ca",
+      "bytes": 3485,
       "source": "current-source-carrier"
     },
     {
@@ -968,8 +974,8 @@
     },
     {
       "path": "docs/successor-takeover/PROOF_GRAPH.json",
-      "sha256": "b64ac266194a0b33e90f2c9119e585e5496401f70c287033646ac9170ae3fb24",
-      "bytes": 70730,
+      "sha256": "3ae7448a6fa1c34e6254c08f9cdd617420d8c8c22b2f186a2780592afc5b58be",
+      "bytes": 71536,
       "source": "current-source-carrier"
     },
     {
@@ -1034,8 +1040,8 @@
     },
     {
       "path": "docs/successor-takeover/SOURCE_CANDIDATE_SEAL.json",
-      "sha256": "40f0d65a6283dd1239b4289026d62eebf3f581a80c7e8b2809309185a882dbcd",
-      "bytes": 15702,
+      "sha256": "4a692d042b73fe06afc378f5606fdd9de1e621984c0a426a2550c5f41475ac09",
+      "bytes": 16426,
       "source": "current-source-carrier"
     },
     {
@@ -1585,6 +1591,18 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/codex-named-profile-minimal-runtime-failure.json",
+      "sha256": "d33bb35bddd31e11ba169bf4553f05e320c821275cef658610fb72482cada4ef",
+      "bytes": 477,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-named-profile-node-control.json",
+      "sha256": "056ac5a6204a33933015816110edd662e886f40bcf4d72be3000d42114582344",
+      "bytes": 315,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/codex-native-read-boundary-20261006.json",
       "sha256": "edf0ae9651b2b364af4bdd547cf8dcafa093d0befe373195c5e1d777559033b4",
       "bytes": 835,
@@ -1594,6 +1612,72 @@
       "path": "docs/successor-takeover/evidence/codex-native-read-boundary-probe.mjs",
       "sha256": "f3758a70409fa027aa9ec241845ecf2e1a0a957a2d9e406e589c88a96c0e45f9",
       "bytes": 2259,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-export-14-pass-1-timeout.txt",
+      "sha256": "ea1d9f9593dc6d3550ac560fa966f08b6a037790233344444beb5a3e3ef4f617",
+      "bytes": 2209,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-export-15-unchanged-pass.txt",
+      "sha256": "902b43b24faf39ce92fb96cff0b673e5b9f8eabf26367d56eebc91be8af113aa",
+      "bytes": 959,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-export-target-timeout-1.txt",
+      "sha256": "e4aa066bf34ed859ba3c56f74fc72fc66291009c07c79f5b2243f2e43cea7b86",
+      "bytes": 1850,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-export-target-timeout-2.txt",
+      "sha256": "cc44a947495b8d3ec945229f980fd8e5988ea911466c014b3bd0c08ba4139fae",
+      "bytes": 1845,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-export-target-timeout-3.txt",
+      "sha256": "2bb189fd41c6bb4a030fe90b77fb73d21f7a0e11ad5f374950b2ed38795aea06",
+      "bytes": 1843,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json",
+      "sha256": "1579ab0db6da2f245f86e68b392e25cc37c694d4a34955980269cd85a6107d1d",
+      "bytes": 1280,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-preparation-split-unchanged-pass.txt",
+      "sha256": "0e4139e7bf732c6f47c13b474fabc1cf04395a1a189a740c0586586530b9b4c8",
+      "bytes": 1417,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-preparation-stall-and-cleanup-failure.txt",
+      "sha256": "ebd7c68d717fcfac48257e3032d4964ea540e46584dcfee96d5350d79ccb430f",
+      "bytes": 2675,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-policy-root-target-unchanged-pass.txt",
+      "sha256": "5c699c283ff48e98414586e5d58e757c3ef88e80b51de80bc480af97e8be3340",
+      "bytes": 432,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-profile-quoted-override-failure.txt",
+      "sha256": "32c601f85cd670f88f5d0ee985d4bd9be00bb8fffb091e50df0be5f4b8eace6f",
+      "bytes": 1489,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-profile-readonly-inheritance-failure.txt",
+      "sha256": "93cb89907c52d4290904e5fc0e435f0244ea57329499ca9114e2f58dc5293cbf",
+      "bytes": 1832,
       "source": "current-source-carrier"
     },
     {
@@ -3109,6 +3193,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/public-gateway-design-publication-46fd63a.json",
+      "sha256": "6d0b067bdb2d0d2265ffc3d26f1f295cc85e7981411b16f6e003d2bb5e8398fb",
+      "bytes": 625,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/public-review-snapshot-publication.json",
       "sha256": "6f5e13aa8d1a0dff7cea265daa9063bcc5a0a82a842e51329f7772a2dddb727e",
       "bytes": 970,
@@ -3889,6 +3979,30 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/revision-6d81ac5-command-results.json",
+      "sha256": "386363c32301f3804027e59d1502111de36abbcf7814ddb2ff58dd412430c83f",
+      "bytes": 11465,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-6d81ac5-lint.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-6d81ac5-tests.txt",
+      "sha256": "9a0f99150f6b446ea2d8330fd85b0abd2f444c7aa0180e08f2d8b1ab4931217b",
+      "bytes": 8786,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-6d81ac5-typecheck.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/revision-a534211-command-results.json",
       "sha256": "b91a48aab181a520e10f3fecff0a5b7b6e72e04e83024fab17b6832dcb7db5dd",
       "bytes": 11160,
@@ -3928,6 +4042,12 @@
       "path": "docs/successor-takeover/evidence/revision-e542070-lint.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-e542070-source-seal-historical.json",
+      "sha256": "40f0d65a6283dd1239b4289026d62eebf3f581a80c7e8b2809309185a882dbcd",
+      "bytes": 15702,
       "source": "current-source-carrier"
     },
     {
@@ -4544,8 +4664,8 @@
     },
     {
       "path": "scripts/ai-company-role-dispatch.mjs",
-      "sha256": "697df86885f91aaabbbd32611e47abd1d3c403b65006d14c2e4920d29e58261f",
-      "bytes": 60672,
+      "sha256": "f2a5c1e601bf4525ea7f3cfcd544adc6b0b546ea2931b7cc02654b33a0323a60",
+      "bytes": 61715,
       "source": "current-source-carrier"
     },
     {
@@ -5492,8 +5612,8 @@
     },
     {
       "path": "server/aiCompany/cliAttemptDispatch.test.ts",
-      "sha256": "6cc8914cdad63395eab215594b9c81888ee14fbbcaf90f2d2ddc3115b681ca3d",
-      "bytes": 18261,
+      "sha256": "30431c54916a5d64de6519b1c7c810ae2a430afcc0a7bb077093d84bb7cadd96",
+      "bytes": 18499,
       "source": "current-source-carrier"
     },
     {
@@ -5516,8 +5636,14 @@
     },
     {
       "path": "server/aiCompany/cliSandboxBoundary.test.ts",
-      "sha256": "5994a14a844035676b30d47469024b1e3b1f51faea4f41b976f02e65b70b62bd",
-      "bytes": 7368,
+      "sha256": "6c391b08f8fe42796404d32af073b79027d3e0e9c263113ecafd7b96bfe193bb",
+      "bytes": 8819,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "server/aiCompany/codexReadableRoot.test.ts",
+      "sha256": "0741598973ac76d285a67a074452406f92a220356127fa5a8d5fe89f9ad65c7a",
+      "bytes": 3346,
       "source": "current-source-carrier"
     },
     {
@@ -6014,8 +6140,8 @@
     },
     {
       "path": "server/aiCompany/macSandbox.ts",
-      "sha256": "b8d893c42d544b367c08b37280b9320ef312fb017ed71ea1f2d15f7977bc28d1",
-      "bytes": 2357,
+      "sha256": "8bb4f4565cb2ff7419c85fab4c68beb5741856303af4120428bf2a3b59c25c56",
+      "bytes": 4865,
       "source": "current-source-carrier"
     },
     {
@@ -8026,9 +8152,9 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "6f6e35540a838814dd2dfe75b203f1c93cd31dbf6486243da94a8fe2b6acc895",
+    "README.md": "8821305e352f38b8ef14cd3c1de7ba5f20256c5c5b955d2eab82068d1f8f617c",
     ".gitignore": "2f79870e866856827b5e9458c9ce2ac0f3a958ae468b4eb2f7dcc7649852010c",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "81d2657ee26f1b4c0be47dde7c3c1f6df68b1bd27a5a2ccc4a05e051651bceab",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "272f5c95a2dc3e2db510009b7caac950e514a1b7e81a859e7506c53bd1b0e68d",
     "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
     "snapshot-verification/current-worker-contract-10-pass.txt": "b78f8ef949eea7d8bb7a2de24d49255989678674a6b8c96cb7614593fc403d57",
     "snapshot-verification/initial-smoke-37-pass-1-eperm.txt": "f487f73b0138d4ad22b69cc6c7a59a13c554169cf96de7db81921fd359b4fd64",

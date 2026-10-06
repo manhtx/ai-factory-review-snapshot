@@ -1,5 +1,33 @@
 import path from 'node:path';
-import { realpathSync, statSync } from 'node:fs';
+import { lstatSync, realpathSync, statSync } from 'node:fs';
+
+/** Named Codex tool policy; never combine with legacy --sandbox overrides.
+ * This is not trusted provider authentication or controller enrollment. */
+export function codexWorkerPermissionArgs(controlRoot: string, workspace: string, mode: string, writablePaths: string[] = []): string[] {
+  if (!['read-only', 'workspace-write'].includes(mode)) throw new Error('Unsupported factory Codex permission mode');
+  const control = realpathSync(controlRoot), assigned = realpathSync(workspace);
+  if (!statSync(control).isDirectory() || !statSync(assigned).isDirectory()) throw new Error('Permission roots must be directories');
+  const relative = path.relative(assigned, control);
+  if (relative === '' || (relative !== '..' && !relative.startsWith(`..${path.sep}`) && !path.isAbsolute(relative))) throw new Error('Worker workspace must not contain the control root');
+  const filesystem: Record<string, string> = { ':root': 'deny', ':minimal': 'read', ':tmpdir': 'deny', ':slash_tmp': 'deny', [control]: 'deny', [assigned]: mode === 'read-only' ? 'read' : 'write' };
+  if (process.platform === 'darwin') filesystem['/System/Library/OpenSSL'] = 'read';
+  const dependencies = path.join(control, 'node_modules');
+  try {
+    if (lstatSync(dependencies).isSymbolicLink()) throw new Error('Control dependency root must not be an alias');
+    const canonical = realpathSync(dependencies);
+    if (!statSync(canonical).isDirectory() || canonical === control || canonical === assigned) throw new Error('Unsafe dependency read root');
+    filesystem[canonical] = 'read';
+  } catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
+  for (const value of writablePaths) {
+    const canonical = realpathSync(value), inside = path.relative(assigned, canonical);
+    if (!inside || inside === '..' || inside.startsWith(`..${path.sep}`) || path.isAbsolute(inside)) throw new Error('Writable permission path must stay inside workspace');
+    filesystem[canonical] = 'write';
+  }
+  const key = 'factory-worker';
+  const scoped = `":workspace_roots" = { "." = ${JSON.stringify(mode === 'read-only' ? 'read' : 'write')} }`;
+  const table = [...Object.entries(filesystem).map(([name, access]) => `${JSON.stringify(name)} = ${JSON.stringify(access)}`), scoped].join(', ');
+  return ['-c', `default_permissions=${JSON.stringify(key)}`, '-c', `permissions.${key}.extends=":workspace"`, '-c', `permissions.${key}.filesystem={ ${table} }`, '-c', `permissions.${key}.network.enabled=false`];
+}
 
 /** Optional macOS runner profile. Protects the control checkout outside the
  * assigned worktree; broad host reads and activation coverage remain open. */

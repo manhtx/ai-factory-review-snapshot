@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliSandboxBoundary.test.ts (7 tests | 6 skipped) 3831ms
+   ✓ actual dispatcher protects the supplied control root distinct from its checkout  3829ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  11:10:51
+   Duration  7.43s (transform 201ms, setup 0ms, collect 218ms, tests 3.83s, environment 0ms, prepare 435ms)
+

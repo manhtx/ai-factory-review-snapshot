@@ -1,0 +1,35 @@
+
+ RUN  v3.2.7 /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/ai-factory-public-snapshot-EHh5Aj
+
+ ❯ server/aiCompany/cliSandboxBoundary.test.ts (7 tests | 1 failed | 6 skipped) 5021ms
+   × actual dispatcher protects the supplied control root distinct from its checkout 5019ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ↓ actual Codex transport excludes controller privileges and loader overrides
+   ↓ Codex refuses missing workspace before claim and preserves READY state
+   ↓ readonly Codex transport records its trusted final message as the attempt artifact
+   ↓ actual dispatcher rejects nonexistent workspace before changing a queued attempt
+   ↓ actual agy dispatcher rejects an aliased control root as workspace before claim
+   ↓ actual codex dispatcher rejects an aliased control root as workspace before claim
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cliSandboxBoundary.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cliSandboxBoundary.test.ts:59:1
+     57| }
+     58| 
+     59| macIt('actual dispatcher protects the supplied control root distinct f…
+       | ^
+     60|   const f = await fixture();
+     61|   const result = await f.dispatch(f.workspace);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  11:08:30
+   Duration  6.05s (transform 331ms, setup 0ms, collect 474ms, tests 5.02s, environment 0ms, prepare 210ms)
+

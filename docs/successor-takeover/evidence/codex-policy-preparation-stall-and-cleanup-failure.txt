@@ -1,0 +1,46 @@
+
+ RUN  v3.2.7 /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/ai-factory-public-snapshot-EHh5Aj
+
+stdout | server/aiCompany/codexTimingDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+{"phase":"fixture-start","elapsedMs":4}
+
+stdout | server/aiCompany/codexTimingDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+{"phase":"queue-and-handoff-ready","elapsedMs":8595}
+
+ ❯ server/aiCompany/codexTimingDiagnostic.test.ts (7 tests | 1 failed | 6 skipped) 8647ms
+   × actual dispatcher protects the supplied control root distinct from its checkout 8646ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+     → ENOTEMPTY: directory not empty, rmdir '/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/cli-sandbox-j4f4at'
+   ↓ actual Codex transport excludes controller privileges and loader overrides
+   ↓ Codex refuses missing workspace before claim and preserves READY state
+   ↓ readonly Codex transport records its trusted final message as the attempt artifact
+   ↓ actual dispatcher rejects nonexistent workspace before changing a queued attempt
+   ↓ actual agy dispatcher rejects an aliased control root as workspace before claim
+   ↓ actual codex dispatcher rejects an aliased control root as workspace before claim
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/codexTimingDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/codexTimingDiagnostic.test.ts:63:1
+     61| }
+     62| 
+     63| macIt('actual dispatcher protects the supplied control root distinct f…
+       | ^
+     64|   const f = await fixture();
+     65|   const result = await f.dispatch(f.workspace);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  server/aiCompany/codexTimingDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/cli-sandbox-j4f4at'
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  11:14:33
+   Duration  9.23s (transform 158ms, setup 0ms, collect 238ms, tests 8.65s, environment 0ms, prepare 119ms)
+

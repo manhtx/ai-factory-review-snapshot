@@ -18,9 +18,12 @@ async function fixture() {
   const item = await queue.create({ project_id: 'isolated', backlog_id: 'B', title: 'Unit-only transport input; actual product outcome UNKNOWN', role: 'ux-research', run_id: 'isolated-run', namespace: 'isolated-namespace' });
   await new RoleHandoffLedger(runtime).record({ project_id: 'isolated', work_id: item.work_id, from_role: 'ceo', to_role: item.role, actor: 'unit-fixture', objective: item.title, context: ['isolated inputs'], evidence_ids: ['fixture'], acceptance_criteria: ['attempt-bound transport only'] });
   const bin = path.join(root, 'stub-bin'); await mkdir(bin);
+  const workspace = path.join(root, 'worker'); await mkdir(workspace);
   const descendantCode = "const fs=require('node:fs'); process.on('SIGTERM',()=>{}); fs.writeFileSync('descendant-ready','ready'); const tick=setInterval(()=>{if(!fs.existsSync('stub-resume'))return;clearInterval(tick);fs.writeFileSync('stub-effect','isolated descendant effect');process.exit(0);},10);setTimeout(()=>process.exit(0),3000).unref();";
   const stub = `#!${process.execPath}
 const fs = require('node:fs');
+// This stub observes trusted dispatcher state; it is not the sandboxed model tool.
+process.chdir(${JSON.stringify(root)});
 const mode = fs.existsSync('stub-mode.txt') ? fs.readFileSync('stub-mode.txt', 'utf8') : 'success';
 const file = '.ai-company/runtime/projects/isolated/role-work-queue.jsonl';
 const current = fs.readFileSync(file, 'utf8').trim().split('\\n').map(JSON.parse).at(-1);
@@ -51,13 +54,13 @@ console.log(JSON.stringify({type:'turn.completed',usage:{input_tokens:1,output_t
   await writeFile(path.join(bin, 'codex'), stub, { mode: 0o700 });
   await mkdir(path.join(root, '.ai-company/reports'), { recursive: true });
   await writeFile(path.join(root, '.ai-company/reports', `role-output-${item.work_id}.md`), 'ROLE_RESEARCH_RESULT_JSON {"finding":"STALE","research_question":"old","source_reference":"old","confidence":1}\nROLE_WORK_COMPLETE');
-  return { root, runtime, queue, item, bin };
+  return { root, runtime, queue, item, bin, workspace };
 }
 
 async function dispatch(input: Awaited<ReturnType<typeof fixture>>, mode = 'success', control?: (child: ReturnType<typeof spawn>) => Promise<void>) {
   await writeFile(path.join(input.root, 'stub-mode.txt'), mode);
   const messages: unknown[] = []; let stdout = '', stderr = '';
-  const child = spawn(process.execPath, ['--import', createRequire(import.meta.url).resolve('tsx'), path.join(process.cwd(), 'scripts/ai-company-role-dispatch.mjs'), '--role', input.item.role, '--work-id', input.item.work_id, '--project-id', 'isolated', '--runner', 'codex', '--model', 'unit-stub', '--control-root', input.root], {
+  const child = spawn(process.execPath, ['--import', createRequire(import.meta.url).resolve('tsx'), path.join(process.cwd(), 'scripts/ai-company-role-dispatch.mjs'), '--role', input.item.role, '--work-id', input.item.work_id, '--project-id', 'isolated', '--runner', 'codex', '--model', 'unit-stub', '--control-root', input.root, '--workspace', input.workspace], {
     cwd: input.root, env: { ...process.env, PATH: `${input.bin}${path.delimiter}${process.env.PATH ?? ''}`, AI_COMPANY_REQUIRE_WORKTREE: 'false' }, stdio: ['ignore', 'pipe', 'pipe', 'ipc'],
   });
   child.on('message', message => messages.push(message));

@@ -2,9 +2,9 @@
 
 Source snapshot for external code and evidence inspection of Macro Research Platform's AI Factory. The original repository remains private. This repository starts with a new Git history; it contains no parent repository history or live machine stores.
 
-Source carrier: `33b9e68634783c7d1da8354f939d4727764187bb`.
+Source carrier: `13ef2af271c9aecafd626c45c706583ba2c23bfc`.
 
-Pinned tested source candidate: `e5420707853c3a18bd84f6b3e769597a0867e893`. Its recorded clean run passed 543 tests across 53 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
+Pinned tested source candidate: `6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3`. Its recorded clean run passed 548 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
 
 ## Inspect
 
@@ -36,4 +36,8 @@ This is an inspection snapshot, not a deployment package. Static relative module
 
 Current update includes explicit two-runner worker environment transport, attempt-local config/cache/temp and the reopened data/metadata/child-signal profile contract. Ten OS/dispatcher fixture tests include a real nested Vitest native-config process exiting zero, not just a passing test marker. Root-source full regression is exact and clean; previous export logs remain historical. HOME/CODEX_HOME/private history, real-provider authentication/compatibility, activation coverage, outside-control-root reads, hardlinks and the controller gateway remain open.
 
-Gateway design and fresh bounded counterexamples are in `docs/successor-takeover/CONTROLLER_GATEWAY_DESIGN.md`: actual preclaim Git effects survive coordinator timeout/exit; an installed Codex sandbox utility reads a dummy control credential outside its workspace. The utility is not an actual model tool invocation. Enrollment/readable-root protection precedes journal issuance; the gateway is not implemented or promoted. Application source is unchanged from the pinned tested candidate.
+Gateway design and fresh bounded counterexamples are in `docs/successor-takeover/CONTROLLER_GATEWAY_DESIGN.md`: actual preclaim Git effects survive coordinator timeout/exit; an installed Codex sandbox utility reads a dummy control credential outside its workspace. The utility is not an actual model tool invocation. Enrollment/readable-root protection precedes journal issuance; the gateway is not implemented or promoted. The current application source uses explicit Codex named permission arguments; no-workspace callers fail before claim.
+
+Current policy: `CODEX_READABLE_ROOT_POLICY.md`. Actual installed utility tests verify generated read-only/write profiles with dummy control/auth files, symlink escapes and read-only dependencies. Dispatcher transport is wired, but real model/tool surfaces, config precedence, authentication, AGY/non-workspace migration and gateway enrollment remain open. Earlier source/export runs retain their original subjects.
+
+The first current export smoke passed14/15 and timed out in AGY fixture preparation. Three unchanged target rechecks also timed out; root target passed. A logging-only diagnostic observed queue/handoff preparation8595ms before dispatcher spawn and cleanup ENOTEMPTY. A later split diagnostic observed21/23ms and passed; the unchanged full export recheck passed15/15. Cause remains UNKNOWN; no deadline was increased. All logs are retained in `docs/successor-takeover/evidence/codex-policy-export-timing-results.json`. Fixture lifetime/cleanup debt remains open.

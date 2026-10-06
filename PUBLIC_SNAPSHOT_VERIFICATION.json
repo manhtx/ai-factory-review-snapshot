@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
   "observedAt": "2026-10-06T03:31:51.397Z",
-  "sourceCarrierRevision": "33b9e68634783c7d1da8354f939d4727764187bb",
-  "pinnedSourceCandidate": "e5420707853c3a18bd84f6b3e769597a0867e893",
-  "exportedSourceFiles": 1327,
+  "sourceCarrierRevision": "13ef2af271c9aecafd626c45c706583ba2c23bfc",
+  "pinnedSourceCandidate": "6d81ac5ae7b902fedea7a9667b0cdaae9c223cf3",
+  "exportedSourceFiles": 1348,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -23,7 +23,7 @@
     "failed": 0,
     "files": 4
   },
-  "sourceFullRegression": "Exact clean e542070: 543PASS53FILES; full tsc/scoped lint PASS, not a full export-suite run",
+  "sourceFullRegression": "Exact clean6d81ac5:548PASS54FILES/full tsc/scoped lint; not full export suite",
   "gitHistory": "Continues the fresh snapshot history; no parent repository commits copied",
   "currentAuthority": "NONE",
   "independentReview": "REVIEW_PENDING; previous safety rejection preserved; no retry/substitute",
@@ -57,11 +57,15 @@
     "sourceFullRegression": "Historical exact candidate239fe22 533PASS51FILES; not rerun as full snapshot suite"
   },
   "currentExportBoundarySmoke": {
-    "passed": 10,
-    "failed": 0,
-    "files": 2,
-    "log": "snapshot-verification/current-worker-contract-10-pass.txt",
-    "dependencyMethod": "Temporary installed local dependency symlink removed; not clean npm ci"
+    "initial": "14PASS1TIMEOUT",
+    "unchangedTargets": "3TIMEOUTS",
+    "rootTarget": "1PASS",
+    "preparationDiagnostic": "8595ms before spawn +cleanupENOTEMPTY, then split21/23ms PASS",
+    "unchangedFullRecheck": "15PASS3FILES",
+    "cause": "UNKNOWN",
+    "deadlines": "UNCHANGED",
+    "dependencyMethod": "Temporary local installed dependencies symlink removed; not clean npm ci",
+    "evidence": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json"
   },
   "staticImportMethod": "TypeScript AST imports/exports and literal import/require calls; embedded fixture code strings excluded",
   "previousWorkerSnapshotVerification": {
@@ -75,6 +79,7 @@
       "dependencyMethod": "Temporary installed local dependency symlink removed; not clean npm ci"
     }
   },
-  "currentUpdate": "Documentation/forensic harnesses only; no application source changes. Previous 10-test export run remains subject to identical e542070 app bytes; not rerun merely for doc changes.",
-  "newCounterexamples": "Actual preclaim Git effect after controller exit; installed Codex utility private-read fixture. Builder-only, no independent review or actual model tool invocation."
+  "currentUpdate": "Named Codex policy source and caller transport change, with prior failures retained",
+  "newCounterexamples": "Actual preclaim Git effect after controller exit; installed Codex utility private-read fixture. Builder-only, no independent review or actual model tool invocation.",
+  "priorCounterexampleUpdate": "Documentation/forensic harnesses only; no application source changes. Previous 10-test export run remains subject to identical e542070 app bytes; not rerun merely for doc changes."
 }

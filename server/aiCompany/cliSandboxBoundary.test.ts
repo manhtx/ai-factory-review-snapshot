@@ -30,16 +30,20 @@ fs.writeFileSync('boundary-result.json', JSON.stringify({
   loaderEnvironmentPresent: ['NODE_PATH','NODE_OPTIONS','DYLD_INSERT_LIBRARIES','LD_PRELOAD'].some(key => Object.hasOwn(process.env,key)),
   configAssigned: attempt(() => { const config = JSON.parse(process.argv.at(-1).match(/--config=("[^"]+") --configLoader=native/)[1]); if (!config.startsWith(process.cwd() + require('node:path').sep)) throw Error('outside workspace'); fs.readFileSync(config); }),
   cacheAndTempAssigned: [process.env.AI_COMPANY_VITEST_CACHE_DIR, require('node:os').tmpdir()].every(value => value.startsWith(process.cwd() + require('node:path').sep)),
+  namedPolicyPresent: process.argv.includes('default_permissions="factory-worker"'),
+  legacySandboxPresent: process.argv.includes('--sandbox'),
   cacheWrite: attempt(() => { fs.mkdirSync(process.env.AI_COMPANY_VITEST_CACHE_DIR, {recursive:true}); fs.writeFileSync(process.env.AI_COMPANY_VITEST_CACHE_DIR + '/fixture', 'fixture'); }),
   tempWrite: attempt(() => { const temporary = fs.mkdtempSync(require('node:path').join(require('node:os').tmpdir(), 'cli-sandbox-temp-')); try { fs.writeFileSync(temporary + '/fixture', 'fixture'); } finally { fs.rmSync(temporary, {recursive:true,force:true}); } }),
 }));
 const evidence = process.argv.at(-1).match(/RECEIPT EVIDENCE ID: ([A-Za-z0-9_:-]+)/)[1];
 const response = 'ROLE_RESEARCH_RESULT_JSON ' + JSON.stringify({ research_question:'OS fixture', source_reference:evidence, finding:'Fixture only; product outcome UNKNOWN', confidence:0.5 }) + '\\nROLE_WORK_COMPLETE';
+const finalIndex = process.argv.indexOf('--output-last-message');
+if (finalIndex >= 0) { const destination = process.argv[finalIndex + 1]; fs.mkdirSync(require('node:path').dirname(destination), {recursive:true}); fs.writeFileSync(destination, response); }
 if (${JSON.stringify(runner)} === 'agy') console.log(JSON.stringify({event:'result',result:{response,usage:{input_tokens:1,output_tokens:1}}}));
 else { console.log(JSON.stringify({type:'item.completed',item:{type:'agent_message',text:response}})); console.log(JSON.stringify({type:'turn.completed',usage:{input_tokens:1,output_tokens:1}})); }
 `, { mode: 0o700 });
-  const dispatch = async (assigned: string) => {
-    const child = spawn(process.execPath, ['--import', createRequire(import.meta.url).resolve('tsx'), path.join(process.cwd(), 'scripts/ai-company-role-dispatch.mjs'), '--role', work.role, '--work-id', work.work_id, '--project-id', 'isolated', '--runner', runner, '--model', 'no-real-provider', '--control-root', control, '--workspace', assigned], {
+  const dispatch = async (assigned: string, mode = 'workspace-write') => {
+    const child = spawn(process.execPath, ['--import', createRequire(import.meta.url).resolve('tsx'), path.join(process.cwd(), 'scripts/ai-company-role-dispatch.mjs'), '--role', work.role, '--work-id', work.work_id, '--project-id', 'isolated', '--runner', runner, '--model', 'no-real-provider', '--control-root', control, '--workspace', assigned, '--sandbox', mode], {
       cwd: process.cwd(), env: { ...process.env, PATH: bin, AI_COMPANY_MAC_SANDBOX: 'true', AI_COMPANY_REQUIRE_WORKTREE: 'false', MACRO_ADMIN_KEY:'DUMMY_FIXTURE_ONLY', CRON_SECRET:'DUMMY_FIXTURE_ONLY', SUPABASE_SECRET_KEY:'DUMMY_FIXTURE_ONLY', SSH_AUTH_SOCK:path.join(root, 'nonexistent-fixture-socket'), ARBITRARY_CONTROLLER_SECRET:'DUMMY_FIXTURE_ONLY', NODE_PATH:root, NODE_OPTIONS:'--no-warnings' }, stdio: ['ignore', 'pipe', 'pipe'],
     });
     child.stdout.resume(); let stderr = ''; child.stderr.on('data', bytes => stderr += bytes);
@@ -56,7 +60,7 @@ macIt('actual dispatcher protects the supplied control root distinct from its ch
   const f = await fixture();
   const result = await f.dispatch(f.workspace);
   expect(result.code, result.stderr).toBe(0);
-  expect(JSON.parse(await readFile(path.join(f.workspace, 'boundary-result.json'), 'utf8'))).toEqual({ privateRead: false, controlWrite: false, workspaceWrite: true, privilegedEnvironmentPresent:false, loaderEnvironmentPresent:false, cacheWrite:true, tempWrite:true, configAssigned:true, cacheAndTempAssigned:true });
+  expect(JSON.parse(await readFile(path.join(f.workspace, 'boundary-result.json'), 'utf8'))).toEqual({ privateRead: false, controlWrite: false, workspaceWrite: true, privilegedEnvironmentPresent:false, loaderEnvironmentPresent:false, cacheWrite:true, tempWrite:true, configAssigned:true, cacheAndTempAssigned:true, namedPolicyPresent:false, legacySandboxPresent:false });
   expect((await f.queue.records())[0].state).toBe('DONE'); // Transport only; no product outcome claim.
 });
 
@@ -64,7 +68,22 @@ it('actual Codex transport excludes controller privileges and loader overrides',
   const f = await fixture('codex');
   const result = await f.dispatch(f.workspace);
   expect(result.code, result.stderr).toBe(0);
-  expect(JSON.parse(await readFile(path.join(f.workspace, 'boundary-result.json'), 'utf8'))).toMatchObject({privilegedEnvironmentPresent:false, loaderEnvironmentPresent:false, cacheWrite:true, tempWrite:true, configAssigned:true, cacheAndTempAssigned:true});
+  expect(JSON.parse(await readFile(path.join(f.workspace, 'boundary-result.json'), 'utf8'))).toMatchObject({privilegedEnvironmentPresent:false, loaderEnvironmentPresent:false, cacheWrite:true, tempWrite:true, configAssigned:true, cacheAndTempAssigned:true, namedPolicyPresent:true, legacySandboxPresent:false});
+});
+
+it('Codex refuses missing workspace before claim and preserves READY state', async () => {
+  const f = await fixture('codex'); const before = await f.queue.records();
+  const result = await f.dispatch('');
+  expect(result.code).toBe(4); expect(result.stderr).toContain('CODEX_ISOLATED_WORKSPACE_REQUIRED');
+  expect(await f.queue.records()).toEqual(before);
+});
+
+it('readonly Codex transport records its trusted final message as the attempt artifact', async () => {
+  const f = await fixture('codex'); const result = await f.dispatch(f.workspace, 'read-only');
+  expect(result.code,result.stderr).toBe(0);
+  const row=(await f.queue.records())[0];
+  const {roleAttemptArtifactName}=await import('./roleAttemptArtifact');
+  expect(await readFile(path.join(f.workspace,'.ai-company/reports',roleAttemptArtifactName(row.work_id,row.attempt_id!)),'utf8')).toContain('ROLE_RESEARCH_RESULT_JSON');
 });
 
 macIt('actual dispatcher rejects nonexistent workspace before changing a queued attempt', async () => {

@@ -1,0 +1,42 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/codexReadableRoot.test.ts (3 tests | 2 failed) 206ms
+   ✓ rejects unsafe roots, modes and writable aliases 3ms
+   × actual installed Codex utility enforces generated read-only policy 146ms
+     → Error: data did not match any variant of untagged enum FilesystemPermissionToml
+in `permissions`
+
+: expected 1 to be +0 // Object.is equality
+   × actual installed Codex utility enforces generated workspace-write policy 57ms
+     → Error: data did not match any variant of untagged enum FilesystemPermissionToml
+in `permissions`
+
+: expected 1 to be +0 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/codexReadableRoot.test.ts > actual installed Codex utility enforces generated read-only policy
+ FAIL  server/aiCompany/codexReadableRoot.test.ts > actual installed Codex utility enforces generated workspace-write policy
+AssertionError: Error: data did not match any variant of untagged enum FilesystemPermissionToml
+in `permissions`
+
+: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ server/aiCompany/codexReadableRoot.test.ts:35:76
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 1 passed (3)
+   Start at  10:44:33
+   Duration  459ms (transform 23ms, setup 0ms, collect 23ms, tests 206ms, environment 0ms, prepare 34ms)
+

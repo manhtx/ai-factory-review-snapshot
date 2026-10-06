@@ -1,0 +1,39 @@
+
+ RUN  v3.2.7 /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/ai-factory-public-snapshot-EHh5Aj
+
+ ❯ server/aiCompany/cliSandboxBoundary.test.ts (7 tests | 1 failed) 10024ms
+   × actual dispatcher protects the supplied control root distinct from its checkout 5010ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ actual Codex transport excludes controller privileges and loader overrides  2473ms
+   ✓ Codex refuses missing workspace before claim and preserves READY state  516ms
+   ✓ readonly Codex transport records its trusted final message as the attempt artifact  987ms
+   ✓ actual dispatcher rejects nonexistent workspace before changing a queued attempt  477ms
+   ✓ actual agy dispatcher rejects an aliased control root as workspace before claim 272ms
+   ✓ actual codex dispatcher rejects an aliased control root as workspace before claim 288ms
+ ✓ server/aiCompany/codexReadableRoot.test.ts (3 tests) 862ms
+   ✓ actual installed Codex utility enforces generated read-only policy  591ms
+ ✓ server/aiCompany/macSandbox.test.ts (5 tests) 1180ms
+   ✓ macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile  991ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cliSandboxBoundary.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ server/aiCompany/cliSandboxBoundary.test.ts:59:1
+     57| }
+     58| 
+     59| macIt('actual dispatcher protects the supplied control root distinct f…
+       | ^
+     60|   const f = await fixture();
+     61|   const result = await f.dispatch(f.workspace);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 14 passed (15)
+   Start at  11:04:24
+   Duration  13.36s (transform 216ms, setup 0ms, collect 317ms, tests 12.07s, environment 0ms, prepare 290ms)
+

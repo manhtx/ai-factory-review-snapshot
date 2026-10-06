@@ -1,0 +1,26 @@
+
+ RUN  v3.2.7 /private/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/ai-factory-public-snapshot-EHh5Aj
+
+stdout | server/aiCompany/codexPreparationDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+{"phase":"fixture-start","elapsedMs":2}
+
+stdout | server/aiCompany/codexPreparationDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+{"phase":"before-queue-create","elapsedMs":3}
+
+stdout | server/aiCompany/codexPreparationDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+{"phase":"after-queue-create","elapsedMs":21}
+
+stdout | server/aiCompany/codexPreparationDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+{"phase":"after-handoff","elapsedMs":23}
+
+stdout | server/aiCompany/codexPreparationDiagnostic.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+{"phase":"fixture-ready","elapsedMs":24}
+
+ ✓ server/aiCompany/codexPreparationDiagnostic.test.ts (7 tests | 6 skipped) 1570ms
+   ✓ actual dispatcher protects the supplied control root distinct from its checkout  1570ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  11:18:58
+   Duration  2.25s (transform 118ms, setup 0ms, collect 171ms, tests 1.57s, environment 0ms, prepare 131ms)
+
