@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
-  "observedAt": "2026-10-06T08:08:58.143508+00:00",
-  "sourceCarrierRevision": "cd218f5e3ca224db9b89c69430bc4a01ffdbf29c",
+  "observedAt": "2026-10-06T08:28:33.238568+00:00",
+  "sourceCarrierRevision": "4a3325df6662819b3194215b0669198145babdb3",
   "pinnedSourceCandidate": "c9a1aa7af3d707a30955b2852cd387988b975537",
-  "exportedSourceFiles": 1382,
+  "exportedSourceFiles": 1384,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -91,7 +91,7 @@
     "evidence": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json"
   },
   "nativeExecBoundary": "Current configured model code-mode six overallFAIL due apply_patch temp; exec/image/control writes observed with retained scoped results; all-tool admission remains OPEN",
-  "currentChangeScope": "Registry-only observation/verifier mode and read-only requirements evidence; no production repair or effect tool invoked",
+  "currentChangeScope": "Controlled dummy user MCP startup fixture only; no production repair or actual host configuration/auth data exported",
   "currentExportVerification": {
     "nativeCodeMode": "Six mode/config cases FAIL; actual apply_patch temp denied in both modes; no private/control/auth/dependency/alias/Git patch files created",
     "metadata": "gpt-5.6-sol native code-mode descriptors observed; no model inference/entitlement/complete dynamic registry proof",
@@ -113,5 +113,13 @@
     "patchAdmission": "Six earlierFAIL remain OPEN; not rerun or relabeled",
     "managedRequirements": "Isolated standalone app-server returns null; not all real auth-home/cloud/managed layers",
     "scope": "No all-tool effect/controller or independent assurance"
+  },
+  "userMcpStartupObservation": {
+    "source": "Exact cleanf133af6 three cases PASS",
+    "currentExport": "Three cases PASS: ignore-user-config suppresses marker and dummy capability; loaded config control positive",
+    "dummyActor": "Observed absent after CLI close",
+    "dummyMcpMethodCalled": false,
+    "privateHostDataExported": false,
+    "limits": "User MCP declaration only; plugin/system/managed hooks/auth/AGY/controller and patch6FAIL remain OPEN"
   }
 }

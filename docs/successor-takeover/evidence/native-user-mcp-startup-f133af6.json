@@ -1,0 +1,84 @@
+{
+  "sourceRevision": "f133af617d1973f69be9171f341ba7bbfd167f4e",
+  "cleanAtStart": true,
+  "cleanAtEnd": true,
+  "scriptSha256": "b51f4a861b94934eef19d4316e4d471c03e15bb413f5e99868756c48dec7afa2",
+  "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+  "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+  "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+  "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-JAh9QG",
+  "mode": "read-only",
+  "requestedModel": "gpt-5.6-sol",
+  "registryOnly": true,
+  "userMcp": true,
+  "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+  "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+  "rawArtifactSha256": "16d0a0bbaefabbfe624e9f0ad25e0cc47ae57fb1639642fa557154cef9fd1e84",
+  "observations": [
+    {
+      "legacyOverride": false,
+      "ignoreUserConfig": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "nativeRegistryNames": [
+        "apply_patch",
+        "exec_command",
+        "update_plan",
+        "view_image",
+        "write_stdin"
+      ],
+      "mcpStartupObserved": false,
+      "mcpCapabilityObserved": false,
+      "mcpActorAbsentAfterCliClose": null,
+      "checksPass": true
+    },
+    {
+      "legacyOverride": true,
+      "ignoreUserConfig": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "nativeRegistryNames": [
+        "apply_patch",
+        "exec_command",
+        "update_plan",
+        "view_image",
+        "write_stdin"
+      ],
+      "mcpStartupObserved": false,
+      "mcpCapabilityObserved": false,
+      "mcpActorAbsentAfterCliClose": null,
+      "checksPass": true
+    },
+    {
+      "legacyOverride": true,
+      "ignoreUserConfig": false,
+      "exitCode": 0,
+      "timedOut": false,
+      "nativeRegistryNames": [
+        "apply_patch",
+        "exec_command",
+        "list_mcp_resource_templates",
+        "list_mcp_resources",
+        "mcp__factory_dummy__dummy_probe",
+        "read_mcp_resource",
+        "update_plan",
+        "view_image",
+        "write_stdin"
+      ],
+      "mcpStartupObserved": true,
+      "mcpCapabilityObserved": true,
+      "mcpActorAbsentAfterCliClose": true,
+      "checksPass": true
+    }
+  ],
+  "independent": false,
+  "authority": "NONE",
+  "productionAutonomy": "DISABLED",
+  "toolMethodsInvoked": [
+    "Code-mode registry metadata only"
+  ],
+  "dummyMcpToolCalled": false,
+  "privateHostReceiptExported": false,
+  "claim": "Two ignored-user-config cases suppress actual dummy user MCP startup and capability; loaded control starts server/registers tool; actual dummy actor absent after CLI close",
+  "limits": "User MCP declaration fixture only; actual host config/auth data remains private; plugin/system/managed hooks/real auth/AGY/controller authority and patch6FAIL remain OPEN"
+}

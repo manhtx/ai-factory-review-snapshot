@@ -26,6 +26,7 @@ const mode = process.argv.includes('--workspace-write') ? 'workspace-write' : 'r
 const model = process.argv.includes('--dispatcher-model') ? 'gpt-5.6-sol' : 'fixture-model';
 const exercisePatches = process.argv.includes('--exercise-patches');
 const registryOnly = process.argv.includes('--registry-only');
+const userMcp = process.argv.includes('--user-mcp');
 const cleanAtStart = spawnSync('/usr/bin/git', ['status', '--porcelain'], { encoding: 'utf8' }).stdout.trim() === '';
 for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [true, false]]) {
   const workspace = path.join(root, `${legacyOverride ? 'legacy' : 'clean'}-project-${ignoreUserConfig ? 'ignored' : 'loaded'}`);
@@ -37,7 +38,10 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
   fs.writeFileSync(path.join(workspace, 'read-fixture.png'), png);
   fs.symlinkSync(control, path.join(workspace, 'escape'));
   spawnSync('/usr/bin/git', ['init', '-q', workspace], { encoding: 'utf8' });
-  fs.writeFileSync(path.join(home, 'config.toml'), `[projects.${JSON.stringify(workspace)}]\ntrust_level = "trusted"\n`);
+  const mcpMarker = path.join(home, `mcp-started-${path.basename(workspace)}`);
+  const mcpScript = path.join(home, `dummy-mcp-${path.basename(workspace)}.cjs`);
+  if (userMcp) fs.writeFileSync(mcpScript, `const fs=require('node:fs'),readline=require('node:readline');fs.writeFileSync(${JSON.stringify(mcpMarker)},JSON.stringify({pid:process.pid,parentPid:process.ppid,kind:'DUMMY_MCP_STARTED'}));const lines=readline.createInterface({input:process.stdin});lines.on('line',line=>{let message;try{message=JSON.parse(line);}catch{return;}if(message.id===undefined)return;const result=message.method==='initialize'?{protocolVersion:message.params.protocolVersion,capabilities:{tools:{}},serverInfo:{name:'factory-dummy-mcp',version:'1'}}:message.method==='tools/list'?{tools:[{name:'dummy_probe',description:'Owned dummy metadata fixture; do not call',inputSchema:{type:'object',properties:{}}}]}:{};process.stdout.write(JSON.stringify({jsonrpc:'2.0',id:message.id,result})+'\\n');});process.stdin.on('end',()=>process.exit(0));`);
+  fs.writeFileSync(path.join(home, 'config.toml'), `[projects.${JSON.stringify(workspace)}]\ntrust_level = "trusted"\n` + (userMcp ? `[mcp_servers.factory_dummy]\ncommand=${JSON.stringify(process.execPath)}\nargs=[${JSON.stringify(mcpScript)}]\nstartup_timeout_sec=5\n` : ''));
   if (legacyOverride) {
     fs.mkdirSync(path.join(workspace, '.codex'));
     fs.writeFileSync(path.join(workspace, '.codex', 'config.toml'), 'sandbox_mode = "danger-full-access"\ndeveloper_instructions = "PROJECT_LAYER_FIXTURE_ONLY"\n[agents]\nenabled=true\n');
@@ -111,17 +115,23 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
   const registryText = Array.isArray(registryOutput) ? registryOutput.find(item => item.type === 'input_text' && item.text?.startsWith('{"nativeRegistryNames":'))?.text : null;
   const nativeRegistryNames = registryText ? JSON.parse(registryText).nativeRegistryNames : null;
   const registryDelegationAbsent = Array.isArray(nativeRegistryNames) && nativeRegistryNames.length > 0 && nativeRegistryNames.every(name => !/multi_agent|spawn_agent|resume_agent|send_input|wait_agent|close_agent/.test(name));
+  const mcpStartupObserved = fs.existsSync(mcpMarker);
+  const mcpActor = userMcp && mcpStartupObserved ? JSON.parse(fs.readFileSync(mcpMarker, 'utf8')) : null;
+  const mcpActorProbe = mcpActor ? spawnSync('/bin/ps', ['-p', String(mcpActor.pid), '-o', 'pid='], { encoding: 'utf8' }) : null;
+  const mcpActorAbsentAfterCliClose = mcpActorProbe ? !mcpActorProbe.error && mcpActorProbe.status === 1 && mcpActorProbe.stdout.trim() === '' : null;
+  const mcpCapabilityObserved = Array.isArray(nativeRegistryNames) && nativeRegistryNames.some(name => name.includes('factory_dummy') && name.includes('dummy_probe'));
   const patchEffects = Object.fromEntries(Object.entries(patchTargets).map(([key, file]) => [key, fs.existsSync(file)]));
   const patchContentsMatch = Object.entries(patchTargets).every(([key, file]) => !patchEffects[key] || fs.readFileSync(file, 'utf8') === 'DUMMY_PATCH_ONLY\n');
   const checksPass = exitCode === 0 && !timedOut && finalResponse === 'DUMMY_FIXTURE_FINISHED'
     && delegationAbsent
     && toolSchemaTransport !== 'UNOBSERVED'
     && (!registryOnly || registryDelegationAbsent)
+    && (!userMcp || (mcpStartupObserved === !ignoreUserConfig && mcpCapabilityObserved === !ignoreUserConfig && (!mcpStartupObserved || mcpActorAbsentAfterCliClose === true)))
     && (!exercisePatches || (patchContentsMatch && Object.entries({ workspace: mode === 'workspace-write', temp: true, control: false, auth: false, dependency: false, escape: false, gitMetadata: false }).every(([key, expected]) => patchEffects[key] === expected)))
     && (!exerciseTools || Object.entries({ controlRead: false, authRead: false, escapeRead: false, workspaceRead: true, dependencyRead: true, workspaceWrite: mode === 'workspace-write', controlWrite: false, authWrite: false, dependencyWrite: false, escapeWrite: false, tempWrite: true }).every(([key, expected]) => permissionChecks?.[key] === expected))
     && (!exerciseImages || (typeof toolOutputs.image_call_2 === 'string' && toolOutputs.image_call_2.includes('Operation not permitted') && Array.isArray(toolOutputs.image_call_3) && toolOutputs.image_call_3.some(item => item.type === 'input_image')));
   observations.push({ legacyOverride, ignoreUserConfig, exitCode, signal, timedOut, args, stdout, stderr, requests,
-    finalResponse, permissionChecks, patchEffects, patchContentsMatch, advertisedToolNames, toolSchemaTransport, delegationAbsent, nativeRegistryNames, registryDelegationAbsent, checksPass });
+    finalResponse, permissionChecks, patchEffects, patchContentsMatch, advertisedToolNames, toolSchemaTransport, delegationAbsent, nativeRegistryNames, registryDelegationAbsent, mcpStartupObserved, mcpCapabilityObserved, mcpActorAbsentAfterCliClose, checksPass });
 }
 const launcher = fs.realpathSync('/Users/manhtx/.npm-global/bin/codex');
 const require = createRequire(launcher);
@@ -132,7 +142,7 @@ const result = { sourceRevision: spawnSync('/usr/bin/git', ['rev-parse', 'HEAD']
   cleanAtStart, cleanAtEnd: spawnSync('/usr/bin/git', ['status', '--porcelain'], { encoding: 'utf8' }).stdout.trim() === '',
   scriptSha256: hash(new URL(import.meta.url)), launcherSha256: hash(launcher), nativePayloadSha256: hash(nativePayload),
   permissionGeneratorSha256: hash(new URL('../../../server/aiCompany/macSandbox.ts', import.meta.url)),
-  fixtureRoot: root, mode, requestedModel: model, registryOnly, credentials: 'NONE; isolated HOME/CODEX_HOME; localhost dummy provider',
+  fixtureRoot: root, mode, requestedModel: model, registryOnly, userMcp, credentials: 'NONE; isolated HOME/CODEX_HOME; localhost dummy provider',
   scope: 'Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof', observations };
 const output = process.argv[2] || path.join(root, 'results.json');
 fs.writeFileSync(output, JSON.stringify(result, null, 2) + '\n');

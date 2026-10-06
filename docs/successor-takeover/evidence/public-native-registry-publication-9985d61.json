@@ -1,0 +1,16 @@
+{
+  "observedAt": "2026-10-06T08:09:45.476844+00:00",
+  "snapshotRevision": "9985d61b618773f2b50fa97fd94ebc6894380d20",
+  "sourceCarrierRevision": "cd218f5e3ca224db9b89c69430bc4a01ffdbf29c",
+  "productionBaselineCandidate": "c9a1aa7af3d707a30955b2852cd387988b975537",
+  "registryProbeRevision": "aba2e898f71754ef6b3bc4778c923731ac93e4d9",
+  "anonymousAccessVerified": true,
+  "remoteBlobs": 1401,
+  "allBlobHashesMatch": true,
+  "registryVerification": "Six metadata-only observations PASS; five nested tools/no agents; no effect method invoked",
+  "patchAdmission": "Six prior configured model patch temp FAIL remain OPEN",
+  "managedRequirements": "Isolated app-server null; real auth-home/config/cloud scope OPEN",
+  "authority": "NONE",
+  "independent": false,
+  "productionAutonomy": "DISABLED"
+}
