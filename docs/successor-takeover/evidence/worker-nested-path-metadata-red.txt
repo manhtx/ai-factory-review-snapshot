@@ -1,0 +1,85 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/macSandbox.test.ts (5 tests | 1 failed) 231ms
+   ✓ macSandboxProfile > rejects equal roots, workspace ancestors and nonexistent directories 2ms
+   ✓ macSandboxProfile > denies signalling a separate fixture process while permitting self and child signals 32ms
+   × macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile 138ms
+     → failed to load config from /private/tmp/factory-sandbox-test-cAsaSS/control/.ai-company/worktrees/assigned/fixture.config.mjs
+
+⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯
+Error: EPERM: operation not permitted, lstat '/private/tmp/factory-sandbox-test-cAsaSS/control'
+    at Object.realpathSync (node:fs:2787:29)
+    at finalizeResolution (node:internal/modules/esm/resolve:280:21)
+    at moduleResolve (node:internal/modules/esm/resolve:865:10)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    at #resolve (node:internal/modules/esm/loader:683:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    at node:internal/modules/esm/loader:632:32 {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'lstat',
+  path: '/private/tmp/factory-sandbox-test-cAsaSS/control'
+}
+
+
+
+: expected 1 to be +0 // Object.is equality
+   ✓ macSandboxProfile > enforces actual OS permissions for canonical-temp nested workspace 28ms
+   ✓ macSandboxProfile > enforces actual OS permissions for aliased-temp nested workspace 29ms
+ ✓ server/aiCompany/cliSandboxBoundary.test.ts (5 tests) 3090ms
+   ✓ actual dispatcher protects the supplied control root distinct from its checkout  1493ms
+   ✓ actual Codex transport excludes controller privileges and loader overrides  1260ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/macSandbox.test.ts > macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile
+AssertionError: failed to load config from /private/tmp/factory-sandbox-test-cAsaSS/control/.ai-company/worktrees/assigned/fixture.config.mjs
+
+⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯
+Error: EPERM: operation not permitted, lstat '/private/tmp/factory-sandbox-test-cAsaSS/control'
+    at Object.realpathSync (node:fs:2787:29)
+    at finalizeResolution (node:internal/modules/esm/resolve:280:21)
+    at moduleResolve (node:internal/modules/esm/resolve:865:10)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    at #resolve (node:internal/modules/esm/loader:683:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    at node:internal/modules/esm/loader:632:32 {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'lstat',
+  path: '/private/tmp/factory-sandbox-test-cAsaSS/control'
+}
+
+
+
+: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ server/aiCompany/macSandbox.test.ts:68:42
+     66|     });
+     67|     expect(result.error).toBeUndefined();
+     68|     expect(result.status, result.stderr).toBe(0);
+       |                                          ^
+     69|     expect(result.stdout).toContain('1 passed');
+     70|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 9 passed (10)
+   Start at  17:58:05
+   Duration  3.67s (transform 82ms, setup 0ms, collect 109ms, tests 3.32s, environment 0ms, prepare 54ms)
+

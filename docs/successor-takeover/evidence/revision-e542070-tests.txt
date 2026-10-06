@@ -1,0 +1,103 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ✓ server/aiCompany/cliAttemptDispatch.test.ts (15 tests) 14159ms
+   ✓ claims before stub provider, passes no capability, and ACKs its actual attempt  3107ms
+   ✓ never consumes a legacy work-only completion artifact for a silent new attempt  1134ms
+   ✓ does not record semantic evidence after the claimed attempt was explicitly stopped  355ms
+   ✓ terminates the owned stub provider before exiting on dispatcher SIGTERM  1413ms
+   ✓ awaits bounded group escalation when a descendant ignores SIGTERM  1426ms
+   ✓ preserves an unresolved provider citation and blocks instead of replacing it  1098ms
+   ✓ CLI review preserves actual original reference for same-scope  1183ms
+   ✓ CLI review preserves actual original reference for cross-scope  1206ms
+   ✓ CLI review preserves actual original reference for unresolved  1154ms
+   ✓ CLI selected dependency admission preserves explicit same-scope failed-review correction  1218ms
+ ✓ server/aiCompany/preReleaseReviewGate.test.ts (10 tests) 4240ms
+   ✓ pre-release review gate > fails closed until every independent review has evidence  345ms
+   ✓ pre-release review gate > opens only for completed evidence-backed quorum  409ms
+   ✓ denies withdrawn current review authority  456ms
+   ✓ denies missing current review authority  412ms
+   ✓ denies nonpass current review authority  452ms
+   ✓ denies missing-verdict current review authority  444ms
+   ✓ uses full dependency snapshot before selecting review backlog  429ms
+   ✓ revokes receiptless history and rejects a stale view without erasing DONE  428ms
+   ✓ plain rows and copied views cannot certify prerelease  431ms
+   ✓ cannot approve an empty target project using healthy foreign work  433ms
+ ✓ server/aiCompany/runtime.test.ts (13 tests) 4605ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = false  2277ms
+   ✓ CEO brief runtime > isolated weekly contract admission with reviewer own receipt = true  1614ms
+ ✓ server/aiCompany/currentRoleAuthority.test.ts (22 tests) 3572ms
+ ✓ server/aiCompany/researchSynthesis.test.ts (17 tests) 3960ms
+ ✓ server/aiCompany/cliResourceAdmission.test.ts (4 tests) 3685ms
+   ✓ actual agy dispatcher admits a current stub result only after its bound group exits  1589ms
+   ✓ actual SIGKILL leaves the provider alive and preserves admission until its entire group disappears  450ms
+   ✓ leader completion with a surviving actual descendant withholds release and terminal receipts  472ms
+   ✓ an actual spawn error preserves marked UNKNOWN ownership and never grants terminal success  1174ms
+ ✓ server/aiCompany/cliSandboxBoundary.test.ts (5 tests) 2916ms
+   ✓ actual dispatcher protects the supplied control root distinct from its checkout  1310ms
+   ✓ actual Codex transport excludes controller privileges and loader overrides  1267ms
+ ✓ server/aiCompany/cadenceQuorum.test.ts (8 tests) 2949ms
+   ✓ cadence quorum > passes only when every daily accountable role is done with evidence  327ms
+   ✓ denies withdrawn governance inputs despite historical DONE  404ms
+   ✓ denies missing governance inputs despite historical DONE  421ms
+   ✓ reads healthy dependencies outside cadence selection  425ms
+   ✓ revokes receiptless cadence and rejects stale views  432ms
+   ✓ plain rows and copied views cannot certify cadence  424ms
+   ✓ cannot approve target cadence using another project governance  414ms
+ ✓ server/aiCompany/worktreeManager.test.ts (8 tests) 1877ms
+   ✓ WorktreeManager > propagates only product changes and ignores harness/report overlays  303ms
+ ✓ server/aiCompany/resourceAdmissionProcess.test.ts (7 tests) 1468ms
+   ✓ real stale OS A cannot release B or admit C while B is alive  304ms
+ ✓ server/aiCompany/backlogWorkPlanner.test.ts (17 tests) 1508ms
+   ✓ does not generate prerelease reviews from receiptless QA/QC history  377ms
+ ✓ server/aiCompany/nativeReceiptAuthority.test.ts (31 tests) 1338ms
+ ✓ server/aiCompany/reviewTerminalAdmission.test.ts (10 tests) 1030ms
+ ✓ server/aiCompany/combinedEvidenceCapture.test.ts (10 tests) 945ms
+ ✓ server/aiCompany/releasePromotion.test.ts (3 tests) 956ms
+   ✓ release promotion > promotes only after full independent quorum  394ms
+   ✓ holds promotion when completed reviews depend on withdrawn inputs  434ms
+ ✓ server/aiCompany/dependencyAdmission.test.ts (6 tests) 804ms
+ ✓ server/aiCompany/nativeProviderContract.test.ts (20 tests) 772ms
+ ✓ server/aiCompany/cliReceiptPublication.test.ts (16 tests) 876ms
+ ✓ server/aiCompany/queueMutationFence.test.ts (14 tests) 733ms
+ ✓ server/aiCompany/roleEvidenceLedger.test.ts (7 tests) 584ms
+ ✓ server/aiCompany/nativeEvidenceAdmission.test.ts (11 tests) 527ms
+ ✓ server/aiCompany/autonomousCoordinator.test.ts (4 tests) 332ms
+ ✓ server/aiCompany/nativeDispatchIssuance.test.ts (15 tests) 529ms
+ ✓ server/aiCompany/roleWorkExecutor.test.ts (8 tests) 521ms
+ ✓ server/aiCompany/openaiCompatibleRoleAdapter.test.ts (7 tests) 520ms
+ ✓ server/aiCompany/attemptAuthority.test.ts (10 tests) 356ms
+ ✓ server/aiCompany/macSandbox.test.ts (5 tests) 415ms
+   ✓ macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile  321ms
+ ✓ server/aiCompany/adminWorkQueueTransport.test.ts (7 tests) 315ms
+ ✓ server/aiCompany/cliPmDecision.test.ts (3 tests) 359ms
+ ✓ server/aiCompany/nativeAttemptLineage.test.ts (6 tests) 341ms
+ ✓ server/aiCompany/roleEvidenceResolver.test.ts (8 tests) 337ms
+ ✓ server/aiCompany/roleWorkQueueBypassGuards.test.ts (11 tests) 321ms
+ ✓ server/aiCompany/roleWorkQueue.test.ts (9 tests) 264ms
+ ✓ server/aiCompany/roleWorkQueueEvidenceIntegration.test.ts (8 tests) 196ms
+ ✓ server/aiCompany/resourceAdmissionAuthority.test.ts (23 tests) 210ms
+ ✓ server/aiCompany/ceoReviewLedger.test.ts (2 tests) 238ms
+ ✓ server/aiCompany/recoveryCoordinator.test.ts (7 tests) 208ms
+ ✓ server/aiCompany/evidenceSnapshot.test.ts (6 tests) 74ms
+ ✓ server/aiCompany/orchestrator.test.ts (12 tests) 55ms
+ ✓ server/aiCompany/resourceGovernor.test.ts (4 tests) 36ms
+ ✓ server/aiCompany/executionLease.test.ts (20 tests) 22ms
+ ✓ server/aiCompany/roleWorkQueue.atomic.test.ts (2 tests) 16ms
+ ✓ server/aiCompany/recursiveDependencyAuthority.test.ts (10 tests) 12ms
+ ✓ server/aiCompany/evidenceAdmissionIntegrity.test.ts (24 tests) 8ms
+ ✓ server/aiCompany/ideaLedger.test.ts (4 tests) 15ms
+ ✓ server/aiCompany/companyNbaRouter.test.ts (23 tests) 5ms
+ ✓ server/aiCompany/productIntelligenceRecoveryV2.test.ts (11 tests) 3ms
+ ✓ server/aiCompany/assignmentEnvelope.test.ts (12 tests) 3ms
+ ✓ server/aiCompany/executionPlanner.test.ts (13 tests) 3ms
+ ✓ server/aiCompany/evidenceResolver.test.ts (6 tests) 2ms
+ ✓ server/aiCompany/opportunityScoring.test.ts (4 tests) 2ms
+ ✓ server/aiCompany/modelAdapter.test.ts (1 test) 1ms
+ ✓ src/app/pages/RegimeDetectionPage.test.tsx (4 tests) 120ms
+
+ Test Files  53 passed (53)
+      Tests  543 passed (543)
+   Start at  18:02:58
+   Duration  66.67s (transform 582ms, setup 0ms, collect 1.40s, tests 59.35s, environment 395ms, prepare 1.24s)
+

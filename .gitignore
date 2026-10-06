@@ -17,3 +17,5 @@ dist/
 *.lock
 *.pem
 *.p12
+
+.ai-company-worker-*/

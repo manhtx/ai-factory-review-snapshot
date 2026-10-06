@@ -21,17 +21,18 @@ async function fixture() {
   const descendantCode = "const fs=require('node:fs'); process.on('SIGTERM',()=>{}); fs.writeFileSync('descendant-ready','ready'); const tick=setInterval(()=>{if(!fs.existsSync('stub-resume'))return;clearInterval(tick);fs.writeFileSync('stub-effect','isolated descendant effect');process.exit(0);},10);setTimeout(()=>process.exit(0),3000).unref();";
   const stub = `#!${process.execPath}
 const fs = require('node:fs');
+const mode = fs.existsSync('stub-mode.txt') ? fs.readFileSync('stub-mode.txt', 'utf8') : 'success';
 const file = '.ai-company/runtime/projects/isolated/role-work-queue.jsonl';
 const current = fs.readFileSync(file, 'utf8').trim().split('\\n').map(JSON.parse).at(-1);
 fs.writeFileSync('stub-call.json', JSON.stringify({state:current.state, attempt_id:current.attempt_id, provider_dispatch:current.provider_dispatch, argsContainCapability:process.argv.join(' ').includes('attempt_authority')}));
-if (process.env.CLI_STUB_MODE === 'worker-done') fs.appendFileSync(file, JSON.stringify({...current,state:'DONE'})+'\\n');
-if (process.env.CLI_STUB_MODE === 'silent') process.exit(0);
-if (process.env.CLI_STUB_MODE === 'descendant') {
+if (mode === 'worker-done') fs.appendFileSync(file, JSON.stringify({...current,state:'DONE'})+'\\n');
+if (mode === 'silent') process.exit(0);
+if (mode === 'descendant') {
   require('node:child_process').spawn(process.execPath, ['-e', ${JSON.stringify(descendantCode)}], {stdio:'ignore'});
   const entered=setInterval(()=>{if(!fs.existsSync('descendant-ready'))return;clearInterval(entered);fs.writeFileSync('stub-entered','ready');},10);
   setInterval(()=>{},1000);
   setTimeout(()=>process.exit(0),3000).unref();
-} else if (process.env.CLI_STUB_MODE === 'waiting') {
+} else if (mode === 'waiting') {
   fs.writeFileSync('stub-entered', 'isolated stub');
   const tick = setInterval(() => {
     if (!fs.existsSync('stub-resume')) return;
@@ -42,7 +43,7 @@ if (process.env.CLI_STUB_MODE === 'descendant') {
   setTimeout(() => process.exit(5), 3000).unref();
 } else emit();
 function emit() {
-const message = fs.existsSync('review-verdict.json') ? 'REVIEW_VERDICT_JSON '+fs.readFileSync('review-verdict.json','utf8')+'\\nROLE_WORK_COMPLETE' : 'ROLE_RESEARCH_RESULT_JSON '+JSON.stringify({research_question:'Unit transport',source_reference:process.env.CLI_STUB_MODE==='unresolved'?'UNRESOLVED-DECLARED':process.argv.at(-1).match(/RECEIPT EVIDENCE ID: ([A-Za-z0-9_:-]+)/)[1],finding:'Unit stub only; product outcome UNKNOWN',confidence:0.5})+'\\nROLE_WORK_COMPLETE';
+const message = fs.existsSync('review-verdict.json') ? 'REVIEW_VERDICT_JSON '+fs.readFileSync('review-verdict.json','utf8')+'\\nROLE_WORK_COMPLETE' : 'ROLE_RESEARCH_RESULT_JSON '+JSON.stringify({research_question:'Unit transport',source_reference:mode==='unresolved'?'UNRESOLVED-DECLARED':process.argv.at(-1).match(/RECEIPT EVIDENCE ID: ([A-Za-z0-9_:-]+)/)[1],finding:'Unit stub only; product outcome UNKNOWN',confidence:0.5})+'\\nROLE_WORK_COMPLETE';
 console.log(JSON.stringify({type:'item.completed',item:{type:'agent_message',text:message}}));
 console.log(JSON.stringify({type:'turn.completed',usage:{input_tokens:1,output_tokens:1}}));
 }
@@ -54,9 +55,10 @@ console.log(JSON.stringify({type:'turn.completed',usage:{input_tokens:1,output_t
 }
 
 async function dispatch(input: Awaited<ReturnType<typeof fixture>>, mode = 'success', control?: (child: ReturnType<typeof spawn>) => Promise<void>) {
+  await writeFile(path.join(input.root, 'stub-mode.txt'), mode);
   const messages: unknown[] = []; let stdout = '', stderr = '';
   const child = spawn(process.execPath, ['--import', createRequire(import.meta.url).resolve('tsx'), path.join(process.cwd(), 'scripts/ai-company-role-dispatch.mjs'), '--role', input.item.role, '--work-id', input.item.work_id, '--project-id', 'isolated', '--runner', 'codex', '--model', 'unit-stub', '--control-root', input.root], {
-    cwd: input.root, env: { ...process.env, PATH: `${input.bin}${path.delimiter}${process.env.PATH ?? ''}`, CLI_STUB_MODE: mode, AI_COMPANY_REQUIRE_WORKTREE: 'false' }, stdio: ['ignore', 'pipe', 'pipe', 'ipc'],
+    cwd: input.root, env: { ...process.env, PATH: `${input.bin}${path.delimiter}${process.env.PATH ?? ''}`, AI_COMPANY_REQUIRE_WORKTREE: 'false' }, stdio: ['ignore', 'pipe', 'pipe', 'ipc'],
   });
   child.on('message', message => messages.push(message));
   child.stdout?.on('data', chunk => { stdout += chunk; }); child.stderr?.on('data', chunk => { stderr += chunk; });

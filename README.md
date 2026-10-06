@@ -2,9 +2,9 @@
 
 Source snapshot for external code and evidence inspection of Macro Research Platform's AI Factory. The original repository remains private. This repository starts with a new Git history; it contains no parent repository history or live machine stores.
 
-Source carrier: `de906ec9f11f7fdadfc73c10dfebe34cb1740739`.
+Source carrier: `86f1ff0859654dcf415ae2013fe246701503c5b1`.
 
-Pinned tested source candidate: `a534211443a2e251136a21150e8054461d7d5a00`. Its recorded clean run passed 539 tests across 53 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
+Pinned tested source candidate: `e5420707853c3a18bd84f6b3e769597a0867e893`. Its recorded clean run passed 543 tests across 53 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
 
 ## Inspect
 
@@ -34,4 +34,4 @@ Historical first-publication export verification is recorded in `PUBLIC_SNAPSHOT
 
 This is an inspection snapshot, not a deployment package. Static relative module imports are included. Dynamic file reads, full product data/assets and live operational stores are outside that closure. Runtime/provider logs, credentials, browser profiles, cookies, databases, locks, leases and host configuration are excluded. No license grant beyond the original owner's publication request is inferred.
 
-Current update includes the bounded optional macOS worker sandbox repair and six OS/dispatcher fixture tests. Root-source full regression is exact and clean; historical export smoke logs remain labeled historical. Worker environment credentials, activation coverage, outside-control-root reads, hardlinks and the controller gateway remain open.
+Current update includes explicit two-runner worker environment transport, attempt-local config/cache/temp and the reopened data/metadata/child-signal profile contract. Ten OS/dispatcher fixture tests include a real nested Vitest native-config process exiting zero, not just a passing test marker. Root-source full regression is exact and clean; previous export logs remain historical. HOME/CODEX_HOME/private history, real-provider authentication/compatibility, activation coverage, outside-control-root reads, hardlinks and the controller gateway remain open.

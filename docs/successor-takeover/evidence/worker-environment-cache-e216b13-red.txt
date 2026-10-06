@@ -1,0 +1,65 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/cliSandboxBoundary.test.ts (3 tests | 2 failed) 2938ms
+   × actual dispatcher protects the supplied control root distinct from its checkout 1573ms
+     → expected { privateRead: false, …(6) } to deeply equal { privateRead: false, …(6) }
+   × actual Codex transport excludes controller privileges and loader overrides 1251ms
+     → expected { privateRead: true, …(6) } to match object { …(4) }
+(3 matching properties omitted from actual)
+   ✓ actual dispatcher rejects nonexistent workspace before changing a queued attempt 114ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/cliSandboxBoundary.test.ts > actual dispatcher protects the supplied control root distinct from its checkout
+AssertionError: expected { privateRead: false, …(6) } to deeply equal { privateRead: false, …(6) }
+
+- Expected
++ Received
+
+  {
+-   "cacheWrite": true,
++   "cacheWrite": false,
+    "controlWrite": false,
+-   "loaderEnvironmentPresent": false,
++   "loaderEnvironmentPresent": true,
+    "privateRead": false,
+-   "privilegedEnvironmentPresent": false,
+-   "tempWrite": true,
++   "privilegedEnvironmentPresent": true,
++   "tempWrite": false,
+    "workspaceWrite": true,
+  }
+
+ ❯ server/aiCompany/cliSandboxBoundary.test.ts:57:94
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  server/aiCompany/cliSandboxBoundary.test.ts > actual Codex transport excludes controller privileges and loader overrides
+AssertionError: expected { privateRead: true, …(6) } to match object { …(4) }
+(3 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "cacheWrite": true,
+-   "loaderEnvironmentPresent": false,
+-   "privilegedEnvironmentPresent": false,
++   "loaderEnvironmentPresent": true,
++   "privilegedEnvironmentPresent": true,
+    "tempWrite": true,
+  }
+
+ ❯ server/aiCompany/cliSandboxBoundary.test.ts:65:94
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 1 passed (3)
+   Start at  17:50:20
+   Duration  3.41s (transform 79ms, setup 0ms, collect 100ms, tests 2.94s, environment 0ms, prepare 38ms)
+

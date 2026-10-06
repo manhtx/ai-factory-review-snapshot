@@ -30,21 +30,43 @@ describe('macSandboxProfile', () => {
     expect(() => macSandboxProfile(f.control, path.join(f.root, 'missing'))).toThrow();
   });
 
-  macIt('denies signalling a separate fixture process while permitting self signal', async () => {
+  macIt('denies signalling a separate fixture process while permitting self and child signals', async () => {
     const f = fixture('/private/tmp');
     const other = spawn(process.execPath, ['-e', 'setInterval(() => {}, 1000)'], { stdio: 'ignore' });
     await once(other, 'spawn');
     try {
       const result = spawnSync('/usr/bin/sandbox-exec', ['-p', macSandboxProfile(f.control, f.workspace), process.execPath, '-e', `
         const attempt = pid => { try { process.kill(pid, 'SIGCONT'); return true; } catch { return false; } };
-        console.log(JSON.stringify({ self: attempt(process.pid), other: attempt(Number(process.argv[1])) }));
+        const child = require('node:child_process').spawn(process.execPath, ['-e', 'setTimeout(() => {}, 150)'], {stdio:'pipe'});
+        child.on('spawn', () => {
+          const permitted = attempt(child.pid);
+          const result = { self: attempt(process.pid), child: permitted, other: attempt(Number(process.argv[1])) };
+          child.on('exit', () => console.log(JSON.stringify(result)));
+          if (permitted) child.kill('SIGKILL');
+        });
       `, String(other.pid)], { encoding: 'utf8', timeout: 10_000 });
       expect(result.error).toBeUndefined();
       expect(result.status, result.stderr).toBe(0);
-      expect(JSON.parse(result.stdout)).toEqual({ self: true, other: false });
+      expect(JSON.parse(result.stdout)).toEqual({ self: true, child: true, other: false });
     } finally {
       const exited = once(other, 'exit'); other.kill('SIGKILL'); await exited;
     }
+  });
+
+  macIt('runs actual Vitest with native config and assigned cache/temp under the OS profile', () => {
+    const f = fixture('/private/tmp');
+    fs.symlinkSync(path.join(process.cwd(), 'node_modules'), path.join(f.workspace, 'node_modules'));
+    const temp = path.join(f.workspace, 'tmp'), cache = path.join(f.workspace, 'cache');
+    fs.mkdirSync(temp); fs.mkdirSync(cache);
+    fs.writeFileSync(path.join(f.workspace, 'fixture.test.mjs'), `import {it,expect} from 'vitest';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';it('actual assigned temporary write',()=>{const dir=fs.mkdtempSync(path.join(os.tmpdir(),'vitest-fixture-'));try{fs.writeFileSync(path.join(dir,'effect'),'FIXTURE_ONLY');expect(fs.readFileSync(path.join(dir,'effect'),'utf8')).toBe('FIXTURE_ONLY');}finally{fs.rmSync(dir,{recursive:true,force:true});}});`);
+    const config = path.join(f.workspace, 'fixture.config.mjs');
+    fs.writeFileSync(config, `export default {cacheDir:${JSON.stringify(cache)},test:{include:['fixture.test.mjs'],fileParallelism:false}};`);
+    const result = spawnSync('/usr/bin/sandbox-exec', ['-p', macSandboxProfile(f.control, f.workspace), process.execPath, path.join(process.cwd(), 'node_modules/vitest/vitest.mjs'), 'run', '--config', config, '--configLoader', 'native'], {
+      cwd: f.workspace, env: { PATH: process.env.PATH, HOME: f.workspace, TMPDIR: temp, TMP: temp, TEMP: temp }, encoding: 'utf8', timeout: 5000,
+    });
+    expect(result.error).toBeUndefined();
+    expect(result.status, result.stderr).toBe(0);
+    expect(result.stdout).toContain('1 passed');
   });
 
   for (const kind of ['canonical-temp', 'aliased-temp'] as const) {
@@ -57,6 +79,8 @@ describe('macSandboxProfile', () => {
         const attempt = (fn) => { try { fn(); return true; } catch { return false; } };
         console.log(JSON.stringify({
           privateRead: attempt(() => fs.readFileSync(control + '/private-fixture')),
+          privateStat: attempt(() => fs.statSync(control + '/private-fixture')),
+          controlEnumeration: attempt(() => fs.readdirSync(control)),
           controlWrite: attempt(() => fs.writeFileSync(control + '/forbidden', 'fixture')),
           workspaceWrite: attempt(() => fs.writeFileSync(workspace + '/allowed', 'fixture')),
           escapeRead: attempt(() => fs.readFileSync(workspace + '/escape/private-fixture')),
@@ -69,7 +93,7 @@ describe('macSandboxProfile', () => {
       expect(result.error).toBeUndefined();
       expect(result.status, result.stderr).toBe(0);
       expect(JSON.parse(result.stdout)).toEqual({
-        privateRead: false, controlWrite: false, workspaceWrite: true,
+        privateRead: false, privateStat: false, controlEnumeration: false, controlWrite: false, workspaceWrite: true,
         escapeRead: false, escapeWrite: false, dependencyRead: true, dependencyWrite: false, unrelatedTempWrite: false,
       });
       expect(fs.existsSync(path.join(f.control, 'forbidden'))).toBe(false);

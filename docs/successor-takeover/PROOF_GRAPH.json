@@ -1,7 +1,7 @@
 {
   "schema": "successor-takeover.proof-graph.v1",
   "authoritative": false,
-  "currentCandidateRevision": "a534211443a2e251136a21150e8054461d7d5a00",
+  "currentCandidateRevision": "e5420707853c3a18bd84f6b3e769597a0867e893",
   "historicalProofPolicy": "Older nodes retain historical evidence only; none certifies the current candidate without exact revision revalidation. No negative evidence removed.",
   "purpose": "Explicit claim dependencies and limits for isolated candidate evidence; not an operational proof engine or closure certificate.",
   "executionInventory": {
@@ -11,6 +11,31 @@
     "postTestCheck": "MATCHED_AFTER_PRODUCT_API_REPAIRS; UNSEALED_CANDIDATE"
   },
   "nodes": [
+    {
+      "id": "worker-environment-contract-e542070",
+      "sourceRevision": "e5420707853c3a18bd84f6b3e769597a0867e893",
+      "claim": "Actual two-runner privilege exclusion and attempt config/cache/temp; alias preclaim refusal; actual nested Vitest exits0 while protected content/private metadata/enumeration and foreign signal denied; exact543PASS53FILES",
+      "evidence": "SOURCE_CANDIDATE_SEAL.json; WORKER_ENVIRONMENT_AND_CACHE_REPAIR.md; evidence/revision-e542070-command-results.json",
+      "status": "BUILDER_SCOPED_VERIFIED; REVIEW_PENDING",
+      "independent": false,
+      "dependsOn": [
+        "worker-sandbox-a534211"
+      ],
+      "missing": "HOME/CODEX_HOME/private history/real-provider authentication/compatibility/full activation/hardlinks/controller gateway/cross-store effects/independent review OPEN"
+    },
+    {
+      "id": "public-review-snapshot-5e9c0f9",
+      "sourceRevision": "de906ec9f11f7fdadfc73c10dfebe34cb1740739",
+      "snapshotRevision": "5e9c0f90be4ecf73123397fb8035fa43c97a42fb",
+      "claim": "Anonymous GitHub access verifies1318 exact remote blob hashes; sourcea534211 clean539PASS53FILES; export sandbox6PASS2FILES",
+      "evidence": "evidence/public-review-snapshot-update-5e9c0f9.json",
+      "status": "PUBLIC_TOOL_ACCESS_VERIFIED; NO_RUNTIME_AUTHORITY",
+      "independent": false,
+      "dependsOn": [
+        "worker-sandbox-a534211"
+      ],
+      "missing": "Controller/worker full operational boundary and independent review remain OPEN"
+    },
     {
       "id": "worker-sandbox-a534211",
       "sourceRevision": "a534211443a2e251136a21150e8054461d7d5a00",

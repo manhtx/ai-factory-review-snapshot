@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-05T10:44:37.511Z",
+  "observedAt": "2026-10-06T02:48:54.219Z",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "de906ec9f11f7fdadfc73c10dfebe34cb1740739",
-  "pinnedTestedCandidateRevision": "a534211443a2e251136a21150e8054461d7d5a00",
+  "sourceCarrierRevision": "86f1ff0859654dcf415ae2013fe246701503c5b1",
+  "pinnedTestedCandidateRevision": "e5420707853c3a18bd84f6b3e769597a0867e893",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
     {
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "f77d86fe7d27e3352e9f4fbd8367fd766ddccbac7ed0bd665de831c710e2c123",
-      "bytes": 26936,
+      "sha256": "e89a10228680e7fe48935f0752bbce8be352dc5cf23885c11cf14dd3efd720a5",
+      "bytes": 34045,
       "source": "current-source-carrier"
     },
     {
@@ -752,8 +752,8 @@
     },
     {
       "path": "docs/successor-takeover/CLOSURE_MATRIX.json",
-      "sha256": "5af7aa430de434c9293f8d18bf81ee45dbe9dcf2ea72a89d9d7113e39c5270b9",
-      "bytes": 55481,
+      "sha256": "757c310aaa1bd231def8e122aece09f1020a291de26a3f084db68a8d52c1459e",
+      "bytes": 55461,
       "source": "current-source-carrier"
     },
     {
@@ -962,8 +962,8 @@
     },
     {
       "path": "docs/successor-takeover/PROOF_GRAPH.json",
-      "sha256": "04d9589c9d28514d6a42f3d58f3251419881a5295cd02a9045aa6744dedbe7fa",
-      "bytes": 67603,
+      "sha256": "d124c44cfd5515808d3df8500e6ac30a1769126c7d78057a38d9a72dd7ac08c2",
+      "bytes": 69113,
       "source": "current-source-carrier"
     },
     {
@@ -1028,8 +1028,8 @@
     },
     {
       "path": "docs/successor-takeover/SOURCE_CANDIDATE_SEAL.json",
-      "sha256": "0efab4e591490fcfb02f9176118fec9ff64631f451ff53422e714e61305863c4",
-      "bytes": 15193,
+      "sha256": "40f0d65a6283dd1239b4289026d62eebf3f581a80c7e8b2809309185a882dbcd",
+      "bytes": 15702,
       "source": "current-source-carrier"
     },
     {
@@ -1108,6 +1108,12 @@
       "path": "docs/successor-takeover/WAIT_VALIDATION_PROGRESS.json",
       "sha256": "783d13ff270b8e1b3e27ddd5e18cfd14149d932fc79ae625c62c4bcc1d5ef24f",
       "bytes": 1743,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/WORKER_ENVIRONMENT_AND_CACHE_REPAIR.md",
+      "sha256": "a56e4273ab85767e00551e8253f1a24bb4a5f87e51aeb0ad9881447c3abdbc43",
+      "bytes": 5987,
       "source": "current-source-carrier"
     },
     {
@@ -3079,6 +3085,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/public-review-snapshot-update-5e9c0f9.json",
+      "sha256": "60ecfce49e50f7cac071e459c0d618f042eac3fd930b5cced4c972f4e7513f9b",
+      "bytes": 1156,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/queue-fence-combined.txt",
       "sha256": "585751ff8ae65b4f09c7b6cfc7abf807f80df51fd99b2c742fdad620ec0d8d34",
       "bytes": 1523,
@@ -3853,6 +3865,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/revision-a534211-source-seal-historical.json",
+      "sha256": "0efab4e591490fcfb02f9176118fec9ff64631f451ff53422e714e61305863c4",
+      "bytes": 15193,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/revision-a534211-tests.txt",
       "sha256": "39b34aef683382dc953b71cbd9cbf39d82d1902879387cb115ff2ee89b11928f",
       "bytes": 7183,
@@ -3860,6 +3878,30 @@
     },
     {
       "path": "docs/successor-takeover/evidence/revision-a534211-typecheck.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-e542070-command-results.json",
+      "sha256": "9b8ce747b1e750ee53311cc2a8113f4a0a8da106fecfbd50a51c8481c4b265b8",
+      "bytes": 11306,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-e542070-lint.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-e542070-tests.txt",
+      "sha256": "ab5b6fb2f387bdd11c8e57ef3526e673dc025251a5b257d7d7a5cc3cbe48d266",
+      "bytes": 7231,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/revision-e542070-typecheck.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
       "source": "current-source-carrier"
@@ -4231,6 +4273,24 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/worker-environment-cache-e216b13-red.txt",
+      "sha256": "d728bf60df423d00d519c6e0aa4e7df1f5978dced2ce4c76b643d258803b10ad",
+      "bytes": 2266,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/worker-native-tool-contract-red.txt",
+      "sha256": "3fa160ac1cacd28d32a459f567f5b677da630e1f50390f8fde2490f295ec72a7",
+      "bytes": 4677,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/worker-nested-path-metadata-red.txt",
+      "sha256": "1c0e376525c21899eb918b0963b6ca1dfb5aab68cf0e975ee122fd8e46a79ed0",
+      "bytes": 3974,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/worker-sandbox-alias-96c71b0-counterexample.json",
       "sha256": "a44cfe1dc683f6f60b3f1a897bbe61e33dd5b4e9cfab4949dd4b838e89dbe061",
       "bytes": 631,
@@ -4246,6 +4306,12 @@
       "path": "docs/successor-takeover/evidence/worker-sandbox-red-before-repair.txt",
       "sha256": "e11fb00dd526f0096fc1e8e54f644224703c93f73a231713415b7e52a5328604",
       "bytes": 2878,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/worker-vitest-loader-e216b13-counterexample.json",
+      "sha256": "b83ae373eb4d4a77d506d275e967e850fa6a81648b6cc134016def7661251d72",
+      "bytes": 3156,
       "source": "current-source-carrier"
     },
     {
@@ -4442,8 +4508,8 @@
     },
     {
       "path": "scripts/ai-company-role-dispatch.mjs",
-      "sha256": "26220bf9cbfde9f629b8b15b9fe248af4bab6c78634ad4be8ec08726f0eab506",
-      "bytes": 58929,
+      "sha256": "697df86885f91aaabbbd32611e47abd1d3c403b65006d14c2e4920d29e58261f",
+      "bytes": 60672,
       "source": "current-source-carrier"
     },
     {
@@ -5390,8 +5456,8 @@
     },
     {
       "path": "server/aiCompany/cliAttemptDispatch.test.ts",
-      "sha256": "4e5a7b227e3b1d7708bae16214faeed9f330d9ed0cbf722fc10d5a2c509995dd",
-      "bytes": 18222,
+      "sha256": "6cc8914cdad63395eab215594b9c81888ee14fbbcaf90f2d2ddc3115b681ca3d",
+      "bytes": 18261,
       "source": "current-source-carrier"
     },
     {
@@ -5414,8 +5480,8 @@
     },
     {
       "path": "server/aiCompany/cliSandboxBoundary.test.ts",
-      "sha256": "0be77cb4fc9a33a76e2902f3d85048ebffd08bdcdcce7303e293a4ea719b511b",
-      "bytes": 4423,
+      "sha256": "5994a14a844035676b30d47469024b1e3b1f51faea4f41b976f02e65b70b62bd",
+      "bytes": 7368,
       "source": "current-source-carrier"
     },
     {
@@ -5906,14 +5972,14 @@
     },
     {
       "path": "server/aiCompany/macSandbox.test.ts",
-      "sha256": "084aa651d45e1fc11c7b24776bad1012a475b2adaf045caf0a29c3fb9e7668db",
-      "bytes": 4495,
+      "sha256": "543f91f21f6652b6b3210ce619a16b6665c73b0e308a8b38b2df6832396212b8",
+      "bytes": 6678,
       "source": "current-source-carrier"
     },
     {
       "path": "server/aiCompany/macSandbox.ts",
-      "sha256": "e37a998c74c39171263df1a3b11677e698076b4aca7a372763422cff309d1833",
-      "bytes": 1630,
+      "sha256": "b8d893c42d544b367c08b37280b9320ef312fb017ed71ea1f2d15f7977bc28d1",
+      "bytes": 2357,
       "source": "current-source-carrier"
     },
     {
@@ -7924,10 +7990,11 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "f284785818d539cce5959cdcbd9a6a911f2d984539841053b03c7af44b1350b1",
-    ".gitignore": "e5f8c22a34a4276fad274295f8478b7f5d2dd2179f000df586ea5be3dfdaca23",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "d253d6fd21aac0024ad924d44b18fb6381d8b9a6b871367a448bddc418ddffad",
+    "README.md": "fd68e70159dfaba35bbc93c6abef979ec55abdb14417a532f00393c394b81761",
+    ".gitignore": "2f79870e866856827b5e9458c9ce2ac0f3a958ae468b4eb2f7dcc7649852010c",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "17c01cd3be1e0eccfc02712fdbe62ffd0c95a7de75446266b8b6d8f1965f1c02",
     "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
+    "snapshot-verification/current-worker-contract-10-pass.txt": "b78f8ef949eea7d8bb7a2de24d49255989678674a6b8c96cb7614593fc403d57",
     "snapshot-verification/initial-smoke-37-pass-1-eperm.txt": "f487f73b0138d4ad22b69cc6c7a59a13c554169cf96de7db81921fd359b4fd64",
     "snapshot-verification/unchanged-cli-recheck.txt": "239df5d90ab968e5496f3e18226cb9abe79cf381eafcc718a7a484183c84309e",
     "snapshot-verification/unchanged-full-smoke-recheck.txt": "c88604db04597993c38b5fae1e6bfd7cdd4fccec22ddf8030ebdd19f4e166921"

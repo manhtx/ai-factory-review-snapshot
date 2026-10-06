@@ -1,0 +1,106 @@
+
+ RUN  v3.2.7 /Users/manhtx/Documents/Macro Research Platform
+
+ ❯ server/aiCompany/macSandbox.test.ts (5 tests | 2 failed) 419ms
+   ✓ macSandboxProfile > rejects equal roots, workspace ancestors and nonexistent directories 3ms
+   × macSandboxProfile > denies signalling a separate fixture process while permitting self and child signals 216ms
+     → expected { self: true, child: false, …(1) } to deeply equal { self: true, child: true, …(1) }
+   × macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile 137ms
+     → failed to load config from /private/tmp/factory-sandbox-test-084LMC/control/.ai-company/worktrees/assigned/fixture.config.mjs
+
+⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯
+Error: EPERM: operation not permitted, lstat '/private/tmp/factory-sandbox-test-084LMC/control'
+    at Object.realpathSync (node:fs:2787:29)
+    at finalizeResolution (node:internal/modules/esm/resolve:280:21)
+    at moduleResolve (node:internal/modules/esm/resolve:865:10)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    at #resolve (node:internal/modules/esm/loader:683:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    at node:internal/modules/esm/loader:632:32 {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'lstat',
+  path: '/private/tmp/factory-sandbox-test-084LMC/control'
+}
+
+
+
+: expected 1 to be +0 // Object.is equality
+   ✓ macSandboxProfile > enforces actual OS permissions for canonical-temp nested workspace 32ms
+   ✓ macSandboxProfile > enforces actual OS permissions for aliased-temp nested workspace 31ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/aiCompany/macSandbox.test.ts > macSandboxProfile > denies signalling a separate fixture process while permitting self and child signals
+AssertionError: expected { self: true, child: false, …(1) } to deeply equal { self: true, child: true, …(1) }
+
+- Expected
++ Received
+
+  {
+-   "child": true,
++   "child": false,
+    "other": false,
+    "self": true,
+  }
+
+ ❯ server/aiCompany/macSandbox.test.ts:50:41
+     48|       expect(result.error).toBeUndefined();
+     49|       expect(result.status, result.stderr).toBe(0);
+     50|       expect(JSON.parse(result.stdout)).toEqual({ self: true, child: t…
+       |                                         ^
+     51|     } finally {
+     52|       const exited = once(other, 'exit'); other.kill('SIGKILL'); await…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  server/aiCompany/macSandbox.test.ts > macSandboxProfile > runs actual Vitest with native config and assigned cache/temp under the OS profile
+AssertionError: failed to load config from /private/tmp/factory-sandbox-test-084LMC/control/.ai-company/worktrees/assigned/fixture.config.mjs
+
+⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯
+Error: EPERM: operation not permitted, lstat '/private/tmp/factory-sandbox-test-084LMC/control'
+    at Object.realpathSync (node:fs:2787:29)
+    at finalizeResolution (node:internal/modules/esm/resolve:280:21)
+    at moduleResolve (node:internal/modules/esm/resolve:865:10)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    at #resolve (node:internal/modules/esm/loader:683:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    at node:internal/modules/esm/loader:632:32 {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'lstat',
+  path: '/private/tmp/factory-sandbox-test-084LMC/control'
+}
+
+
+
+: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ server/aiCompany/macSandbox.test.ts:68:42
+     66|     });
+     67|     expect(result.error).toBeUndefined();
+     68|     expect(result.status, result.stderr).toBe(0);
+       |                                          ^
+     69|     expect(result.stdout).toContain('1 passed');
+     70|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 3 passed (5)
+   Start at  17:57:53
+   Duration  828ms (transform 25ms, setup 0ms, collect 23ms, tests 419ms, environment 0ms, prepare 44ms)
+

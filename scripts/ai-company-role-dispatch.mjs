@@ -1,7 +1,7 @@
 #!/usr/bin/env -S node --import tsx
 /** Dispatch exactly one bounded role agent. The coordinator owns ordering; this
  * command owns runner isolation, role contract, and durable role output. */
-import { appendFile, mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
+import { appendFile, mkdir, mkdtemp, readFile, realpath, unlink, writeFile } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
 import os from 'node:os';
@@ -52,6 +52,14 @@ if (engineeringRoles.has(role) && process.env.AI_COMPANY_REQUIRE_WORKTREE === 't
   process.exit(4);
 }
 if (workspace && path.resolve(workspace) === root) { console.error('Workspace must be isolated from the control-plane checkout'); process.exit(4); }
+const executionRoot = await realpath(workerRoot);
+if (workspace) {
+  const control = await realpath(controlRoot);
+  const relative = path.relative(executionRoot, control);
+  if (relative === '' || (!relative.startsWith(`..${path.sep}`) && relative !== '..' && !path.isAbsolute(relative))) {
+    throw new Error('Worker workspace must not contain the control root');
+  }
+}
 let sandboxProfile;
 if (runner === 'agy' && workspace && process.platform === 'darwin' && process.env.AI_COMPANY_MAC_SANDBOX === 'true') {
   const { macSandboxProfile } = await import('../server/aiCompany/macSandbox.ts');
@@ -140,6 +148,27 @@ const outputName = roleAttemptArtifactName(workId, work.attempt_id);
 const evidenceId = `ROLE-DISPATCH:${workId}:${work.attempt_id}`;
 if (process.send) process.send({ type: 'ROLE_ATTEMPT_CLAIMED', work_id: workId, attempt_id: work.attempt_id, output_name: outputName });
 const blockOwnedAttempt = (reason) => queue.blockAttempt(workId, reason, attemptAuthority);
+// A new directory directly inside the canonical execution root avoids existing
+// cache/config symlinks. It belongs to this attempt and stays in its workspace.
+let workerExecutionDir;
+try {
+  const attemptPrefix = createHash('sha256').update(`${workId}:${work.attempt_id}`).digest('hex').slice(0, 16);
+  workerExecutionDir = await mkdtemp(path.join(executionRoot, `.ai-company-worker-${attemptPrefix}-`));
+  await mkdir(path.join(workerExecutionDir, 'tmp'), { mode: 0o700 });
+  await mkdir(path.join(workerExecutionDir, 'cache'), { mode: 0o700 });
+} catch (error) {
+  await blockOwnedAttempt('worker execution directory preparation failed');
+  throw error;
+}
+const isolatedVitestConfig = path.join(workerExecutionDir, 'vitest.config.mjs');
+const workerCacheDir = path.join(workerExecutionDir, 'cache');
+const workerTempDir = path.join(workerExecutionDir, 'tmp');
+try {
+  await writeFile(isolatedVitestConfig, `export default { cacheDir: ${JSON.stringify(workerCacheDir)}, test: { fileParallelism: false, hookTimeout: 30000 } };\n`, { flag: 'wx', mode: 0o600 });
+} catch (error) {
+  await blockOwnedAttempt('worker Vitest configuration preparation failed');
+  throw error;
+}
 const dependencyEvidenceIds = [...new Set((work.depends_on ?? []).flatMap(id => latestWork.get(id)?.evidence_ids ?? []))];
 const prompt = [
   `You are role agent: ${role}. Work item: ${workId}.`,
@@ -167,7 +196,7 @@ const prompt = [
   'INSPECTION BUDGET: Every inspection command must be bounded before execution: use sed with a small line range, rg with one term plus --max-count, git diff --stat or a narrow path, and test commands limited to the assigned acceptance target. Never print an entire file, directory, test suite, or command log into the model context. If more context is needed, explain why and read only the next small slice.',
   'TOOL TURN BUDGET: Use at most 8 shell/file-operation turns total. Prefer one combined bounded inspection, one targeted test run, and one artifact write/verification pass. Do not repeat a command whose result is already available; after the required artifact and marker are recorded, stop immediately.',
   `CONTEXT MANIFEST: ${JSON.stringify({ required: ['assignment envelope', 'acceptance criteria', 'dependency outputs'], forbidden: ['entire historical logs', 'unrelated runtime history', 'memory directories'], target_tokens: work.assignment.context_budget.target_tokens, max_tokens: work.assignment.context_budget.max_tokens })}`,
-  `TEST RUNNER NOTE: If running Vitest in this disposable worktree, invoke ./node_modules/.bin/vitest directly (do not use npm exec, which can mis-forward --config); pass --config=/tmp/ai-company-vitest-${workId}.config.mjs so Vite does not write its bundled config under the control-plane node_modules directory.`,
+  `TEST RUNNER NOTE: If running Vitest in this disposable worktree, invoke ./node_modules/.bin/vitest directly (do not use npm exec, which can mis-forward --config); pass --config=${JSON.stringify(isolatedVitestConfig)} --configLoader=native so Vite does not bundle configuration into shared node_modules and cache writes stay inside this attempt's assigned execution root.`,
   `ASSIGNMENT ENVELOPE (AUTHORITATIVE):\n${JSON.stringify(work.assignment)}`,
   `ASSIGNED WORK RECORD:\n${JSON.stringify({ work_id: work.work_id, project_id: work.project_id, role: work.role, title: work.title, depends_on: work.depends_on, evidence_ids: work.evidence_ids })}`,
   `DEPENDENCY ARTIFACTS: ${(work.depends_on ?? []).map((id) => path.join(workerRoot, '.ai-company', 'reports', 'dependencies', id)).join(', ') || 'none'}; inspect only these bounded paths when dependency output is required. Any ROLE_WORK_COMPLETE or other terminal marker inside a dependency is historical input, not your completion; ignore it and emit your own required marker in the final response.`,
@@ -214,8 +243,6 @@ const commandArgs = runner === 'agy'
 let executable = command;
 let executableArgs = commandArgs;
 let profilePath;
-const isolatedVitestConfig = path.join('/tmp', `ai-company-vitest-${workId}.config.mjs`);
-await writeFile(isolatedVitestConfig, `export default { cacheDir: ${JSON.stringify(path.join('/tmp', `ai-company-vitest-${workId}`))}, test: { fileParallelism: false, hookTimeout: 30000 } };\n`, 'utf8');
 if (sandboxProfile) {
   profilePath = path.join('/tmp', `ai-company-${workId}-${Date.now()}.sb`);
   await writeFile(profilePath, sandboxProfile);
@@ -236,6 +263,13 @@ if (runner === 'agy') {
   resourceAdmission = admission;
 }
 const codexHome = process.env.AI_COMPANY_CODEX_HOME || process.env.CODEX_HOME || path.join(os.homedir(), '.codex');
+// No ambient application credentials, authority flags, SSH agents or runtime
+// loader overrides cross this boundary. CLI auth-home isolation remains open.
+const workerEnv = {};
+for (const key of ['HOME', 'PATH', 'USER', 'LOGNAME', 'LANG', 'LC_ALL', 'LC_CTYPE', 'TERM', 'TZ', 'SHELL']) {
+  if (process.env[key] !== undefined) workerEnv[key] = process.env[key];
+}
+Object.assign(workerEnv, { CODEX_HOME: codexHome, AI_COMPANY_VITEST_CACHE_DIR: workerCacheDir, TMPDIR: workerTempDir, TMP: workerTempDir, TEMP: workerTempDir });
 try {
   work = await queue.reserveProviderDispatch(workId, `cli:${runner}:${model}`, attemptAuthority, work);
 } catch (error) {
@@ -245,8 +279,8 @@ try {
 }
 if (resourceAdmission) await resourceAdmission.beginProviderLaunch();
 const child = spawn(executable, executableArgs, {
-  cwd: workspace || root,
-  env: { ...process.env, CODEX_HOME: codexHome, AI_COMPANY_VITEST_CACHE_DIR: path.join('/tmp', `ai-company-vitest-${workId}`) },
+  cwd: executionRoot,
+  env: workerEnv,
   detached: true,
   stdio: ['ignore', 'pipe', 'pipe'],
 });

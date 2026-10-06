@@ -1,0 +1,23 @@
+{
+  "observedAt": "2026-10-05T10:56:11.302Z",
+  "sourceRevision": "e216b13335cf2f33d03bda95be3053d6d783b8c7",
+  "profileSourceSha256": "e37a998c74c39171263df1a3b11677e698076b4aca7a372763422cff309d1833",
+  "scope": "Actual installed Vitest under current OS sandbox, isolated temp fixture, no live provider/model/product",
+  "independent": false,
+  "reports": [
+    {
+      "loader": "bundle",
+      "exitCode": 1,
+      "signal": null,
+      "stdout": "",
+      "stderr": "failed to load config from /private/tmp/worker-vitest-probe-17xYfh/worker/fixture.config.mjs\n\n⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯\nError: EPERM: operation not permitted, open '/private/tmp/worker-vitest-probe-17xYfh/worker/node_modules/.vite-temp/fixture.config.mjs.timestamp-1791197771044-9dd436127cef4.mjs'\n    at async open (node:internal/fs/promises:640:25)\n    at async Object.writeFile (node:internal/fs/promises:1260:14)\n    at async loadConfigFromBundledFile (file:///Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:49588:5)\n    at async bundleAndLoadConfigFile (file:///Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:49433:22)\n    at async loadConfigFromFile (file:///Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:49396:44)\n    at async resolveConfig (file:///Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:48891:24)\n    at async _createServer (file:///Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:38478:66)\n    at async createViteServer (file:///Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/vitest/dist/chunks/cli-api.DVe0nWUx.js:6921:17)\n    at async createVitest (file:///Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/vitest/dist/chunks/cli-api.DVe0nWUx.js:10212:17)\n    at async prepareVitest (file:///Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/vitest/dist/chunks/cli-api.DVe0nWUx.js:10551:14) {\n  errno: -1,\n  code: 'EPERM',\n  syscall: 'open',\n  path: '/private/tmp/worker-vitest-probe-17xYfh/worker/node_modules/.vite-temp/fixture.config.mjs.timestamp-1791197771044-9dd436127cef4.mjs'\n}\n\n\n\n"
+    },
+    {
+      "loader": "native",
+      "exitCode": 1,
+      "signal": null,
+      "stdout": "\n RUN  v3.2.7 /private/tmp/worker-vitest-probe-17xYfh/worker\n\n ✓ fixture.test.mjs (1 test) 1ms\n",
+      "stderr": "\n⎯⎯⎯⎯ Unhandled Rejection ⎯⎯⎯⎯⎯\nError: kill EPERM\n ❯ ChildProcess.kill node:internal/child_process:536:26\n ❯ ProcessWorker.terminate ../../../../Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/tinypool/dist/index.js:124:16\n ❯ WorkerInfo.destroy ../../../../Users/manhtx/Documents/Macro%20Research%20Platform/node_modules/tinypool/dist/index.js:428:15\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nSerialized Error: { errno: -1, code: 'EPERM', syscall: 'kill' }\n\n\n\n"
+    }
+  ]
+}

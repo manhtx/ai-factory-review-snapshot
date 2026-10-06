@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
-  "observedAt": "2026-10-05T10:44:37.511Z",
-  "sourceCarrierRevision": "de906ec9f11f7fdadfc73c10dfebe34cb1740739",
-  "pinnedSourceCandidate": "a534211443a2e251136a21150e8054461d7d5a00",
-  "exportedSourceFiles": 1310,
+  "observedAt": "2026-10-06T02:48:54.219Z",
+  "sourceCarrierRevision": "86f1ff0859654dcf415ae2013fe246701503c5b1",
+  "pinnedSourceCandidate": "e5420707853c3a18bd84f6b3e769597a0867e893",
+  "exportedSourceFiles": 1321,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -23,7 +23,7 @@
     "failed": 0,
     "files": 4
   },
-  "sourceFullRegression": "Exact clean source a534211: 539PASS53FILES; full tsc and affected lint PASS. Not a full export-suite run",
+  "sourceFullRegression": "Exact clean e542070: 543PASS53FILES; full tsc/scoped lint PASS, not a full export-suite run",
   "gitHistory": "Continues the fresh snapshot history; no parent repository commits copied",
   "currentAuthority": "NONE",
   "independentReview": "REVIEW_PENDING; previous safety rejection preserved; no retry/substitute",
@@ -57,11 +57,22 @@
     "sourceFullRegression": "Historical exact candidate239fe22 533PASS51FILES; not rerun as full snapshot suite"
   },
   "currentExportBoundarySmoke": {
-    "passed": 6,
+    "passed": 10,
     "failed": 0,
     "files": 2,
-    "log": "snapshot-verification/current-sandbox-6-pass.txt",
+    "log": "snapshot-verification/current-worker-contract-10-pass.txt",
     "dependencyMethod": "Temporary installed local dependency symlink removed; not clean npm ci"
   },
-  "staticImportMethod": "TypeScript AST imports/exports and literal import/require calls; embedded fixture code strings excluded"
+  "staticImportMethod": "TypeScript AST imports/exports and literal import/require calls; embedded fixture code strings excluded",
+  "previousWorkerSnapshotVerification": {
+    "sourceCarrierRevision": "de906ec9f11f7fdadfc73c10dfebe34cb1740739",
+    "pinnedSourceCandidate": "a534211443a2e251136a21150e8054461d7d5a00",
+    "currentExportBoundarySmoke": {
+      "passed": 6,
+      "failed": 0,
+      "files": 2,
+      "log": "snapshot-verification/current-sandbox-6-pass.txt",
+      "dependencyMethod": "Temporary installed local dependency symlink removed; not clean npm ci"
+    }
+  }
 }
