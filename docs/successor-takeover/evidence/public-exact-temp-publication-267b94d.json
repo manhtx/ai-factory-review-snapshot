@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-06T07:47:25.730181+00:00",
+  "snapshotRevision": "267b94d093b6110f7d755ac6b94d8f1af77f9f3c",
+  "sourceCarrierRevision": "e929c1d343c1d3bf4e71da2a68f1570bfcd4ae73",
+  "testedSourceCandidate": "c9a1aa7af3d707a30955b2852cd387988b975537",
+  "anonymousAccessVerified": true,
+  "remoteBlobs": 1392,
+  "allBlobHashesMatch": true,
+  "sourceRegression": "Exact clean c9a1aa7:550PASS54FILES/full tsc/affected lint",
+  "exportSmoke": "17PASS3FILES and6 native mode/config cases; installed deps temporarily linked/removed; not clean npm ci",
+  "authority": "NONE",
+  "independent": false,
+  "productionAutonomy": "DISABLED",
+  "scope": "Exact owned temp grant; preserved failed controls; no all-model/managed/auth/AGY/controller/Git effect/independent closure"
+}

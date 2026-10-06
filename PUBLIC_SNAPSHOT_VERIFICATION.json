@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
-  "observedAt": "2026-10-06T07:46:48.084777+00:00",
-  "sourceCarrierRevision": "e929c1d343c1d3bf4e71da2a68f1570bfcd4ae73",
+  "observedAt": "2026-10-06T07:59:59.494333+00:00",
+  "sourceCarrierRevision": "2c081488782d2b97b66203b54158d44352476596",
   "pinnedSourceCandidate": "c9a1aa7af3d707a30955b2852cd387988b975537",
-  "exportedSourceFiles": 1377,
+  "exportedSourceFiles": 1380,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -23,7 +23,7 @@
     "failed": 0,
     "files": 4
   },
-  "sourceFullRegression": "Exact clean c9a1aa7:550PASS54FILES/full tsc/affected dispatcher lint; not all repository tests",
+  "sourceFullRegression": "Historical exact clean c9a1aa7:550PASS54FILES/full tsc/affected lint; not rerun or promoted for new code-mode verifier",
   "gitHistory": "Continues the fresh snapshot history; no parent repository commits copied",
   "currentAuthority": "NONE",
   "independentReview": "REVIEW_PENDING; previous safety rejection preserved; no retry/substitute",
@@ -90,14 +90,13 @@
     "dependencyMethod": "Temporary local installed dependencies symlink removed; not clean npm ci",
     "evidence": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json"
   },
-  "nativeExecBoundary": "Current export actual exec_command/view_image three config cases PASS; delegation schemas absent incl trusted project requesting enabled=true",
-  "currentChangeScope": "Grant exact owned attempt temp child; failed three temp controls at fb3f521 retained; no broader root/tmp grant or deadline change",
+  "nativeExecBoundary": "Current configured model code-mode six overallFAIL due apply_patch temp; exec/image/control writes observed with retained scoped results; all-tool admission remains OPEN",
+  "currentChangeScope": "Probe/verifier/evidence only; configured model switches to input.additional_tools; empty schema absence proof invalidated; actual patch temp denial retained; no production source repair",
   "currentExportVerification": {
-    "tests": "17PASS3FILES",
-    "native": "Six readonly/workspace-write config cases PASS; actual temp/write/read/image/delegation controls",
-    "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
-    "scriptSha256": "bb117cc15adb289002c9f1e669a9567d32ba6fd87c549f742e8277d7f51f7891",
-    "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
-    "scope": "Export bytes match source carrier e929c1d; temporary installed dependencies removed; export working tree uncommitted during checks; not clean npm ci/all-model/managed/auth/AGY/controller proof"
+    "nativeCodeMode": "Six mode/config cases FAIL; actual apply_patch temp denied in both modes; no private/control/auth/dependency/alias/Git patch files created",
+    "metadata": "gpt-5.6-sol native code-mode descriptors observed; no model inference/entitlement/complete dynamic registry proof",
+    "dependencies": "Temporarily linked installed dependencies removed; not clean npm ci",
+    "workingTree": "Export bytes matched source carrier2c08148; export working tree uncommitted during negative reproduction",
+    "previousChecks": "Prior export17/3 and6 primitive native cases remain historical scoped evidence at c9a1aa7; not overall assurance"
   }
 }

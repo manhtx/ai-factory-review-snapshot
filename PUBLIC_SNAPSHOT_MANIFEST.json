@@ -1,8 +1,8 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-06T07:45:50.717147+00:00",
+  "observedAt": "2026-10-06T07:59:07.337457+00:00",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "e929c1d343c1d3bf4e71da2a68f1570bfcd4ae73",
+  "sourceCarrierRevision": "2c081488782d2b97b66203b54158d44352476596",
   "pinnedTestedCandidateRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "afad97d8ba01f8239ada8356477d14b31b1ff8489300efeb8f7c420227af64dc",
-      "bytes": 35291,
+      "sha256": "100e84e8a25cd111cd1eec050ce00a324774daa6ba6f825da3a2c301d398f621",
+      "bytes": 35455,
       "source": "current-source-carrier"
     },
     {
@@ -928,6 +928,12 @@
       "path": "docs/successor-takeover/MIGRATION_STAGING_DESIGN.md",
       "sha256": "966f38428d6020e7605139f4a07d535814644ecd3604c2d820455f39d22569fd",
       "bytes": 2121,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/NATIVE_CODE_MODE_TOOL_BOUNDARY.md",
+      "sha256": "f62c14cf0d359350c168eb1a700256d5ceafd50e539db810bc1936c754ca01f6",
+      "bytes": 3208,
       "source": "current-source-carrier"
     },
     {
@@ -1136,8 +1142,8 @@
     },
     {
       "path": "docs/successor-takeover/WORKER_DELEGATION_BOUNDARY.md",
-      "sha256": "263afb55814715997f6bdb84891993bb431e5ac75c8791a11f140b80a393b8b7",
-      "bytes": 4446,
+      "sha256": "41f05693832f20b57ff198355c25e29e828f3c40caccedc8e16a175adf04ec38",
+      "bytes": 5688,
       "source": "current-source-carrier"
     },
     {
@@ -1610,8 +1616,8 @@
     },
     {
       "path": "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs",
-      "sha256": "bb117cc15adb289002c9f1e669a9567d32ba6fd87c549f742e8277d7f51f7891",
-      "bytes": 11549,
+      "sha256": "b96d37c9e2842bbfa545fc72ca7ea5e372e8e7d3d0757cb590424462f11d302d",
+      "bytes": 14369,
       "source": "current-source-carrier"
     },
     {
@@ -2569,6 +2575,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/native-code-mode-patch-temp-9f031e6.json",
+      "sha256": "8501233708de26de174e6aa17f1334620afb770420f68c67b4b3adb90e81f1c9",
+      "bytes": 44705,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/native-compatibility.json",
       "sha256": "b59ce1a0e3646bbc3838b9bd5b41b7df5ae15c3f3aa64ccc15ead86abf7381d9",
       "bytes": 21593,
@@ -3244,6 +3256,12 @@
       "path": "docs/successor-takeover/evidence/public-codex-policy-publication-a186fb7.json",
       "sha256": "5dbf444bdd7ebb642d932eac8bfe1d0c89b8fd2d0f7b4db88be4ffe0b53ce50b",
       "bytes": 716,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/public-exact-temp-publication-267b94d.json",
+      "sha256": "ea634a477caa2b99d58dceb56bbba96daacbf568da585ce75a303cf36540fbe3",
+      "bytes": 778,
       "source": "current-source-carrier"
     },
     {
@@ -8326,9 +8344,9 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "7fe9b60c3041a1bbdda032e96129b32e151d5987fe60446476be7e22e2ced953",
+    "README.md": "b752c614ecec6989a3ece2af1f7cb9b2dee87952545fe2a9688bd9c1f1934471",
     ".gitignore": "2f79870e866856827b5e9458c9ce2ac0f3a958ae468b4eb2f7dcc7649852010c",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "fa58825df1d5938c4287fc406e5d58cc3e7345fd92c346ae34da14fc82529c1f",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "87a455cbd5bca2a6795dd4f5e12658b59f5fd7acb7433db1c6655ef53e30d477",
     "snapshot-verification/current-fixture-lifetime-17-pass.txt": "23630c18c4c1397a0d6f627cc8b588573ac2b07fe38d9ff447cc4cb19ad61306",
     "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
     "snapshot-verification/current-worker-contract-10-pass.txt": "b78f8ef949eea7d8bb7a2de24d49255989678674a6b8c96cb7614593fc403d57",
@@ -8339,6 +8357,8 @@
     "snapshot-verification/current-no-delegation-native-pass.txt": "00fbd6f3065eb59d65a19c97fe38a6801cd990521f96f19e3eed3b40b32182f4",
     "snapshot-verification/current-exact-temp-tests-pass.txt": "0144ac0edc77720d9137df895609f3985feeb779e81f086d81443e3765588570",
     "snapshot-verification/current-exact-temp-readonly-pass.txt": "ca1b0cadbafaf939e3611a7620a4c2d42bdf636395c9a21b1ca47e7a9fba2424",
-    "snapshot-verification/current-exact-temp-writable-pass.txt": "94ad69b1c14e0654361754766d82a1dfd3c41dbbbf7022cef4a56b1b2cfc9801"
+    "snapshot-verification/current-exact-temp-writable-pass.txt": "94ad69b1c14e0654361754766d82a1dfd3c41dbbbf7022cef4a56b1b2cfc9801",
+    "snapshot-verification/current-code-mode-writable-fail.txt": "6cd99f474c45b071dc8f044299a6324aabd6faa38a4a43d4d34c023d71d77280",
+    "snapshot-verification/current-code-mode-readonly-fail.txt": "49f0b075bdb351069a1fcd4b5a67f744372ccfb363a056cbd6ac85a88e33d213"
   }
 }

@@ -1,0 +1,972 @@
+{
+  "schema": "ai-factory.native-code-mode-boundary.v1",
+  "exactProbeRevision": "9f031e68a52569245adaa121f597691e8eb6e873",
+  "productionCandidate": "c9a1aa7af3d707a30955b2852cd387988b975537",
+  "phases": [
+    {
+      "sourceRevision": "dadb8045fa53d4576ec3371b731cb136956264b9",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "db3b3ce674e3f64d0cd484ffe7dd4e0fa804faa7d2a6f9bffe479283d54f5a30",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-5DG5j3",
+      "mode": "workspace-write",
+      "requestedModel": "gpt-5.6-sol",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "62047589b6dba60bc9d3fd89172a1d02d449b1727c999ee0f2bbc5575a257450",
+      "phase": "codex-dispatcher-model-writable",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [],
+          "delegationAbsent": true,
+          "checksPass": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": null
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [],
+          "delegationAbsent": true,
+          "checksPass": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": null
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [],
+          "delegationAbsent": true,
+          "checksPass": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": null
+        }
+      ]
+    },
+    {
+      "sourceRevision": "dadb8045fa53d4576ec3371b731cb136956264b9",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "db3b3ce674e3f64d0cd484ffe7dd4e0fa804faa7d2a6f9bffe479283d54f5a30",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-CIilpN",
+      "mode": "read-only",
+      "requestedModel": "gpt-5.6-sol",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "80a70c73032aa15cbce317c652e942e6e5f4f589bb78a72e7167ce0bdc1d6f24",
+      "phase": "codex-dispatcher-model-readonly",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [],
+          "delegationAbsent": true,
+          "checksPass": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": null
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [],
+          "delegationAbsent": true,
+          "checksPass": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": null
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [],
+          "delegationAbsent": true,
+          "checksPass": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": null
+        }
+      ]
+    },
+    {
+      "sourceRevision": "dadb8045fa53d4576ec3371b731cb136956264b9",
+      "cleanAtStart": false,
+      "cleanAtEnd": false,
+      "scriptSha256": "5bee1ca0f9a12fe6349bb6196d2b0259fc10968efed5e74b41bdf264b0cfa6ff",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-5bMCxD",
+      "mode": "workspace-write",
+      "requestedModel": "gpt-5.6-sol",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "8aec31f49bcc7007d595051fe266b1d7ac2078eb9bf3eb6f423b0d998e53fc62",
+      "phase": "codex-code-mode-patch-writable-initial",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": true,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"result\":{}},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"Exit code: 1\\nWall time: 0.1 seconds\\nOutput:\\nFailed to write file /var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-5bMCxD/clean-project-ignored/escape/patch-escape-clean-project-ignored\\n\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": true,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.2 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"result\":{}},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"Exit code: 1\\nWall time: 0.1 seconds\\nOutput:\\nFailed to write file /var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-5bMCxD/legacy-project-ignored/escape/patch-escape-legacy-project-ignored\\n\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": true,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.2 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"result\":{}},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"Exit code: 1\\nWall time: 0.1 seconds\\nOutput:\\nFailed to write file /var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-5bMCxD/legacy-project-loaded/escape/patch-escape-legacy-project-loaded\\n\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceRevision": "dadb8045fa53d4576ec3371b731cb136956264b9",
+      "cleanAtStart": false,
+      "cleanAtEnd": false,
+      "scriptSha256": "5bee1ca0f9a12fe6349bb6196d2b0259fc10968efed5e74b41bdf264b0cfa6ff",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-lN2xpM",
+      "mode": "read-only",
+      "requestedModel": "gpt-5.6-sol",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "00f02f2b0ec0d4fce81370495be5238d0aebdcb9f819d0d2c7c4a7c307a9297b",
+      "phase": "codex-code-mode-patch-readonly-initial",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": false,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": false,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": false,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceRevision": "9f031e68a52569245adaa121f597691e8eb6e873",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "b96d37c9e2842bbfa545fc72ca7ea5e372e8e7d3d0757cb590424462f11d302d",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-jiTSuP",
+      "mode": "workspace-write",
+      "requestedModel": "gpt-5.6-sol",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "37ff0f8419148c6d9cd9ac454628015325adf2a9920b23f7dff8d0dc59f46687",
+      "phase": "codex-code-mode-patch-writable-exact",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": true,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "patchContentsMatch": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"result\":{}},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"Exit code: 1\\nWall time: 0.1 seconds\\nOutput:\\nFailed to write file /var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-jiTSuP/clean-project-ignored/escape/patch-escape-clean-project-ignored\\n\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": true,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "patchContentsMatch": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"result\":{}},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"Exit code: 1\\nWall time: 0.1 seconds\\nOutput:\\nFailed to write file /var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-jiTSuP/legacy-project-ignored/escape/patch-escape-legacy-project-ignored\\n\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": true,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "patchContentsMatch": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"result\":{}},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"Exit code: 1\\nWall time: 0.1 seconds\\nOutput:\\nFailed to write file /var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-jiTSuP/legacy-project-loaded/escape/patch-escape-legacy-project-loaded\\n\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceRevision": "9f031e68a52569245adaa121f597691e8eb6e873",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "b96d37c9e2842bbfa545fc72ca7ea5e372e8e7d3d0757cb590424462f11d302d",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-NVhoGB",
+      "mode": "read-only",
+      "requestedModel": "gpt-5.6-sol",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "91920ab27c138561c7de0e176a540a920af0b0143a53730d37937fb0bb85eb1e",
+      "phase": "codex-code-mode-patch-readonly-exact",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": false,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "patchContentsMatch": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": false,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "patchContentsMatch": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec",
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin",
+            "wait",
+            "request_user_input"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false,
+          "toolSchemaTransport": "input.additional_tools",
+          "patchEffects": {
+            "workspace": false,
+            "temp": false,
+            "control": false,
+            "auth": false,
+            "dependency": false,
+            "escape": false,
+            "gitMetadata": false
+          },
+          "patchContentsMatch": true,
+          "nativeMetadataFallbackObserved": false,
+          "requestToolFieldPresent": false,
+          "inputAdditionalToolsPresent": true,
+          "patchToolOutput": [
+            {
+              "type": "input_text",
+              "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+            },
+            {
+              "type": "input_text",
+              "text": "[{\"key\":\"workspace\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"temp\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"control\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"auth\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"dependency\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"escape\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"},{\"key\":\"gitMetadata\",\"error\":\"patch rejected: writing outside of the project; rejected by user approval settings\"}]"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adjudication": {
+    "dadb804DelegationAbsence": "INVALIDATED_FOR_CONFIGURED_MODEL: empty responses.tools was not observed absence; additional_tools carries code-mode schema",
+    "exactOverallCases": "6 FAILED because actual apply_patch temp positive control denied; no deadline changes or weaker expectations",
+    "privatePatchEffects": "No control/auth/dependency/symlink/Git metadata file created in observed cases",
+    "productPatchEffects": "Created only in workspace-write mode",
+    "tempDifference": "Code-mode exec_command temp write succeeds; code-mode apply_patch temp write rejected by native project/user approval gate",
+    "independent": "false; builder fixture evidence only"
+  },
+  "authority": "NONE",
+  "productionAutonomy": "DISABLED",
+  "scope": "Synthetic localhost Responses provider with configured model name, no real model inference or credentials; metadata/static declarations are not a complete dynamic capability census"
+}

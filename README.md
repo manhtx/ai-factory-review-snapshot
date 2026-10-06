@@ -2,7 +2,7 @@
 
 Source snapshot for external code and evidence inspection of Macro Research Platform's AI Factory. The original repository remains private. This repository starts with a new Git history; it contains no parent repository history or live machine stores.
 
-Source carrier: `e929c1d343c1d3bf4e71da2a68f1570bfcd4ae73`.
+Source carrier: `2c081488782d2b97b66203b54158d44352476596`.
 
 Pinned tested source candidate: `c9a1aa7af3d707a30955b2852cd387988b975537`. Its recorded clean run passed 550 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
 
@@ -55,3 +55,7 @@ Current source74656d6 explicitly supplies `agents.enabled=false` through the dis
 ## Exact attempt temp repair
 
 Current source c9a1aa7 grants the already-created owned attempt temp child explicitly. Three writable-mode native fixtures previously rejected temp writes because the tmpdir deny was more specific than their parent grant. All six readonly/workspace-write native mode/config fixtures now pass, preserving private/control/auth/dependency/symlink denials and assigned write semantics. The attempted Git metadata write is denied; trusted controller Git effect quiescence remains OPEN. The failed source fb3f521 controls and repaired results are retained in `CODEX_ATTEMPT_TEMP_INVESTIGATION.md` and `evidence/native-attempt-temp-c9a1aa7.json`. Current source550/54 tests plus tsc/lint pass; current export17/3 tests and6 native fixture cases pass with temporary dependencies removed. Real model tool census/managed/auth/AGY/caller migration/gateway and independent assurance remain OPEN.
+
+## Configured model code-mode failure
+
+Latest clean probe9f031e6 and current export reproduce6 overallFAIL cases. gpt-5.6-sol native metadata carries tool definitions in input.additional_tools. The earlier dadb804 empty-top-level-schema delegation-absence claim is invalidated; the verifier now requires an observed schema and checks actual patch file effects. Actual code-mode exec permits attempt temp writes; nested apply_patch rejects temp in both modes at the native project/user-approval gate. Product patch succeeds only in write mode; private/control/auth/dependency/alias/Git patch files are not created. `NATIVE_CODE_MODE_TOOL_BOUNDARY.md` and `evidence/native-code-mode-patch-temp-9f031e6.json` retain all failures and scope. No weaker expectations, deadline change, policy override, new assurance seal or Block A closure. Production baseline candidatec9a1aa7 source550/full tsc/lint and earlier17 export tests remain revision-bound historical scoped results; not current all-tool assurance.
