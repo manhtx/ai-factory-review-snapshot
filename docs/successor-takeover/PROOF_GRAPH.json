@@ -12,6 +12,34 @@
   },
   "nodes": [
     {
+      "id": "controller-git-effect-and-readable-root-20261006",
+      "sourceRevision": "9f2f94147bb5fcfeebb312fac8be2a69cad0cfa2",
+      "claim": "Actual coordinator exits1 at5000ms while genuine Git helper survives and later creates worktree preclaim; installed Codex utility allows dummy private reads outside workspace with isolated HOME",
+      "evidence": [
+        "CONTROLLER_GATEWAY_DESIGN.md",
+        "evidence/controller-git-effect-9f2f941-counterexample.json",
+        "evidence/controller-git-effect-probe.mts",
+        "evidence/codex-native-read-boundary-20261006.json"
+      ],
+      "status": "CURRENT_REPRODUCED_BOUNDED_COUNTEREXAMPLES; NO_GATEWAY_AUTHORITY",
+      "independent": false,
+      "dependsOn": [],
+      "missing": "Actual model tool permissions/provider authentication/all actors/enrollment protection/journal implementation/cross-store semantics/independent review"
+    },
+    {
+      "id": "public-review-snapshot-8e1d94a",
+      "sourceRevision": "86f1ff0859654dcf415ae2013fe246701503c5b1",
+      "snapshotRevision": "8e1d94a795bb98bccbcb3396e1545f98e1e05058",
+      "claim": "Anonymous public access verified all1330 remote blobs; sourcee542070 exact543PASS53FILES and export10PASS2FILES",
+      "evidence": "evidence/public-review-snapshot-update-8e1d94a.json",
+      "status": "PUBLIC_TOOL_ACCESS_VERIFIED; NO_RUNTIME_AUTHORITY",
+      "independent": false,
+      "dependsOn": [
+        "worker-environment-contract-e542070"
+      ],
+      "missing": "Controller gateway/auth-home/private history/full operating contract/cross-store/independent review remain OPEN"
+    },
+    {
       "id": "worker-environment-contract-e542070",
       "sourceRevision": "e5420707853c3a18bd84f6b3e769597a0867e893",
       "claim": "Actual two-runner privilege exclusion and attempt config/cache/temp; alias preclaim refusal; actual nested Vitest exits0 while protected content/private metadata/enumeration and foreign signal denied; exact543PASS53FILES",

@@ -1,0 +1,24 @@
+{
+  "observedAt": "2026-10-06T03:04:28.545Z",
+  "sourceRevision": "9f2f94147bb5fcfeebb312fac8be2a69cad0cfa2",
+  "cleanSourceAtStart": true,
+  "sourceHashes": {
+    "scripts/ai-company-run-ready.mjs": "80dc6fa54bfe14c03667b25fa389603e8ba11ebb8dabf91afd7eb11283e8fcc6",
+    "server/aiCompany/worktreeManager.ts": "9b10a147975ed8df7ea4998fa23593fd9d511d3e5587724ccafb30b87a43c4d5"
+  },
+  "scope": "Actual run-ready plus actual WorktreeManager/Git; Node wrapper delays genuine Git worktree add in temporary repo; no provider/model/live product",
+  "independent": false,
+  "controllerExit": {
+    "code": 1,
+    "signal": null
+  },
+  "gitHelperAliveAfterControllerExit": true,
+  "queueStateAtControllerExit": "READY",
+  "attemptIssued": false,
+  "lateGitEffect": {
+    "gitExit": 0,
+    "targetExists": true
+  },
+  "stderr": "file:///Users/manhtx/Documents/Macro%20Research%20Platform/scripts/ai-company-run-ready.mjs:78\n      timer = setTimeout(() => reject(new Error(`COORDINATION_FAILURE: ${phase} exceeded ${phaseTimeoutMs}ms`)), phaseTimeoutMs);\n                                      ^\n\nError: COORDINATION_FAILURE: worktree creation WORK-1791255862050-28edw7 exceeded 5000ms\n    at Timeout._onTimeout (file:///Users/manhtx/Documents/Macro%20Research%20Platform/scripts/ai-company-run-ready.mjs:78:39)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)\n\nNode.js v24.18.0\n",
+  "conclusion": "CURRENT_REPRODUCED: real Git workspace effect completes after coordinator timed out/exited before queue claim"
+}

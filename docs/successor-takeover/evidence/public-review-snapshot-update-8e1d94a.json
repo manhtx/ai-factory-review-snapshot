@@ -1,0 +1,26 @@
+{
+  "schema": "ai-factory.public-review-update.v1",
+  "observedAt": "2026-10-06T02:51:05.144975+00:00",
+  "repository": "https://github.com/manhtx/ai-factory-review-snapshot",
+  "visibility": "PUBLIC",
+  "branch": "codex/ai-factory-review",
+  "snapshotRevision": "8e1d94a795bb98bccbcb3396e1545f98e1e05058",
+  "sourceCarrierRevision": "86f1ff0859654dcf415ae2013fe246701503c5b1",
+  "testedCandidateRevision": "e5420707853c3a18bd84f6b3e769597a0867e893",
+  "anonymousReadVerified": true,
+  "remoteBlobCount": 1330,
+  "allRemoteBlobHashesMatch": true,
+  "manifestSha256": "3be2b8f0322f9b602be6334b313fcb485dc7d637d818a87bd2578f46306a459b",
+  "exportSmoke": "10PASS2FILES; temporary local dependencies removed, not clean npm ci",
+  "sourceRegression": "Exact clean543PASS53FILES/full tsc/scoped lint",
+  "independentReview": false,
+  "authority": "NONE",
+  "productionAutonomy": "DISABLED",
+  "blocks": {
+    "A": "UNPROVEN",
+    "B": "UNPROVEN",
+    "C": "UNPROVEN",
+    "D": "UNPROVEN"
+  },
+  "limitations": "Worker environment/profile/tooling fixtures only; HOME/CODEX_HOME/private history/real-provider compatibility/activation/hardlinks/controller gateway/cross-store/review OPEN"
+}

@@ -86,7 +86,8 @@
         "evidence/revoked-lease-dispatch-1635505.json"
       ],
       "currentEvidenceCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6",
-      "workerSandboxCandidate": "a534211 clean539PASS53FILES; optional macOS fixture repair only; controller/environment/writer/effect authority OPEN"
+      "workerSandboxCandidate": "a534211 clean539PASS53FILES; optional macOS fixture repair only; controller/environment/writer/effect authority OPEN",
+      "workerEnvironmentContractCandidate": "e542070 exact543PASS53FILES; two-runner ambient privilege exclusion and nested native-Vitest contract guarded in builder fixtures. Actual controller/effect/host/auth authority still OPEN."
     },
     {
       "proofDebtId": "PD-008",
@@ -107,7 +108,8 @@
         "evidence/revoked-lease-dispatch-1635505.json"
       ],
       "currentEvidenceCarrierRevision": "1635505dfa3416a831048f308a3257fbc1370db6",
-      "workerSandboxCandidate": "a534211 clean539PASS53FILES; optional macOS fixture repair only; controller/environment/writer/effect authority OPEN"
+      "workerSandboxCandidate": "a534211 clean539PASS53FILES; optional macOS fixture repair only; controller/environment/writer/effect authority OPEN",
+      "workerEnvironmentContractCandidate": "e542070 exact543PASS53FILES; two-runner ambient privilege exclusion and nested native-Vitest contract guarded in builder fixtures. Actual controller/effect/host/auth authority still OPEN."
     },
     {
       "proofDebtId": "PD-009",

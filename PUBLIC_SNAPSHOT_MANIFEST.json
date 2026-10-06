@@ -1,8 +1,8 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-06T02:48:54.219Z",
+  "observedAt": "2026-10-06T03:31:51.397Z",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "86f1ff0859654dcf415ae2013fe246701503c5b1",
+  "sourceCarrierRevision": "33b9e68634783c7d1da8354f939d4727764187bb",
   "pinnedTestedCandidateRevision": "e5420707853c3a18bd84f6b3e769597a0867e893",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "e89a10228680e7fe48935f0752bbce8be352dc5cf23885c11cf14dd3efd720a5",
-      "bytes": 34045,
+      "sha256": "ef47573868f21883cf3885bae1d3b5e70c2b6c50f971ee2a80b1f504618557f4",
+      "bytes": 34681,
       "source": "current-source-carrier"
     },
     {
@@ -778,6 +778,12 @@
       "path": "docs/successor-takeover/CONTROLLER_AUTHORITY_ROOT_CAUSE_REOPENED.md",
       "sha256": "868a97df7f74309784497c31a95785918c228ea7740273967fc4047d5b0fe23b",
       "bytes": 11018,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/CONTROLLER_GATEWAY_DESIGN.md",
+      "sha256": "021e8f94b45049c01a3044f1e034463920ef2358349f679ec856b63bbe121152",
+      "bytes": 14734,
       "source": "current-source-carrier"
     },
     {
@@ -956,14 +962,14 @@
     },
     {
       "path": "docs/successor-takeover/PROOF_DEBT_LEDGER.json",
-      "sha256": "e08c5659d0f2afb26201578cb7921775ad4b3cfc90dac59b5f73a50ab7b978df",
-      "bytes": 6701,
+      "sha256": "f7920f2a79ebafc69bee17df06f45b45055fae7789b2ed879cd8cb8abc2f4fd0",
+      "bytes": 7171,
       "source": "current-source-carrier"
     },
     {
       "path": "docs/successor-takeover/PROOF_GRAPH.json",
-      "sha256": "d124c44cfd5515808d3df8500e6ac30a1769126c7d78057a38d9a72dd7ac08c2",
-      "bytes": 69113,
+      "sha256": "b64ac266194a0b33e90f2c9119e585e5496401f70c287033646ac9170ae3fb24",
+      "bytes": 70730,
       "source": "current-source-carrier"
     },
     {
@@ -1579,6 +1585,18 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/codex-native-read-boundary-20261006.json",
+      "sha256": "edf0ae9651b2b364af4bdd547cf8dcafa093d0befe373195c5e1d777559033b4",
+      "bytes": 835,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-native-read-boundary-probe.mjs",
+      "sha256": "f3758a70409fa027aa9ec241845ecf2e1a0a957a2d9e406e589c88a96c0e45f9",
+      "bytes": 2259,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/combined-candidate-regression-v1.json",
       "sha256": "8dce8a58ec83759ef172547dc2b43ff645b98186dad6afa7935d7b1f53dab5f6",
       "bytes": 74780,
@@ -1648,6 +1666,18 @@
       "path": "docs/successor-takeover/evidence/combined-snapshot-unrelated-before.json",
       "sha256": "9be6cbe953253e8e11f1d7f029750fbb9c3c3c579ddab7aaee33b0f68a3c6754",
       "bytes": 300,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/controller-git-effect-9f2f941-counterexample.json",
+      "sha256": "7126855098bb38c41abc82fb905107e2c9b0644de92503bffdd1ca5741a9eb2e",
+      "bytes": 1572,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/controller-git-effect-probe.mts",
+      "sha256": "89cb9e6e41956c2471904d2f88f0a95009e87ea69c41e297e40cc58c850f4aea",
+      "bytes": 6082,
       "source": "current-source-carrier"
     },
     {
@@ -3088,6 +3118,12 @@
       "path": "docs/successor-takeover/evidence/public-review-snapshot-update-5e9c0f9.json",
       "sha256": "60ecfce49e50f7cac071e459c0d618f042eac3fd930b5cced4c972f4e7513f9b",
       "bytes": 1156,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/public-review-snapshot-update-8e1d94a.json",
+      "sha256": "63b7f055f623f7f5a15634f83b654c53bf4080b9adc2d430bfb5105329dc7225",
+      "bytes": 1182,
       "source": "current-source-carrier"
     },
     {
@@ -7990,9 +8026,9 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "fd68e70159dfaba35bbc93c6abef979ec55abdb14417a532f00393c394b81761",
+    "README.md": "6f6e35540a838814dd2dfe75b203f1c93cd31dbf6486243da94a8fe2b6acc895",
     ".gitignore": "2f79870e866856827b5e9458c9ce2ac0f3a958ae468b4eb2f7dcc7649852010c",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "17c01cd3be1e0eccfc02712fdbe62ffd0c95a7de75446266b8b6d8f1965f1c02",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "81d2657ee26f1b4c0be47dde7c3c1f6df68b1bd27a5a2ccc4a05e051651bceab",
     "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
     "snapshot-verification/current-worker-contract-10-pass.txt": "b78f8ef949eea7d8bb7a2de24d49255989678674a6b8c96cb7614593fc403d57",
     "snapshot-verification/initial-smoke-37-pass-1-eperm.txt": "f487f73b0138d4ad22b69cc6c7a59a13c554169cf96de7db81921fd359b4fd64",

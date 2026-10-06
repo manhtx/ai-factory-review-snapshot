@@ -2,7 +2,7 @@
 
 Source snapshot for external code and evidence inspection of Macro Research Platform's AI Factory. The original repository remains private. This repository starts with a new Git history; it contains no parent repository history or live machine stores.
 
-Source carrier: `86f1ff0859654dcf415ae2013fe246701503c5b1`.
+Source carrier: `33b9e68634783c7d1da8354f939d4727764187bb`.
 
 Pinned tested source candidate: `e5420707853c3a18bd84f6b3e769597a0867e893`. Its recorded clean run passed 543 tests across 53 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
 
@@ -35,3 +35,5 @@ Historical first-publication export verification is recorded in `PUBLIC_SNAPSHOT
 This is an inspection snapshot, not a deployment package. Static relative module imports are included. Dynamic file reads, full product data/assets and live operational stores are outside that closure. Runtime/provider logs, credentials, browser profiles, cookies, databases, locks, leases and host configuration are excluded. No license grant beyond the original owner's publication request is inferred.
 
 Current update includes explicit two-runner worker environment transport, attempt-local config/cache/temp and the reopened data/metadata/child-signal profile contract. Ten OS/dispatcher fixture tests include a real nested Vitest native-config process exiting zero, not just a passing test marker. Root-source full regression is exact and clean; previous export logs remain historical. HOME/CODEX_HOME/private history, real-provider authentication/compatibility, activation coverage, outside-control-root reads, hardlinks and the controller gateway remain open.
+
+Gateway design and fresh bounded counterexamples are in `docs/successor-takeover/CONTROLLER_GATEWAY_DESIGN.md`: actual preclaim Git effects survive coordinator timeout/exit; an installed Codex sandbox utility reads a dummy control credential outside its workspace. The utility is not an actual model tool invocation. Enrollment/readable-root protection precedes journal issuance; the gateway is not implemented or promoted. Application source is unchanged from the pinned tested candidate.

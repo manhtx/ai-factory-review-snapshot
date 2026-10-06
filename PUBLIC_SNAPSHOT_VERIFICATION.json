@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
-  "observedAt": "2026-10-06T02:48:54.219Z",
-  "sourceCarrierRevision": "86f1ff0859654dcf415ae2013fe246701503c5b1",
+  "observedAt": "2026-10-06T03:31:51.397Z",
+  "sourceCarrierRevision": "33b9e68634783c7d1da8354f939d4727764187bb",
   "pinnedSourceCandidate": "e5420707853c3a18bd84f6b3e769597a0867e893",
-  "exportedSourceFiles": 1321,
+  "exportedSourceFiles": 1327,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -74,5 +74,7 @@
       "log": "snapshot-verification/current-sandbox-6-pass.txt",
       "dependencyMethod": "Temporary installed local dependency symlink removed; not clean npm ci"
     }
-  }
+  },
+  "currentUpdate": "Documentation/forensic harnesses only; no application source changes. Previous 10-test export run remains subject to identical e542070 app bytes; not rerun merely for doc changes.",
+  "newCounterexamples": "Actual preclaim Git effect after controller exit; installed Codex utility private-read fixture. Builder-only, no independent review or actual model tool invocation."
 }
