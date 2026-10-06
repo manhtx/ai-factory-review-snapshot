@@ -12,6 +12,17 @@
   },
   "nodes": [
     {
+      "id": "public-fixture-lifetime-125f5d1",
+      "sourceRevision": "fef3107dad5434ebdeaffb403e102d95cd0a76fb",
+      "snapshotRevision": "125f5d1850cd9bbfd3c0786f98a9609538dca3a3",
+      "claim": "Anonymous1365remote blobs match; candidateaf1672b exact clean550PASS54FILES; export17PASS3FILES",
+      "evidence": "evidence/public-fixture-lifetime-publication-125f5d1.json",
+      "status": "PUBLIC_TOOL_ACCESS_VERIFIED; NO_RUNTIME_AUTHORITY",
+      "independent": false,
+      "dependsOn": ["fixture-lifetime-af1672b"],
+      "missing": "Preparation latency, effective exec/all tool policy/auth/AGY/caller migration/gateway/independent review"
+    },
+    {
       "id": "fixture-lifetime-af1672b",
       "sourceRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
       "claim": "Local fixture admission closes before cleanup; actual delayed writer and child close drained before deletion; exact550PASS54FILES with original test deadline",

@@ -1,0 +1,16 @@
+{
+  "observedAt": "2026-10-06T06:30:28.981158+00:00",
+  "snapshotRevision": "125f5d1850cd9bbfd3c0786f98a9609538dca3a3",
+  "sourceCarrierRevision": "fef3107dad5434ebdeaffb403e102d95cd0a76fb",
+  "testedSourceCandidate": "af1672b880928c6fe3004686b9cec8d87426d09e",
+  "anonymousAccessVerified": true,
+  "remoteBlobs": 1365,
+  "allBlobHashesMatch": true,
+  "manifestSha256": "0ab58b5f078b5a48f0c92a17c1c7de73e6aa26f7ee52d4119279b740bc9f3b3d",
+  "sourceRegression": "Exact clean550PASS54FILES/full tsc/scoped lint",
+  "exportSmoke": "17PASS3FILES; temporary installed dependencies removed; not clean npm ci",
+  "scope": "Fixture lifetime repair; not production quiescence or preparation latency closure",
+  "independent": false,
+  "authority": "NONE",
+  "productionAutonomy": "DISABLED"
+}

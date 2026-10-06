@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
-  "observedAt": "2026-10-06T04:57:50.513Z",
-  "sourceCarrierRevision": "fef3107dad5434ebdeaffb403e102d95cd0a76fb",
+  "observedAt": "2026-10-06T07:28:36.076475+00:00",
+  "sourceCarrierRevision": "0add358f9b36e9acca7a79114fb57f159258e504",
   "pinnedSourceCandidate": "af1672b880928c6fe3004686b9cec8d87426d09e",
-  "exportedSourceFiles": 1355,
+  "exportedSourceFiles": 1359,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -89,5 +89,7 @@
     "deadlines": "UNCHANGED",
     "dependencyMethod": "Temporary local installed dependencies symlink removed; not clean npm ci",
     "evidence": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json"
-  }
+  },
+  "nativeExecBoundary": "Exact clean52ebd1f three configuration cases; actual exec_command and view_image dummy controls pass; source evidence only, no export-native rerun",
+  "currentChangeScope": "Probe/docs/evidence only; production source candidate remains af1672b; earlier full regression and export smoke not rerun or promoted"
 }

@@ -1,8 +1,8 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-06T04:57:50.513Z",
+  "observedAt": "2026-10-06T07:28:36.076475+00:00",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "fef3107dad5434ebdeaffb403e102d95cd0a76fb",
+  "sourceCarrierRevision": "0add358f9b36e9acca7a79114fb57f159258e504",
   "pinnedTestedCandidateRevision": "af1672b880928c6fe3004686b9cec8d87426d09e",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "016a347f717195d9097c53b67483e7f19edd5d153d07054d849290995efb5140",
-      "bytes": 35062,
+      "sha256": "2277331df7c0d6fb01d1c6df86f7ed54b0ebb9fa875b9a654d6acb7f9e26f348",
+      "bytes": 35104,
       "source": "current-source-carrier"
     },
     {
@@ -758,8 +758,8 @@
     },
     {
       "path": "docs/successor-takeover/CODEX_READABLE_ROOT_POLICY.md",
-      "sha256": "ff0ade5b6ae5fe69677801128f63f17727995d81b5b5219d026e5b81f35a58ca",
-      "bytes": 3485,
+      "sha256": "d3756e006ba20ac92df4fffc8778f5377bf0fd302eb05bf9ba3c525398c9e706",
+      "bytes": 6295,
       "source": "current-source-carrier"
     },
     {
@@ -980,8 +980,8 @@
     },
     {
       "path": "docs/successor-takeover/PROOF_GRAPH.json",
-      "sha256": "7897cbd8df7f27a5fd956ed1b234b5eec2375b9902ab500acc34ada06ce5a978",
-      "bytes": 73067,
+      "sha256": "6d4d3819ff23c5ea397640cb35876aa25a387907e46af90e5e5edf39ce2352bb",
+      "bytes": 73728,
       "source": "current-source-carrier"
     },
     {
@@ -1597,6 +1597,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs",
+      "sha256": "b386d70707d3d3a5c767a7406920ed8d287dae3922efcb2dd4d6951d087c02ee",
+      "bytes": 10239,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/codex-named-profile-minimal-runtime-failure.json",
       "sha256": "d33bb35bddd31e11ba169bf4553f05e320c821275cef658610fb72482cada4ef",
       "bytes": 477,
@@ -1606,6 +1612,12 @@
       "path": "docs/successor-takeover/evidence/codex-named-profile-node-control.json",
       "sha256": "056ac5a6204a33933015816110edd662e886f40bcf4d72be3000d42114582344",
       "bytes": 315,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/codex-native-exec-project-and-image-52ebd1f.json",
+      "sha256": "530648fcf8ab143966aadc38260fac3ac60f18e19d83c1c618dff4b6edd51762",
+      "bytes": 13871,
       "source": "current-source-carrier"
     },
     {
@@ -1906,6 +1918,12 @@
       "path": "docs/successor-takeover/evidence/dispatch-dependency-recheck-before.mts",
       "sha256": "4eeac1db353d3a9c6412bce22b0df0473903e688cfe38f7960b175aecc22b013",
       "bytes": 3306,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/effective-config-project-layer-20261006.json",
+      "sha256": "b6122d2005e6a6eed928b7c5ad21aea3e65778c397791588a3ad6f43fc0943d5",
+      "bytes": 1113,
       "source": "current-source-carrier"
     },
     {
@@ -3202,6 +3220,12 @@
       "path": "docs/successor-takeover/evidence/public-codex-policy-publication-a186fb7.json",
       "sha256": "5dbf444bdd7ebb642d932eac8bfe1d0c89b8fd2d0f7b4db88be4ffe0b53ce50b",
       "bytes": 716,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/public-fixture-lifetime-publication-125f5d1.json",
+      "sha256": "1640e487183b9573d8379b033c8d4c9a915313fd1c65935dbe739398d05d9240",
+      "bytes": 783,
       "source": "current-source-carrier"
     },
     {
@@ -8194,9 +8218,9 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "6f08aed7c30bd670768400eda95e8d3e2f481be1d814f40aad0935d72d8b6f83",
+    "README.md": "11c90ca5b2c15ae3e78648e9d618c0ebbb73f98f7647692fe33b53ffd02cc51c",
     ".gitignore": "2f79870e866856827b5e9458c9ce2ac0f3a958ae468b4eb2f7dcc7649852010c",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "f895704fbcf4f8502b48838f36531bf5b1cf116138eaaecccca3ccf1ef61ec4b",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "970b0351fb831c05f7c43606ec41cb89a18cc7ec6b14e7d8aa7d8bdf9569acb0",
     "snapshot-verification/current-fixture-lifetime-17-pass.txt": "23630c18c4c1397a0d6f627cc8b588573ac2b07fe38d9ff447cc4cb19ad61306",
     "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
     "snapshot-verification/current-worker-contract-10-pass.txt": "b78f8ef949eea7d8bb7a2de24d49255989678674a6b8c96cb7614593fc403d57",

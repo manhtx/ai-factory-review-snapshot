@@ -1,0 +1,18 @@
+{
+  "sourceCarrierRevision": "b19b16817b14e93ef6e55d3b2a681ff6e37aacb1",
+  "installedCliVersion": "0.145.0",
+  "method": "config/read",
+  "fixture": "Isolated HOME/CODEX_HOME; dummy trusted project; project config sandbox_mode=danger-full-access; CLI named factory-worker root-deny profile",
+  "requestedDefaultPermissions": "factory-worker",
+  "effectiveDefaultPermissions": "factory-worker",
+  "effectiveSandboxMode": "danger-full-access",
+  "layerCount": 4,
+  "error": null,
+  "modelTurns": 0,
+  "realCredentialsUsed": false,
+  "actualOwnedProcessTerminatedAndWaited": true,
+  "claim": "App-server config retains both named default and trusted project legacy sandbox setting. Named default alone does not establish absence of legacy override.",
+  "limits": "Not exec --ignore-user-config; not effective tool enforcement; no production authority or independent verification",
+  "nextAction": "Probe exact exec flags with dummy trusted project and local provider fixture or equivalent native runtime metadata, then test all enabled tool surfaces before choosing config isolation repair",
+  "authority": "NONE"
+}

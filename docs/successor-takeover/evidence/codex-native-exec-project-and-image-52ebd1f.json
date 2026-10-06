@@ -1,0 +1,299 @@
+{
+  "sourceRevision": "52ebd1f6073fa53f5ebe6cc77658f65f93e8c9a2",
+  "cleanAtStart": true,
+  "cleanAtEnd": true,
+  "scriptSha256": "b386d70707d3d3a5c767a7406920ed8d287dae3922efcb2dd4d6951d087c02ee",
+  "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+  "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+  "permissionGeneratorSha256": "8bb4f4565cb2ff7419c85fab4c68beb5741856303af4120428bf2a3b59c25c56",
+  "observedAt": "2026-10-06T07:27:29.353602+00:00",
+  "schema": "ai-factory.codex-native-exec-fixture.v1",
+  "phases": [
+    {
+      "rawArtifactSha256": "ffe26b58e98270f05b2b68f29ba69701065eacc74bbf1b785db12bf779f858fa",
+      "phase": "codex-exec-project-config-initial.json",
+      "observations": [
+        {
+          "legacyProjectOverride": false,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 1,
+          "actualCommandExitCode": null,
+          "actualCommandOutput": null,
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 1,
+          "actualCommandExitCode": null,
+          "actualCommandOutput": null,
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        }
+      ]
+    },
+    {
+      "rawArtifactSha256": "97b7bd740b8fd1064987c0e01d7c6e16cb98ee84e1b18dda31c013362688a942",
+      "phase": "codex-exec-project-config-tool.json",
+      "observations": [
+        {
+          "legacyProjectOverride": false,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":false,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":false,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": false,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":false,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        }
+      ]
+    },
+    {
+      "rawArtifactSha256": "73faca6bc4c5fe0f942601394dd5bf0007b31193bdfeadf0276ac2ba539b581b",
+      "phase": "codex-exec-project-config-tool-attempt-temp.json",
+      "observations": [
+        {
+          "legacyProjectOverride": false,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": false,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        }
+      ]
+    },
+    {
+      "rawArtifactSha256": "6b0b77ac4cf01d0c9f11ef6cbeda91502352ee2b6b4e9d0705bb76bdb7a93a1b",
+      "phase": "codex-exec-project-config-loaded-marker.json",
+      "observations": [
+        {
+          "legacyProjectOverride": false,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": false,
+          "projectMarkerInNativeRequest": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 2,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": null,
+          "workspaceImageDelivered": false,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        }
+      ]
+    },
+    {
+      "rawArtifactSha256": "7e982ae72d2dbbf6f3059b48933a3976bc090ec71812931a01da194cc47bd903",
+      "phase": "codex-exec-project-config-images.json",
+      "observations": [
+        {
+          "legacyProjectOverride": false,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 4,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": "unable to read image at `/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-ldkkv9/control/private-fixture.png`: Operation not permitted (os error 1)",
+          "workspaceImageDelivered": true,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 4,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": "unable to read image at `/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-ldkkv9/control/private-fixture.png`: Operation not permitted (os error 1)",
+          "workspaceImageDelivered": true,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": false,
+          "projectMarkerInNativeRequest": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 4,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": "unable to read image at `/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-ldkkv9/control/private-fixture.png`: Operation not permitted (os error 1)",
+          "workspaceImageDelivered": true,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": null
+        }
+      ]
+    },
+    {
+      "rawArtifactSha256": "88a5a47ec10f0acb32830fe7e99ada57c87a80b655eec84df44e905a0978189d",
+      "phase": "codex-exec-project-config-exact-clean.json",
+      "observations": [
+        {
+          "legacyProjectOverride": false,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 4,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": "unable to read image at `/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-KeJZOx/control/private-fixture.png`: Operation not permitted (os error 1)",
+          "workspaceImageDelivered": true,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": true
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": true,
+          "projectMarkerInNativeRequest": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 4,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": "unable to read image at `/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-KeJZOx/control/private-fixture.png`: Operation not permitted (os error 1)",
+          "workspaceImageDelivered": true,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": true
+        },
+        {
+          "legacyProjectOverride": true,
+          "ignoreUserConfig": false,
+          "projectMarkerInNativeRequest": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "requestCount": 4,
+          "actualCommandExitCode": 0,
+          "actualCommandOutput": "{\"controlRead\":false,\"authRead\":false,\"escapeRead\":false,\"workspaceRead\":true,\"dependencyRead\":true,\"workspaceWrite\":false}\n",
+          "privateImageOutput": "unable to read image at `/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-KeJZOx/control/private-fixture.png`: Operation not permitted (os error 1)",
+          "workspaceImageDelivered": true,
+          "trustedFinalResponse": "DUMMY_FIXTURE_FINISHED",
+          "checksPass": true
+        }
+      ]
+    }
+  ],
+  "exactCleanChecksPass": true,
+  "initialFailure": "Initial tool fixture incorrectly set TMPDIR equal workspace: legitimate workspace read denied. Not accepted as boundary proof. Corrected to dispatcher attempt temp structure before clean verification.",
+  "classification": "BUILDER_SCOPED_NATIVE_EXEC_AND_IMAGE_VERIFIED",
+  "scope": "Dummy localhost provider drives actual installed exec_command/view_image and trusted output-last-message; no real model reasoning or credentials. Project marker excluded with ignore-user-config and present without it; generated policy remains restrictive in all three observed cases.",
+  "limits": [
+    "Managed config not proved",
+    "Other tool surfaces and delegation not proved",
+    "Provider authentication and AGY not proved",
+    "No production/gateway authority",
+    "Not independent verification"
+  ],
+  "authority": "NONE"
+}

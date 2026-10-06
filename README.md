@@ -2,7 +2,7 @@
 
 Source snapshot for external code and evidence inspection of Macro Research Platform's AI Factory. The original repository remains private. This repository starts with a new Git history; it contains no parent repository history or live machine stores.
 
-Source carrier: `fef3107dad5434ebdeaffb403e102d95cd0a76fb`.
+Source carrier: `0add358f9b36e9acca7a79114fb57f159258e504`.
 
 Pinned tested source candidate: `af1672b880928c6fe3004686b9cec8d87426d09e`. Its recorded clean run passed 550 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
 
@@ -43,3 +43,7 @@ Current policy: `CODEX_READABLE_ROOT_POLICY.md`. Actual installed utility tests 
 The first current export smoke passed14/15 and timed out in AGY fixture preparation. Three unchanged target rechecks also timed out; root target passed. A logging-only diagnostic observed queue/handoff preparation8595ms before dispatcher spawn and cleanup ENOTEMPTY. A later split diagnostic observed21/23ms and passed; the unchanged full export recheck passed15/15. Cause remains UNKNOWN; no deadline was increased. All logs are retained in `docs/successor-takeover/evidence/codex-policy-export-timing-results.json`. Fixture lifetime/cleanup debt remains open.
 
 Current fixture lifetime repair closes fixture admission, drains initialization/dispatch jobs and actual child close before deleting owned roots. Two new real filesystem/child controls pass without increasing test deadlines. This repairs the fixture cleanup contract, not production controller/Git quiescence or unexplained preparation latency. See `FIXTURE_LIFETIME_REPAIR.md`; all prior timing failures remain historical evidence.
+
+## Native exec/project/image evidence
+
+`docs/successor-takeover/evidence/codex-native-exec-project-and-image-52ebd1f.json` records three clean-source native CLI configuration fixtures. A localhost dummy provider drives actual exec_command and view_image; private dummy reads/readonly writes are rejected and workspace/dependency/image positive controls succeed. The trusted final-response file is recorded. Native binary and launcher hashes are bound to the probe. Earlier invalid TMPDIR fixture is retained. This is source fixture evidence, not real model reasoning, managed-config/auth/AGY/all-tool/gateway proof, independent review, or an export rerun.
