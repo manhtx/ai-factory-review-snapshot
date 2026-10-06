@@ -12,6 +12,17 @@
   },
   "nodes": [
     {
+      "id": "configured-code-mode-patch-temp-9f031e6",
+      "sourceRevision": "9f031e68a52569245adaa121f597691e8eb6e873",
+      "claim": "Configured model uses input.additional_tools/code-mode; empty top-level tools absence check invalidated; six actual patch fixtures FAIL on temp gate while product/private effects are recorded",
+      "evidence": ["NATIVE_CODE_MODE_TOOL_BOUNDARY.md", "evidence/native-code-mode-patch-temp-9f031e6.json"],
+      "status": "CURRENT_REPRODUCED; ALL_TOOL_COMPATIBILITY_OPEN",
+      "independent": false,
+      "dependsOn": ["native-exact-attempt-temp-c9a1aa7"],
+      "missing": "Dynamic registry completeness, required scratch-edit contract/native patch admission, managed/auth/AGY/caller plane/gateway/independent assurance",
+      "historicalProofPolicy": "Earlier primitive exec temp and fixture-model schema results are not configured-model all-tool closure"
+    },
+    {
       "id": "native-exact-attempt-temp-c9a1aa7",
       "sourceRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
       "claim": "Actual temp write positive control failed at fb3f521; exact owned temp grant fixes six read-only/workspace-write config cases; clean550PASS54FILES/tsc/lint",

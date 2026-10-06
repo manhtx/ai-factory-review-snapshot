@@ -1,9 +1,9 @@
 {
   "schema": "ai-factory.public-snapshot-verification.v1",
-  "observedAt": "2026-10-06T07:59:59.494333+00:00",
-  "sourceCarrierRevision": "2c081488782d2b97b66203b54158d44352476596",
+  "observedAt": "2026-10-06T08:08:58.143508+00:00",
+  "sourceCarrierRevision": "cd218f5e3ca224db9b89c69430bc4a01ffdbf29c",
   "pinnedSourceCandidate": "c9a1aa7af3d707a30955b2852cd387988b975537",
-  "exportedSourceFiles": 1380,
+  "exportedSourceFiles": 1382,
   "allSourceBytesMatch": true,
   "staticRelativeImportsUnresolved": 0,
   "nodeVersion": "v24.18.0",
@@ -91,12 +91,27 @@
     "evidence": "docs/successor-takeover/evidence/codex-policy-export-timing-results.json"
   },
   "nativeExecBoundary": "Current configured model code-mode six overallFAIL due apply_patch temp; exec/image/control writes observed with retained scoped results; all-tool admission remains OPEN",
-  "currentChangeScope": "Probe/verifier/evidence only; configured model switches to input.additional_tools; empty schema absence proof invalidated; actual patch temp denial retained; no production source repair",
+  "currentChangeScope": "Registry-only observation/verifier mode and read-only requirements evidence; no production repair or effect tool invoked",
   "currentExportVerification": {
     "nativeCodeMode": "Six mode/config cases FAIL; actual apply_patch temp denied in both modes; no private/control/auth/dependency/alias/Git patch files created",
     "metadata": "gpt-5.6-sol native code-mode descriptors observed; no model inference/entitlement/complete dynamic registry proof",
     "dependencies": "Temporarily linked installed dependencies removed; not clean npm ci",
     "workingTree": "Export bytes matched source carrier2c08148; export working tree uncommitted during negative reproduction",
     "previousChecks": "Prior export17/3 and6 primitive native cases remain historical scoped evidence at c9a1aa7; not overall assurance"
+  },
+  "registryObservation": {
+    "source": "Exact cleanaba2e89 six metadata-only cases pass",
+    "currentExport": "Six metadata-only cases pass with temporary dependencies removed",
+    "nativeNames": [
+      "apply_patch",
+      "exec_command",
+      "update_plan",
+      "view_image",
+      "write_stdin"
+    ],
+    "effectToolsInvoked": [],
+    "patchAdmission": "Six earlierFAIL remain OPEN; not rerun or relabeled",
+    "managedRequirements": "Isolated standalone app-server returns null; not all real auth-home/cloud/managed layers",
+    "scope": "No all-tool effect/controller or independent assurance"
   }
 }

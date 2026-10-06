@@ -1,0 +1,150 @@
+{
+  "schema": "ai-factory.native-tool-registry-observation.v1",
+  "sourceRevision": "aba2e898f71754ef6b3bc4778c923731ac93e4d9",
+  "observations": [
+    {
+      "sourceRevision": "aba2e898f71754ef6b3bc4778c923731ac93e4d9",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "5e50266b5221479892836217547d19764b6dddaca072cc299beddea51103f693",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-km326T",
+      "mode": "read-only",
+      "requestedModel": "gpt-5.6-sol",
+      "registryOnly": true,
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawSha256": "4fbe57a1878429a7c005fb130b1f37cd9acb7b1057e4c7ba82d99768c5c11022",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "nativeRegistryNames": [
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin"
+          ],
+          "registryDelegationAbsent": true,
+          "checksPass": true
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "nativeRegistryNames": [
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin"
+          ],
+          "registryDelegationAbsent": true,
+          "checksPass": true
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "nativeRegistryNames": [
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin"
+          ],
+          "registryDelegationAbsent": true,
+          "checksPass": true
+        }
+      ]
+    },
+    {
+      "sourceRevision": "aba2e898f71754ef6b3bc4778c923731ac93e4d9",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "5e50266b5221479892836217547d19764b6dddaca072cc299beddea51103f693",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-7JdHVL",
+      "mode": "workspace-write",
+      "requestedModel": "gpt-5.6-sol",
+      "registryOnly": true,
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawSha256": "003dd5813be59343532d4764d5a70be052f8f3b90beb28075d2c1bcc31dafa7e",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "nativeRegistryNames": [
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin"
+          ],
+          "registryDelegationAbsent": true,
+          "checksPass": true
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "nativeRegistryNames": [
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin"
+          ],
+          "registryDelegationAbsent": true,
+          "checksPass": true
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "nativeRegistryNames": [
+            "apply_patch",
+            "exec_command",
+            "update_plan",
+            "view_image",
+            "write_stdin"
+          ],
+          "registryDelegationAbsent": true,
+          "checksPass": true
+        }
+      ]
+    }
+  ],
+  "managedRequirementsObservation": {
+    "observedAt": "2026-10-06T08:05:28.238992+00:00",
+    "sourceRevision": "aba2e898f71754ef6b3bc4778c923731ac93e4d9",
+    "method": "configRequirements/read",
+    "error": null,
+    "requirementsIsNull": true,
+    "requirementKeys": [],
+    "responseSha256": "bff796044dfe0fc2d5a4688a1f156ffc2302b8f78ae74291178adcfc8c1b9ca5",
+    "scope": "Isolated HOME/CODEX_HOME standalone installed app-server; no threads/model turns/auth. App-server observation only, not all exec/config/cloud/real-auth scopes",
+    "authority": "NONE",
+    "ownedProcessTerminatedAndWaited": true
+  },
+  "registryMetadataChecks": "6PASS_METADATA_ONLY",
+  "effectToolsInvokedByProbe": [],
+  "unchangedPatchAdmission": "6FAIL at clean9f031e6 remain open; no patch retried by this probe",
+  "authority": "NONE",
+  "independent": false,
+  "limits": "Isolated HOME configured-name fixture only; real Factory auth-home/plugin/hook/managed surfaces, provider entitlement, patch temp and full actor/gateway authority remain OPEN"
+}

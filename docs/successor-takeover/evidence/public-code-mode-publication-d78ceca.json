@@ -1,0 +1,16 @@
+{
+  "observedAt": "2026-10-06T08:00:58.105287+00:00",
+  "snapshotRevision": "d78cecab294cc088712be31ef1491621e2b6af40",
+  "sourceCarrierRevision": "2c081488782d2b97b66203b54158d44352476596",
+  "productionBaselineCandidate": "c9a1aa7af3d707a30955b2852cd387988b975537",
+  "negativeProbeRevision": "9f031e68a52569245adaa121f597691e8eb6e873",
+  "anonymousAccessVerified": true,
+  "remoteBlobs": 1397,
+  "allBlobHashesMatch": true,
+  "currentNativeVerification": "6FAIL: configured model code-mode apply_patch temp denied; no weaker expected outcomes",
+  "emptySchemaAbsenceClaim": "dadb804 configured-model claim invalidated; additional_tools explicitly observed now",
+  "authority": "NONE",
+  "independent": false,
+  "productionAutonomy": "DISABLED",
+  "scope": "Native boundary counterexample and verifier repair; not all-tool/managed/auth/AGY/controller/independent closure"
+}

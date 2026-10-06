@@ -25,6 +25,7 @@ const exerciseImages = process.argv.includes('--exercise-images');
 const mode = process.argv.includes('--workspace-write') ? 'workspace-write' : 'read-only';
 const model = process.argv.includes('--dispatcher-model') ? 'gpt-5.6-sol' : 'fixture-model';
 const exercisePatches = process.argv.includes('--exercise-patches');
+const registryOnly = process.argv.includes('--registry-only');
 const cleanAtStart = spawnSync('/usr/bin/git', ['status', '--porcelain'], { encoding: 'utf8' }).stdout.trim() === '';
 for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [true, false]]) {
   const workspace = path.join(root, `${legacyOverride ? 'legacy' : 'clean'}-project-${ignoreUserConfig ? 'ignored' : 'loaded'}`);
@@ -56,10 +57,11 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
       const advertised = requests[0]?.body?.input?.flatMap(item => item.type === 'additional_tools' ? item.tools || [] : []) || [];
       const codeMode = advertised.some(tool => tool.name === 'exec' && tool.type === 'custom');
       const codeCall = { id: 'cc_fixture', type: 'custom_tool_call', status: 'completed', call_id: 'call_fixture', name: 'exec', input: `text(await tools.exec_command(${call.arguments}));` };
+      const registryCall = { id: 'cc_registry_fixture', type: 'custom_tool_call', status: 'completed', call_id: 'registry_fixture', name: 'exec', input: 'text({nativeRegistryNames:ALL_TOOLS.map(tool=>tool.name)});' };
       const patches = Object.entries(patchTargets).map(([key, file]) => ({ key, patch: `*** Begin Patch\n*** Add File: ${file}\n+DUMMY_PATCH_ONLY\n*** End Patch` }));
       const patchCall = { id: 'cc_patch_fixture', type: 'custom_tool_call', status: 'completed', call_id: 'patch_fixture', name: 'exec', input: `const results=[];for(const item of ${JSON.stringify(patches)}){try{results.push({key:item.key,result:await tools.apply_patch(item.patch)});}catch(error){results.push({key:item.key,error:String(error)});}}text(results);` };
       const imageCall = { id: `fc_image_${requests.length}`, type: 'function_call', status: 'completed', call_id: `image_call_${requests.length}`, name: 'view_image', arguments: JSON.stringify({ path: requests.length === 2 ? path.join(control, 'private-fixture.png') : path.join(workspace, 'read-fixture.png') }) };
-      const item = exerciseTools && requests.length === 1 ? (codeMode ? codeCall : call) : exerciseImages && [2, 3].includes(requests.length) ? imageCall : exercisePatches && requests.length === 4 ? patchCall : { id: 'msg_fixture', type: 'message', status: 'completed', role: 'assistant', content: [{ type: 'output_text', text: 'DUMMY_FIXTURE_FINISHED', annotations: [] }] };
+      const item = registryOnly && requests.length === 1 && codeMode ? registryCall : exerciseTools && requests.length === 1 ? (codeMode ? codeCall : call) : exerciseImages && [2, 3].includes(requests.length) ? imageCall : exercisePatches && requests.length === 4 ? patchCall : { id: 'msg_fixture', type: 'message', status: 'completed', role: 'assistant', content: [{ type: 'output_text', text: 'DUMMY_FIXTURE_FINISHED', annotations: [] }] };
       const send = value => response.write(`data: ${JSON.stringify(value)}\n\n`);
       send({ type: 'response.created', response: { id: 'resp_fixture', object: 'response', status: 'in_progress', output: [] } });
       send({ type: 'response.output_item.added', output_index: 0, item: { ...item, status: 'in_progress', content: [] } });
@@ -105,16 +107,21 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
   const toolSchemaTransport = directTools.length ? 'responses.tools' : additionalTools.length ? 'input.additional_tools' : 'UNOBSERVED';
   const advertisedToolNames = [...new Set(tools.flatMap(tool => [tool.name || tool.type, ...(tool.tools || []).map(nested => nested.name), ...Array.from((tool.description || '').matchAll(/declare const tools:\s*\{\s*(\w+)\s*\(/g), match => match[1])]))];
   const delegationAbsent = advertisedToolNames.every(name => !/multi_agent|^(spawn_agent|resume_agent|send_input|wait_agent|close_agent)$/.test(name));
+  const registryOutput = requests.flatMap(request => request.body?.input || []).find(item => item.type === 'custom_tool_call_output' && item.call_id === 'registry_fixture')?.output;
+  const registryText = Array.isArray(registryOutput) ? registryOutput.find(item => item.type === 'input_text' && item.text?.startsWith('{"nativeRegistryNames":'))?.text : null;
+  const nativeRegistryNames = registryText ? JSON.parse(registryText).nativeRegistryNames : null;
+  const registryDelegationAbsent = Array.isArray(nativeRegistryNames) && nativeRegistryNames.length > 0 && nativeRegistryNames.every(name => !/multi_agent|spawn_agent|resume_agent|send_input|wait_agent|close_agent/.test(name));
   const patchEffects = Object.fromEntries(Object.entries(patchTargets).map(([key, file]) => [key, fs.existsSync(file)]));
   const patchContentsMatch = Object.entries(patchTargets).every(([key, file]) => !patchEffects[key] || fs.readFileSync(file, 'utf8') === 'DUMMY_PATCH_ONLY\n');
   const checksPass = exitCode === 0 && !timedOut && finalResponse === 'DUMMY_FIXTURE_FINISHED'
     && delegationAbsent
     && toolSchemaTransport !== 'UNOBSERVED'
+    && (!registryOnly || registryDelegationAbsent)
     && (!exercisePatches || (patchContentsMatch && Object.entries({ workspace: mode === 'workspace-write', temp: true, control: false, auth: false, dependency: false, escape: false, gitMetadata: false }).every(([key, expected]) => patchEffects[key] === expected)))
     && (!exerciseTools || Object.entries({ controlRead: false, authRead: false, escapeRead: false, workspaceRead: true, dependencyRead: true, workspaceWrite: mode === 'workspace-write', controlWrite: false, authWrite: false, dependencyWrite: false, escapeWrite: false, tempWrite: true }).every(([key, expected]) => permissionChecks?.[key] === expected))
     && (!exerciseImages || (typeof toolOutputs.image_call_2 === 'string' && toolOutputs.image_call_2.includes('Operation not permitted') && Array.isArray(toolOutputs.image_call_3) && toolOutputs.image_call_3.some(item => item.type === 'input_image')));
   observations.push({ legacyOverride, ignoreUserConfig, exitCode, signal, timedOut, args, stdout, stderr, requests,
-    finalResponse, permissionChecks, patchEffects, patchContentsMatch, advertisedToolNames, toolSchemaTransport, delegationAbsent, checksPass });
+    finalResponse, permissionChecks, patchEffects, patchContentsMatch, advertisedToolNames, toolSchemaTransport, delegationAbsent, nativeRegistryNames, registryDelegationAbsent, checksPass });
 }
 const launcher = fs.realpathSync('/Users/manhtx/.npm-global/bin/codex');
 const require = createRequire(launcher);
@@ -125,7 +132,7 @@ const result = { sourceRevision: spawnSync('/usr/bin/git', ['rev-parse', 'HEAD']
   cleanAtStart, cleanAtEnd: spawnSync('/usr/bin/git', ['status', '--porcelain'], { encoding: 'utf8' }).stdout.trim() === '',
   scriptSha256: hash(new URL(import.meta.url)), launcherSha256: hash(launcher), nativePayloadSha256: hash(nativePayload),
   permissionGeneratorSha256: hash(new URL('../../../server/aiCompany/macSandbox.ts', import.meta.url)),
-  fixtureRoot: root, mode, requestedModel: model, credentials: 'NONE; isolated HOME/CODEX_HOME; localhost dummy provider',
+  fixtureRoot: root, mode, requestedModel: model, registryOnly, credentials: 'NONE; isolated HOME/CODEX_HOME; localhost dummy provider',
   scope: 'Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof', observations };
 const output = process.argv[2] || path.join(root, 'results.json');
 fs.writeFileSync(output, JSON.stringify(result, null, 2) + '\n');

@@ -1,8 +1,8 @@
 {
   "schema": "ai-factory.public-review-snapshot.v1",
-  "observedAt": "2026-10-06T07:59:07.337457+00:00",
+  "observedAt": "2026-10-06T08:07:46.779510+00:00",
   "sourceRepository": "https://github.com/manhtx/macro-research-platform",
-  "sourceCarrierRevision": "2c081488782d2b97b66203b54158d44352476596",
+  "sourceCarrierRevision": "cd218f5e3ca224db9b89c69430bc4a01ffdbf29c",
   "pinnedTestedCandidateRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
   "scope": "All tracked server/aiCompany code/tests, AI Factory integration scripts/docs, .agents rules/workflows, static company docs/schemas/prompts/workflows, and static module closure; no parent Git history or machine stores",
   "files": [
@@ -740,8 +740,8 @@
     },
     {
       "path": "docs/successor-takeover/CHECKPOINT.json",
-      "sha256": "100e84e8a25cd111cd1eec050ce00a324774daa6ba6f825da3a2c301d398f621",
-      "bytes": 35455,
+      "sha256": "2b26454fccef03fc514c5aded1ca0477ef61e3ca2203d0be19c04b7b5d04a5e9",
+      "bytes": 35535,
       "source": "current-source-carrier"
     },
     {
@@ -932,8 +932,8 @@
     },
     {
       "path": "docs/successor-takeover/NATIVE_CODE_MODE_TOOL_BOUNDARY.md",
-      "sha256": "f62c14cf0d359350c168eb1a700256d5ceafd50e539db810bc1936c754ca01f6",
-      "bytes": 3208,
+      "sha256": "9f3958053a754c4189aa5e266c9ff257da84bd1554436c65b7a94bcf5ef21b48",
+      "bytes": 4490,
       "source": "current-source-carrier"
     },
     {
@@ -992,8 +992,8 @@
     },
     {
       "path": "docs/successor-takeover/PROOF_GRAPH.json",
-      "sha256": "e4eaeeff134c29df7d661d86e9aa7744827b8915cc69606251989c15ee9d974b",
-      "bytes": 76043,
+      "sha256": "855997c088fac7065a361cb8941f87ef3ba4f5e755564e68e219fd20674426bb",
+      "bytes": 76954,
       "source": "current-source-carrier"
     },
     {
@@ -1616,8 +1616,8 @@
     },
     {
       "path": "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs",
-      "sha256": "b96d37c9e2842bbfa545fc72ca7ea5e372e8e7d3d0757cb590424462f11d302d",
-      "bytes": 14369,
+      "sha256": "5e50266b5221479892836217547d19764b6dddaca072cc299beddea51103f693",
+      "bytes": 15514,
       "source": "current-source-carrier"
     },
     {
@@ -2965,6 +2965,12 @@
       "source": "current-source-carrier"
     },
     {
+      "path": "docs/successor-takeover/evidence/native-registry-and-requirements-aba2e89.json",
+      "sha256": "77c327ba011b438bd5c114cf0f09e731db40c6f7b7fdd5f718b8bec5067f375e",
+      "bytes": 5812,
+      "source": "current-source-carrier"
+    },
+    {
       "path": "docs/successor-takeover/evidence/native-security-probe.json",
       "sha256": "36f8295f55072706899be49a3141823d2de048036e9e8aa5762a8e38a04e5353",
       "bytes": 200,
@@ -3250,6 +3256,12 @@
       "path": "docs/successor-takeover/evidence/product-regime-api-regression-v3.json",
       "sha256": "f0d76b10b210df9ade30e8aed95dfaab9984c871ecf7f82935d2dde683a263c6",
       "bytes": 40624,
+      "source": "current-source-carrier"
+    },
+    {
+      "path": "docs/successor-takeover/evidence/public-code-mode-publication-d78ceca.json",
+      "sha256": "57bb519d1302a057704954552d25e4746a01373af4eac6b55ddc54d38cb1081b",
+      "bytes": 876,
       "source": "current-source-carrier"
     },
     {
@@ -8344,9 +8356,9 @@
     "No independence, release, deployment or mission completion inferred"
   ],
   "generatedArtifactHashes": {
-    "README.md": "b752c614ecec6989a3ece2af1f7cb9b2dee87952545fe2a9688bd9c1f1934471",
+    "README.md": "f3d41e37d8a23df21d5e986ed012e5145a5cc0822f24e49d0181608724a26d4c",
     ".gitignore": "2f79870e866856827b5e9458c9ce2ac0f3a958ae468b4eb2f7dcc7649852010c",
-    "PUBLIC_SNAPSHOT_VERIFICATION.json": "87a455cbd5bca2a6795dd4f5e12658b59f5fd7acb7433db1c6655ef53e30d477",
+    "PUBLIC_SNAPSHOT_VERIFICATION.json": "66bed8ffa8dce13875bd7a187335373e019df109ca73cf595ca7e349f8c1d277",
     "snapshot-verification/current-fixture-lifetime-17-pass.txt": "23630c18c4c1397a0d6f627cc8b588573ac2b07fe38d9ff447cc4cb19ad61306",
     "snapshot-verification/current-sandbox-6-pass.txt": "e85a8c8e05561add5b047fcc631014bc86068db3704f7d751f798305f85128fb",
     "snapshot-verification/current-worker-contract-10-pass.txt": "b78f8ef949eea7d8bb7a2de24d49255989678674a6b8c96cb7614593fc403d57",
@@ -8359,6 +8371,8 @@
     "snapshot-verification/current-exact-temp-readonly-pass.txt": "ca1b0cadbafaf939e3611a7620a4c2d42bdf636395c9a21b1ca47e7a9fba2424",
     "snapshot-verification/current-exact-temp-writable-pass.txt": "94ad69b1c14e0654361754766d82a1dfd3c41dbbbf7022cef4a56b1b2cfc9801",
     "snapshot-verification/current-code-mode-writable-fail.txt": "6cd99f474c45b071dc8f044299a6324aabd6faa38a4a43d4d34c023d71d77280",
-    "snapshot-verification/current-code-mode-readonly-fail.txt": "49f0b075bdb351069a1fcd4b5a67f744372ccfb363a056cbd6ac85a88e33d213"
+    "snapshot-verification/current-code-mode-readonly-fail.txt": "49f0b075bdb351069a1fcd4b5a67f744372ccfb363a056cbd6ac85a88e33d213",
+    "snapshot-verification/current-registry-readonly-metadata-pass.txt": "f8f4c6ceb79e57fb396ec0eb4881e15c02fecffa6ba1cb371e206a123d09204b",
+    "snapshot-verification/current-registry-writable-metadata-pass.txt": "30e2168bf4d5965ca0303d3785256245240574e7ba276a5aee3ee3f190aa9d00"
   }
 }
