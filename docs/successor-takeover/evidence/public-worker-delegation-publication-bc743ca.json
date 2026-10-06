@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-06T07:39:22.020751+00:00",
+  "snapshotRevision": "bc743ca73f7e5983448a34a8aff2765153519af8",
+  "sourceCarrierRevision": "91d916a2efc28a9e1df02429504b1b2b8d87c118",
+  "testedSourceCandidate": "74656d665bb88ad22d67eb40215f76a481d65e5d",
+  "anonymousAccessVerified": true,
+  "remoteBlobs": 1381,
+  "allBlobHashesMatch": true,
+  "sourceRegression": "550PASS54FILES/full tsc/affected lint at exact clean74656d6",
+  "exportSmoke": "17PASS3FILES and3 native localhost config cases; temporary deps removed; not clean npm ci",
+  "authority": "NONE",
+  "independent": false,
+  "productionAutonomy": "DISABLED",
+  "scope": "Explicit native worker delegation tool removal; not OS/provider/controller authority or all-tool/managed/auth/AGY closure"
+}

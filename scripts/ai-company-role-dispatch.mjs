@@ -172,7 +172,7 @@ const workerCacheDir = path.join(workerExecutionDir, 'cache');
 const workerTempDir = path.join(workerExecutionDir, 'tmp');
 if (runner === 'codex') {
   const { codexWorkerPermissionArgs } = await import('../server/aiCompany/macSandbox.ts');
-  codexPermissionArgs = codexWorkerPermissionArgs(controlRoot, workspace, codexSandbox, [workerExecutionDir]);
+  codexPermissionArgs = codexWorkerPermissionArgs(controlRoot, workspace, codexSandbox, [workerExecutionDir, workerTempDir]);
 }
 try {
   await writeFile(isolatedVitestConfig, `export default { cacheDir: ${JSON.stringify(workerCacheDir)}, test: { fileParallelism: false, hookTimeout: 30000 } };\n`, { flag: 'wx', mode: 0o600 });

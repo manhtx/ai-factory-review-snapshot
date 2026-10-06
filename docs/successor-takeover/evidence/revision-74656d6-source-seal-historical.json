@@ -1,11 +1,11 @@
 {
   "schema": "ai-factory.source-candidate-seal.v1",
   "authoritative": false,
-  "observedAt": "2026-10-06T07:43:40.125142+00:00",
+  "observedAt": "2026-10-06T07:33:22.698108+00:00",
   "missionId": "AI_FACTORY_FINAL_CONVERGENCE_V2",
-  "candidateRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
-  "parentRevision": "fb3f5213c94c5802a5ff5f648199319a18f4bc02",
-  "gitTree": "934aa3b7173ca841847feaa0236039e8f87fd042",
+  "candidateRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
+  "parentRevision": "5631d6c64c27d3f05964f043d67c255facea245b",
+  "gitTree": "f579576c8f134be9e46421949ba1fdff0d32a4f7",
   "branch": "codex/ai-company-hardening-20260910",
   "sourceSeal": "IMMUTABLE_GIT_SOURCE_IDENTIFIED",
   "cleanAtTestStart": true,
@@ -13,7 +13,7 @@
   "authority": "NONE",
   "trustStatus": "UNTRUSTED_REVIEW_PENDING",
   "productionAutonomy": "DISABLED",
-  "proofVersion": "revision-c9a1aa7-exact-attempt-temp.v1",
+  "proofVersion": "revision-74656d6-native-delegation.v1",
   "checkpointVersion": "ai-factory.checkpoint.v1",
   "configHashes": {
     "package.json": "b4bcd81b2209059c97e47e44891b6521d3ae508dc95c2c2903b28d21692f6ad4",
@@ -83,13 +83,13 @@
       "server/aiCompany/resourceAdmissionProcess.test.ts": "f400d3e3054984992e91aa98efed65087c624f843166df38ca434a8051a91dbd",
       "server/aiCompany/cliResourceAdmission.test.ts": "ffcc500a1a72643afc578e85b3ca87b931b173e6eea0c5ff7e3be3fd5eed4980",
       "server/aiCompany/resourceGovernor.ts": "40454585ad2768d52efebda8bc96d8833731e421c5d4ebca9ad77259f6861361",
-      "scripts/ai-company-role-dispatch.mjs": "58ab552f1a9e7f5ba3863191391414d8214b0e87e9ff54a96a84149e92bbc8e7",
+      "scripts/ai-company-role-dispatch.mjs": "f2a5c1e601bf4525ea7f3cfcd544adc6b0b546ea2931b7cc02654b33a0323a60",
       "server/aiCompany/cliSandboxBoundary.test.ts": "7f4cde1269e67dcd34e67d136c81f0a498855eb5d3341d36e93e4d3e5f99bc02",
       "server/aiCompany/macSandbox.test.ts": "543f91f21f6652b6b3210ce619a16b6665c73b0e308a8b38b2df6832396212b8",
       "server/aiCompany/macSandbox.ts": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
       ".gitignore": "7fe76a2f80ebd6751262fc27e862568c12a62a8314e366d2e523688bd1b849fd",
       "server/aiCompany/codexReadableRoot.test.ts": "0741598973ac76d285a67a074452406f92a220356127fa5a8d5fe89f9ad65c7a",
-      "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs": "bb117cc15adb289002c9f1e669a9567d32ba6fd87c549f742e8277d7f51f7891"
+      "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs": "3862eec970c25c0ae33ff214eb2d2d7ebb1a6f268979bbbeed8baf0194b6b2d8"
     }
   },
   "tcbCompleteness": "OPEN_MATERIAL_WRITER_CENSUS",
@@ -97,6 +97,17 @@
   "trackedSchemaManifestSha256": "01acbfeaaef50cf8398061081469ed8bab1745dd5eaf1ebd6453a807f37e7535",
   "trackedSchemaManifestCount": 25,
   "commands": {
+    "typecheck": [
+      "/usr/local/bin/node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "lint": [
+      "/usr/local/bin/node",
+      "node_modules/eslint/bin/eslint.js",
+      "server/aiCompany/macSandbox.ts",
+      "--max-warnings=0"
+    ],
     "tests": [
       "/usr/local/bin/node",
       "node_modules/vitest/vitest.mjs",
@@ -156,36 +167,35 @@
       "server/aiCompany/cliSandboxBoundary.test.ts",
       "server/aiCompany/codexReadableRoot.test.ts"
     ],
-    "typecheck": [
+    "nativeProbe": [
       "/usr/local/bin/node",
-      "node_modules/typescript/bin/tsc",
-      "--noEmit"
-    ],
-    "lint": [
-      "/usr/local/bin/node",
-      "node_modules/eslint/bin/eslint.js",
-      "scripts/ai-company-role-dispatch.mjs",
-      "--max-warnings=0"
+      "--import",
+      "tsx",
+      "docs/successor-takeover/evidence/codex-exec-project-config-probe.mjs",
+      "/tmp/codex-no-delegation-exact-74656d6.json",
+      "--exercise-tools",
+      "--exercise-images"
     ]
   },
   "results": {
     "currentSuite": "550PASS54FILES",
     "typecheck": "PASS_FULL_TSC_NO_EMIT",
-    "lint": "PASS_AFFECTED_ROLE_DISPATCH",
-    "nativeAttemptTemp": "Six mode/config cases PASS; temp writes admitted; private reads/writes/aliases and tested Git metadata write rejected; delegation absent",
-    "scope": "Builder scoped native fixture and regression only; authorityNONE"
+    "lint": "PASS_MAC_SANDBOX_AFFECTED_SOURCE",
+    "nativeWorkerTools": "Three actual native exec/image config fixtures PASS; multi-agent schema absent including project enabling agents; native payload hash bound",
+    "scope": "Builder scoped evidence only; earlier lifecycle/authority/timing proofs remain historical and independently open"
   },
   "artifactHashes": {
-    "docs/successor-takeover/evidence/revision-c9a1aa7-command-results.json": "ace2943a06b90577cf96e560909f65c47e87380a68fc1cabec9a1b1327cd9b2d",
-    "docs/successor-takeover/evidence/native-attempt-temp-c9a1aa7.json": "13f52e6f5892bdfe7998b8609ba96de4fdf7f1919b6946289b4837ac9b5c8179",
-    "docs/successor-takeover/evidence/revision-c9a1aa7-tests.txt": "c9a275917f97db9a91b0ea84f865d9d839993b656238691cc6c63eea02e92b7f",
-    "docs/successor-takeover/evidence/revision-c9a1aa7-typecheck.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "docs/successor-takeover/evidence/revision-c9a1aa7-lint.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "docs/successor-takeover/evidence/revision-74656d6-tests.txt": "d2c5e22f3be031bbc8420064ac115250fd6379bcbba40dac7a4a8da0b41689aa",
+    "docs/successor-takeover/evidence/revision-74656d6-typecheck.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/successor-takeover/evidence/revision-74656d6-lint.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/successor-takeover/evidence/revision-74656d6-nativeProbe.txt": "c6955fbb6370ef61b5d0e7f16e5c5b6421d77c384110793484a473fa34c2ab08",
+    "docs/successor-takeover/evidence/revision-74656d6-command-results.json": "e8a9fa03680166adf13df4e6658548ef1780b80cd713c37c1269c7109dbae95d",
+    "docs/successor-takeover/evidence/native-worker-delegation-74656d6.json": "ea31549adb64405621ffa803c40ec00cae1c05f577fa641e250dcadd55346350"
   },
   "proofAssociation": {
-    "subjectRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
+    "subjectRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
     "evidenceCarrier": "Subsequent documentation-only commit; Git identity read externally; not the source candidate",
-    "supersededSourceSeal": "evidence/revision-74656d6-source-seal-historical.json; all prior failures retained",
+    "supersededSourceSeal": "evidence/revision-af1672b-source-seal-historical.json; all earlier evidence retained",
     "historicalProof": "b318825 stage1 523PASS is historical and contains original provider orphan counterexample; initial lifecycle failure evidence retained; current533 is a clean exact run",
     "previousCandidate": "Dirty d23b293 checkout preserved; authority NONE"
   },

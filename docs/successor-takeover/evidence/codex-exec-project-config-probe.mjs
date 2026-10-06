@@ -22,6 +22,7 @@ fs.writeFileSync(path.join(control, 'private-fixture.png'), png);
 const observations = [];
 const exerciseTools = process.argv.includes('--exercise-tools');
 const exerciseImages = process.argv.includes('--exercise-images');
+const mode = process.argv.includes('--workspace-write') ? 'workspace-write' : 'read-only';
 const cleanAtStart = spawnSync('/usr/bin/git', ['status', '--porcelain'], { encoding: 'utf8' }).stdout.trim() === '';
 for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [true, false]]) {
   const workspace = path.join(root, `${legacyOverride ? 'legacy' : 'clean'}-project-${ignoreUserConfig ? 'ignored' : 'loaded'}`);
@@ -46,7 +47,7 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
       try { requests.push({ method: request.method, url: request.url, body: JSON.parse(body) }); }
       catch { requests.push({ method: request.method, url: request.url, invalidJson: true }); }
       response.writeHead(200, { 'Content-Type': 'text/event-stream' });
-      const toolCode = `const fs=require('node:fs');const attempt=f=>{try{f();return true}catch{return false}};console.log(JSON.stringify({controlRead:attempt(()=>fs.readFileSync(${JSON.stringify(path.join(control, 'private-fixture'))})),authRead:attempt(()=>fs.readFileSync(${JSON.stringify(path.join(home, 'auth-fixture'))})),escapeRead:attempt(()=>fs.readFileSync('escape/private-fixture')),workspaceRead:attempt(()=>fs.readFileSync('read-fixture')),dependencyRead:attempt(()=>fs.readFileSync(${JSON.stringify(path.join(control, 'node_modules', 'dependency-fixture'))})),workspaceWrite:attempt(()=>fs.writeFileSync('write-fixture','DUMMY_ONLY'))}));`;
+      const toolCode = `const fs=require('node:fs');const attempt=f=>{try{f();return true}catch{return false}};console.log(JSON.stringify({controlRead:attempt(()=>fs.readFileSync(${JSON.stringify(path.join(control, 'private-fixture'))})),authRead:attempt(()=>fs.readFileSync(${JSON.stringify(path.join(home, 'auth-fixture'))})),escapeRead:attempt(()=>fs.readFileSync('escape/private-fixture')),workspaceRead:attempt(()=>fs.readFileSync('read-fixture')),dependencyRead:attempt(()=>fs.readFileSync(${JSON.stringify(path.join(control, 'node_modules', 'dependency-fixture'))})),workspaceWrite:attempt(()=>fs.writeFileSync('write-fixture','DUMMY_ONLY')),controlWrite:attempt(()=>fs.writeFileSync(${JSON.stringify(path.join(control, 'forbidden-write'))},'DUMMY_ONLY')),authWrite:attempt(()=>fs.writeFileSync(${JSON.stringify(path.join(home, 'forbidden-write'))},'DUMMY_ONLY')),dependencyWrite:attempt(()=>fs.writeFileSync(${JSON.stringify(path.join(control, 'node_modules', 'forbidden-write'))},'DUMMY_ONLY')),escapeWrite:attempt(()=>fs.writeFileSync('escape/forbidden-write','DUMMY_ONLY')),tempWrite:attempt(()=>fs.writeFileSync(${JSON.stringify(path.join(tempDirectory, 'allowed-write'))},'DUMMY_ONLY')),gitMetadataWrite:attempt(()=>fs.writeFileSync('.git/dummy-metadata-write','DUMMY_ONLY'))}));`;
       const shellQuote = value => `'${value.replaceAll("'", "'\\''")}'`;
       const call = { id: 'fc_fixture', type: 'function_call', status: 'completed', call_id: 'call_fixture', name: 'exec_command', arguments: JSON.stringify({ cmd: `${shellQuote(process.execPath)} -e ${shellQuote(toolCode)}`, login: false, max_output_tokens: 1000, yield_time_ms: 1000 }) };
       const imageCall = { id: `fc_image_${requests.length}`, type: 'function_call', status: 'completed', call_id: `image_call_${requests.length}`, name: 'view_image', arguments: JSON.stringify({ path: requests.length === 2 ? path.join(control, 'private-fixture.png') : path.join(workspace, 'read-fixture.png') }) };
@@ -63,7 +64,7 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const port = server.address().port;
   const args = ['exec', '--json', '--ephemeral', ...(ignoreUserConfig ? ['--ignore-user-config'] : []), '--model', 'fixture-model', '--cd', workspace,
-    ...codexWorkerPermissionArgs(control, workspace, 'read-only', [attemptDirectory]),
+    ...codexWorkerPermissionArgs(control, workspace, mode, [attemptDirectory, tempDirectory]),
     '-c', `projects.${JSON.stringify(workspace)}.trust_level="trusted"`,
     '-c', 'model_provider="fixture"',
     '-c', 'model_providers.fixture.name="Dummy localhost fixture"',
@@ -95,7 +96,7 @@ for (const [legacyOverride, ignoreUserConfig] of [[false, true], [true, true], [
   const delegationAbsent = advertisedToolNames.every(name => !/multi_agent|^(spawn_agent|resume_agent|send_input|wait_agent|close_agent)$/.test(name));
   const checksPass = exitCode === 0 && !timedOut && finalResponse === 'DUMMY_FIXTURE_FINISHED'
     && delegationAbsent
-    && (!exerciseTools || JSON.stringify(permissionChecks) === JSON.stringify({ controlRead: false, authRead: false, escapeRead: false, workspaceRead: true, dependencyRead: true, workspaceWrite: false }))
+    && (!exerciseTools || Object.entries({ controlRead: false, authRead: false, escapeRead: false, workspaceRead: true, dependencyRead: true, workspaceWrite: mode === 'workspace-write', controlWrite: false, authWrite: false, dependencyWrite: false, escapeWrite: false, tempWrite: true }).every(([key, expected]) => permissionChecks?.[key] === expected))
     && (!exerciseImages || (typeof toolOutputs.image_call_2 === 'string' && toolOutputs.image_call_2.includes('Operation not permitted') && Array.isArray(toolOutputs.image_call_3) && toolOutputs.image_call_3.some(item => item.type === 'input_image')));
   observations.push({ legacyOverride, ignoreUserConfig, exitCode, signal, timedOut, args, stdout, stderr, requests,
     finalResponse, permissionChecks, advertisedToolNames, delegationAbsent, checksPass });
@@ -109,7 +110,7 @@ const result = { sourceRevision: spawnSync('/usr/bin/git', ['rev-parse', 'HEAD']
   cleanAtStart, cleanAtEnd: spawnSync('/usr/bin/git', ['status', '--porcelain'], { encoding: 'utf8' }).stdout.trim() === '',
   scriptSha256: hash(new URL(import.meta.url)), launcherSha256: hash(launcher), nativePayloadSha256: hash(nativePayload),
   permissionGeneratorSha256: hash(new URL('../../../server/aiCompany/macSandbox.ts', import.meta.url)),
-  fixtureRoot: root, credentials: 'NONE; isolated HOME/CODEX_HOME; localhost dummy provider',
+  fixtureRoot: root, mode, credentials: 'NONE; isolated HOME/CODEX_HOME; localhost dummy provider',
   scope: 'Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof', observations };
 const output = process.argv[2] || path.join(root, 'results.json');
 fs.writeFileSync(output, JSON.stringify(result, null, 2) + '\n');

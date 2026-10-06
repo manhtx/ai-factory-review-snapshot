@@ -1,7 +1,7 @@
 {
   "schema": "successor-takeover.proof-graph.v1",
   "authoritative": false,
-  "currentCandidateRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",
+  "currentCandidateRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
   "historicalProofPolicy": "Older nodes retain historical evidence only; none certifies the current candidate without exact revision revalidation. No negative evidence removed.",
   "purpose": "Explicit claim dependencies and limits for isolated candidate evidence; not an operational proof engine or closure certificate.",
   "executionInventory": {
@@ -11,6 +11,22 @@
     "postTestCheck": "MATCHED_AFTER_PRODUCT_API_REPAIRS; UNSEALED_CANDIDATE"
   },
   "nodes": [
+    {
+      "id": "native-exact-attempt-temp-c9a1aa7",
+      "sourceRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
+      "claim": "Actual temp write positive control failed at fb3f521; exact owned temp grant fixes six read-only/workspace-write config cases; clean550PASS54FILES/tsc/lint",
+      "evidence": [
+        "CODEX_ATTEMPT_TEMP_INVESTIGATION.md",
+        "evidence/native-attempt-temp-c9a1aa7.json",
+        "evidence/revision-c9a1aa7-command-results.json"
+      ],
+      "status": "BUILDER_SCOPED_VERIFIED; AUTHORITY_NONE",
+      "independent": false,
+      "dependsOn": [
+        "native-worker-no-delegation-74656d6"
+      ],
+      "missing": "Actual model metadata tool census/managed/auth/AGY/caller migration/gateway/Git effect/independent closure"
+    },
     {
       "id": "native-worker-no-delegation-74656d6",
       "sourceRevision": "74656d665bb88ad22d67eb40215f76a481d65e5d",

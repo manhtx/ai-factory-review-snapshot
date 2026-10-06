@@ -1,0 +1,338 @@
+{
+  "schema": "ai-factory.native-attempt-temp.v1",
+  "phases": [
+    {
+      "sourceRevision": "fb3f5213c94c5802a5ff5f648199319a18f4bc02",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "8d54b165f9440ce334d4914a83a91ca435ef03a14a74fbaa02838e4526bf0b79",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-ZTqyan",
+      "mode": "workspace-write",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "8be23a78054dd5c4843907e3444cd56dc260b256d306d7e1e30ab24bcbc32b46",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": false,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": false,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": false,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": false
+        }
+      ]
+    },
+    {
+      "sourceRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "bb117cc15adb289002c9f1e669a9567d32ba6fd87c549f742e8277d7f51f7891",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-9F8QYn",
+      "mode": "workspace-write",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "77babced43f842a257e4ca61bafe596d7d0a4ddcc9fd283f92a38aed957a5c5e",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": true
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": true
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": true,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": true
+        }
+      ]
+    },
+    {
+      "sourceRevision": "c9a1aa7af3d707a30955b2852cd387988b975537",
+      "cleanAtStart": true,
+      "cleanAtEnd": true,
+      "scriptSha256": "bb117cc15adb289002c9f1e669a9567d32ba6fd87c549f742e8277d7f51f7891",
+      "launcherSha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+      "nativePayloadSha256": "1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "permissionGeneratorSha256": "6b530ed6f6afe382fa4522e698dfc0e2d7c0dad840f6baf11bab28679ca1795b",
+      "fixtureRoot": "/var/folders/8m/8nn14wlx6hs7sngr9z5xrk200000gn/T/factory-exec-project-policy-Zyak8f",
+      "mode": "read-only",
+      "credentials": "NONE; isolated HOME/CODEX_HOME; localhost dummy provider",
+      "scope": "Exact exec flags plus explicit trusted project; dummy localhost Responses provider; optional actual exec_command; no actual model reasoning/all-tool/managed-config proof",
+      "rawArtifactSha256": "1919e34e6fcc0fdb5ba83a261befeb5ae3404d4e612e1fde9722ff3024561e19",
+      "observations": [
+        {
+          "legacyOverride": false,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": true
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": true
+        },
+        {
+          "legacyOverride": true,
+          "ignoreUserConfig": false,
+          "exitCode": 0,
+          "timedOut": false,
+          "finalResponse": "DUMMY_FIXTURE_FINISHED",
+          "permissionChecks": {
+            "controlRead": false,
+            "authRead": false,
+            "escapeRead": false,
+            "workspaceRead": true,
+            "dependencyRead": true,
+            "workspaceWrite": false,
+            "controlWrite": false,
+            "authWrite": false,
+            "dependencyWrite": false,
+            "escapeWrite": false,
+            "tempWrite": true,
+            "gitMetadataWrite": false
+          },
+          "advertisedToolNames": [
+            "exec_command",
+            "write_stdin",
+            "update_plan",
+            "request_user_input",
+            "view_image",
+            "web_search"
+          ],
+          "delegationAbsent": true,
+          "checksPass": true
+        }
+      ]
+    }
+  ],
+  "failedSource": "fb3f521",
+  "repairedSource": "c9a1aa7af3d707a30955b2852cd387988b975537",
+  "claim": "Six native exec/image mode/config cases pass after exact temp child grant; earlier three writable cases tempDenied retained",
+  "independent": false,
+  "authority": "NONE",
+  "scope": "Synthetic localhost provider/native CLI tools with isolated HOME; no real model/auth/all-tool/managed/AGY/controller/Git effect closure"
+}

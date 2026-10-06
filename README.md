@@ -2,9 +2,9 @@
 
 Source snapshot for external code and evidence inspection of Macro Research Platform's AI Factory. The original repository remains private. This repository starts with a new Git history; it contains no parent repository history or live machine stores.
 
-Source carrier: `91d916a2efc28a9e1df02429504b1b2b8d87c118`.
+Source carrier: `e929c1d343c1d3bf4e71da2a68f1570bfcd4ae73`.
 
-Pinned tested source candidate: `74656d665bb88ad22d67eb40215f76a481d65e5d`. Its recorded clean run passed 550 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
+Pinned tested source candidate: `c9a1aa7af3d707a30955b2852cd387988b975537`. Its recorded clean run passed 550 tests across 54 files, full source typecheck and affected lint. Those results belong to that source candidate; they are not an independent certification or a test run of this export.
 
 ## Inspect
 
@@ -51,3 +51,7 @@ Current fixture lifetime repair closes fixture admission, drains initialization/
 ## Worker delegation removal
 
 Current source74656d6 explicitly supplies `agents.enabled=false` through the dispatcher permission helper. Three native export fixtures advertise no multi-agent namespace or agent tools even when a trusted project requests agents enabled. Actual exec/image permission controls pass and trusted final response is saved. Current export smoke passes17 tests/3 files with temporary installed dependencies removed afterward; it is not clean npm ci. The original source run passes550 tests/54 files, tsc and affected lint. Exact source, native binary hashes and before-repair schemas are retained in `WORKER_DELEGATION_BOUNDARY.md` and its evidence. Log packaging whitespace mismatch is retained as negative evidence; original exact log bytes have been restored and hashes verified. Ordinary subprocess/provider authority, writable-mode all-tool coverage, managed configuration, AGY/auth and controller gateway remain OPEN.
+
+## Exact attempt temp repair
+
+Current source c9a1aa7 grants the already-created owned attempt temp child explicitly. Three writable-mode native fixtures previously rejected temp writes because the tmpdir deny was more specific than their parent grant. All six readonly/workspace-write native mode/config fixtures now pass, preserving private/control/auth/dependency/symlink denials and assigned write semantics. The attempted Git metadata write is denied; trusted controller Git effect quiescence remains OPEN. The failed source fb3f521 controls and repaired results are retained in `CODEX_ATTEMPT_TEMP_INVESTIGATION.md` and `evidence/native-attempt-temp-c9a1aa7.json`. Current source550/54 tests plus tsc/lint pass; current export17/3 tests and6 native fixture cases pass with temporary dependencies removed. Real model tool census/managed/auth/AGY/caller migration/gateway and independent assurance remain OPEN.

@@ -1,0 +1,29 @@
+{
+  "output": "/tmp/public-exact-temp-writable.json",
+  "observations": [
+    {
+      "legacyOverride": false,
+      "ignoreUserConfig": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "requestCount": 4,
+      "finalResponse": "DUMMY_FIXTURE_FINISHED"
+    },
+    {
+      "legacyOverride": true,
+      "ignoreUserConfig": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "requestCount": 4,
+      "finalResponse": "DUMMY_FIXTURE_FINISHED"
+    },
+    {
+      "legacyOverride": true,
+      "ignoreUserConfig": false,
+      "exitCode": 0,
+      "timedOut": false,
+      "requestCount": 4,
+      "finalResponse": "DUMMY_FIXTURE_FINISHED"
+    }
+  ]
+}
